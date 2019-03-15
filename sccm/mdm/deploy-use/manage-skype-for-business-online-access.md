@@ -2,7 +2,7 @@
 title: Administrar el acceso de Skype Empresarial Online
 titleSuffix: Configuration Manager
 description: Aprenda a usar la directiva de acceso condicional para administrar el acceso a Skype Empresarial Online.
-ms.date: 12/22/2017
+ms.date: 03/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78c40d84b7d774d7621b983a6e2bb755b14f9563
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 601b58b2f955170e5ab2f038cb49306efe3b499c
+ms.sourcegitcommit: ec4411fe30770f90128cf6cbd181047db90040cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56138371"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57881731"
 ---
 # <a name="manage-skype-for-business-online-access"></a>Administrar el acceso de Skype Empresarial Online
 
@@ -52,7 +52,7 @@ Use la directiva de acceso condicional de Skype Empresarial Online para administ
 ## <a name="configure-conditional-access-for-skype-for-business-online"></a>Configuración de acceso condicional para Skype Empresarial Online  
 
 ### <a name="step-1-configure-active-directory-security-groups"></a>Paso 1: Configurar grupos de seguridad de Active Directory  
- Antes de empezar, configure los grupos de seguridad de Azure Active Directory para la directiva de acceso condicional. Configure estos grupos en el Centro de administración de Office 365. Estos grupos contienen los usuarios a los que se destina la directiva o que se excluyen de ella. Cuando un usuario es destinatario de una directiva, cada dispositivo que use debe ser conforme con el fin de obtener acceso a los recursos.  
+ Antes de empezar, configure los grupos de seguridad de Azure Active Directory para la directiva de acceso condicional. Estos grupos se pueden configurar en el centro de administración de Microsoft 365. Estos grupos contienen los usuarios a los que se destina la directiva o que se excluyen de ella. Cuando un usuario es destinatario de una directiva, cada dispositivo que use debe ser conforme con el fin de obtener acceso a los recursos.  
 
  Puede especificar dos tipos de grupos para utilizarlos con la directiva de Skype Empresarial:  
 

@@ -2,7 +2,7 @@
 title: Administrar el acceso a SharePoint Online
 titleSuffix: Configuration Manager
 description: Obtenga información acerca de cómo usar la directiva de acceso condicional de SharePoint Online de System Center Configuration Manager para administrar el acceso a OneDrive.
-ms.date: 12/09/2017
+ms.date: 03/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 755be3231c00eabf9562256e62061fbad70633e7
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 69a160a3c7833f196d50185e551f619d68dc0925
+ms.sourcegitcommit: ec4411fe30770f90128cf6cbd181047db90040cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56140956"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57881748"
 ---
 # <a name="manage-sharepoint-online-access-in-system-center-configuration-manager"></a>Administrar el acceso a SharePoint Online en System Center Configuration Manager
 
@@ -106,7 +106,7 @@ Puede bloquear el acceso a SharePoint Online desde las siguientes aplicaciones:
 ## <a name="configure-conditional-access-for-sharepoint-online"></a>Configuración del acceso condicional para SharePoint Online  
 
 ### <a name="step-1-configure-active-directory-security-groups"></a>Paso 1: Configurar grupos de seguridad de Active Directory  
- Antes de empezar, configure los grupos de seguridad de Azure AD para la directiva de acceso condicional. Estos grupos se pueden configurar en el **Centro de administración de Office 365**o el **portal de cuentas de Intune**. Estos grupos contienen los usuarios de destino o que están exentos de la directiva. Cuando un usuario es destinatario de una directiva, cada dispositivo que use debe estar marcado como compatible para poder acceder a los recursos.  
+ Antes de empezar, configure los grupos de seguridad de Azure AD para la directiva de acceso condicional. Puede configurar estos grupos en el **centro de administración de Microsoft 365**, o el **portal de cuentas de Intune**. Estos grupos contienen los usuarios de destino o que están exentos de la directiva. Cuando un usuario es destinatario de una directiva, cada dispositivo que use debe estar marcado como compatible para poder acceder a los recursos.  
 
  Se pueden especificar dos tipos de grupo en una directiva de SharePoint Online:  
 

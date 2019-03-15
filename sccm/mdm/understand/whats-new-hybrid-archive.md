@@ -2,7 +2,7 @@
 title: Archivo de novedades de MDM híbrida
 titleSuffix: Configuration Manager
 description: Archivo de características anteriores de administración de dispositivos móviles disponibles para implementaciones híbridas con System Center Configuration Manager e Intune.
-ms.date: 05/31/2018
+ms.date: 03/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fcc81e06cbb1ab0206b4145f042cbc10bab44676
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 420026065caf619f51a5ebf84d7ae2f61a2248e1
+ms.sourcegitcommit: ec4411fe30770f90128cf6cbd181047db90040cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56134425"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57881935"
 ---
 # <a name="past-hybrid-features-with-system-center-configuration-manager-and-microsoft-intune"></a>Características híbridas anteriores con System Center Configuration Manager y Microsoft Intune
 
@@ -476,7 +476,7 @@ Para obtener información sobre la nueva funcionalidad, consulte la documentaci�
 ### <a name="new-in-microsoft-intune"></a>Novedades de Microsoft Intune
 Las siguientes características de Intune que se incorporaron en junio de 2016 funcionan en implementaciones híbridas.
 
-- **Mantenimiento del servicio de Intune** La información de mantenimiento del servicio de Intune se ha movido a una ubicación central con otros servicios de Microsoft. Ahora encontrará esta información en el portal de administración de Office 365 en Estado del servicio. Para obtener más información, consulte esta [entrada de blog](https://blogs.technet.microsoft.com/enterprisemobility/2016/04/28/intune-service-health-is-now-available-in-the-office-365-portal/).
+- **Mantenimiento del servicio de Intune** La información de mantenimiento del servicio de Intune se ha movido a una ubicación central con otros servicios de Microsoft. Ahora encontrará esta información en el centro de administración de Microsoft 365 en estado del servicio. Para obtener más información, consulte esta [entrada de blog](https://blogs.technet.microsoft.com/enterprisemobility/2016/04/28/intune-service-health-is-now-available-in-the-office-365-portal/).
 
 - **Mejor experiencia de configuración de directiva de datos de empresa de Windows 10** 
 

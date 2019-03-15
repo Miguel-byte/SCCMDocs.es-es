@@ -2,7 +2,7 @@
 title: Administrar acceso al correo electrónico
 titleSuffix: Configuration Manager
 description: Obtenga información sobre cómo usar el acceso condicional de Configuration Manager para administrar el acceso al correo electrónico de Exchange.
-ms.date: 03/05/2017
+ms.date: 03/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f976b63b4580b5df9c6e609ff6b361538860c41c
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 76326a1e0bcb3d9362db5eccfc08459bb4448206
+ms.sourcegitcommit: ec4411fe30770f90128cf6cbd181047db90040cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56137650"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57881782"
 ---
 # <a name="manage-email-access-in-configuration-manager"></a>Administrar el acceso de correo electrónico en Configuration Manager
 
@@ -146,7 +146,7 @@ Puede exportar el contenido del informe y utilizar la columna **Dirección de co
 
 El destino de las directivas de acceso condicional se define en distintos grupos o recopilaciones de usuarios en función de los tipos de directiva. Estos grupos contienen los usuarios de destino o exentos de la directiva. Cuando un usuario es destinatario de una directiva, cada dispositivo que use debe ser conforme con el fin de obtener acceso al correo electrónico.  
 
-- **Directiva de Exchange Online**: para grupos de usuarios de seguridad de Azure Active Directory. Estos grupos se pueden configurar en el **Centro de administración de Office 365**o el **portal de cuentas de Intune**.  
+- **Directiva de Exchange Online**: para grupos de usuarios de seguridad de Azure Active Directory. Puede configurar estos grupos en el **centro de administración de Microsoft 365**, o el **portal de cuentas de Intune**.  
 
 - **Directiva de Exchange local**: para recopilaciones de usuarios de Configuration Manager. Puede configurar estas opciones en el área de trabajo **Activos y compatibilidad** .  
 

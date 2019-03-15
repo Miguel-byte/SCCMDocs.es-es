@@ -2,7 +2,7 @@
 title: Administrar el acceso a los servicios de Office 365
 titleSuffix: Configuration Manager
 description: Aprenda a configurar el acceso condicional a los servicios de Office 365 en equipos administrados por System Center Configuration Manager.
-ms.date: 04/10/2018
+ms.date: 03/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,21 +11,22 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b45e9f586616a1f620864a6e6dc8d0777a118251
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 74a28863b2e30566b07890d57e927703d77247f6
+ms.sourcegitcommit: ec4411fe30770f90128cf6cbd181047db90040cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122294"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57881714"
 ---
 # <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>Administración del acceso a servicios de O365 para equipos administrados por System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-<!--1191496--> Configurar el acceso condicional para servicios de Office 365 para equipos administrados por Configuration Manager.  
+<!--1191496-->
+Configure el acceso condicional a los servicios de Office 365 en equipos administrados por Configuration Manager.  
 
 > [!Important]  
-> Incluida de MDM híbrida local son de acceso condicional [características en desuso](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Para más información, vea [¿Qué es la Administración híbrida de dispositivos móviles (MDM)?](/sccm/mdm/understand/hybrid-mobile-device-management). <!--Intune feature 2683117-->  
+> Incluida de MDM híbrida local son de acceso condicional [características en desuso](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Para más información, vea [¿Qué es la Administración híbrida de dispositivos móviles (MDM)?](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
 > 
 > Si usa acceso condicional en los dispositivos administrados con el cliente de Configuration Manager, para asegurarse de que todavía están protegidos, habilitar el acceso condicional en Intune para los dispositivos antes de migrar. Habilitar la administración conjunta en Configuration Manager, mover la carga de trabajo de directiva de cumplimiento a Intune y, a continuación, complete la migración de Intune híbrido a Intune independiente. Para obtener más información, consulte [el acceso condicional con administración conjunta](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access). 
 
@@ -33,7 +34,7 @@ ms.locfileid: "56122294"
 Para obtener información sobre cómo configurar el acceso condicional para dispositivos inscritos y administrados por Microsoft Intune, vea [Administrar el acceso a servicios en System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md). En ese artículo también se describen los dispositivos que están unidos a un dominio y no se evalúan para cumplimiento.
 
 > [!Note]  
-> Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para más información, vea [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+> Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para obtener más información, consulte [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
 
 
 ## <a name="supported-services"></a>Servicios compatibles  
@@ -102,7 +103,7 @@ Para obtener información sobre cómo configurar el acceso condicional para disp
     > Los criterios de acceso condicional de atestación de estado del dispositivo, que se introdujeron con la versión 1710, son una [característica de versión preliminar](/sccm/core/servers/manage/pre-release-features). A partir de la versión 1802, ya no es una característica de versión preliminar.<!--1235616-->  
 
     > [!Note]  
-    > Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para más información, vea [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+    > Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para obtener más información, consulte [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
 
 ### <a name="step-2-evaluate-the-effect-of-conditional-access"></a>Paso 2. Evaluar el impacto del acceso condicional  
  Ejecute el **informe de compatibilidad de acceso condicional**. Se puede encontrar en el área de trabajo **Supervisión**, en **Informes** > **Administración de compatibilidad y configuración**. En este informe se muestra el estado de cumplimiento para todos los dispositivos. Se bloquea el acceso de los dispositivos registrados como no compatibles a Exchange Online y SharePoint Online.  
@@ -112,7 +113,7 @@ Para obtener información sobre cómo configurar el acceso condicional para disp
 ### <a name="configure-active-directory-security-groups"></a>Configurar grupos de seguridad de Active Directory  
  Las directivas de acceso condicional se dirigen a grupos de usuarios en función de los tipos de directivas. Estos grupos contienen los usuarios destinatarios de la directiva o exentos de ella. Cuando un usuario es destinatario de una directiva, cada dispositivo que use debe ser conforme con el fin de obtener acceso al servicio.  
 
- Grupos de usuarios de seguridad de Active Directory Estos grupos de usuarios se deben sincronizar con Azure Active Directory. Estos grupos se pueden configurar también en el Centro de administración de Office 365 o en el Portal de cuentas de Intune.  
+ Grupos de usuarios de seguridad de Active Directory Estos grupos de usuarios se deben sincronizar con Azure Active Directory. También puede configurar estos grupos en el centro de administración de Microsoft 365 o el portal de cuentas de Intune.  
 
  Se pueden especificar dos tipos de grupo en cada directiva. :  
 

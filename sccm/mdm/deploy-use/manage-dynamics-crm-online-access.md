@@ -2,7 +2,7 @@
 title: Administración del acceso a Dynamics CRM Online
 titleSuffix: Configuration Manager
 description: Aprenda a controlar el acceso a Microsoft Dynamics CRM Online desde los dispositivos de iOS y Android con el acceso condicional de Microsoft Intune.
-ms.date: 03/05/2017
+ms.date: 03/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2bf6073a15518e971d4880a7adbb0853d6387f0d
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: fbd3d765a17d41bfbc2c400a3368cf00784b16c1
+ms.sourcegitcommit: ec4411fe30770f90128cf6cbd181047db90040cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122855"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57881680"
 ---
 # <a name="manage-dynamics-crm-online-access-in-system-center-configuration-manager"></a>Administración del acceso a Dynamics CRM Online en System Center Configuration Manager.
 
@@ -47,7 +47,7 @@ Si no se cumple una condición, se presentará al usuario uno de los mensajes si
 ## <a name="configure-conditional-access-for-dynamics-crm-online"></a>Configuración de un acceso condicional para Dynamics CRM Online  
 ### <a name="step-1-configure-active-directory-security-groups"></a>Paso 1: Configurar grupos de seguridad de Active Directory
 
-Antes de empezar, configure los grupos de seguridad de Azure Active Directory para la directiva de acceso condicional. Estos grupos se pueden configurar en el **Centro de administración de Office 365**. Estos grupos se usarán para aplicar la directiva a los usuarios o para excluirlos de ella. Cuando un usuario es destinatario de una directiva, cada dispositivo que use debe ser conforme con el fin de obtener acceso a los recursos.
+Antes de empezar, configure los grupos de seguridad de Azure Active Directory para la directiva de acceso condicional. Puede configurar estos grupos en el **centro de administración de Microsoft 365**. Estos grupos se usarán para aplicar la directiva a los usuarios o para excluirlos de ella. Cuando un usuario es destinatario de una directiva, cada dispositivo que use debe ser conforme con el fin de obtener acceso a los recursos.
 
 Puede especificar dos tipos de grupos para usarlos con la directiva de Dynamics CRM:
 * **Grupos de destino**: contiene grupos de usuarios a los que se aplicará la directiva.
