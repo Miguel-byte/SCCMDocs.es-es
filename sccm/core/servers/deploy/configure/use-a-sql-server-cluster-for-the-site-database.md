@@ -1,8 +1,8 @@
 ---
 title: Clúster de SQL Server
 titleSuffix: Configuration Manager
-description: Use un clúster de SQL Server para hospedar la base de datos de sitio de System Center Configuration Manager. Incluye información sobre las opciones admitidas.
-ms.date: 2/28/2017
+description: Use un clúster de SQL Server para hospedar la base de datos de sitio de Configuration Manager.
+ms.date: 03/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,89 +11,108 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f01367c76383454ded14390fc0583c874d32d60e
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: cdbe1d7c3fb28a16c6ba55d073adba3781b12f58
+ms.sourcegitcommit: 544f335cfd1bfd0a1d4973439780e9f5e9ee8bed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56141745"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562064"
 ---
-# <a name="use-a-sql-server-cluster-for-the-system-center-configuration-manager-site-database"></a>Usar un clúster de SQL Server para la base de datos de sitio de System Center Configuration Manager
+# <a name="use-a-sql-server-cluster-for-the-site-database"></a>Uso de un clúster de SQL Server para la base de datos del sitio
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-
- Puede usar un clúster de SQL Server para hospedar la base de datos de sitio de System Center Configuration Manager. La base de datos del sitio es el único rol de sistema de sitio admitido en un clúster de servidores.  
+Puede usar un clúster de SQL Server para hospedar la base de datos de sitio de Configuration Manager. Un clúster proporciona compatibilidad con la conmutación por error y mejora la confiabilidad de la base de datos del sitio, pero no ofrece un procesamiento adicional ni ventajas de equilibrio de carga. El rendimiento puede degradarse porque el servidor de sitio debe encontrar el nodo activo del clúster de SQL Server antes de conectarse a la base de datos del sitio.  
 
 > [!IMPORTANT]  
->  La configuración correcta de los clústeres de SQL Server se basa en la documentación y los procedimientos proporcionados en la biblioteca de documentación de SQL Server.  
+> La configuración correcta de los clústeres de SQL Server se basa en la documentación y los procedimientos proporcionados en la biblioteca de documentación de SQL Server.  
 
- Un clúster puede proporcionar compatibilidad con la conmutación por error y mejorar la confiabilidad de la base de datos del sitio, pero no ofrece un procesamiento adicional ni ventajas de equilibrio de carga. De hecho, el rendimiento puede degradarse porque el servidor de sitio debe encontrar el nodo activo del clúster de SQL Server antes de conectarse a la base de datos del sitio.  
 
- Antes de instalar Configuration Manager, debe preparar el clúster de SQL Server para que admita Configuration Manager. (Consulte los requisitos previos más adelante en esta sección).  
+Antes de instalar Configuration Manager, prepare el clúster de SQL Server para que admita Configuration Manager. Para obtener más información, vea [Preparar una instancia de SQL Server en clúster para la base de datos del sitio](#bkmk_prepare).
 
- Durante la instalación de Configuration Manager, el escritor del Servicio de instantáneas de volumen de Windows se instala en cada nodo de equipo físico del clúster de Microsoft Windows Server. De este modo, se admite la tarea de mantenimiento de **Copia de seguridad del servidor del sitio**.  
+Durante la instalación de Configuration Manager, el escritor del Servicio de instantáneas de volumen de Windows se instala en cada nodo de equipo físico del clúster de Microsoft Windows Server. De este modo, este servicio admite la tarea de mantenimiento de **Copia de seguridad del servidor del sitio**.  
 
- Una vez instalado el sitio, Configuration Manager comprueba cada hora los cambios que se producen en el nodo de clúster. Configuration Manager administra automáticamente los cambios que se encuentran y que afectan a las instalaciones de componentes de Configuration Manager (como una conmutación por error de nodo o la adición de un nuevo nodo al clúster de SQL Server).  
+Una vez instalado el sitio, Configuration Manager comprueba cada hora los cambios que se producen en el nodo de clúster. Configuration Manager administra automáticamente los cambios que encuentre que afectan a sus instalaciones de componentes. Por ejemplo, un nodo de conmutación por error o la adición de un nuevo nodo al clúster de SQL Server.  
 
-## <a name="supported-options-for-using-a-sql-server-failover-cluster"></a>Opciones admitidas para el uso de un clúster de conmutación por error de SQL Server
+
+
+## <a name="supported-options"></a>Opciones admitidas
 
 Se admiten las siguientes opciones para los clústeres de conmutación por error de SQL Server usados como base de datos del sitio:
 
--   Clúster de instancia única  
+- Clúster de instancia única  
 
--   Configuración de varias instancias  
+- Varias configuraciones de instancias  
 
--   Varios nodos activos  
+- Varios nodos activos  
 
--   Instancia con nombre o instancia predeterminada  
+- Instancia con nombre o instancia predeterminada  
+
+
+
+## <a name="prerequisites"></a>Requisitos previos
 
 Tenga en cuenta los siguientes requisitos previos:  
 
--   La base de datos del sitio debe ser remota con respecto al servidor de sitio. (El clúster no puede incluir el servidor de sistema de sitio).  
+- La base de datos del sitio debe ser remota con respecto al servidor de sitio. El clúster no puede incluir el servidor de sistema de sitio.  
 
--   Debe agregar la cuenta de equipo del servidor de sitio al grupo de administradores locales de cada servidor del clúster.  
+    > [!Note]  
+    > A partir de la versión 1810, el proceso de instalación de Configuration Manager ya no impide la instalación del rol de servidor de sitio en un equipo con el rol de Windows para clústeres de conmutación por error. Anteriormente, no podía colocar la base de datos del sitio en el servidor de sitio. Con este cambio, puede crear un sitio de alta disponibilidad con menos servidores usando un clúster de SQL y un servidor de sitio en modo pasivo. Para obtener más información, vea [High availability options](/sccm/core/servers/deploy/configure/high-availability-options) (Opciones de alta disponibilidad). <!--3607761, fka 1359132-->  
 
--   Para admitir la autenticación Kerberos, el protocolo de comunicación de red **TCP/IP** debe estar habilitado para la conexión de red de cada nodo del clúster de SQL Server. No hacen falta**canalizaciones con nombre** , pero pueden usarse para solucionar problemas de autenticación Kerberos. Las opciones de protocolo de red se configuran en **Administrador de configuración de SQL Server**, en **Configuración de red de SQL Server**.  
+- Agregue la cuenta de equipo del servidor de sitio al grupo de **administradores** locales de cada servidor del clúster.  
 
--   Si usa una PKI, vea Requisitos de certificados PKI para Configuration Manager para conocer los requisitos de certificado específicos cuando se usa un clúster de SQL Server para la base de datos del sitio.  
+- Para admitir la autenticación Kerberos, habilite el protocolo de comunicación de red **TCP/IP** para la conexión de red de cada nodo del clúster de SQL Server. No hace falta el protocolo de **canalizaciones con nombre**, pero puede usarse para solucionar problemas de autenticación Kerberos. Las opciones de protocolo de red se configuran en **Administrador de configuración de SQL Server**, en **Configuración de red de SQL Server**.  
+
+- Si usa una infraestructura de clave pública (PKI), consulte [Requisitos de certificados PKI](/sccm/core/plan-design/network/pki-certificate-requirements). Hay requisitos de certificado específicos cuando se usa el clúster de SQL Server para la base de datos del sitio.  
+
+
+
+## <a name="limitations"></a>Limitaciones
 
 Tenga en cuenta las limitaciones siguientes:  
 
--   **Instalación y configuración:**  
 
-    -   Los sitios secundarios no pueden usar un clúster de SQL Server.  
+### <a name="installation-and-configuration"></a>Instalación y configuración
 
-    -   La opción de especificar ubicaciones de archivos no predeterminadas para la base de datos del sitio no está disponible cuando se especifica un clúster de SQL Server.  
+- Los sitios secundarios no pueden usar un clúster de SQL Server.  
 
--   **Proveedor de SMS:**  
+- La opción de especificar ubicaciones de archivos no predeterminadas para la base de datos del sitio no está disponible cuando se especifica un clúster de SQL Server.  
 
-    -   No se admite la instalación de una instancia del proveedor de SMS en un clúster de SQL Server ni en un equipo que se ejecuta como un nodo de SQL Server en clúster.  
 
--   **Opciones de replicación de datos:**  
+### <a name="sms-provider"></a>Proveedor de SMS
 
-    -   Si va a usar **vistas distribuidas**, no puede usar un clúster de SQL Server para hospedar la base de datos del sitio.  
+No se puede instalar una instancia del proveedor de SMS en un clúster de SQL Server. Tampoco se admite en un equipo que se ejecuta como un nodo de SQL Server en clúster.  
 
--   **Copia de seguridad y recuperación:**  
 
-    -   Configuration Manager no admite la copia de seguridad de Data Protection Manager (DPM) para un clúster de SQL Server que use una instancia con nombre. En cambio, admite la copia de seguridad de DPM en un clúster de SQL Server que use la instancia predeterminada de SQL Server.  
+### <a name="data-replication-options"></a>Opciones de replicación de datos
 
-## <a name="prepare-a-clustered-sql-server-instance-for-the-site-database"></a>Preparar una instancia de SQL Server en clúster para la base de datos del sitio  
+Si usa **vistas distribuidas**, no puede usar un clúster de SQL Server para hospedar la base de datos del sitio.  
+
+
+### <a name="backup-and-recovery"></a>Copia de seguridad y recuperación
+
+Configuration Manager no admite la copia de seguridad de Data Protection Manager (DPM) para un clúster de SQL Server que use una instancia con nombre. Sí admite la copia de seguridad de DPM en un clúster de SQL Server que use la instancia predeterminada de SQL Server.  
+
+
+
+## <a name="bkmk_prepare"></a> Preparación de una instancia de SQL Server en clúster  
 
 Estas son las principales tareas que debe llevar a cabo para preparar la base de datos del sitio:
 
--   Cree el clúster virtual de SQL Server para hospedar la base de datos del sitio en un entorno de clúster de Windows Server existente. Para conocer pasos específicos para instalar y configurar un clúster de SQL Server, vea la documentación específica de la versión de SQL Server. Por ejemplo, si utiliza SQL Server 2008 R2, consulte [Installing a SQL Server 2008 R2 Failover Cluster (Instalación de un clúster de conmutación por error de SQL Server 2008 R2)](http://go.microsoft.com/fwlink/p/?LinkId=240231).  
+- Cree el clúster virtual de SQL Server para hospedar la base de datos del sitio en un entorno de clúster de Windows Server existente. Para conocer pasos específicos para instalar y configurar un clúster de SQL Server, vea la documentación específica de la versión de SQL Server. Para obtener más información, consulte [Crear un nuevo clúster de conmutación por error](https://docs.microsoft.com/sql/sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup?view=sql-server-2017).  
 
--   En cada equipo del clúster de SQL Server puede colocar un archivo en la carpeta raíz de cada unidad en donde no quiere que Configuration Manager instale componentes del sitio. El archivo debe denominarse **NO_SMS_ON_DRIVE.SMS**. De forma predeterminada, Configuration Manager instala algunos componentes en cada nodo físico para admitir operaciones como la copia de seguridad.  
+- En cada equipo del clúster de SQL Server, coloque un archivo en la carpeta raíz de cada unidad en donde no quiere que Configuration Manager instale componentes del sitio. Ponga al archivo el nombre `NO_SMS_ON_DRIVE.SMS`. De forma predeterminada, Configuration Manager instala algunos componentes en cada nodo físico para admitir operaciones como la copia de seguridad.  
 
--   Agregue la cuenta de equipo del servidor de sitio al grupo de **administradores locales** de cada equipo de nodo de clúster de Windows Server.  
+- Agregue la cuenta de equipo del servidor de sitio al grupo de **administradores** locales de cada equipo de nodo de clúster de Windows Server.  
 
--   En la instancia virtual de SQL Server, asigne el rol **sysadmin** de SQL Server a la cuenta de usuario que ejecutará el programa de instalación de Configuration Manager.  
+- En la instancia virtual de SQL Server, asigne el rol **sysadmin** de SQL Server a la cuenta de usuario que ejecuta el programa de instalación de Configuration Manager.  
+
 
 ### <a name="to-install-a-new-site-using-a-clustered-sql-server"></a>Para instalar un sitio nuevo con un servidor de SQL Server en clúster  
- Para instalar un sitio que usa una base de datos del sitio en clúster, ejecute el programa de instalación de Configuration Manager siguiendo el proceso normal para instalar un sitio, pero introduzca la modificación siguiente:  
 
--   En la página **Información de base de datos** , especifique el nombre de la instancia virtual de clúster de SQL Server que hospedará la base de datos del sitio. La instancia virtual reemplaza el nombre del equipo que ejecuta SQL Server.  
+Para instalar un sitio que usa una base de datos del sitio en clúster, ejecute el programa de instalación de Configuration Manager siguiendo el proceso normal para instalar un sitio, pero introduzca la modificación siguiente:  
+
+- En la página **Información de base de datos** , especifique el nombre de la instancia virtual de clúster de SQL Server que hospedará la base de datos del sitio. La instancia virtual reemplaza el nombre del equipo que ejecuta SQL Server.  
 
     > [!IMPORTANT]  
-    >  Cuando escriba el nombre de la instancia virtual de clúster de SQL Server, no escriba el nombre virtual de Windows Server creado por el clúster de Windows Server. Si usa el nombre virtual de Windows Server, la base de datos del sitio se instala en la unidad de disco duro local del nodo de clúster activo de Windows Server. Esto impide que la conmutación por error se lleve a cabo correctamente si se produce un error en ese nodo.  
+    > Cuando escriba el nombre de la instancia virtual de clúster de SQL Server, no escriba el nombre virtual de Windows Server creado por el clúster de Windows Server. Si usa el nombre virtual de Windows Server, la base de datos del sitio se instala en la unidad de disco duro local del nodo de clúster activo de Windows Server. Esto impide que la conmutación por error se lleve a cabo correctamente si se produce un error en ese nodo.  

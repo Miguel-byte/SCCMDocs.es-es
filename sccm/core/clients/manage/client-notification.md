@@ -2,7 +2,7 @@
 title: Notificación de cliente
 titleSuffix: Configuration Manager
 description: Administra clientes al tomar medidas inmediatas desde la consola central de Configuration Manager.
-ms.date: 11/27/2018
+ms.date: 03/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f190522300090247cdca0affa9d993fe46201668
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: a643924cbaef928f9db4011f634ae96171ab7914
+ms.sourcegitcommit: 544f335cfd1bfd0a1d4973439780e9f5e9ee8bed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122039"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562098"
 ---
 # <a name="client-notification-in-configuration-manager"></a>Notificación de cliente de Configuration Manager
 
@@ -76,6 +76,7 @@ Esta acción requiere los mismos permisos que la acción [Ejecutar script](#run-
 
 Las siguientes acciones están en el menú **Notificación de cliente**, en la cinta, en el grupo Dispositivo o Colección de la pestaña Inicio.
 
+En la versión 1806 o anterior, la opción **Notificación de cliente** solo está disponible en el nodo Colección de dispositivos o cuando veía la pertenencia de una colección de dispositivos. A partir de la versión 1810, puede iniciar una **Notificación de cliente** directamente desde el nodo **Dispositivos**. Ya no es requisito estar dentro de la vista de la pertenencia a una colección. <!--SCCMDocs-pr issue 2972-->
 
 #### <a name="permissions"></a>Permisos
 <!--SCCMDocs-pr issue #2972--> A partir de la versión 1810, las acciones de notificación de cliente requieren el permiso **Notificar al recurso** en el objeto Colección. Este permiso se aplica a todas las acciones del menú **Notificación de cliente**. 

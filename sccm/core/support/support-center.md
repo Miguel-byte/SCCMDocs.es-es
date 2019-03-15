@@ -2,7 +2,7 @@
 title: Support Center
 titleSuffix: Configuration Manager
 description: Solucione problemas de clientes de Configuration Manager con el Centro de soporte técnico.
-ms.date: 01/30/2019
+ms.date: 03/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5942f60ea15ad83f5debdf8dd3d53e72770744c6
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 367c293794eea86ef8b7b7fb0e331ce0602b325e
+ms.sourcegitcommit: 544f335cfd1bfd0a1d4973439780e9f5e9ee8bed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122872"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562047"
 ---
 # <a name="support-center-for-configuration-manager"></a>Centro de soporte técnico de Configuration Manager
 
@@ -77,6 +77,9 @@ Una vez instalado, busque los siguientes elementos en el menú Iniciar del grupo
 
 
 ## <a name="known-issues"></a>Problemas conocidos 
+
+#### <a name="you-cant-install-the-latest-version-if-an-older-version-is-already-installed"></a>No se puede instalar la versión más reciente si ya está instalada una versión anterior
+<!--SCCMDocs-pr issue #3090--> Si ya tiene una versión anterior del centro de soporte técnico instalada, se produce un error en el programa de instalación de la versión 1810. Este problema se debe al control de versiones de los archivos en relación con la versión original y la versión más reciente. Para solucionar este problema, desinstale primero la versión anterior del centro de soporte técnico. A continuación, instale la versión más reciente desde la versión de Configuration Manager 1810.
 
 #### <a name="remote-connections-must-include-computer-name-or-domain-as-part-of-the-user-name"></a>Las conexiones remotas deben incluir el nombre del equipo o el dominio como parte del nombre de usuario.
 Si se conecta a un cliente remoto desde el Centro de soporte técnico, cuando establezca la conexión debe proporcionar el nombre del equipo o el nombre de dominio de la cuenta de usuario. Si usa un nombre abreviado de equipo o de dominio (como `.\administrator`), la conexión se realiza correctamente, pero el Centro de soporte técnico no recopila datos del cliente. 

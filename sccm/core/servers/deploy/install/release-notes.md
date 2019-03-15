@@ -2,7 +2,7 @@
 title: Notas de la versión
 titleSuffix: Configuration Manager
 description: Obtenga información sobre problemas urgentes que todavía no se han corregido en el producto o no se han tratado en un artículo de Knowledge Base del soporte técnico de Microsoft.
-ms.date: 02/21/2019
+ms.date: 03/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c7e4307d61cccf968729f013ebaa4bfab4b0027e
-ms.sourcegitcommit: 56ec6933cf7bfc93842f55835ad336ee3a1c6ab5
+ms.openlocfilehash: 33ef7020e1b9312717919a9dda8ce189c8db533c
+ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211540"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57558191"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Notas de la versión de Configuration Manager
 
@@ -142,6 +142,18 @@ Cambie el valor del Registro siguiente a `0` y reinicie el **Servicio Hacer clic
 
 
 ## <a name="mobile-device-management"></a>Administración de dispositivos móviles  
+
+### <a name="validation-for-ios-app-link-sometimes-fails-on-valid-link"></a>A veces se produce un error de validación para el vínculo de la aplicación de iOS en un vínculo válido
+<!-- LSI 106004348 --> Cuando se crea una nueva aplicación del tipo **Paquete de aplicación para iOS en App Store**, el validador no acepta algunas direcciones URL válidas para la **Ubicación**. En concreto, la App Store de iOS no requiere un valor para la sección de nombre de la aplicación de la dirección URL. Por ejemplo, ambos de los siguientes vínculos son válidos y apuntan a la misma aplicación, pero el **Asistente para crear aplicaciones** acepta solo el primero:
+- `https://itunes.apple.com/us/app/app-name/id123456789?mt=8`
+- `https://itunes.apple.com/us/app//id123456789?mt=8`
+
+#### <a name="workaround"></a>Solución alternativa
+Cuando se crea una aplicación de iOS a la que le falta el nombre de la aplicación en la dirección URL, agregue cualquier valor como si fuera el nombre de la aplicación a la dirección URL. Por ejemplo:
+- `https://itunes.apple.com/us/app/any-string/id123456789?mt=8`
+
+Esta acción permite completar al asistente. La aplicación se implementa correctamente en dispositivos iOS. La cadena que agrega a la dirección URL aparece como el **Nombre** en la pestaña **Información general** del asistente. También es la etiqueta de la aplicación en el Portal de empresa.
+
 
 ### <a name="you-can-no-longer-deploy-windows-phone-81-vpn-profiles-to-windows-10"></a>Ya no se pueden implementar perfiles de VPN de Windows Phone 8.1 en Windows 10
 <!-- 503274  -->

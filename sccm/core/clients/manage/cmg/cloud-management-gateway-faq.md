@@ -10,12 +10,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 4c1a128d-22fb-49f1-8e0b-36513a8dc117
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bcc535c007fc081d2597e5c6dafc159ed1176f39
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 4cbb9b37c951c490c1f2245f089fa22707f4c220
+ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156879"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57558021"
 ---
 # <a name="frequently-asked-questions-about-the-cloud-management-gateway"></a>Preguntas más frecuentes sobre Cloud Management Gateway
 
@@ -41,6 +41,10 @@ Si la organización usa ExpressRoute, un procedimiento recomendado de seguridad 
 ### <a name="do-i-need-to-maintain-the-azure-virtual-machines"></a>¿Es necesario mantener las máquinas virtuales de Azure?
 
 No se requiere ningún mantenimiento. El diseño de Cloud Management Gateway usa PaaS (plataforma como servicio) de Azure. Mediante la suscripción que se proporciona, Configuration Manager crea las máquinas virtuales (VM) necesarias, el almacenamiento y las redes. Azure protege y actualiza la máquina virtual. Estas máquinas virtuales no forman parte del entorno local, como sucede con la infraestructura como servicio (IaaS). Cloud Management Gateway es una PaaS que extiende el entorno de Configuration Manager a la nube. 
+
+### <a name="how-can-i-ensure-service-continuity-during-service-updates"></a>¿Cómo aseguro la continuidad del servicio durante las actualizaciones del servicio?
+
+Al escalar CMG para incluir dos o más instancias, automáticamente se beneficia de dominios de actualización en Azure. Consulte [Actualización de un servicio en la nube](/azure/cloud-services/cloud-services-update-azure-service).
 
 
 ### <a name="im-already-using-ibcm-if-i-add-cmg-how-do-clients-behave"></a>Ya uso IBCM. Si agrego Cloud Management Gateway, ¿cómo se comportarán los clientes?

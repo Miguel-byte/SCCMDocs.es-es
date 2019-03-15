@@ -1,8 +1,8 @@
 ---
 title: Creación de recopilaciones
 titleSuffix: Configuration Manager
-description: Cree recopilaciones en System Center Configuration Manager para facilitar la administración de grupos de usuarios y dispositivos.
-ms.date: 2/22/2017
+description: Cree recopilaciones en Configuration Manager para facilitar la administración de grupos de usuarios y dispositivos.
+ms.date: 03/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,194 +11,210 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6235f3f58d8688d9ceee11e1b4be05a2df21a509
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 8e79ec4b19ad45c49438ef273bcaf031754cf7e7
+ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56141126"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57558140"
 ---
-# <a name="how-to-create-collections-in-system-center-configuration-manager"></a>Cómo crear recopilaciones en System Center Configuration Manager
+# <a name="how-to-create-collections-in-configuration-manager"></a>Creación de recopilaciones en Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Las recopilaciones son grupos de usuarios o dispositivos. Use las recopilaciones para tareas como la administración de aplicaciones, la implementación de la configuración de cumplimiento o la instalación de actualizaciones de software. También puede utilizar las recopilaciones para administrar grupos de configuraciones de cliente o usarlas con administración basada en roles para especificar recursos a los que puede un usuario administrativo puede acceder. Configuration Manager contiene varias recopilaciones integradas. Para obtener más información, consulte [Introduction to collections in System Center Configuration Manager](../../../../core/clients/manage/collections/introduction-to-collections.md) (Introducción a las recopilaciones en System Center Configuration Manager).  
+Las recopilaciones son grupos de usuarios o dispositivos. Use las recopilaciones para tareas como la administración de aplicaciones, la implementación de la configuración de cumplimiento o la instalación de actualizaciones de software. También puede utilizar las recopilaciones para administrar grupos de configuraciones de cliente o usarlas con administración basada en roles para especificar recursos a los que puede un usuario administrativo puede acceder. Configuration Manager contiene varias recopilaciones integradas. Para obtener más información, consulte [Introduction to collections](/sccm/core/clients/manage/collections/introduction-to-collections) (Introducción a las recopilaciones).  
 
 > [!NOTE]  
->  Una recopilación puede contener usuarios o dispositivos, pero no ambos.  
+> Una recopilación puede contener usuarios o dispositivos, pero no ambos.  
 
- En la tabla siguiente, se enumeran las reglas que puede usar para configurar los miembros de una recopilación en Configuration Manager.  
 
-|Tipo de regla de pertenencia|Más información|  
-|--------------------------|----------------------|  
-|Regla directa|Elija los usuarios o equipos que quiera agregar a una recopilación. Esta pertenencia no cambia a menos que quite un recurso de Configuration Manager. Configuration Manager debe haber detectado los recursos o se deben haber importado los recursos antes de poderlos agregar a una recopilación de regla directa. Las recopilaciones de reglas directas tienen una mayor carga administrativa que las recopilaciones de reglas de consulta porque requieren cambios manuales.|  
-|Regla de consulta|Actualice de forma dinámica la pertenencia de una recopilación basándose en una consulta que Configuration Manager ejecuta según una programación. Por ejemplo, puede crear una recopilación de usuarios que sean miembros de la unidad organizativa Recursos humanos de los Servicios de dominio de Active Directory. Esta recopilación se actualiza automáticamente cuando se agregan usuarios nuevos o se quitan usuarios de la unidad organizativa Recursos humanos.<br /><br /> Para obtener consultas de ejemplo que puede usar para crear recopilaciones, consulte [How to create queries in System Center Configuration Manager](../../../../core/servers/manage/create-queries.md) (Cómo crear consultas en System Center Configuration Manager).|  
-|Regla de inclusión de recopilación|Incluya los miembros de otra recopilación en una recopilación de Configuration Manager. La pertenencia de la recopilación actual se actualiza según una programación si la recopilación incluida cambia.<br /><br /> Puede agregar varias reglas de inclusión de recopilación a una recopilación.<br /> |  
-|Regla de exclusión de recopilación|La regla de exclusión de recopilación le permite excluir los miembros de otra recopilación de una recopilación de Configuration Manager. La pertenencia de la recopilación actual se actualiza según una programación si la recopilación excluida cambia.<br /><br /> Puede agregar varias reglas de exclusión de recopilación a una recopilación. Si una recopilación incluye tanto reglas de inclusión de recopilación como reglas de exclusión de recopilación y se produce un conflicto, la regla de exclusión tiene prioridad.<br />              **Ejemplo:** se crea una recopilación que tiene una regla de inclusión de recopilación y una regla de exclusión de recopilación. La regla de inclusión de recopilación es para una recopilación de equipos de escritorio de Dell. La de exclusión de recopilación es una recopilación de equipos que tienen menos de 4 GB de RAM. La nueva recopilación contendrá los equipos de escritorio de Dell que tengan al menos 4 GB de RAM.|  
+Use este artículo como ayuda para crear recopilaciones en Configuration Manager. También puede importar recopilaciones creadas en este u otro sitio de Configuration Manager. Para obtener información acerca de cómo exportar las recopilaciones, vea [Administración de recopilaciones en Configuration Manager](/sccm/core/clients/manage/collections/manage-collections).  
 
- Use los procedimientos siguientes como ayuda para crear recopilaciones en Configuration Manager. También puede importar recopilaciones creadas en este u otro sitio de Configuration Manager. Para más información sobre cómo exportar recopilaciones, vea [Cómo administrar recopilaciones en System Center Configuration Manager](../../../../core/clients/manage/collections/manage-collections.md).  
 
- Para obtener información sobre la creación de recopilaciones para equipos que ejecutan Linux y UNIX, consulte [How to manage clients for Linux and UNIX servers in System Center Configuration Manager](../../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md) (Cómo administrar clientes para servidores Linux y UNIX en System Center Configuration Manager).  
 
-##  <a name="BKMK_1"></a> Cómo crear una recopilación de dispositivos  
+## <a name="collection-rules"></a>Reglas de recopilación
 
-1.  En la consola de Configuration Manager, seleccione **Activos y compatibilidad** > **Recopilaciones de dispositivos**.  
+Hay diferentes reglas que puede usar para configurar los miembros de una recopilación en Configuration Manager.  
 
-3.  En la pestaña **Inicio**, en el grupo **Crear**, haga clic en **Crear recopilación de dispositivos**.  
 
-4.  En la página **General**, proporcione un **Nombre** y un **Comentario**. Después, en **Recopilación de restricción**, haga clic en **Examinar** para seleccionar una recopilación de restricción. La recopilación solo contendrá miembros de la recopilación de restricción.  
+### <a name="direct-rule"></a>Regla directa
 
-5.  En la página **Reglas de pertenencia** del **Asistente para crear recopilación de dispositivos**, en la lista **Agregar regla**, seleccione el tipo de regla de pertenencia que quiere usar para esta recopilación. Puede configurar varias reglas para cada recopilación.  
+Elija los usuarios o equipos que quiera agregar a una recopilación. Esta pertenencia no cambia a menos que quite un recurso de Configuration Manager. Configuration Manager debe haber detectado los recursos o se deben haber importado antes de poderlos agregar a una recopilación de regla directa. Las recopilaciones de reglas directas tienen una mayor carga administrativa que las recopilaciones de reglas de consulta porque requieren cambios manuales.
+
+
+### <a name="query-rule"></a>Regla de consulta
+
+Actualice de forma dinámica la pertenencia de una recopilación basándose en una consulta que Configuration Manager ejecuta según una programación. Por ejemplo, puede crear una recopilación de usuarios que sean miembros de la unidad organizativa Recursos humanos de los Servicios de dominio de Active Directory. Esta recopilación se actualiza automáticamente cuando se agregan usuarios nuevos o se quitan usuarios de la unidad organizativa Recursos humanos.
+
+Para ver ejemplos de consultas que puede usar para crear recopilaciones, consulte [Cómo crear consultas](/sccm/core/servers/manage/create-queries).
+
+
+### <a name="device-category-rule"></a>Regla de categoría de dispositivos
+
+Puede facilitar la administración de los dispositivos mediante la asociación de las categorías de dispositivos con las recopilaciones de dispositivos. 
+
+Para obtener más información, consulte [Cómo clasificar automáticamente dispositivos en recopilaciones](/sccm/core/clients/manage/collections/automatically-categorize-devices-into-collections).<!-- SCCMDocs issue 552 -->
+
+
+### <a name="include-collection-rule"></a>Regla de inclusión de recopilación
+
+Incluya los miembros de otra recopilación en una recopilación de Configuration Manager. Configuration Manager actualiza la pertenencia de la recopilación actual según una programación si cambia la recopilación incluida.
+
+Puede agregar varias reglas de inclusión de recopilación a una recopilación.
+
+
+### <a name="exclude-collection-rule"></a>Regla de exclusión de recopilación
+
+La regla de exclusión de recopilación le permite excluir los miembros de otra recopilación de una recopilación de Configuration Manager. Configuration Manager actualiza la pertenencia de la recopilación actual según una programación si cambia la recopilación excluida.
+
+Puede agregar varias reglas de exclusión de recopilación a una recopilación. Si una recopilación incluye tanto reglas de inclusión de recopilación como reglas de exclusión de recopilación y se produce un conflicto, la regla de exclusión tiene prioridad.
+
+#### <a name="example"></a>Ejemplo
+se crea una recopilación que tiene una regla de inclusión de recopilación y una regla de exclusión de recopilación. La regla de inclusión de recopilación es para una recopilación de equipos de escritorio de Dell. La de exclusión de recopilación es una recopilación de equipos que tienen menos de 4 GB de RAM. La nueva recopilación contiene los equipos de escritorio de Dell que tengan al menos 4 GB de RAM.
+
+
+
+## <a name="bkmk_create"></a> Creación de una recopilación  
+
+1. En la consola de Configuration Manager, vaya al área de trabajo **Activos y compatibilidad**.  
+
+    - Para crear una *recopilación de dispositivos*, seleccione el nodo **Recopilaciones de dispositivos**. En la pestaña **Inicio** de la cinta de opciones, en el grupo **Crear**, haga clic en **Crear recopilación de dispositivos**.  
+
+    - Para crear una *recopilación de usuarios*, seleccione el nodo **Recopilaciones de usuarios**. En la pestaña **Inicio** de la cinta de opciones, en el grupo **Crear**, haga clic en **Crear recopilación de usuarios**.  
+
+2. En la página **General** del asistente, proporcione un **Nombre** y un **Comentario**. Después, en la sección **Recopilación de restricción**, elija **Examinar** y seleccione una recopilación de restricción. La recopilación que está creando solo contendrá miembros de la recopilación de restricción.  
+
+4. En la página **Reglas de pertenencia**, en la lista **Agregar regla**, seleccione el tipo de regla de pertenencia que quiere usar para esta recopilación. Puede configurar varias reglas para cada recopilación. La configuración para cada regla varía. Para obtener más información sobre la configuración de cada regla, vea las secciones siguientes:  
+    - [Regla directa](#bkmk-direct)
+    - [Regla de consulta](#bkmk-query)
+    - [Regla de categoría de dispositivos](#bkmk-category)
+    - [Regla de inclusión de recopilación](#bkmk-include)
+    - [Regla de exclusión de recopilación](#bkmk-exclude)
+
+5. También en la página **Reglas de pertenencia**, revise la configuración siguiente:
+
+    - **Usar actualizaciones incrementales para esta recopilación**: Seleccione esta opción para buscar y actualizar periódicamente solo recursos nuevos o modificados desde la evaluación de recopilación anterior. Este proceso es independiente de una evaluación de recopilación completa. Las actualizaciones incrementales se producen en intervalos de 5 minutos de manera predeterminada.  
+
+        > [!IMPORTANT]  
+        >  Las recopilaciones con reglas de consulta que usan las clases siguientes no admiten las actualizaciones incrementales:  
+        >   
+        > -   SMS_G_System_CollectedFile  
+        > -   SMS_G_System_LastSoftwareScan  
+        > -   SMS_G_System_AppClientState  
+        > -   SMS_G_System_DCMDeploymentState  
+        > -   SMS_G_System_DCMDeploymentErrorAssetDetails  
+        > -   SMS_G_System_DCMDeploymentCompliantAssetDetails  
+        > -   SMS_G_System_DCMDeploymentNonCompliantAssetDetails  
+        > -   SMS_G_User_DCMDeploymentCompliantAssetDetails (solo para las recopilaciones de usuarios)  
+        > -   SMS_G_User_DCMDeploymentNonCompliantAssetDetails (solo para las recopilaciones de usuarios)  
+        > -   SMS_G_System_SoftwareUsageData  
+        > -   SMS_G_System_CI_ComplianceState  
+        > -   SMS_G_System_EndpointProtectionStatus  
+        > -   SMS_GH_System_*  
+        > -   SMS_GEH_System_*  
+
+    - **Programar una actualización completa en esta recopilación**: programe una evaluación completa regular de la pertenencia a la recopilación.  
+
+        A partir de la versión 1810, los siguientes cambios en el comportamiento de evaluación de recopilación pueden mejorar el rendimiento del sitio:<!--3607726-->  
+
+        - Anteriormente, cuando se configuraba una programación de una recopilación basada en consultas, el sitio continuaba con la evaluación de la consulta aunque habilitara o no la configuración de la recopilación como **Programar una actualización completa en esta recopilación**. Para deshabilitar completamente la programación, tenía que cambiar la programación a **Ninguna**. 
+
+            Ahora el sitio elimina la programación cuando se deshabilita esta configuración. Para especificar una programación de evaluación de recopilación, habilite la opción para **Programar una actualización completa en esta recopilación**.  
+
+            Al actualizar el sitio, en cualquier recopilación existente en la que se especifica una programación, el sitio habilita la opción para **Programar una actualización completa en esta recopilación**. Aunque esta configuración no fuera la deseada, era el comportamiento real. Para que el sitio deje de evaluar una recopilación según una programación, deshabilite esta opción.  
+
+        - No puede deshabilitar la evaluación de las recopilaciones integradas como **Todos los sistemas**, pero ahora puede configurar la programación. Este comportamiento permite personalizar esta acción en el momento en que se cumplen sus requisitos. 
+
+            > [!Tip]  
+            > Cambie solo la **hora** de la programación personalizada en las recopilaciones integradas. No cambie el **Patrón de periodicidad**. Las iteraciones futuras pueden exigir un patrón de periodicidad específico.  
+
+6. Complete el asistente para crear la nueva recopilación. La nueva recopilación se muestra en el nodo **Recopilaciones de dispositivos** del área de trabajo **Activos y compatibilidad** .  
+
+> [!NOTE]  
+> Debe actualizar o volver a cargar la consola de Configuration Manager para ver los miembros de la recopilación. No aparecen en la recopilación hasta después de la primera actualización programada. Puede seleccionar también manualmente **Actualizar pertenencia** para la recopilación. La actualización de colección puede tardar unos minutos en completarse.  
 
         
-##### <a name="to-configure-a-direct-rule"></a>Cómo configurar una regla directa  
+### <a name="bkmk-direct"></a> Configuración de una regla directa  
 
-1.  En la página **Buscar recursos** del **Asistente para crear reglas de pertenencia directa**, especifique la información siguiente:  
+1. En la página **Buscar recursos** del **Asistente para crear reglas de pertenencia directa**, especifique la información siguiente:  
 
--   **Clase de recurso:** seleccione el tipo de recurso que quiera buscar y agregar a la recopilación. Seleccione uno de los valores de **Recurso del sistema** para buscar datos de inventario devueltos de equipos cliente o **Equipo desconocido** para seleccionar entre los valores devueltos por equipos desconocidos.  
+    - **Clase de recurso:** seleccione el tipo de recurso que quiera buscar y agregar a la recopilación. Por ejemplo, 
+        - **Recurso del sistema**: busque datos de inventario devueltos de equipos cliente
+        - **Equipo desconocido**: seleccione entre los valores devueltos por equipos desconocidos
+        - **Recurso de usuario**: busque información de usuario recopilada por Configuration Manager
+        - **Recurso de grupo de usuarios**: busque información de grupo de usuarios recopilada por Configuration Manager
 
--   **Nombre de atributo**: seleccione el atributo asociado a la clase de recurso seleccionado que quiera buscar. Por ejemplo, si quiere seleccionar equipos por su nombre NETBIOS, seleccione **Recurso del sistema** en la lista **Clase de recurso** y **Nombre NETBIOS** en la lista **Nombre de atributo** .  
+    - **Nombre de atributo**: seleccione el atributo asociado a la clase de recurso seleccionado que quiera buscar. Por ejemplo,  
 
--   **Excluir recursos marcados como obsoletos**: si un equipo cliente está marcado como obsoleto, no incluya este valor en los resultados de la búsqueda.  
+        - Si quiere seleccionar equipos por su nombre NETBIOS, seleccione **Recurso del sistema** en la lista **Clase de recurso** y **Nombre NETBIOS** en la lista **Nombre de atributo**.  
 
--   **Excluir recursos que no tengan instalado el cliente de Configuration Manager**: estos no se mostrarán en los resultados de búsqueda.  
+        - Si quiere seleccionar equipos por su nombre de unidad organizativa (UO), seleccione **Recurso de usuario** en la lista **Clase de recurso** y **Nombre de UO de usuario** en la lista **Nombre de atributo**.  
 
--   **Valor:** escriba un valor por el que quiera buscar el nombre del atributo seleccionado. Puede utilizar el carácter de porcentaje **%** como carácter comodín. Por ejemplo, para buscar equipos que tengan un nombre NETBIOS que comience por "M", escriba **M%** en este campo.  
+    - **Excluir recursos marcados como obsoletos**: si un equipo cliente está marcado como obsoleto, no incluya este valor en los resultados de la búsqueda.  
 
-2.  En la página **Seleccionar recursos**, seleccione los recursos que quiere agregar a la recopilación en la lista **Recursos** y luego haga clic en **Siguiente**.  
+    - **Excluir recursos que no tengan instalado el cliente de Configuration Manager**: estos recursos no se mostrarán en los resultados de búsqueda.  
+
+    - **Valor**: escriba un valor para buscar el nombre del atributo seleccionado. Puede utilizar el carácter de porcentaje `%` como carácter comodín. Por ejemplo,  
+        - Para buscar equipos que tengan un nombre NETBIOS que comience por "M", escriba `M%` en este campo.  
+        - Para buscar usuarios en la UO de Contoso, escriba `Contoso` en este campo.
+
+2. En la página **Seleccionar recursos**, seleccione los recursos que quiere agregar a la recopilación en la lista **Recursos** y luego haga clic en **Siguiente**.  
 
 
-##### <a name="to-configure-a-query-rule"></a>Cómo configurar una regla de consulta  
+### <a name="bkmk-query"></a> Configuración de una regla de consulta  
 
-1.  En el cuadro de diálogo **Propiedades de regla de consulta** , especifique la siguiente información:  
+En el cuadro de diálogo **Propiedades de regla de consulta** , especifique la siguiente información:  
 
--   **Nombre**: especifique un nombre único.  
+- **Nombre**: especifique un nombre único para la consulta.  
 
--   **Importar instrucción de consulta**: abre el cuadro de diálogo **Examinar consulta** donde puede seleccionar una [consulta de Configuration Manager](../../../../core/servers/manage/create-queries.md) para usarla como la regla de consulta de la recopilación.   
+- **Importar instrucción de consulta**: abre el cuadro de diálogo **Examinar consulta**. Seleccione una [consulta de Configuration Manager](/sccm/core/servers/manage/create-queries) para usarla como la regla de consulta de la colección.   
 
--   **Clase de recurso:** seleccione el tipo de recurso que quiera buscar y agregar a la recopilación. Seleccione uno de los valores de **Recurso del sistema** para buscar datos de inventario devueltos de equipos cliente o **Equipo desconocido** para seleccionar entre los valores devueltos por equipos desconocidos.  
+- **Clase de recurso:** seleccione el tipo de recurso que quiera buscar y agregar a la recopilación. Seleccione uno de los valores de **Recurso del sistema** para buscar datos de inventario devueltos de equipos cliente o **Equipo desconocido** para seleccionar entre los valores devueltos por equipos desconocidos.  
 
--   **Editar instrucción de consulta**: abre el cuadro de diálogo **Propiedades de instrucción de consulta** donde puede crear una consulta para usarla como regla de la recopilación. Para obtener más información sobre consultas, consulte [Queries technical reference for System Center Configuration Manager](../../../../core/servers/manage/queries-technical-reference.md) (Referencia técnica de consultas para System Center Configuration Manager).  
+- **Editar instrucción de consulta**: abre el cuadro de diálogo **Propiedades de instrucción de consulta** donde puede crear una consulta para usarla como regla para la recopilación. Para obtener más información acerca de las consultas, consulte [Referencia técnica de consultas](/sccm/core/servers/manage/queries-technical-reference).  
 
-    
-##### <a name="to-configure-an-include-collection-rule"></a>Cómo configurar una regla de inclusión de recopilación  
 
-En el cuadro de diálogo **Seleccionar recopilaciones**, seleccione las recopilaciones que quiere incluir en la nueva recopilación y después pulse **Aceptar**.  
+### <a name="bkmk-category"></a> Regla de categoría de dispositivos
 
-##### <a name="to-configure-an-exclude-collection-rule"></a>Cómo configurar una regla de exclusión de recopilación  
+Las siguientes acciones están disponibles en la ventana **Seleccionar categorías de dispositivos**:
 
-En el cuadro de diálogo **Seleccionar recopilaciones**, seleccione las recopilaciones que quiere excluir en la nueva recopilación y después pulse **Aceptar**.  
+- **Crear**: especifique un nombre para crear una nueva categoría
+- **Cambiar nombre**: cambie el nombre de la categoría seleccionada
+- **Eliminar**: seleccione una o varias categorías y use esta acción para quitarlas de la lista
 
--   **Usar actualizaciones incrementales para esta recopilación**: seleccione esta opción para detectar y examinar de forma periódica recursos nuevos o modificados con respecto a la evaluación de recopilación anterior, independientemente de que se realice una evaluación de recopilación completa. Las actualizaciones incrementales se producen en intervalos de 5 minutos de manera predeterminada.  
+Para obtener más información, consulte [Cómo clasificar automáticamente dispositivos en recopilaciones](/sccm/core/clients/manage/collections/automatically-categorize-devices-into-collections).<!-- SCCMDocs issue 552 -->
 
-> [!IMPORTANT]  
->  Las recopilaciones configuradas mediante el uso de reglas que usan las clases siguientes no admiten las actualizaciones incrementales:  
->   
-> -   SMS_G_System_CollectedFile  
-> -   SMS_G_System_LastSoftwareScan  
-> -   SMS_G_System_AppClientState  
-> -   SMS_G_System_DCMDeploymentState  
-> -   SMS_G_System_DCMDeploymentErrorAssetDetails  
-> -   SMS_G_System_DCMDeploymentCompliantAssetDetails  
-> -   SMS_G_System_DCMDeploymentNonCompliantAssetDetails  
-> -   SMS_G_User_DCMDeploymentCompliantAssetDetails (solo para las recopilaciones de usuarios)  
-> -   SMS_G_User_DCMDeploymentNonCompliantAssetDetails (solo para las recopilaciones de usuarios)  
-> -   SMS_G_System_SoftwareUsageData  
-> -   SMS_G_System_CI_ComplianceState  
-> -   SMS_G_System_EndpointProtectionStatus  
-> -   SMS_GH_System_*  
-> -   SMS_GEH_System_*  
 
--   **Programar una actualización completa en esta recopilación**: programe una evaluación completa regular de la pertenencia a la recopilación.  
-
-6.  Complete el asistente para crear la nueva recopilación. La nueva recopilación se muestra en el nodo **Recopilaciones de dispositivos** del área de trabajo **Activos y compatibilidad** .  
-
-> [!NOTE]  
->  Debe actualizar o volver a cargar la consola de Configuration Manager para ver los miembros de la recopilación. Pero los miembros no aparecerán en la recopilación hasta después de la primera actualización programada o si selecciona manualmente **Actualizar pertenencia** para la recopilación. La actualización de colección puede tardar unos minutos en completarse.  
-
-##  <a name="BKMK_2"></a> Cómo crear una recopilación de usuarios  
-
-1.  En la consola de Configuration Manager, seleccione **Activos y compatibilidad** > **Usuarios de usuarios**.  
-
-3.  En la pestaña **Inicio**, en el grupo **Crear**, haga clic en **Crear recopilación de usuarios**.  
-
-4.  En la página **General** del asistente, proporcione un **Nombre** y un **Comentario**. Después, en **Recopilación de restricción**, haga clic en **Examinar** para seleccionar una recopilación de restricción. La recopilación solo contendrá miembros de la recopilación de restricción.  
-
-5.  En la página **Reglas de pertenencia**, especifique lo siguiente:  
-
-    -   En la lista **Agregar regla** , seleccione el tipo de regla de pertenencia que quiere usar para esta recopilación. Puede configurar varias reglas para cada recopilación.  
-
-##### <a name="to-configure-a-direct-rule"></a>Cómo configurar una regla directa  
-
-1.  En la página **Buscar recursos** del **Asistente para crear reglas de pertenencia directa**, especifique:  
-
--   **Clase de recurso:** seleccione el tipo de recurso que quiera buscar y agregar a la recopilación. Seleccione uno de los valores de **Recurso de usuario** para buscar información de usuario recopilada por Configuration Manager o **Recurso de grupo de usuarios** para buscar información de grupo de usuarios recopilada por Configuration Manager.  
-
--   **Nombre de atributo**: seleccione el atributo asociado a la clase de recurso que quiera buscar. Por ejemplo, si quiere seleccionar equipos por su nombre de unidad organizativa (UO), seleccione **Recurso de usuario** en la lista **Clase de recurso** y **Nombre de UO de usuario** en la lista **Nombre de atributo** .  
-
--   **Valor:** escriba el valor por el que quiera buscar. Puede utilizar el carácter de porcentaje **%** como carácter comodín. Por ejemplo, para buscar usuarios en la UO de Contoso, escriba **Contoso** en este campo.  
-
-2.  En la página **Seleccionar recursos**, seleccione los recursos que quiere agregar a la recopilación en la lista **Recursos**.  
-
-##### <a name="to-configure-a-query-rule"></a>Cómo configurar una regla de consulta  
-
-1.  En el cuadro de diálogo **Propiedades de regla de consulta**, proporcione lo siguiente:  
-
--   **Nombre**: nombre único.  
-
--   **Importar instrucción de consulta**: abre el cuadro de diálogo **Examinar consulta** donde puede seleccionar una [consulta de Configuration Manager](../../../../core/servers/manage/queries-technical-reference.md) para usarla como la regla de consulta de la recopilación.  
-
--   **Clase de recurso:** seleccione el tipo de recurso que quiera buscar y agregar a la recopilación. Seleccione uno de los valores de **Recurso de usuario** para buscar información de usuario recopilada por Configuration Manager o **Recurso de grupo de usuarios** para buscar información de grupo de usuarios recopilada por Configuration Manager.  
-
--   **Editar instrucción de consulta**: abre el cuadro de diálogo **Propiedades de instrucción de consulta** donde puede [crear una consulta](../../../../core/servers/manage/queries-technical-reference.md) para usarla como regla para la recopilación.  
-
-##### <a name="to-configure-an-include-collection-rule"></a>Cómo configurar una regla de inclusión de recopilación  
+### <a name="bkmk-include"></a> Configuración de una regla de inclusión de recopilación  
 
 En el cuadro de diálogo **Seleccionar recopilaciones**, seleccione las recopilaciones que quiere incluir en la nueva recopilación y después pulse **Aceptar**.  
 
-##### <a name="to-configure-an-exclude-collection-rule"></a>Cómo configurar una regla de exclusión de recopilación  
+
+### <a name="bkmk-exclude"></a> Configuración de una regla de exclusión de recopilación  
 
 En el cuadro de diálogo **Seleccionar recopilaciones**, seleccione las recopilaciones que quiere excluir en la nueva recopilación y después pulse **Aceptar**.  
 
 
--   **Usar actualizaciones incrementales para esta recopilación**: seleccione esta opción para detectar y examinar de forma periódica recursos nuevos o modificados con respecto a la evaluación de recopilación anterior, independientemente de que se realice una evaluación de recopilación completa. Las actualizaciones incrementales se producen en intervalos de 5 minutos de manera predeterminada.  
 
-> [!IMPORTANT]  
->  Las recopilaciones configuradas mediante el uso de reglas que usan las clases siguientes no admiten las actualizaciones incrementales:  
->   
-> -   SMS_G_System_CollectedFile  
-> -   SMS_G_System_LastSoftwareScan  
-> -   SMS_G_System_AppClientState  
-> -   SMS_G_System_DCMDeploymentState  
-> -   SMS_G_System_DCMDeploymentErrorAssetDetails  
-> -   SMS_G_System_DCMDeploymentCompliantAssetDetails  
-> -   SMS_G_System_DCMDeploymentNonCompliantAssetDetails  
-> -   SMS_G_User_DCMDeploymentCompliantAssetDetails (solo para las recopilaciones de usuarios)  
-> -   SMS_G_User_DCMDeploymentNonCompliantAssetDetails (solo para las recopilaciones de usuarios)  
-> -   SMS_G_System_SoftwareUsageData  
-> -   SMS_G_System_CI_ComplianceState  
-> -   SMS_G_System_EndpointProtectionStatus  
-> -   SMS_GH_System_*  
-> -   SMS_GEH_System_*  
+## <a name="bkmk_import"></a> Importación de una recopilación  
 
--   **Programar una actualización completa en esta recopilación**: programe una evaluación completa regular de la pertenencia a la recopilación.  
+Cuando se exporta una recopilación de un sitio, Configuration Manager la guarda como un archivo MOF. Utilice este procedimiento para importar ese archivo en la base de datos del sitio. Necesita **Crear** permisos en la clase de colecciones. 
 
-6.  Complete el asistente. La nueva recopilación se muestra en el nodo **Recopilaciones de usuarios** del área de trabajo **Activos y compatibilidad** .  
+> [!Important]  
+> - Asegúrese de que el archivo solo contiene datos de la colección, procede de un origen de confianza y no se ha manipulado.  
+> 
+> - Asegúrese de que el archivo se exportó desde un sitio que ejecuta la misma versión de Configuration Manager.  
 
-> [!NOTE]  
->  Debe actualizar o volver a cargar la consola de Configuration Manager para ver los miembros de la recopilación. Sin embargo, los miembros no aparecerán en la recopilación hasta después de la primera actualización programada o hasta que seleccione manualmente **Actualizar pertenencia** de la recopilación. La actualización de colección puede tardar unos minutos en completarse.  
+Para obtener más información acerca de cómo exportar las colecciones, vea [Administración de recopilaciones en Configuration Manager](/sccm/core/clients/manage/collections/manage-collections).
 
-##  <a name="BKMK_3"></a> Cómo importar una conexión  
 
-1.  En la consola de Configuration Manager, seleccione **Activos y compatibilidad** > **Recopilaciones de usuarios** o **Recopilaciones de dispositivos**.  
+1. En la consola de Configuration Manager, vaya al área de trabajo **Activos y compatibilidad**. Seleccione el nodo **Recopilaciones de usuarios** o **Recopilaciones de dispositivos**.  
 
-3.  En la pestaña **Inicio**, en el grupo **Crear**, haga clic en **Importar recopilaciones**.  
+2. En la pestaña **Inicio** de la cinta de opciones, en el grupo **Crear**, haga clic en **Importar recopilaciones**.  
 
-4.  En la página **General** del **Asistente para importar recopilaciones**, haga clic en **Siguiente**.  
+3. En la página **General** del **Asistente para importar recopilaciones**, haga clic en **Siguiente**.  
 
-5.  En la página **Nombre de archivo MOF**, haga clic en **Examinar** y luego busque el archivo MOF que contenga la información de la recopilación que quiera importar.  
+4. En el **Nombre de archivo MOF** página, elija **Examinar**. Busque el archivo MOF que contenga la información de la recopilación que quiera importar.  
 
-    > [!NOTE]  
-    >  El archivo que quiera importar se debe haber exportado de un sitio que ejecute la misma versión de Configuration Manager que este. Para obtener más información sobre cómo exportar recopilaciones, consulte [How to manage collections in System Center Configuration Manager](../../../../core/clients/manage/collections/manage-collections.md) (Cómo administrar recopilaciones en System Center Configuration Manager).  
+5. Complete el asistente para importar la recopilación. La nueva recopilación se muestra en el nodo **Recopilaciones de usuarios** o **Recopilaciones de dispositivos** del área de trabajo **Activos y compatibilidad** . Actualice o vuelva a cargar la consola de Configuration Manager para ver los miembros de la recopilación recién importada.  
 
-6.  Complete el asistente para importar la recopilación. La nueva recopilación se muestra en el nodo **Recopilaciones de usuarios** o **Recopilaciones de dispositivos** del área de trabajo **Activos y compatibilidad** . Actualice o vuelva a cargar la consola de Configuration Manager para ver los miembros de la recopilación recién importada.  

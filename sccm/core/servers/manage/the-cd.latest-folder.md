@@ -1,8 +1,8 @@
 ---
 title: Carpeta CD.Latest
 titleSuffix: Configuration Manager
-description: Obtenga información sobre el nuevo proceso de actualización que proporciona actualizaciones al producto desde la consola de Configuration Manager.
-ms.date: 03/28/2018
+description: Obtenga información sobre el proceso que proporciona actualizaciones al producto desde la consola de Configuration Manager.
+ms.date: 03/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,54 +11,68 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef94f51ad85f5d816a5de253a63a639111b4383a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 70612d3f60802892aa99bbc4fc006b9385cb8756
+ms.sourcegitcommit: af8693048e6706ffda72572374f56e0bc7dfce2c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56134340"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57737313"
 ---
-# <a name="the-cdlatest-folder-for-system-center-configuration-manager"></a>La carpeta CD.Latest para System Center Configuration Manager
+# <a name="the-cdlatest-folder-for-configuration-manager"></a>La carpeta CD.Latest para Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-System Center Configuration Manager introduce un nuevo proceso de actualización que proporciona actualizaciones al producto desde la consola de Configuration Manager. Para admitir este nuevo método de actualización de Configuration Manager, se crea una nueva carpeta denominada **CD.Latest** que contiene una copia de los archivos de instalación de Configuration Manager de la versión actualizada de su sitio.  
+Configuration Manager dispone de un proceso que proporciona actualizaciones al producto desde su consola. Para admitir este nuevo método de actualización de Configuration Manager, se crea una nueva carpeta con el nombre **CD.Latest**. Esta carpeta contiene una copia de los archivos de instalación de Configuration Manager para la versión actualizada de su sitio.  
 
-La carpeta CD.Latest contiene una carpeta denominada **Redist** que contiene los archivos redistribuibles que configuran las descargas y los usos. Estos archivos coinciden con la versión de los archivos de Configuration Manager que se encuentran en la carpeta CD.Latest. Al ejecutar el programa de instalación desde una carpeta CD.Latest más reciente, debe utilizar los archivos que coincidan con esa versión del programa de instalación. Para ello puede dirigir el programa de instalación para descargar los archivos nuevos y actuales de Microsoft o dirigir el programa de instalación para utilizar los archivos desde la carpeta Redist incluida en la carpeta CD.Latest.
+La carpeta CD.Latest contiene una carpeta denominada **Redist** que contiene los archivos redistribuibles que configuran las descargas y los usos. Estos archivos coinciden con la versión de los archivos de Configuration Manager que se encuentran en la carpeta CD.Latest. Al ejecutar el programa de instalación desde una carpeta CD.Latest más reciente, debe utilizar los archivos que coincidan con esa versión del programa de instalación. Puede dirigir el programa de instalación para descargar los archivos nuevos y actuales de Microsoft o dirigir el programa de instalación para utilizar los archivos desde la carpeta Redist incluida en la carpeta CD.Latest.
 
-En cambio, el medio de línea base, como la versión de línea base 1802 que se ha publicado en marzo de 2018, no incluye una carpeta Redist. No se creará la carpeta Redist hasta que se instale una actualización en la consola. Mientras tanto, use la carpeta Redist que ha usado al instalar sitios desde el medio de línea base.  
+El medio de línea de base no incluye una carpeta **Redist**. El sitio no crea una carpeta Redist hasta que instale una actualización en la consola. Mientras tanto, use la carpeta Redist que ha usado al instalar sitios desde el medio de línea base.  
 
-> [!TIP]
+> [!TIP]  
 > Asegúrese de que los archivos redistribuibles que usa están actualizados. Si no ha descargado recientemente los archivos redistribuibles, permita que el programa de instalación lo haga desde Microsoft.   
 
- A continuación se presentan diferentes escenarios en los que se crea o actualiza la carpeta CD.Latest en un sitio de administración central o un servidor de sitio primario:  
+A continuación se presentan diferentes escenarios en los que se crea o actualiza la carpeta CD.Latest en un sitio de administración central o un servidor de sitio primario:  
 
--   Instale una actualización la revisión desde la consola de Configuration Manager: la carpeta se crea o actualiza en la carpeta de instalación de Configuration Manager.  
+- Si instala una actualización o una revisión desde la consola de Configuration Manager, el sitio crea o actualiza la carpeta en la carpeta de instalación de Configuration Manager.  
 
--   Ejecute la tarea integrada de copia de seguridad de Configuration Manager: la carpeta se crea o actualiza en la ubicación designada de la carpeta de copia de seguridad.  
+- Si ejecuta la tarea de copia de seguridad integrada de Configuration Manager, el sitio crea o actualiza la carpeta en la ubicación de la carpeta de copia de seguridad designada.  
 
--  La carpeta CD.Latest se crea al instalar un sitio nuevo con medios de línea base (como la versión 1802).
+- Al instalar un sitio nuevo con un medio de línea de base, el sitio crea la carpeta CD.Latest.
 
-Los archivos de origen de la carpeta CD.Latest se admiten para lo siguiente:  
 
-1.  **Copia de seguridad y recuperación:** para recuperar un sitio, necesita usar los archivos de origen de una carpeta CD.Latest que coincida con el sitio. Al ejecutar una copia de seguridad de sitio mediante la tarea de copia de seguridad de sitio integrada, la carpeta CD.Latest se incluye como parte de la copia de seguridad.
+## <a name="supported-scenarios"></a>Escenarios admitidos
 
-    -   **Cuando vuelva a instalar el sitio como parte de una recuperación del sitio** , hágalo desde la carpeta CD.Latest incluida en la copia de seguridad. De este modo, el sitio se instala con las versiones de archivo que coinciden con la copia de seguridad del sitio y la base de datos del sitio.  Si no tiene acceso a la versión de la carpeta CD.Latest correcta, puede obtener una carpeta CD.Latest con las versiones de archivo correctas mediante la instalación de un sitio en un entorno de laboratorio y la posterior actualización de dicho sitio para que coincida con la versión que desea recuperar.
+Los archivos de origen de la carpeta CD.Latest se admiten para los siguientes escenarios:  
 
-        > [!IMPORTANT]  
-        >  Si no tiene disponibles la carpeta CD.Lastest correcta y su contenido, no se puede recuperar un sitio y este debe volver a instalarse.  
+### <a name="backup-and-recovery"></a>Copia de seguridad y recuperación
+Para recuperar un sitio, use los archivos de origen de una carpeta CD.Latest que coincida con el sitio. Al ejecutar una copia de seguridad de sitio mediante la tarea de copia de seguridad de sitio integrada, la carpeta CD.Latest se incluye como parte de la copia de seguridad.
 
-    -   Cuando no tiene una carpeta CD.Latest pero sí un sitio primario secundario o un sitio de administración central en funcionamiento, puede usar ese sitio como sitio de referencia en una recuperación del sitio.  
+- Cuando vuelva a instalar el sitio como parte de una recuperación del sitio, hágalo desde la carpeta CD.Latest incluida en la copia de seguridad. De este modo, el sitio se instala con las versiones de archivo que coinciden con la copia de seguridad del sitio y la base de datos del sitio.  
 
-2.  **Para instalar un sitio primario secundario:** si quiere instalar un nuevo sitio primario secundario debajo de un sitio de administración central que ha instalado una o varias actualizaciones en la consola, necesita usar el programa de instalación y los archivos de origen de la carpeta CD.Latest desde el sitio de administración central. Si el programa de instalación se ejecuta desde una copia de la carpeta CD.Latest del sitio de administración central, utiliza los archivos de origen de la instalación que coinciden con la versión del sitio de administración central. Para obtener más información, consulte [Use the Setup Wizard to install sites](../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md) (Usar el asistente para instalación para instalar sitios).  
+    - Si no tiene acceso a la versión de la carpeta correcta de CD.Latest, obtenga la carpeta CD.Latest con las versiones de archivo correctas instalando un sitio en un entorno de laboratorio. A continuación, actualice el sitio para que coincida con la versión que desea recuperar.  
 
-3.  **Para expandir un sitio primario independiente:** si va a expandir un sitio primario independiente mediante la instalación de un nuevo sitio de administración central, necesita usar el programa de instalación y los archivos de origen de la carpeta CD.Latest desde el sitio primario para instalar el nuevo sitio de administración central. Cuando se ejecuta desde una copia de la carpeta CD.Latest desde el sitio primario, utiliza los archivos de origen de instalación que coinciden con la versión del sitio primario. Para obtener más información, consulte [Expandir un sitio primario independiente](../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_expand) en [Use the Setup Wizard to install sites](../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md)(Usar el asistente para instalación para instalar sitios)
+    - Si no tiene disponibles la carpeta CD.Lastest correcta y su contenido, no puede recuperar un sitio. En este caso, deberá volver a instalar el sitio.  
 
-> [!IMPORTANT]  
->  Los archivos de origen de CD.Latest actualizados no se admiten para lo siguiente:  
->   
->  -   Instalación de un sitio nuevo para una jerarquía nueva  
->  -   Actualización de un sitio de Microsoft System Center 2012 Configuration Manager a System Center Configuration Manager
->  -   Instalación del cliente de Configuration Manager
->  -   Instalación de la consola de administración de Configuration Manager
+- Cuando no tiene una carpeta CD.Latest pero sí un sitio primario secundario o un sitio de administración central en funcionamiento, puede usar ese sitio como sitio de referencia en una recuperación del sitio.  
+
+### <a name="install-a-child-primary-site"></a>Instalar un sitio primario secundario
+Si quiere instalar un nuevo sitio primario secundario debajo de un sitio de administración central que ha instalado una o varias actualizaciones en la consola, use el programa de instalación y los archivos de origen de la carpeta CD.Latest desde el sitio de administración central. Este proceso utiliza los archivos de origen de instalación que coinciden con la versión del sitio de administración central. Para obtener más información, consulte [Use the Setup Wizard to install sites](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites) (Usar el asistente para instalación para instalar sitios).  
+
+### <a name="expand-a-stand-alone-primary-site"></a>Expandir un sitio primario independiente
+Si va a expandir un sitio primario independiente mediante la instalación de un nuevo sitio de administración central, necesita usar el programa de instalación y los archivos de origen de la carpeta CD.Latest desde el sitio primario. Este proceso utiliza los archivos de origen de instalación que coinciden con la versión del sitio primario. Para obtener más información, consulte [Expandir un sitio primario independiente](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#bkmk_expand).
+
+### <a name="install-a-secondary-site"></a>Instalar un sitio secundario
+<!-- SCCMDocs-pr issue #3164 --> Si quiere instalar un nuevo sitio secundario debajo de un sitio primario que ha instalado una o varias actualizaciones en la consola, use los archivos de origen de la carpeta CD.Latest desde el sitio primario. 
+
+Para obtener más información, vea [Instalar un sitio secundario](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#bkmk_secondary). 
+
+
+## <a name="unsupported-scenarios"></a>Escenarios no admitidos
+
+Los archivos de origen de CD.Latest actualizados no se admiten para lo siguiente:  
+   
+- Instalación de un sitio nuevo para una jerarquía nueva  
+- Actualización de un sitio de Microsoft System Center 2012 Configuration Manager a System Center Configuration Manager, rama actual
+- Instalación de clientes de Configuration Manager
+- Instalación de consolas de Configuration Manager
 

@@ -2,7 +2,7 @@
 title: Consola de Configuration Manager
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la navegación a través de la consola de Configuration Manager.
-ms.date: 2/20/2019
+ms.date: 03/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30db8b061f41e8a9255b5a308df6a98ef8c0d81b
-ms.sourcegitcommit: 369db96ee84299b5ab6d74b177e6366b3017fc54
+ms.openlocfilehash: 0f9c06f40af1134055d4038fd23954b3f4c59682
+ms.sourcegitcommit: 544f335cfd1bfd0a1d4973439780e9f5e9ee8bed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56589907"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562115"
 ---
 # <a name="using-the-configuration-manager-console"></a>Uso de la consola de Configuration Manager
 
@@ -160,6 +160,15 @@ A partir de la versión 1806, las siguientes columnas están disponibles en el n
     > Para poder ver el usuario que ha iniciado sesión actualmente, necesitará la [detección de usuarios](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_config-adud) y la [afinidad entre usuario y dispositivo](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).  
 
 Para obtener más información sobre cómo mostrar una columna no predeterminada, vea [Columnas](#columns).
+
+#### <a name="improvement-to-device-search-performance"></a>Mejora de rendimiento de la búsqueda de dispositivos
+<!-- 3614690 --> A partir de la versión 1806, al realizar búsquedas en una recopilación de dispositivos, no se busca la palabra clave en todas las propiedades del objeto. Cuando no especifique lo que hay que buscar, busca a través de las cuatro propiedades siguientes:
+- Nombre
+- Usuarios primarios
+- Usuario que ha iniciado sesión actualmente
+- Nombre de usuario de último inicio de sesión
+
+Este comportamiento mejora significativamente el tiempo necesario para buscar por nombre, especialmente en un entorno grande. Las búsquedas personalizadas según criterios específicos no se ven afectadas. 
 
 
 ### <a name="monitoring-workspace"></a>Área de trabajo de supervisión
