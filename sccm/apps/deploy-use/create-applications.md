@@ -2,7 +2,7 @@
 title: Crear aplicaciones
 titleSuffix: Configuration Manager
 description: Cree aplicaciones con tipos de implementación, métodos de detección y requisitos para instalar el software.
-ms.date: 11/27/2018
+ms.date: 03/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d7f896f2ad719572c5adb4e0f24cfc1cf7d1c4d6
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 236ae6e9efafcfe24f064fb643a43524eee3718d
+ms.sourcegitcommit: 4ab85212268e76d3fd22f00e6c74edaa5abde60c
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56126766"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426947"
 ---
 # <a name="create-applications-in-configuration-manager"></a>Crear aplicaciones en Configuration Manager
 
@@ -84,11 +84,11 @@ Después, detecte automáticamente o especifique manualmente la información de 
         > [!TIP]  
         >  Si el programa de instalación no aparece, haga clic en **Examinar** y busque la ubicación del programa de instalación.  
 
-    -   **Comportamiento de instalación**: seleccione una de las tres opciones para cómo instala Configuration Manager este tipo de implementación. Para obtener más información sobre estas opciones, vea [Experiencia de usuario](#bkmk_dt-ux).  
+    -   **Comportamiento de instalación**: seleccione una de las tres opciones para cómo Configuration Manager instala este tipo de implementación. Para obtener más información sobre estas opciones, vea [Experiencia de usuario](#bkmk_dt-ux).  
 
     -   **Usar una conexión VPN automática (si está configurada)**: si ha implementado un perfil de VPN en el dispositivo en el que el usuario inicia la aplicación, la VPN se conectará cuando se inicie. Esta opción es solo para Windows 8.1 y Windows Phone 8.1. En dispositivos Windows Phone 8.1, las conexiones VPN automáticas no se admiten si se ha implementado más de un perfil de VPN en el dispositivo. Para obtener más información, vea [Perfiles de VPN](/sccm/protect/deploy-use/vpn-profiles).  
 
-    - **Aprovisionar esta aplicación para todos los usuarios del dispositivo**<!--1358310-->: a partir de la versión 1806, una aplicación se aprovisiona con un paquete de aplicación de Windows para todos los usuarios en el dispositivo. Para obtener más información, vea [Creación de aplicaciones Windows](/sccm/apps/get-started/creating-windows-applications#bkmk_provision).  
+    - **Aprovisionar esta aplicación para todos los usuarios en el dispositivo**<!--1358310-->: a partir de la versión 1806, una aplicación se aprovisiona con un paquete de aplicación de Windows para todos los usuarios en el dispositivo. Para obtener más información, vea [Creación de aplicaciones Windows](/sccm/apps/get-started/creating-windows-applications#bkmk_provision).  
 
        > [!Tip]  
        > Si va a modificar una aplicación existente, esta opción está en la pestaña de **Experiencia del usuario** de las propiedades del tipo de implementación del paquete de la aplicación de Windows.  
@@ -135,11 +135,11 @@ Para agregar más tipos de implementación o configurar otras opciones, vea [Cre
 
     -   **Descripción localizada**: especifique una descripción para esta aplicación en el idioma que ha seleccionado.  
 
-    -   **Palabras clave**: escriba una lista de palabras clave en el idioma seleccionado. Estas palabras clave ayudan a los usuarios del Centro de software a buscar la aplicación.  
+    -   **Palabras clave**: especifique una lista de palabras clave en el idioma seleccionado. Estas palabras clave ayudan a los usuarios del Centro de software a buscar la aplicación.  
 
     -   **Icono**: haga clic en **Examinar** para seleccionar un icono para esta aplicación. Si no se especifica un icono, Configuration Manager usa un icono predeterminado. Los iconos pueden tener dimensiones de hasta 512 x 512 píxeles.  
 
-    -   **Mostrar como aplicación destacada y resaltarla en el portal de empresa**: esta opción muestra la aplicación de forma destacada en el portal de empresa en los dispositivos móviles.  
+    -   **Mostrar esta aplicación como destacada y resaltarla en el portal de empresa**: con esta opción, la aplicación se muestra de forma destacada en el portal de empresa en dispositivos móviles.  
 
 4.  En la página **Tipos de implementación** del Asistente para crear aplicaciones, seleccione **Agregar** para crear un tipo de implementación nuevo. Para obtener más información, consulte [Crear tipos de implementación de la aplicación](#bkmk_create-dt).  
 
@@ -204,7 +204,7 @@ Después use uno de los procedimientos siguientes para [detectar automáticament
 
     -   **Programa de instalación**: Especifique el programa de instalación y las propiedades que se requieren para instalar al tipo de implementación.  
 
-    -   **Comportamiento de instalación**: seleccione una de las tres opciones para cómo instala Configuration Manager este tipo de implementación. Para obtener más información sobre estas opciones, vea [Experiencia de usuario](#bkmk_dt-ux).  
+    -   **Comportamiento de instalación**: seleccione una de las tres opciones para cómo Configuration Manager instala este tipo de implementación. Para obtener más información sobre estas opciones, vea [Experiencia de usuario](#bkmk_dt-ux).  
 
     -   **Usar una conexión VPN automática (si está configurada)**: si ha implementado un perfil de VPN en el dispositivo en el que el usuario inicia la aplicación, la VPN se conectará cuando se inicie. Esta opción es solo para Windows 8.1 y Windows Phone 8.1. En dispositivos Windows Phone 8.1, las conexiones VPN automáticas no se admiten si se ha implementado más de un perfil de VPN en el dispositivo. Para obtener más información, vea [Perfiles de VPN](/sccm/protect/deploy-use/vpn-profiles).  
 
@@ -228,12 +228,12 @@ En la página **Contenido**, especifique la siguiente información:
 > [!Note]  
 > Al ver las propiedades de un tipo de implementación existente, algunas de estas opciones aparecen en la pestaña **Contenido** y otras en la pestaña **Programas**.  
 
-- **Ubicación del contenido**: especifique la ubicación del contenido para este tipo de implementación, o haga clic en **Examinar** para seleccionar la carpeta de contenido del tipo de implementación.  
+- **Ubicación del contenido**: especifique la ubicación del contenido para este tipo de implementación o haga clic en **Examinar** para elegir la carpeta de contenido del tipo de implementación.  
 
     > [!IMPORTANT]  
     >  La cuenta del sistema del equipo del servidor de sitio debe tener permisos para la ubicación del contenido que especifique.  
 
-    - **Conservar contenido en la caché del cliente**: el cliente de Configuration Manager mantiene indefinidamente en su caché el contenido del tipo de implementación. El cliente mantiene el contenido incluso si la aplicación ya está instalada. Esta opción es útil en algunas implementaciones, como el software basado en Windows Installer. Windows Installer necesita una copia local del contenido de origen para aplicar las actualizaciones. Esta opción reduce el espacio de caché disponible. Si se selecciona esta opción, podría posteriormente causar un error de una implementación de gran tamaño si la memoria caché no tiene espacio disponible suficiente.  
+    - **Conservar contenido en la caché del cliente**: el cliente de Configuration Manager mantiene indefinidamente en su memoria caché el contenido del tipo de implementación. El cliente mantiene el contenido incluso si la aplicación ya está instalada. Esta opción es útil en algunas implementaciones, como el software basado en Windows Installer. Windows Installer necesita una copia local del contenido de origen para aplicar las actualizaciones. Esta opción reduce el espacio de caché disponible. Si se selecciona esta opción, podría posteriormente causar un error de una implementación de gran tamaño si la memoria caché no tiene espacio disponible suficiente.  
 
 - **Programa de instalación**: especifique el nombre del programa de instalación y los parámetros de instalación necesarios.  
 
@@ -261,13 +261,13 @@ Al ver las propiedades de un tipo de implementación, las siguientes opciones so
 
     - **Diferente del contenido de instalación**: seleccione esta opción si el contenido de desinstalación es diferente al de instalación.  
 
-        - **Ubicación del contenido de desinstalación**: especifique la ruta de acceso de red para el contenido que se usa para desinstalar la aplicación.  
+        - **Ubicación de contenido de desinstalación**: especifique la ruta de acceso de red para el contenido que se usa para desinstalar la aplicación.  
 
-- **Permitir que los clientes usen puntos de distribución del grupo de límite del sitio predeterminado**: especifique si los clientes deben descargar e instalar el software desde un punto de distribución en el grupo de límites predeterminado del sitio, cuando el contenido no está disponible desde un punto de distribución en el grupo actual o en los grupos de límites vecinos.  
+- **Permitir que los clientes usen puntos de distribución del grupo de límite del sitio predeterminado**: especifique si los clientes deben descargar e instalar el software desde un punto de distribución en el grupo de límites predeterminados del sitio, cuando el contenido no está disponible desde un punto de distribución en el grupo actual o en los grupos de límites vecinos.  
 
 - **Opciones de implementación**: especifique si los clientes deben descargar la aplicación al usar un punto de distribución desde un grupo vecino o los grupos de límites predeterminados del sitio.  
 
-- **Permitir a los clientes compartir el contenido con otros clientes en la misma subred**: especifique si desea habilitar el uso de BranchCache para descargas de contenido. Para obtener más información, vea [BranchCache](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#branchcache). A partir de la versión 1802, BranchCache siempre está habilitado en los clientes. Esta configuración se eliminó, ya que los clientes usan BranchCache si el punto de distribución lo admite.  
+- **Permitir a los clientes compartir el contenido con otros clientes en la misma subred**: especifique si quiere habilitar el uso de BranchCache para las descargas de contenido. Para obtener más información, vea [BranchCache](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#branchcache). A partir de la versión 1802, BranchCache siempre está habilitado en los clientes. Esta configuración se eliminó, ya que los clientes usan BranchCache si el punto de distribución lo admite.  
 
 
 ### <a name="bkmk_dt-detect"></a> Opciones de **método de detección** de tipo de implementación   
@@ -291,21 +291,21 @@ Este procedimiento configura un método de detección que indica la presencia de
 
         - **Nombre de archivo o carpeta** (obligatorio): especifique el nombre de archivo o carpeta específico para detectar en la ruta de acceso anterior. Si el cliente detecta este archivo o carpeta en el dispositivo, considera la aplicación como instalada en el dispositivo.  
 
-        - **Este archivo o carpeta está asociado a una aplicación de 32 bits en sistemas de 64 bits**: Esta opción está seleccionada de forma predeterminada. En primer lugar, el cliente comprueba las ubicaciones de archivos de 32 bits para la carpeta o archivo especificado. Si no se encuentra el archivo o la carpeta, el cliente busca en ubicaciones de 64 bits.  
+        - **Este archivo o carpeta está asociado a una aplicación de 32 bits en sistemas de 64 bits**: esta opción está seleccionada de forma predeterminada. En primer lugar, el cliente comprueba las ubicaciones de archivos de 32 bits para la carpeta o archivo especificado. Si no se encuentra el archivo o la carpeta, el cliente busca en ubicaciones de 64 bits.  
 
     - **Registro**: detecte si existe una clave del Registro especificada o un valor del Registro en un dispositivo cliente. Esta detección indica que la aplicación está instalada. Especifique la siguiente información adicional:  
 
-        - **Subárbol** (obligatorio): elija un subárbol del Registro en la lista desplegable. Por ejemplo, `HKEY_LOCAL_MACHINE`.  
+        - **Subárbol** (obligatorio): elija un subárbol del registro en la lista desplegable. Por ejemplo, `HKEY_LOCAL_MACHINE`.  
 
-        - **Clave** (obligatorio): especifique la clave del Registro para buscar en la sección anterior. Por ejemplo, `SOFTWARE\Microsoft\Office`.  
+        - **Clave** (obligatorio): especifique la clave del registro para buscar en la sección anterior. Por ejemplo, `SOFTWARE\Microsoft\Office`.  
 
         - **Valor** (opcional): escriba un valor concreto para detectar en la clave anterior. Si quiere que el cliente detecte el valor (predeterminado), habilite la opción para **Usar valor de clave del Registro (predeterminado) para la detección**. Cuando escriba un valor o habilite esta opción, es preciso que seleccione un **tipo de datos**.  
 
-        - **Esta clave del Registro está asociada con una aplicación de 32 bits en sistemas de 64 bits**: seleccione esta opción para buscar primero en las ubicaciones del Registro de 32 bits la clave del Registro especificada. Si no se encuentra la clave del registro, el cliente busca las ubicaciones de 64 bits.  
+        - **Esta clave del registro está asociada con una aplicación de 32 bits en sistemas de 64 bits**: seleccione esta opción para comprobar primero ubicaciones del registro de 32 bits en busca de la clave del registro especificada. Si no se encuentra la clave del registro, el cliente busca las ubicaciones de 64 bits.  
 
     - **Windows Installer**: detecte si un archivo de Windows Installer especificado existe en un dispositivo cliente. Esta detección indica que la aplicación está instalada. Especifique el **código de producto** MSI para detectar en el cliente. Si hace clic en **Examinar**, seleccione el archivo MSI desde el que se va a leer el código de producto. 
 
-3.  En la parte inferior de la ventana de la regla de detección, especifique si el elemento debe existir o cumplir una regla. Por ejemplo, si detecta un archivo, la opción siguiente se selecciona de forma predeterminada: **La configuración del sistema de archivos debe existir en el sistema de destino para indicar la presencia de esta aplicación**. Seleccione la otra opción para crear una regla de detección en función de las propiedades de archivo o carpeta. Estas propiedades incluyen la fecha de modificación, la fecha de creación, la versión o el tamaño. Estos criterios de regla son diferentes para cada tipo de configuración.  
+3.  En la parte inferior de la ventana de la regla de detección, especifique si el elemento debe existir o cumplir una regla. Por ejemplo, si realiza la detección con un archivo, la siguiente opción se selecciona de forma predeterminada: **La configuración del sistema de archivos debe existir en el sistema de destino para indicar la presencia de esta aplicación**. Seleccione la otra opción para crear una regla de detección en función de las propiedades de archivo o carpeta. Estas propiedades incluyen la fecha de modificación, la fecha de creación, la versión o el tamaño. Estos criterios de regla son diferentes para cada tipo de configuración.  
 
 4.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Regla de detección**.  
 
@@ -318,7 +318,10 @@ Continúe con la siguiente sección sobre el uso de un script personalizado como
 
 1.  En la página **Método de detección**, seleccione el cuadro **Usar un script personalizado para detectar la presencia de este tipo de implementación**. Después haga clic en **Editar**.  
 
-2.  En el cuadro de diálogo **Editor de scripts**, haga clic en la lista desplegable **Tipo de script**. Seleccione uno de los lenguajes de script siguientes para detectar el tipo de implementación: PowerShell, VBScript o JScript.  
+2.  En el cuadro de diálogo **Editor de scripts**, haga clic en la lista desplegable **Tipo de script**. Seleccione uno de los siguientes lenguajes de scripts para detectar el tipo de implementación: PowerShell, VBScript o JScript.  
+
+    > [!Note]  
+    > A partir de la versión 1810, cuando un script de Windows PowerShell se ejecuta como un método de detección de la aplicación, el cliente de Configuration Manager llama a PowerShell con la `-NoProfile` parámetro. Esta opción inicia PowerShell sin perfiles. Un perfil de PowerShell es un script que se ejecuta cuando se inicia PowerShell. <!--3607762-->  
 
 3.  En el cuadro **Contenido del script**, escriba el script que quiera usar o pegue el contenido de un script existente. Elija **Abrir** para ir a un script existente guardado. Haga clic en **Borrar** para quitar el texto en el campo de contenido del script. Si es necesario, habilite la opción **Ejecutar el script como proceso de 32 bits en clientes de 64 bits**.  
 
@@ -396,13 +399,13 @@ En la página **Experiencia del usuario** , especifique la siguiente informació
 
 - **Comportamiento de instalación**: En la lista desplegable, seleccione una de las opciones siguientes:  
 
-    - **Instalar para el usuario**: el cliente solo instala la aplicación para el usuario para el que se implementa la aplicación.  
+    - **Instalar para el usuario**: el cliente solo instala la aplicación para el usuario al que se implementa la aplicación.  
 
     - **Instalar para el sistema**: el cliente instala la aplicación una sola vez. Está disponible para todos los usuarios.  
 
-    - **Instalar para el sistema si el recurso es el dispositivo; de lo contrario, instalar para el usuario**: si implementa la aplicación para un usuario, el cliente solo la instala para ese usuario. Si implementa la aplicación para un usuario, el cliente solo la instala para ese usuario.  
+    - **Instalar para el sistema si el recurso es el dispositivo; de lo contrario, instalar para el usuario**: si implementa la aplicación en un dispositivo, el cliente la instala para todos los usuarios. Si implementa la aplicación para un usuario, el cliente solo la instala para ese usuario.  
 
-- **Requisito de inicio de sesión**: Seleccione una de las siguientes opciones:  
+- **Requisito de inicio de sesión**: elija solo una de las siguientes opciones:  
 
   - **Solo cuando un usuario haya iniciado sesión**  
 
@@ -413,7 +416,7 @@ En la página **Experiencia del usuario** , especifique la siguiente informació
     > [!NOTE]  
     >  El valor predeterminado de esta opción es **Solo cuando un usuario haya iniciado sesión**. Si se selecciona **Instalar para el usuario** en la lista desplegable **Comportamiento de la instalación**, esta opción no se puede cambiar.  
 
-- **Visibilidad del programa de instalación**: especifica el modo en el que el tipo de implementación se ejecuta en los dispositivos cliente. Seleccione una de las siguientes opciones:  
+- **Visibilidad del programa de instalación**: especifique el modo en que el tipo de implementación se ejecuta en los dispositivos cliente. Seleccione una de las siguientes opciones:  
 
     - **Maximizado**: El tipo de implementación se ejecuta maximizado en dispositivos cliente. Los usuarios ven toda la actividad de instalación.  
 
@@ -433,7 +436,7 @@ En la página **Experiencia del usuario** , especifique la siguiente informació
     >  
     > Instalar en el contexto de sistema y permitir a los usuarios interactuar con la instalación no es una configuración segura. Para obtener más información, vea [Seguridad y privacidad de la administración de aplicaciones](/sccm/apps/plan-design/security-and-privacy-for-application-management#bkmk_interact).  
 
-- **Duración máxima permitida de la ejecución (minutos)**: especifique la duración máxima en minutos que espera que se ejecute el tipo de implementación en el equipo cliente. Especifique esta configuración como un número entero mayor que cero. El valor predeterminado es 120 minutos (dos horas).  
+- **Duración máxima permitida de la ejecución (minutos)**: Especifica la duración máxima en minutos que espera que se ejecute el tipo de implementación en el equipo cliente. Especifique esta configuración como un número entero mayor que cero. El valor predeterminado es 120 minutos (dos horas).  
 
     Se puede usar este valor para las siguientes acciones:  
 
@@ -444,7 +447,7 @@ En la página **Experiencia del usuario** , especifique la siguiente informació
     > [!IMPORTANT]  
     >  Se puede producir un conflicto si el **Tiempo de ejecución máximo permitido** es mayor que la ventana de mantenimiento programada. Si el usuario configura el tiempo de ejecución máximo en un periodo superior a la duración de las ventanas de mantenimiento disponibles, ese tipo de implementación no se ejecuta.  
 
-- **Tiempo de instalación estimado (minutos):**: especifique la duración estimada de la instalación del tipo de implementación. Los usuarios ven este tiempo en el Centro de Software.  
+- **Tiempo de instalación estimado (minutos)**: especifique el tiempo de instalación estimado del tipo de implementación. Los usuarios ven este tiempo en el Centro de Software.  
 
 
 #### <a name="deployment-type-properties-user-experience-options"></a>Opciones de **experiencia del usuario** para propiedades del tipo de implementación
@@ -458,7 +461,7 @@ Aplicar un comportamiento específico posterior a la instalación. Seleccione un
 
 - **El programa de instalación de software puede forzar un reinicio del dispositivo**: Configuration Manager no controla ni inicia un reinicio, pero es posible que la instalación real lo haga sin previo aviso. Use esta opción para impedir que Configuration Manager notifique el error de instalación cuando el programa de instalación inicia un reinicio. En el Centro de software se muestra **Puede ser necesario reiniciar**.  
 
-- **El cliente de Configuration Manager forzará un reinicio obligatorio del dispositivo**: Configuration Manager fuerza un reinicio del dispositivo tras una instalación correcta. El Centro de software notifica que es necesario reiniciar. Si un usuario ha iniciado sesión durante la instalación, se le solicita según la configuración de la experiencia de usuario de la *implementación*.  
+- **El cliente de Configuration Manager forzará un reinicio obligatorio del dispositivo**: Configuration Manager fuerza un reinicio del dispositivo después de una instalación correcta. El Centro de software notifica que es necesario reiniciar. Si un usuario ha iniciado sesión durante la instalación, se le solicita según la configuración de la experiencia de usuario de la *implementación*.  
 
 
 ### <a name="bkmk_dt-require"></a> **Requisitos** de tipos de implementación
@@ -593,7 +596,7 @@ Configure opciones adicionales únicas para los tipos de implementación para ap
 
 4.  En las propiedades del tipo de implementación, cambie a la pestaña **Contenido**. Configure las siguientes opciones según sea necesario:  
 
-    -   **Conservar contenido en la caché del cliente**: el cliente de Configuration Manager no eliminará de su caché el contenido de este tipo de implementación.  
+    -   **Conservar contenido en la caché del cliente**: el cliente de Configuration Manager no eliminará de su memoria caché el contenido de este tipo de implementación.  
 
     -   **Cargar contenido en la memoria caché de App-V antes del inicio**: antes de iniciar la aplicación, el cliente de Configuration Manager carga en la caché de App-V todo el contenido de este tipo de implementación. El cliente no ancla el contenido en la memoria caché. Elimina el contenido según sea necesario.  
 

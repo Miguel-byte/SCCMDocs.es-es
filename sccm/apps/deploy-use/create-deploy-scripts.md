@@ -2,34 +2,35 @@
 title: Creación y ejecución de scripts
 titleSuffix: Configuration Manager
 description: Cree y ejecute scripts de Powershell en dispositivos cliente.
-ms.date: 04/10/2018
+ms.date: 03/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
 ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6d9b65629e000814f80876747e1148d450c2080b
-ms.sourcegitcommit: fd16fc2b681608fd6def5bad2cedffbcd1f2423a
-ms.translationtype: HT
+ms.openlocfilehash: 007c3b68932a673b5d1971fbcf6919a7ad3adc70
+ms.sourcegitcommit: 8803a64692f3edc0422b58f6c3037a8796374cc8
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56405665"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57881850"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Creación y ejecución de scripts de PowerShell desde la consola de Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-<!--1236459--> System Center Configuration Manager tiene una funcionalidad integrada para ejecutar scripts de Powershell. PowerShell tiene la ventaja de crear scripts automatizados y sofisticados que entienden y comparten una gran comunidad de usuarios. Los scripts simplifican la compilación de herramientas personalizadas para administrar software y posibilitan la realización de tareas rutinarias rápidamente, lo que permite obtener grandes resultados de forma más sencilla y coherente.  
+<!--1236459-->
+System Center Configuration Manager tiene una funcionalidad integrada para ejecutar scripts de Powershell. PowerShell tiene la ventaja de crear scripts automatizados y sofisticados que entienden y comparten una gran comunidad de usuarios. Los scripts simplifican la compilación de herramientas personalizadas para administrar software y posibilitan la realización de tareas rutinarias rápidamente, lo que permite obtener grandes resultados de forma más sencilla y coherente.  
 
 > [!TIP]  
 > Esta característica se introdujo por primera vez en la versión 1706 como una [característica de versión preliminar](/sccm/core/servers/manage/pre-release-features). A partir de la versión 1802, ya no es una característica de versión preliminar.  
 
 
 > [!Note]  
-> Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para más información, vea [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+> Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para obtener más información, consulte [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
 
 
 Gracias a esta integración con System Center Configuration Manager, puede usar la funcionalidad *Ejecutar scripts* para hacer lo siguiente:
@@ -114,7 +115,7 @@ Los tres roles de seguridad usados para ejecutar scripts no se crean de forma pr
 
 ### <a name="security-role-permissions"></a>Permisos de rol de seguridad  
 
-**Nombre de rol**: Ejecutores de scripts  
+**Nombre de rol**: ejecutores de scripts  
 - **Descripción**: estos permisos permiten a este rol ejecutar únicamente los scripts creados y aprobados por otros roles.  
 - **Permisos:** asegúrese de que los permisos siguientes están establecidos en **Sí**.  
 
@@ -125,9 +126,9 @@ Los tres roles de seguridad usados para ejecutar scripts no se crean de forma pr
 |Scripts SMS|Lectura|Sí|
 
 
-**Nombre de rol**: Autores de scripts  
-- **Descripción**: estos permisos permiten a este rol crear scripts, pero no aprobarlos ni ejecutarlos.  
-- **Permisos**: asegúrese de que los permisos siguientes están establecidos.
+**Nombre de rol**: autores de scripts  
+- **Descripción**: estos permisos permiten a este rol crear scripts, pero no puede aprobarlos ni ejecutarlos.  
+- **Permisos:** asegúrese de que están establecidos los permisos siguientes.
  
 |Categoría|Permiso|Estado|
 |---|---|---|
@@ -139,9 +140,9 @@ Los tres roles de seguridad usados para ejecutar scripts no se crean de forma pr
 |Scripts SMS|Modificar|Sí|
 
 
-**Nombre de rol**: Aprobadores de scripts  
-- **Descripción**: estos permisos permiten a este rol aprobar scripts, pero no crearlos ni ejecutarlos.  
-- **Permisos:** asegúrese de que los permisos siguientes están establecidos.  
+**Nombre de rol**: aprobadores de scripts  
+- **Descripción**: estos permisos permiten a este rol aprobar scripts, pero no puede crearlos ni ejecutarlos.  
+- **Permisos:** asegúrese de que están establecidos los permisos siguientes.  
 
 |Categoría|Permiso|Estado|
 |---|---|---|
@@ -156,7 +157,6 @@ Los tres roles de seguridad usados para ejecutar scripts no se crean de forma pr
 
  ![Ejemplo de permisos de scripts SMS para el rol de autores de scripts](./media/run-scripts/script_authors_permissions.png)
 
-   
 
 ## <a name="create-a-script"></a>Creación de un script
 
@@ -177,11 +177,11 @@ Los tres roles de seguridad usados para ejecutar scripts no se crean de forma pr
 
 ## <a name="script-parameters"></a>Parámetros de script
 *(Se introdujo con la versión 1710)*  
-Al agregar parámetros a un script, dotará de más flexibilidad a su trabajo. A continuación, se describe la funcionalidad actual de la característica de ejecución de scripts con parámetros de script para los tipos de datos *Cadena* y *Entero*. También hay disponibles listas de valores preestablecidos. Si el script tiene tipos de datos no compatibles, recibirá una advertencia.
+Al agregar parámetros a un script, dotará de más flexibilidad a su trabajo. Puede incluir hasta 10 parámetros. A continuación, se describe la funcionalidad actual de la característica de ejecución de scripts con parámetros de script para los tipos de datos *Cadena* y *Entero*. También hay disponibles listas de valores preestablecidos. Si el script tiene tipos de datos no compatibles, recibirá una advertencia.
 
 En el cuadro de diálogo **Crear script**, haga clic en **Parámetros de script**, bajo **Script**.
 
-Cada uno de los parámetros de script tiene su propio cuadro de diálogo para agregar más detalles y la validación.
+Cada uno de los parámetros de script tiene su propio cuadro de diálogo para agregar más detalles y la validación. Si hay un parámetro predeterminado en la secuencia de comandos, se enumerarán en el parámetro de la interfaz de usuario y se puede establecer. Administrador de configuración no sobrescribirá el valor predeterminado, ya que nunca se modifique directamente el script. Se puede considerar esto como "rellenan los valores sugeridos" se muestran en la interfaz de usuario, pero que Configuration Manager no proporciona acceso a los valores de "default" en tiempo de ejecución. Esto se puede solucionar mediante la edición de la secuencia de comandos para que los valores predeterminados correctos. <!--17694323-->
 
 >[!IMPORTANT]
 > Los valores de parámetro no pueden contener un apóstrofo. </br></br>
@@ -254,8 +254,8 @@ Para seleccionar una colección de destinos para el script:
 5. En la página **Script** del Asistente para **ejecutar script**, elija un script de la lista. Se muestran solo los scripts aprobados.
 6. Haga clic en **Siguiente** y complete el asistente.
 
->[!IMPORTANT]
->Si un script no se ejecuta, por ejemplo, porque un dispositivo de destino se ha desactivado durante un período de tiempo de una hora, debe ejecutarlo de nuevo.
+> [!IMPORTANT]
+> Si un script no se ejecuta, por ejemplo, porque un dispositivo de destino se ha desactivado durante un período de tiempo de una hora, debe ejecutarlo de nuevo.
 
 ### <a name="target-machine-execution"></a>Ejecución de la máquina objetivo
 
@@ -263,7 +263,7 @@ El script se ejecuta como cuenta de *sistema* o de *equipo* en los clientes obje
 
 ## <a name="script-monitoring"></a>Supervisión de scripts
 
-Una vez iniciada la ejecución de un script en una recopilación de dispositivos, utilice el procedimiento siguiente para supervisar la operación. A partir de la versión 1710, puede supervisar un script en tiempo real en cuanto se ejecuta, así como volver a un informe de una ejecución determinada de la funcionalidad Ejecutar scripts. <br>
+Una vez iniciada la ejecución de un script en una recopilación de dispositivos, utilice el procedimiento siguiente para supervisar la operación. A partir de la versión 1710, puede supervisar un script en tiempo real en cuanto se ejecuta, así como volver a un informe de una ejecución determinada de la funcionalidad Ejecutar scripts. Se limpien los datos de estado de script como parte de la [tarea de mantenimiento de eliminar operaciones cliente antiguas](../../core/servers/manage/reference-for-maintenance-tasks.md) o eliminación de la secuencia de comandos.<br>
 
 ![Supervisión de scripts: estado de ejecución de scripts](./media/run-scripts/RS-monitoring-three-bar.png)
 
@@ -271,9 +271,37 @@ Una vez iniciada la ejecución de un script en una recopilación de dispositivos
 2. En el área de trabajo **Supervisión**, haga clic en **Estado de script**.
 3. En la lista **Estado de script** aparecen los resultados de cada script ejecutado en los dispositivos cliente. Un código de salida de script de **0** suele indicar que el script se ejecutó correctamente.
     - A partir de Configuration Manager 1802, la salida del script se trunca en 4 KB para permitir una mejor experiencia de visualización.  <!--510013-->
-      ![Monitor de script (script truncado)](./media/run-scripts/Script-monitoring-truncated.png) 
+   
+   ![Monitor de script (script truncado)](./media/run-scripts/Script-monitoring-truncated.png)
 
-## <a name="script-output"></a>Salida del script
+## <a name="script-output-in-1810"></a>Salida del script en 1810
+
+Puede ver una salida de script detallada sin formato o con formato JSON estructurado. Este formato permite leer y analizar la salida de manera más sencilla. Si el script devuelve texto válido con formato JSON, podrá ver la salida detallada como **salida JSON** o **salida sin formato**. En caso contrario, la única opción es **Salida de script**.
+
+### <a name="example-script-output-is-valid-json"></a>Ejemplo: La salida de script es un archivo JSON válido
+Comando: `$PSVersionTable.PSVersion`  
+
+Salida:  
+```
+Major  Minor  Build  Revision
+-----  -----  -----  --------
+5      1      16299  551
+```
+
+### <a name="example-script-output-isnt-valid-json"></a>Ejemplo: La salida de script no es un archivo JSON válido
+Comando: `Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`  
+
+Salida:  
+```
+Microsoft Windows 10 Enterprise
+```
+
+- Los clientes de 1810 devuelven resultados inferiores a 80 KB al sitio a través de un canal de comunicación rápido. Este cambio aumenta el rendimiento de la visualización de resultados del script o la consulta.  
+
+  - Si el resultado del script o la consulta es mayor que 80 KB, el cliente envía los datos a través de un mensaje de estado.  
+  - Los clientes anteriores a la 1802 seguirán usando los mensajes de estado.
+
+## <a name="script-output-pre-1810"></a>Salida del script anterior a 1810
 
 - A partir de Configuration Manager versión 1802, la salida del script realiza la devolución con el formato JSON. Este formato devuelve de manera uniforme una salida de script legible. 
 - Los scripts que obtengan un resultado desconocido o en los que el cliente estaba sin conexión no se mostrarán en los gráficos ni en el conjunto de datos. <!--507179-->
@@ -282,10 +310,24 @@ Una vez iniciada la ejecución de un script en una recopilación de dispositivos
     - Si tiene un cliente de Configuration Manager anterior a la versión 1802, obtendrá una cadena de salida.
     -  Para clientes de Configuration Manager con versión 1802 y versiones posteriores, se obtiene el formato JSON.
         - Por ejemplo, podría obtener resultados que indican TEXTO en una versión de cliente y "TEXTO" (incluido entre comillas dobles) en otra versión, y se colocarán en el gráfico como dos categorías diferentes.
-        - Si tiene que solucionar este comportamiento, considere la posibilidad de ejecutar un script en dos colecciones diferentes; uno con clientes anteriores a la versión 1802 y otro con clientes de la versión 1802 y posteriores. O, si lo prefiere, puede convertir un objeto de enumeración en un valor de cadena en los scripts para que se muestren correctamente en formato JSON. 
-- Convierta un objeto de enumeración en un valor de cadena en los scripts para que se muestren correctamente en formato JSON. <!--508377--> ![Convertir un objeto de enumeración en un valor de cadena](./media/run-scripts/enum-tostring-JSON.png)
+        - Si tiene que solucionar este comportamiento, considere la posibilidad de ejecutar un script en dos colecciones diferentes; Uno con clientes anteriores a la versión 1802 y otro con clientes de la versión 1802 y posteriores. O, si lo prefiere, puede convertir un objeto de enumeración en un valor de cadena en los scripts para que se muestren correctamente en formato JSON. 
+- Convierta un objeto de enumeración en un valor de cadena en los scripts para que se muestren correctamente en formato JSON. <!--508377-->
 
+   ![Conversión de un objeto de enumeración en un valor de cadena](./media/run-scripts/enum-tostring-JSON.png)
 
+## <a name="log-files"></a>Archivos de registro
+
+A partir de la versión 1810, se agregó un registro adicional para solucionar problemas.
+
+- En el cliente, de forma predeterminada en C:\Windows\CCM\logs:  
+  - **Scripts.log**  
+  - **CcmMessaging.log**  
+
+- En el punto de administración, de forma predeterminada en C:\SMS_CCM\Logs:
+  - **MP_RelayMsgMgr.log**  
+
+- En el servidor de sitio, de forma predeterminada en C:\Archivos de programa\Configuration Manager\Logs:
+  - **SMS_Message_Processing_Engine.log**
 
 ## <a name="see-also"></a>Véase también
 

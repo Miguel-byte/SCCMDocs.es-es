@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78acd5880bfdada80fca33ea4147fc36b28c495e
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 322ca2cb3f1df6a71fb7ceaf15017d7bd45db4c7
+ms.sourcegitcommit: 544f335cfd1bfd0a1d4973439780e9f5e9ee8bed
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56126760"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562081"
 ---
 # <a name="use-pxe-to-deploy-windows-over-the-network-with-configuration-manager"></a>Usar el entorno PXE para implementar Windows a través de la red con Configuration Manager
 
@@ -108,7 +108,7 @@ Para usar una implementación de SO iniciada por PXE, configure la implementaci�
 
 Implemente el sistema operativo en una recopilación de destino. Para obtener más información, vea [Deploy a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS). Al implementar sistemas operativos mediante PXE, puede configurar que la implementación sea necesaria o esté disponible.
 
--   **Implementación requerida**: las implementaciones requeridas utilizarán el entorno PXE sin intervención del usuario. El usuario no puede omitir el arranque de PXE. Pero si el usuario cancela el arranque de PXE antes de que responda el punto de distribución, el sistema operativo no se implementa.
+-   **Implementación requerida**: este tipo de implementación usa PXE sin intervención del usuario. El usuario no puede omitir el arranque de PXE. Pero si el usuario cancela el arranque de PXE antes de que responda el punto de distribución, el sistema operativo no se implementa.
 
 -   **Implementación disponible**: las implementaciones disponibles requieren que el usuario esté presente en el equipo de destino. El usuario debe presionar la tecla **F12** para continuar el proceso de arranque de PXE. Si el usuario no está presente para presionar **F12**, el equipo arrancará en el sistema operativo actual o desde el siguiente dispositivo de arranque disponible.
 
@@ -134,4 +134,4 @@ En la lista siguiente se proporciona información sobre cómo se selecciona una 
 
 3. En la lista de las secuencias de tareas que se encontraron en el paso 2, Configuration Manager busca una imagen de arranque que coincida con la arquitectura del cliente que está intentando arrancar. Si se encuentra una imagen de arranque con la misma arquitectura, se usa esa imagen.  
 
-4. Si no se encuentra una imagen de arranque con la misma arquitectura, Configuration Manager busca una imagen de arranque que sea compatible con la arquitectura del cliente. Busca en la lista de secuencias de tareas que se encuentra en el paso 2. Por ejemplo, un cliente de 64 bits es compatible con imágenes de arranque de 32 bits y 64 bits. Un cliente de 32 bits solo es compatible con imágenes de arranque de 32 bits. Un cliente UEFI solo es compatible con imágenes de arranque de 64 bits.  
+4. Si no se encuentra una imagen de arranque con la misma arquitectura, Configuration Manager busca una imagen de arranque que sea compatible con la arquitectura del cliente. Busca en la lista de secuencias de tareas que se encuentra en el paso 2. Por ejemplo, un cliente de BIOS o MBR de 64 bits es compatible con imágenes de arranque de 32 bits y 64 bits. Un cliente de BIOS o MBR de 32 bits solo es compatible con imágenes de arranque de 32 bits. Los clientes UEFI solo son compatibles con la coincidencia de arquitectura. Un cliente UEFI de 64 bits es compatible con imágenes de arranque sólo de 64 bits y un cliente UEFI de 32 bits es compatible con imágenes de arranque de 32 bits sólo.
