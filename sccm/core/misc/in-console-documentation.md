@@ -1,6 +1,6 @@
 ---
 title: Documentación en consola
-ms.date: 02/11/2019
+ms.date: 03/11/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -10,12 +10,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5cfe4457bb2ebe2d5c8c621aa08c6d41346f4290
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: b9978241a984ae8694f646ea9e08ac22101072a0
+ms.sourcegitcommit: 8803a64692f3edc0422b58f6c3037a8796374cc8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133510"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57881595"
 ---
 <!-- 
 - Feature 1357546
@@ -53,20 +53,20 @@ Lista recopilada manualmente de artículos importantes.
 
 
 ## <a name="trending"></a>Tendencias
-Los artículos más populares de enero de 2019.
+Los artículos más populares de febrero de 2019.
 
 | Vistas de página | Título | 
 |------------|-------| 
-| 20862 | [Archivos de registro para la solución de problemas](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) |
-| 19761 | [Novedades de la versión 1810](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1810) |
-| 11327 | [Cómo implementar clientes en equipos Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
-| 9963 | [Compatibilidad con Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
-| 9684 | [Puertos usados para las conexiones](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) |
-| 8870 | [Instalación de la consola](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles) |
-| 8296 | [Acerca de los parámetros y propiedades de instalación de cliente](https://docs.microsoft.com/sccm/core/clients/deploy/about-client-installation-properties) |
-| 7810 | [Lista de comprobación de 1810](https://docs.microsoft.com/sccm/core/servers/manage/checklist-for-installing-update-1810) |
-| 7758 | [Actualizaciones y mantenimiento](https://docs.microsoft.com/sccm/core/servers/manage/updates) |
-| 7530 | [Comprobaciones de requisitos previos](https://docs.microsoft.com/sccm/core/servers/deploy/install/list-of-prerequisite-checks) |
+| 20070 | [Archivos de registro para la solución de problemas](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) |
+| 14297 | [Novedades de la versión 1810](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1810) |
+| 10497 | [Cómo implementar clientes en equipos Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
+| 10140 | [Puertos usados para las conexiones](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) |
+| 8836 | [Instalación de la consola](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles) |
+| 8738 | [Compatibilidad con Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
+| 8291 | [Administración conjunta para dispositivos Windows 10](https://docs.microsoft.com/sccm/comanage/overview) |
+| 7995 | [Acerca de los parámetros y propiedades de instalación de cliente](https://docs.microsoft.com/sccm/core/clients/deploy/about-client-installation-properties) |
+| 7788 | [Actualizaciones y mantenimiento](https://docs.microsoft.com/sccm/core/servers/manage/updates) |
+| 7261 | [Herramientas de Configuration Manager](https://docs.microsoft.com/sccm/core/support/tools) |
 
 
 
@@ -75,16 +75,16 @@ Artículos con una actualización reciente y significativa.
 
 | Últimas revisiones | Título | 
 |---------------|-------|
-| 30/01/2019 | [MDM híbrida con Microsoft Intune](https://docs.microsoft.com/sccm/mdm/understand/hybrid-mobile-device-management) |
-| 30/01/2019 | [Características en desuso](https://docs.microsoft.com/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures) |
-| 30/01/2019 | [Centro de soporte técnico](https://docs.microsoft.com/sccm/core/support/support-center) |
-| 29/01/2019 | [Puertos usados para las conexiones](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) |
-| 25/01/2019 | [Novedades de la versión 1810](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1810) |
-| 23/01/2019 | [Versión preliminar técnica 1901](https://docs.microsoft.com/sccm/core/get-started/2019/technical-preview-1901) |
-| 23/01/2019 | [Versiones de Technical Preview](https://docs.microsoft.com/sccm/core/get-started/technical-preview) |
-| 22/01/2019 | [Creación de un laboratorio en Azure](https://docs.microsoft.com/sccm/core/get-started/azure-template) |
-| 15/01/2019 | [Servidores de sistema de sitio admitidos](https://docs.microsoft.com/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers) |
-| 15/01/2019 | [Conexión de nube con administración conjunta](https://docs.microsoft.com/sccm/comanage/quickstarts) |
+| 27/02/2019 | [Cambio de la entidad de MDM a Intune](https://docs.microsoft.com/sccm/mdm/deploy-use/migrate-change-mdm-authority) |
+| 26/02/2019 | [Mensajes de estado](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/state-messaging-system-center-configuration-manager) |
+| 26/02/2019 | [Novedades de MDM híbrida](https://docs.microsoft.com/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management) |
+| 25/02/2019 | [Instalar actualizaciones de software](https://docs.microsoft.com/sccm/osd/understand/install-software-updates) |
+| 22/02/2019 | [Windows Autopilot para dispositivos existentes](https://docs.microsoft.com/sccm/osd/deploy-use/windows-autopilot-for-existing-devices) |
+| 21/02/2019 | [Novedades de la versión 1810](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1810) |
+| 21/02/2019 | [Características en desuso](https://docs.microsoft.com/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures) |
+| 21/02/2019 | [Crear aplicaciones de Windows](https://docs.microsoft.com/sccm/apps/get-started/creating-windows-applications) |
+| 21/02/2019 | [Notas de la versión](https://docs.microsoft.com/sccm/core/servers/deploy/install/release-notes) |
+| 20/02/2019 | [Notas de la versión 1810](https://docs.microsoft.com/powershell/sccm/1810-release-notes) |
 
 
 
@@ -101,13 +101,15 @@ Tutoriales guiados que le ayudarán a solucionar problemas de características y
 
 
 ## <a name="new-and-updated-support-articles"></a>Artículos de soporte técnico nuevos y actualizados
-Artículos de soporte técnico nuevos o actualizados en enero de 2019.
+Artículos de soporte técnico nuevos o actualizados en febrero de 2019.
 
-- [KB 4490065: una secuencia de tareas es lenta si el cliente en el medio o en la imagen de arranque es anterior a la versión del sitio](https://support.microsoft.com/help/4490065)
-- [KB 4490414: procedimientos recomendados de Windows Server Update Services](https://support.microsoft.com/help/4490414)
-- [KB 4489045: solución de problemas de uso de CPU elevado en un servidor WSUS](https://support.microsoft.com/help/4489045)
-- [KB 4486457: paquete acumulativo de actualizaciones de la Rama actual de System Center Configuration Manager, versión 1810](https://support.microsoft.com/help/4486457)
-- [KB 4487768: error “No se pudo realizar la conversión” al actualizar a Configuration Manager versión 1810](https://support.microsoft.com/help/4487768)
-- [KB 4487960: el certificado del conector de Microsoft Intune no se renueva en Configuration Manager](https://support.microsoft.com/help/4487960)
+- [KB 4490644: The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://support.microsoft.com/help/4490644) (La guía completa para el mantenimiento de Microsoft WSUS y Configuration Manager SUP)
+- [KB 4491117: Update installations to clients stop responding in Configuration Manager, version 1810 or 1806](https://support.microsoft.com/help/4491117) (Las instalaciones de actualización en clientes dejan de responder en Configuration Manager, versión 1810 o 1806)
+- [KB 4346901: Software updates installation on Configuration Manager clients](https://support.microsoft.com/help/4346901) (Instalación de actualizaciones de software en clientes de Configuration Manager)
+- [KB 4468612: Troubleshooting PXE boot issues in Configuration Manager](https://support.microsoft.com/help/4468612) (Solución de problemas de arranque PXE en Configuration Manager)
+- [KB 4491871: Advanced troubleshooting for PXE boot issues in Configuration Manager](https://support.microsoft.com/help/4491871) (Solución de problemas avanzada para problemas de arranque del entorno PXE en Configuration Manager)
+- [KB 4490575: Update installations stop responding or never show completion in Configuration Manager, version 1810](https://support.microsoft.com/help/4490575) (Las instalaciones de actualización dejan de responder o nunca muestran la finalización en Configuration Manager, versión 1810)
+- [KB 4459394: Description of state messaging in System Center Configuration Manager](https://support.microsoft.com/help/4459394) (Descripción del estado de mensajería en System Center Configuration Manager)
+- [KB 4490434: Duplicate user discovery columns are created in Configuration Manager](https://support.microsoft.com/help/4490434) (Se crean columnas de detección de usuarios duplicadas en Configuration Manager)
 
 Para suscribirse a notificaciones de Atom o RSS de nuevos artículos de soporte técnico de Configuration Manager, vea [Support content updates](https://support.microsoft.com/help/4089498/) (Actualizaciones de contenido de soporte técnico) y seleccione **System Center Configuration Manager**.  

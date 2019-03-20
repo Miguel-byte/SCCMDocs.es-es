@@ -2,7 +2,7 @@
 title: Archivos de registro para la solución de problemas
 titleSuffix: Configuration Manager
 description: Use los archivos de registro para solucionar problemas con los clientes y sistemas de sitio de Configuration Manager.
-ms.date: 02/12/2019
+ms.date: 03/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b3edf45c5b4eb62d5bfdd795f104c40da1ee1526
-ms.sourcegitcommit: 56ec6933cf7bfc93842f55835ad336ee3a1c6ab5
+ms.openlocfilehash: f14953b7c2008f6d0e9e5715a8096126e56b0b7e
+ms.sourcegitcommit: 8803a64692f3edc0422b58f6c3037a8796374cc8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211710"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57881969"
 ---
 # <a name="log-files-in-configuration-manager"></a>Archivos de registro en Configuration Manager
 
@@ -164,6 +164,7 @@ En la siguiente tabla se muestran los archivos de registro del cliente de Config
 |ClientLocation.log|Registra tareas relacionadas con la asignación de sitios de cliente.|  
 |CMHttpsReadiness.log|Registra los resultados de ejecución de la herramienta de evaluación de preparación de HTTPS de Configuration Manager. Esta herramienta comprueba si los equipos tienen un certificado de autenticación de cliente de infraestructura de clave pública (PKI) que se pueda usar con Configuration Manager.|  
 |CmRcService.log|Registra información del servicio de control remoto.|  
+|CoManagementHandler.log|Se utiliza para solucionar problemas de administración conjunta en el cliente.|
 |ContentTransferManager.log|Programa el Servicio de transferencia inteligente en segundo plano (BITS) o el Bloque de mensajes del servidor (SMB) para descargar paquetes u acceder a ellos.|  
 |DataTransferService.log|Registra todas las comunicaciones de BITS para el acceso de directiva o paquete.|  
 |EndpointProtectionAgent|Registra información sobre la instalación del cliente de System Center Endpoint Protection y la aplicación de directivas antimalware en el cliente.|  
@@ -282,6 +283,7 @@ El archivo de registro SMS_DM.log en el servidor de sistema de sitio además reg
 |--------------|-----------------|----------------------------|  
 |adctrl.log|Registra la actividad de procesamiento de inscripción.|Servidor de sitio|  
 |ADForestDisc.log|Registra acciones de detección de bosques de Active Directory.|Servidor de sitio|  
+|adminservice.log|Graba las acciones para la API REST del servicio de administración del proveedor de SMS.|Equipo con el proveedor de SMS|
 |ADService.log|Registra la creación de cuentas y los detalles del grupo de seguridad en Active Directory.|Servidor de sitio|  
 |adsgdis.log|Registra acciones de detección de grupos de Active Directory.|Servidor de sitio|  
 |adsysdis.log|Registra acciones de detección de sistema de Active Directory.|Servidor de sitio|  
@@ -406,6 +408,7 @@ El archivo de registro SMS_DM.log en el servidor de sistema de sitio además reg
 |mpfdm.log|Registra las acciones del componente de punto de administración que mueve los archivos de cliente a la carpeta INBOXES correspondiente en el servidor de sitio.|Servidor de sistema de sitio|  
 |mpMSI.log|Registra los detalles sobre la instalación de un punto de administración.|Servidor de sitio|  
 |MPSetup.log|Registra el proceso empaquetador de instalación de punto de administración.|Servidor de sitio|  
+|UserService.log|Graba las solicitudes de usuario del Centro de software, recuperando o instalando aplicaciones disponibles para el usuario desde el servidor.|Servidor de sistema de sitio|
 
 ###  <a name="BKMK_SUPLog"></a> Archivos de registro de punto de actualización de software  
  En la tabla siguiente se indican los archivos de registro que contienen información relacionada con el punto de actualización de software.  
