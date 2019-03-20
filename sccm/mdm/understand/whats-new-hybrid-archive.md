@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 420026065caf619f51a5ebf84d7ae2f61a2248e1
-ms.sourcegitcommit: ec4411fe30770f90128cf6cbd181047db90040cb
+ms.openlocfilehash: 73eda37c9432750d94ef0b770348fc3d3250800c
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57881935"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58197085"
 ---
 # <a name="past-hybrid-features-with-system-center-configuration-manager-and-microsoft-intune"></a>Características híbridas anteriores con System Center Configuration Manager y Microsoft Intune
 
@@ -223,12 +223,12 @@ También se incluyen las siguientes características adicionales híbridas en la
   La aplicación de portal de empresa para Android utiliza Google Play Services para comunicarse con el servicio de Microsoft Intune. Puesto que Google Play Services no está disponible aún en China, llevar a cabo cualquier de las siguientes tareas puede tardar hasta 8 horas en completarse.
 
   | Consola de administración de Configuration Manager | Aplicación de portal de empresa de Intune para Android | Sitio web del portal de empresa de Intune |
-  |----|----|----|      
-  | Retirar/borrar (quitar todos los datos)   | Quitar un dispositivo remoto | Quitar dispositivo (local y remoto) |
-  | Retirar/limpiar (quitar datos de la compañía)   | Restablecer dispositivo | Restablecer dispositivo|
+  |----|----|----|
+  | Retirar/borrar (quitar todos los datos)| Quitar un dispositivo remoto | Quitar dispositivo (local y remoto) |
+  | Retirar/limpiar (quitar datos de la compañía)| Restablecer dispositivo | Restablecer dispositivo|
   | Implementaciones de la aplicación nuevas o actualizadas | Instalar aplicaciones de línea de negocio disponibles | Restablecimiento del código de acceso del dispositivo|
-  | Bloqueo remoto | | |
-  | Restablecimiento de la contraseña | | |        
+  | Bloqueo remoto| | |
+  | Restablecimiento de la contraseña | | |
 
 
 ## <a name="november-2016"></a>Noviembre de 2016

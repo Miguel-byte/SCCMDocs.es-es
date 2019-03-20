@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5213c96ee434d9d87ea7728701945ac46c0a62a0
-ms.sourcegitcommit: ceec0e20bf801071f2a05233f984cf17acc3fd29
+ms.openlocfilehash: f1a6ab6fca6650bde69179b71576d1df2e201b92
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56755627"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58196745"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Habilitar uso compartido para el escritorio de análisis de datos 
 
@@ -76,8 +76,8 @@ Para habilitar el uso compartido de datos, configure el servidor proxy en la lis
 | `https://nexusrules.officeapps.live.com` | Se usa para solicitar los eventos de diagnóstico de datos dinámicos desde clientes de Office. Estos datos son útiles para fines de exploración en profundidad y el diagnóstico en el portal de análisis de escritorio |
 | `https://nexus.officeapps.live.com` | Usado por los clientes de Office para enviar eventos de datos de diagnóstico desde Office 14, 15 de Office y las versiones anteriores a 16.0.8702 de Office 16. Se usa para recopilar el uso y confiabilidad señales de eventos para el análisis de escritorio. |
 | `https://office.pipe.aria.microsoft.com` | Utilizado por los clientes de Office para enviar eventos de datos de diagnóstico de aplicaciones de Office universal/moderno y las versiones de Win32 Office 16 16.0.8702 posterior. Se usa para recopilar el uso y confiabilidad señales de eventos para el análisis de escritorio. |
-| `https://graph.windows.net` | Configuration Manager se usa para recuperar automáticamente la configuración como CommercialId al adjuntar la jerarquía para el análisis de escritorio. |
-| `https://fef.bmsub01.manage-beta.microsoft.com` | Configuration Manager se usa para sincronizar los miembros de la colección de dispositivo, los planes de implementación y estado de preparación del dispositivo con análisis de escritorio. |
+| `https://graph.windows.net` | Se usa para recuperar automáticamente la configuración como CommercialId al adjuntar la jerarquía para el análisis de escritorio (en función de servidor de Configuration Manager). |
+| `https://fef.msua06.manage.microsoft.com` | Se utiliza para sincronizar miembros de la colección de dispositivo, los planes de implementación y estado de preparación del dispositivo con análisis de escritorio (en función de servidor de Configuration Manager). |
 
 
 ### <a name="ssl-inspection"></a>Inspección de SSL

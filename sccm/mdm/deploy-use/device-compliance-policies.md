@@ -2,7 +2,7 @@
 title: Directivas de cumplimiento de dispositivos
 titleSuffix: Configuration Manager
 description: Obtenga información sobre cómo administrar directivas de cumplimiento en Configuration Manager para que los dispositivos sean compatibles con directivas de acceso condicional.
-ms.date: 07/12/2018
+ms.date: 03/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2544d2b61c3d92555d0bc1abc908003f1c982bab
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 4e225b7ab54a1061387d1c8ee369641f68bd7889
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56136524"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58196881"
 ---
 # <a name="device-compliance-policies-in-system-center-configuration-manager"></a>Directivas de cumplimiento de dispositivo en System Center Configuration Manager
 
@@ -26,7 +26,7 @@ Las directivas de cumplimiento de Configuration Manager definen las reglas y los
 
 
 > [!IMPORTANT]  
->  En este artículo se describen las directivas de cumplimiento para los dispositivos administrados por Microsoft Intune. Las directivas de cumplimiento para los dispositivos administrados por el cliente de Configuration Manager se describen en [Administración del acceso a servicios de O365 para equipos administrados por System Center Configuration Manager](/sccm/protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm).  
+>  En este artículo se describen las directivas de cumplimiento para los dispositivos administrados por Microsoft Intune. Las directivas de cumplimiento para dispositivos administrados por el cliente de Configuration Manager se describe en [administrar el acceso a servicios de Office 365 para dispositivos administrados por Configuration Manager](/sccm/protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm).  
 
  Estas reglas incluyen requisitos como los siguientes:  
 
@@ -71,7 +71,8 @@ Las directivas de cumplimiento de Configuration Manager definen las reglas y los
 
 
 ## <a name="devices-without-any-assigned-compliance-policy"></a>Dispositivos sin ninguna directiva de cumplimiento asignada
-<!--2520152--> A partir de julio de 2018, configure si todos los dispositivos sin ninguna directiva de cumplimiento asignada se consideran compatibles o no compatibles. De forma predeterminada, los dispositivos sin directiva de cumplimiento asignada se consideran compatibles. Use los pasos siguientes para cambiar este valor en Azure Portal:
+<!--2520152-->
+A partir de julio de 2018, configurar si todos los dispositivos que no haya ninguna directiva de cumplimiento asignada se consideran no conformes o no compatibles. De forma predeterminada, los dispositivos sin directiva de cumplimiento asignada se consideran compatibles. Use los pasos siguientes para cambiar este valor en Azure Portal:
 
 1. Inicie sesión en [Intune en Azure Portal](https://aka.ms/intuneportal).  
 

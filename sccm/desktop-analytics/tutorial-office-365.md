@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb4170bddfbad34807c6fb82131fa09dc7c6b09f
-ms.sourcegitcommit: ceec0e20bf801071f2a05233f984cf17acc3fd29
+ms.openlocfilehash: c8e346aaabb03296f19a1eaf40d79c0f9f241cce
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56755628"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58197017"
 ---
 # <a name="tutorial-deploy-office-365-to-pilot"></a>Tutorial: Implementación piloto de Office 365 
 
@@ -84,7 +84,7 @@ Antes de empezar este tutorial, asegúrese de que tiene los siguientes requisito
     - `https://nexus.officeapps.live.com`  
     - `https://office.pipe.aria.microsoft.com`  
     - `https://graph.windows.net` (en función de servidor de Configuration Manager)
-    - `https://fef.bmsub01.manage-beta.microsoft.com` (en función de servidor de Configuration Manager)
+    - `https://fef.msua06.manage.microsoft.com` (en función de servidor de Configuration Manager)
 
     Para obtener más información, consulte [cómo habilitar el uso compartido para el escritorio de análisis de datos](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
 
@@ -101,7 +101,7 @@ Utilice este procedimiento para iniciar sesión el análisis de escritorio y con
 
 2. En el **acepte el contrato de servicio** página, revise el contrato de servicio y seleccione **Accept**.  
 
-3. En el **confirmar la suscripción** página, la lista de licencias aplicables necesarias son para las características del estado de dispositivos de Windows de análisis de escritorio. Seleccione **siguiente** para continuar.  
+3. En el **confirmar la suscripción** página, la lista de licencias aplicables necesarias son para las características del estado de dispositivos de Windows de análisis de escritorio. Seleccione **Siguiente** para continuar.  
 
 4. En el **dar acceso a los usuarios** página, análisis de escritorio configura previamente dos grupos de seguridad en Azure Active Directory:  
 

@@ -1,5 +1,5 @@
 ---
-title: Administrar el acceso a los servicios de Office 365
+title: Administrar el acceso a servicios de Office 365
 titleSuffix: Configuration Manager
 description: Aprenda a configurar el acceso condicional a los servicios de Office 365 en equipos administrados por System Center Configuration Manager.
 ms.date: 03/21/2019
@@ -11,14 +11,14 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74a28863b2e30566b07890d57e927703d77247f6
-ms.sourcegitcommit: ec4411fe30770f90128cf6cbd181047db90040cb
+ms.openlocfilehash: 434801b170ed5efcbbafa046a3ac1e94a615ed3d
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57881714"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58196779"
 ---
-# <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>Administración del acceso a servicios de O365 para equipos administrados por System Center Configuration Manager
+# <a name="manage-access-to-office-365-services-for-pcs-managed-by-system-center-configuration-manager"></a>Administrar el acceso a servicios de Office 365 para equipos administrados por System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
@@ -63,7 +63,7 @@ Para obtener información sobre cómo configurar el acceso condicional para disp
 
 ### <a name="prerequisites"></a>Requisitos previos  
 
-- Sincronización de ADFS y una suscripción de O365. La suscripción de Office 365 sirve para configurar Exchange Online y SharePoint Online.  
+- Sincronización de AD FS y una suscripción de Office 365. La suscripción de Office 365 es cómo configurar Exchange Online y SharePoint Online.  
 
 - Suscripción a Microsoft Intune. La suscripción a Microsoft Intune debe configurarse en la consola de Configuration Manager. La suscripción de Intune se utiliza para retransmitir el estado de cumplimiento de los dispositivos a Azure Active Directory y para las licencias de usuario.  
 
