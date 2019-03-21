@@ -1,11 +1,11 @@
 items:
-- name: Información general
+- name: Introducción
   items:
   - name: Qué es MDM híbrida
     href: understand/hybrid-mobile-device-management.md
   - name: Novedades de la MDM híbrida
     href: understand/whats-new-in-hybrid-mobile-device-management.md
-- name: Planear y diseñar
+- name: Planeamiento y diseño
   href: plan-design/plan-hybrid-mobile-device-management.md
   items:
   - name: Plataformas de dispositivos compatibles
@@ -38,14 +38,14 @@ items:
     href: deploy-use/set-up-additional-management.md
   - name: Comprobación de la configuración de MDM
     href: deploy-use/verify-mdm-configuration.md
-- name: Procedimientos
+- name: Cómo
   items:
   - name: Inscribir dispositivos propiedad del usuario (BYOD)
     href: deploy-use/enroll-user-owned-devices.md
   - name: Inscribir dispositivos de propiedad corporativa
     href: deploy-use/enroll-company-owned-devices.md
     items:
-    - name: Inscripción directa de iOS DEP
+    - name: Inscripción de DEP de iOS
       href: deploy-use/ios-device-enrollment-program-for-hybrid.md
     - name: Inscribir Apple Configurator
       href: deploy-use/ios-hybrid-enrollment-using-apple-configurator.md
@@ -83,7 +83,7 @@ items:
     items:
     - name: Creación de aplicaciones de iOS
       href: deploy-use/creating-ios-applications.md
-    - name: Directivas de configuración de aplicaciones de iOS
+    - name: Directivas de configuración de aplicaciones iOS
       href: deploy-use/configure-ios-apps-with-app-configuration-policies.md
     - name: Aplicaciones de iOS adquiridas por volumen
       href: deploy-use/manage-volume-purchased-ios-apps.md
@@ -97,7 +97,7 @@ items:
       href: deploy-use/protect-apps-using-mam-policies.md
     - name: Directivas de explorador administrado
       href: deploy-use/manage-internet-access-using-managed-browser-policies.md
-    - name: Aplicaciones de la Tienda Microsoft para Empresas
+    - name: Aplicaciones de Tienda Microsoft para Empresas
       href: deploy-use/windows-store-for-business.md
   - name: Administración de una suscripción a Intune
     href: deploy-use/manage-intune-subscriptions.md
@@ -134,7 +134,7 @@ items:
     - name: Directivas de cumplimiento de dispositivos
       href: deploy-use/device-compliance-policies.md
       items:
-      - name: Acciones de no cumplimiento
+      - name: Acciones en caso de incumplimiento
         href: deploy-use/actions-for-noncompliance.md
     - name: Crear una directiva de cumplimiento de dispositivos
       href: deploy-use/create-compliance-policy.md
@@ -146,7 +146,7 @@ items:
       href: deploy-use/manage-skype-for-business-online-access.md
     - name: Administración del acceso a Dynamics CRM Online
       href: deploy-use/manage-dynamics-crm-online-access.md
-    - name: Administrar el acceso del equipo a los servicios de Office 365
+    - name: Administración del acceso del equipo a los servicios de Office 365
       href: deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md
   - name: Administrar el acceso basándose en el riesgo de dispositivo
     href: deploy-use/mobile-threat-defense.md
@@ -190,7 +190,7 @@ items:
       href: deploy-use/user-enroll-devices-on-premises-mdm.md
     - name: Inscripción masiva
       href: deploy-use/bulk-enroll-devices-on-premises-mdm.md
-  - name: Administrar dispositivos
+  - name: Administrar los dispositivos
     href: deploy-use/onprem-manage-devices.md
   - name: Administración de aplicaciones
     href: deploy-use/onprem-manage-applications.md
@@ -198,9 +198,9 @@ items:
     href: deploy-use/onprem-protect-data-devices.md
 - name: Administración de dispositivos con Exchange
   href: deploy-use/manage-mobile-devices-with-exchange-activesync.md
-ms.openlocfilehash: 1ecf2c9c9264f7851982e59d47e0e42b9c8ca1ab
-ms.sourcegitcommit: 8661f10596f565ca2b7bdb5951388b44b3b622ee
+ms.openlocfilehash: 604fce055dcaf8544d85986640ee2ba55a39ebb2
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "48817793"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58197136"
