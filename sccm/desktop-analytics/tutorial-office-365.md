@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8e346aaabb03296f19a1eaf40d79c0f9f241cce
-ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
+ms.openlocfilehash: b8102e426e4737efdd5ca77de2824c1465b382ec
+ms.sourcegitcommit: 5f17355f954b9d9e10325c0e9854a9d582dec777
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58197017"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329505"
 ---
 # <a name="tutorial-deploy-office-365-to-pilot"></a>Tutorial: Implementación piloto de Office 365 
 
@@ -97,7 +97,7 @@ Antes de empezar este tutorial, asegúrese de que tiene los siguientes requisito
 
 Utilice este procedimiento para iniciar sesión el análisis de escritorio y configurarlo en su suscripción. Este procedimiento es un proceso único para configurar los análisis de escritorio de su organización.  
 
-1. Abra el [portal de análisis de escritorio](https://aka.ms/m365aprod) en administración de dispositivos de Microsoft 365 como un usuario con **Administrador de la compañía** permisos. Seleccione **iniciar**.  
+1. Abra el portal de análisis de escritorio en administración de dispositivos de Microsoft 365 como un usuario con **Administrador de la compañía** permisos. Seleccione **iniciar**.  
 
 2. En el **acepte el contrato de servicio** página, revise el contrato de servicio y seleccione **Accept**.  
 
@@ -134,7 +134,7 @@ Utilice este procedimiento para iniciar sesión el análisis de escritorio y con
 
 ### <a name="create-an-app-in-azure-ad-for-configuration-manager"></a>Crear una aplicación en Azure AD para Configuration Manager  
 
-1. En el [portal Azure](http://portal.azure.com), vaya a **Azure Active Directory**y seleccione **registros de aplicaciones**. A continuación, seleccione **nuevo registro de aplicaciones**.  
+1. En el [portal Azure](https://portal.azure.com), vaya a **Azure Active Directory**y seleccione **registros de aplicaciones**. A continuación, seleccione **nuevo registro de aplicaciones**.  
 
 2. En el **crear** del panel, configure las siguientes opciones:  
 
