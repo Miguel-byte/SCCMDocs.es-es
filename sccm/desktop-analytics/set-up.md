@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9bd3a9efcbc76647ae39eb1a104b401b112d15fb
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 7b20637cea4e02f390ae845ff9d421e5011120ab
+ms.sourcegitcommit: 4441b3035222cfaf7442416873ed824ac7d852c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56755534"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356332"
 ---
 # <a name="how-to-set-up-desktop-analytics"></a>Cómo configurar el análisis de escritorio 
 
@@ -30,7 +30,7 @@ Utilice este procedimiento para iniciar sesión el análisis de escritorio y con
 
 ## <a name="initial-onboarding"></a>Incorporación inicial
 
-1. Abra el [portal de análisis de escritorio](https://aka.ms/m365aprod) en administración de dispositivos de Microsoft 365 como un usuario con **Administrador de la compañía** permisos. Seleccione **iniciar**.  
+1. Abra el portal de análisis de escritorio en administración de dispositivos de Microsoft 365 como un usuario con **Administrador de la compañía** permisos. Seleccione **iniciar**.  
 
 2. En el **acepte el contrato de servicio** página, revise el contrato de servicio y seleccione **Accept**.  
 
