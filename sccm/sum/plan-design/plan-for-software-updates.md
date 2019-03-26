@@ -2,21 +2,21 @@
 title: Planear las actualizaciones de software
 titleSuffix: Configuration Manager
 description: Es imprescindible planear la infraestructura de punto de actualización de software antes de usar las actualizaciones de software en un entorno de producción de Configuration Manager.
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 03/21/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 730d99764f8ae8f8ce1b76bfd13411988c3a2e23
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: a4100bca2f1cd1f770c2e739ec229dc020d5d8d8
+ms.sourcegitcommit: 5f17355f954b9d9e10325c0e9854a9d582dec777
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56138552"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329590"
 ---
 # <a name="plan-for-software-updates-in-configuration-manager"></a>Planear actualizaciones de software en Configuration Manager
 
@@ -105,9 +105,9 @@ Configuration Manager proporciona al cliente una lista de puntos de actualizaci�
 
 El cliente selecciona aleatoriamente un punto de actualización de software en la lista. Da prioridad a los puntos de actualización de software en el mismo bosque. Configuration Manager proporciona clientes de otra lista según el tipo de cliente:  
 
--   **Clientes basados en intranet**: reciben una lista de puntos de actualización de software que se puede configurar para permitir conexiones solo desde la intranet, o bien una lista de puntos de actualización de software que permiten conexiones de cliente de Internet o intranet.  
+-   **Clientes basados en intranet**: recibe una lista de puntos de actualización de software que puede configurar para permitir conexiones solo desde la intranet, o una lista de puntos de actualización de software que permiten las conexiones de cliente de Internet o intranet.  
 
--   **Clientes basados en Internet**: reciben una lista de puntos de actualización de software que se puede configurar para permitir conexiones solo desde Internet, o bien una lista de puntos de actualización de software que permiten conexiones de cliente de Internet o intranet.  
+-   **Clientes basados en Internet**: reciben una lista de puntos de actualización de software que se configuran para permitir conexiones provenientes de Internet solamente o una lista de puntos de actualización de software que permiten conexiones de cliente a Internet e intranet.  
 
 
 ###  <a name="BKMK_SUPSwitching"></a> Cambio de punto de actualización de software  
@@ -373,13 +373,13 @@ La sincronización de las actualizaciones de software de Configuration Manager d
 
 En la configuración del origen de la sincronización del punto de actualización de software se especifica la ubicación desde la cual el punto de actualización de software recupera los metadatos de las actualizaciones de software. También se especifica si se crean eventos de informe de WSUS durante el proceso de sincronización.  
 
--   **Origen de la sincronización**: de forma predeterminada, el punto de actualización de software del sitio de nivel superior configura el origen de la sincronización para Microsoft Update. Tiene la opción de sincronizar el sitio de nivel superior con un servidor WSUS existente. El punto de actualización de software de un sitio primario secundario configura el origen de la sincronización como el punto de actualización de software del sitio de administración central.  
+-   **Origen de sincronización**: de forma predeterminada, el punto de actualización de software del sitio de nivel superior configura el origen de sincronización para Microsoft Update. Tiene la opción de sincronizar el sitio de nivel superior con un servidor WSUS existente. El punto de actualización de software de un sitio primario secundario configura el origen de la sincronización como el punto de actualización de software del sitio de administración central.  
 
     -  El primer punto de actualización de software que se instala en un sitio primario, que es el punto de actualización de software predeterminado, se sincroniza con el sitio de administración central. Los puntos de actualización de software adicionales del sitio primario se sincronizan con el punto de actualización de software predeterminado del sitio primario.  
 
     - Si un punto de actualización de software se desconecta de Microsoft Update o del servidor de actualización que precede en la cadena, configure el origen de la sincronización de manera que no se realice la sincronización con un origen de la sincronización configurado. En su lugar, configúrelo para que se utilice la función de exportación e importación de la herramienta **WSUSUtil** para sincronizar las actualizaciones de software. Para obtener más información, consulte [Sincronizar actualizaciones de software desde un punto de actualización de software desconectado](../get-started/synchronize-software-updates-disconnected.md).  
 
--   **Eventos de informe de WSUS:** el Agente de Windows Update de los equipos cliente puede crear mensajes de evento para la generación de informes de WSUS. Configuration Manager no usa estos eventos. Por lo tanto, la opción **No crear eventos de informe de WSUS** está activada de forma predeterminada. Cuando no se crean estos eventos, el único momento en que el cliente se debe conectar al servidor WSUS es durante los exámenes de cumplimiento y de evaluación de las actualizaciones de software. Si se necesitan estos eventos para la generación de informes fuera de Configuration Manager, es necesario modificar esta configuración para crear eventos de informe de WSUS.  
+-   **Eventos de informe de WSUS:** El Agente de Windows Update de los equipos cliente puede crear mensajes de evento para la generación de informes de WSUS. Configuration Manager no usa estos eventos. Por lo tanto, la opción **No crear eventos de informe de WSUS** está activada de forma predeterminada. Cuando no se crean estos eventos, el único momento en que el cliente se debe conectar al servidor WSUS es durante los exámenes de cumplimiento y de evaluación de las actualizaciones de software. Si se necesitan estos eventos para la generación de informes fuera de Configuration Manager, es necesario modificar esta configuración para crear eventos de informe de WSUS.  
 
 
 ###  <a name="BKMK_SyncSchedule"></a> Programación de la sincronización  
@@ -398,23 +398,23 @@ Cada actualización de software se define con una clasificación de actualizaci�
 
 Configuration Manager admite la sincronización de las siguientes clasificaciones de actualización:  
 
--   **Actualizaciones críticas**: una actualización de amplia distribución para un problema específico que permite solucionar un error crítico no relacionado con la seguridad.  
+-   **Actualizaciones críticas**: una actualización de amplia distribución para un problema específico que resuelve un error crítico no relacionado con la seguridad.  
 
--   **Actualizaciones de definiciones**: una actualización de virus u otros archivos de definición.  
+-   **Actualizaciones de definiciones**: una actualización para un archivo de definición de virus u otros.  
 
--   **Paquetes de características**: nuevas características de producto que se distribuyen fuera de una versión del producto y que normalmente se incluyen en la siguiente versión completa del producto.  
+-   **Feature Packs**: nuevas características de producto que se distribuyen fuera de una versión del producto y que normalmente se incluyen en la siguiente versión completa del producto.  
 
--   **Actualizaciones de seguridad**: una actualización de amplia distribución para un problema relacionado con la seguridad específico de un producto.  
+-   **Actualizaciones de seguridad**: una actualización de amplia distribución para un problema específico del producto relacionado con la seguridad.  
 
--   **Service Packs**: un conjunto acumulativo de revisiones correspondientes a un SO o una aplicación. Estas revisiones incluyen actualizaciones de seguridad, actualizaciones críticas y actualizaciones de software.  
+-   **Service Pack**: un conjunto acumulativo de revisiones correspondientes a un SO o una aplicación. Estas revisiones incluyen actualizaciones de seguridad, actualizaciones críticas y actualizaciones de software.  
 
 -   **Herramientas**: una utilidad o característica que ayuda a realizar una o varias tareas.  
 
--   **Paquetes acumulativos de revisiones**: conjunto acumulativo de revisiones que se recopilan para facilitar la implementación. Estas revisiones incluyen actualizaciones de seguridad, actualizaciones críticas y actualizaciones de software. Un paquete acumulativo de revisiones suele relacionarse, por lo general, con un área específica; por ejemplo, un componente del producto o de la seguridad.  
+-   **Paquete acumulativo de actualizaciones**: conjunto acumulativo de revisiones que se recopilan para facilitar la implementación. Estas revisiones incluyen actualizaciones de seguridad, actualizaciones críticas y actualizaciones de software. Un paquete acumulativo de revisiones suele relacionarse, por lo general, con un área específica; por ejemplo, un componente del producto o de la seguridad.  
 
 -   **Actualizaciones**: una actualización de una aplicación o un archivo que está instalado actualmente.  
 
--   **Actualizaciones**: una actualización de características a una versión nueva de Windows 10.  
+-   **Actualizaciones**: una actualización de características a una nueva versión de Windows 10.  
 
 Configure las clasificaciones de actualizaciones solo en el sitio de nivel superior. Las clasificaciones de actualizaciones no se configuran en el punto de actualización de software de los sitios secundarios, porque los metadatos de las actualizaciones de software se replican desde el sitio de nivel superior. Al seleccionar las clasificaciones de actualizaciones, tenga en cuenta que cuantas más clasificaciones seleccione, más tiempo tarda la sincronización de los metadatos de las actualizaciones de software.  
 
@@ -455,8 +455,8 @@ Tenga en cuenta los siguientes escenarios en los que puede que necesite implemen
 -   Si una actualización de software de sustitución no se aprobó para su implementación en el entorno de producción.  
 
     > [!NOTE]  
-    > Antes de la versión 1806 de Configuration Manager, cuando Configuration Manager establece una actualización de software reemplazada en estado **Expirado**, no establece la actualización en **Rechazado** en WSUS. Los clientes siguen buscando una actualización caducada hasta que la actualización se rechace manualmente o mediante un script personalizado.  Después de la versión 1806, Configuration Manager también disminuirá las actualizaciones reemplazadas en WSUS. Para obtener más información sobre la tarea de limpieza de WSUS, consulte [Mantenimiento de las actualizaciones de software](/sccm/sum/deploy-use/software-updates-maintenance).
-
+    > - Antes de la versión 1806 de Configuration Manager, cuando Configuration Manager establece una actualización de software reemplazada en estado **Expirado**, no establece la actualización en **Rechazado** en WSUS. Los clientes siguen buscando una actualización caducada hasta que la actualización se rechace manualmente o mediante un script personalizado.  Después de la versión 1806, Configuration Manager también disminuirá las actualizaciones reemplazadas en WSUS. Para obtener más información sobre la tarea de limpieza de WSUS, consulte [Mantenimiento de las actualizaciones de software](/sccm/sum/deploy-use/software-updates-maintenance).
+    > - A partir de la versión de Configuration Manager 1810, puede especificar el comportamiento de las reglas de sustitución para **las actualizaciones de características** por separado desde **actualizaciones que no son características**.
 
 ###  <a name="BKMK_UpdateLanguages"></a> Idiomas  
 
@@ -488,8 +488,11 @@ Configure las opciones de los detalles de resumen solo en el sitio de nivel supe
 
 ##  <a name="BKMK_MaintenanceWindow"></a> Planear una ventana de mantenimiento de actualizaciones de software  
 
-Agregue una ventana de mantenimiento dedicada a la instalación de actualizaciones de software. Esta acción le permite configurar una ventana de mantenimiento general y una ventana de mantenimiento diferente para las actualizaciones de software. Cuando configure una ventana de mantenimiento general y una ventana de mantenimiento de actualizaciones de software, los clientes solo instalan las actualizaciones de software durante la ventana de mantenimiento de actualizaciones de software. Para obtener más información sobre las ventanas de mantenimiento, consulte [Cómo utilizar las ventanas de mantenimiento](../../core/clients/manage/collections/use-maintenance-windows.md).  
+Agregue una ventana de mantenimiento dedicada a la instalación de actualizaciones de software. Esta acción le permite configurar una ventana de mantenimiento general y una ventana de mantenimiento diferente para las actualizaciones de software. Cuando configure una ventana de mantenimiento general y una ventana de mantenimiento de actualizaciones de software, los clientes solo instalan las actualizaciones de software durante la ventana de mantenimiento de actualizaciones de software. 
 
+A partir de la versión de Configuration Manager 1810, puede cambiar este comportamiento y permitir que las actualizaciones de software que se instalará durante una ventana de mantenimiento general. Para obtener más información sobre esta configuración de cliente, consulte [configuración de cliente de actualizaciones de Software](/sccm/core/clients/deploy/about-client-settings#bkmk_SUMMaint).
+
+Para obtener más información sobre las ventanas de mantenimiento, consulte [Cómo utilizar las ventanas de mantenimiento](../../core/clients/manage/collections/use-maintenance-windows.md).  
 
 
 ##  <a name="BKMK_RestartOptions"></a> Opciones de reinicio para clientes de Windows 10 después de la instalación de las actualizaciones de software
