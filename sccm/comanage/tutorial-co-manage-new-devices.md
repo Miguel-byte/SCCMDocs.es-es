@@ -13,10 +13,10 @@ ms.service: ''
 ms.technology: ''
 ms.assetid: ''
 ms.openlocfilehash: 61400d382a539efa495af99795e32fc1f2a517ab
-ms.sourcegitcommit: af8693048e6706ffda72572374f56e0bc7dfce2c
+ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
+ms.lasthandoff: 03/27/2019
 ms.locfileid: "57737363"
 ---
 # <a name="tutorial-enable-co-management-for-new-internet-based-devices"></a>Tutorial: Habilitación de la administración conjunta para nuevos dispositivos basados en Internet
