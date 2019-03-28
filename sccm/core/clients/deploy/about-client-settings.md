@@ -2,7 +2,7 @@
 title: Configuración de cliente
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la configuración predeterminada y personalizada para controlar los comportamientos del cliente.
-ms.date: 08/31/2018
+ms.date: 03/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9a06e9f0607161b87422d29ede028da0e8aea8c
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 472cf012805700e1ec2de2f3c83a0ef63e10183b
+ms.sourcegitcommit: 5f17355f954b9d9e10325c0e9854a9d582dec777
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56140905"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329607"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Información sobre la configuración de cliente en Configuration Manager
 
@@ -294,7 +294,8 @@ Para obtener más información sobre las ventanas de mantenimiento, consulte [C�
 
 ## <a name="delivery-optimization"></a>Optimización de entrega
 
-<!-- 1324696 --> Los grupos de límites de Configuration Manager se usan para definir y regular la distribución de contenido a través de la red corporativa y en las oficinas remotas. La [optimización de distribución de Windows](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) es una tecnología entre iguales basada en la nube para compartir contenido entre los dispositivos de Windows 10. A partir de la versión 1802, configure la optimización de entrega para usar los grupos de límites al compartir contenido entre iguales.
+<!-- 1324696 -->
+Los grupos de límites de Configuration Manager se usan para definir y regular la distribución de contenido a través de la red corporativa y en las oficinas remotas. La [optimización de distribución de Windows](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) es una tecnología entre iguales basada en la nube para compartir contenido entre los dispositivos de Windows 10. A partir de la versión 1802, configure la optimización de entrega para usar los grupos de límites al compartir contenido entre iguales.
 
  > [!Note]
  > La optimización de distribución solo está disponible en clientes de Windows 10
@@ -722,7 +723,7 @@ Seleccione **Programación** para ajustar la frecuencia con la que los clientes 
 
 
 
-##  <a name="software-updates"></a>Actualizaciones de software  
+## <a name="software-updates"></a>Actualizaciones de software  
 
 ### <a name="enable-software-updates-on-clients"></a>Habilitar actualizaciones de software en clientes
 
@@ -774,6 +775,10 @@ Esta opción configura el puerto local para el que agente de escucha HTTP descar
 ### <a name="enable-management-of-the-office-365-client-agent"></a>Habilitar administración del Agente cliente de Office 365
 
 Cuando esta opción se establece en **Sí**, se habilita la configuración de opciones de instalación de Office 365. También permite descargar archivos desde redes de Content Delivery Network (CDN) de Office e implementar los archivos como una aplicación en Configuration Manager. Para más información, vea [Administración de Office 365 ProPlus](/sccm/sum/deploy-use/manage-office-365-proplus-updates).
+
+### <a name="bkmk_SUMMaint"></a> Habilitar la instalación de actualizaciones de software en la ventana de mantenimiento "Todas las implementaciones" cuando esté disponible la ventana de mantenimiento "Actualización de software"
+
+Al establecer esta opción en **Sí** y si el cliente tiene al menos una ventana de mantenimiento "Actualización de Software" definida, las actualizaciones de software se instalarán durante una ventana de mantenimiento "Todas las implementaciones". De forma predeterminada, esta opción está establecida en **No**. Esta configuración de cliente se agregó en Configuration Manager versión 1810. <!--2839307-->
 
 ### <a name="enable-third-party-software-updates"></a>Habilitar actualizaciones de software de terceros 
 

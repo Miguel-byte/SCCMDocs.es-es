@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9ac08431c76653711eacb62aed4100c2fab0db50
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 7b0c162e7d1fcc38b388d0b39cc6811bc9e86973
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122515"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58196813"
 ---
 # <a name="what39s-new-in-version-1602-of-system-center-configuration-manager"></a>Novedades de la versión 1602 de System Center Configuration Manager
 
@@ -120,7 +120,7 @@ Encontrará estas aplicaciones en el nodo **Aplicaciones** de la consola de Conf
 ### <a name="conditional-access-for-pcs-managed-by-system-center-configuration-manager"></a>Acceso condicional para equipos administrados por System Center Configuration Manager  
  Antes de esta versión, para configurar el acceso condicional para un equipo, dicho equipo debía estar inscrito en Intune o ser un equipo unido a un dominio. A partir de la actualización 1602, se admite el acceso condicional para equipos administrados por System Center Configuration Manager. Para los equipos administrados por System Center Configuration Manager, puede restringir el acceso a Exchange Online y SharePoint Online solo para los dispositivos que sean conformes con las directivas de cumplimiento que configure.  
 
- Para obtener más información, consulte [Manage access to O365 services for PCs managed by System Center Configuration Manager](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md) (Administración del acceso a servicios de O365 para equipos administrados por System Center Configuration Manager).  
+ Para obtener más información, consulte [Administrar el acceso a servicios de Office 365 para equipos administrados por System Center Configuration Manager](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).  
 
 ### <a name="restricting-access-based-on-the-health-of-devices"></a>Restringir el acceso basándose en el estado de los dispositivos  
  Ahora puede restringir el acceso a los servicios de correo electrónico y Office 365 según el estado de los dispositivos, como ha notificado el Servicio de atestación de estado. Además, los dispositivos administrados por Intune se incluyen en los informes de estado de dispositivos.  

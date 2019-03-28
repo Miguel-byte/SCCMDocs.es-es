@@ -2,7 +2,7 @@
 title: Novedades de la versión 1810
 titleSuffix: Configuration Manager
 description: Obtenga detalles sobre los cambios y las nuevas características incorporados en la versión 1810 de la rama actual de Configuration Manager.
-ms.date: 03/13/2019
+ms.date: 03/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 51329775e44963a4ca14067fb909c05c0ec9a24c
-ms.sourcegitcommit: 8803a64692f3edc0422b58f6c3037a8796374cc8
+ms.openlocfilehash: 5e0b1e9404eb332a562b6d48db0f55e8726a09c8
+ms.sourcegitcommit: 5f17355f954b9d9e10325c0e9854a9d582dec777
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "57881867"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329624"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Novedades de la versión 1810 de la rama actual de Configuration Manager
 
@@ -61,10 +61,10 @@ Para obtener más información, vea [Sistemas operativos compatibles con servido
 
 
 ### <a name="hierarchy-support-for-site-server-high-availability"></a>Compatibilidad de la jerarquía con la alta disponibilidad de servidor de sitio
-<!--1358224-->
-Los sitios de administración central y los sitios primarios secundarios ahora pueden tener un servidor de sitio adicional en modo pasivo. 
+<!--3607755, fka 1358224-->
+***[Actualizado]*** Los sitios de administración central y los sitios primarios secundarios ahora pueden tener un servidor de sitio adicional en modo pasivo. 
 
-<!--For more information, see [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability).-->
+Para obtener más información, vea [Alta disponibilidad de servidor de sitio](/sccm/core/servers/deploy/configure/site-server-high-availability).
 
 
 ### <a name="improvements-to-setup-prerequisites"></a>Mejoras en los requisitos previos del programa de instalación
@@ -249,6 +249,12 @@ Para obtener más información, consulte [Boundary groups (Grupos de límites)](
 
 Para obtener más información, consulte [Administrar controladores](/sccm/osd/get-started/manage-drivers).
 
+### <a name="improvements-to-windows-10-servicing-plan-filters"></a>Mejoras en los filtros de planes de mantenimiento de Windows 10
+
+<!--3098809, 3113836, 3204570 -->
+***[Actualizado]***  Se han agregado más filtros a los planes de mantenimiento de Windows 10. Ahora puede filtrar por **Arquitectura**, **Categoría de producto** y si la actualización se ha **reemplazado**.
+
+Para más información, vea [Plan de mantenimiento de Windows 10](/sccm/osd/deploy-use/manage-windows-as-a-service#BKMK_ServicingPlan).
 
 ### <a name="new-task-sequence-variable-for-last-action-name"></a>Nueva variable de secuencia de tareas para el nombre de la última acción
 <!--SCCMDocs-pr issue #2964-->
@@ -273,19 +279,27 @@ Para más información, vea [Crear implementaciones por fases](/sccm/osd/deploy-
 
 ### <a name="improvement-to-maintenance-windows-for-software-updates"></a>Mejoras en las ventanas de mantenimiento para actualizaciones de software
 <!--vso2839307-->
-La siguiente configuración de cliente está incluida en el grupo **Actualizaciones de software** para controlar el comportamiento de instalación de actualizaciones de software en ventanas de mantenimiento: 
+***[Actualizado]*** La siguiente configuración de cliente está incluida en el grupo **Actualizaciones de software** para controlar el comportamiento de instalación de actualizaciones de software en ventanas de mantenimiento: 
 
 **Habilitar la instalación de actualizaciones en la ventana de mantenimiento "Todas las implementaciones" cuando esté disponible la ventana de mantenimiento "Actualización de software"**
 
 De forma predeterminada, esta opción es **No** para mantener la coherencia con el comportamiento existente. Cámbiela a **Sí** para permitir que los clientes usen otras ventanas de mantenimiento disponibles para instalar actualizaciones de software.
 
-<!--For more information, see []().-->
+Para obtener más información, vea la [configuración de cliente del Centro de software](/sccm/core/clients/deploy/about-client-settings#bkmk_SUMMaint).
+
 
 ### <a name="improvement-to-software-updates-maintenance"></a>Mejora del mantenimiento de las actualizaciones de software
 <!--2839349-->
 Las tareas de limpieza de WSUS ahora se ejecutan en sitios secundarios. Se ejecuta la limpieza de WSUS para actualizaciones expiradas, mientras que las actualizaciones sustituidas para sitios secundarios se rechazan.
 
 Para obtener más información, vea [WSUS cleanup behavior starting in version 1810](/sccm/sum/deploy-use/software-updates-maintenance#wsus-cleanup-behavior-starting-in-version-1810) (Comportamiento de limpieza de WSUS a partir de la versión 1810).
+
+### <a name="improvement-to-software-update-supersedence-rules"></a>Mejora en las reglas de sustitución de actualización de software
+<!--3098809, 2977644-->
+
+***[Actualizado]***  Ahora puede especificar reglas de sustitución para las actualizaciones de características de forma independiente de las actualizaciones que no son de características. Es decir, las actualizaciones no se quitarán de Configuration Manager antes de haber completado el mantenimiento de los clientes de Windows 10.
+
+Para obtener más información, consulte [Reglas de sustitución](/sccm/sum/get-started/install-a-software-update-point#supersedence-rules).
 
 ## <a name="bkmk_report"></a> Generación de informes
 
@@ -363,9 +377,8 @@ Para obtener más información sobre el rendimiento y las mejoras para soluciona
 
 
 ### <a name="bkmk_scripts"></a> Mejoras para scripts
-
-<!--3607711, fka 1358239-->
-***[Actualización]*** Ahora puede ver una salida de script detallada sin formato o con formato JSON estructurado. Este formato permite leer y analizar la salida de manera más sencilla.
+<!--1358239-->
+Ahora puede ver una salida de script detallada sin formato o con formato JSON estructurado. Este formato permite leer y analizar la salida de manera más sencilla. 
 
 Las siguientes mejoras de solución de problemas y rendimiento se aplican a CMPivot y scripts:
 
@@ -373,11 +386,11 @@ Las siguientes mejoras de solución de problemas y rendimiento se aplican a CMPi
 
 - Otros registros para la solución de problemas  
 
-Vea los siguientes artículos para más información:  
+<!--For more information, see the following articles:  
 
-- [Creación y ejecución de scripts de PowerShell desde la consola de Configuration Manager](/sccm/apps/deploy-use/create-deploy-scripts)  
+- [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts)  
 
-- [CMPivot](/sccm/core/servers/manage/cmpivot)
+- [CMPivot](/sccm/core/servers/manage/cmpivot)  -->
 
 
 ### <a name="sms-provider-api"></a>API del proveedor de SMS

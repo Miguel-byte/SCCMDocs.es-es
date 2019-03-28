@@ -2,7 +2,7 @@
 title: Creación de un laboratorio en Azure
 titleSuffix: Configuration Manager
 description: Automatización de la creación de un laboratorio de Configuration Manager Technical Preview con plantillas de Azure
-ms.date: 01/22/2019
+ms.date: 03/18/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02f3df4b8c090df960f1052a25c1f6cc8ef45395
-ms.sourcegitcommit: ef2960bd91655c741450774e512dd0a9be610625
+ms.openlocfilehash: 25283e513e256e8ce779df7b71ac6f6c17f1e370
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56838776"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58196831"
 ---
 # <a name="create-a-configuration-manager-technical-preview-lab-in-azure"></a>Creación de un laboratorio de Configuration Manager Technical Preview en Azure
 
@@ -33,7 +33,7 @@ Para más información sobre la rama actual de Configuration Manager, vea [Confi
 ## <a name="prerequisites"></a>Requisitos previos
 
 Para este proceso se necesita una suscripción de Azure en la que poder crear estos objetos: 
-- Cuatro máquinas virtuales Standard_D2s_v3
+- Tres máquinas virtuales Standard_D2s_v3
 - Cuenta de almacenamiento Standard_LRS
 
 > [!Tip]  
@@ -86,7 +86,7 @@ Para conectarse a las máquinas virtuales, consiga primero de Azure Portal las d
 
 ## <a name="azure-vm-info"></a>Información de máquina virtual de Azure
 
-Las cuatro máquinas virtuales tienen estas especificaciones:
+Las tres máquinas virtuales tienen estas especificaciones:
 - Standard_D2s_v3, con CPU de doble núcleo y 8 GB de memoria  
 - Windows Server 2016, Datacenter Edition
 - 150 GB de espacio en disco
@@ -127,14 +127,4 @@ Controlador de dominio de Active Directory
 - Compresión diferencial remota (RDC) 
 - Internet Information Service (IIS)
 - Servicio de transferencia inteligente en segundo plano (BITS)
-
-
-### `<prefix>Other`
-
-Esta máquina virtual puede usarse como cliente o para hospedar otros roles de sitio.
-
-#### <a name="windows-features-and-roles"></a>Roles y características de Windows
-- .NET
-- Compresión diferencial remota (RDC) 
-
 

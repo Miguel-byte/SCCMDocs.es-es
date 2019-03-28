@@ -2,7 +2,7 @@
 title: La biblioteca de contenido
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la biblioteca de contenido que usa Configuration Manager para reducir el tamaño total del contenido distribuido.
-ms.date: 09/19/2018
+ms.date: 03/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0453f181133b69dcf3fe83032da0eace84718cf3
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 9b082e28fde0b1ae53a00b9d3236764d03b474ed
+ms.sourcegitcommit: 5f17355f954b9d9e10325c0e9854a9d582dec777
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56129279"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329522"
 ---
 # <a name="the-content-library-in-configuration-manager"></a>La biblioteca de contenido en Configuration Manager
 
@@ -75,7 +75,8 @@ Utilice las siguientes opciones para administrar la biblioteca de contenido en e
 
 
 ## <a name="bkmk_remote"></a> Configuración de una biblioteca de contenido remota para el servidor de sitio  
-<!--1357525--> A partir de la versión 1806, para configurar la [alta disponibilidad del servidor de sitio](/sccm/core/servers/deploy/configure/site-server-high-availability) o para liberar espacio de disco duro en los servidores de sitio primario o de administración central, reubique la biblioteca de contenido en otra ubicación de almacenamiento. Mueva la biblioteca de contenido a otra unidad del servidor de sitio, un servidor independiente o discos tolerantes a errores de una red de área de almacenamiento (SAN). Se recomienda una SAN, ya que tiene alta disponibilidad y proporciona almacenamiento elástico que aumenta o disminuye con el tiempo para satisfacer los requisitos variables del contenido. Para obtener más información, vea [High availability options](/sccm/protect/understand/high-availability-options) (Opciones de alta disponibilidad).
+<!--1357525-->
+A partir de la versión 1806, para configurar la [alta disponibilidad del servidor de sitio](/sccm/core/servers/deploy/configure/site-server-high-availability) o para liberar espacio de disco duro en los servidores de sitio primario o de administración central, reubique la biblioteca de contenido en otra ubicación de almacenamiento. Mueva la biblioteca de contenido a otra unidad del servidor de sitio, un servidor independiente o discos tolerantes a errores de una red de área de almacenamiento (SAN). Se recomienda una SAN, ya que tiene alta disponibilidad y proporciona almacenamiento elástico que aumenta o disminuye con el tiempo para satisfacer los requisitos variables del contenido. Para obtener más información, vea [High availability options](/sccm/protect/understand/high-availability-options) (Opciones de alta disponibilidad).
 
 Una biblioteca de contenido remota es un requisito previo para la [alta disponibilidad del servidor de sitio](/sccm/core/servers/deploy/configure/site-server-high-availability). 
 
@@ -85,12 +86,12 @@ Una biblioteca de contenido remota es un requisito previo para la [alta disponib
 > [!Tip]  
 > Planee también la administración de contenido de origen del paquete, que es externo a la biblioteca de contenido. Todos los objetos de software de Configuration Manager tienen un origen del paquete en un recurso compartido de red. Considere la posibilidad de centralizar todos los orígenes en un mismo recurso compartido, pero asegúrese de que esta ubicación es redundante y de alta disponibilidad. 
 > 
-> Si mueve la biblioteca de contenido al mismo volumen de almacenamiento que los orígenes de paquete, no puede marcar este volumen para la desduplicación de datos. Aunque la biblioteca de contenido es compatible con la desduplicación de datos, el volumen de los orígenes del paquete no lo admite. Para más información, vea [Introducción a la desduplicación de datos](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#bkmmk_datadedup).<!--SCCMDOcs issue #831-->  
+> Si mueve la biblioteca de contenido al mismo volumen de almacenamiento que los orígenes de paquete, no puede marcar este volumen para la desduplicación de datos. Aunque la biblioteca de contenido es compatible con la desduplicación de datos, el volumen de los orígenes del paquete no lo admite. Para obtener más información, vea [Introducción a la desduplicación de datos](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#bkmmk_datadedup).<!--SCCMDOcs issue #831-->  
 
 
 ### <a name="prerequisites"></a>Requisitos previos  
 
-- La cuenta de equipo del servidor de sitio necesita permisos de **lectura** y **escritura** para la ruta de acceso de red a la que se va a mover la biblioteca de contenido. No se instala ningún componente en el sistema remoto.  
+- La cuenta de equipo del servidor de sitio necesita permisos de **control total** para la ruta de acceso de red a la que se va a mover la biblioteca de contenido. Este permiso se aplica al recurso compartido y al sistema de archivos. No se instala ningún componente en el sistema remoto.
 
 - El servidor de sitio no puede tener el rol de punto de distribución. El punto de distribución también usa la biblioteca de contenido, y este rol no admite una biblioteca de contenido remota. Después de mover la biblioteca de contenido, no se puede agregar el rol de punto de distribución al servidor de sitio.  
 
@@ -115,6 +116,9 @@ Una biblioteca de contenido remota es un requisito previo para la [alta disponib
 
    - Mientras está **En curso**, el valor **Progreso de movimiento (%)** muestra el porcentaje completado.  
 
+        > [!Note]  
+        > Si tiene una gran biblioteca de contenido, es posible que vea el progreso `0%` en la consola durante un tiempo. Por ejemplo, con una biblioteca de 1 TB, debe copiar 10 GB antes de mostrar `1%`. Consulte **distmgr.log**, que muestra el número de bytes y archivos copiados. A partir de la versión 1810, el archivo de registro también muestra un tiempo estimado restante.
+
    - Si se produce un estado de error, el estado muestra el error. Errores comunes incluyen **acceso denegado** o **disco lleno**.  
 
    - Cuando finaliza, se muestra **Completado**.  
@@ -124,6 +128,10 @@ Una biblioteca de contenido remota es un requisito previo para la [alta disponib
 Para obtener más información sobre este proceso, vea [Flowchart - Manage content library](/sccm/core/plan-design/hierarchy/manage-content-library-flowchart) (Diagrama de flujo: administración de la biblioteca de contenido).
 
 El sitio *copia* en realidad los archivos de biblioteca de contenido en la ubicación remota. Este proceso no elimina los archivos de biblioteca de contenido en la ubicación original en el servidor de sitio. Para liberar espacio, un administrador debe eliminar manualmente estos archivos originales.
+
+Si la biblioteca de contenido original abarca dos unidades, se combina en una sola carpeta en el nuevo destino. 
+
+A partir de la versión 1810, durante el proceso de copia, el sitio deja los componentes del **procesador de paquetes** y **administrador de distribución**. Esta acción garantiza que el contenido no se agregue a la biblioteca mientras se está eliminando. Programe en cualquier caso este cambio durante un mantenimiento del sistema.
 
 Si tiene que devolver la biblioteca de contenido al servidor de sitio, repita este proceso, pero escriba una unidad y ruta de acceso locales para **Nueva ubicación**. Debe incluir un nombre de carpeta que ya exista en la unidad, por ejemplo, `D:\SCCMContentLib`. Cuando el contenido original todavía existe, el proceso mueve rápidamente la configuración a la ubicación local en el servidor de sitio. 
 

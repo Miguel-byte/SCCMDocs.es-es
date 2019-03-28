@@ -2,7 +2,7 @@
 title: Alta disponibilidad de servidor de sitio
 titleSuffix: Configuration Manager
 description: Cómo configurar la alta disponibilidad del servidor de sitio de Configuration Manager mediante la adición de un servidor de sitio de modo pasivo.
-ms.date: 07/30/2018
+ms.date: 03/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be12cfe29ff470f2f577bab2c685695ae5770bae
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 1259e54f552496f1c838ce4d8da5dbb385dc3c52
+ms.sourcegitcommit: 5f17355f954b9d9e10325c0e9854a9d582dec777
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56131428"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329539"
 ---
 # <a name="site-server-high-availability-in-configuration-manager"></a>Alta disponibilidad de servidor de sitio en Configuration Manager
 
@@ -24,7 +24,14 @@ ms.locfileid: "56131428"
 
 <!--1128774-->
 
-A partir de la versión 1806 de Configuration Manager, la alta disponibilidad del rol de servidor de sitio es una solución basada en Configuration Manager para instalar un servidor de sitio adicional en modo *pasivo*. El servidor de sitio en modo pasivo se suma al servidor de sitio existente que está en modo *activo*. Un servidor de sitio en modo pasivo está disponible para uso inmediato, cuando sea necesario. Incluya este servidor de sitio adicional como parte del diseño general para que el servicio de Configuration Manager sea de [alta disponibilidad](/sccm/core/servers/deploy/configure/high-availability-options).  
+Históricamente, se podía agregar redundancia a la mayoría de los roles de Configuration Manager si había varias instancias de estos roles en el entorno, excepto para el servidor de sitio. A partir de la versión 1806 de Configuration Manager, la alta disponibilidad del rol del servidor de sitio es una solución basada en Configuration Manager para instalar un servidor de sitio adicional en modo  *pasivo*. La versión 1810 agrega compatibilidad con la jerarquía, así que los sitios de administración central y los sitios primarios secundarios ahora pueden tener un servidor de sitio adicional en modo pasivo. El servidor de sitio en modo pasivo puede ser local o estar basado en la nube de Azure.
+
+Esta característica proporciona las siguientes ventajas: 
+- Redundancia y alta disponibilidad para el rol del servidor de sitio  
+- Cambiar más fácilmente el hardware o el sistema operativo del servidor de sitio  
+- Migrar más fácilmente el servidor de sitio a IaaS de Azure  
+
+El servidor de sitio en modo pasivo se suma al servidor de sitio existente que está en modo *activo*. Un servidor de sitio en modo pasivo está disponible para uso inmediato, cuando sea necesario. Incluya este servidor de sitio adicional como parte del diseño general para que el servicio de Configuration Manager sea de [alta disponibilidad](/sccm/core/servers/deploy/configure/high-availability-options).  
 
 Un servidor de sitio en modo pasivo:
 - Utiliza la misma base de datos de sitio que el servidor de sitio en modo activo.
@@ -33,12 +40,17 @@ Un servidor de sitio en modo pasivo:
 
 Para activar el servidor de sitio en modo pasivo, se *promueve* manualmente. Esta acción cambia el servidor de sitio en modo activo para que sea el servidor de sitio en modo pasivo. Los roles de sistema de sitio que están disponibles en el servidor de modo activo original siguen estando disponibles, siempre y cuando sea posible tener acceso a ese equipo. Solo el rol de servidor de sitio cambia entre los modos activo y pasivo.
 
-> [!Note]  
-> Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para obtener más información, consulte [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).
+El equipo de operaciones e ingeniería de servicios principales de Microsoft usó esta característica para migrar su sitio de administración central a Microsoft Azure. Para obtener más información, consulte el [artículo de Microsoft IT Showcase](https://www.microsoft.com/itshowcase/Article/Content/1065/Migrating-System-Center-Configuration-Manager-onpremises-infrastructure-to-Microsoft-Azure).
 
 
 
 ## <a name="prerequisites"></a>Requisitos previos
+
+- La biblioteca de contenido de sitio debe estar en un recurso compartido de red remoto. Ambos servidores de sitio necesitan permisos de control total en el recurso compartido y su contenido. Para obtener más información, vea [Manage content library](/sccm/core/plan-design/hierarchy/the-content-library#bkmk_remote) (Administrar la biblioteca de contenido).<!--1357525-->  
+
+    - La cuenta de equipo del servidor de sitio necesita permisos de **control total** para la ruta de acceso de red a la que se va a mover la biblioteca de contenido. Este permiso se aplica al recurso compartido y al sistema de archivos. No se instala ningún componente en el sistema remoto.
+
+    - El servidor de sitio no puede tener el rol de punto de distribución. El punto de distribución también usa la biblioteca de contenido, y este rol no admite una biblioteca de contenido remota. Después de mover la biblioteca de contenido, no se puede agregar el rol de punto de distribución al servidor de sitio.  
 
 - El servidor de sitio en modo pasivo puede ser local o estar basado en la nube de Azure.  
     > [!Note]  
@@ -48,40 +60,73 @@ Para activar el servidor de sitio en modo pasivo, se *promueve* manualmente. Est
 
 - Ambos servidores de sitio deben estar unidos al mismo dominio de Active Directory.  
 
-- El sitio es un sitio primario independiente. 
+- En la versión 1806, el sitio debe ser un sitio primario independiente.  
 
-- Ambos servidores de sitio deben utilizar la misma base de datos de sitio, que debe ser remota para cada servidor de sitio.  
+    - A partir de la versión 1810, Configuration Manager admite servidores de sitio en modo pasivo en una jerarquía. Los sitios de administración central y los sitios primarios secundarios ahora pueden tener un servidor de sitio adicional en modo pasivo.<!-- 3607755 -->  
 
-     - Ambos servidores de sitio necesitan permisos de **sysadmin** en la instancia de SQL Server que hospeda la base de datos de sitio.
+- Los dos servidores de sitio deben usar la misma base de datos.  
 
-     - El servidor SQL Server que hospeda la base de datos de sitio puede utilizar una instancia predeterminada, una instancia con nombre, el [clúster de SQL Server](/sccm/core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database) o un [grupo de disponibilidad de SQL Server AlwaysOn](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).  
+    - En la versión 1806, la base de datos debe ser remota con respecto al servidor de sitio. A partir de la versión 1810, el proceso de instalación de Configuration Manager ya no impide la instalación del rol de servidor de sitio en un equipo con el rol de Windows para clústeres de conmutación por error. SQL Always On requiere este rol, por lo que anteriormente no se podía colocar la base de datos del sitio en el servidor de sitio. Con este cambio, puede crear un sitio de alta disponibilidad con menos servidores usando SQL Always On y un servidor de sitio en modo pasivo.<!-- SCCMDocs issue 1074 -->  
 
-     - El servidor de sitio en modo pasivo está configurado para utilizar la misma base de datos de sitio que el servidor de sitio en modo activo. El servidor de sitio en modo pasivo solo lee en la base de datos. No escribe en la base de datos hasta que se promueva al modo activo.  
+    - El servidor SQL Server que hospeda la base de datos de sitio puede utilizar una instancia predeterminada, una instancia con nombre, el [clúster de SQL Server](/sccm/core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database) o un [grupo de disponibilidad de SQL Server AlwaysOn](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).  
 
-- La biblioteca de contenido de sitio debe estar en un recurso compartido de red remoto. Ambos servidores de sitio necesitan permisos de control total en el recurso compartido y su contenido. Para más información, vea [Manage content library](/sccm/core/plan-design/hierarchy/the-content-library#manage-content-library) (Administrar la biblioteca de contenido).<!--1357525-->  
+    - Ambos servidores de sitio necesitan los roles de seguridad **sysadmin** y **securityadmin** en la instancia de SQL Server que hospeda la base de datos de sitio. El servidor de sitio original ya debería tener estos roles, así que agréguelos al nuevo servidor de sitio. Por ejemplo, el siguiente script SQL agrega estos roles al nuevo servidor de sitio **VM2** en el dominio Contoso:  
 
-    - El servidor de sitio no puede tener el rol de punto de distribución. El punto de distribución también usa la biblioteca de contenido, y este rol no admite una biblioteca de contenido remota. Después de mover la biblioteca de contenido, no se puede agregar el rol de punto de distribución al servidor de sitio.  
+        ```SQL
+        USE [master]
+        GO
+        CREATE LOGIN [contoso\vm2$] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
+        GO
+        ALTER SERVER ROLE [sysadmin] ADD MEMBER [contoso\vm2$]
+        GO
+        ALTER SERVER ROLE [securityadmin] ADD MEMBER [contoso\vm2$]
+        GO        
+        ```
+    - Los dos servidores de sitio necesitan acceso a la base de datos en la instancia de SQL Server. El servidor de sitio original ya debería tener este acceso, así que agréguelo al nuevo servidor de sitio. Por ejemplo, el siguiente script SQL agrega un inicio de sesión a la base de datos **CM_ABC** para el nuevo servidor de sitio **VM2** en el dominio Contoso:  
+
+        ```SQL
+        USE [CM_ABC]
+        GO
+        CREATE USER [contoso\vm2$] FOR LOGIN [contoso\vm2$] WITH DEFAULT_SCHEMA=[dbo]
+        GO
+        ```
+
+    - El servidor de sitio en modo pasivo está configurado para utilizar la misma base de datos de sitio que el servidor de sitio en modo activo. El servidor de sitio en modo pasivo solo lee en la base de datos. No escribe en la base de datos hasta que se promueva al modo activo.  
 
 - El servidor de sitio en modo pasivo:  
 
-     - Debe cumplir los [requisitos previos para instalar un sitio primario](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#primary-sites-and-the-central-administration-site).  
+    - Debe cumplir los requisitos previos para instalar un sitio primario. Por ejemplo, .NET Framework, Compresión diferencial remota y Windows ADK. Para obtener más información, consulte [Sitio y requisitos previos de sistema de sitio para Configuration Manager](/sccm/core/plan-design/configs/site-and-site-system-prerequisites).<!-- SCCMDocs issue 765 -->  
 
-     - Su cuenta de equipo debe estar en el grupo de administradores locales del servidor de sitio en modo activo.<!--516036-->
+    - Su cuenta de equipo debe estar en el grupo de administradores locales del servidor de sitio en modo activo.<!--516036-->
 
-     - Se instala con archivos de origen que coinciden con la versión del servidor de sitio en modo activo.  
+    - Debe realizar la instalación con archivos de origen que coinciden con la versión del servidor de sitio en modo activo.  
 
-     - No puede tener un rol de sistema de sitio de ningún sitio antes de instalar el rol de servidor de sitio en modo pasivo.  
+    - No puede tener un rol de sistema de sitio de ningún sitio antes de instalar el servidor de sitio en el rol de modo pasivo.  
 
 - Ambos servidores de sitio pueden ejecutar distintas versiones del sistema operativo o del Service Pack, siempre que ambos sean [compatibles con Configuration Manager](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers).  
+
+- No hospede el rol de punto de conexión de servicio en cualquier servidor de sitio configurado para alta disponibilidad. Si está actualmente en el servidor de sitio original, quítelo e instálelo en otro servidor de sistema de sitio. Para obtener más información, consulte [About the service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point) (Sobre el punto de conexión del servicio).  
+
+- Permisos de la [cuenta de instalación del sistema de sitio](/sccm/core/plan-design/hierarchy/accounts#site-system-installation-account)  
+
+    - De forma predeterminada, muchos clientes usan la cuenta de equipo del servidor de sitio para instalar nuevos sistemas de sitio. El requisito es agregar la cuenta de equipo del servidor de sitio local al grupo **Administradores** en el sistema de sitio remoto. Si su entorno usa esta configuración, asegúrese de agregar la cuenta de equipo del nuevo servidor de sitio a este grupo local en todos los sistemas de sitio remoto. Por ejemplo, todos los puntos de distribución remotos.  
+
+    - La configuración más segura y recomendada es usar una cuenta de servicio para instalar el sistema de sitio. La configuración más segura consiste en usar una cuenta de servicio local. Si su entorno usa esta configuración, no es necesario ningún cambio.  
 
 
 
 ## <a name="limitations"></a>Limitaciones
+
 - En cada sitio primario se admite un solo servidor de sitio en modo pasivo.  
 
-- No se admite un servidor de sitio en modo pasivo en una jerarquía. Una jerarquía incluye un sitio de administración central y un sitio primario secundario. Solo puede crear un servidor de sitio en modo pasivo en un sitio primario independiente.<!--1358224-->
+- En la versión 1806, no se admite un servidor de sitio en modo pasivo en una jerarquía. Una jerarquía incluye un sitio de administración central y un sitio primario secundario. Solo puede crear un servidor de sitio en modo pasivo en un sitio primario independiente.<!--1358224-->  
+
+    - A partir de la versión 1810, Configuration Manager admite servidores de sitio en modo pasivo en una jerarquía. Los sitios de administración central y los sitios primarios secundarios ahora pueden tener un servidor de sitio adicional en modo pasivo.<!-- 3607755 -->  
 
 - No se admite un servidor de sitio en modo pasivo en un sitio secundario.<!--SCCMDocs issue 680-->  
+
+    > [!Note]  
+    > Todavía se admiten sitios secundarios en un sitio primario con servidores de sitio de alta disponibilidad.
 
 - La promoción del servidor de sitio en modo pasivo al modo activo es manual. No hay ninguna conmutación automática por error.  
 
@@ -92,7 +137,7 @@ Para activar el servidor de sitio en modo pasivo, se *promueve* manualmente. Est
 
 - En el caso de roles como el punto de notificación que utilizan una base de datos, hospede la base de datos en un servidor que sea remoto para los dos servidores de sitio.  
 
-- El proveedor de SMS no se instala en el servidor de sitio en modo pasivo. Conéctese a un proveedor del sitio para promover manualmente el servidor de sitio en modo pasivo al modo activo. Instale al menos una instancia adicional del proveedor en otro servidor. Para más información, vea [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider) (Planear el proveedor de SMS).  
+- Al agregar el servidor de sitio el rol de modo pasivo, el sitio también no instalará el rol de proveedor de SMS. Instale al menos una instancia adicional del proveedor en otro servidor para lograr la alta disponibilidad. Si el diseño incluye este rol en el servidor de sitio, instálelo en el nuevo servidor de sitio después de agregar el servidor de sitio en el rol de modo pasivo. Para más información, vea [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider) (Planear el proveedor de SMS).  
 
 - La consola de Configuration Manager no se instala automáticamente en el servidor de sitio en modo pasivo.  
 
@@ -154,10 +199,12 @@ Del mismo modo que con copia de seguridad y recuperación, planee y practique el
 
     - Compruebe el estado de contenido de los paquetes que se repliquen activamente entre sitios.  
 
-    - No inicie nuevos trabajos de distribución de contenido. 
+    - Compruebe el estado del sitio secundario y la replicación del sitio. 
+
+    - No inicie nuevos trabajos de distribución de contenido o de mantenimiento en servidores de sitio secundarios. 
 
         > [!Note]  
-        > Si durante la conmutación por error hay una replicación de archivos entre sitios en curso, el nuevo servidor de sitio no puede recibir el archivo replicado. Si esto ocurre, redistribuya el contenido de software cuando el nuevo servidor de sitio esté activo.<!--515436-->  
+        > Si durante la conmutación por error hay una replicación de archivos o bases de datos entre sitios en curso, el nuevo servidor de sitio no puede recibir el contenido replicado. Si esto ocurre, redistribuya el contenido de software cuando el nuevo servidor de sitio esté activo.<!--515436--> Para la replicación de bases de datos, debe reinicializar un sitio secundario después de la conmutación por error.<!-- SCCMDocs issue 808 -->
 
 
 ### <a name="process-to-promote-the-site-server-in-passive-mode-to-active-mode"></a>Proceso de promoción del servidor de sitio en modo pasivo al modo activo
@@ -187,7 +234,7 @@ Para más información sobre el proceso de promoción *planeada*, vea [Diagrama 
 
 Si el servidor de sitio en modo activo actual está sin conexión, el servidor de sitio en promoción intenta ponerse en contacto con él durante 30 minutos. Si el servidor sin conexión se recupera antes de ese tiempo, se notifica correctamente y el cambio se realiza sin problemas. En caso contrario, el servidor de sitio en promoción actualiza de manera forzada la configuración del sitio para que esté activo. Si el servidor sin conexión se recupera después de este tiempo, comprueba primero el estado actual de la base de datos del sitio. Luego continúa con las disminución de su nivel al servidor de sitio en modo pasivo.
 
-Durante este período de espera de 30 minutos, el sitio no tiene ningún servidor de sitio en modo activo. Los clientes todavía se comunican con los roles de cara al cliente, tales como puntos de administración, puntos de actualización de software y puntos de distribución. Los usuarios pueden instalar software que ya se ha implementado. No es posible ninguna administración de sitios en este período de tiempo. Para más información, vea [Impactos de errores de sitio](/sccm/core/servers/manage/site-failure-impacts).  
+Durante este período de espera de 30 minutos, el sitio no tiene ningún servidor de sitio en modo activo. Los clientes todavía se comunican con los roles de cara al cliente, tales como puntos de administración, puntos de actualización de software y puntos de distribución. Los usuarios pueden instalar software que ya se ha implementado. No es posible ninguna administración de sitios en este período de tiempo. Para más información, vea [Impactos de errores de sitio](/sccm/core/servers/manage/site-failure-impacts).  
 
 Si el servidor sin conexión está dañado, de tal forma que no puede recuperarse, elimine este servidor de sitio de la consola. Cree luego un nuevo servidor de sitio en modo pasivo para restaurar un servicio de alta disponibilidad. 
 

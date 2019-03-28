@@ -2,7 +2,7 @@
 title: Notificación de cliente
 titleSuffix: Configuration Manager
 description: Administra clientes al tomar medidas inmediatas desde la consola central de Configuration Manager.
-ms.date: 03/06/2019
+ms.date: 03/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a643924cbaef928f9db4011f634ae96171ab7914
-ms.sourcegitcommit: 544f335cfd1bfd0a1d4973439780e9f5e9ee8bed
+ms.openlocfilehash: 39135a1fa548c83e0ba9c7d2a98cf1e925217280
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562098"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58197034"
 ---
 # <a name="client-notification-in-configuration-manager"></a>Notificación de cliente de Configuration Manager
 
@@ -79,7 +79,8 @@ Las siguientes acciones están en el menú **Notificación de cliente**, en la c
 En la versión 1806 o anterior, la opción **Notificación de cliente** solo está disponible en el nodo Colección de dispositivos o cuando veía la pertenencia de una colección de dispositivos. A partir de la versión 1810, puede iniciar una **Notificación de cliente** directamente desde el nodo **Dispositivos**. Ya no es requisito estar dentro de la vista de la pertenencia a una colección. <!--SCCMDocs-pr issue 2972-->
 
 #### <a name="permissions"></a>Permisos
-<!--SCCMDocs-pr issue #2972--> A partir de la versión 1810, las acciones de notificación de cliente requieren el permiso **Notificar al recurso** en el objeto Colección. Este permiso se aplica a todas las acciones del menú **Notificación de cliente**. 
+<!--SCCMDocs-pr issue #2972-->
+A partir de la versión 1810, las acciones de notificación de cliente requieren el permiso **Notificar al recurso** en el objeto Colección. Este permiso se aplica a todas las acciones del menú **Notificación de cliente**. 
 
 Los siguientes roles integrados tienen este permiso de forma predeterminada:
 - Administrador total  
@@ -135,7 +136,7 @@ Desencadena clientes de Windows 10 para comprobar y enviar su estado de disposit
 
 ### <a name="check-conditional-access-compliance"></a>Comprobar cumplimiento de acceso condicional
 
-Desencadena clientes para comprobar su cumplimiento con el acceso condicional. Para obtener más información, consulte [Administración del acceso a servicios de O365](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm).  
+Desencadena clientes para comprobar su cumplimiento con el acceso condicional. Para obtener más información, consulte [Administrar el acceso a servicios de Office 365 para equipos administrados por System Center Configuration Manager](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm).  
 
 
 ### <a name="wake-up"></a>Reactivar
