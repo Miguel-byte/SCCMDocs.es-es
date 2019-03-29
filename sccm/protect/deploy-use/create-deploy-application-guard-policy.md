@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6446fed2d48fc6428bdc3fbc7a24f728c206dc7
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: fa50719107838ed2c5c277a45ead4a7d9be6192a
+ms.sourcegitcommit: dff462bd9830e5e66f519f3c948d5150c18e94ad
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56132428"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417039"
 ---
 # <a name="create-and-deploy-windows-defender-application-guard-policy"></a>Creación e implementación de directivas de Protección de aplicaciones de Windows Defender 
-*Se aplica a: System Center Configuration Manager (rama actual)*
-<!-- 1351960 --> puede crear e implementar [Windows Defender Application Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview) directivas utilizando el punto de conexión de Configuration Manager protección. Estas directivas ayudan a proteger a los usuarios al abrir los sitios web que no sean de confianza en un contenedor aislado seguro al que no puedan tener acceso otras partes del sistema operativo.
+*Se aplica a: System Center Configuration Manager (Rama actual)*
+<!-- 1351960 --> Puede crear e implementar directivas de [Protección de aplicaciones de Windows Defender](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview) utilizando Configuration Manager Endpoint Protection. Estas directivas ayudan a proteger a los usuarios al abrir los sitios web que no sean de confianza en un contenedor aislado seguro al que no puedan tener acceso otras partes del sistema operativo.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
