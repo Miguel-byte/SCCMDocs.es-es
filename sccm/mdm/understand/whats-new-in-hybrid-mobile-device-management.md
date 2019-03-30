@@ -2,7 +2,7 @@
 title: Novedades de la MDM híbrida
 titleSuffix: Configuration Manager
 description: Obtenga información sobre las nuevas características de administración de dispositivos móviles disponibles para implementaciones híbridas con Configuration Manager e Intune.
-ms.date: 02/26/2019
+ms.date: 03/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6e883b6ea5cea6d6b27863afc84eef774b4d552
-ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
+ms.openlocfilehash: b26ad559d9417fcc81a2023c1bf1704ae44b7d0c
+ms.sourcegitcommit: 60aff44c76e6432dc544c8b26acba432ac799cfc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58197153"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58639603"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Novedades de la administración híbrida de dispositivos móviles con Configuration Manager y Microsoft Intune
 
@@ -45,6 +45,32 @@ En cada sección de este artículo se enumeran las características híbridas or
 |**Novedades de Microsoft Intune** | En general, todas las características que se enumeran en esta categoría deberían funcionar con todas las versiones de Configuration Manager, incluidas las versiones de System Center 2012 R2 Configuration Manager, ya que estas características solo necesitan el servicio de Intune y ninguna función adicional en Configuration Manager.|
 |**Novedades de Configuration Manager Technical Preview**| Todas las funciones que se enumeran en esta categoría funcionan únicamente con la rama preliminar técnica especificada. Para probar estas características, debe instalar la versión preliminar técnica especificada en la descripción de la característica. Para obtener más información, consulte [Technical Preview para Configuration Manager](/sccm/core/get-started/technical-preview).|
 |**Novedades de Configuration Manager (rama actual)**| Todas las características que se enumeran en esta categoría funcionan únicamente con la versión especificada de Configuration Manager (rama actual). Si usa una versión anterior de Configuration Manager para su implementación híbrida, actualice a la versión de Configuration Manager (rama actual) que se especifica en la descripción de la característica. Para obtener más información, consulte [Actualizar a System Center Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager).|
+
+
+
+## <a name="march-2019"></a>Marzo de 2019
+
+### <a name="new-in-microsoft-intune"></a>Novedades de Microsoft Intune
+
+#### <a name="install-available-apps-using-the-company-portal-app-after-windows-bulk-enrollment"></a>Instalar aplicaciones disponibles para el uso de la aplicación de Portal de empresa después de inscripción masiva de Windows 
+<!-- 2751523 -->
+Dispositivos Windows inscritos en Intune mediante [inscripción masiva de Windows](https://docs.microsoft.com/intune/windows-bulk-enroll) (paquetes de aprovisionamiento) podrán usar la aplicación de Portal de empresa para instalar aplicaciones disponibles. Para obtener más información acerca de la aplicación de Portal de empresa, consulte [agregar manualmente el Portal de empresa de Windows 10](https://docs.microsoft.com/intune/store-apps-company-portal-app) y [cómo configurar la aplicación de Portal de empresa de Microsoft Intune](https://docs.microsoft.com/intune/company-portal-app).
+
+> [!Note]  
+> Esta característica todavía no se implementa por completo a todos los clientes. Si no puede usar el Portal de empresa en dispositivos inscritos de forma masiva, tendrá que esperar hasta que este cambio implementa a su cuenta.
+
+#### <a name="app-icons-are-displayed-with-an-automatically-generated-background"></a>Se muestran iconos de aplicación con un fondo generado automáticamente 
+<!-- 1429026 -->
+La aplicación de Portal de empresa de Windows ahora muestra los iconos de aplicación con un fondo generado automáticamente. Este fondo se basa en el color dominante del icono, si se detecta. Cuando sea aplicable, el fondo reemplaza el borde gris que antes era visible en los iconos de aplicación. Verá este cambio en las versiones posteriores a 10.3.3451.0 del Portal de empresa.
+
+#### <a name="changes-to-company-portal-enrollment-for-ios-12-devices"></a>Cambios realizados en la inscripción de Portal de empresa para dispositivos iOS 12
+<!-- 3448635 -->  
+Portal de empresa para iOS actualiza las pantallas de inscripción de la aplicación y los pasos para alinearse con los cambios de inscripción de MDM que publicó en Apple iOS 12.2. El flujo de trabajo actualizado ahora le pide que:
+- Permitir Safari abrir el sitio Web de Portal de empresa (a través de Safari) y descargar el perfil de administración antes de volver a la aplicación de Portal de empresa. 
+- Abra la aplicación de configuración para instalar el perfil de administración en su dispositivo.
+- Vuelva a la aplicación de Portal de empresa para realizar la inscripción.  
+
+Para obtener más información acerca de cómo puede prepararse para estos cambios, consulte el [post de la comunidad tecnológica de Microsoft](https://aka.ms/CP_changes_iOS12). Para admitir nuevas inscripciones de iOS en el Portal de empresa, consulte [inscribir dispositivos de iOS en Intune](https://docs.microsoft.com/intune/ios-enroll).
 
 
 
