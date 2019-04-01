@@ -2,7 +2,7 @@
 title: Creación de aplicaciones de servidor Linux y Unix
 titleSuffix: Configuration Manager
 description: Consulte las consideraciones que debe tener en cuenta al crear e implementar aplicaciones para dispositivos Linux y UNIX.
-ms.date: 04/13/2017
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -11,25 +11,30 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 125a5fda74834c51e98f3028325bcc227fd106eb
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 35765aa804bf0e6d303caf2c395d3d44d5027951
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56126191"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58524088"
 ---
-# <a name="create-linux-and-unix-server-applications-with-system-center-configuration-manager"></a>Crear aplicaciones de servidor Linux y UNIX con System Center Configuration Manager
+# <a name="create-linux-and-unix-server-applications-with-configuration-manager"></a>Creación de aplicaciones de servidor Linux y UNIX con Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
+
+> [!Important]  
+> A partir de la versión 1902, Configuration Manager no es compatible con los clientes de Linux o UNIX. 
+> 
+> Considere la posibilidad de administración de Microsoft Azure para administrar servidores Linux. Las soluciones de Azure tienen una amplia compatibilidad con Linux que, en la mayoría de los casos, supera la funcionalidad de Configuration Manager, incluida la administración de revisiones de un extremo a otro para Linux.
 
 Tenga en cuenta lo siguiente cuando cree e implemente aplicaciones para equipos que ejecutan Linux y UNIX.  
 
 ## <a name="general-considerations"></a>Consideraciones generales  
  El cliente de Configuration Manager para Linux y UNIX admite **implementaciones de software que usan paquetes y programas**. No se puede implementar aplicaciones de Configuration Manager en equipos que ejecutan Linux y UNIX.  
 
- Las capacidades de implementación de software de UNIX y Linux incluyen:  
+ Las funcionalidades de implementación de software de UNIX y Linux incluyen:  
 
--   Instalación del software para servidores de Linux y UNIX, incluido lo siguiente:  
+-   Instalación del software para servidores de Linux y UNIX, incluidas las siguientes funcionalidades:  
 
     -   Nueva implementación de software  
 
@@ -68,7 +73,7 @@ Las principales diferencias entre implementar paquetes y programas en equipos Li
  Utilice la información que se brinda en las secciones siguientes para configurar los paquetes y programas, así como las implementaciones.  
 
 ### <a name="packages-and-programs"></a>Paquetes y programas  
- Para crear un paquete y un programa para un servidor Linux o UNIX, use el **Asistente para crear paquetes y programas** de la consola de Configuration Manager. El cliente para Linux y UNIX es compatible con la mayoría de las configuraciones de paquete y programa. Sin embargo, hay varias opciones de configuración que no se admiten. Al crear o configurar un paquete y un programa, tenga en cuenta lo siguiente:  
+ Para crear un paquete y un programa para un servidor Linux o UNIX, use el **Asistente para crear paquetes y programas** de la consola de Configuration Manager. El cliente para Linux y UNIX es compatible con la mayoría de las configuraciones de paquete y programa. Sin embargo, hay varias opciones de configuración que no se admiten. Al crear o configurar un paquete y un programa, tenga en cuenta los siguientes puntos:  
 
 -   Incluya los tipos de archivo que son compatibles con los equipos de destino.  
 
@@ -80,28 +85,28 @@ La tabla siguiente enumera las propiedades de los paquetes y programas que no so
 
 |Propiedad de paquete y programa|Comportamiento|Más información|  
 |----------------------------------|--------------|----------------------|  
-|Configuración de recurso compartido de paquete:<br /><br /> - Todas las opciones|Se genera un error y se produce un error en la instalación de software|El cliente no admite esta configuración. En cambio, el cliente debe descargar el software mediante HTTP o HTTPS y, a continuación, ejecutar la línea de comandos desde su caché local.|  
-|Configuración de la actualización de paquete:<br /><br /> - Desconectar usuarios de los puntos de distribución|Se omite la configuración|El cliente no admite esta configuración.|  
-|Configuración de implementación de sistema operativo:<br /><br /> - Todas las opciones|Se omite la configuración|El cliente no admite esta configuración.|  
+|Configuración de recurso compartido de paquete:<br /><br /> - Todas las opciones|Se genera un error y se produce un error en la instalación de software|El cliente no es compatible con esta configuración. En cambio, el cliente debe descargar el software mediante HTTP o HTTPS y, a continuación, ejecutar la línea de comandos desde su caché local.|  
+|Configuración de la actualización de paquete:<br /><br /> - Desconectar usuarios de los puntos de distribución|Se omite la configuración|El cliente no es compatible con esta configuración.|  
+|Configuración de implementación de sistema operativo:<br /><br /> - Todas las opciones|Se omite la configuración|El cliente no es compatible con esta configuración.|  
 |Generación de informes:<br /><br /> - Usar las propiedades del paquete para la coincidencia de MIF de estado<br /><br /> - Usar estos campos para la coincidencia de MIF de estado|Se omite la configuración|El cliente no admite el uso de archivos MIF de estado.|  
 |**Ejecutar**:<br /><br /> - Todas las opciones|Se omite la configuración|El cliente siempre ejecuta los paquetes sin la interfaz de usuario.<br /><br /> El cliente omite todas las opciones de configuración relacionadas con la ejecución.|  
 |Tras ejecutar:<br /><br />Configuration Manager reinicia el equipo<br /><br /> - El programa controla el reinicio<br /><br /> - Configuration Manager cierra la sesión del usuario|Se genera un error y se produce un error en la instalación de software|No se admiten las opciones de configuración específicas del usuario ni las relacionadas con el reinicio del sistema.<br /><br /> Cuando se está usando cualquier opción de configuración diferente de **Ninguna acción requerida** , el cliente genera un error y continúa con la instalación de software sin realizar ninguna acción.|  
 |El programa se puede ejecutar:<br /><br /> - Solo cuando un usuario haya iniciado sesión|Se genera un error y se produce un error en la instalación de software|No se admiten las opciones de configuración específicas del usuario.<br /><br /> Cuando se configura esta opción, el cliente genera un error y se produce un error de la instalación de software.<br /><br /> Se omiten otras opciones y se continúa la instalación de software.|  
 |Modo de ejecución:<br /><br /> - Ejecutar con derechos de usuario|Se omite la configuración|No se admiten las opciones de configuración específicas del usuario.<br /><br /> Sin embargo, el cliente admite la configuración que especifica la ejecución con derechos administrativos.<br /><br /> Cuando se especifica **Ejecutar con derechos administrativos**, el cliente de Configuration Manager emplea sus credenciales raíz.<br /><br /> Esta configuración no genera un error ni una entrada de registro. En cambio, la instalación de software produce un error cuando el cliente genera un error para la configuración de requisitos previos para **El programa se puede ejecutar** = **Solo cuando un usuario haya iniciado sesión**.|  
 |Permitir a los usuarios ver la instalación del programa e interactuar con la misma|Se omite la configuración|No se admiten las opciones de configuración específicas del usuario.<br /><br /> Se omite esta configuración y se continúa la instalación de software.|  
-|Modo de unidad:<br /><br /> - Todas las opciones|Se omite la configuración|Esta configuración no es compatible porque el contenido siempre se descarga al cliente y se ejecuta de forma local.|  
+|Modo de unidad:<br /><br /> - Todas las opciones|Se omite la configuración|Esta configuración no se admite porque el contenido siempre se descarga al cliente y se ejecuta de forma local.|  
 |Ejecutar otro programa primero|Se genera un error y se produce un error en la instalación de software|No se admite la instalación de programa recurrente.<br /><br /> Cuando un programa está configurado para ejecutar otro programa en primer lugar, se produce un error en la instalación de software, y no se inicia la instalación del otro programa.|  
 |Cuando este programa se asigne a un equipo:<br /><br /> - Ejecutar una vez para cada usuario que inicie sesión|Se omite la configuración|No se admiten las opciones de configuración específicas del usuario.<br /><br /> Sin embargo, el cliente es compatible con la configuración que especifica la ejecución una vez para el equipo.<br /><br /> Esta configuración no genera un error ni una entrada de registro porque ya se crearon un error y una entrada de registro para la configuración de requisitos previos relacionados con **El programa se puede ejecutar** = **Solo cuando un usuario haya iniciado sesión**.|  
 |Suprimir notificaciones de programa|Se omite la configuración|El cliente no implementa una interfaz de usuario.<br /><br /> Cuando se selecciona esta configuración, se omite y continúa la instalación de software.|  
-|Deshabilitar este programa en equipos en los que esté implementado|Se omite la configuración|Esta configuración no es compatible y no afecta a la instalación de software.|  
-|Permitir que este programa se instale desde la secuencia de tareas de instalación de paquete sin implementarse||El cliente no admite secuencias de tareas.<br /><br /> Esta configuración no es compatible y no afecta a la instalación de software.|  
+|Deshabilitar este programa en equipos en los que esté implementado|Se omite la configuración|Esta configuración no se admite y no afecta a la instalación de software.|  
+|Permitir que este programa se instale desde la secuencia de tareas de instalación de paquete sin implementarse||El cliente no admite secuencias de tareas.<br /><br /> Esta configuración no se admite y no afecta a la instalación de software.|  
 |Windows Installer:<br /><br /> - Todas las opciones|Se omite la configuración|El cliente no admite opciones de configuración ni archivos de Windows Installer.|  
-|Modo de mantenimiento de Operations Manager:<br /><br /> - Todas las opciones|Se omite la configuración|El cliente no admite esta configuración.|  
+|Modo de mantenimiento de Operations Manager:<br /><br /> - Todas las opciones|Se omite la configuración|El cliente no es compatible con esta configuración.|  
 
 ### <a name="deploy-software-to-a-linux-or-unix-server"></a>Implementar software en un servidor de Linux o UNIX
- Para implementar software en un servidor Linux o UNIX mediante un paquete y un programa, puede usar el **Asistente para implementar software** de la consola de Configuration Manager. El cliente admite la mayoría de las opciones de configuración de implementación para Linux y UNIX. Sin embargo, hay varias opciones de configuración que no se admiten. Al implementar software, considere lo siguiente:  
+ Para implementar software en un servidor Linux o UNIX mediante un paquete y un programa, puede usar el **Asistente para implementar software** de la consola de Configuration Manager. El cliente admite la mayoría de las opciones de configuración de implementación para Linux y UNIX. Sin embargo, hay varias opciones de configuración que no se admiten. Al implementar software, considere los puntos siguientes:  
 
-- Debe aprovisionar el paquete en, al menos, un punto de distribución que esté asociado a un grupo de límites configurado para la ubicación de contenido.  
+- Aprovisione el paquete en, al menos, un punto de distribución que esté asociado a un grupo de límites configurado para la ubicación de contenido.  
 
 - El cliente para Linux y UNIX que recibe esta implementación debe poder acceder a este punto de distribución desde su ubicación de red.  
 
@@ -109,12 +114,12 @@ La tabla siguiente enumera las propiedades de los paquetes y programas que no so
 
 - El cliente para Linux y UNIX no puede descargar paquetes desde carpetas compartidas. Descarga paquetes desde puntos de distribución con IIS habilitado que admiten HTTP o HTTPS.  
 
-  La tabla siguiente enumera las propiedades de las implementaciones que no son compatibles.  
+  En la tabla siguiente se enumeran las propiedades de las implementaciones que no son compatibles:  
 
 |Propiedad de la implementación|Comportamiento|Más información|  
 |-------------------------|--------------|----------------------|  
 |Configuración de implementación – propósito:<br /><br /> - Disponible<br /><br /> - Requerido|Se omite la configuración|No se admiten las opciones de configuración específicas del usuario.<br /><br /> No obstante, el cliente admite la opción de configuración **Requerido**, la cual hace cumplir la hora de instalación programada, pero no admite la instalación manual antes de esa hora programada.|  
-|Enviar paquetes de reactivación|Se omite la configuración|El cliente no admite esta configuración.|  
+|Enviar paquetes de reactivación|Se omite la configuración|El cliente no es compatible con esta configuración.|  
 |Programación de asignación:<br /><br /> - iniciar sesión<br /><br /> - cerrar sesión|Se genera un error y se produce un error en la instalación de software|No se admiten las opciones de configuración específicas del usuario.<br /><br /> Sin embargo, el cliente admite la configuración **Lo antes posible**.|  
 |Configuración de notificaciones:<br /><br /> - Permitir que los usuarios ejecuten el programa independientemente de las asignaciones|Se omite la configuración|El cliente no implementa una interfaz de usuario.|  
 |Cuando se alcance la hora de asignación programada, permitir que se realicen las siguientes actividades fuera de la ventana de mantenimiento:<br /><br /> - Reinicio del sistema (si es necesario para completar la instalación)|Se genera un error|El cliente no admite el reinicio del sistema.|  

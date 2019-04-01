@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 472cf012805700e1ec2de2f3c83a0ef63e10183b
-ms.sourcegitcommit: 5f17355f954b9d9e10325c0e9854a9d582dec777
+ms.openlocfilehash: e76dc5892ad34d72bfee3cd4aea0fa660e34855d
+ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329607"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477541"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Información sobre la configuración de cliente en Configuration Manager
 
@@ -460,6 +460,10 @@ Establezca esta opción en **Sí** para habilitar la administración de energía
 ### <a name="allow-users-to-exclude-their-device-from-power-management"></a>Permitir a los usuarios excluir su dispositivo de la administración de energía
 
 En la lista desplegable, seleccione **Sí** para permitir que los usuarios del Centro de software excluyan sus equipos de cualquier configuración de administración de energía establecida.  
+
+### <a name="allow-network-wake-up"></a>Permitir reactivación de la red
+
+Se ha agregado en la versión 1810. Al establecer el permiso en **Habilitar**, se configuran las opciones de alimentación del adaptador de red para permitir que reactive el dispositivo. Al establecer el permiso en **Deshabilitar**, las opciones de alimentación del adaptador de red no se configuran para permitir que reactive el dispositivo.
 
 ### <a name="enable-wake-up-proxy"></a>Habilitar proxy de reactivación
 
