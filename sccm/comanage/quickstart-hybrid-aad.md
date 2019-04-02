@@ -1,7 +1,7 @@
 ---
-title: Usar Azure AD para la administración conjunta
+title: Uso de Azure AD para la administración conjunta
 titleSuffix: Configuration Manager
-description: Con Azure AD que puede aprovechar mejora la productividad para los usuarios y seguridad para los recursos, en entornos de nube y locales
+description: Con Azure AD puede aprovechar la productividad mejorada para sus usuarios y la seguridad para sus recursos, tanto en la nube como en los entornos locales.
 ms.date: 01/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,101 +12,101 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 3b773c0bfe8cd0f8253a67ac96f5a0113b7206c0
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: MT
+ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
+ms.lasthandoff: 03/27/2019
 ms.locfileid: "56755596"
 ---
-# <a name="use-azure-ad-for-co-management"></a>Usar Azure AD para la administración conjunta
+# <a name="use-azure-ad-for-co-management"></a>Uso de Azure AD para la administración conjunta
 
-En la nube, la identidad es el nuevo plano de control. Azure Active Directory (Azure AD) permite vincular los usuarios, dispositivos y aplicaciones en entornos de nube y locales. Registrar sus dispositivos a Azure AD le permite mejorar la productividad de los usuarios y seguridad para los recursos. Tener dispositivos en Azure AD es la base para la administración conjunta y acceso condicional basado en el dispositivo. 
+En la nube, la identidad es el nuevo plano de control. Azure Active Directory (Azure AD) le permite vincular usuarios, dispositivos y aplicaciones en entornos de nube y locales. El registro de sus dispositivos en Azure AD le permite mejorar la productividad de sus usuarios y la seguridad de sus recursos. Tener dispositivos en Azure AD es la base para la administración conjunta y el acceso condicional basado en dispositivos. 
 
-Para obtener más información sobre el acceso condicional basado en dispositivos, consulte [How To: Requerir que los dispositivos administrados para el acceso a la aplicación en la nube con acceso condicional](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices)
+Para obtener más información sobre el acceso condicional basado en dispositivos, consulte [Instrucciones: Uso obligatorio de dispositivos administrados para el acceso a aplicaciones en la nube mediante el acceso condicional](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices)
 
-En el siguiente vídeo, director de programas senior Sandeep Deo y productos de marketing manager Adam Harbour discutir y demostración de Azure AD para la administración conjunta:
+En el siguiente vídeo, el Jefe de Programas Senior Sandeep Deo y el Jefe de Marketing de Productos Adam Harbour debaten sobre Azure AD y demuestran su funcionalidad para la administración conjunta:
 
 > [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/Embedding-Co-management-With-Azure-Active-Directory/player]
 
-Azure AD proporciona dos opciones para dispositivos de empresa satisfacer las necesidades de su organización:  
+Azure AD ofrece dos opciones para que los dispositivos propiedad de la empresa se adapten a las necesidades de su organización:  
 
-- **Dispositivo unido a AD Azure**: Unir sus dispositivos Windows 10 a Azure AD sin necesidad de conectarse a ellas en su Active Directory local  
+- **Dispositivo unido a Azure AD**: unir sus dispositivos de Windows 10 a Azure AD sin necesidad de unirlos a su Active Directory local  
 
-    - Es compatible con Windows 10
+    - Es compatible con Windows 10.
 
-    - Configurar sin necesidad de ninguna configuración adicional para los entornos locales  
+    - Configúrelo sin necesidad de detallar valores específicos para los entornos locales.  
 
-    - Al habilitar algunas opciones de configuración de Azure AD, se pueden permitir que los usuarios unir dispositivos a Azure AD a través de la experiencia de instalación de Windows (OOBE)  
+    - Al habilitar algunas opciones de configuración de Azure AD, puede permitir que los usuarios unan dispositivos a Azure AD a través de la experiencia de instalación de Windows (OOBE).  
 
-    - Para obtener más información consulte el tema [How to: Planee la implementación de Azure AD join](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)  
+    - Para obtener más información consulte el tema [How to: Planeación de la implementación de la unión a Azure AD](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)  
 
-- **Híbrida de dispositivos Unidos a AD Azure**: Unir los dispositivos Unidos a un dominio existentes a Azure AD  
+- **Dispositivo híbrido unido a Azure AD**: unir los dispositivos existentes unidos a dominio a Azure AD  
 
-    - Es compatible con Windows 10, Windows 8.1 y Windows 7
+    - Es compatible con Windows 10, Windows 8.1 y Windows 7.
 
-    - Configurar el uso de notificaciones de AD FS o Azure AD Connect  
+    - Configúrelo para el uso de notificaciones de AD FS o Azure AD Connect.  
 
-    - Para Windows 10 la combinación tiene lugar en el contexto del equipo, por lo que los usuarios no tienen que realizar pasos adicionales  
+    - En el caso de Windows 10, la unión tiene lugar en el contexto del equipo, por lo que los usuarios no tienen que realizar pasos adicionales.  
 
-    - Para obtener más información, vea [cómo planear su implementación híbrida de la unión de Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)  
+    - Para obtener más información, vea [Planeamiento de la implementación de la unión a Azure Active Directory híbrido](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan).  
 
-Ambas opciones ofrecen una funcionalidad similar para los usuarios. Es flexible, puede elegir cualquiera de ellos según sus necesidades. Por ejemplo, puede [acceder a los recursos locales](https://docs.microsoft.com/azure/active-directory/devices/azuread-join-sso) desde equipos unidos a AD de Azure, aunque no estén unidos a Active Directory. 
+Ambas opciones ofrecen una funcionalidad similar para los usuarios. Es flexible para que pueda elegir cualquiera de ellas en función de sus necesidades. Por ejemplo, puede [acceder a los recursos locales](https://docs.microsoft.com/azure/active-directory/devices/azuread-join-sso) desde equipos unidos a AD de Azure aunque no estén unidos a Active Directory. 
 
-Se pueden unir dispositivos a Azure AD en diversos entornos, sin importar su [método de autenticación](https://docs.microsoft.com/azure/security/azure-ad-choose-authn). Por ejemplo, la autenticación federada o autenticación en la nube. 
+Puede unir dispositivos a Azure AD en varios entornos, sin importar su [método de autenticación](https://docs.microsoft.com/azure/security/azure-ad-choose-authn). Por ejemplo, autenticación federada o autenticación en la nube. 
 
-Si ya tiene un Active Directory local, la configuración de cualquiera de las opciones es sencillo. 
+Si ya tiene una instancia local de Active Directory, configurar cualquiera de las opciones es sencillo. 
 
 
 
 ## <a name="benefits"></a>Ventajas
 
-Al unir dispositivos a Azure AD proporciona las siguientes ventajas a su organización:
+La unión de dispositivos a Azure AD proporciona las siguientes ventajas a su organización:
 
 #### <a name="single-sign-on-to-cloud-resources"></a>Inicio de sesión único a los recursos de nube
-En los dispositivos Unidos a Azure AD, obtendrá una experiencia integrada de acceso a los recursos en la nube o local. Una vez que inicie sesión en una máquina de Windows que está unida a Azure AD, obtendrá un inicio de sesión único para todas las aplicaciones sin las peticiones de inicio de sesión adicionales.  
+En los dispositivos unidos a Azure AD, obtendrá una experiencia integrada de acceso a cualquier recurso local o en la nube. Una vez que inicie sesión en una máquina de Windows que esté unida a Azure AD, obtendrá un inicio de sesión único para todas las aplicaciones sin que haya más peticiones de inicio de sesión.  
 
 #### <a name="windows-hello-for-business"></a>Windows Hello para empresas
-Windows Hello para empresas ofrece una autenticación sin contraseña segura a Windows 10. Mediante la combinación de los dispositivos a Azure AD, puede habilitar Windows Hello para empresas en la base para los recursos en la nube y locales de usuarios. Windows Hello para empresas elimina el problema de tener que recordar contraseñas complejas o exponer por accidente en ellos. Su proceso de inicio de sesión es sencilla y segura. 
+Windows Hello para empresas ofrece una autenticación sin contraseña segura a Windows 10. Al unir sus dispositivos a Azure AD, puede habilitar Windows Hello para empresas en su base de usuarios para recursos locales y en la nube. Windows Hello para empresas elimina el problema de tener que recordar contraseñas complejas o de exponerlas involuntariamente. Su proceso de inicio de sesión es sencillo y seguro. 
 
 Para obtener más información, vea [Windows Hello para empresas](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification).  
 
 #### <a name="device-based-conditional-access"></a>Acceso condicional basado en dispositivos
-Habilitar el acceso condicional basado en el estado del dispositivo para proteger mejor los datos de su organización. Acceso condicional basado en dispositivo requiere un dispositivo administrado. Este dispositivo debe ser un dispositivo compatible o un dispositivo unido a AD Azure híbrido. Para dispositivos Unidos a AD Azure, necesita Intune para marcar el dispositivo como compatible. Pero Azure híbrido dispositivos Unidos a AD, el estado del dispositivo se usa para evaluar el acceso condicional. Administración conjunta le proporciona la ventaja adicional de la evaluación de cumplimiento a través de Intune de Azure híbrido dispositivos Unidos a AD. Esta característica garantiza que la configuración del dispositivo está intacta. 
+Habilite el acceso condicional basado en el estado del dispositivo para proteger mejor los datos de su organización. El acceso condicional basado en dispositivos requiere un dispositivo administrado. Este dispositivo debe ser un dispositivo compatible o un dispositivo híbrido unido a Azure AD. En el caso de los dispositivos unidos a Azure AD, necesita Intune para marcar el dispositivo como compatible. En el caso de los dispositivos híbridos unidos a Azure AD, por el contrario, se usa el propio estado del dispositivo para evaluar el acceso condicional. La administración conjunta le brinda la ventaja adicional de evaluar el cumplimiento a través de Intune para dispositivos híbridos unidos a Azure AD. Esta característica garantiza que la configuración del dispositivo está intacta. 
 
-Para obtener más información sobre el acceso condicional basado en dispositivos, consulte [How To: Requerir que los dispositivos administrados para el acceso a la aplicación en la nube con acceso condicional](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices).  
+Para obtener más información sobre el acceso condicional basado en dispositivos, consulte [Instrucciones: Uso obligatorio de dispositivos administrados para el acceso a aplicaciones en la nube mediante el acceso condicional](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices)  
 
-#### <a name="automatic-device-licensing"></a>Licencias de dispositivo automático
-Todos los dispositivos Windows 10 Unidos a Azure AD que se vaya a través de la comprobación de licencia. Estas comprobaciones le permiten les actualizar automáticamente Pro a Enterprise a través de la nube de Microsoft. Cuando se quita la suscripción correspondiente al usuario, el dispositivo degrada automáticamente su licencia. Esta característica proporciona un único panel de control para la administración de licencias de Windows, sin los complicados procesos o sistemas locales.
+#### <a name="automatic-device-licensing"></a>Concesión de licencias automática para dispositivos
+Todos los dispositivos de Windows 10 unidos a Azure AD se someten a la verificación de licencias. Estas comprobaciones le permiten actualizarlas automáticamente de Pro a Enterprise a través de la nube de Microsoft. Cuando quita la suscripción correspondiente al usuario, el dispositivo degrada automáticamente su licencia. Esta característica proporciona un único panel de control para la administración de licencias de Windows, sin complicados procesos o sistemas locales.
 
 #### <a name="self-service-functionality"></a>Funcionalidad de autoservicio
-Funcionalidad de autoservicio incluye el restablecimiento de contraseña de autoservicio y la clave de recuperación de BitLocker. Azure AD también proporciona opciones directas para restablecer la contraseña o tener acceso a las claves de recuperación de BitLocker. Puede usar Azure AD para restablecer su contraseña directamente desde la pantalla de bloqueo de Windows, en lugar de desde un explorador web. Estas características reducen la fricción para los usuarios y ayudar a reducir los costos del departamento de soporte técnico para su organización.  
+La funcionalidad de autoservicio incluye el restablecimiento de contraseñas de autoservicio y la clave de recuperación de BitLocker. Azure AD también le brinda opciones directas para restablecer su contraseña o acceder a las claves de recuperación de BitLocker. Puede usar Azure AD para restablecer su contraseña directamente desde la pantalla de bloqueo de Windows, en lugar de hacerlo desde un navegador web. Estas características reducen la fricción para los usuarios y ayudan a reducir los costos del servicio de asistencia para su organización.  
 
-Para obtener más información, consulte [inicio rápido: Restablecimiento de contraseña de autoservicio](https://docs.microsoft.com/azure/active-directory/authentication/quickstart-sspr).
+Para obtener más información, vea [Guía de inicio rápido: Restablecimiento de la contraseña de autoservicio](https://docs.microsoft.com/azure/active-directory/authentication/quickstart-sspr).
 
-#### <a name="enterprise-state-roaming"></a>De Enterprise state roaming
-Todos los dispositivos Unidos a Azure AD pueden sincronizar su configuración en la nube. Todos los dispositivos a la que un usuario inicia sesión en las sincronizaciones toda su configuración de una experiencia más productiva.  
+#### <a name="enterprise-state-roaming"></a>Enterprise State Roaming
+Todos los dispositivos unidos a Azure AD pueden sincronizar su configuración en la nube. Cualquier dispositivo en el que un usuario inicie sesión sincroniza todas sus configuraciones para una experiencia más productiva.  
 
 
 
 ## <a name="value-proposition"></a>Propuesta de valor
 
-Unir los dispositivos a Azure AD a través de cualquiera de estos métodos acelera su transformación digital. Amplía la funcionalidad proporcionada por Microsoft 365. Tendrá una experiencia mejorada y tendrá mayor seguridad para los datos. 
+Unir los dispositivos a Azure AD a través de cualquiera de estos métodos acelera su transformación digital. Amplía la funcionalidad proporcionada por Microsoft 365. Tendrá una mejor experiencia y mayor seguridad para los datos. 
 
-Azure AD proporciona varias opciones para facilitar el trabajo de carga, por ejemplo:
+Azure AD proporciona varias opciones para facilitar la carga de trabajo, por ejemplo:
 
-- Administrar todas las identidades de dispositivo de su organización desde un único lugar  
+- Administrar todas las identidades de dispositivo de su organización desde un único lugar.  
 
-- Reduzca sus costos del departamento de soporte técnico habilitando el restablecimiento de contraseña de autoservicio. A continuación, los usuarios puede restablecer la contraseña de la pantalla de bloqueo de Windows 10 en el dispositivo en cualquier momento.  
+- Reducir los costos del departamento de soporte técnico al habilitar el restablecimiento de contraseña de autoservicio. De este modo, los usuarios pueden restablecer su contraseña desde la pantalla de bloqueo de Windows 10 en el dispositivo en cualquier momento.  
 
 
 
 ## <a name="configure"></a>Configurar
 
-Si ya tiene un entorno de Active Directory local y quiere unir sus dispositivos Unidos a Azure AD, configure hybrid Azure dispositivos Unidos a AD. Para obtener más información, [cómo planear su implementación híbrida de la unión de Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan). 
+Si ya tiene un entorno de Active Directory local y desea unir sus dispositivos unidos a un dominio a Azure AD, configure los dispositivos híbridos unidos a Azure AD. Para obtener más información, vea [Planeamiento de la implementación de la unión a Azure Active Directory híbrido](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan). 
 
-Configuration Manager tiene un configuración de cliente para [registrar automáticamente nuevos dispositivos de Windows 10 Unidos a un dominio con Azure AD](/sccm/core/clients/deploy/about-client-settings#automatically-register-new-windows-10-domain-joined-devices-with-azure-active-directory). Para obtener más información sobre cómo configurar la configuración de cliente, consulte [cómo configurar el cliente](/sccm/core/clients/deploy/configure-client-settings).
+Configuration Manager tiene una configuración de cliente para [registrar automáticamente nuevos dispositivos unidos a un dominio de Windows 10 con Azure AD](/sccm/core/clients/deploy/about-client-settings#automatically-register-new-windows-10-domain-joined-devices-with-azure-active-directory). Para obtener más información sobre cómo configurar estas opciones de cliente, vea [Cómo configurar el cliente](/sccm/core/clients/deploy/configure-client-settings).
 
-Si desea configurar Azure AD-join para sus dispositivos sin unirlos también a su dominio local, revise las consideraciones para Azure AD-join en su entorno. Una vez decidido ir con unión a Azure AD, tiene muchas opciones para implementar según las necesidades de su organización. Vea los siguientes artículos para más información:
-- [Cómo: Planee la implementación de Azure AD join](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)  
-- [Descripción de las opciones de aprovisionamiento](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan#understand-your-provisioning-options)  
+Si desea configurar la unión a Azure AD para sus dispositivos sin unirlos también a su dominio local, revise las consideraciones para la unión a Azure AD en su entorno. Una vez que haya decidido unirse a Azure AD, tiene muchas opciones para implementarlo según las necesidades de su organización. Vea los siguientes artículos para más información:
+- [Procedimiento: Planeación de la implementación de la unión a Azure AD](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)  
+- [Explicación de las opciones de aprovisionamiento](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan#understand-your-provisioning-options)  
 

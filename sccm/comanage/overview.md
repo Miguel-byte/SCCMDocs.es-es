@@ -12,23 +12,24 @@ ms.technology: configmgr-client
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c88bf98e035499c271de8acf9d8fa222e5058447
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: MT
+ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
+ms.lasthandoff: 03/27/2019
 ms.locfileid: "56755576"
 ---
 # <a name="what-is-co-management"></a>¿Qué es administración conjunta?
 
-<!-- 1350871 --> Administración conjunta es una de las principales formas para asociar la implementación existente de Configuration Manager a la nube de Microsoft 365. Le ayuda a desbloquear capacidades adicionales basadas en la nube, como el acceso condicional. 
+<!-- 1350871 -->
+La administración conjunta es una de las principales formas de asociar la implementación existente de Configuration Manager a la nube de Microsoft 365. Permite desbloquear funcionalidades adicionales de la nube, como el acceso condicional. 
 
-Administración conjunta le permite administrar simultáneamente dispositivos Windows 10 mediante Configuration Manager y Microsoft Intune. Le permite adjuntar en la nube su inversión existente en Configuration Manager mediante la adición de nuevas funcionalidades. Mediante el uso de administración conjunta, tiene la flexibilidad de usar la solución de tecnología que funciona mejor para su organización. 
+La administración conjunta permite administrar simultáneamente dispositivos Windows 10 mediante Configuration Manager y Microsoft Intune. Permite asociar a la nube su inversión existente en Configuration Manager mediante la incorporación de nuevas funcionalidades. Con la administración conjunta, tiene la flexibilidad para usar la solución tecnológica que mejor funciona para su organización. 
 
-Cuando un dispositivo Windows 10 tiene el cliente de Configuration Manager y se inscribe en Intune, obtenga las ventajas de ambos servicios. Controlar qué cargas de trabajo, si existe, que cambia la entidad de Configuration Manager a Intune. Configuration Manager sigue administrando todas las otras cargas de trabajo, incluidas las cargas de trabajo que no cambie a Intune y no es compatible con todas las demás características de Configuration Manager que la administración conjunta.
+Cuando un dispositivo Windows 10 tiene el cliente de Configuration Manager y está inscrito en Intune, el usuario recibe las ventajas de ambos servicios. El usuario controla para qué cargas de trabajo, si corresponde, cambia la entidad desde Configuration Manager a Intune. Configuration Manager sigue administrando todas las demás cargas de trabajo, incluidas las que no cambia a Intune, y todas las demás características de Configuration Manager que no admite la administración conjunta.
 
-También podemos definir un programa piloto de una carga de trabajo con una colección independiente de dispositivos. Proyectos piloto le permite probar la funcionalidad de Intune con un subconjunto de los dispositivos antes de cambiar un grupo más grande. 
+También podemos realizar un piloto en una carga de trabajo con una req de dispositivos independiente. El piloto permite probar la funcionalidad de Intune con un subconjunto de dispositivos antes de cambiar a un grupo más grande. 
 
-![Diagrama de información general de la administración conjunta](media/co-management-overview.png)
+![Diagrama de información general de administración conjunta](media/co-management-overview.png)
 
 
 
@@ -36,17 +37,17 @@ También podemos definir un programa piloto de una carga de trabajo con una cole
 
 Hay dos formas de conseguir la administración conjunta:  
 
-- **Los clientes de Configuration Manager existentes**: Tener dispositivos Windows 10 que ya son clientes de Configuration Manager. Configurar Azure AD híbrido e inscribirlos en Intune.  
+- **Clientes de Configuration Manager existentes**: tiene dispositivos Windows 10 que ya son clientes de Configuration Manager. Puede configurar Azure AD híbrido e inscribirlos en Intune.  
 
-- **Nuevos dispositivos basados en internet**: Tiene nuevos dispositivos Windows 10 que unirse a Azure AD e inscribirán automáticamente a Intune. Instalar el cliente de Configuration Manager para llegar a un estado de administración conjunta.  
+- **Nuevos dispositivos basados en Internet**: tiene dispositivos Windows 10 nuevos que se unen a Azure AD y se inscriben automáticamente en Intune. Puede instalar el cliente de Configuration Manager para alcanzar un estado de administración conjunta.  
 
-Para obtener más información sobre las rutas de acceso, consulte [rutas de acceso a la administración conjunta](/sccm/comanage/quickstart-paths).
+Para más información sobre las rutas de acceso, consulte [Rutas hacia la administración conjunta](/sccm/comanage/quickstart-paths).
 
 
 
 ## <a name="benefits"></a>Ventajas 
 
-Cuando se inscriben a los clientes de Configuration Manager existentes en la administración conjunta, obtendrá el siguiente valor inmediato:  
+Cuando inscribe los clientes de Configuration Manager en la administración conjunta, obtiene el valor inmediato siguiente:  
 
 - Acceso condicional con cumplimiento de dispositivos  
 
@@ -54,28 +55,28 @@ Cuando se inscriben a los clientes de Configuration Manager existentes en la adm
 
 - Visibilidad centralizada del estado del dispositivo  
 
-- Vincular usuarios, dispositivos y aplicaciones con Azure Active Directory (Azure AD)  
+- Vínculo de usuarios, dispositivos y aplicaciones con Azure Active Directory (Azure AD)  
 
-- Moderno de aprovisionamiento con Windows Autopilot  
+- Aprovisionamiento moderno con Windows Autopilot  
 
 - Acciones remotas
 
-Para obtener más información sobre este valor inmediato de la administración conjunta, vea la serie de guías de inicio rápido para [en la nube conectarse con la administración conjunta](/sccm/comanage/quickstarts).
+Para más información sobre este valor inmediato gracias a la administración conjunta, consulte la serie de inicios rápidos para la [conexión de la nube con administración conjunta](/sccm/comanage/quickstarts).
 
-Administración conjunta permite coordinar con Intune para varias cargas de trabajo. Para obtener más información, consulte el [cargas de trabajo](#workloads) sección. 
+La administración conjunta también permite coordinar varias cargas de trabajo con Intune. Para más información, consulte la sección [Cargas de trabajo](#workloads). 
 
 
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Administración conjunta tiene estos requisitos previos en las áreas siguientes:
+La administración conjunta tiene estos requisitos previos en las áreas siguientes:
 
-- [Las licencias](#licensing)  
+- [Licencias](#licensing)  
 - [Configuration Manager](#configuration-manager)  
-- [Azure Active Directory](#azure-ad) (Azure AD)  
+- [Azure Active Directory](#azure-ad) (Azure AD)  
 - [Microsoft Intune](#intune)  
 - [Windows 10](#windows-10)  
-- [Roles y permisos](#permissions-and-roles)  
+- [Permisos y roles](#permissions-and-roles)  
 
 ### <a name="licensing"></a>Licencias
 
@@ -83,19 +84,19 @@ Administración conjunta tiene estos requisitos previos en las áreas siguientes
 - Licencia de EMS o de Intune para todos los usuarios  
 
     > [!Note]  
-    > Un Enterprise Mobility + Security (EMS de) la suscripción incluye Azure Active Directory Premium y Microsoft Intune.
+    > Una suscripción a Enterprise Mobility + Security (EMS) incluye Azure Active Directory Premium y Microsoft Intune.
 
 > [!Tip]  
-> Asegúrese de que se asigne una licencia de Intune a la cuenta que usas para iniciar sesión en su inquilino. En caso contrario, inicie sesión se produce un error con el mensaje de error "El usuario no reconocido".  
+> Asegúrese de asignar una licencia de Intune a la cuenta que usa para iniciar sesión en el inquilino. De lo contrario, no se podrá iniciar sesión y aparecerá el mensaje de error "Usuario no reconocido".  
 
 
 ### <a name="configuration-manager"></a>Configuration Manager
 
-Administración conjunta requiere Configuration Manager versión 1710 o posterior.
+La administración conjunta requiere la versión 1710 o posterior de Configuration Manager.
 
-A partir de Configuration Manager versión 1806, puede conectar varias instancias de Configuration Manager a un único inquilino de Intune. <!--1357944-->  
+A partir de la versión 1806 de Configuration Manager, puede conectar varias instancias de Configuration Manager a un inquilino de Intune único. <!--1357944-->  
 
-Habilitar la administración conjunta propio no requiere que se incorpore su sitio con Azure AD. Para el [segundo escenario de ruta de acceso](#paths-to-co-management), los clientes basados en internet de Configuration Manager requieren la [CMG](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) (CMG). La instancia de CMG requiere que el sitio es [incorporada a Azure AD para la administración en la nube](/sccm/core/servers/deploy/configure/azure-services-wizard). 
+Habilitar la administración conjunta no requiere que incorpore su sitio con Azure AD. Para el [segundo escenario de ruta](#paths-to-co-management), los clientes de Configuration Manager basados en Internet requieren [Cloud Management Gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) (CMG). CMG requiere que el sitio esté [incorporado en Azure AD para la administración en la nube](/sccm/core/servers/deploy/configure/azure-services-wizard). 
 
 
 ### <a name="azure-ad"></a>Azure AD
@@ -111,7 +112,7 @@ Habilitar la administración conjunta propio no requiere que se incorpore su sit
 
 - [Configurar Intune](https://docs.microsoft.com/intune/setup-steps)  
 
-- [Habilitar la inscripción automática de Windows 10](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment)  
+- [Habilitar la inscripción automática de Windows 10](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment)  
 
 > [!Note]  
 > Si tiene un entorno de MDM híbrido (Intune integrado con Configuration Manager), no puede habilitar la administración conjunta. Sin embargo, puede iniciar la migración de los usuarios a Intune independiente y, después, habilitar sus dispositivos Windows 10 asociados para la administración conjunta. Si quiere saber más sobre la migración a Intune independiente, vea [Iniciar la migración de MDM híbrida a Intune independiente](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).  
@@ -121,32 +122,32 @@ Habilitar la administración conjunta propio no requiere que se incorpore su sit
 
 ### <a name="windows-10"></a>Windows 10
 
-Actualice los dispositivos Windows 10, versión 1709 o posterior. Para obtener más información, consulte [adopción de Windows como servicio](/sccm/core/understand/configuration-manager-and-windows-as-service#key-articles-about-adopting-windows-as-a-service).
+Actualice los dispositivos a Windows 10, versión 1709 o posterior. Para más información, consulte el artículo sobre la [adopción de Windows como servicio](/sccm/core/understand/configuration-manager-and-windows-as-service#key-articles-about-adopting-windows-as-a-service).
 
 > [!IMPORTANT]
-> Los dispositivos móviles de Windows 10 no admiten la administración conjunta.
+> Los dispositivos móviles con Windows 10 no admiten la administración conjunta.
 
 
-### <a name="permissions-and-roles"></a>Roles y permisos
+### <a name="permissions-and-roles"></a>Permisos y roles
 <!--SCCMDocs issue #667-->
 
 | Acción | Rol necesario |
 |----|----|
-| Configurar una puerta de enlace de administración en la nube en Configuration Manager | Azure **Administrador de suscripciones** |
-| Crear aplicaciones de Azure AD desde Configuration Manager | Azure AD **administrador Global** |
-| Importar aplicaciones de Azure en Configuration Manager | Administrador de configuración **Administrador total**<br>No hay roles de Azure adicionales necesarios |
-| Habilitar la administración conjunta en Configuration Manager | Un usuario de Azure AD<br>Administrador de configuración **Administrador total** con **todas** derechos de ámbito.<!--SCCMDoc issue 626--> | 
+| Supervisar la puerta de enlace de administración en la nube en Configuration Manager | **Administrador de suscripción** de Azure |
+| Crear aplicaciones de Azure AD desde Configuration Manager | **Administrador global** de Azure AD |
+| Importar aplicaciones de Azure en Configuration Manager | **Administrador total** de Configuration Manager<br>No se necesitan roles adicionales de Azure |
+| Habilitación de la administración conjunta en Configuration Manager | Un usuario de Azure AD<br>**Administrador total** de Configuration Manager con **todos** los derechos de ámbito.<!--SCCMDoc issue 626--> | 
 
 Para obtener más información sobre los roles de Azure, vea [Entender los distintos roles](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles).
 
-Para obtener más información acerca de los roles de administrador de configuración, consulte [aspectos básicos de la administración basada en roles](/sccm/core/understand/fundamentals-of-role-based-administration).
+Para más información sobre los roles de Configuration Manager, consulte [Conceptos básicos de la administración basada en roles](/sccm/core/understand/fundamentals-of-role-based-administration).
 
 
 ## <a name="workloads"></a>Cargas de trabajo 
 
-No tiene que cambiar las cargas de trabajo, o puede realizarlas por separado cuando esté listo. Configuration Manager sigue administrando todas las otras cargas de trabajo, incluidas las cargas de trabajo que no cambie a Intune y no es compatible con todas las demás características de Configuration Manager que la administración conjunta.
+No es necesario que cambie las cargas de trabajo o puede cambiarlas individualmente cuando esté preparado. Configuration Manager sigue administrando todas las demás cargas de trabajo, incluidas las que no cambia a Intune, y todas las demás características de Configuration Manager que no admite la administración conjunta.
 
-Administración conjunta es compatible con las cargas de trabajo siguientes:
+La administración conjunta admite estas cargas de trabajo:
 
 - Directivas de cumplimiento  
 
@@ -162,23 +163,23 @@ Administración conjunta es compatible con las cargas de trabajo siguientes:
 
 - Aplicaciones cliente  
 
-Para obtener más información, consulte [cargas de trabajo](/sccm/comanage/workloads).
+Para más información, consulte [Cargas de trabajo](/sccm/comanage/workloads).
 
 
 
 ## <a name="monitor-co-management"></a>Supervisión de la administración conjunta
 
-El panel de administración conjunta le ayudará a revisar las máquinas que se administran conjuntamente en su entorno. Los gráficos ayudan a identificar los dispositivos que podrían requerir atención.
+El panel de administración conjunta le ayudará a revisar las máquinas que se administran conjuntamente en el entorno. Los gráficos ayudan a identificar los dispositivos que podrían requerir atención.
 
 ![Captura de pantalla del panel de administración conjunta](media/co-management-dashboard.png)
 
-Para obtener más información, consulte [cómo supervisar la administración conjunta](/sccm/comanage/how-to-monitor).
+Para más información, consulte [cómo supervisar la administración conjunta](/sccm/comanage/how-to-monitor).
 
 
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- [Más información sobre el valor inmediato e Introducción a administración conjunta](/sccm/comanage/quickstarts)  
+- [Obtenga más información sobre el valor inmediato y empiece a trabajar con la administración conjunta](/sccm/comanage/quickstarts)  
 
-- [Tutorial: Habilitar la administración conjunta para los clientes existentes de Configuration Manager](/sccm/comanage/tutorial-co-manage-clients)  
+- [Tutorial: Habilitación de la administración conjunta para clientes existentes de Configuration Manager](/sccm/comanage/tutorial-co-manage-clients)  
 

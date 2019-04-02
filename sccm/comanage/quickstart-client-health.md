@@ -1,7 +1,7 @@
 ---
 title: Estado del cliente con la administración conjunta
 titleSuffix: Configuration Manager
-description: Mantener la visibilidad del estado de cliente de Configuration Manager desde el portal de Intune en Azure
+description: Mantenga la visibilidad del estado de cliente de Configuration Manager desde Intune en Azure Portal.
 ms.date: 01/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,17 +12,17 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d6838371a80530d5ab66abd9d8a976af41513e15
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: MT
+ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
+ms.lasthandoff: 03/27/2019
 ms.locfileid: "56755564"
 ---
 # <a name="client-health-with-co-management"></a>Estado del cliente con la administración conjunta
 
-El estado de la red está conectado directamente en el estado de los dispositivos se consideran. Intune puede comunicarse con un cliente en mal estado, incluso cuando no está en la red. Usar la administración conjunta para combinar esta característica con capacidad de Configuration Manager para informar el 98% de los clientes en buen estado conocidos. A continuación, puede detectar, evaluar y proporcionar visibilidad en todos los clientes en tiempo real. Intune también agrega la compatibilidad necesaria para las actualizaciones de cumplimiento a través de todos los clientes conectados.
+El estado de la red está vinculado directamente al estado de los dispositivos que se conectan y desconectan de ella. Intune puede comunicarse con un cliente en mal estado, incluso cuando no está en la red. Use la administración conjunta para combinar esta característica con la capacidad de Configuration Manager de informar del 98 % de los clientes en buen estado conocidos. Así, puede detectar, evaluar y proporcionar visibilidad en todos los clientes en tiempo real. Intune también agrega la compatibilidad necesaria para las actualizaciones de cumplimiento a través de todos los clientes conectados.
 
-En el siguiente vídeo, Rob York del Administrador de programas senior y Ainley Locky del Administrador de marketing de productos tratan y demostración de mantenimiento de cliente con la administración conjunta:
+En el siguiente vídeo, el Jefe de Programas Senior Rob York y el Jefe de Marketing de Productos Locky Ainley abordan el estado de los clientes con la administración conjunta y demuestran su funcionamiento:
 
 > [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/Client-Health-Monitoring-with-Co-Management/player]
 
@@ -30,22 +30,22 @@ En el siguiente vídeo, Rob York del Administrador de programas senior y Ainley 
 
 ## <a name="benefits"></a>Ventajas
 
-Evaluar el estado de cliente es una prioridad. System Center 2012 Configuration Manager agrega **CCMeval**. Esta utilidad es externa al cliente de Configuration Manager. Proporciona al cliente corrección automática y supervisión de estado. Sin embargo, este informe se basa en un dispositivo que están físicamente o prácticamente en su red interna. Administración conjunta ayuda a resolver este problema.
+Evaluar el estado del cliente es una prioridad de primer orden. System Center 2012 Configuration Manager ha agregado **CCMeval**. Esta utilidad es externa al cliente de Configuration Manager. Proporciona supervisión del estado del cliente y corrección automática. Sin embargo, esta capacidad de notificación se basa en un dispositivo que se encuentra físicamente o virtualmente en su red interna. La administración conjunta ayuda a resolver este problema.
 
-Con la administración conjunta, Intune puede informar sobre el estado de mantenimiento del cliente. Proporciona información de marca de tiempo para la validez de los datos. Esta información le indica si los dispositivos están en buen estado, puede conectarse, puede instalar aplicaciones, o pueden actualizar al sistema operativo necesario compilaciones. 
+Con la administración conjunta, Intune puede informar sobre el estado de mantenimiento del cliente. Proporciona información de marca de tiempo para la validez de los datos. Esta información le indica si los dispositivos están en buen estado, pueden conectarse, pueden instalar aplicaciones o pueden actualizar a las compilaciones necesarias del SO. 
 
-Para obtener una descripción detallada de esta característica, vea este vídeo de la [What ' s New in Configuration Manager](https://myignite.techcommunity.microsoft.com/sessions/64591) sesión en Ignite 2018.
+Para obtener una descripción detallada de esta característica, vea este vídeo de la sesión [What's New in Configuration Manager](https://myignite.techcommunity.microsoft.com/sessions/64591) (Novedades de Configuration Manager) en Ignite 2018.
 
 > [!VIDEO https://www.youtube.com/embed/UAW2KBUq7DM?start=518]
 
 
-Cuando Configuration Manager proporciona el estado del dispositivo que está instalado el cliente, pero no es, Intune puede proporcionar más información sin necesidad de conectarse al cliente. La información de estado del dispositivo en Intune es fácil de entender. Si el estado es distinto **correcto**, ofrece recomendaciones y pasos siguientes para solucionar problemas y corregirlo.
+Cuando Configuration Manager proporciona el estado del dispositivo de que el cliente está instalado, pero no lo está, Intune puede proporcionar más información sin necesidad de conectarse al cliente. La información de estado del dispositivo en Intune es fácil de entender. Si el estado es distinto de **Correcto**, ofrece recomendaciones y pasos adicionales para solucionar el problema.
 
 > [!Note]  
-> Una versión futura se prevé las siguientes ventajas:
-> - Administrador de configuración incluirá una funcionalidad adicional en CCMeval  
-> - Le resultará más fácil identificar los equipos en mal estado potencialmente en Configuration Manager e Intune  
-> - Puede agrupar los datos de estado de cliente de Intune  
+> Una versión futura prevé las siguientes ventajas:
+> - Configuration Manager incluirá una funcionalidad adicional en CCMeval.  
+> - Será más fácil identificar los equipos potencialmente en mal estado tanto en Configuration Manager como en Intune.  
+> - Puede agrupar los datos de estado de cliente en Intune.  
 
 
 
@@ -53,7 +53,7 @@ Cuando Configuration Manager proporciona el estado del dispositivo que está ins
 
 Con esta característica, ahora dispone de un origen de datos externo con Intune. Permite determinar los pasos siguientes para solucionar el problema de una amplia variedad de problemas del cliente. Ahora no es necesario crear informes adicionales o usar otras herramientas para extraer datos de cliente.
 
-Cuando haya clientes en buen estado, fácilmente ha actualizado el cumplimiento de las revisiones. Un mejor cumplimiento de las revisiones significa mejorar la seguridad.
+Cuando tenga clientes con un mantenimiento correcto, cumplirá oportunamente con las revisiones. Un mejor cumplimiento de las revisiones implica una mejor seguridad.
 
 
 
@@ -61,27 +61,27 @@ Cuando haya clientes en buen estado, fácilmente ha actualizado el cumplimiento 
 
 Para empezar a usar esta característica, siga estos pasos:
 
-- Actualizar dispositivos con Windows 10, versión 1709 o posterior  
+- Actualice los dispositivos a Windows 10, versión 1709 o posterior.  
 
-- [Habilitar la administración conjunta](/sccm/comanage/how-to-enable)  
-    - No es necesario cambiar cualquier carga de trabajo a Intune  
+- [Habilite la administración conjunta](/sccm/comanage/how-to-enable).  
+    - No es necesario cambiar ninguna carga de trabajo a Intune.  
 
-- Actualizar el sitio de Configuration Manager y los clientes *versión 1806* o posterior  
+- Actualice el sitio de Configuration Manager y los clientes a la *versión 1806* o posterior.  
 
 
-### <a name="review-configuration-manager-client-health-in-intune"></a>Revise el estado de cliente de Configuration Manager en Intune
+### <a name="review-configuration-manager-client-health-in-intune"></a>Revise el estado del cliente de Configuration Manager en Intune.
 
 1. Inicie sesión en el [Portal de Azure](https://portal.azure.com/).  
 
-2. Elija **todos los servicios** > **Intune**. Intune se encuentra en la **supervisión y administración** sección.  
+2. Elija **Todos los servicios** > **Intune**. Intune se encuentra en la sección **Supervisión y administración**.  
 
-3. Una vez que haya abierto el **Microsoft Intune** panel, en el menú en **ayuda y soporte técnico**, vaya a la **Troubleshooting** página.  
+3. Una vez que haya abierto el panel **Microsoft Intune**, en el menú bajo **Ayuda y soporte técnico**, vaya a la página **Troubleshooting**.  
 
-4. Use la **Seleccionar usuario** opción, busque el dispositivo específico en el **dispositivos** lista y selecciónela para abrir la página del dispositivo.  
+4. Use la opción **Seleccionar usuario**, busque el dispositivo específico en la lista **dispositivos** y selecciónelo para abrir la página del dispositivo.  
 
-5. Información de administración conjunta se muestra en la parte inferior de la página dispositivos. Esta información incluye los siguientes campos para el estado de cliente:  
+5. La información de administración conjunta se muestra en la parte inferior de la página de dispositivos. Esta información incluye los siguientes campos para el estado de cliente:  
     - **Estado del agente de Configuration Manager**  
-    - **Última comprobación del agente de Configuration Manager en el tiempo**  
+    - **Última inserción en el repositorio del agente de Configuration Manager**  
 
 > [!Tip]  
-> Dispositivos inscritos en Intune se conectan al servicio de nube tres veces al día, cada ocho horas aproximadamente. 
+> Los dispositivos inscritos en Intune se conectan al servicio de nube tres veces al día, cada ocho horas aproximadamente. 
