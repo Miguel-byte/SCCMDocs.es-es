@@ -12,13 +12,13 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7c731692bc2277cc5ce97e079387b392ca09ff3e
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: MT
+ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
+ms.lasthandoff: 03/27/2019
 ms.locfileid: "56755588"
 ---
-# <a name="how-to-monitor-co-management-in-configuration-manager"></a>Cómo supervisar la administración conjunta en Configuration Manager
+# <a name="how-to-monitor-co-management-in-configuration-manager"></a>Supervisión de la administración conjunta en Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
@@ -29,7 +29,7 @@ Después de habilitar la administración conjunta, los dispositivos de administr
 
 - [Directivas de implementación](#deployment-policies)
 
-- [Datos del dispositivo WMI](#wmi-device-data)
+- [Datos del dispositivo de WMI](#wmi-device-data)
 
 
 
@@ -50,7 +50,7 @@ A partir de la versión 1810, el panel de administración conjunta se ha mejorad
 
 Muestra el porcentaje de dispositivos administrados conjuntamente en todo el entorno.
 
-![Icono de los dispositivos administrados conjuntamente](media/co-management-dashboard/Percent-Co-managed-graph.PNG)
+![Mosaico de dispositivos administrados conjuntamente](media/co-management-dashboard/Percent-Co-managed-graph.PNG)
 
 
 ### <a name="client-os-distribution"></a>Distribución del sistema operativo cliente
@@ -67,7 +67,7 @@ Muestra el número de dispositivos cliente en función del sistema operativo por
 
 Mantenga el puntero sobre una sección del gráfico para mostrar el porcentaje de dispositivos que forman parte de ese grupo de sistemas operativos.
 
-![Icono de distribución del sistema operativo de cliente](media/co-management-dashboard/Co-management-OS-distribution-graph.PNG)
+![Mosaico de la distribución del sistema operativo cliente](media/co-management-dashboard/Co-management-OS-distribution-graph.PNG)
 
 
 ### <a name="co-management-status-donut"></a>Estado de la administración conjunta (anillo)
@@ -81,7 +81,7 @@ Muestra el desglose de los dispositivos que se ejecutan correctamente o con erro
 
 Mantenga el puntero sobre una sección del gráfico para ver el porcentaje de los dispositivos en esa categoría. 
 
-![Icono de estado (anillo) de administración conjunta](media/co-management-dashboard/Co-management-status-graph.PNG)
+![Mosaico del estado de la administración conjunta (anillo)](media/co-management-dashboard/Co-management-status-graph.PNG)
 
 Seleccione una sección del gráfico para ver la lista de dispositivos de esa categoría.
 
@@ -128,43 +128,43 @@ La lista de las cargas de trabajo varía según la versión de Configuration Man
 
 Mantenga el puntero sobre una sección del gráfico para ver el número de dispositivos que se ha pasado para la carga de trabajo. 
 
-![Gráfico de barras de transición de la carga de trabajo](media/co-management-dashboard/Workload-Transition.PNG)
+![Gráfico de barras de la transición de la carga de trabajo](media/co-management-dashboard/Workload-Transition.PNG)
 
 
 ### <a name="enrollment-errors"></a>Errores de inscripción
 
 *Se aplica a la versión 1810 y posteriores*
 
-Esta tabla es una lista de errores de inscripción de dispositivos. Estos errores pueden proceder de los componentes MDM en Windows, el núcleo del sistema operativo de Windows o el cliente de Configuration Manager. 
+Esta tabla es una lista de errores de inscripción de dispositivos. Estos errores pueden proceder del componente MDM en Windows, el SO principal de Windows o el cliente de Configuration Manager. 
 
-Existen cientos de posibles errores. En la tabla siguiente se enumera los errores más comunes.
+Existen cientos de posibles errores. La tabla siguiente incluye los errores más comunes.
 <!-- SCCMDocs issue 1064, BUG 3158555 -->
 
 | Error | Descripción |
 |---------|---------|
-| 2147549183 (0x8000FFFF) | Inscripción de MDM no se ha configurado todavía en Azure AD, o la inscripción no se espera la dirección URL.<br><br>[Habilitar la inscripción automática de Windows 10](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment) |
-| 2149056536 (0x80180018)<br>MENROLL_E_USERLICENSE | Licencia de usuario está en la inscripción bloqueo de mal estado<br><br>[Asignar licencias a usuarios](https://docs.microsoft.com/intune/licenses-assign) |
-| 2149056555 (0x8018002B)<br>MENROLL_E_MDM_NOT_CONFIGURED | Cuando se intenta automáticamente inscribirlo en Intune, pero totalmente no se aplica la configuración de Azure AD. Este problema debe ser transitorio, como los reintentos del dispositivo tras un breve período. |
-| 2149056554 (0 x 8018002A)<br>&nbsp; | El usuario canceló la operación<br><br>Si la inscripción de MDM requiere autenticación multifactor y el usuario no ha iniciado sesión con un segundo factor compatible, Windows muestra una notificación al usuario a inscribir. Si el usuario no responde para la notificación del sistema, se produce este error. Este problema debe ser transitorio, como Configuration Manager vuelva a intentar y pedir al usuario. Los usuarios deben utilizar la autenticación multifactor cuando inicie sesión en Windows. También Edúquelos espera este comportamiento y si se le solicita, tomar medidas. | 
-| 2149056533 (0x80180015)<br>MENROLL_E_NOTSUPPORTED | Administración de dispositivos móviles que generalmente no se admiten | 
-| 2149056514 (0x80180002)<br>MENROLL_E_DEVICE_AUTHENTICATION_ERROR | Servidor no pudo autenticar al usuario<br><br> No hay ningún token de Azure AD para el usuario. Asegúrese de que el usuario puede autenticarse en Azure AD. |
-| 2147942450 (0 x 80070032)<br>&nbsp; | Solo se admite la inscripción automática de MDM en Windows RS3 y versiones posteriores.<br><br>Asegúrese de que el dispositivo cumple con la [requisitos mínimos](/sccm/comanage/overview#windows-10) para la administración conjunta. |
-| 3400073293 | Respuesta de cuenta de dominio Kerberos ADAL de usuario desconocido<br><br>Compruebe la configuración de Azure AD y asegúrese de que los usuarios pueden autenticarse correctamente. | 
-| 3399548929 | Necesita inicio de sesión de usuario<br><br>Este problema debería ser transitorio. Se produce cuando el usuario rápidamente cierra antes de que ocurra la tarea de inscripción. | 
-| 3400073236 | Error de solicitud de token de seguridad ADAL.<br><br>Compruebe la configuración de Azure AD y asegúrese de que los usuarios pueden autenticarse correctamente. |
-| 2149122477 | Problema HTTP genérico |
-| 3400073247 | Solo se admite la autenticación de Windows integrada de ADAL en flujo federado<br><br>[Planee la implementación de hybrid Azure Active Directory join](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan) | 
-| 3399942148 | No se encontró el servidor o proxy.<br><br>Este problema debe ser transitorio, cuando el cliente no puede comunicarse con la nube. Si persiste, asegúrese de que el cliente tiene una conectividad coherente y en Azure. | 
-| 2149056532 | No se admite la plataforma específica o una versión<br><br>Asegúrese de que el dispositivo cumple con la [requisitos mínimos](/sccm/comanage/overview#windows-10) para la administración conjunta. |
-| 2147943568 | No se encontró un elemento<br><br>Este problema debería ser transitorio. Si persiste, póngase en contacto con Microsoft Support. |
-| 2192179208 | No hay suficientes recursos de memoria están disponibles para procesar este comando.<br><br>Este problema debería ser transitorio, debe solucionar por sí solo cuando el cliente lo reintenta. |
-| 3399614467 | Error de concesión de autorización de ADAL para esta aserción<br><br>Compruebe la configuración de Azure AD y asegúrese de que los usuarios pueden autenticarse correctamente. |
-| 2149056517 | Error genérico de servidor de administración, por ejemplo, error de acceso de la base de datos<br><br>Este problema debería ser transitorio. Si persiste, póngase en contacto con Microsoft Support. |
-| 2149134055 | No puede resolver el nombre de WinHTTP<br><br>El cliente no puede resolver el nombre del servicio. Compruebe la configuración de DNS. | 
-| 2149134050 | tiempo de espera de Internet<br><br>Este problema debe ser transitorio, cuando el cliente no puede comunicarse con la nube. Si persiste, asegúrese de que el cliente tiene una conectividad coherente y en Azure. | 
+| 2147549183 (0x8000FFFF) | La inscripción de MDM no se ha configurado todavía en Azure AD, o la dirección URL de inscripción no se espera.<br><br>[Habilitar la inscripción automática de Windows 10](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment) |
+| 2149056536 (0x80180018)<br>MENROLL_E_USERLICENSE | La licencia del usuario está en mal estado, bloqueando la inscripción<br><br>[Asignar licencias a usuarios](https://docs.microsoft.com/intune/licenses-assign) |
+| 2149056555 (0x8018002B)<br>MENROLL_E_MDM_NOT_CONFIGURED | Al intentar inscribirse automáticamente en Intune, la configuración de Azure AD no se aplica completamente. Este problema debe de ser transitorio, ya que el dispositivo reintenta la operación después de un breve período de tiempo. |
+| 2149056554 (0x‭8018002A‬)<br>&nbsp; | El usuario canceló la operación<br><br>Si la inscripción de MDM requiere autenticación multifactor y el usuario no ha iniciado sesión con un segundo factor compatible, Windows muestra una notificación del sistema al usuario que se va a inscribir. Este error se produce si el usuario no responde a la notificación del sistema. Este problema debería ser transitorio, dado que Configuration Manager volverá a intentarlo y le preguntará al usuario. Los usuarios deben usar la autenticación multifactor cuando inicien sesión en Windows. Indíqueles también que este comportamiento es esperado y que, si se les pide, deben tomar medidas. | 
+| 2149056533 (0x80180015)<br>MENROLL_E_NOTSUPPORTED | Por lo general, no se admite la administración de dispositivos móviles | 
+| 2149056514 (0x80180002)<br>MENROLL_E_DEVICE_AUTHENTICATION_ERROR | El servidor no pudo autenticar el usuario<br><br> No hay ningún token de Azure AD para el usuario. Asegúrese de que el usuario se pueda autenticar en Azure AD. |
+| 2147942450 (0x‭80070032‬)<br>&nbsp; | La inscripción automática de MDM solo se admite en Windows RS3 y versiones superiores.<br><br>Asegúrese de que el dispositivo cumple con los [requisitos mínimos](/sccm/comanage/overview#windows-10) para la administración conjunta. |
+| 3400073293 | Respuesta de cuenta de dominio de usuario de ADAL desconocida<br><br>Revise la configuración de Azure AD y asegúrese de que los usuarios se puedan autenticar correctamente. | 
+| 3399548929 | Es necesario el inicio de sesión del usuario<br><br>Este problema debería ser transitorio. Se produce cuando el usuario cierra rápidamente la sesión antes de que se realice la tarea de inscripción. | 
+| 3400073236 | Error de solicitud del token de seguridad de ADAL.<br><br>Revise la configuración de Azure AD y asegúrese de que los usuarios se puedan autenticar correctamente. |
+| 2149122477 | Problema de HTTP genérico |
+| 3400073247 | La autenticación de Windows integrada de ADAL solo se admite en el flujo federado<br><br>[Planeamiento de la implementación de la unión a Azure Active Directory híbrido](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan) | 
+| 3399942148 | No se encontró el servidor ni el proxy.<br><br>Este problema debería ser transitorio cuando el cliente no se pueda comunicar con la nube. Si persiste, asegúrese de que el cliente tiene conectividad coherente con Azure. | 
+| 2149056532 | No se admite la plataforma o versión específica<br><br>Asegúrese de que el dispositivo cumple con los [requisitos mínimos](/sccm/comanage/overview#windows-10) para la administración conjunta. |
+| 2147943568 | No se encontró el elemento<br><br>Este problema debería ser transitorio. Si persiste, póngase en contacto con Soporte técnico de Microsoft. |
+| 2192179208 | No hay recursos de memoria suficientes disponibles para procesar este comando.<br><br>Este problema debería ser transitorio y se debería resolver solo cuando el cliente vuelva a intentar la operación. |
+| 3399614467 | Error de concesión de autorización de ADAL para esta aserción<br><br>Revise la configuración de Azure AD y asegúrese de que los usuarios se puedan autenticar correctamente. |
+| 2149056517 | Error genérico del servidor de administración, como un error de acceso de DB<br><br>Este problema debería ser transitorio. Si persiste, póngase en contacto con Soporte técnico de Microsoft. |
+| 2149134055 | No se puede resolver el nombre de WinHTTP<br><br>El cliente no puede resolver el nombre del servicio. Compruebe la configuración DNS. | 
+| 2149134050 | Tiempo de espera de Internet<br><br>Este problema debería ser transitorio cuando el cliente no se pueda comunicar con la nube. Si persiste, asegúrese de que el cliente tiene conectividad coherente con Azure. | 
 
 
-Para obtener más información, consulte [valores de Error de registro de MDM](https://docs.microsoft.com/windows/desktop/mdmreg/mdm-registration-constants).
+Para más información, consulte [MDM Registration Error Values](https://docs.microsoft.com/windows/desktop/mdmreg/mdm-registration-constants) (Valores de error de registro de MDM).
 
 
 
@@ -174,17 +174,17 @@ en el nodo **Implementaciones** del área de trabajo **Supervisión** se crean d
 
 
 
-## <a name="wmi-device-data"></a>Datos del dispositivo WMI
+## <a name="wmi-device-data"></a>Datos del dispositivo de WMI
 
-Consulta el **SMS_Client_ComanagementState** clase WMI. Puede crear colecciones personalizadas en Configuration Manager, que ayudan a determinar el estado de la implementación de administración conjunta. Para obtener más información sobre cómo crear colecciones personalizadas, vea [cómo crear recopilaciones](/sccm/core/clients/manage/collections/create-collections). 
+Consulte la clase WMI **SMS_Client_ComanagementState**. Puede crear recopilaciones personalizadas en Configuration Manager, lo que ayudará a determinar el estado de la implementación de administración conjunta. Para más información sobre cómo crear recopilaciones personalizadas, consulte [Cómo crear recopilaciones](/sccm/core/clients/manage/collections/create-collections). 
 
 Los campos siguientes están disponibles en la clase WMI:  
 
-- **MachineId**: Un identificador de dispositivo único para el cliente de Configuration Manager  
+- **MachineId**: especifica un identificador de dispositivo único para el cliente de Configuration Manager.  
 
 - **MDMEnrolled**: especifica si el dispositivo está inscrito en MDM.  
 
-- **Authority**: La autoridad para el que el dispositivo está inscrito  
+- **Authority**: la entidad para la que el dispositivo está inscrito.  
 
 - **ComgmtPolicyPresent**: especifica si la directiva de administración conjunta de Configuration Manager existe en el cliente. Si el valor de **MDMEnrolled** es **0**, el dispositivo no se administra conjuntamente con independencia de si la directiva de administración conjunta existe en el cliente.  
 

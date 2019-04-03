@@ -1,7 +1,7 @@
 ---
-title: Actualizar Windows 10
+title: Actualización de Windows 10
 titleSuffix: Configuration Manager
-description: Actualizar dispositivos a Windows 10 versión 1709 o versiones posteriores, lo cual es necesario para la administración conjunta
+description: Actualice los dispositivos a la versión 1709 o posterior de Windows 10, un requisito para la administración conjunta
 ms.date: 01/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,17 +12,17 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 0815a974f3b1f29f664a2948eed33de24c6ecff3
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: MT
+ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
+ms.lasthandoff: 03/27/2019
 ms.locfileid: "56755559"
 ---
-# <a name="upgrade-windows-10-for-co-management"></a>Actualizar Windows 10 para la administración conjunta
+# <a name="upgrade-windows-10-for-co-management"></a>Actualización de Windows 10 para la administración conjunta
 
-Cuando se trabaja hacia la incorporación de su organización para la administración conjunta, obtener actual es un obstáculo importante para algunos clientes. Requiere la administración conjunta [Windows 10 versión 1709](https://docs.microsoft.com/windows/whats-new/whats-new-windows-10-version-1709) o una versión posterior. Una vez que actualice a Windows y configurar la inscripción automática, los clientes se inscriben automáticamente para la administración conjunta.
+A medida que trabaja para incorporar su organización a la administración conjunta, ponerse al día es un obstáculo importante para algunos clientes. La administración conjunta requiere [Windows 10, versión 1709](https://docs.microsoft.com/windows/whats-new/whats-new-windows-10-version-1709) o posterior. Una vez que actualiza Windows y configura la inscripción automática, los clientes se inscriben automáticamente en la administración conjunta.
 
-En el siguiente vídeo, Rob York del Administrador de programas senior y Ainley Locky del Administrador de marketing de productos tratan y actualizar a Windows 10 para la administración conjunta de demostración:
+En el siguiente vídeo, el Jefe de Programas Senior Rob York y el Jefe de Marketing de Productos Locky Ainley abordan la actualización a Windows 10 para la administración conjunta y demuestran su funcionamiento:
 
 > [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/Upgrading-to-Windows-10-to-Enable-Co-Management/player]
 
@@ -30,37 +30,37 @@ En el siguiente vídeo, Rob York del Administrador de programas senior y Ainley 
 
 ## <a name="why-upgrade"></a>¿Por qué actualizar?
 
-Entre otros avances de plataforma, versión 1709 y versiones posterior de Windows 10 admite la inscripción automática. Este comportamiento hace que un dispositivo inscribir automáticamente a Intune cuando se ha unido a Azure Active Directory (Azure AD). 
+Entre otros avances de plataforma, la versión 1709 y posteriores de Windows 10 admiten la inscripción automática. Este comportamiento hace que un dispositivo se inscriba automáticamente en Intune cuando se une a Azure Active Directory (Azure AD). 
 
-Para obtener más información, consulte [Windows 10 de habilitar la inscripción automática](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment).
+Para más información, consulte [Habilitar la inscripción automática de Windows 10](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment).
 
 
-## <a name="how-to-do-it"></a>Para saber cómo hacerlo
+## <a name="how-to-do-it"></a>Cómo hacerlo
 
-Estas son algunas sugerencias que hemos aprendido de ayudar a miles de clientes a obtener actual rápidamente:
+Estas son algunas sugerencias que aprendimos después de ayudar a miles de clientes a ponerse al día rápidamente:
 
-- Use las implementaciones por fases para implementar esta actualización a las personas adecuadas a la derecha veces. Para más información, vea [Crear implementaciones por fases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence).  
+- Use implementaciones en fases para implementar esta actualización a las personas adecuadas en los momentos indicados. Para más información, vea [Crear implementaciones por fases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence).  
 
-- Usar almacenamiento en caché previa para reducir los tiempos de espera del usuario. Para obtener más información, vea [Configuración del contenido de la caché previa](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content).  
+- Use almacenamiento en caché previa para disminuir los tiempos de espera del usuario. Para obtener más información, vea [Configuración del contenido de la caché previa](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content).  
 
-- Use la plantilla de secuencia de tareas de actualización en contexto de forma predeterminada. A continuación, configure los pasos anteriores y posteriores a la actualización y acciones de error. Para obtener más información, consulte [recomienda pasos de secuencia de tareas para su procesamiento posterior](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#recommended-task-sequence-steps-for-post-processing).  
+- Use la plantilla para la secuencia de tareas de actualización local predeterminada. Luego, configure los pasos para antes y después de la actualización y cualquier acción en caso de error. Para más información, consulte [Pasos de la secuencia de tareas recomendados para posprocesamiento](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#recommended-task-sequence-steps-for-post-processing).  
 
-- Si el entorno tiene una gran movilidad, Configuration Manager admite la actualización en contexto a través de cloud management gateway (CMG). Esta característica permite actualizar a los clientes de Windows 10 cuando están basados en internet. Para obtener más información sobre la instancia de CMG, consulte [ ](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).  
+- Si el entorno tiene una fuerza laboral altamente móvil, Configuration Manager admite la actualización local a través de Cloud Management Gateway (CMG). Esta característica permite actualizar los clientes de Windows 10 cuando se basan en Internet. Para más información sobre CMG, consulte [](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).  
 
-- Ofrecen una participación en la administración conjunta para los usuarios que quiere que los usuarios pioneros. Este enfoque acelera la adopción inicial. Mediante la identificación de antemano estas personas, puede hacer que buena cobertura en los comienzos de una implementación. También recibir comentarios y validación de los usuarios que están interesados en las versiones más frecuentes y contento con el cambio. Programas de adopción temprana generan interés en las nuevas tecnologías y aumentan de tamaño con el tiempo.  
+- Ofrezca una participación en la administración conjunta de los usuarios que quieren ser usuarios pioneros. Este enfoque acelera la adopción inicial. Si identifica a estos usuarios de antemano, puede garantizar una buena cobertura en los primeros días de un lanzamiento. También podrá recibir la validación y los comentarios de los usuarios que se sienten felices de cambiar y que están interesados en lanzamientos más frecuentes. Los programas para los usuarios pioneros generan interés en las nuevas tecnologías y aumentan de tamaño con el tiempo.  
 
 
 ## <a name="case-studies"></a>Casos prácticos
 
-Microsoft IT implementó Windows 10 a 96,000 usuarios distribuidos en Microsoft. La implementación incluye los usuarios remotos y los usuarios de la red corporativa. La implementación completada en nueve semanas. Para obtener más información sobre su experiencia, consulte [implementar Windows 10 en Microsoft como una actualización en contexto](https://www.microsoft.com/download/details.aspx?id=50377).  
+Microsoft IT implementó Windows 10 en 96 000 usuarios distribuidos en Microsoft. La implementación incluyó tanto a usuarios remotos como a usuarios de la red corporativa. La implementación se completó en nueve semanas. Para más información sobre su experiencia, consulte el documento [Deploying Windows 10 at Microsoft as an in-place upgrade](https://www.microsoft.com/download/details.aspx?id=50377) (Implementación de Windows 10 en Microsoft como una actualización local).  
 
-Un fabricante de software Europeo de gran tamaño utiliza correctamente un grupo de adopción temprana. Después de las pruebas iniciales y piloto grupos, aproximadamente 2.000 empleados recibirán la primera actualización, actualizaciones y software. Este grupo incluye personal de TI y participar en voluntarios. Este nivel de compromiso con sus usuarios les proporciona un mayor nivel de confianza cuando se prueba y más credibilidad, cuando empieza a lanzamientos masivos.
+Un fabricante europeo de software de gran tamaño usa exitosamente un grupo de usuarios pioneros. Después de las pruebas iniciales y los grupos piloto, unos 2000 empleados reciben las primeras actualizaciones y software. En este grupo se cuenta el personal de TI y usuarios voluntarios. Este nivel de compromiso con sus usuarios les brinda un mayor nivel de confianza al realizar las pruebas y más credibilidad cuando empiecen las implementaciones masivas.
 
 
 
-## <a name="contact-fasttrack"></a>Póngase en contacto FastTrack
+## <a name="contact-fasttrack"></a>Póngase en contacto con FastTrack
 
-Si necesita ayuda con la actualización de Windows 10 en cualquier momento en el proceso, vaya a [Microsoft FastTrack](https://Microsoft.com/FastTrack/), inicie sesión y solicitar asistencia. 
+Si necesita ayuda con la actualización de Windows 10 en cualquier punto del proceso, vaya a [Microsoft FastTrack](https://Microsoft.com/FastTrack/), inicie sesión y solicite ayuda. 
 
-Para obtener más información, consulte [obtener ayuda de FastTrack](/sccm/comanage/quickstart-fasttrack). 
+Para más información, consulte [Ayuda de FastTrack](/sccm/comanage/quickstart-fasttrack). 
 
