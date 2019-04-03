@@ -1,8 +1,8 @@
 ---
 title: Implementación de clientes UNIX o Linux
 titleSuffix: Configuration Manager
-description: Aprenda a implementar un cliente en un servidor UNIX o Linux con System Center Configuration Manager.
-ms.date: 04/23/2017
+description: Aprenda a implementar un cliente en un servidor UNIX o Linux en Configuration Manager.
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,79 +11,79 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a94cb1338e010bfbd9ed1e2ecf7bdb5ba2418390
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 855869db6d127999218964d06e50179c70efed0a
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56120698"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58524105"
 ---
-# <a name="how-to-deploy-clients-to-unix-and-linux-servers-in-system-center-configuration-manager"></a>Implementar clientes en servidores UNIX y Linux con System Center Configuration Manager
+# <a name="how-to-deploy-clients-to-unix-and-linux-servers-in-configuration-manager"></a>Implementación de clientes en servidores UNIX y Linux en Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Para poder administrar un servidor Linux o UNIX con System Center Configuration Manager, debe instalar el cliente de Configuration Manager para Linux y UNIX en cada servidor Linux o UNIX. Puede realizar la instalación del cliente manualmente en cada equipo o usar un script de shell que instale el cliente de forma remota. Configuration Manager no admite el uso de la instalación de inserción de cliente en servidores Linux o UNIX. Opcionalmente puede configurar un Runbook de System Center Orchestrator para automatizar la instalación del cliente en el servidor Linux o UNIX.  
+> [!Important]  
+> A partir de la versión 1902, Configuration Manager no admite clientes Linux o UNIX. 
+> 
+> Para administrar servidores Linux, considere la posibilidad de usar la administración de Microsoft Azure. Las soluciones de Azure tienen una amplia compatibilidad con Linux que, en la mayoría de los casos, supera la funcionalidad de Configuration Manager, incluida la administración de revisiones de un extremo a otro para Linux.
+
+
+Para poder administrar un servidor Linux o UNIX con Configuration Manager, debe instalar el cliente de Configuration Manager para Linux y UNIX en cada servidor Linux o UNIX. Puede realizar la instalación del cliente manualmente en cada equipo o usar un script de shell que instale el cliente de forma remota. Configuration Manager no admite el uso de la instalación de inserción de cliente en servidores Linux o UNIX. Opcionalmente puede configurar un Runbook de System Center Orchestrator para automatizar la instalación del cliente en el servidor Linux o UNIX.  
 
  Independientemente del método de instalación que use, el proceso de instalación requiere el uso de un script denominado **install** para administrar el proceso de instalación. Esta secuencia de comandos se incluye al descargar el cliente para Linux y UNIX.  
 
- El script de instalación del cliente de Configuration Manager para Linux y UNIX admite propiedades de línea de comandos. Algunas propiedades de línea de comandos son necesarios, mientras que otros son opcionales. Por ejemplo, cuando se instala el cliente, debe especificar un punto de administración del sitio que usa el servidor Linux o UNIX para su contacto inicial con el sitio. Para obtener una lista completa de propiedades de línea de comandos, consulte [Propiedades de línea de comandos para la instalación del cliente en servidores Linux y UNIX](#BKMK_CmdLineInstallLnUClient).  
+ El script de instalación del cliente de Configuration Manager para Linux y UNIX admite propiedades de línea de comandos. Algunas propiedades de línea de comandos son necesarias, mientras que otras son opcionales. Por ejemplo, cuando se instala el cliente, debe especificar un punto de administración del sitio que usa el servidor Linux o UNIX para su contacto inicial con el sitio. Para obtener una lista completa de propiedades de línea de comandos, consulte [Propiedades de línea de comandos para la instalación del cliente en servidores Linux y UNIX](#BKMK_CmdLineInstallLnUClient).  
 
  Después de instalar el cliente, se especifican las opciones de cliente en la consola de Configuration Manager para configurar el agente cliente de la misma manera que lo haría con clientes basados en Windows. Para obtener más información, consulte [Client settings for Linux and UNIX servers](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ClientSettingsforLnU) (Configuración de cliente para servidores Linux y UNIX).  
 
-##  <a name="BKMK_AboutInstallPackages"></a> Acerca de los paquetes de instalación de cliente y el agente Universal  
+##  <a name="BKMK_AboutInstallPackages"></a> Acerca de los paquetes de instalación de cliente y el agente universal  
  Para instalar el cliente para Linux y UNIX en una plataforma concreta, debe usar el paquete de instalación de cliente aplicable para el equipo donde se instala el cliente. Los paquetes de instalación de cliente aplicables se incluyen como parte de la descarga de cada cliente desde el [Centro de descarga de Microsoft](http://go.microsoft.com/fwlink/?LinkID=525184). Además de los paquetes de instalación de cliente, la descarga de cliente incluye el script de **install** que administra la instalación del cliente en cada equipo.  
 
- Cuando se instala un cliente, puede utilizar las mismas propiedades de proceso y de línea de comandos sin tener en cuenta que usa el paquete de instalación de cliente.  
+ Cuando instala un cliente, puede utilizar las mismas propiedades de proceso y línea de comandos sin importar el paquete de instalación de cliente que utilice.  
 
  Para obtener información sobre los sistemas operativos, las plataformas y los paquetes de instalación de cliente que son compatibles con cada versión del cliente de Configuration Manager para Linux y UNIX, consulte [Linux and UNIX servers](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#linux-and-unix-servers) (Servidores Linux y UNIX).  
 
-##  <a name="BKMK_InstallLnUClient"></a> Instalar al cliente en servidores Linux y UNIX  
- Para instalar al cliente para Linux y UNIX, ejecutar un script en cada equipo Linux o UNIX. La secuencia de comandos se denomina **instalar** y es compatible con las propiedades de línea de comandos que modifican el comportamiento de la instalación y haga referencia al paquete de instalación de cliente. El paquete de instalación de cliente y la secuencia de comandos de instalación debe encontrarse en el cliente. El paquete de instalación de cliente contiene los archivos de cliente de Configuration Manager para una plataforma y sistema operativo Linux o UNIX específicos.
-Cada paquete de instalación de cliente contiene todos los archivos necesarios para completar la instalación del cliente y a diferencia de los equipos basados en Windows, descargue archivos adicionales desde un punto de administración u otra ubicación de origen.  
+##  <a name="BKMK_InstallLnUClient"></a> Instalación del cliente en servidores Linux y UNIX  
+ Para instalar al cliente para Linux y UNIX, ejecutar un script en cada equipo Linux o UNIX. El script se llama **install** y admite propiedades de línea de comandos que modifican el comportamiento de instalación y hacen referencia al paquete de instalación de cliente. El paquete de instalación de cliente y la secuencia de comandos de instalación debe encontrarse en el cliente. El paquete de instalación de cliente contiene los archivos de cliente de Configuration Manager para una plataforma y sistema operativo Linux o UNIX específicos.
+Cada paquete de instalación de cliente contiene todos los archivos necesarios para completar la instalación del cliente y, a diferencia de los equipos basados en Windows, descarga los archivos adicionales desde un punto de administración u otra ubicación de origen.  
 
  Después de instalar el cliente de Configuration Manager para Linux y UNIX, no es necesario reiniciar el equipo. Tan pronto como se complete la instalación del software, el cliente está operativo. Si reinicia el equipo, el cliente de Configuration Manager se reinicia automáticamente.  
 
- El cliente instalado se ejecuta con credenciales raíz. Se requieren credenciales raíz para recopilar el inventario de hardware y realizar las implementaciones de software.  
+ El cliente instalado se ejecuta con credenciales raíz. Las credenciales raíz son necesarias para recopilar el inventario de hardware y realizar las implementaciones de software.  
 
- El formato del comando es el siguiente:  
+ Use el formato de comando siguiente:  
 
- **./install -mp &lt;equipo\> -sitecode &lt;códigoDeSitio\> &lt;propiedad n.º 1> &lt;propiedad n.º 2> &lt;paquete de instalación de cliente\>**  
+ `./install -mp <computer> -sitecode <sitecode> <property #1> <property #2> <client installation package>`  
 
--   **instalar** es el nombre del archivo de script que instala el cliente para Linux y UNIX. Este archivo se proporciona con el software cliente.  
+-   `install` es el nombre del archivo de script que instala el cliente para Linux y UNIX. Este archivo se proporciona con el software cliente.  
 
--   **-mp &lt;equipo** especifica el punto de administración inicial que usa el cliente.  
+-   `-mp <computer>` especifica el punto de administración inicial que usa el cliente. Ejemplo: `smsmp.contoso.com`  
 
-     Ejemplo: smsmp.contoso.com  
+-   `-sitecode <site code>` especifica el código de sitio al que se asigna el cliente. Ejemplo: `S01`  
 
--   **-sitecode &lt;código de sitio\>** especifica el código de sitio al que se asigna el cliente.  
-
-     Ejemplo: S01  
-
--   &lt;propiedad n.º 1> &lt;propiedad n.º 2> especifica las propiedades de línea de comandos que se deben usar con el script de instalación.  
+-   `<property #1> <property #2>` especifica las propiedades de línea de comandos que se deben usar con el script de instalación.  
 
     > [!NOTE]  
-    >  Para más información, vea [Propiedades de línea de comandos para la instalación del cliente en servidores Linux y UNIX](#BKMK_CmdLineInstallLnUClient)  
+    >  Para más información, consulte [Propiedades de línea de comandos para la instalación del cliente en servidores Linux y UNIX](#BKMK_CmdLineInstallLnUClient).  
 
--   **paquete de instalación de cliente** es el nombre del paquete .tar de instalación de cliente para este sistema operativo, versión y arquitectura de CPU del equipo. El archivo .tar de instalación de cliente debe especificarse en último lugar.  
+-   **paquete de instalación de cliente** es el nombre del paquete .tar de instalación de cliente para este sistema operativo, versión y arquitectura de CPU del equipo. El archivo .tar de instalación de cliente debe especificarse en último lugar. Ejemplo: `ccm-Universal-x64.<build>.tar`  
 
-     Ejemplo: ccm-Universal-x64.&lt;compilación\>.tar  
+###  <a name="BKMK_ToInstallLnUClinent"></a> Instalación del cliente de Configuration Manager en servidores Linux y UNIX  
 
-###  <a name="BKMK_ToInstallLnUClinent"></a> Para instalar al cliente de Configuration Manager en servidores Linux y UNIX  
-
-1.  En un equipo Windows, [descargue el archivo de cliente apropiado para el servidor Linux o UNIX](http://go.microsoft.com/fwlink/?LinkID=525184) que quiere administrar.  
+1.  En un equipo Windows, [descargue el archivo de cliente apropiado para el servidor Linux o UNIX](https://go.microsoft.com/fwlink/?LinkID=525184) que quiere administrar.  
 
 2.  Ejecute el archivo autoextraíble .exe en el equipo Windows para extraer el script de instalación y el archivo .tar de instalación de cliente.  
 
 3.  Copie el script **install** y el archivo .tar a una carpeta en el servidor que quiere administrar.  
 
-4.  En el servidor UNIX o Linux, ejecute el siguiente comando para permitir que el script se ejecute como un programa: **chmod +x install**.  
+4.  En el servidor UNIX o Linux, ejecute el siguiente comando para permitir que el script se ejecute como un programa: `chmod +x install`.  
 
     > [!IMPORTANT]  
     >  Debe utilizar credenciales raíz para instalar al cliente.  
 
-5.  A continuación, ejecute el siguiente comando para instalar el cliente de Configuration Manager: **./install -mp &lt;nombreDeHost\> -sitecode &lt;código\> ccm-Universal-x64.&lt;compilación\>.tar**.  
+5.  A continuación, ejecute el siguiente comando para instalar el cliente de Configuration Manager: `./install -mp <hostname> -sitecode <code> ccm-Universal-x64.<build>.tar`  
 
-     Cuando escriba este comando, utilice las propiedades de línea de comandos adicionales que necesite.  Para obtener la lista de propiedades de línea de comandos, consulte [Propiedades de línea de comandos para la instalación del cliente en servidores Linux y UNIX](#BKMK_CmdLineInstallLnUClient).  
+     Cuando escriba este comando, utilice las propiedades de línea de comandos adicionales que necesite. Para obtener la lista de propiedades de línea de comandos, consulte [Propiedades de línea de comandos para la instalación del cliente en servidores Linux y UNIX](#BKMK_CmdLineInstallLnUClient).  
 
 6.  Después de ejecutar el script, valide la instalación revisando el archivo **/var/opt/microsoft/scxcm.log** . Además, puede confirmar que el cliente está instalado y se comunica con el sitio. Para ello, consulte los detalles del cliente en el nodo **Dispositivos** del área de trabajo **Activos y compatibilidad** en la consola de Configuration Manager.  
 
@@ -91,38 +91,31 @@ Cada paquete de instalación de cliente contiene todos los archivos necesarios p
  Las propiedades siguientes están disponibles para modificar el comportamiento del script de instalación:  
 
 > [!NOTE]  
->  Utilice la propiedad **-h** para mostrar la lista de propiedades admitidas.  
+>  Utilice la propiedad `-h` para mostrar la lista de propiedades admitidas.  
 
--   **-mp &lt;FQDN del servidor\>**  
+-   `-mp <server FQDN>`  
 
-     Necesario. Especifica el FQDN, el servidor de punto de administración que utilizará el cliente como un punto inicial de contacto.  
+     Necesario. Especifica mediante el FQDN el servidor de punto de administración que utilizará el cliente como punto inicial de contacto.  
 
     > [!IMPORTANT]  
     >  Esta propiedad no especifica el punto de administración al que se asignará el cliente después de la instalación.  
 
     > [!NOTE]  
-    >  Cuando usa la propiedad **-mp** para especificar un punto de administración que está configurado para aceptar solo conexiones de cliente HTTPS, también debe usar la propiedad **-UsePKICert** .  
+    >  Cuando usa la propiedad `-mp` para especificar un punto de administración que está configurado para aceptar solo conexiones de cliente HTTPS, también debe usar la propiedad `-UsePKICert`.  
 
--   **-sitecode &lt;código de sitio\>**  
+-   `-sitecode <sitecode>`  
 
-     Necesario. Especifica el sitio primario de Configuration Manager al que se va a asignar el cliente de Configuration Manager.  
+     Necesario. Especifica el sitio primario de Configuration Manager al que se va a asignar el cliente de Configuration Manager. Ejemplo: `-sitecode S01`  
 
-     Ejemplo: -sitecode S01  
+-   `-fsp <server_FQDN>`  
 
--   **-fsp &lt;FQDN_servidor>**  
+     Opcional. Especifica el FQDN, el servidor de punto de estado de reserva que utiliza el cliente para enviar mensajes de estado. Para más información, consulte [Determinar si necesita un punto de estado de reserva](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point).  
 
-     Opcional. Especifica el FQDN, el servidor de punto de estado de reserva que utiliza el cliente para enviar mensajes de estado.  
+-   `-dir <directory>`  
 
-     Para obtener más información sobre el punto de estado de reserva, consulte [Determinar si necesita un punto de estado de reserva](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point) (Determinar si necesita un punto de estado de reserva).  
+     Opcional. Especifica una ubicación alternativa para instalar los archivos de cliente de Configuration Manager. De forma predeterminada, el cliente se instala en la siguiente ubicación: `/opt/microsoft`.  
 
-
--   **-dir &lt;directorio\>**  
-
-     Opcional. Especifica una ubicación alternativa para instalar los archivos de cliente de Configuration Manager.  
-
-     De forma predeterminada, el cliente se instala en la siguiente ubicación: **/opt/microsoft**.  
-
--   **-nostart**  
+-   `-nostart`  
 
      Opcional. Impide el inicio automático del servicio de cliente de Configuration Manager, **ccmexec.bin**, una vez completada la instalación del cliente.  
 
@@ -130,42 +123,42 @@ Cada paquete de instalación de cliente contiene todos los archivos necesarios p
 
      De forma predeterminada, el servicio de cliente se inicia después de completarse la instalación del cliente y cada vez que se reinicia el equipo.  
 
--   **-limpio**  
+-   `-clean`  
 
-     Opcional. Especifica la eliminación de todos los archivos de cliente y los datos de un cliente instalado previamente para Linux y UNIX, antes de empezar la instalación nueva. Esto quita la base de datos del cliente y el almacén de certificados.  
+     Opcional. Especifica la eliminación de todos los archivos de cliente y los datos de un cliente instalado previamente para Linux y UNIX, antes de empezar la instalación nueva. Esta acción quita la base de datos y el almacén de certificados del cliente.  
 
--   **-keepdb**  
+-   `-keepdb`  
 
-     Opcional. Especifica que la base de datos de cliente local se conservan y volver a usar cuando se vuelve a instalar un cliente. De forma predeterminada, cuando vuelve a instalar un cliente se elimina esta base de datos.  
+     Opcional. Especifica que la base de datos de cliente local se conserva y se vuelve a usar cuando se vuelve a instalar un cliente. De forma predeterminada, cuando vuelve a instalar un cliente se elimina esta base de datos.  
 
--   **-UsePKICert &lt;parámetro\>**  
+-   `-UsePKICert <parameter>`  
 
-     Opcional. Especifica el nombre completo de ruta de acceso y a un certificado de PKI X.509 en el formato Public Key Certificate Standard (PKCS #12). Este certificado se utiliza para la autenticación de cliente. Si no se especifica un certificado durante la instalación y necesita agregar o cambiar un certificado, use la utilidad **certutil** . Consulte [Cómo administrar certificados en el cliente para Linux y UNIX](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts) (Cómo administrar certificados en el cliente para Linux y UNIX) para obtener información sobre certutil.  
+     Opcional. Especifica el nombre completo de ruta de acceso y a un certificado de PKI X.509 en el formato Public Key Certificate Standard (PKCS #12). Este certificado se utiliza para la autenticación de cliente. Si no se especifica un certificado durante la instalación y necesita agregar o cambiar un certificado, use la utilidad **certutil** . Para más información, consulte [Cómo administrar clientes de Linux y UNIX](/sccm/core/clients/manage/manage-clients-for-linux-and-unix-servers#BKMK_ManageLinuxCerts).  
 
-     Cuando use **-UsePKICert**, también debe proporcionar la contraseña asociada con el archivo PKCS#12 mediante el parámetro de línea de comandos **-certpw** .  
+     Cuando use `-UsePKICert`, también debe proporcionar la contraseña asociada con el archivo PKCS #12 mediante el uso del parámetro de línea de comandos `-certpw`.  
 
-     Si no utiliza esta propiedad para especificar un certificado PKI, el cliente utiliza un certificado autofirmado y todas las comunicaciones con sistemas de sitio son sobre HTTP.  
+     Si no usa esta propiedad para especificar un certificado PKI, el cliente utiliza un certificado autofirmado y todas las comunicaciones con los sistemas del sitio se realizan a través de HTTP.  
 
-     Si especifica un certificado no válido en el cliente instale la línea de comandos, no se devuelven errores. Esto es porque la validación de certificados se produce después de que el cliente se instala. Cuando el cliente se inicia, se validan los certificados con el punto de administración y, si un certificado produce un error de validación, se muestra el mensaje siguiente en **scxcm.log**, el archivo de registro de cliente de Unix y Linux Configuration Manager: **No se puede validar el certificado de punto de administración**. La ubicación del archivo de registro predeterminado es:  **/var/opt/microsoft/scxcm.log**.  
+     Si especifica un certificado no válido en el cliente instale la línea de comandos, no se devuelven errores. La validación de certificados se produce después de instalar el cliente. Cuando se inicia el cliente, los certificados se validan con el punto de administración. Si un certificado no pasa la validación, aparece el siguiente mensaje en **scxcm.log**: **No se puede validar el certificado de punto de administración**. La ubicación del archivo de registro predeterminado es:  **/var/opt/microsoft/scxcm.log**.  
 
-    > [!NOTE]  
-    >  Debe especificar esta propiedad cuando instale un cliente y use la propiedad **-mp** para especificar un punto de administración configurado para aceptar únicamente conexiones de cliente HTTPS.  
+     > [!NOTE]  
+     > Debe especificar esta propiedad cuando instale un cliente y usar la propiedad `-mp` para especificar un punto de administración que está configurado para aceptar únicamente conexiones de cliente HTTPS.  
 
-     Ejemplo: -UsePKICert &lt;ruta de acceso completa y nombre de archivo\> -certpw &lt;contraseña\>  
+     Ejemplo: `-UsePKICert <full path and filename> -certpw <password>`  
 
--   **-certpw &lt;parámetro\>**  
+-   `-certpw <parameter>`  
 
-     Opcional. Especifica la contraseña asociada con el archivo PKCS #12 que especifica mediante el uso de la **- /usepkicert** propiedad.  
+     Opcional. Especifica la contraseña asociada con el archivo PKCS #12 que especificó mediante el uso de la propiedad `-UsePKICert`.  
 
-     Ejemplo: -UsePKICert &lt;ruta de acceso completa y nombre de archivo\> -certpw &lt;contraseña\>  
+     Ejemplo: `-UsePKICert <full path and filename> -certpw <password>`  
 
--   **-/Nocrlcheck**  
+-   `-NoCRLCheck`  
 
      Opcional. Especifica que un cliente no debe comprobar la lista de revocación de certificados (CRL) cuando se comunica a través de HTTPS mediante el uso de un certificado PKI. Cuando no se especifica esta opción, el cliente comprueba la CRL antes de establecer una conexión HTTPS mediante el uso de certificados PKI. Para obtener más información acerca de la comprobación de CRL de cliente, consulte Diseño de revocación de certificados PKI.  
 
-     Ejemplo: -UsePKICert &lt;ruta de acceso completa y nombre de archivo\> -certpw &lt;contraseña\> -NoCRLCheck  
+     Ejemplo: `-UsePKICert <full path and filename> -certpw <password> -NoCRLCheck`  
 
--   **-rootkeypath &lt;ubicación del archivo\>**  
+-   `-rootkeypath <file location>`  
 
      Opcional. Especifica el nombre de archivo y la ruta de acceso completa de la clave raíz confiable de Configuration Manager. La clave raíz confiable de Configuration Manager proporciona un mecanismo que los clientes Linux y UNIX usan para comprobar que están conectados a un sistema de sitio que pertenece a la jerarquía correcta.  
 
@@ -173,48 +166,48 @@ Cada paquete de instalación de cliente contiene todos los archivos necesarios p
 
      Para obtener más información, consulte [Planning for the Trusted Root Key](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForRTK) (Planeación de la clave raíz confiable).  
 
-     Ejemplo: -rootkeypath &lt;ruta de acceso completa y nombre de archivo\>  
+     Ejemplo: `-rootkeypath <full path and filename>`  
 
--   **-httpport &lt;puerto\>**  
+-   `-httpport <port>`  
 
      Opcional. Especifica el puerto que está configurado en los puntos de administración que utiliza el cliente cuando se comunican a puntos de administración a través de HTTP. Si el puerto no se especifica, se utiliza el valor predeterminado de 80.  
 
-     Ejemplo: -httpport 80  
+     Ejemplo: `-httpport 80`  
 
--   **-httpsport &lt;puerto\>**  
+-   `-httpsport <port>`  
 
      Opcional. Especifica el puerto que está configurado en los puntos de administración que utiliza el cliente al comunicarse con los puntos de administración a través de HTTPS. Si el puerto no se especifica, se utiliza el valor predeterminado de 443.  
 
-     Ejemplo: -UsePKICert &lt;ruta de acceso completa y nombre del certificado\> -httpsport 443  
+     Ejemplo: `-UsePKICert <full path and certificate name> -httpsport 443`  
 
--   **-ignoreSHA256validation**  
+-   `-ignoreSHA256validation`  
 
-     Opcional. Especifica que la instalación de cliente omite la validación de SHA-256. Use esta opción al instalar el cliente en sistemas operativos que no se publicaron con una versión de OpenSSL que admite SHA-256. Para obtener más información, consulte [Acerca de sistemas operativos Linux y UNIX que no admiten SHA-256](../../../core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md#BKMK_NoSHA-256) (Acerca de sistemas operativos Linux y UNIX que no admiten SHA-256).  
+     Opcional. Especifica que la instalación de cliente omite la validación de SHA-256. Use esta opción al instalar el cliente en sistemas operativos que no se publicaron con una versión de OpenSSL que admite SHA-256. Para más información, consulte [acerca de los sistemas operativos Linux y UNIX que no admiten SHA-256](../../../core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md#BKMK_NoSHA-256).  
 
--   **-signcertpath &lt;ubicación del archivo\>**  
+-   `-signcertpath <file location>`  
 
      Opcional. Especifica la ruta de acceso completa y **.cer** nombre de archivo del certificado autofirmado exportado en el servidor de sitio. Si no hay certificados PKI disponibles, el servidor de sitio de Configuration Manager genera automáticamente los certificados autofirmados.  
 
-     Estos certificados se utilizan para validar que las directivas de cliente descargadas desde el punto de administración se enviaron desde el sitio deseado. Si no se especifica un certificado autofirmado durante la instalación o necesita cambiar el certificado, use la utilidad **certutil** . Consulte [Cómo administrar certificados en el cliente para Linux y UNIX](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts) (Cómo administrar certificados en el cliente para Linux y UNIX) para obtener información sobre certutil.  
+     Estos certificados se utilizan para validar que las directivas de cliente descargadas desde el punto de administración se enviaron desde el sitio deseado. Si no se especifica un certificado autofirmado durante la instalación o necesita cambiar el certificado, use la utilidad **certutil** . Para más información, consulte [Cómo administrar clientes de Linux y UNIX](/sccm/core/clients/manage/manage-clients-for-linux-and-unix-servers#BKMK_ManageLinuxCerts).  
 
      Este certificado se puede recuperar a través del almacén de certificados **SMS** ; el nombre del firmante es **Servidor de sitio** y su nombre descriptivo es **Certificado de firma de servidor de sitio**.  
 
-     Si no se especifica esta opción durante la instalación, los clientes de Linux y UNIX confiarán en el primer punto de administración se comunican con y se recuperará automáticamente el certificado de firma desde ese punto de administración.  
+     Si no se especifica esta opción durante la instalación, los clientes Linux y UNIX confían en el primer punto de administración con el que se comunican. Estos clientes recuperan automáticamente el certificado de firma de ese punto de administración.  
 
-     Ejemplo: -signcertpath &lt;ruta de acceso completa y nombre de archivo\>  
+     Ejemplo: `-signcertpath <full path and file name>`  
 
--   **-rootcerts**  
+-   `-rootcerts`  
 
      Opcional. Especifica otros certificados PKI para importar que no forman parte de una jerarquía de entidad emisora (CA) de certificados de puntos de administración. Si especifica varios certificados en la línea de comandos, deben ser delimitada por comas.  
 
-     Utilice esta opción si utiliza certificados de cliente PKI que no están vinculados a un certificado de CA raíz que sea de confianza para los puntos de administración de sitios. Los puntos de administración rechazarán el cliente si el certificado de cliente no está vinculado a un certificado raíz de confianza en la lista de emisores de certificados del sitio.  
+     Utilice esta opción si utiliza certificados de cliente PKI que no están vinculados a un certificado de CA raíz que sea de confianza para los puntos de administración de sitios. Los puntos de administración rechazarán el cliente si el certificado de cliente no está vinculado a un certificado raíz confiable en la lista de emisores de certificados del sitio.  
 
-     Si no utiliza esta opción, el cliente Linux y UNIX comprueba la jerarquía de confianza usando sólo el certificado en el **- /usepkicert** opción.  
+     Si no usa esta opción, el cliente Linux y UNIX comprobará la jerarquía de confianza usando solo el certificado de la opción `-UsePKICert`.  
 
-     Example: -rootcerts &lt;ruta de acceso completa y nombre de archivo\>,&lt;ruta de acceso completa y nombre de archivo\>  
+     Ejemplo: `-rootcerts <full path and file name>,<full path and file name>`  
 
-###  <a name="BKMK_UninstallLnUClient"></a> Desinstalación del cliente en servidores UNIX y Linux  
- Para desinstalar el cliente de Configuration Manager para Linux y UNIX, use la utilidad de desinstalación **uninstall**. De forma predeterminada, este archivo se encuentra en la **/opt/microsoft, Configuration Manager/bin/** carpeta en el equipo cliente. Este comando de desinstalación no admite los parámetros de línea de comandos y se quitarán todos los archivos relacionados con el software de cliente desde el servidor.  
+###  <a name="BKMK_UninstallLnUClient"></a> Desinstalación del cliente de servidores Linux y Unix  
+ Para desinstalar el cliente de Configuration Manager para Linux y UNIX, use la utilidad de desinstalación **uninstall**. De forma predeterminada, este archivo se encuentra en la **/opt/microsoft, Configuration Manager/bin/** carpeta en el equipo cliente. Este comando de desinstalación no admite los parámetros de línea de comandos y se quitarán del servidor todos los archivos relacionados con el software de cliente.  
 
  Para desinstalar el cliente, utilice la siguiente línea de comandos: **/opt/microsoft/configmgr/bin/uninstall**  
 
@@ -225,7 +218,7 @@ Cada paquete de instalación de cliente contiene todos los archivos necesarios p
 
  Al instalar el cliente de Configuration Manager para Linux y UNIX, puede cambiar los puertos de solicitud de clientes predeterminados. Para ello, especifique las propiedades de instalación **-httpport** y **-httpsport**. Cuando no se especifica la propiedad de instalación y un valor personalizado, el cliente utiliza los valores predeterminados. Los valores predeterminados son **80** para el tráfico HTTP y **443** para el tráfico HTTPS.  
 
- Después de instalar al cliente, no se puede cambiar su configuración de puerto de la solicitud. En su lugar, para cambiar la configuración del puerto debe volver a instalar al cliente y especificar la configuración del puerto nuevo. Cuando reinstale el cliente para cambiar los números de puerto de solicitud, ejecute el **instalar** de comandos similar a la nueva instalación de cliente, pero utilice la propiedad de línea de comandos adicionales de **- keepdb**. Este modificador indica a la instalación para conservar la base de datos cliente y archivos, incluido el almacén de certificados y el GUID de los clientes.  
+ Después de instalar al cliente, no se puede cambiar su configuración de puerto de la solicitud. En su lugar, para cambiar la configuración del puerto debe volver a instalar al cliente y especificar la configuración del puerto nuevo. Cuando reinstale el cliente para cambiar los números de puerto de solicitud, ejecute el comando **install** similar a la nueva instalación de cliente, pero utilice la propiedad de línea de comandos adicional de **- keepdb**. Este modificador indica a la instalación que conserve la base de datos y los archivos de cliente, lo que incluye el GUID y el almacén de certificados de los clientes.  
 
  Para obtener más información sobre los números de puerto de comunicación de cliente, consulte [How to configure client communication ports in System Center Configuration Manager](../../../core/clients/deploy/configure-client-communication-ports.md) (Configurar puertos de comunicación de cliente en System Center Configuration Manager).  
 

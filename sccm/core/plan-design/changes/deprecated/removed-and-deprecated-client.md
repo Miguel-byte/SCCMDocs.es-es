@@ -2,7 +2,7 @@
 title: En desuso para clientes
 titleSuffix: Configuration Manager
 description: Obtenga información sobre los sistemas operativos cliente que Configuration Manager ya no admite.
-ms.date: 01/15/2019
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d55c246c696a550ad3935a1f2bf9a7b838af996a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 9c6c4af31af08d2c723df01fa37f21f708453044
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156862"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58523782"
 ---
 # <a name="removed-and-deprecated-items-for-configuration-manager-clients"></a>Elementos eliminados y en desuso para clientes de Configuration Manager
 
@@ -33,7 +33,7 @@ A menos que se indique lo contrario, cada sistema operativo compatible se admite
 
 |**Sistemas operativos**|**Primer anuncio del desuso**|**Soporte eliminado**|  
 |-|-|-|
-|Linux y UNIX|22 de marzo de 2018||
+|Linux y UNIX|22 de marzo de 2018|Versión 1902|
 |Windows 8: Professional y Enterprise|12 de enero de 2016|Versión 1802|
 |Windows Embedded 8 Pro|12 de enero de 2016|Versión 1802|
 |Windows Embedded 8 Industry|12 de enero de 2016|Versión 1802|

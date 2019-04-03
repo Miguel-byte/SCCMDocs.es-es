@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cdbe1d7c3fb28a16c6ba55d073adba3781b12f58
-ms.sourcegitcommit: 544f335cfd1bfd0a1d4973439780e9f5e9ee8bed
+ms.openlocfilehash: d07005c63f0d69d57d24eac163b67c34529658cf
+ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562064"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477558"
 ---
 # <a name="use-a-sql-server-cluster-for-the-site-database"></a>Uso de un clúster de SQL Server para la base de datos del sitio
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Puede usar un clúster de SQL Server para hospedar la base de datos de sitio de Configuration Manager. Un clúster proporciona compatibilidad con la conmutación por error y mejora la confiabilidad de la base de datos del sitio, pero no ofrece un procesamiento adicional ni ventajas de equilibrio de carga. El rendimiento puede degradarse porque el servidor de sitio debe encontrar el nodo activo del clúster de SQL Server antes de conectarse a la base de datos del sitio.  
+Puede usar un clúster de conmutación por error de SQL Server para hospedar la base de datos de sitio de Configuration Manager. Un clúster proporciona compatibilidad con la conmutación por error y mejora la confiabilidad de la base de datos del sitio, pero no ofrece un procesamiento adicional ni ventajas de equilibrio de carga. Además, un clúster de conmutación por error de SQL Server usa almacenamiento compartido y presenta un único punto de error. El rendimiento puede degradarse porque el servidor de sitio debe encontrar el nodo activo del clúster de SQL Server antes de conectarse a la base de datos del sitio.  
 
 > [!IMPORTANT]  
 > La configuración correcta de los clústeres de SQL Server se basa en la documentación y los procedimientos proporcionados en la biblioteca de documentación de SQL Server.  

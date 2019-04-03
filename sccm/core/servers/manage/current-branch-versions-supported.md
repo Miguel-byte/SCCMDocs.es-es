@@ -2,7 +2,7 @@
 title: Versiones de la rama actual
 titleSuffix: Configuration Manager
 description: Revise el historial de versiones de Configuration Manager y obtenga información sobre las fases del servicio ofrecido.
-ms.date: 11/27/2018
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: acdc85980db937433cf8bf10336d940d0a434c94
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: ed5e7b6931fe8c853b867483d3db8a2d5bc9ad8b
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56135963"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58523731"
 ---
 # <a name="support-for-configuration-manager-current-branch-versions"></a>Compatibilidad con versiones de la rama actual de Configuration Manager
 
@@ -28,8 +28,11 @@ Microsoft tiene previsto publicar actualizaciones de la rama actual de Configura
 
 - Fase de servicio de **actualizaciones de seguridad (solo)**: después del lanzamiento de una versión nueva de la rama actual, Microsoft solo admite actualizaciones de seguridad a las versiones anteriores durante el resto del ciclo de vida de soporte técnico de esa versión (como se muestra en la Ilustración 1).  
 
-  ![Gráfico de escala de tiempo de servicio y soporte técnico de Configuration Manager](media/CM_Servicing_support_timeline1.png)  
-  Ilustración 1. Ejemplo de la superposición del ciclo de versiones del soporte técnico de mantenimiento de la rama actual. Este ejemplo sirve para ilustrar el ciclo y no representa una fecha de lanzamiento real o prevista.
+([Ver gráfico a tamaño completo](media/CM_Servicing_support_timeline1.png))
+
+![Gráfico de escala de tiempo de servicio y soporte técnico de Configuration Manager](media/CM_Servicing_support_timeline1.png)  
+
+Ilustración 1. Ejemplo de la superposición del ciclo de versiones del soporte técnico de mantenimiento de la rama actual. Este ejemplo sirve para ilustrar el ciclo y no representa una fecha de lanzamiento real o prevista.
 
 > [!NOTE]  
 >  La versión más reciente de la rama actual siempre se encuentra en la fase de servicio de **actualizaciones críticas y de seguridad**. Esta instrucción de compatibilidad significa que, si encuentra un defecto en el código que garantice una actualización crítica, debe tener instalada la versión más reciente de la rama actual para recibir una corrección. Las demás versiones compatibles de la rama actual solo podrán optar a recibir actualizaciones de seguridad.

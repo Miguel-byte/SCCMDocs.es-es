@@ -2,7 +2,7 @@
 title: Comprobaciones de requisitos previos
 titleSuffix: Configuration Manager
 description: Referencia de las comprobaciones de requisitos previos específicos para las actualizaciones de Configuration Manager.
-ms.date: 12/14/2018
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6bea2d7fc41bdec96fbdfe3508d13eea0a59d514
-ms.sourcegitcommit: ceec0e20bf801071f2a05233f984cf17acc3fd29
+ms.openlocfilehash: 81689907f326399de704b075b8500b82803b4d3d
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265043"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58524190"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Lista de comprobaciones de requisitos previos de Configuration Manager
 
@@ -455,11 +455,11 @@ El equipo de Configuration Manager pertenece a un dominio de Windows.
 Para instalar el servidor de sitio, debe tener al menos 15 GB de espacio libre en disco. Si instala al proveedor de SMS en el mismo servidor, necesitará 1 GB de espacio libre adicional.
 
 #### <a name="pending-system-restart"></a>Reinicio del sistema pendiente 
-*Se aplica a: sitio de administración central, sitio primario, sitio secundario, consola de Configuration Manager, proveedor de SMS, SQL Server, punto de administración, punto de distribución*
+*Se aplica a: sitio de administración central, sitio primario o sitio secundario*
 
 Antes de ejecutar el programa de instalación, otro programa requiere que el servidor se reinicie.
 
-A partir de la versión 1810, esta comprobación es más resistente. Para ver si el equipo está en un estado de reinicio pendiente, comprueba las siguientes ubicaciones del registro:<!--SCCMDocs-pr issue 3010-->  
+A partir de la versión 1810, esta comprobación es más resistente. Para ver si el equipo está en estado de reinicio pendiente, comprueba las siguientes ubicaciones del Registro:<!--SCCMDocs-pr issue 3010-->  
 
 - `HKLM:Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\RebootPending`  
 - `HKLM:SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired`  
@@ -515,6 +515,18 @@ El equipo de Configuration Manager pertenece a un dominio de Windows.
 
 La unidad de disco se debe formatear con el sistema de archivos NTFS. Para mayor seguridad, instale los componentes de servidor de sitio en unidades de disco formateadas con el sistema de archivos NTFS.
 
+#### <a name="pending-system-restart-on-the-remote-sql-server"></a>Reinicio pendiente del sistema en la instancia remota de SQL Server
+*Se aplica a: Instancia remota de SQL Server, versión 1902 y posteriores*
+
+Antes de ejecutar el programa de instalación, otro programa requiere que el servidor se reinicie.
+
+Para ver si el equipo está en estado de reinicio pendiente, comprueba las siguientes ubicaciones del Registro:<!--SCCMDocs-pr issue 3377-->  
+
+- `HKLM:Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\RebootPending`  
+- `HKLM:SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired`  
+- `HKLM:SYSTEM\CurrentControlSet\Control\Session Manager, PendingFileRenameOperations`  
+- `HKLM:Software\Microsoft\ServerManager, CurrentRebootAttempts`  
+
 #### <a name="schema-extensions"></a>Extensiones de esquema 
 *Se aplica a: sitio primario, sitio de administración central*
 
@@ -525,7 +537,7 @@ Configuration Manager no requiere extensiones del esquema de Active Directory pa
 #### <a name="bkmk_changetracking"></a> Limpieza del seguimiento de cambios de SQL
 *Se aplica a: servidor de base de datos del sitio*
 
-A partir de la versión 1810, comprueba si la base de datos del sitio tiene algún trabajo pendiente de datos de seguimiento del cambio de SQL.<!--SCCMDocs-pr issue 3023-->  
+A partir de la versión 1810, compruebe si la base de datos del sitio tiene algún trabajo pendiente de datos de seguimiento de cambios de SQL.<!--SCCMDocs-pr issue 3023-->  
 
 Haga manualmente esta comprobación ejecutando un procedimiento de diagnóstico almacenado en la base de datos. En primer lugar, cree una [conexión de diagnóstico](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) a la base de datos de sitio. El método más sencillo consiste en usar el editor de consultas del Motor de base de datos de SQL Server Management Studio y conectarse a `admin:<instance name>`. 
 
