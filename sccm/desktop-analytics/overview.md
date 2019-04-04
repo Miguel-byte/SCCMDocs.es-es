@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8602db7ece8d786598eb419eb855f1c77cff35ca
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 4105a8a81ab3f09dee9cf3ca5a2462ed2bb4183a
+ms.sourcegitcommit: da753df27d3909265ca45d3e79091f1e98758d16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56755566"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58913598"
 ---
 # <a name="what-is-desktop-analytics"></a>¿Qué es el análisis de escritorio?
 
@@ -74,7 +74,7 @@ Para utilizar el análisis de escritorio, asegúrese de que su entorno cumple lo
 
     - **Administrador de empresa** permisos en Azure  
 
-- Configuration Manager, versión 1810 con paquete acumulativo de actualizaciones 4486457 o posterior. Para obtener más información, consulte [actualizar Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
+- Configuration Manager, versión 1810 con Update Rollup 4488598 o posterior. Para obtener más información, consulte [actualizar Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
 
     - **Administrador total** rol en Configuration Manager  
 
