@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6bebf4065a4db1c45ee7eaa0a5b04b8d1533f29f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: d857b0e9d280bfed0834a97760d4fd481f0398d7
+ms.sourcegitcommit: d138a6a9ccbb6a03dc378272cf6f81b98b940f1d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56755548"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "59013414"
 ---
 # <a name="troubleshooting-desktop-analytics"></a>Solución de problemas de análisis de escritorio
 
@@ -137,7 +137,8 @@ Las columnas siguientes están disponibles en la lista de dispositivos:
 - [Conectividad de punto de conexión de diagnóstico de Office](#office-diagnostic-endpoint-connectivity)  
 
 #### <a name="appraiser-configuration"></a>Configuración de Appraiser
-<!--20,21--> Appraiser es el componente de Windows que se corresponde con el [actualizaciones de compatibilidad](/sccm/desktop-analytics/enroll-devices#update-devices). Evalúa las aplicaciones y los controladores del dispositivo para la compatibilidad con la versión más reciente de Windows. 
+<!--20,21-->
+Appraiser es el componente de Windows que se corresponde con el [actualizaciones de compatibilidad](/sccm/desktop-analytics/enroll-devices#update-devices). Evalúa las aplicaciones y los controladores del dispositivo para la compatibilidad con la versión más reciente de Windows. 
 
 Si esta comprobación se realiza correctamente, el componente appraiser está configurado correctamente en el dispositivo. 
 
@@ -155,7 +156,8 @@ Para obtener más información, revise M365AHandler.log en el cliente.
 
 
 #### <a name="minimum-compatibility-update"></a>Actualización de compatibilidad mínimo
-<!--18,19,32--> La actualización de compatibilidad (appraiser.dll) no está instalado o no está actualizada en el dispositivo. Es más antigua que el requisito mínimo para el análisis de escritorio, 10.0.17763. 
+<!--18,19,32-->
+La actualización de compatibilidad (appraiser.dll) no está instalado o no está actualizada en el dispositivo. Es más antigua que el requisito mínimo para el análisis de escritorio, 10.0.17763. 
 
 Instale la actualización de compatibilidad más reciente. Para obtener más información, consulte [actualizaciones de compatibilidad](/sccm/desktop-analytics/enroll-devices#bkmk_appraiser).
 
@@ -170,7 +172,8 @@ Esta propiedad muestra la fecha y hora en que el dispositivo correctamente ejecu
 
 #### <a name="appraiser-data-collection"></a>Recopilación de datos Appraiser
 <!--Appraiser run status-->
-<!--22,33--> Esta propiedad muestra el resultado más reciente de Windows que ejecuta el componente appraiser. 
+<!--22,33-->
+Esta propiedad muestra el resultado más reciente de Windows que ejecuta el componente appraiser. 
 
 Si no se realiza correctamente, puede que aparezca uno de los errores siguientes: 
 
@@ -212,7 +215,8 @@ Esta propiedad muestra la fecha y hora en que el dispositivo por última vez eje
 
 #### <a name="census-data-collection"></a>Recopilación de datos del censo
 <!-- Census run status -->
-<!--51,52--> Census es el componente de Windows que incluya el dispositivo. Estos datos de inventario se usan para comprender el dispositivo y su configuración. 
+<!--51,52-->
+Census es el componente de Windows que incluya el dispositivo. Estos datos de inventario se usan para comprender el dispositivo y su configuración. 
 
 Esta propiedad muestra el resultado más reciente de Windows que ejecuta el componente del censo.
 
@@ -228,7 +232,8 @@ Busque el siguiente archivo: `%windir%\System32\DeviceCensus.exe`. Si no existe,
 
 
 #### <a name="windows-diagnostic-endpoint-connectivity"></a>Conectividad de punto de conexión de diagnóstico de Windows
-<!--12,15--> Si esta comprobación se realiza correctamente, el dispositivo es capaz de conectarse al usuario conectado experiencia y telemetría de punto de conexión (Vortex). 
+<!--12,15-->
+Si esta comprobación se realiza correctamente, el dispositivo es capaz de conectarse al usuario conectado experiencia y telemetría de punto de conexión (Vortex). 
 
 En caso contrario, puede mostrar uno de los errores siguientes:  
 
@@ -275,7 +280,8 @@ Compruebe los permisos de esta clave del registro. Asegúrese de que la cuenta s
 
 
 #### <a name="commercial-id-configuration"></a>Configuración de Id. comercial
-<!--9, 11, 53--> Microsoft usa un único identificador comercial para asignar la información de dispositivos al área de trabajo de análisis de escritorio. Al integrar Configuration Manager con análisis de escritorio, consulta automáticamente el servicio para este identificador. Administrador de configuración debe aplicar automáticamente este identificador a los clientes que sean destinatarios configuración de análisis de escritorio. 
+<!--9, 11, 53-->
+Microsoft usa un único identificador comercial para asignar la información de dispositivos al área de trabajo de análisis de escritorio. Al integrar Configuration Manager con análisis de escritorio, consulta automáticamente el servicio para este identificador. Administrador de configuración debe aplicar automáticamente este identificador a los clientes que sean destinatarios configuración de análisis de escritorio. 
 
 Si esta comprobación es correcta, a continuación, el dispositivo está configurado correctamente con un Id. comercial.
 
@@ -331,7 +337,8 @@ Asegúrese de que otro mecanismo de directiva, como la directiva de grupo, no es
 
 
 #### <a name="diagtrack-service-configuration"></a>Configuración del servicio DiagTrack
-<!--44,45,50--> Si esta comprobación se realiza correctamente, el componente DiagTrack está configurado correctamente en el dispositivo. La versión mínima requerida por el análisis de escritorio es 10010586 (10.0.10586). 
+<!--44,45,50-->
+Si esta comprobación se realiza correctamente, el componente DiagTrack está configurado correctamente en el dispositivo. La versión mínima requerida por el análisis de escritorio es 10010586 (10.0.10586). 
 
 En caso contrario, es posible que aparezca uno de los errores siguientes:
 
@@ -369,7 +376,8 @@ Asegúrese de que no tiene identificadores duplicados en su entorno. Por ejemplo
 
 
 #### <a name="unique-device-identifier-retrieval"></a>Recuperación del identificador de dispositivo único
-<!--54--> Análisis de escritorio usa el servicio de Microsoft Account para una identidad de dispositivo más confiable. 
+<!--54-->
+Análisis de escritorio usa el servicio de Microsoft Account para una identidad de dispositivo más confiable. 
 
 Asegúrese de que el **cuenta de inicio de sesión de Ayudante de Microsoft** el servicio no está deshabilitado. El tipo de inicio debe ser **Manual (desencadenador de inicio)**.
 
@@ -377,7 +385,8 @@ Para deshabilitar el acceso de cuenta de Microsoft del usuario final, use la con
 
 
 #### <a name="windows-diagnostic-data-opt-in"></a>Opción datos de diagnóstico de Windows
-<!--8,40,55,62--> Esta propiedad comprueba que Windows está configurado correctamente para permitir que los datos de diagnóstico. Comprueba el valor de AllowTelemetry en las siguientes claves del registro:
+<!--8,40,55,62-->
+Esta propiedad comprueba que Windows está configurado correctamente para permitir que los datos de diagnóstico. Comprueba el valor de AllowTelemetry en las siguientes claves del registro:
 
 - `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`
 - `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
@@ -418,6 +427,7 @@ Los siguientes archivos de registro están en el punto de conexión de servicio 
 | **M365ADeploymentPlanWorker.log** | Información acerca de la sincronización del plan de implementación de análisis de escritorio en la nube de servicio en el Administrador de configuración local |
 | **M365ADeviceHealthWorker.log** | Información sobre el estado del dispositivo se cargue desde el Administrador de configuración para la nube de Microsoft |
 | **M365AUploadWorker.log** | Información sobre la recopilación y el dispositivo se cargue desde el Administrador de configuración para la nube de Microsoft |
+| **SmsAdminUI.log** | Información acerca de la actividad de la consola de Configuration Manager, como la configuración de los servicios de nube de Azure  |
 
 
 ### <a name="configuration-manager-client"></a>Cliente de Configuration Manager
@@ -426,14 +436,14 @@ Los siguientes archivos de registro se encuentran en el cliente de Configuration
 
 | Registro | Descripción |
 |---------|---------|
-| **M365Handler.log** | Información sobre la configuración de directiva de análisis de escritorio |
+| **M365AHandler.log** | Información sobre la configuración de directiva de análisis de escritorio |
 
 
 ### <a name="enable-verbose-logging"></a>Habilitar el registro detallado 
 
 1. En el punto de conexión de servicio, vaya a la siguiente clave del registro: `HKLM\Software\Microsoft\SMS\Tracing\SMS_SERVICE_CONNECTOR`  
 2. Establecer el **LogLevel** valor `0`  
-3. Ejecute el siguiente comando SQL en la base de datos de sitio:  
+3. (Opcional) Ejecute el siguiente comando SQL en la base de datos de sitio:  
 
     ```SQL
     DELETE FROM M365AProperties WHERE Name = 'M365ATenantUpdateInfo_LastUpdateTime'
