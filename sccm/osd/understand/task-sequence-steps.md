@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 95fb105d10fc7afbb94328dd7905ef075daa447b
-ms.sourcegitcommit: 33a006204f7f5f9b9acd1f3e84c4bc207362d00a
+ms.openlocfilehash: a349997150c951d1a4ec9e0b99f9d24c21f37205
+ms.sourcegitcommit: d584c126a0a5725567631b74ac1e01f63242a997
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305786"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58861095"
 ---
 # <a name="task-sequence-steps-in-configuration-manager"></a>Pasos de secuencias de tareas en Configuration Manager
 
@@ -29,7 +29,7 @@ Las opciones siguientes son comunes a todos los pasos de secuencia de tareas:
 #### <a name="properties-tab"></a>Ficha Propiedades
 - **Nombre**: el editor de secuencia de tareas requiere que se especifique un nombre corto para describir este paso. Cuando se agrega un paso nuevo, el editor de secuencia de tareas establece el nombre en Tipo de forma predeterminada. La longitud de **Nombre** no puede superar los 50 caracteres.  
 
-- **Descripción**: opcionalmente, especifique información más detallada sobre este paso. La longitud de **Descripción** no puede superar los 256 caracteres.  
+- **Descripción**: si quiere, especifique información más detallada sobre este paso. La longitud de **Descripción** no puede superar los 256 caracteres.  
 
 En el resto de este artículo se describen los demás valores de la pestaña **Propiedades** para cada paso de secuencia de tareas.
 
@@ -37,7 +37,7 @@ En el resto de este artículo se describen los demás valores de la pestaña **P
 
 - **Deshabilitar este paso**: la secuencia de tareas omite este paso cuando se ejecuta en un equipo. El icono para este paso está atenuado en el editor de secuencia de tareas.  
 
-- **Continuar después de un error**: si se produce un error durante la ejecución del paso, la secuencia de tareas continúa. Para obtener información, consulte [Planeación de consideraciones para la automatización de tareas](/sccm/osd/plan-design/planning-considerations-for-automating-tasks#BKMK_TSGroups).   
+- **Continuar después de un error**: la secuencia de tareas continúa aunque se produzca un error durante la ejecución del paso. Para obtener información, consulte [Planeación de consideraciones para la automatización de tareas](/sccm/osd/plan-design/planning-considerations-for-automating-tasks#BKMK_TSGroups).   
 
 - **Agregar condición**: la secuencia de tareas evalúa estas instrucciones condicionales para determinar si se ejecuta el paso. Para obtener un ejemplo del uso de una variable de secuencia de tareas como una condición, vea [How to use task sequence variables](/sccm/osd/understand/using-task-sequence-variables#bkmk_access-condition) (Uso de variables de secuencia de tareas).   
 
@@ -71,13 +71,13 @@ Seleccione **Examinar** para especificar el **Paquete de imágenes** que se usa 
 #### <a name="destination"></a>Destino  
 Configure una de las opciones siguientes:
 
-- **Siguiente partición disponible**: use la siguiente partición secuencial que no haya sido destino previo de los pasos **Aplicar el sistema operativo** o **Aplicar imagen de datos** en esta secuencia de tareas.  
+- **Siguiente partición disponible:** use la siguiente partición secuencial que no haya sido destino previo de los pasos **Aplicar el sistema operativo** o **Aplicar imagen de datos** en esta secuencia de tareas.  
 
 - **Disco y partición específicos**: seleccione el número de **Disco** (empezando por 0) y el número de **Partición** (empezando por 1).  
 
-- **Letra de unidad lógica específica**: especifique la **letra de unidad** que Windows PE asigna a la partición. Esta letra de unidad puede ser diferente de la que asigna el sistema operativo recién implementado.  
+- **Letra de unidad lógica específica**: especifique la **Letra de unidad** que Windows PE asigna a la partición. Esta letra de unidad puede ser diferente de la que asigna el sistema operativo recién implementado.  
 
-- **Letra de unida lógica almacenada en una variable**: especifique la variable de secuencia de tareas que contiene la letra de unidad asignada a la partición por Windows PE. Normalmente, esta variable se establece en la sección Avanzado del cuadro de diálogo **Propiedades de la partición** del paso de la secuencia de tareas **Formatear y crear particiones en el disco**.  
+- **Letra de unidad lógica almacenada en una variable**: especifique la variable de secuencia de tareas que contiene la letra de unidad asignada a la partición por Windows PE. Normalmente, esta variable se establece en la sección Avanzado del cuadro de diálogo **Propiedades de la partición** del paso de la secuencia de tareas **Formatear y crear particiones en el disco**.  
 
 #### <a name="delete-all-content-on-the-partition-before-applying-the-image"></a>Eliminar todo el contenido en la partición antes de aplicar la imagen  
 Especifica que la secuencia de tareas elimina todos los archivos en la partición de destino antes de instalar la imagen. Si no se elimina el contenido de la partición, esta acción puede usarse para aplicar contenido adicional a una partición de destino previa.  
@@ -88,7 +88,7 @@ Especifica que la secuencia de tareas elimina todos los archivos en la partició
 
 Use este paso para descargar todos los controladores del paquete de controladores e instalarlos en el sistema operativo Windows.
 
-El paso de secuencia de tareas **Aplicar paquete de controladores** hace que todos los controladores de dispositivo incluidos en un paquete de controladores estén disponibles para su uso con Windows. Agregue este paso entre los pasos **Aplicar el sistema operativo** e **Instalar Windows y Configuration Manager** para que los controladores del paquete estén disponibles para Windows. Normalmente, el paso **Aplicar paquete de controladores** va después del paso de secuencia de tareas **Aplicar controladores automáticamente** . El paso de secuencia de tareas **Aplicar paquete de controladores** también es útil en escenarios de implementación de medios independientes.  
+El paso de secuencia de tareas **Aplicar paquete de controladores** hace que todos los controladores de dispositivo incluidos en un paquete de controladores estén disponibles para su uso con Windows. Agregue este paso entre los pasos **Aplicar el sistema operativo** e **Instalar Windows y Configuration Manager** para que los controladores del paquete estén disponibles para Windows. El paso de secuencia de tareas **Aplicar paquete de controladores** también es útil en escenarios de implementación de medios independientes.  
 
 Coloque los controladores de dispositivo en un paquete de controladores y distribúyalos a los puntos de distribución adecuados. Por ejemplo, coloque todos los controladores de un fabricante en un paquete de controladores. Después, distribuya el paquete a puntos de distribución a los que los equipos asociados puedan tener acceso.
 
@@ -101,7 +101,7 @@ Utilice las siguientes variables de secuencia de tareas con este paso:
 - [OSDApplyDriverBootCriticalHardwareComponent](/sccm/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalHardwareComponent)  
 - [OSDApplyDriverBootCriticalID](/sccm/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalID)  
 - [OSDApplyDriverBootCriticalINFFile](/sccm/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalINFFile)  
-- [OSDInstallDriversAdditionalOptions](/sccm/osd/understand/task-sequence-variables#OSDInstallDriversAdditionalOptions) <!--516679/2840016--> (a partir de la versión 1806)  
+- [OSDInstallDriversAdditionalOptions](/sccm/osd/understand/task-sequence-variables#OSDInstallDriversAdditionalOptions)<!--516679/2840016--> (A partir de la versión 1806).  
 
 Para agregar este paso en el editor de secuencia de tareas, seleccione **Agregar**, **Controladores** y **Aplicar paquete de controladores**. 
 
@@ -250,13 +250,13 @@ Si no se proporciona un archivo de respuesta del programa de instalación de Win
 #### <a name="destination"></a>Destino  
 Configure una de las opciones siguientes:  
 
-- **Siguiente partición disponible**: use la siguiente partición secuencial que no haya sido destino previo de los pasos **Aplicar el sistema operativo** o **Aplicar imagen de datos** en esta secuencia de tareas.  
+- **Siguiente partición disponible:** use la siguiente partición secuencial que no haya sido destino previo de los pasos **Aplicar el sistema operativo** o **Aplicar imagen de datos** en esta secuencia de tareas.  
 
 - **Disco y partición específicos**: seleccione el número de **Disco** (empezando por 0) y el número de **Partición** (empezando por 1).  
 
 - **Letra de unidad lógica específica**: especifique la **Letra de unidad** asignada a la partición por Windows PE. Esta letra de unidad puede ser diferente de la que asigna el sistema operativo recién implementado.  
 
-- **Letra de unida lógica almacenada en una variable**: especifique la variable de secuencia de tareas que contiene la letra de unidad asignada a la partición por Windows PE. Normalmente, esta variable se establece en la sección Avanzado del cuadro de diálogo **Propiedades de la partición** del paso de la secuencia de tareas **Formatear y crear particiones en el disco**.  
+- **Letra de unidad lógica almacenada en una variable**: especifique la variable de secuencia de tareas que contiene la letra de unidad asignada a la partición por Windows PE. Normalmente, esta variable se establece en la sección Avanzado del cuadro de diálogo **Propiedades de la partición** del paso de la secuencia de tareas **Formatear y crear particiones en el disco**.  
 
 
 ### <a name="options"></a>Opciones  
@@ -408,7 +408,7 @@ Captura la información de pertenencia a dominio y grupo de trabajo del equipo d
 Captura la configuración del adaptador de red del equipo de destino. Captura la siguiente información: 
 - Configuración de red global  
 - Número de adaptadores  
-- La configuración de red siguiente asociada a cada adaptador: DNS, WINS, IP y filtros de puertos
+- La siguiente configuración de red asociada a cada adaptador: DNS, WINS, IP y filtros de puerto
 
 
 
@@ -515,9 +515,9 @@ Habilite esta opción para omitir la captura de archivos cifrados con el Sistema
 #### <a name="copy-by-using-file-system-access"></a>Copiar mediante el acceso al sistema de archivos
 Habilite esta opción para especificar cualquiera de las siguientes opciones:  
 
-- **Continuar si algunos archivos no se pueden capturar**: habilite esta opción para continuar con el proceso de migración, incluso si no puede capturar algunos archivos. Si deshabilita esta opción, se produce un error en este paso si no se puede capturar un archivo. Esta opción está habilitada de forma predeterminada.  
+- **Continuar si algunos archivos no se pueden capturar**: habilite esta configuración para continuar con el proceso de migración incluso si no puede capturar algunos archivos. Si deshabilita esta opción, se produce un error en este paso si no se puede capturar un archivo. Esta opción está habilitada de forma predeterminada.  
 
-- **Capturar localmente mediante vínculos en vez de mediante la copia de archivos**: Habilite esta opción para usar vínculos físicos NTFS en la captura de archivos.  
+- **Capturar localmente mediante vínculos en vez de mediante la copia de archivos**: habilite esta opción para usar vínculos físicos NTFS para capturar archivos.  
 
     Para obtener más información sobre cómo migrar datos mediante vínculos físicos, consulte el tema en el que se describe el [almacén de migración de vínculos físicos](https://docs.microsoft.com/windows/deployment/usmt/usmt-hard-link-migration-store).  
 
@@ -681,7 +681,7 @@ Seleccione el icono para elegir el paquete de descarga. Después de elegir un pa
 #### <a name="place-into-the-following-location"></a>Colocar en la siguiente ubicación
 Elija guardar el paquete en una de las siguientes ubicaciones:  
 
-- **Directorio de trabajo de secuencia de tareas**: esta ubicación también se conoce como la caché de la secuencia de tareas.  
+- **Directorio de trabajo de secuencia de tareas**: esta ubicación también se conoce como memoria caché de la secuencia de tareas.  
 
 - **Caché de cliente de Configuration Manager**: use esta opción para almacenar el contenido en la caché de cliente. De forma predeterminada, esta ruta de acceso es `%WinDir%\ccmcache`.  
 
@@ -745,12 +745,13 @@ Especifica la unidad que se va a cifrar. Para cifrar la unidad del sistema opera
 
 - **TPM y clave de inicio en USB**: seleccione esta opción para usar TPM y una clave de inicio almacenada en una unidad flash USB. Si se selecciona esta opción, BitLocker bloquea el proceso de arranque normal hasta que se conecte al equipo un dispositivo USB que contenga una clave de inicio de BitLocker.  
 
-- **TPM con PIN**: seleccione esta opción para usar TPM y un número de identificación personal (PIN). Si selecciona esta opción, BitLocker bloquea el proceso de arranque normal hasta que el usuario proporcione el PIN.  
+- **TPM con NIP**: seleccione esta opción para usar TPM y un número de identificación personal (NIP). Si selecciona esta opción, BitLocker bloquea el proceso de arranque normal hasta que el usuario proporcione el PIN.  
 
 Para cifrar una unidad de datos específica, que no es de sistema operativo, seleccione **Unidad específica**. A continuación, seleccione la unidad en la lista.  
 
 #### <a name="use-full-disk-encryption"></a>Usar cifrado de disco completo
-<!--SCCMDocs-pr issue 2671--> De forma predeterminada, este paso solo cifra el espacio utilizado en la unidad. Este comportamiento predeterminado es el recomendado, ya que es más rápido y eficaz. A partir de la versión 1806, si la organización necesita cifrar toda la unidad durante la instalación, habilite esta opción. El programa de instalación de Windows espera a que se cifre toda la unidad, lo que tarda mucho tiempo, especialmente en unidades de gran tamaño. 
+<!--SCCMDocs-pr issue 2671-->
+De forma predeterminada, este paso solo cifra el espacio utilizado en la unidad. Este comportamiento predeterminado es el recomendado, ya que es más rápido y eficaz. A partir de la versión 1806, si la organización necesita cifrar toda la unidad durante la instalación, habilite esta opción. El programa de instalación de Windows espera a que se cifre toda la unidad, lo que tarda mucho tiempo, especialmente en unidades de gran tamaño. 
 
 #### <a name="choose-where-to-create-the-recovery-key"></a>Elegir la ubicación en la que desea crear la clave de recuperación
 Para especificar que BitLocker cree la contraseña de recuperación y custodiarla en Active Directory, seleccione **En Active Directory**. Esta opción requiere que extienda Active Directory para la custodia de claves de BitLocker. Después, BitLocker puede guardar la información de recuperación asociada en Active Directory. Seleccione **No crear clave de recuperación** para no crear ninguna contraseña. La opción recomendada es crear una contraseña.  
@@ -859,7 +860,7 @@ Estas aplicaciones no aparecen en el cuadro de diálogo **Seleccione la aplicaci
 #### <a name="install-applications-according-to-dynamic-variable-list"></a>Instalar aplicaciones según la lista de variables dinámicas
 La secuencia de tareas instala las aplicaciones mediante este nombre variable de base. El nombre variable de base es para un conjunto de variables de secuencia de tareas definidas para una colección o equipo. Estas variables especifican las aplicaciones que la secuencia de tareas instala para esa colección o equipo. Cada nombre de variable consta de su nombre base común además de un sufijo numérico que empieza en 01. El valor de cada variable debe contener el nombre de la aplicación y nada más.  
 
-Para que la secuencia de tareas instale aplicaciones mediante una lista de variables dinámicas, se debe habilitar la opción siguiente en la pestaña **General** de las **Propiedades** de la aplicación: **Permitir que esta aplicación se instale desde la secuencia de tareas de instalación de aplicación en vez de implementarla manualmente**.  
+Para que la secuencia de tareas instale aplicaciones mediante una lista de variables dinámicas, habilite la siguiente configuración en la pestaña **General** de las **Propiedades** de la aplicación: **Permitir que esta aplicación se instale desde la secuencia de tareas de instalación de aplicación en vez de implementarla manualmente**.  
 
 > [!NOTE]  
 > No se pueden instalar aplicaciones mediante una lista de variables dinámicas para las implementaciones de medios independientes.  
@@ -942,7 +943,7 @@ Esta configuración especifica un paquete de software de Configuration Manager. 
 #### <a name="install-software-packages-according-to-dynamic-variable-list"></a>Instalar paquetes de software según la lista de variables dinámicas
 La secuencia de tareas instala los paquetes mediante este nombre variable de base. El nombre variable de base es para un conjunto de variables de secuencia de tareas definidas para una colección o equipo. Estas variables especifican los paquetes que la secuencia de tareas instala para esa colección o equipo. Cada nombre de variable consta de su nombre base común además de un sufijo numérico que empieza en 001. El valor de cada variable debe contener un identificador de paquete y el nombre del software separado por dos puntos.  
 
-Para que la secuencia de tareas instale software mediante una lista de variables dinámicas, se debe habilitar la opción siguiente en la pestaña **Avanzado** de las **Propiedades** del paquete: **Permitir que este programa se instale desde la secuencia de tareas de instalación de paquete sin implementarse**.  
+Para que la secuencia de tareas instale software mediante una lista de variables dinámicas, habilite la opción **Permitir que este programa se instale desde la secuencia de tareas de instalación de paquete sin implementarse** en la pestaña **Avanzadas** de las **Propiedades** del paquete.  
 
 > [!NOTE]  
 > No se pueden instalar paquetes de software mediante una lista de variables dinámicas para las implementaciones de medios independientes.  
@@ -1113,7 +1114,8 @@ Seleccione esta opción para que Sysprep genere automáticamente una lista de co
 Seleccione esta opción para impedir que Sysprep restablezca la marca de activación de producto.  
 
 #### <a name="shutdown-the-computer-after-running-this-action"></a>Apagar el equipo después de ejecutar esta acción
-<!--SCCMDocs-pr issue 2695--> A partir de la versión 1806, esta opción indica a Sysprep que apague el equipo en lugar de su comportamiento de reinicio predeterminado. 
+<!--SCCMDocs-pr issue 2695-->
+A partir de la versión 1806, esta opción indica a Sysprep que apague el equipo en lugar de su comportamiento de reinicio predeterminado. 
 
 A partir de la versión 1810, este paso se usa en la secuencia de tareas [Windows Autopilot para dispositivos existentes](/sccm/osd/deploy-use/windows-autopilot-for-existing-devices).
 
@@ -1143,7 +1145,8 @@ En la pestaña **Propiedades** de este paso, configure las opciones descritas en
 Especifique la unidad para la que desea habilitar BitLocker. BitLocker solo cifra el espacio usado en la unidad.  
 
 #### <a name="use-full-disk-encryption"></a>Usar cifrado de disco completo
-<!--SCCMDocs-pr issue 2671--> De forma predeterminada, este paso solo cifra el espacio utilizado en la unidad. Este comportamiento predeterminado es el recomendado, ya que es más rápido y eficaz. A partir de la versión 1806, si la organización necesita cifrar toda la unidad durante la instalación, habilite esta opción. El programa de instalación de Windows espera a que se cifre toda la unidad, lo que tarda mucho tiempo, especialmente en unidades de gran tamaño. 
+<!--SCCMDocs-pr issue 2671-->
+De forma predeterminada, este paso solo cifra el espacio utilizado en la unidad. Este comportamiento predeterminado es el recomendado, ya que es más rápido y eficaz. A partir de la versión 1806, si la organización necesita cifrar toda la unidad durante la instalación, habilite esta opción. El programa de instalación de Windows espera a que se cifre toda la unidad, lo que tarda mucho tiempo, especialmente en unidades de gran tamaño. 
 
 #### <a name="skip-this-step-for-computers-that-do-not-have-a-tpm-or-when-tpm-is-not-enabled"></a>Omitir este paso para equipos que no tengan TPM o cuando TPM no esté habilitado
 Seleccione esta opción para omitir el cifrado de unidad en un equipo que no contenga un TPM compatible o habilitado. Por ejemplo, use esta opción al implementar un sistema operativo en una máquina virtual.  
@@ -1419,7 +1422,7 @@ Especifica los parámetros que se pasan al script de PowerShell. Estos parámetr
 #### <a name="powershell-execution-policy"></a>Directiva de ejecución de PowerShell
 Determine qué scripts de PowerShell (si hay alguno) se permiten ejecutar en el equipo. Elija una de las siguientes directivas de ejecución:  
 
-- **AllSigned**: solo se ejecutan los scripts firmados por un editor de confianza  
+- **AllSigned**: solo se ejecutan scripts firmados por un editor de confianza  
 
 - **Undefined**: no se define ninguna directiva de ejecución  
 
@@ -1516,7 +1519,7 @@ Para establecer una variable dinámica para su uso en la secuencia de tareas, ag
 
     Especifique una o más variables que se van a establecer para una regla que se evalúa como true, o bien establezca variables sin usar una regla. Seleccione una variable existente o cree una variable personalizada.  
 
-    - **Variables de secuencia de tareas existentes**: seleccione una o más variables de una lista de variables de secuencia de tareas existentes. Las variables de matriz no están disponibles para seleccionar.  
+    - **Variables de secuencia de tareas existentes**: seleccione una o más variables en una lista de variables de secuencia de tareas existentes. Las variables de matriz no están disponibles para seleccionar.  
 
     - **Variables de secuencia de tareas personalizadas**: defina una variable de secuencia de tareas personalizada. También puede especificar una variable de secuencia de tareas existente. Este valor es útil para especificar una matriz de variables existente, como **OSDAdapter**, ya que las matrices de variables no están en la lista de variables de secuencia de tareas existentes.  
 
@@ -1549,7 +1552,8 @@ En la pestaña **Propiedades** de este paso, configure las opciones descritas en
 Especifique el nombre de una variable de acción o de secuencia de tareas integrada, o bien especifique su propio nombre de variable definido por el usuario.  
 
 #### <a name="do-not-display-this-value"></a>No mostrar este valor
-<!--1358330--> A partir de la versión 1806, habilite esta opción para enmascarar datos confidenciales almacenados en variables de secuencia de tareas. Por ejemplo, al especificar una contraseña. 
+<!--1358330-->
+A partir de la versión 1806, habilite esta opción para enmascarar datos confidenciales almacenados en variables de secuencia de tareas. Por ejemplo, al especificar una contraseña. 
 
 > [!Note]  
 > Habilite esta opción y, a continuación, establezca el valor de la variable de secuencia de tareas. En caso contrario, el valor de la variable no se configura tal como desea, lo cual puede provocar comportamientos inesperados cuando se ejecuta la secuencia de tareas.<!--SCCMdocs issue #800--> 
@@ -1577,7 +1581,7 @@ Para agregar este paso en el editor de secuencia de tareas, seleccione **Agregar
 
 Este paso realiza las siguientes acciones:  
 
-#### <a name="preliminaries-windows-pe"></a>Pasos preliminares: Windows PE  
+#### <a name="preliminaries-windows-pe"></a>Pasos preliminares: Windows°PE  
 
 1. Sustituya las variables de secuencia de tareas en el archivo unattend.xml.  
 
@@ -1680,11 +1684,11 @@ Especifique la edición en los medios del sistema operativo que se usará para l
 Especifique la clave de producto que se debe aplicar al proceso de actualización.  
 
 #### <a name="provide-the-following-driver-content-to-windows-setup-during-upgrade"></a>Proporcionar el contenido del controlador siguiente al programa de configuración de Windows durante la actualización
-Agregue controladores al equipo de destino durante el proceso de actualización. Esta opción corresponde a la opción de línea de comandos de instalación de Windows `/InstallDriver`. Los controladores deben ser compatibles con Windows 10. especifique una de las siguientes opciones:  
+Agregue controladores al equipo de destino durante el proceso de actualización. Esta opción corresponde a la opción de línea de comandos de instalación de Windows `/InstallDriver`. Los controladores deben ser compatibles con Windows 10. Especifique una de las siguientes opciones:  
 
-- **Paquete de controladores**: Seleccione **Examinar** y elija un paquete de controladores existente en la lista.  
+- **Paquete de controladores**: seleccione **Examinar** y elija un paquete de controladores existente en la lista.  
 
-- **Contenido almacenado provisionalmente**:  seleccione esta opción para especificar la ubicación del paquete de controladores. Puede especificar una carpeta local, la ruta de red o una variable de secuencia de tareas. Cuando se use una variable para la ruta de origen, establezca su valor previamente en la secuencia de tareas. Por ejemplo, mediante el paso [Descargar contenido de paquete](/sccm/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent).  
+- **Contenido almacenado provisionalmente**: seleccione esta opción para especificar la ubicación del paquete de controladores. Puede especificar una carpeta local, la ruta de red o una variable de secuencia de tareas. Cuando se use una variable para la ruta de origen, establezca su valor previamente en la secuencia de tareas. Por ejemplo, mediante el paso [Descargar contenido de paquete](/sccm/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent).  
 
 #### <a name="time-out-minutes"></a>Tiempo de espera (minutos)
 Especifique el número de minutos antes de que se produzca un error de Configuration Manager en este paso. Esta opción es útil si el programa de instalación de Windows detiene el procesamiento pero no finaliza.  
@@ -1692,7 +1696,8 @@ Especifique el número de minutos antes de que se produzca un error de Configura
 #### <a name="perform-windows-setup-compatibility-scan-without-starting-upgrade"></a>Realizar examen de compatibilidad del programa de instalación de Windows sin iniciar la actualización
 Realice el examen de compatibilidad del programa de instalación de Windows sin iniciar el proceso de actualización. Esta opción corresponde a la opción de línea de comandos de instalación de Windows `/Compat ScanOnly`. Implemente el paquete de actualización del sistema operativo completo con esta opción. 
 
-<!--SCCMDocs-pr issue 2812--> A partir de la versión 1806, cuando se habilita esta opción, este paso no pone el cliente de Configuration Manager en modo de aprovisionamiento. El programa de instalación de Windows se ejecuta silenciosamente en segundo plano y el cliente continúa funcionando con normalidad. 
+<!--SCCMDocs-pr issue 2812-->
+A partir de la versión 1806, cuando se habilita esta opción, este paso no pone el cliente de Configuration Manager en modo de aprovisionamiento. El programa de instalación de Windows se ejecuta silenciosamente en segundo plano y el cliente continúa funcionando con normalidad. 
 
 La instalación devuelve un código de salida como resultado de la exploración. En la tabla siguiente se proporcionan algunos de los códigos de salida más comunes:  
 

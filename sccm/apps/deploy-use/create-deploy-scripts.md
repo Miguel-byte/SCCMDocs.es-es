@@ -12,10 +12,10 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 007c3b68932a673b5d1971fbcf6919a7ad3adc70
-ms.sourcegitcommit: 8803a64692f3edc0422b58f6c3037a8796374cc8
+ms.sourcegitcommit: da753df27d3909265ca45d3e79091f1e98758d16
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
+ms.lasthandoff: 04/04/2019
 ms.locfileid: "57881850"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Creación y ejecución de scripts de PowerShell desde la consola de Configuration Manager
@@ -121,7 +121,7 @@ Los tres roles de seguridad usados para ejecutar scripts no se crean de forma pr
 
 |Categoría|Permiso|Estado|
 |---|---|---|
-|Colección|Ejecutar secuencia de comandos|Sí|
+|Colección|Ejecutar script|Sí|
 |Sitio|Lectura|Sí|
 |Scripts SMS|Lectura|Sí|
 
@@ -132,7 +132,7 @@ Los tres roles de seguridad usados para ejecutar scripts no se crean de forma pr
  
 |Categoría|Permiso|Estado|
 |---|---|---|
-|Colección|Ejecutar secuencia de comandos|No|
+|Colección|Ejecutar script|No|
 |Sitio|Lectura|Sí|
 |Scripts SMS|Crear|Sí|
 |Scripts SMS|Lectura|Sí|
@@ -146,7 +146,7 @@ Los tres roles de seguridad usados para ejecutar scripts no se crean de forma pr
 
 |Categoría|Permiso|Estado|
 |---|---|---|
-|Colección|Ejecutar secuencia de comandos|No|
+|Colección|Ejecutar script|No|
 |Sitio|Lectura|Sí|
 |Scripts SMS|Lectura|Sí|
 |Scripts SMS|Aprobar|Sí|
@@ -181,7 +181,7 @@ Al agregar parámetros a un script, dotará de más flexibilidad a su trabajo. P
 
 En el cuadro de diálogo **Crear script**, haga clic en **Parámetros de script**, bajo **Script**.
 
-Cada uno de los parámetros de script tiene su propio cuadro de diálogo para agregar más detalles y la validación. Si hay un parámetro predeterminado en la secuencia de comandos, se enumerarán en el parámetro de la interfaz de usuario y se puede establecer. Administrador de configuración no sobrescribirá el valor predeterminado, ya que nunca se modifique directamente el script. Se puede considerar esto como "rellenan los valores sugeridos" se muestran en la interfaz de usuario, pero que Configuration Manager no proporciona acceso a los valores de "default" en tiempo de ejecución. Esto se puede solucionar mediante la edición de la secuencia de comandos para que los valores predeterminados correctos. <!--17694323-->
+Cada uno de los parámetros de script tiene su propio cuadro de diálogo para agregar más detalles y la validación. Si hay un parámetro predeterminado en el script, se enumerará en la interfaz de usuario del parámetro y podrá configurarlo. Configuration Manager no sobrescribirá el valor predeterminado, ya que nunca modificará el script directamente. Puede pensar que en la interfaz de usuario se proporcionan "valores sugeridos rellenados previamente", pero Configuration Manager no proporciona acceso a los valores "predeterminados" en entorno de ejecución. Esto se puede solucionar mediante la edición del script para que tenga los valores predeterminados correctos. <!--17694323-->
 
 >[!IMPORTANT]
 > Los valores de parámetro no pueden contener un apóstrofo. </br></br>
@@ -263,7 +263,7 @@ El script se ejecuta como cuenta de *sistema* o de *equipo* en los clientes obje
 
 ## <a name="script-monitoring"></a>Supervisión de scripts
 
-Una vez iniciada la ejecución de un script en una recopilación de dispositivos, utilice el procedimiento siguiente para supervisar la operación. A partir de la versión 1710, puede supervisar un script en tiempo real en cuanto se ejecuta, así como volver a un informe de una ejecución determinada de la funcionalidad Ejecutar scripts. Se limpien los datos de estado de script como parte de la [tarea de mantenimiento de eliminar operaciones cliente antiguas](../../core/servers/manage/reference-for-maintenance-tasks.md) o eliminación de la secuencia de comandos.<br>
+Una vez iniciada la ejecución de un script en una recopilación de dispositivos, utilice el procedimiento siguiente para supervisar la operación. A partir de la versión 1710, puede supervisar un script en tiempo real en cuanto se ejecuta, así como volver a un informe de una ejecución determinada de la funcionalidad Ejecutar scripts. Los datos de estado del script se limpian como parte de la [tarea de mantenimiento Eliminar operaciones cliente antiguas](../../core/servers/manage/reference-for-maintenance-tasks.md) o eliminar el script.<br>
 
 ![Supervisión de scripts: estado de ejecución de scripts](./media/run-scripts/RS-monitoring-three-bar.png)
 
@@ -299,7 +299,7 @@ Microsoft Windows 10 Enterprise
 - Los clientes de 1810 devuelven resultados inferiores a 80 KB al sitio a través de un canal de comunicación rápido. Este cambio aumenta el rendimiento de la visualización de resultados del script o la consulta.  
 
   - Si el resultado del script o la consulta es mayor que 80 KB, el cliente envía los datos a través de un mensaje de estado.  
-  - Los clientes anteriores a la 1802 seguirán usando los mensajes de estado.
+  - Los clientes anteriores a 1802 siguen utilizando los mensajes de estado.
 
 ## <a name="script-output-pre-1810"></a>Salida del script anterior a 1810
 
@@ -317,7 +317,7 @@ Microsoft Windows 10 Enterprise
 
 ## <a name="log-files"></a>Archivos de registro
 
-A partir de la versión 1810, se agregó un registro adicional para solucionar problemas.
+A partir de la versión 1810, se ha agregado un registro adicional para la resolución de problemas.
 
 - En el cliente, de forma predeterminada en C:\Windows\CCM\logs:  
   - **Scripts.log**  
