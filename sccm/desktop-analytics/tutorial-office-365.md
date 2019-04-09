@@ -2,7 +2,7 @@
 title: 'Tutorial: implementación de Office 365'
 titleSuffix: Configuration Manager
 description: Un tutorial sobre el uso de escritorio de análisis y Configuration Manager para implementar Office 365 en un grupo piloto.
-ms.date: 01/25/2019
+ms.date: 04/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: tutorial
@@ -12,14 +12,14 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 12f19fe6f52d1ceb4b47b080e45030df898a332a
-ms.sourcegitcommit: da753df27d3909265ca45d3e79091f1e98758d16
+ms.openlocfilehash: 4d21b2b94c53390a9fcdbc1be640578060042ea9
+ms.sourcegitcommit: 5ee9487c891c37916294bd34a10d04e398f111f7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58913564"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59069456"
 ---
-# <a name="tutorial-deploy-office-365-to-pilot"></a>Tutorial: Implementación piloto de Office 365 
+# <a name="tutorial-deploy-office-365-to-pilot"></a>Tutorial: Implementación piloto de Office 365
 
 > [!Note]  
 > Esta información se relaciona con un servicio en versión preliminar que puede modificarse sustancialmente antes de su lanzamiento comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información aquí proporcionada.  
@@ -34,7 +34,7 @@ En este tutorial, obtendrá información sobre cómo:
 > * Crear un plan de implementación de análisis de escritorio para Office 365 ProPlus  
 > * Implementar Office 365 ProPlus en Configuration Manager en el grupo piloto  
 
-Si no tiene una suscripción de Azure, cree un [cuenta gratuita](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) antes de comenzar. Cuando se configuran correctamente, uso de análisis de escritorio no incurrir en ningún gasto de Azure. 
+Si no tiene una suscripción de Azure, cree un [cuenta gratuita](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) antes de comenzar. Cuando se configuran correctamente, uso de análisis de escritorio no incurrir en ningún gasto de Azure.
 
 Análisis de escritorio usa un *área de trabajo de Log Analytics* en su suscripción de Azure. Un área de trabajo es básicamente un contenedor que incluye información de la cuenta y la información de configuración sencilla para la cuenta. Para obtener más información, consulte [Administrar áreas de trabajo](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor/toc.json).
 
@@ -109,7 +109,7 @@ Utilice este procedimiento para iniciar sesión el análisis de escritorio y con
 
     - **Los colaboradores del área de trabajo**: Crear y administrar planes de implementación en esta área de trabajo. No necesitan ningún acceso de Azure adicionales.  
   
-   Para agregar un usuario a cualquier grupo, escriba su dirección de correo electrónico o de nombre en el **escriba la dirección de correo electrónico o nombre** sección del grupo adecuado. Cuando termine, seleccione **siguiente**. 
+   Para agregar un usuario a cualquier grupo, escriba su dirección de correo electrónico o de nombre en el **escriba la dirección de correo electrónico o nombre** sección del grupo adecuado. Cuando termine, seleccione **siguiente**.
 
 5. En la página para **configurar el área de trabajo**:  
 
@@ -148,11 +148,11 @@ Utilice este procedimiento para iniciar sesión el análisis de escritorio y con
 
 3. Seleccione la aplicación y tenga en cuenta la **Id. de aplicación**. Este valor es un GUID que se usa para configurar la conexión de Configuration Manager.  
 
-4. Seleccione **configuración** en la aplicación y, a continuación, seleccione **claves**. En el **contraseñas** sección, especifique un **descripción de la clave**, especifique una fecha de expiración **duración**y, a continuación, seleccione **guardar**. Copia el **valor** de la clave, que se usa para configurar la conexión de Configuration Manager. 
+4. Seleccione **configuración** en la aplicación y, a continuación, seleccione **claves**. En el **contraseñas** sección, especifique un **descripción de la clave**, especifique una fecha de expiración **duración**y, a continuación, seleccione **guardar**. Copia el **valor** de la clave, que se usa para configurar la conexión de Configuration Manager.
 
     > [!Important]  
     > Esta es la única oportunidad para copiar el valor de clave. Si no copia ahora, deberá crear otra clave.  
-    > 
+    >
     > Guarde el valor de clave en una ubicación segura.  
 
 5. En la aplicación **configuración** panel, seleccione **permisos necesarios**.  
@@ -205,11 +205,11 @@ Instale la versión de Configuration Manager 1810 acumulativo (4486457) para adm
 
     - **Nombre del inquilino de Azure AD**: Este nombre es cómo se llama en Configuration Manager  
 
-    - **Id. de inquilino de Azure AD**: El **Id. de directorio** que copió de Azure AD   
+    - **Id. de inquilino de Azure AD**: El **Id. de directorio** que copió de Azure AD  
 
-    - **Id. de cliente**: El **Id. de aplicación** que copió desde la aplicación de Azure AD   
+    - **Id. de cliente**: El **Id. de aplicación** que copió desde la aplicación de Azure AD  
 
-    - **Clave secreta**: La clave **valor** que copió desde la aplicación de Azure AD   
+    - **Clave secreta**: La clave **valor** que copió desde la aplicación de Azure AD  
 
     - **Expiración de la clave secreta**: La misma fecha de expiración de la clave   
 
@@ -233,7 +233,7 @@ Instale la versión de Configuration Manager 1810 acumulativo (4486457) para adm
 
     - **Recopilación de destino**: Esta colección incluye todos los dispositivos de Configuration Manager se configura con el Id. comercial y la configuración de datos de diagnóstico. Es el conjunto completo de los dispositivos que Configuration Manager se conecta al servicio de análisis de escritorio.  
 
-    - **Los dispositivos de la recopilación de destino usa un proxy de usuario autenticado para la comunicación saliente**: De forma predeterminada, este valor es **No**. Si es necesario en su entorno, se establece en **Sí**.   
+    - **Los dispositivos de la recopilación de destino usa un proxy de usuario autenticado para la comunicación saliente**: De forma predeterminada, este valor es **No**. Si es necesario en su entorno, se establece en **Sí**.  
 
     - **Seleccione las recopilaciones específicas para sincronizar con análisis de escritorio**: Seleccione **agregar** para incluir las colecciones adicionales. Estas colecciones están disponibles en el portal de análisis de escritorio para su agrupación con planes de implementación. No olvide incluir colecciones de exclusión de pruebas y pruebas.  
 
@@ -245,7 +245,7 @@ Configuration Manager crea una directiva de configuración para configurar los d
 
 Supervisar la configuración de los dispositivos para el análisis de escritorio. En la consola de Configuration Manager, vaya a la **biblioteca de Software** área de trabajo, expanda el **mantenimiento de Microsoft 365** nodo y seleccione el **mantenimiento de la conexión** panel.  
 
-Configuration Manager se sincroniza todos los planes de implementación de escritorio Analytics dentro de 15 minutos después de crear la conexión. En la consola de Configuration Manager, vaya a la **biblioteca de Software** área de trabajo, expanda el **mantenimiento de Microsoft 365** nodo y seleccione el **planes de implementación** nodo. 
+Configuration Manager se sincroniza todos los planes de implementación de escritorio Analytics dentro de 15 minutos después de crear la conexión. En la consola de Configuration Manager, vaya a la **biblioteca de Software** área de trabajo, expanda el **mantenimiento de Microsoft 365** nodo y seleccione el **planes de implementación** nodo.
 
 
 
@@ -275,7 +275,7 @@ Utilice este procedimiento para crear un plan de implementación en escritorio A
 
         - Instalar bajo el umbral de recuento de los complementos de Office. El umbral predeterminado es `2%`. Complementos debajo de este umbral se establecen automáticamente en *bajo número de instalaciones*. Análisis de escritorio no validación estos complementos durante la prueba piloto. 
 
-            Si un complemento se instala en un mayor porcentaje de equipos a este umbral, el plan de implementación marca como el complemento *Noteworthy*. A continuación, puede decidir su importancia para la prueba durante la fase piloto.   
+            Si un complemento se instala en un mayor porcentaje de equipos a este umbral, el plan de implementación marca como el complemento *Noteworthy*. A continuación, puede decidir su importancia para la prueba durante la fase piloto.  
 
     - **Fecha de finalización**: Elija la fecha por el que se debe implementar completamente Office en todos los dispositivos de destino.  
 
@@ -287,7 +287,7 @@ Utilice este procedimiento para crear un plan de implementación en escritorio A
 
     1. En el **complementos de Office** pestaña, seleccione esta opción para mostrar sólo **no revisado** activos.  
 
-    2. Seleccione cada complemento y, a continuación, seleccione **editar**. Puede seleccionar más de una aplicación para editar al mismo tiempo.   
+    2. Seleccione cada complemento y, a continuación, seleccione **editar**. Puede seleccionar más de una aplicación para editar al mismo tiempo.  
 
     3. Elija un nivel de importancia de la **importancia** lista. Si desea que el análisis de escritorio para validar el complemento durante el programa piloto, seleccione **crítico** o **importante**. No valida los complementos marcados como **importante no**. Tenga en cuenta el riesgo de compatibilidad y otra información del plan al asignar niveles de importancia.  
 
@@ -337,7 +337,7 @@ Utilice este procedimiento para implementar Office 365 ProPlus en Configuration 
 
     5. Cuando haya terminado, seleccione **revisión** en la esquina superior derecha. Revise la configuración y, a continuación, seleccione **enviar**.  
 
-5. Seleccione **Siguiente**. En el **implementación** página, seleccione **n** implementarla ahora. (El procedimiento siguiente usa el plan de implementación de análisis de escritorio para la implementación). Seleccione **siguiente** y complete el asistente.  
+4. Seleccione **Siguiente**. En el **implementación** página, seleccione **n** implementarla ahora. (El procedimiento siguiente usa el plan de implementación de análisis de escritorio para la implementación). Seleccione **siguiente** y complete el asistente.  
 
 
 ### <a name="bkmk_deploy-app"></a> Implementar Office 365 con el plan de implementación de análisis de escritorio
@@ -348,7 +348,12 @@ Utilice este procedimiento para implementar Office 365 ProPlus en Configuration 
 
 3. En el **piloto estado** icono, elija **aplicación** desde la lista desplegable y, a continuación, seleccione **implementar**.  
 
-4. En el **General** página del Asistente para implementar Software, seleccione **examinar** junto a la **Software** campo. Seleccione la aplicación de Office 365, por ejemplo, **Office 365 ProPlus**. Con la integración de análisis de escritorio, Configuration Manager crea automáticamente una colección para el plan de implementación piloto. Seleccione **Siguiente**.  
+4. En el **General** página del Asistente para implementar Software, seleccione **examinar** junto a la **Software** campo. Seleccione la aplicación de Office 365, por ejemplo, **Office 365 ProPlus**. Seleccione **Siguiente**.  
+
+    > [!Note]  
+    > Con la integración de análisis de escritorio, Configuration Manager crea automáticamente una colección para el plan de implementación piloto. Puede tardar hasta 10 minutos para sincronizar antes de que se puede usar esta colección.<!-- 3887891 -->
+    >
+    > Esta colección está reservada para los dispositivos de plan de implementación de escritorio Analytics. No se admiten los cambios manuales a esta colección.<!-- 3866460, SCCMDocs-pr 3544 -->  
 
 5. En el **contenido** página, seleccione **agregar**y, a continuación, seleccione **punto de distribución**. Seleccione un punto de distribución disponibles para hospedar el contenido de instalación y seleccione **Aceptar**. A continuación, seleccione **Siguiente**.  
 
@@ -375,11 +380,8 @@ Utilice este procedimiento para implementar Office 365 ProPlus en Configuration 
 -->
 
 
-
-
 ## <a name="next-steps"></a>Pasos siguientes
 
 Avance al siguiente artículo para obtener más información sobre los planes de implementación de análisis de escritorio.
 > [!div class="nextstepaction"]  
 > [Planes de implementación](/sccm/desktop-analytics/about-deployment-plans)
-

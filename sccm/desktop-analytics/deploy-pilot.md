@@ -2,7 +2,7 @@
 title: Implementación piloto
 titleSuffix: Configuration Manager
 description: Guía de procedimientos para implementar en un grupo piloto de análisis de escritorio.
-ms.date: 01/25/2019
+ms.date: 04/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 797b8ab61f5be2fd851e735c475ed610ed7d3cfe
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 4aa078f5a8306cb30ea83d45b93b18971be7764f
+ms.sourcegitcommit: 5ee9487c891c37916294bd34a10d04e398f111f7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56755533"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59069388"
 ---
 # <a name="how-to-deploy-to-pilot-with-desktop-analytics"></a>Implementación piloto con análisis de escritorio
 
@@ -32,7 +32,7 @@ Una de las ventajas del análisis de escritorio es ayudar a identificar el conju
 
 ## <a name="address-issues"></a>Solucionar problemas
 
-Use el portal de análisis de escritorio para revisar cualquier problema notificado a los recursos que podrían bloquear la implementación. A continuación, aprobar, rechazar o modificar la corrección sugerida. Todos los elementos se deben marcar **listo** o **listo (con la corrección)** antes de que comience la implementación piloto. 
+Use el portal de análisis de escritorio para revisar cualquier problema notificado a los recursos que podrían bloquear la implementación. A continuación, aprobar, rechazar o modificar la corrección sugerida. Todos los elementos se deben marcar **listo** o **listo (con la corrección)** antes de que comience la implementación piloto.
 
 1. Vaya al portal de Analytics de escritorio y seleccione **planes de implementación** en el grupo de administración.  
 
@@ -42,10 +42,9 @@ Use el portal de análisis de escritorio para revisar cualquier problema notific
 
 4. En el **aplicaciones** pestaña, revise las aplicaciones que necesitan sus comentarios.  
 
-5. Para cada aplicación, seleccione el nombre de la aplicación. En el panel de información, revise la recomendación y seleccione la decisión de actualización. Si elige **no revisado** o **no se puede**, a continuación, análisis de escritorio no incluye los dispositivos con esta aplicación en la implementación piloto.  
+5. Para cada aplicación, seleccione el nombre de la aplicación. En el panel de información, revise la recomendación y seleccione la decisión de actualización. Si elige **no revisado** o **no se puede**, a continuación, análisis de escritorio no incluye los dispositivos con esta aplicación en la implementación piloto. Si elige **listo (con la corrección)**, utilice el **notas de la corrección** para capturar las acciones que realizar para solucionar un problema, como *reinstalar* o *encontrar el versión recomendada del fabricante*.
 
 6. Repita esta revisión para otros activos.  
-
 
 
 
@@ -73,15 +72,18 @@ Configuration Manager usa los datos de análisis de escritorio para crear una co
 
     - **Secuencia de tareas** para Windows 10  
   
-   Seleccione **implementar**. Esta acción inicia al Asistente para implementar Software para el tipo de objeto seleccionado. 
+   Seleccione **implementar**. Esta acción inicia al Asistente para implementar Software para el tipo de objeto seleccionado.
 
+    > [!Note]  
+    > Con la integración de análisis de escritorio, Configuration Manager crea automáticamente una colección para el plan de implementación piloto. Puede tardar hasta 10 minutos para sincronizar antes de que se puede usar esta colección.<!-- 3887891 -->
+    >
+    > Esta colección está reservada para los dispositivos de plan de implementación de escritorio Analytics. No se admiten los cambios manuales a esta colección.<!-- 3866460, SCCMDocs-pr 3544 -->  
 
 Vea los siguientes artículos para más información:  
 
 - [Implementar una aplicación](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy)  
 
 - [Implementación de una secuencia de tareas](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS)  
-
 
 Si el plan de implementación es para Windows 10 y Office 365, repita este proceso para crear una segunda implementación. Por ejemplo, si es la primera implementación para la secuencia de tareas, cree una segunda implementación para la aplicación.
 
@@ -100,7 +102,7 @@ Supervisión de la misma como cualquier otra implementación de secuencia de tar
 
 ### <a name="desktop-analytics-portal"></a>Portal de análisis de escritorio
 
-Usar el portal de análisis de escritorio para ver el estado de cualquier plan de implementación. Seleccione el plan de implementación y, a continuación, seleccione **Introducción a los planes**. 
+Usar el portal de análisis de escritorio para ver el estado de cualquier plan de implementación. Seleccione el plan de implementación y, a continuación, seleccione **Introducción a los planes**.
 
 ![Captura de pantalla de información general del plan de implementación en escritorio Analytics](media/deployment-plan-overview.png)
 
@@ -126,7 +128,7 @@ Medida que se abordan estos problemas de implementación, el panel seguirá most
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Permiten la ejecución piloto durante un período de tiempo para recopilar datos operativos. Anime a los usuarios de dispositivos pilotos para probar aplicaciones, complementos y macros. 
+Permiten la ejecución piloto durante un período de tiempo para recopilar datos operativos. Anime a los usuarios de dispositivos pilotos para probar aplicaciones, complementos y macros.
 
 Cuando la implementación piloto cumple los criterios de éxito, vaya al siguiente artículo para implementar en producción.
 > [!div class="nextstepaction"]  

@@ -2,7 +2,7 @@
 title: Solución de problemas de análisis de escritorio
 titleSuffix: Configuration Manager
 description: Detalles técnicos para ayudarle a solucionar problemas relacionados con el análisis de escritorio.
-ms.date: 01/25/2019
+ms.date: 04/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d857b0e9d280bfed0834a97760d4fd481f0398d7
-ms.sourcegitcommit: d138a6a9ccbb6a03dc378272cf6f81b98b940f1d
+ms.openlocfilehash: b7fab23b4d1d977d2d634a11959887f1c1baa9a7
+ms.sourcegitcommit: 5ee9487c891c37916294bd34a10d04e398f111f7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "59013414"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59069439"
 ---
 # <a name="troubleshooting-desktop-analytics"></a>Solución de problemas de análisis de escritorio
 
@@ -45,9 +45,11 @@ Muchos problemas comunes están provocados por los requisitos previos que faltan
 
 ## <a name="monitor-connection-health"></a>Supervisión de estado de conexión
 
-Use la **mantenimiento de la conexión** panel en Configuration Manager para profundizar en categorías por estado de dispositivos. En la consola de Configuration Manager, vaya a la **biblioteca de Software** área de trabajo, expanda el **mantenimiento de Microsoft 365** nodo y seleccione el **mantenimiento de la conexión** panel.  
+Use la **mantenimiento de la conexión** panel en Configuration Manager para profundizar en categorías por estado de dispositivos. En la consola de Configuration Manager, vaya a la **biblioteca de Software** área de trabajo, expanda el **escritorio Analytics mantenimiento** nodo y seleccione el **estado de conexión** panel.  
 
 ![Captura de pantalla del panel de mantenimiento de conexión de Configuration Manager](media/connection-health-dashboard.png)
+
+Cuando se configura por primera vez el análisis de escritorio, estos gráficos no pueden mostrar datos completos. Puede tardar 2 y 3 días para los dispositivos activos enviar datos de diagnóstico para el servicio de análisis de escritorio, el servicio para procesar los datos y, a continuación, sincronizar con el sitio de Configuration Manager.<!-- 4098037 -->
 
 Si piensa que algunos dispositivos no están visibles en el escritorio de análisis, compruebe primero el porcentaje de **dispositivos conectados**. Si es inferior al 100%, asegúrese de que los dispositivos son compatibles con análisis de escritorio. Para obtener más información, consulte [Requisitos previos](/sccm/desktop-analytics/overview#prerequisites).
 
@@ -63,35 +65,42 @@ A continuación, revisar el **mantenimiento de la conexión** gráfico. Muestra 
 - [Requisitos previos que faltan](#missing-prerequisites)  
 - [Datos que faltan](#missing-data)  
 
-Seleccione el nombre de categoría para quitar o agregarlo en el gráfico. Esta acción ayuda a acercar el gráfico para que pueda ver los tamaños relativos de segmentos más pequeños. 
+Seleccione el nombre de categoría para quitar o agregarlo en el gráfico. Esta acción ayuda a acercar el gráfico para que pueda ver los tamaños relativos de segmentos más pequeños.
 
 #### <a name="properly-enrolled"></a>Correctamente inscrito
-El dispositivo tiene los siguientes atributos:  
+
+El dispositivo tiene los siguientes atributos:
+
 - Una versión 1810 o posterior del cliente de Configuration Manager  
 - No hay ningún error de configuración  
 - Escritorio Analytics recibe datos de diagnóstico completados de este dispositivo en los últimos 28 días  
 - Escritorio Analytics tiene un inventario completo de la configuración del dispositivo y las aplicaciones instaladas  
 
 #### <a name="configuration-issues"></a>Problemas de configuración
+
 Configuration Manager detecta uno o varios problemas con la configuración necesaria para el análisis de escritorio. Para obtener más información, consulte la lista de [propiedades de dispositivo de escritorio Analytics en Configuration Manager](#bkmk_config-issues).  
 
 #### <a name="client-not-installed"></a>Cliente no instalado
-El dispositivo está destinado a análisis de escritorio, pero no es un cliente de Configuration Manager. 
+
+El dispositivo está destinado a análisis de escritorio, pero no es un cliente de Configuration Manager.
 
 Se requiere el cliente de Configuration Manager para configurar y administrar el dispositivo para el análisis de escritorio. Para obtener más información, vea [Métodos de instalación de cliente en System Center Configuration Manager](/sccm/core/clients/deploy/plan/client-installation-methods).  
 
 #### <a name="waiting-for-enrollment"></a>Esperando para la inscripción
-Análisis de escritorio no tienen datos de diagnóstico para este dispositivo. Este problema puede ser porque el dispositivo se agregó recientemente a la colección de destino y aún no envió los datos. También puede significar el dispositivo no se están comunicando correctamente con el servicio y los datos de diagnóstico más recientes tiene más de 28 días de antigüedad. 
+
+Análisis de escritorio no tienen datos de diagnóstico para este dispositivo. Este problema puede ser porque el dispositivo se agregó recientemente a la colección de destino y aún no envió los datos. También puede significar el dispositivo no se están comunicando correctamente con el servicio y los datos de diagnóstico más recientes tiene más de 28 días de antigüedad.
 
 Asegúrese de que el dispositivo es capaz de comunicarse con el servicio. Para obtener más información, consulte [extremos](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
 
 #### <a name="missing-prerequisites"></a>Requisitos previos que faltan
-El cliente de Configuration Manager no es de al menos la versión 1810 (5.0.8740). 
+
+El cliente de Configuration Manager no es de al menos la versión 1810 (5.0.8740).
 
 Actualice al cliente a la versión más reciente. Considere la posibilidad de habilitar la actualización automática del cliente para el sitio de Configuration Manager. Para obtener más información, vea [Actualizar clientes](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).  
 
 #### <a name="missing-data"></a>Datos que faltan
-Análisis de escritorio no pueden crear una evaluación de compatibilidad. No tiene un conjunto de datos completo para la configuración del dispositivo (del censo) o instalar aplicaciones (inventario). 
+
+Análisis de escritorio no pueden crear una evaluación de compatibilidad. No tiene un conjunto de datos completo para la configuración del dispositivo (del censo) o instalar aplicaciones (inventario).
 
 A menudo, este problema se corrige automáticamente cuando el dispositivo intenta enviar. Si persiste, asegúrese de que el dispositivo es capaz de comunicarse con el servicio. Para obtener más información, consulte [extremos](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
 
@@ -99,6 +108,7 @@ A menudo, este problema se corrige automáticamente cuando el dispositivo intent
 ### <a name="device-list"></a>Lista de dispositivos
 
 Para ver una lista específica de dispositivos por estado, comience con la **mantenimiento de la conexión** panel. Seleccione uno de los segmentos de la **mantenimiento de la conexión** icono y explorar en profundidad una lista de dispositivos de esta categoría. Esta vista personalizada del dispositivo muestra las siguientes columnas de análisis de escritorio de forma predeterminada:
+
 - Configuración de Id. comercial
 - Actualización de compatibilidad mínimo
 - Opción datos de diagnóstico de Windows
@@ -106,16 +116,17 @@ Para ver una lista específica de dispositivos por estado, comience con la **man
 - Conectividad de punto de conexión de diagnóstico de Windows
 - Conectividad de punto de conexión de diagnóstico de Office
 
-Estas columnas corresponden a la clave [requisitos previos](/sccm/desktop-analytics/overview#prerequisites) los dispositivos para comunicarse con el análisis de escritorio. 
+Estas columnas corresponden a la clave [requisitos previos](/sccm/desktop-analytics/overview#prerequisites) los dispositivos para comunicarse con el análisis de escritorio.
 
 ![Lista de dispositivos de captura de pantalla de correctamente inscrito](media/sccm-device-list-properly-enrolled.png)
 
-Seleccione un dispositivo para ver la lista completa de las propiedades disponibles en el panel de detalles. También puede agregar cualquiera de estas propiedades como columnas a la lista de dispositivos. 
+Seleccione un dispositivo para ver la lista completa de las propiedades disponibles en el panel de detalles. También puede agregar cualquiera de estas propiedades como columnas a la lista de dispositivos.
 
 
 ### <a name="bkmk_config-issues"></a> Propiedades de dispositivo de escritorio Analytics en Configuration Manager
 
 Las columnas siguientes están disponibles en la lista de dispositivos:
+
 - [Configuración de Appraiser](#appraiser-configuration)  
 - [Actualización de compatibilidad mínimo](#minimum-compatibility-update)  
 - [Versión Appraiser](#appraiser-version)  
@@ -135,12 +146,14 @@ Las columnas siguientes están disponibles en la lista de dispositivos:
 - [Recuperación del identificador de dispositivo único](#unique-device-identifier-retrieval)  
 - [Opción datos de diagnóstico de Windows](#windows-diagnostic-data-opt-in)  
 - [Conectividad de punto de conexión de diagnóstico de Office](#office-diagnostic-endpoint-connectivity)  
+- [Participación en Office datos de diagnóstico](#office-diagnostic-data-opt-in)
 
 #### <a name="appraiser-configuration"></a>Configuración de Appraiser
+
 <!--20,21-->
 Appraiser es el componente de Windows que se corresponde con el [actualizaciones de compatibilidad](/sccm/desktop-analytics/enroll-devices#update-devices). Evalúa las aplicaciones y los controladores del dispositivo para la compatibilidad con la versión más reciente de Windows. 
 
-Si esta comprobación se realiza correctamente, el componente appraiser está configurado correctamente en el dispositivo. 
+Si esta comprobación se realiza correctamente, el componente appraiser está configurado correctamente en el dispositivo.
 
 En caso contrario, es posible que aparezca uno de los errores siguientes:
 
@@ -154,36 +167,36 @@ Compruebe los permisos de esta clave del registro. Asegúrese de que la cuenta s
 
 Para obtener más información, revise M365AHandler.log en el cliente.  
 
-
 #### <a name="minimum-compatibility-update"></a>Actualización de compatibilidad mínimo
+
 <!--18,19,32-->
-La actualización de compatibilidad (appraiser.dll) no está instalado o no está actualizada en el dispositivo. Es más antigua que el requisito mínimo para el análisis de escritorio, 10.0.17763. 
+La actualización de compatibilidad (appraiser.dll) no está instalado o no está actualizada en el dispositivo. Es más antigua que el requisito mínimo para el análisis de escritorio, 10.0.17763.
 
 Instale la actualización de compatibilidad más reciente. Para obtener más información, consulte [actualizaciones de compatibilidad](/sccm/desktop-analytics/enroll-devices#bkmk_appraiser).
 
-
 #### <a name="appraiser-version"></a>Versión Appraiser
-Esta propiedad muestra la versión actual del componente Appraiser en el dispositivo. Muestra la versión del archivo en `%windir%\System32\appraiser.dll`, sin las decimales. Por ejemplo, la versión del archivo 10.0.17763 muestra como 10017763. 
 
+Esta propiedad muestra la versión actual del componente Appraiser en el dispositivo. Muestra la versión del archivo en `%windir%\System32\appraiser.dll`, sin las decimales. Por ejemplo, la versión del archivo 10.0.17763 muestra como 10017763.
 
 #### <a name="last-successful-full-run-of-appraiser"></a>Última ejecución completa correcta de Appraiser
+
 Esta propiedad muestra la fecha y hora en que el dispositivo correctamente ejecutó por última Appraiser.
 
-
 #### <a name="appraiser-data-collection"></a>Recopilación de datos Appraiser
+
 <!--Appraiser run status-->
 <!--22,33-->
-Esta propiedad muestra el resultado más reciente de Windows que ejecuta el componente appraiser. 
+Esta propiedad muestra el resultado más reciente de Windows que ejecuta el componente appraiser.
 
-Si no se realiza correctamente, puede que aparezca uno de los errores siguientes: 
+Si no se realiza correctamente, puede que aparezca uno de los errores siguientes:
 
 - No se pueden recopilar datos de compatibilidad de aplicaciones (RunAppraiser). Compruebe los registros para obtener más información  
 
 - Colección de datos de compatibilidad de aplicaciones (CompatTelRunner.exe) finalizó con un código de error  
 
-Para obtener más información, revise M365AHandler.log en el cliente. 
+Para obtener más información, revise M365AHandler.log en el cliente.
 
-Busque el siguiente archivo: `%windir%\System32\CompatTelRunner.exe`. Si no existe, vuelva a instalar los [actualizaciones de compatibilidad](/sccm/desktop-analytics/enroll-devices#bkmk_appraiser). Asegúrese de que ningún otro componente del sistema es eliminar este archivo, como la directiva de grupo o un servicio antimalware. 
+Busque el siguiente archivo: `%windir%\System32\CompatTelRunner.exe`. Si no existe, vuelva a instalar los [actualizaciones de compatibilidad](/sccm/desktop-analytics/enroll-devices#bkmk_appraiser). Asegúrese de que ningún otro componente del sistema es eliminar este archivo, como la directiva de grupo o un servicio antimalware.
 
 Si el archivo M365Handler.log en el cliente incluye uno de los errores siguientes: `RunAppraiser failed. CompatTelRunner.exe exited with last error code: 0x800703F1`
 `RunAppraiser failed. CompatTelRunner.exe exited with last error code: 0x80070005`
@@ -202,7 +215,7 @@ Remove-Item -Path $Env:WinDir\appcompat\programs\amcache.hve
 Remove-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags" -Name AmiHivePermissionsCorrect -Force
 
 # set ASL logging level to output log files in %windir%\temp
-New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags" -Name LogFlags -Value 4 -PropertyType DWord -Force 
+New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags" -Name LogFlags -Value 4 -PropertyType DWord -Force
 
 # restart services
 Start-Service -Name diagtrack
@@ -211,29 +224,31 @@ Start-Service -Name dps
 ```
 
 #### <a name="last-successful-full-run-of-census"></a>Última ejecución completa correcta del censo
-Esta propiedad muestra la fecha y hora en que el dispositivo por última vez ejecutó correctamente del censo. 
+
+Esta propiedad muestra la fecha y hora en que el dispositivo por última vez ejecutó correctamente del censo.
 
 #### <a name="census-data-collection"></a>Recopilación de datos del censo
+
 <!-- Census run status -->
 <!--51,52-->
-Census es el componente de Windows que incluya el dispositivo. Estos datos de inventario se usan para comprender el dispositivo y su configuración. 
+Census es el componente de Windows que incluya el dispositivo. Estos datos de inventario se usan para comprender el dispositivo y su configuración.
 
 Esta propiedad muestra el resultado más reciente de Windows que ejecuta el componente del censo.
 
-Si no se realiza correctamente, puede que aparezca uno de los errores siguientes: 
+Si no se realiza correctamente, puede que aparezca uno de los errores siguientes:
 
 - No se pueden recopilar datos sobre el dispositivo y su configuración (RunCensus). Compruebe los registros para obtener los detalles de excepción  
 
 - Dispositivos y configuración de herramienta recopilación de datos (devicecensus.exe) no encontrado  
 
-Para obtener más información, revise M365AHandler.log en el cliente. 
+Para obtener más información, revise M365AHandler.log en el cliente.
 
-Busque el siguiente archivo: `%windir%\System32\DeviceCensus.exe`. Si no existe, vuelva a instalar los [actualizaciones de compatibilidad](/sccm/desktop-analytics/enroll-devices#bkmk_appraiser). Asegúrese de que ningún otro componente del sistema es eliminar este archivo, como la directiva de grupo o un servicio antimalware. 
-
+Busque el siguiente archivo: `%windir%\System32\DeviceCensus.exe`. Si no existe, vuelva a instalar los [actualizaciones de compatibilidad](/sccm/desktop-analytics/enroll-devices#bkmk_appraiser). Asegúrese de que ningún otro componente del sistema es eliminar este archivo, como la directiva de grupo o un servicio antimalware.
 
 #### <a name="windows-diagnostic-endpoint-connectivity"></a>Conectividad de punto de conexión de diagnóstico de Windows
+
 <!--12,15-->
-Si esta comprobación se realiza correctamente, el dispositivo es capaz de conectarse al usuario conectado experiencia y telemetría de punto de conexión (Vortex). 
+Si esta comprobación se realiza correctamente, el dispositivo es capaz de conectarse al usuario conectado experiencia y telemetría de punto de conexión (Vortex).
 
 En caso contrario, puede mostrar uno de los errores siguientes:  
 
@@ -254,23 +269,21 @@ Asegúrese de que el dispositivo es capaz de comunicarse con el servicio. Esta c
 
 Para obtener más información, revise M365AHandler.log en el cliente.  
 
-
 #### <a name="check-end-user-diagnostic-data"></a>Comprobar los datos de diagnóstico para el usuario final
-<!--1004-->
 
+<!--1004-->
 Si esta comprobación no se realiza correctamente, un usuario seleccionó una menor datos de diagnóstico de Windows en el dispositivo.
 
 Dependiendo de sus requisitos empresariales, puede deshabilitar la elección del usuario a través de la directiva de grupo. Use la configuración para **interfaz de usuario de participación en la configuración de telemetría configurar**. Para obtener más información, consulte [Configurar los datos de diagnóstico de Windows en la organización](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management).
 
-
 #### <a name="check-user-proxy"></a>Comprobar el proxy de usuario
-<!--30,35-->
 
+<!--30,35-->
 La configuración de DisableEnterpriseAuthProxy está habilitada de forma predeterminada para Windows 7. Para equipos Windows 8.1, Configuration Manager establece el valor de DisableEnterpriseAuthProxy en 0 (no está deshabilitado).
 
 Esta propiedad puede mostrar los errores siguientes:
 
-- Autenticación proxy está habilitado. Establezca DisableEnterpriseAuthProxy en 0 en `HKLM\Software\Policies\Microsoft\Windows\DataCollection` 
+- Autenticación proxy está habilitado. Establezca DisableEnterpriseAuthProxy en 0 en `HKLM\Software\Policies\Microsoft\Windows\DataCollection`
 
 - No puede comprobar el estado de autenticación proxy. Compruebe los registros para obtener los detalles de excepción
 
@@ -278,10 +291,10 @@ Para obtener más información, revise M365AHandler.log en el cliente.
 
 Compruebe los permisos de esta clave del registro. Asegúrese de que la cuenta sistema local puede tener acceso a esta clave para el cliente de Configuration Manager establecer.  
 
-
 #### <a name="commercial-id-configuration"></a>Configuración de Id. comercial
+
 <!--9, 11, 53-->
-Microsoft usa un único identificador comercial para asignar la información de dispositivos al área de trabajo de análisis de escritorio. Al integrar Configuration Manager con análisis de escritorio, consulta automáticamente el servicio para este identificador. Administrador de configuración debe aplicar automáticamente este identificador a los clientes que sean destinatarios configuración de análisis de escritorio. 
+Microsoft usa un único identificador comercial para asignar la información de dispositivos al área de trabajo de análisis de escritorio. Al integrar Configuration Manager con análisis de escritorio, consulta automáticamente el servicio para este identificador. Administrador de configuración debe aplicar automáticamente este identificador a los clientes que sean destinatarios configuración de análisis de escritorio.
 
 Si esta comprobación es correcta, a continuación, el dispositivo está configurado correctamente con un Id. comercial.
 
@@ -289,7 +302,7 @@ En caso contrario, puede mostrar uno de los errores siguientes:
 
 - No se puede escribir el CommercialId a la clave del registro `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`. Compruebe los permisos  
 
-- No se puede actualizar el CommercialId en la clave del registro `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`. Compruebe los registros para obtener los detalles de excepción   
+- No se puede actualizar el CommercialId en la clave del registro `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`. Compruebe los registros para obtener los detalles de excepción  
 
 - Proporcione el valor correcto de CommercialId en `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`  
 
@@ -299,8 +312,7 @@ Compruebe los permisos de esta clave del registro. Asegúrese de que la cuenta s
 
 Hay un identificador distinto para el dispositivo. Esta clave del registro está usando la directiva de grupo. Tiene prioridad sobre el identificador proporcionado por el Administrador de configuración.  
 
-
-Para ver el identificador comercial en el portal de análisis de escritorio, use el procedimiento siguiente: 
+Para ver el identificador comercial en el portal de análisis de escritorio, use el procedimiento siguiente:
 
 1. Vaya al portal de Analytics de escritorio y seleccione **servicios conectados** en el grupo de configuración Global.  
 
@@ -311,16 +323,14 @@ Para ver el identificador comercial en el portal de análisis de escritorio, use
 > [!Important]  
 > Solo **clave de Id. nuevo Get** cuando no se puede usar actual. Si regenera el identificador comercial, implementar el nuevo identificador en los dispositivos. Este proceso podría provocar la pérdida de datos de diagnóstico durante la transición.  
 
-
 #### <a name="windows-commercial-data-opt-in"></a>Participación datos comerciales en Windows
-<!--64-->
 
+<!--64-->
 Esta propiedad es específica de los dispositivos que ejecutan Windows 7 o Windows 8.1. Ejecute pruebas similares como [opción datos de diagnóstico de Windows](#windows-diagnostic-data-opt-in), excepto para el CommercialDataOptIn de valor.
 
-
 #### <a name="check-device-name-in-diagnostic-data"></a>Compruebe el nombre del dispositivo en los datos de diagnóstico
-<!--56,58-->
 
+<!--56,58-->
 Si esta comprobación se realiza correctamente, el dispositivo está configurado correctamente para compartir el nombre del dispositivo.
 
 En caso contrario, puede mostrar uno de los errores siguientes:
@@ -333,12 +343,12 @@ Para obtener más información, revise M365AHandler.log en el cliente.
 
 Compruebe los permisos de esta clave del registro. Asegúrese de que la cuenta sistema local puede tener acceso a esta clave para el cliente de Configuration Manager establecer.  
 
-Asegúrese de que otro mecanismo de directiva, como la directiva de grupo, no es si deshabilita a esta configuración. 
-
+Asegúrese de que otro mecanismo de directiva, como la directiva de grupo, no es si deshabilita a esta configuración.
 
 #### <a name="diagtrack-service-configuration"></a>Configuración del servicio DiagTrack
+
 <!--44,45,50-->
-Si esta comprobación se realiza correctamente, el componente DiagTrack está configurado correctamente en el dispositivo. La versión mínima requerida por el análisis de escritorio es 10010586 (10.0.10586). 
+Si esta comprobación se realiza correctamente, el componente DiagTrack está configurado correctamente en el dispositivo. La versión mínima requerida por el análisis de escritorio es 10010586 (10.0.10586).
 
 En caso contrario, es posible que aparezca uno de los errores siguientes:
 
@@ -359,12 +369,13 @@ Instale las actualizaciones más recientes. Para obtener más información, cons
 Asegúrese de que el **telemetría y experiencias del usuario conectado** se está ejecutando el servicio en el dispositivo.
 
 #### <a name="diagtrack-version"></a>Versión DiagTrack
-Esta propiedad muestra la versión actual del componente experiencia del usuario y telemetría en el dispositivo. Muestra la versión del archivo en `%windir%\System32\diagtrack.dll`, sin las decimales. Por ejemplo, la versión del archivo 10.0.10586 muestra como 10010586. 
+
+Esta propiedad muestra la versión actual del componente experiencia del usuario y telemetría en el dispositivo. Muestra la versión del archivo en `%windir%\System32\diagtrack.dll`, sin las decimales. Por ejemplo, la versión del archivo 10.0.10586 muestra como 10010586.
 
 #### <a name="sqm-id-retrieval"></a>Recuperación de Id. de SQM
-<!--38-->
 
-Esta propiedad es principalmente para los dispositivos de Windows 7. Se puede usar con versiones posteriores de sistema operativo como un identificador de reserva para el dispositivo. 
+<!--38-->
+Esta propiedad es principalmente para los dispositivos de Windows 7. Se puede usar con versiones posteriores de sistema operativo como un identificador de reserva para el dispositivo.
 
 Si no se realiza correctamente, puede mostrar el siguiente error:
 
@@ -372,19 +383,19 @@ Si no se realiza correctamente, puede mostrar el siguiente error:
 
 Para obtener más información, revise M365AHandler.log en el cliente.  
 
-Asegúrese de que no tiene identificadores duplicados en su entorno. Por ejemplo, si se han implementado los dispositivos con una imagen de sistema operativo que no se ha generalizado. 
-
+Asegúrese de que no tiene identificadores duplicados en su entorno. Por ejemplo, si se han implementado los dispositivos con una imagen de sistema operativo que no se ha generalizado.
 
 #### <a name="unique-device-identifier-retrieval"></a>Recuperación del identificador de dispositivo único
+
 <!--54-->
-Análisis de escritorio usa el servicio de Microsoft Account para una identidad de dispositivo más confiable. 
+Análisis de escritorio usa el servicio de Microsoft Account para una identidad de dispositivo más confiable.
 
 Asegúrese de que el **cuenta de inicio de sesión de Ayudante de Microsoft** el servicio no está deshabilitado. El tipo de inicio debe ser **Manual (desencadenador de inicio)**.
 
 Para deshabilitar el acceso de cuenta de Microsoft del usuario final, use la configuración de directiva en lugar de bloquear este punto de conexión. Para obtener más información, consulte [cuenta Microsoft en la empresa](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication).
 
-
 #### <a name="windows-diagnostic-data-opt-in"></a>Opción datos de diagnóstico de Windows
+
 <!--8,40,55,62-->
 Esta propiedad comprueba que Windows está configurado correctamente para permitir que los datos de diagnóstico. Comprueba el valor de AllowTelemetry en las siguientes claves del registro:
 
@@ -395,11 +406,11 @@ Compruebe los permisos de estas claves del registro. Asegúrese de que la cuenta
 
 Para obtener más información, revise M365AHandler.log en el cliente.  
 
-
 #### <a name="office-diagnostic-endpoint-connectivity"></a>Conectividad de punto de conexión de diagnóstico de Office
+
 <!-- 1001,1002,1003 -->
 
-Si esta comprobación se realiza correctamente, el dispositivo es capaz de conectarse a los puntos de conexión de diagnóstico de Office. 
+Si esta comprobación se realiza correctamente, el dispositivo es capaz de conectarse a los puntos de conexión de diagnóstico de Office.
 
 En caso contrario, puede mostrar uno de los errores siguientes:
 
@@ -411,11 +422,20 @@ En caso contrario, puede mostrar uno de los errores siguientes:
 
 Asegúrese de que el dispositivo es capaz de comunicarse con el servicio. Para obtener más información, consulte [extremos](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
 
+#### <a name="office-diagnostic-data-opt-in"></a>Participación en Office datos de diagnóstico
+
+<!-- SCCMDocs-pr 3570 -->
+A partir de Configuration Manager versión 1902, puede cambiar el comportamiento para el envío de datos de diagnóstico y de servicio de Office para Microsoft. Esta propiedad comprueba que la configuración de directiva de Office está configuradas correctamente. Estos valores controlan los datos mínimos necesarios para ayudar a mantener Office seguro y actualizado, y ejecuta según lo esperado en el dispositivo está instalado.
+
+Para obtener más información, consulte [controla la información general sobre privacidad de Office 365 ProPlus](https://docs.microsoft.com/DeployOffice/privacy/overview-privacy-controls). Usa este artículo se detallan los controles de la privacidad de datos de diagnóstico que se recopilan y se envían a Microsoft acerca del software de cliente de Office en Windows en equipos de su organización.
+
+Esta comprobación no se realizará correctamente para los clientes de la versión de Configuration Manager 1810. Actualice al cliente a la versión más reciente. Considere la posibilidad de habilitar la actualización automática del cliente para el sitio de Configuration Manager. Para obtener más información, vea [Actualizar clientes](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).
+
 
 
 ## <a name="log-files"></a>Archivos de registro
 
-Use los siguientes archivos de registro para ayudar a solucionar problemas con Analytics escritorio integrado con Configuration Manager. 
+Use los siguientes archivos de registro para ayudar a solucionar problemas con Analytics escritorio integrado con Configuration Manager.
 
 
 ### <a name="service-connection-point"></a>Punto de conexión de servicio
@@ -439,7 +459,7 @@ Los siguientes archivos de registro se encuentran en el cliente de Configuration
 | **M365AHandler.log** | Información sobre la configuración de directiva de análisis de escritorio |
 
 
-### <a name="enable-verbose-logging"></a>Habilitar el registro detallado 
+### <a name="enable-verbose-logging"></a>Habilitar el registro detallado
 
 1. En el punto de conexión de servicio, vaya a la siguiente clave del registro: `HKLM\Software\Microsoft\SMS\Tracing\SMS_SERVICE_CONNECTOR`  
 2. Establecer el **LogLevel** valor `0`  
@@ -455,24 +475,4 @@ Los siguientes archivos de registro se encuentran en el cliente de Configuration
 
 ## <a name="bkmk_MALogAnalyticsReader"></a> Rol de aplicación MALogAnalyticsReader
 
-Al configurar el análisis de escritorio, acepte un consentimiento en nombre de su organización. Este consentimiento consiste en asignar el rol de lector de Log Analytics para el área de trabajo de la aplicación de MALogAnalyticsReader. Este rol de aplicación es necesario por el análisis de escritorio. 
-
-Si hay un problema con este proceso durante el conjunto de copia, utilice el siguiente proceso para agregar manualmente este permiso:
-
-1. Vaya a la [portal Azure](http://portal.azure.com)y seleccione **todos los recursos**. Seleccione el área de trabajo de tipo **Log Analytics**.  
-
-2. En el menú del área de trabajo, seleccione **control de acceso (IAM)**, a continuación, seleccione **agregar**.  
-
-3. En el **agregar permisos** del panel, configure las siguientes opciones:  
-
-    - **Role**: **Lector de log Analytics**  
-
-    - **Asignar acceso a**: **Usuario, grupo o aplicación de AD Azure**  
-
-    - **Seleccione**: **MALogAnalyticsReader**  
-  
-4. Seleccione **Guardar**. 
-
-El portal muestra una notificación que agrega la asignación de roles.
-
-
+Al configurar el análisis de escritorio, acepte un consentimiento en nombre de su organización. Este consentimiento es asignar el 
