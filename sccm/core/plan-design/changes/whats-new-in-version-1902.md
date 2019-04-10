@@ -2,7 +2,7 @@
 title: Novedades de la versión 1902
 titleSuffix: Configuration Manager
 description: Obtenga detalles sobre los cambios y las nuevas funcionalidades incorporados en la versión 1902 de la rama actual de Configuration Manager.
-ms.date: 03/27/2019
+ms.date: 04/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81d4a34074e71d97061b8fbcab94e81335df4314
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: 0be6a28aa0421c6479ba676e67fd5dd7b4b13d39
+ms.sourcegitcommit: da753df27d3909265ca45d3e79091f1e98758d16
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58525064"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58913683"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Novedades de la versión 1902 de la rama actual de Configuration Manager
 
@@ -121,9 +121,9 @@ Ahora puede asociar una puerta de enlace de administración de la nube con un gr
 
 ### <a name="run-cmpivot-from-the-central-administration-site"></a>Ejecución de CMPivot desde el sitio de administración central
 <!--3610960-->
-Configuration Manager ahora admite la ejecución CMPivot desde el sitio de administración central en una jerarquía. El sitio primario sigue controlando la comunicación con el cliente. Al ejecutar CMPivot desde el sitio de administración central, se comunica con el sitio primario a través del canal de suscripción de mensajes de alta velocidad. Esta comunicación no depende de la replicación SQL estándar entre sitios.
+***[Actualizado]*** Configuration Manager ahora admite la ejecución de CMPivot desde el sitio de administración central en una jerarquía. El sitio primario sigue controlando la comunicación con el cliente. Al ejecutar CMPivot desde el sitio de administración central, se comunica con el sitio primario a través del canal de suscripción de mensajes de alta velocidad. Esta comunicación no depende de la replicación SQL estándar entre sitios.
 
-<!-- For more information, see [CMPivot for real-time data](/sccm/core/servers/manage/cmpivot). -->
+Para obtener más información, vea [CMPivot para datos en tiempo real](/sccm/core/servers/manage/cmpivot#bkmk_cmpivot1902).
 
 
 ### <a name="edit-or-copy-powershell-scripts"></a>Edición o copia de scripts de PowerShell
@@ -440,16 +440,16 @@ Esta notificación es una barra en la parte superior de la ventana de la consola
 
 ### <a name="confirmation-of-console-feedback"></a>Confirmación de comentarios de la consola
 <!--3556010-->
-Al enviar [comentarios](/sccm/core/understand/find-help#product-feedback) en la consola de Configuration Manager, ahora se muestra un mensaje de confirmación. Este mensaje incluye un **identificador de comentario** que puede enviar a Microsoft como identificador de seguimiento. 
+***[Actualizado]*** Al enviar [comentarios](/sccm/core/understand/find-help#product-feedback) en la consola de Configuration Manager, ahora se muestra un mensaje de confirmación. Este mensaje incluye un **identificador de comentario** que puede enviar a Microsoft como identificador de seguimiento.
 
-<!-- For more information, see [Product feedback](/sccm/core/understand/find-help#product-feedback). -->
+Para obtener más información, vea [Comentarios sobre el producto](/sccm/core/understand/find-help#bkmk_feedbackid).
 
 
 ### <a name="view-recently-connected-consoles"></a>Consulta de las consolas conectadas recientemente 
 <!--3699367-->
-Ahora puede ver las conexiones más recientes de la consola de Configuration Manager. La vista incluye las conexiones activas y aquellas consolas que se conectaron recientemente. En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Seguridad** y seleccione el nodo **Conexiones de la consola**.
+***[Actualizado]*** Ahora puede ver las conexiones más recientes de la consola de Configuration Manager. La vista incluye las conexiones activas y aquellas consolas que se conectaron recientemente. En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Seguridad** y seleccione el nodo **Conexiones de la consola**.
 
-<!-- For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console). -->
+Para obtener más información, vea [Uso de la consola de Configuration Manager](/sccm/core/servers/manage/admin-console#bkmk_viewconnected).
 
 
 ### <a name="in-console-documentation-dashboard"></a>Panel de documentación en consola

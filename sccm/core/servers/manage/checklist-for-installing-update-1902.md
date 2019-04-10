@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 60856d3e2621f48fb669a4a1385876ddae849b2e
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: 5833db7cd6f47d0711fdcfae5d1f7a4114d7ff34
+ms.sourcegitcommit: d584c126a0a5725567631b74ac1e01f63242a997
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58525059"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58861027"
 ---
 # <a name="checklist-for-installing-update-1902-for-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 1902 de Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Si usa la rama actual de Configuration Manager, puede instalar la actualización en consola de la versión 1902 a fin de actualizar la jerarquía desde una versión anterior. <!-- baseline only statement:-->(Como la versión 1802 también está disponible como [medio de línea de base](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions), puede usar el medio de instalación para instalar el primer sitio de una jerarquía nueva).
+Si usa la rama actual de Configuration Manager, puede instalar la actualización en consola de la versión 1902 a fin de actualizar la jerarquía desde una versión anterior. <!-- baseline only statement:-->(Como la versión 1902 también está disponible como [medio de línea base](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions), puede usar el medio de instalación para instalar el primer sitio de una jerarquía nueva).
 
 Para obtener la actualización de la versión 1902, debe usar un punto de conexión de servicio en el sitio de nivel superior de la jerarquía. Este rol de sistema de sitio puede realizarse en el modo en línea o sin conexión. Después de que su jerarquía descargue el paquete de actualización de Microsoft, búsquelo en la consola. En el área de trabajo **Administración**, seleccione el nodo **Actualizaciones y mantenimiento**.
 
@@ -207,7 +207,7 @@ Después de actualizar un sitio primario, vuelva a configurar la réplica de bas
 Si ha deshabilitado las [tareas de mantenimiento](/sccm/core/servers/manage/maintenance-tasks) de bases de datos en un sitio antes de instalar la actualización, vuelva a configurar esas tareas. Use la misma configuración que había antes de la actualización.  
 
 
-#### <a name="update-clients"></a>Actualizar clientes
+#### <a name="update-clients"></a>Actualización de clientes
 Actualice los clientes de acuerdo con el plan que ha creado, especialmente si ha configurado el proyecto piloto del cliente antes de instalar la actualización. Para obtener más información, consulte [How to upgrade clients for Windows computers (Cómo actualizar clientes para equipos Windows)](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers).  
 
 

@@ -2,7 +2,7 @@
 title: Cuentas utilizadas
 titleSuffix: Configuration Manager
 description: Identifique y administre los grupos y las cuentas de Windows que se usan en Configuration Manager.
-ms.date: 10/26/2018
+ms.date: 03/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f0c9ad4831d0450b7a30de4117a65005164d5080
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: a05ff407c3787283a58973f2861432a0a26a52b0
+ms.sourcegitcommit: deb28cdc95a456d4a38499ef1bc71e765ef6dc13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122396"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58901526"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Cuentas que se usan en Configuration Manager
 
@@ -25,8 +25,8 @@ ms.locfileid: "56122396"
 Use la información siguiente para identificar las cuentas y los grupos de Windows que se usan en Configuration Manager, cómo se usan y cualquier requisito.  
 
 - [Grupos de Windows que crea y usa Configuration Manager](#bkmk_groups)  
-    - [ConfigMgr_CollectedFilesAccess](#configmgrcollectedfilesaccess)  
-    - [ConfigMgr_DViewAccess](#configmgrdviewaccess)  
+    - [ConfigMgr_CollectedFilesAccess](#configmgr_collectedfilesaccess)  
+    - [ConfigMgr_DViewAccess](#configmgr_dviewaccess)  
     - [Usuarios del control remoto de ConfigMgr](#configmgr-remote-control-users)  
     - [Administradores de SMS](#sms-admins)  
     - [SMS_SiteSystemToSiteServerConnection_MP_&lt;código_de_sitio\>](#bkmk_remotemp)  
@@ -71,7 +71,7 @@ Use la información siguiente para identificar las cuentas y los grupos de Windo
 >  Cuando Configuration Manager crea un grupo en un equipo que es miembro del dominio, el grupo es un grupo de seguridad local. Si el equipo es un controlador de dominio, el grupo es un grupo local de dominio. Este tipo de grupo se comparte entre todos los controladores de dominio del dominio.  
 
 
-### <a name="configmgrcollectedfilesaccess"></a>ConfigMgr_CollectedFilesAccess  
+### <a name="configmgrcollectedfilesaccess"></a>ConfigMgr_CollectedFilesAccess
 
 Configuration Manager usa este grupo para conceder acceso para ver los archivos recopilados por el inventario de software.  
 
@@ -443,7 +443,8 @@ Para obtener más información, vea [Introducción al control remoto](/sccm/core
 
 
 ### <a name="site-installation-account"></a>Cuenta de instalación del sitio
-<!--SCCMDocs issue #572--> Use una cuenta de usuario de dominio para iniciar sesión en el servidor en el que se ejecuta el programa de instalación de Configuration Manager y se instala un sitio nuevo.
+<!--SCCMDocs issue #572-->
+Use una cuenta de usuario de dominio para iniciar sesión en el servidor en el que se ejecuta el programa de instalación de Configuration Manager y se instala un sitio nuevo.
 
 Esta cuenta requiere los permisos siguientes:  
 
@@ -474,7 +475,8 @@ Al expandir un sitio independiente para incluir un sitio de administración cent
 
 
 ### <a name="site-system-proxy-server-account"></a>Cuenta de servidor proxy de sistema de sitio
-<!--SCCMDocs issue #648--> Los roles de sistema de sitio siguientes usan la **cuenta de servidor proxy de sistema de sitio** para acceder a Internet a través de un servidor proxy o firewall que requiera acceso autenticado:
+<!--SCCMDocs issue #648-->
+ Los roles de sistema de sitio siguientes usan la **cuenta de servidor proxy de sistema de sitio** para obtener acceso a Internet a través de un servidor proxy o firewall que requiera acceso autenticado:
 
 - Punto de sincronización de Asset Intelligence
 - Conector de Exchange Server

@@ -2,21 +2,21 @@
 title: Consola de Configuration Manager
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la navegación a través de la consola de Configuration Manager.
-ms.date: 03/06/2019
+ms.date: 04/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 463ce307-59dd-4abd-87b8-42ca9db178d7
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0f9c06f40af1134055d4038fd23954b3f4c59682
-ms.sourcegitcommit: 544f335cfd1bfd0a1d4973439780e9f5e9ee8bed
+ms.openlocfilehash: fb58662350caec9fd1a08295c93c3811893048a9
+ms.sourcegitcommit: da753df27d3909265ca45d3e79091f1e98758d16
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562115"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58913547"
 ---
 # <a name="using-the-configuration-manager-console"></a>Uso de la consola de Configuration Manager
 
@@ -116,7 +116,36 @@ En la parte inferior del menú contextual de la columna puede ordenar o agrupar 
 
 ![Agrupar por columna en Configuration Manager](media/column-group-by.png)  
 
+## <a name="bkmk_viewconnected"></a> Consulta de las consolas conectadas recientemente
+<!--3699367-->
 
+A partir de la versión 1902, puede ver las conexiones más recientes de la consola de Configuration Manager. La vista incluye las conexiones activas y aquellas que se acaban de conectar. Siempre verá la conexión actual de la consola en la lista. Solo se muestran las conexiones desde la consola de Configuration Manager, no las conexiones de PowerShell ni otras conexiones basadas en el SDK al proveedor de SMS. El sitio quita las instancias de la lista que tienen más de 30 días.
+
+
+### <a name="prerequisites-to-view-connected-consoles"></a>Requisitos previos para ver las consolas conectadas
+
+- La cuenta debe tener el permiso **Lectura** en el objeto **SMS_Site**. 
+- IIS debe estar instalado en el servidor de proveedor de SMS <!---SCCMDocs-pr issue 1326--> 
+- Habilitar el proveedor de SMS para usar un certificado.<!--SCCMDocs-pr issue 3135--> Use una de las opciones siguientes:  
+
+  - Habilitar [HTTP mejorado](/sccm/core/plan-design/hierarchy/enhanced-http) (recomendado)
+  - Enlazar manualmente un certificado basado en PKI al puerto 443 en IIS en el servidor que hospeda el rol de proveedor de SMS  
+
+### <a name="view-connected-consoles"></a>Consulta de las consolas conectadas
+
+1. En la consola de Configuration Manager, vaya al área de trabajo **Administración**.  
+
+2. Expanda **Seguridad** y seleccione el nodo **Conexiones de la consola**.  
+
+3. Vea las conexiones recientes con estas propiedades:  
+
+    - Nombre de usuario
+    - Nombre de máquina
+    - Código de sitio conectado
+    - Versión de la consola
+    - Hora de la última conexión: momento en el que el usuario *abrió* la consola por última vez
+
+![Consulta de las conexiones de la consola de Configuration Manager](media/console-connections.png) 
 
 ## <a name="command-line-options"></a>Opciones de línea de comandos
 
@@ -162,7 +191,8 @@ A partir de la versión 1806, las siguientes columnas están disponibles en el n
 Para obtener más información sobre cómo mostrar una columna no predeterminada, vea [Columnas](#columns).
 
 #### <a name="improvement-to-device-search-performance"></a>Mejora de rendimiento de la búsqueda de dispositivos
-<!-- 3614690 --> A partir de la versión 1806, al realizar búsquedas en una recopilación de dispositivos, no se busca la palabra clave en todas las propiedades del objeto. Cuando no especifique lo que hay que buscar, busca a través de las cuatro propiedades siguientes:
+<!-- 3614690 -->
+A partir de la versión 1806, al realizar búsquedas en una recopilación de dispositivos, no se busca la palabra clave en todas las propiedades del objeto. Cuando no especifique lo que hay que buscar, busca a través de las cuatro propiedades siguientes:
 - Nombre
 - Usuarios primarios
 - Usuario que ha iniciado sesión actualmente
@@ -174,7 +204,8 @@ Este comportamiento mejora significativamente el tiempo necesario para buscar po
 ### <a name="monitoring-workspace"></a>Área de trabajo de supervisión
 
 #### <a name="copy-details-in-monitoring-views"></a>Copiar detalles en las vistas de supervisión
-<!--1357856-->A partir de la versión 1806, se puede copiar información desde el panel **Detalles del activo** a los siguientes nodos de supervisión:  
+<!--1357856-->
+A partir de la versión 1806, se puede copiar información desde el panel **Detalles del activo** a los siguientes nodos de supervisión:  
 
 - **Estado de distribución de contenido**  
 
