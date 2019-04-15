@@ -2,7 +2,7 @@
 title: Configuración de cliente
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la configuración predeterminada y personalizada para controlar los comportamientos del cliente.
-ms.date: 03/21/2019
+ms.date: 04/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e76dc5892ad34d72bfee3cd4aea0fa660e34855d
-ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.openlocfilehash: 42218443f83726bfbca0dcf77ffa37e61c46a2b3
+ms.sourcegitcommit: d4b0e44e6bb06a830d0887493528d9166a15154b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477541"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506216"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Información sobre la configuración de cliente en Configuration Manager
 
@@ -784,11 +784,23 @@ Cuando esta opción se establece en **Sí**, se habilita la configuración de op
 
 Al establecer esta opción en **Sí** y si el cliente tiene al menos una ventana de mantenimiento "Actualización de Software" definida, las actualizaciones de software se instalarán durante una ventana de mantenimiento "Todas las implementaciones". De forma predeterminada, esta opción está establecida en **No**. Esta configuración de cliente se agregó en Configuration Manager versión 1810. <!--2839307-->
 
+### <a name="bkmk_thread-priority"></a> Especificación de la prioridad de subproceso para las actualizaciones de características
+<!--3734525-->
+A partir de la versión 1902 de Configuration Manager, puede ajustar la prioridad con la que los clientes de Windows 10 versión 1709 o posterior instalan una actualización de características mediante el [mantenimiento de Windows 10](/sccm/osd/deploy-use/manage-windows-as-a-service). Esta opción no influye en las secuencias de tareas de actualización en contexto de Windows 10.
+
+Esta nueva configuración de cliente proporciona estas opciones:
+
+- **No configurado**: Configuration Manager no cambia la configuración. Los administradores pueden preconfigurar su propio archivo setupconfig.ini. Este valor es el predeterminado. 
+- **Normal**: el programa de instalación de Windows usa más recursos del sistema y se actualiza con más rapidez. Usa más tiempo del procesador, por lo que el tiempo total de instalación es más corto, pero la interrupción del usuario es más larga.  
+   - Configura el archivo setupconfig.ini en el dispositivo con la [opción de línea de comandos de instalación de Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) de `/Priority Normal`.
+
+- **Bajo**: puede seguir trabajando en el dispositivo mientras se descarga y se actualiza en segundo plano. El tiempo de instalación total es superior, pero la interrupción del usuario es más corta. Es posible que necesite aumentar el tiempo máximo de ejecución de la actualización para evitar el agotamiento del tiempo de espera cuando utilice esta opción.
+  - Quita la [opción de línea de comandos de instalación de Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) de `/Priority` desde el archivo setupconfig.ini.
+
+
 ### <a name="enable-third-party-software-updates"></a>Habilitar actualizaciones de software de terceros 
 
 Cuando esta opción se establece en **Sí**, se establece la directiva para permitir actualizaciones firmadas para una ubicación del servicio Microsoft Update en la intranet y se instala el certificado de firma en el almacén de editores de confianza en el cliente. Esta configuración de cliente se agregó en Configuration Manager versión 1802.
-
-
 
 ## <a name="state-messaging"></a>Mensajes de estado
 

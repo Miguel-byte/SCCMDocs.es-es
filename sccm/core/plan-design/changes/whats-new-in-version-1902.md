@@ -2,7 +2,7 @@
 title: Novedades de la versión 1902
 titleSuffix: Configuration Manager
 description: Obtenga detalles sobre los cambios y las nuevas funcionalidades incorporados en la versión 1902 de la rama actual de Configuration Manager.
-ms.date: 04/03/2019
+ms.date: 04/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0be6a28aa0421c6479ba676e67fd5dd7b4b13d39
-ms.sourcegitcommit: da753df27d3909265ca45d3e79091f1e98758d16
+ms.openlocfilehash: a424a2397f4e1845795441208929b7d9efb7f93c
+ms.sourcegitcommit: d4b0e44e6bb06a830d0887493528d9166a15154b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58913683"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506284"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Novedades de la versión 1902 de la rama actual de Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-La actualización 1902 de la rama actual de Configuration Manager está disponible como una actualización en consola. Aplique esta actualización a los sitios que ejecuten las versiones 1710, 1802, 1806 o 1810. <!-- baseline only statement:-->Al instalar un nuevo sitio, también está disponible como una versión de línea de base. En este artículo se resumen los cambios y las nuevas características de Configuration Manager, versión 1902.  
+La actualización 1902 de la rama actual de Configuration Manager está disponible como una actualización en consola. Aplique esta actualización a los sitios que ejecuten las versiones 1802, 1806 o 1810. <!-- baseline only statement:-->Al instalar un nuevo sitio, también está disponible como una versión de línea de base. En este artículo se resumen los cambios y las nuevas características de Configuration Manager, versión 1902.  
 
 Revise siempre la lista de comprobación más reciente para instalar esta actualización. Para más información, consulte [Lista de comprobación para la instalación de la actualización 1902](/sccm/core/servers/manage/checklist-for-installing-update-1902). Después de actualizar un sitio, revise también la [lista de comprobación posterior a la actualización](/sccm/core/servers/manage/checklist-for-installing-update-1902#post-update-checklist).
 
@@ -343,11 +343,11 @@ Especifique estos valores en el grupo de configuración de cliente **Centro de s
 
 ### <a name="specify-priority-for-feature-updates-in-windows-10-servicing"></a>Especificación de la prioridad de las actualizaciones de características en el mantenimiento de Windows 10
 <!--3734525-->
-Ajuste la prioridad con la que los clientes instalan una actualización de características a través de [Mantenimiento de Windows 10](/sccm/osd/deploy-use/manage-windows-as-a-service). De forma predeterminada, los clientes ahora instalan las actualizaciones de características con mayor prioridad de procesamiento. 
+***[Actualizado]*** Ajuste la prioridad con la que los clientes instalan una actualización de características a través de [Mantenimiento de Windows 10](/sccm/osd/deploy-use/manage-windows-as-a-service). De forma predeterminada, los clientes ahora instalan las actualizaciones de características con mayor prioridad de procesamiento. 
 
 Use la configuración de cliente para configurar esta opción. En el grupo **Actualizaciones de software**, configure esta opción: **Especificación de la prioridad de subproceso para las actualizaciones de características**. 
 
-<!-- For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-updates). -->
+Para más información, vea [Acerca de la configuración de cliente](/sccm/core/clients/deploy/about-client-settings#software-updates). 
 
 
 
@@ -355,7 +355,7 @@ Use la configuración de cliente para configurar esta opción. En el grupo **Act
 
 ### <a name="redirect-windows-known-folders-to-onedrive"></a>Redirección de carpetas conocidas de Windows a OneDrive
 <!--3556021-->
-Utilice Configuration Manager para mover las carpetas conocidas de Windows a OneDrive para la Empresa. Estas carpetas incluyen Escritorio, Documentos e Imágenes. Para simplificar las actualizaciones de Windows 10, implemente esta configuración en los clientes de Windows 7 antes de implementar una secuencia de tareas. 
+***[Actualizado]*** Utilice Configuration Manager para mover las carpetas conocidas de Windows a OneDrive para la Empresa. Estas carpetas incluyen Escritorio, Documentos e Imágenes. Para simplificar las actualizaciones de Windows 10, implemente esta configuración en los clientes de Windows 7 antes de implementar una secuencia de tareas. 
 
 Para más información sobre esta característica de OneDrive para la Empresa, consulte [Redirigir y mover las carpetas conocidas de Windows a OneDrive](https://docs.microsoft.com/onedrive/redirect-known-folders).
 
@@ -363,23 +363,23 @@ Primero, [busque el identificador de inquilino de Office 365](https://docs.micro
 
 Para crear e implementar un perfil de OneDrive para la Empresa, en la consola de Configuration Manager, vaya al área de trabajo **Activos y compatibilidad**. Expanda **Configuración de cumplimiento** y seleccione el nodo **Perfiles de OneDrive para la Empresa**.  
 
-<!-- For more information, see [Redirect Windows known folders to OneDrive](/sccm/compliance/deploy-use/onedrive-profile). -->
+Para más información, consulte la sección sobre redirección de carpetas conocidas de Windows a OneDrive en el artículo [OneDrive for Business Profiles](/sccm/compliance/deploy-use/onedrive-profile) (OneDrive for Business Profiles).
 
 
-### <a name="integration-with-analytics-for-office-365-proplus-readiness"></a>Integración con los análisis para la preparación de Office 365 ProPlus
+### <a name="integration-for-office-365-proplus-readiness"></a>Integración para la preparación de Office 365 ProPlus
 <!--3735402-->
-Use Configuration Manager para identificar los dispositivos con una confianza alta que estén listos para actualizar a Office 365 ProPlus. Gracias a la integración con los análisis de Office, obtendrá conclusiones sobre los posibles problemas de compatibilidad con los complementos y las macros usados en su entorno. Después, use Configuration Manager para implementar Office en los dispositivos que estén listos. 
+***[Actualizado]*** Use Configuration Manager para identificar los dispositivos con una confianza alta que estén listos para actualizar a Office 365 ProPlus. La integración proporciona conclusiones sobre los posibles problemas de compatibilidad con los complementos y las macros de Office usados en su entorno. Después, use Configuration Manager para implementar Office en los dispositivos que estén listos. 
 
 El panel de administración de clientes existente de Office 365 ahora incluye un nuevo icono, **Office 365 ProPlus Upgrade Readiness**.
 
-<!-- For more information, see [Office 365 client management dashboard](/sccm/sum/deploy-use/manage-office-365-proplus-updates#office-365-client-management-dashboard) -->
+Para más información, consulte [Panel de administración del cliente de Office 365](/sccm/sum/deploy-use/office-365-dashboard#bkmk_o365_readiness).
 
 
 ### <a name="additional-languages-for-office-365-updates"></a>Idiomas adicionales para las actualizaciones de Office 365
 <!--3555955-->
-Configuration Manager ahora es compatible con todos los idiomas admitidos para las actualizaciones de cliente de Office 365. El flujo de trabajo de actualización ahora separa los 38 idiomas de **Windows Update** de los 103 idiomas de la **actualización de cliente de Office 365**. 
+Configuration Manager ahora es compatible con todos los idiomas admitidos para las actualizaciones de cliente de Office 365. El flujo de trabajo de actualización ahora separa los 38 idiomas de **Windows Update** de los numerosos idiomas de la **actualización de cliente de Office 365**. 
 
-<!-- For more information, see [Office 365 client management dashboard](/sccm/sum/deploy-use/manage-office-365-proplus-updates#office-365-client-management-dashboard) -->
+Para más información, consulte [Administración de las actualizaciones de Office 365](/sccm/sum/deploy-use/manage-office-365-proplus-updates#bkmk_o365_lang).
 
 
 ### <a name="office-products-on-lifecycle-dashboard"></a>Productos de Office en el panel de ciclo de vida
@@ -469,6 +469,19 @@ Ahora puede buscar una dirección MAC en la vista de un dispositivo de la consol
 Para mejorar las características de accesibilidad de la consola de Configuration Manager, actualice .NET a la versión 4.7 o posterior en el equipo que ejecuta la consola. 
 
 Para obtener la información, vea [Características de accesibilidad de Configuration Manager](/sccm/core/understand/accessibility-features).
+
+
+### <a name="changes-to-console-setup-process"></a>Cambios realizados en el proceso de instalación de la consola
+
+<!-- 3612513 -->
+***[Actualizado]*** Se requieren nuevos componentes para instalar la consola del Configuration Manager. Si crea un paquete para instalar la consola en otros equipos, asegúrese de que el paquete incluya los siguientes archivos:
+
+- ConsoleSetup.exe
+- AdminConsole.msi
+- ConfigMgr.AC_Extension.i386.cab
+- ConfigMgr.AC_Extension.amd64.cab
+
+Al instalar o actualizar el servidor de sitio, copia estos archivos de instalación y los paquetes de idioma admitidos para el sitio en la subcarpeta **Tools\ConsoleSetup**. Para obtener más información, consulte [Instalar la consola de Configuration Manager](/sccm/core/servers/deploy/install/install-consoles).
 
 
 

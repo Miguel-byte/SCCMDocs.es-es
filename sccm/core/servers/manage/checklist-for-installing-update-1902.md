@@ -2,7 +2,7 @@
 title: Lista de comprobación de 1902
 titleSuffix: Configuration Manager
 description: Sepa lo que debe hacer antes de actualizar a la versión 1902 de Configuration Manager.
-ms.date: 03/27/2019
+ms.date: 04/11/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5833db7cd6f47d0711fdcfae5d1f7a4114d7ff34
-ms.sourcegitcommit: d584c126a0a5725567631b74ac1e01f63242a997
+ms.openlocfilehash: c9d0714bd55b4c99b181dfaf3ac34e63a0e9a35e
+ms.sourcegitcommit: d4b0e44e6bb06a830d0887493528d9166a15154b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58861027"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506148"
 ---
 # <a name="checklist-for-installing-update-1902-for-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 1902 de Configuration Manager
 
@@ -65,7 +65,7 @@ La primera vez que use una consola de Configuration Manager una vez que la actua
 ## <a name="checklist"></a>Lista de comprobación
 
 #### <a name="all-sites-run-a-supported-version-of-configuration-manager"></a>Todos los sitios ejecutan una versión admitida de Configuration Manager  
-Cada servidor de sitio de la jerarquía debe ejecutar la misma versión de Configuration Manager para poder iniciar la instalación de la actualización 1902. Para actualizar a 1902, debe usar la versión 1710, 1802, 1806 o 1810.
+Cada servidor de sitio de la jerarquía debe ejecutar la misma versión de Configuration Manager para poder iniciar la instalación de la actualización 1902. Para actualizar a 1902, debe usar la versión 1802, 1806 o 1810.
 
 #### <a name="review-the-status-of-your-product-licensing"></a>Revisar el estado de la licencia de producto 
 Debe tener un contrato de Software Assurance (SA) activo o derechos de suscripción equivalentes para instalar esta actualización. Al actualizar el sitio, la página **Licencias** ofrece la opción de confirmar la **Fecha de expiración de Software Assurance**.
