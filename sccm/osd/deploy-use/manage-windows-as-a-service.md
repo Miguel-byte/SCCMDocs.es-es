@@ -2,7 +2,7 @@
 title: Administración de Windows como servicio
 titleSuffix: Configuration Manager
 description: Vea el estado de Windows como servicio (WaaS) mediante Configuration Manager, cree planes de mantenimiento para formar anillos de implementación y vea alertas cuando los clientes de Windows 10 estén próximos al final del soporte técnico.
-ms.date: 03/15/2017
+ms.date: 04/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 614ccc06a3fef5cca54c7eb1c32952e8531aedfa
-ms.sourcegitcommit: d71e558db2da124357b840332e2da671b3810507
+ms.openlocfilehash: 13fde17d8fe46b723a8f49b22a68685fbc4d47de
+ms.sourcegitcommit: d4b0e44e6bb06a830d0887493528d9166a15154b
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58269059"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506250"
 ---
 # <a name="manage-windows-as-a-service-using-system-center-configuration-manager"></a>Administración de Windows como servicio mediante System Center Configuration Manager
 
@@ -54,6 +54,7 @@ ms.locfileid: "58269059"
 -   Internet Explorer 9 o una versión posterior debe estar instalado en el equipo que ejecuta la consola de Configuration Manager.  
 
 -   Las actualizaciones de software deben estar configuradas y sincronizadas. Seleccione la clasificación de **Actualizaciones** y sincronizar las actualizaciones de software antes de que las actualizaciones de características de Windows 10 estén disponibles en la consola de Configuration Manager. Para obtener más información, consulte [Prepare for software updates management](../../sum/get-started/prepare-for-software-updates-management.md) (Preparación para la administración de actualizaciones de software).  
+- A partir de la versión 1902 de Configuration Manager, compruebe la [configuración de cliente](/sccm/core/clients/deploy/about-client-settings#bkmk_thread-priority) **Especificar la prioridad de subproceso para las actualizaciones de características** para asegurarse de que es apropiada para su entorno.
 
 ##  <a name="BKMK_ServicingDashboard"></a> Panel de mantenimiento de Windows 10  
  El panel de mantenimiento de Windows 10 le proporciona información acerca de los equipos con Windows 10 de su entorno, los planes de mantenimiento activos, la información de cumplimiento, etc. Los datos del panel de mantenimiento de Windows 10 dependen de si el punto de conexión de servicio está instalado. El panel presenta los iconos siguientes:  
@@ -72,7 +73,7 @@ ms.locfileid: "58269059"
 
 -   **Icono Service Plan Monitoring**: muestra los planes de mantenimiento creados por el usuario y un gráfico de cumplimiento de cada uno. Este icono ofrece una visión general rápida del estado actual de las implementaciones de plan de mantenimiento. Si un canal de implementación anterior cumple sus expectativas de cumplimiento, puede seleccionar un plan de mantenimiento posterior (canal de implementación) y hacer clic en **Implementar ahora** en lugar de esperar a que las reglas del plan de mantenimiento se activen automáticamente.  
 
--   **icono Windows 10 Builds**: muestra una línea de tiempo de imagen fija que proporciona una visión general de las compilaciones de Windows 10 lanzadas actualmente y le ofrece una idea general de cuándo cambia el estado de las compilaciones.  
+-   **icono Windows 10 Builds**: muestra una línea de tiempo de imagen fija que proporciona una visión general de las compilaciones de Windows 10 lanzadas actualmente y le ofrece una idea general de cuándo cambia el estado de las compilaciones. Este icono se ha eliminado a partir de la versión 1902 de Configuration Manager, ya que se ofrece información más detallada en el [panel de ciclo de vida del producto](/sccm/core/clients/manage/asset-intelligence/product-lifecycle-dashboard). <!--3446861-->
 
 > [!IMPORTANT]  
 >  La información que se muestra en el panel de mantenimiento de Windows 10 (por ejemplo, el ciclo de vida de soporte técnico para las versiones de Windows 10) se proporciona para su comodidad y solo para uso interno en su empresa. No debe confiar exclusivamente en esta información para comprobar el cumplimiento de la actualización. Asegúrese de comprobar la exactitud de la información proporcionada.  
@@ -144,15 +145,15 @@ ms.locfileid: "58269059"
    -   **Cantidad de días después de que Microsoft publique una nueva actualización que quiere esperar antes de la implementación en su entorno**: Si la fecha actual es posterior a la fecha de publicación más el número de días que configura para esta opción, Configuration Manager evalúa si debe incluir una actualización en la implementación.
 
 
-7. En la página Actualizaciones, configure los criterios de búsqueda para filtrar las actualizaciones que se agregarán al plan de mantenimiento. Solo se agregarán a la implementación asociada las actualizaciones que cumplan con los criterios especificados. Los filtros de propiedades siguientes están disponibles: <!--3098809, 3113836, 3204570 -->
+7. En la página Actualizaciones, configure los criterios de búsqueda para filtrar las actualizaciones que se agregarán al plan de mantenimiento. Solo se agregarán a la implementación asociada las actualizaciones que cumplan con los criterios especificados. Están disponibles los filtros de propiedades siguientes: <!--3098809, 3113836, 3204570 -->
 
-   - **Arquitectura** (a partir de la versión 1810)
+   - **Arquitectura** (a partir de la versión 1810)
    - **Idioma**
-   - **Categoría de producto** (a partir de la versión 1810)
+   - **Categoría de producto** (a partir de la versión 1810)
    - **Requerido**
       > [!Important]    
       > Como parte de los criterios de búsqueda, recomendamos que establezca el campo **Requerido** con un valor de **>=1**. El uso de este criterio garantiza que solo se agregan las actualizaciones aplicables al plan de mantenimiento.
-   - **Reemplazadas** (a partir de la versión 1810)
+   - **Reemplazado** (a partir de la versión 1810)
    - **Título**
 
     Haga clic en **Vista previa** para ver las actualizaciones que cumplen los criterios especificados.  
