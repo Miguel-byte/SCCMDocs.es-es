@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b30770b912e012aafa3f1d476c4791873752ecc7
-ms.sourcegitcommit: 5ee9487c891c37916294bd34a10d04e398f111f7
+ms.openlocfilehash: 11979d35829660633dd77059562dcf519e0af05b
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59069354"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673350"
 ---
 # <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>Cómo conectar Configuration Manager con análisis de escritorio
 
@@ -73,7 +73,7 @@ Utilice este procedimiento para conectar Configuration Manager para el análisis
 
 4. En el **datos de diagnóstico** página, configure las opciones siguientes:  
 
-    - **Id. comercial**: este valor se debería rellenar automáticamente con el ID de. su organización  
+    - **Id. comercial**: este valor se debería rellenar automáticamente con el identificador de. su organización Si no, asegúrese de que el servidor proxy está configurado en la lista blanca todos necesario [extremos](/sccm/desktop-analytics/enable-data-sharing#endpoints) antes de continuar. También puede recuperar el identificador comercial desde el **Connected Services** panel en el [portal de análisis de escritorio](https://aka.ms/m365aprod).  
 
     - **Nivel de datos de diagnóstico de Windows 10**: seleccione al menos **mejorado (limitado)**  
 

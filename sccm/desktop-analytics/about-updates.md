@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b46bf167bc77716fe360940c4fb45cae2dc9dc5a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: a10a7b5bbb3a1b7d0dada86774f3412e22faff01
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56755584"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673554"
 ---
 # <a name="updates-in-desktop-analytics"></a>Actualizaciones en el análisis de escritorio 
 
@@ -48,7 +48,7 @@ Los dispositivos están ejecutando una actualización de seguridad anterior a la
 #### <a name="not-measured"></a>No se ha medido
 Análisis de escritorio no ha evaluado el dispositivo. 
 
-- Para Windows, esto incluye los dispositivos que ejecutan Windows 7 o Windows 8.1  
+- Para Windows, esto incluye los dispositivos que ejecutan Windows 7, Windows 8.1 o Windows 10 dispositivos registrados para el programa de Windows Insider  
 
 - Para Office, esto incluye dispositivos con una de las siguientes versiones:  
 
@@ -81,12 +81,12 @@ Los dispositivos se está ejecutando la última actualización de característic
 Los dispositivos están ejecutando una actualización de características que menos de 90 días de alcanzar el final del servicio.
 
 #### <a name="end-of-service"></a>Extremo de servicio
-Los dispositivos están ejecutando una actualización de la función que está más allá de la fecha de finalización del servicio. Para obtener más información acerca de la finalización de las fechas de servicio, vea {xlink en la sección correspondiente del UDR_monitoring} |
+Los dispositivos están ejecutando una actualización de la función que está más allá de la fecha de finalización del servicio. Para obtener más información acerca de la finalización de las fechas de servicio, consulte [hoja de información del ciclo de vida de Windows](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet)  <!-- {xlink into relevant section of UDR_monitoring}|-->
 
 #### <a name="not-measured"></a>No se ha medido
 Análisis de escritorio no ha evaluado el dispositivo. 
 
-- Para Windows, esto incluye los dispositivos que ejecutan Windows 7 o Windows 8.1  
+- Para Windows, esto incluye los dispositivos que ejecutan Windows 7, Windows 8.1 o Windows 10 dispositivos registrados para el programa de Windows Insider
 
 - Para Office, esto incluye dispositivos con una de las siguientes versiones:  
 

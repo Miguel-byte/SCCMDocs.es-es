@@ -2,7 +2,7 @@
 title: 'Tutorial: implementación de Office 365'
 titleSuffix: Configuration Manager
 description: Un tutorial sobre el uso de escritorio de análisis y Configuration Manager para implementar Office 365 en un grupo piloto.
-ms.date: 04/05/2019
+ms.date: 04/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: tutorial
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4d21b2b94c53390a9fcdbc1be640578060042ea9
-ms.sourcegitcommit: 5ee9487c891c37916294bd34a10d04e398f111f7
+ms.openlocfilehash: 66fc982fa7f2cee3fdd83945c1b43d490b40d2f2
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59069456"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673792"
 ---
 # <a name="tutorial-deploy-office-365-to-pilot"></a>Tutorial: Implementación piloto de Office 365
 
@@ -103,13 +103,21 @@ Utilice este procedimiento para iniciar sesión el análisis de escritorio y con
 
 3. En el **confirmar la suscripción** página, la lista de licencias aplicables necesarias son para las características del estado de dispositivos de Windows de análisis de escritorio. Seleccione **Siguiente** para continuar.  
 
-4. En el **dar acceso a los usuarios** página, análisis de escritorio configura previamente dos grupos de seguridad en Azure Active Directory:  
+4. En el **dar acceso a los usuarios** página:
 
-    - **Los propietarios del área de trabajo**: Crear y administrar áreas de trabajo. Estas cuentas necesitan acceso de propietario a la suscripción de Azure.  
+    - **¿Desea que el análisis de escritorio para administrar roles de directorio para los usuarios**: Escritorio Analytics asigna automáticamente el **propietarios del área de trabajo** y **colaboradores del área de trabajo** grupos a la **Desktop Administrator de análisis** rol. Si esos grupos ya están un **administrador Global**, no hay ningún cambio.  
 
-    - **Los colaboradores del área de trabajo**: Crear y administrar planes de implementación en esta área de trabajo. No necesitan ningún acceso de Azure adicionales.  
-  
-   Para agregar un usuario a cualquier grupo, escriba su dirección de correo electrónico o de nombre en el **escriba la dirección de correo electrónico o nombre** sección del grupo adecuado. Cuando termine, seleccione **siguiente**.
+        Si no selecciona esta opción, análisis de escritorio seguirá agregando los usuarios como miembros de dos grupos de seguridad. Un **administrador Global** debe asignar manualmente el **Desktop Analytics Administrator** rol para los usuarios.  
+
+        Para obtener más información acerca de cómo asignar permisos del rol de administrador en Azure Active Directory y los permisos asignados a **Desktop Analytics administradores**, consulte [permisos del rol de administrador en Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
+
+    - Análisis de escritorio preconfigura dos grupos de seguridad en Azure Active Directory:  
+
+        - **Los propietarios del área de trabajo**: Un grupo de seguridad para crear y administrar áreas de trabajo. Estas cuentas necesitan acceso de propietario a la suscripción de Azure.  
+
+        - **Los colaboradores del área de trabajo**: Un grupo de seguridad para crear y administrar planes de implementación en esta área de trabajo. No necesitan ningún acceso de Azure adicionales.  
+
+        Para agregar un usuario a cualquier grupo, escriba su dirección de correo electrónico o de nombre en el **escriba la dirección de correo electrónico o nombre** sección del grupo adecuado. Cuando termine, seleccione **siguiente**.
 
 5. En la página para **configurar el área de trabajo**:  
 

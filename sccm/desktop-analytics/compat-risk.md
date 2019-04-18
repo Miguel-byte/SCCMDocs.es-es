@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da0bde04e019fdf0fbb0a997be652860824270b1
-ms.sourcegitcommit: 5ee9487c891c37916294bd34a10d04e398f111f7
+ms.openlocfilehash: bf2114ac77a75fedc18c38a8d373b9c0a1ada591
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59069405"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673418"
 ---
 # <a name="compatibility-risk-for-windows-apps-in-desktop-analytics"></a>Riesgos de compatibilidad para aplicaciones de Windows en el análisis de escritorio
 
@@ -52,8 +52,17 @@ El analizador de mantenimiento de la aplicación examina la base de datos de com
 
 ### <a name="ready-for-windows"></a>Listo para Windows
 
-El almacén de datos listos para Windows busca los bloques de compatibilidad en un dispositivo. También pone en correlación datos de otros clientes de informes de aplicaciones similares. Microsoft utiliza los datos desde otros dispositivos similares que esta aplicación no notifica ningún problema.
+El [listos para Windows](https://www.readyforwindows.com) catálogo de aplicaciones pone en correlación datos de diagnóstico desde otros clientes que informan de las mismas aplicaciones con comprobaciones adicionales de Microsoft como bloques de compatibilidad en un dispositivo. 
 
+Las categorías posibles son:
+
+- **Datos insuficientes** significa muy pocos dispositivos comerciales de Windows 10 están compartiendo información para esta aplicación para que Microsoft pueda clasificar su adopción.
+
+- **Adoptado** significa que la aplicación se ha instalado en al menos 10 000 dispositivos comerciales de Windows 10.  
+
+- **Alta adopción** significa que la aplicación se ha instalado en al menos 100 000 dispositivos comerciales de Windows 10.  
+
+- **Póngase en contacto con el desarrollador** significa que puede haber problemas de compatibilidad con esta solución y, por tanto, Microsoft recomienda ponerse en contacto con el proveedor de software para obtener más información.  
 
 ### <a name="app-health-analyzer-signals-for-compatibility-assessment"></a>Analizador de mantenimiento de la aplicación se señala para su evaluación de compatibilidad
 

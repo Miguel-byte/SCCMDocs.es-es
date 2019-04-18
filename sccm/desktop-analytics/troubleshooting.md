@@ -2,7 +2,7 @@
 title: Solución de problemas de análisis de escritorio
 titleSuffix: Configuration Manager
 description: Detalles técnicos para ayudarle a solucionar problemas relacionados con el análisis de escritorio.
-ms.date: 04/05/2019
+ms.date: 04/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b7fab23b4d1d977d2d634a11959887f1c1baa9a7
-ms.sourcegitcommit: 5ee9487c891c37916294bd34a10d04e398f111f7
+ms.openlocfilehash: f0da26f1ea2b7f7c0c49377cb934e451d56889b7
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59069439"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673673"
 ---
 # <a name="troubleshooting-desktop-analytics"></a>Solución de problemas de análisis de escritorio
 
@@ -272,7 +272,7 @@ Para obtener más información, revise M365AHandler.log en el cliente.
 #### <a name="check-end-user-diagnostic-data"></a>Comprobar los datos de diagnóstico para el usuario final
 
 <!--1004-->
-Si esta comprobación no se realiza correctamente, un usuario seleccionó una menor datos de diagnóstico de Windows en el dispositivo.
+Si esta comprobación no se realiza correctamente, un usuario seleccionó una menor datos de diagnóstico de Windows en el dispositivo. También puede deberse mediante un objeto de directiva de grupo en conflicto. Para obtener más información, consulte [configuración Windows](/sccm/desktop-analytics/enroll-devices#windows-settings).
 
 Dependiendo de sus requisitos empresariales, puede deshabilitar la elección del usuario a través de la directiva de grupo. Use la configuración para **interfaz de usuario de participación en la configuración de telemetría configurar**. Para obtener más información, consulte [Configurar los datos de diagnóstico de Windows en la organización](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management).
 
@@ -289,7 +289,7 @@ Esta propiedad puede mostrar los errores siguientes:
 
 Para obtener más información, revise M365AHandler.log en el cliente.  
 
-Compruebe los permisos de esta clave del registro. Asegúrese de que la cuenta sistema local puede tener acceso a esta clave para el cliente de Configuration Manager establecer.  
+Compruebe los permisos de esta clave del registro. Asegúrese de que la cuenta sistema local puede tener acceso a esta clave para el cliente de Configuration Manager establecer. También puede deberse mediante un objeto de directiva de grupo en conflicto. Para obtener más información, consulte [configuración Windows](/sccm/desktop-analytics/enroll-devices#windows-settings).  
 
 #### <a name="commercial-id-configuration"></a>Configuración de Id. comercial
 
@@ -308,7 +308,7 @@ En caso contrario, puede mostrar uno de los errores siguientes:
 
 Para obtener más información, revise M365AHandler.log en el cliente.  
 
-Compruebe los permisos de esta clave del registro. Asegúrese de que la cuenta sistema local puede tener acceso a esta clave para el cliente de Configuration Manager establecer.  
+Compruebe los permisos de esta clave del registro. Asegúrese de que la cuenta sistema local puede tener acceso a esta clave para el cliente de Configuration Manager establecer. También puede deberse mediante un objeto de directiva de grupo en conflicto. Para obtener más información, consulte [configuración Windows](/sccm/desktop-analytics/enroll-devices#windows-settings).  
 
 Hay un identificador distinto para el dispositivo. Esta clave del registro está usando la directiva de grupo. Tiene prioridad sobre el identificador proporcionado por el Administrador de configuración.  
 
@@ -341,7 +341,7 @@ En caso contrario, puede mostrar uno de los errores siguientes:
 
 Para obtener más información, revise M365AHandler.log en el cliente.  
 
-Compruebe los permisos de esta clave del registro. Asegúrese de que la cuenta sistema local puede tener acceso a esta clave para el cliente de Configuration Manager establecer.  
+Compruebe los permisos de esta clave del registro. Asegúrese de que la cuenta sistema local puede tener acceso a esta clave para el cliente de Configuration Manager establecer. También puede deberse mediante un objeto de directiva de grupo en conflicto. Para obtener más información, consulte [configuración Windows](/sccm/desktop-analytics/enroll-devices#windows-settings).  
 
 Asegúrese de que otro mecanismo de directiva, como la directiva de grupo, no es si deshabilita a esta configuración.
 
@@ -402,7 +402,7 @@ Esta propiedad comprueba que Windows está configurado correctamente para permit
 - `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`
 - `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
 
-Compruebe los permisos de estas claves del registro. Asegúrese de que la cuenta sistema local puede tener acceso a estas claves para el cliente de Configuration Manager establecer.  
+Compruebe los permisos de estas claves del registro. Asegúrese de que la cuenta sistema local puede tener acceso a estas claves para el cliente de Configuration Manager establecer. También puede deberse mediante un objeto de directiva de grupo en conflicto. Para obtener más información, consulte [configuración Windows](/sccm/desktop-analytics/enroll-devices#windows-settings).  
 
 Para obtener más información, revise M365AHandler.log en el cliente.  
 
@@ -473,6 +473,54 @@ Los siguientes archivos de registro se encuentran en el cliente de Configuration
 
 
 
-## <a name="bkmk_MALogAnalyticsReader"></a> Rol de aplicación MALogAnalyticsReader
+## <a name="bkmk_AzureADApps"></a> Aplicaciones de Azure AD
 
-Al configurar el análisis de escritorio, acepte un consentimiento en nombre de su organización. Este consentimiento es asignar el 
+Escritorio Analytics agrega las siguientes aplicaciones a Azure AD:
+
+- **Administrador de configuración de Microservicio**: Conecta Configuration Manager con análisis de escritorio. Esta aplicación no tiene ningún requisito de acceso.  
+
+- **Administración de cliente de Office 365**: Recupera los datos del área de trabajo de Log Analytics. Esta aplicación requiere acceso de escritura a Log Analytics.  
+
+- **MALogAnalyticsReader**: Recupera los grupos de OMS y los dispositivos creados en Log Analytics. Para obtener más información, consulte [rol de aplicación MALogAnalyticsReader](#bkmk_MALogAnalyticsReader).  
+
+Si necesita aprovisionar estas aplicaciones después de completar el conjunto de copia, vaya a la **servicios conectados** panel. Seleccione **configurar el acceso de usuarios y aplicaciones**y el aprovisionamiento de las aplicaciones.  
+
+- **Aplicación de Azure AD para Configuration Manager**. Si tiene que aprovisionar o solucionar problemas de conexión después de completar el conjunto de copia, consulte [crear aplicación de Configuration Manager](/sccm/desktop-analytics/set-up#create-app-for-configuration-manager). Esta aplicación requiere **escribir datos de colección CM** y **leer datos de colección CM** en el **Configuration Manager Service** API.  
+
+### <a name="bkmk_MALogAnalyticsReader"></a> Rol de aplicación MALogAnalyticsReader
+
+Al configurar el análisis de escritorio, acepte un consentimiento en nombre de su organización. Este consentimiento consiste en asignar el rol de lector de Log Analytics para el área de trabajo de la aplicación de MALogAnalyticsReader. Este rol de aplicación es necesario por el análisis de escritorio.
+
+Si hay un problema con este proceso durante el conjunto de copia, utilice el siguiente proceso para agregar manualmente este permiso:
+
+1. Vaya a la [portal Azure](http://portal.azure.com)y seleccione **todos los recursos**. Seleccione el área de trabajo de tipo **Log Analytics**.  
+
+2. En el menú del área de trabajo, seleccione **control de acceso (IAM)**, a continuación, seleccione **agregar**.  
+
+3. En el **agregar permisos** del panel, configure las siguientes opciones:  
+
+    - **Role**: **Lector de log Analytics**  
+
+    - **Asignar acceso a**: **Usuario, grupo o aplicación de AD Azure**  
+
+    - **Seleccione**: **MALogAnalyticsReader**  
+
+4. Seleccione **Guardar**.
+
+El portal muestra una notificación que agrega la asignación de roles.
+
+
+## <a name="data-latency"></a>Latencia de datos
+
+<!-- 3846531 -->
+Datos en el portal de análisis de escritorio se actualizan diariamente. Esta actualización incluye cambios en los dispositivos recopilados de los datos de diagnóstico y los cambios realizados en la configuración. Por ejemplo, cuando cambia un recurso **actualizar decisión**, puede causar cambios en el estado de preparación de los dispositivos con ese recurso instalado.
+
+- **Los cambios del administrador** generalmente son procesadas por el servicio de análisis de escritorio en nueve horas. Por ejemplo, si realiza cambios a las 11:00 PM UTC, el portal debería reflejar dichos cambios antes de 08:00 A.M. UTC del día siguiente.
+
+- **Cambios en los dispositivos** detectado UTC medianoche en la hora local por lo general se incluyen en la actualización diaria. Normalmente, hay otras 23 horas de latencia asociada con el procesamiento de cambios en los dispositivos en comparación con los cambios de administrador.
+
+Si no ve los cambios que se actualiza dentro de estos marcos de tiempo, espere otra 24 horas para la próxima actualización diaria. Si ve retrasos más prolongados, compruebe el panel de estado del servicio. Si el servicio notifica un estado correcto, póngase en contacto con soporte técnico de Microsoft.
+
+Cuando se configura por primera vez el análisis de escritorio, los gráficos en el portal de análisis de escritorio y de Configuration Manager no pueden mostrar datos completos. Puede tardar 2 y 3 días para los dispositivos activos enviar datos de diagnóstico para el servicio de análisis de escritorio, el servicio para procesar los datos y, a continuación, sincronizar con el sitio de Configuration Manager.
+
+En una jerarquía de Configuration Manager, puede tardar 10 minutos para las nuevas colecciones que aparecerá para los planes de implementación. Las colecciones de la creación de los sitios primarios y el sitio de administración central se sincroniza con el análisis de escritorio.<!-- 3896921 -->

@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4b56fac3060acc16fe46221464ddc6535b478399
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 35e8e883acafaa1d606d81402b868b8a755d0887
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56755556"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673469"
 ---
 # <a name="how-to-create-deployment-plans-in-desktop-analytics"></a>Cómo crear planes de implementación en escritorio Analytics 
 
@@ -56,7 +56,7 @@ Siga los pasos descritos en este artículo para usar un análisis de escritorio 
 
     2. Seleccione cada aplicación y, a continuación, seleccione **editar**. Puede seleccionar más de una aplicación para editar al mismo tiempo.   
 
-    3. Elija un nivel de importancia de la **importancia** lista. Si desea que el análisis de escritorio para validar el complemento durante el programa piloto, seleccione **crítico** o **importante**. No valida los complementos marcados como **importante no**. Tenga en cuenta el riesgo de compatibilidad y otra información del plan al asignar niveles de importancia.  
+    3. Elija un nivel de importancia de la **importancia** lista. Si desea que el análisis de escritorio para validar el complemento durante el programa piloto, seleccione **crítico** o **importante**. No valida los complementos marcados como **importante no**. Tenga en cuenta la [riesgo compatibilidad](/sccm/desktop-analytics/compat-risk) y otra información del plan al asignar niveles de importancia.  
 
         Al asignar niveles de importancia, también puede elegir la decisión de actualización.  
 

@@ -2,7 +2,7 @@
 title: Configuración del análisis de escritorio
 titleSuffix: Configuration Manager
 description: Guía de procedimientos para configurar y la incorporación para análisis del escritorio.
-ms.date: 01/25/2019
+ms.date: 04/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,14 +12,14 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b20637cea4e02f390ae845ff9d421e5011120ab
-ms.sourcegitcommit: 4441b3035222cfaf7442416873ed824ac7d852c5
+ms.openlocfilehash: 0d03b670ade984298df7a1ba5428a3f8696360bb
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356332"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673571"
 ---
-# <a name="how-to-set-up-desktop-analytics"></a>Cómo configurar el análisis de escritorio 
+# <a name="how-to-set-up-desktop-analytics"></a>Cómo configurar el análisis de escritorio
 
 > [!Note]  
 > Esta información se relaciona con un servicio en versión preliminar que puede modificarse sustancialmente antes de su lanzamiento comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información aquí proporcionada.  
@@ -36,22 +36,30 @@ Utilice este procedimiento para iniciar sesión el análisis de escritorio y con
 
 3. En el **confirmar la suscripción** página, revise la lista de requiere licencias aplicables. Cambiar el valor a **Sí** junto a **¿tiene una de las suscripciones compatibles o superiores**y, a continuación, seleccione **siguiente**.  
 
-4. En el **proporcionan acceso a los usuarios y aplicaciones** página, análisis de escritorio configura previamente dos grupos de seguridad en Azure Active Directory:  
+4. En el **dar acceso a los usuarios** página:
 
-    - **Los propietarios del área de trabajo**: Crear y administrar áreas de trabajo. Estas cuentas necesitan acceso de propietario a la suscripción de Azure.  
+    - **¿Desea que el análisis de escritorio para administrar roles de directorio para los usuarios**: Escritorio Analytics asigna automáticamente el **propietarios del área de trabajo** y **colaboradores del área de trabajo** grupos a la **Desktop Administrator de análisis** rol. Si esos grupos ya están un **administrador Global**, no hay ningún cambio.  
 
-    - **Los colaboradores del área de trabajo**: Crear y administrar planes de implementación en esta área de trabajo. No necesitan ningún acceso de Azure adicionales.  
-  
-   Para agregar un usuario a cualquier grupo, escriba su dirección de correo electrónico o de nombre en el **escriba la dirección de correo electrónico o nombre** sección del grupo adecuado. Cuando termine, seleccione **siguiente**. 
+        Si no selecciona esta opción, análisis de escritorio seguirá agregando los usuarios como miembros de dos grupos de seguridad. Un **administrador Global** debe asignar manualmente el **Desktop Analytics Administrator** rol para los usuarios.  
+
+        Para obtener más información acerca de cómo asignar permisos del rol de administrador en Azure Active Directory y los permisos asignados a **Desktop Analytics administradores**, consulte [permisos del rol de administrador en Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
+
+    - Análisis de escritorio preconfigura dos grupos de seguridad en Azure Active Directory:  
+
+        - **Los propietarios del área de trabajo**: Un grupo de seguridad para crear y administrar áreas de trabajo. Estas cuentas necesitan acceso de propietario a la suscripción de Azure.  
+
+        - **Los colaboradores del área de trabajo**: Un grupo de seguridad para crear y administrar planes de implementación en esta área de trabajo. No necesitan ningún acceso de Azure adicionales.  
+
+        Para agregar un usuario a cualquier grupo, escriba su dirección de correo electrónico o de nombre en el **escriba la dirección de correo electrónico o nombre** sección del grupo adecuado. Cuando termine, seleccione **siguiente**.
 
 5. En la página para **configurar el área de trabajo**:  
 
     - Para usar un área de trabajo para el análisis de escritorio, selecciónela y continúe con el paso siguiente.  
 
         > [!Note]  
-        > Si ya utiliza Windows Analytics, seleccione esa misma área de trabajo. Deberá volver a inscribir dispositivos para el análisis de escritorio que ya tiene inscritos en Windows Analytics. 
-        > 
-        > Solo puede tener un área de trabajo de análisis de escritorio por inquilino de Azure AD. Los dispositivos solo pueden enviar datos de diagnóstico a un área de trabajo.   
+        > Si ya utiliza Windows Analytics, seleccione esa misma área de trabajo. Deberá volver a inscribir dispositivos para el análisis de escritorio que ya tiene inscritos en Windows Analytics.
+        >
+        > Solo puede tener un área de trabajo de análisis de escritorio por inquilino de Azure AD. Los dispositivos solo pueden enviar datos de diagnóstico a un área de trabajo.  
 
     - Para crear un área de trabajo para el análisis de escritorio, seleccione **Agregar área de trabajo**.  
 
@@ -70,7 +78,7 @@ Utilice este procedimiento para iniciar sesión el análisis de escritorio y con
 
 8. En la página a **configurar el área de trabajo**, seleccione **siguiente**.  
 
-9. En el **últimos pasos** página, seleccione **vaya al escritorio Analytics**. 
+9. En el **últimos pasos** página, seleccione **vaya al escritorio Analytics**.
 
 El portal de Azure muestra el análisis de escritorio **inicio** página.
 
@@ -94,11 +102,11 @@ Crear una aplicación en Azure AD para Configuration Manager.
 
 3. Seleccione la aplicación y tenga en cuenta la **Id. de aplicación**. Este valor es un GUID que se usa para configurar la conexión de Configuration Manager.  
 
-4. Seleccione **configuración** en la aplicación y, a continuación, seleccione **claves**. En el **contraseñas** sección, especifique un **descripción de la clave**, especifique una fecha de expiración **duración**y, a continuación, seleccione **guardar**. Copia el **valor** de la clave, que se usa para configurar la conexión de Configuration Manager. 
+4. Seleccione **configuración** en la aplicación y, a continuación, seleccione **claves**. En el **contraseñas** sección, especifique un **descripción de la clave**, especifique una fecha de expiración **duración**y, a continuación, seleccione **guardar**. Copia el **valor** de la clave, que se usa para configurar la conexión de Configuration Manager.
 
     > [!Important]  
     > Esta es la única oportunidad para copiar el valor de clave. Si no copia ahora, deberá crear otra clave.  
-    > 
+    >
     > Guarde el valor de clave en una ubicación segura.  
 
 5. En la aplicación **configuración** panel, seleccione **permisos necesarios**.  
