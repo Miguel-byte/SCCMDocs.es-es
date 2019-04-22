@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af4d3319e94d8dd673f597e4df4dde3e73e15653
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: c64968ca0348b94e3fb20367af7f739d8a699c58
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56129058"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673605"
 ---
 # <a name="site-components-for-configuration-manager"></a>Componentes de sitio para Configuration Manager
 
@@ -27,7 +27,8 @@ En cada sitio de Configuration Manager, puede configurar componentes de sitio pa
 En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Configuración del sitio** y seleccione el nodo **Sitios**. Seleccione un sitio. En el grupo **Configuración** de la cinta, haga clic en **Configurar componentes de sitio**. Seleccione una de las siguientes opciones:
 
 - [Distribución de software](#software-distribution)  
-- [Punto de actualización de software](#software-update-point)  
+- [Punto de actualización de software](#software-update-point) 
+- [Implementación de sistema operativo](#operating-system-deployment)
 - [Punto de administración](#management-point)  
 - [Notificación de estado](#status-reporting)  
 - [Notificación de correo electrónico](#email-notification)
@@ -58,6 +59,11 @@ Para obtener más información, vea [Cuenta de acceso a la red](/sccm/core/plan-
 ### <a name="software-update-point"></a>Punto de actualización de software  
 
 Para obtener más información, consulte [Install a software update point](/sccm/sum/get-started/install-a-software-update-point) (Instalar un punto de actualización de software).  
+
+
+### <a name="operating-system-deployment"></a>Implementación de sistema operativo
+
+Para más información, vea [Especificación de la unidad para el mantenimiento sin conexión de imágenes de SO](/sccm/osd/get-started/manage-operating-system-images#bkmk_servicing-drive).
 
 
 ### <a name="management-point"></a>Punto de administración  
