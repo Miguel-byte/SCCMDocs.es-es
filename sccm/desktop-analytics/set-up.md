@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d03b670ade984298df7a1ba5428a3f8696360bb
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: b75b82f632c8bfbbc11a2b11d58ab83116e2180a
+ms.sourcegitcommit: d23ccf7b95e6c2a6b156975194ebbc375cb5e6ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59673571"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124444"
 ---
 # <a name="how-to-set-up-desktop-analytics"></a>Cómo configurar el análisis de escritorio
 
@@ -51,6 +51,8 @@ Utilice este procedimiento para iniciar sesión el análisis de escritorio y con
         - **Los colaboradores del área de trabajo**: Un grupo de seguridad para crear y administrar planes de implementación en esta área de trabajo. No necesitan ningún acceso de Azure adicionales.  
 
         Para agregar un usuario a cualquier grupo, escriba su dirección de correo electrónico o de nombre en el **escriba la dirección de correo electrónico o nombre** sección del grupo adecuado. Cuando termine, seleccione **siguiente**.
+
+El siguiente paso puede realizarse mediante un **propietario del área de trabajo** o **colaborador**. Consulte [requisitos previos.](/sccm/desktop-analytics/overview#prerequisites) 
 
 5. En la página para **configurar el área de trabajo**:  
 
@@ -88,7 +90,7 @@ El portal de Azure muestra el análisis de escritorio **inicio** página.
 
 Crear una aplicación en Azure AD para Configuration Manager.
 
-1. En el [portal Azure](http://portal.azure.com), vaya a **Azure Active Directory**y seleccione **registros de aplicaciones**. A continuación, seleccione **nuevo registro de aplicaciones**.  
+1. Abra el [portal Azure](http://portal.azure.com) como un usuario con permisos de administrador de empresa, vaya a **Azure Active Directory**y seleccione **registros de aplicaciones**. A continuación, seleccione **nuevo registro de aplicaciones**.  
 
 2. En el **crear** del panel, configure las siguientes opciones:  
 

@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 66fc982fa7f2cee3fdd83945c1b43d490b40d2f2
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: 006a887a3989d7f05b7cf44b13562e644e6f7d94
+ms.sourcegitcommit: d23ccf7b95e6c2a6b156975194ebbc375cb5e6ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59673792"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124410"
 ---
 # <a name="tutorial-deploy-office-365-to-pilot"></a>Tutorial: Implementación piloto de Office 365
 
@@ -45,6 +45,8 @@ Análisis de escritorio usa un *área de trabajo de Log Analytics* en su suscrip
 Antes de empezar este tutorial, asegúrese de que tiene los siguientes requisitos previos:  
 
 - Una suscripción activa de Azure, con **Administrador de la compañía** permisos  
+    
+    Para obtener más información, consulte [requisitos previos de análisis de escritorio](/sccm/desktop-analytics/overview#prerequisites).
 
 - Configuration Manager, versión 1810 con Update Rollup 4488598 o posterior, con **Administrador total** rol  
 
@@ -119,7 +121,11 @@ Utilice este procedimiento para iniciar sesión el análisis de escritorio y con
 
         Para agregar un usuario a cualquier grupo, escriba su dirección de correo electrónico o de nombre en el **escriba la dirección de correo electrónico o nombre** sección del grupo adecuado. Cuando termine, seleccione **siguiente**.
 
+El siguiente paso puede realizarse mediante un **propietario del área de trabajo** o **colaborador**. 
+
 5. En la página para **configurar el área de trabajo**:  
+
+    - Seleccione su suscripción de Azure. 
 
     - Para usar un área de trabajo para el análisis de escritorio, selecciónela y continúe con el paso siguiente.  
 
@@ -129,7 +135,9 @@ Utilice este procedimiento para iniciar sesión el análisis de escritorio y con
 
         2. Seleccione la lista desplegable para **seleccione el nombre de la suscripción de Azure para esta área de trabajo**y elija la suscripción de Azure para esta área de trabajo.  
 
-        3. Seleccione el **región** en la lista y, a continuación, seleccione **agregar**.  
+        3. **Crear nuevo** grupo de recursos o **usar existente**.  
+
+        4. Seleccione el **región** en la lista y, a continuación, seleccione **agregar**.  
 
 6. Seleccione un área de trabajo nueva o existente y, a continuación, seleccione **establecer como área de trabajo de análisis de escritorio**.  A continuación, seleccione **continuar** en el **confirmar y concederle acceso** cuadro de diálogo.  
 
@@ -142,7 +150,7 @@ Utilice este procedimiento para iniciar sesión el análisis de escritorio y con
 
 ### <a name="create-an-app-in-azure-ad-for-configuration-manager"></a>Crear una aplicación en Azure AD para Configuration Manager  
 
-1. En el [portal Azure](https://portal.azure.com), vaya a **Azure Active Directory**y seleccione **registros de aplicaciones**. A continuación, seleccione **nuevo registro de aplicaciones**.  
+1. Abra el [portal Azure](http://portal.azure.com) como un usuario con permisos de administrador de empresa, vaya a **Azure Active Directory**y seleccione **registros de aplicaciones**. A continuación, seleccione **nuevo registro de aplicaciones**.  
 
 2. En el **crear** del panel, configure las siguientes opciones:  
 

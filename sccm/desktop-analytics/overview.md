@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4105a8a81ab3f09dee9cf3ca5a2462ed2bb4183a
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
-ms.translationtype: HT
+ms.openlocfilehash: 1229dabb0fedf600f7d57a2a400df87906945ba4
+ms.sourcegitcommit: d23ccf7b95e6c2a6b156975194ebbc375cb5e6ea
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802638"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124427"
 ---
 # <a name="what-is-desktop-analytics"></a>¿Qué es el análisis de escritorio?
 
@@ -71,8 +71,14 @@ Para utilizar el análisis de escritorio, asegúrese de que su entorno cumple lo
 ### <a name="technical"></a>Técnica
 
 - Una suscripción activa de Azure  
+    
+    - [**Administrador de la compañía** ](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator) permisos en Azure para **acepte el contrato de servicio**, **confirmar la suscripción** y **dar acceso de usuario** 
 
-    - **Administrador de empresa** permisos en Azure  
+    - **Propietario del área de trabajo** o **colaborador** permisos para **configurar el área de trabajo** y  
+
+        - [**Colaborador de análisis de registro** ](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#log-analytics-contributor) y [ **Administrador de acceso de usuario** ](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) en el grupo de recursos para usar un área de trabajo existente o crear una nueva área de trabajo en un grupo de recursos existente.
+
+        - [**Propietario**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner), o [ **colaborador** ](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) y [ **Administrador de acceso de usuario** ](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) permisos en el suscripción para crear un área de trabajo en un grupo de recursos.
 
 - Configuration Manager, versión 1810 con Update Rollup 4488598 o posterior. Para obtener más información, consulte [actualizar Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
 
