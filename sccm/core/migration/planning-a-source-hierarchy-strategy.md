@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 76f82734229f3b8e9ed37ed4bc9057eff6421aad
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 44f71aeb0019ce2b481e9f5ecd9f37ce6421398e
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156550"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673826"
 ---
 # <a name="plan-a-source-hierarchy-strategy-in-system-center-configuration-manager"></a>Planear una estrategia de jerarquía de origen en System Center Configuration Manager
 
@@ -55,6 +55,7 @@ Si restaura una jerarquía de origen inactiva y no usó anteriormente **Limpiar 
 
 > [!CAUTION]  
 >  Si migra datos de más de una jerarquía de origen único, cada jerarquía de origen adicional debe contener un conjunto de códigos de sitio único.  
+> Las jerarquías de origen y destino también requieren un conjunto diferente de códigos de sitio.
 
 Para más información sobre cómo configurar una jerarquía de origen, vea [Configurar jerarquías de origen y sitios de origen para la migración a System Center Configuration Manager](../../core/migration/configuring-source-hierarchies-and-source-sites-for-migration.md).  
 

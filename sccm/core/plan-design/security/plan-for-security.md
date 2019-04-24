@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f0ea9d6d923aeb1c278e5f3e96806044bbae6e4
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: f6ffa061e3d04bbbda31cc4406494b492ba98d9b
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56138626"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673860"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>Planeación de la seguridad en Configuration Manager
 
@@ -121,7 +121,7 @@ Consulte con los administradores de PKI antes de decidir si los clientes de Conf
 -   El requisito de comprobar la CRL para cada conexión a un sistema de sitio que está configurado para usar un certificado PKI es mayor que los requisitos siguientes:  
     - Conexiones más rápidas  
     - Procesamiento eficaz en el cliente  
-    - El riesgo de que los clientes no puedan conectarse a los servidores si no pueden encontrar la CRL  
+    - El riesgo de que los clientes no puedan conectarse a los servidores si no se puede encontrar la CRL  
 
 
 ###  <a name="BKMK_PlanningForRootCAs"></a> Planear los certificados raíz de confianza PKI y la lista de emisores de certificados  

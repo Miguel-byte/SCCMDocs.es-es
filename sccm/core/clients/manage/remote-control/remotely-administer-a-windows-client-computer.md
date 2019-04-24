@@ -2,27 +2,25 @@
 title: Administración remota de un equipo Windows
 titleSuffix: Configuration Manager
 description: Administre un equipo cliente de Windows remoto mediante System Center Configuration Manager.
-ms.date: 07/27/2017
+ms.date: 04/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
 ms.assetid: 3c9648c4-645e-4e47-ae10-2da817b8c83b
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 266961da1fe1f63e996247612a821ee7ac217f65
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: d16cbc892a3f4c7565a9672ca7c0145396dcaa3d
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133670"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673622"
 ---
 # <a name="how-to-remotely-administer-a-windows-client-computer-by-using-system-center-configuration-manager"></a>Cómo administrar de forma remota un equipo cliente de Windows con System Center Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*
-
-Antes de empezar a usar el control remoto, asegúrese de revisar la información de los siguientes temas:  
+*Se aplica a: System Center Configuration Manager (rama actual)* Configuration Manager le permite conectarse a equipos cliente mediante **Control remoto de Configuration Manager**. Antes de empezar a usar el control remoto, asegúrese de revisar la información de los siguientes artículos:  
 
 -   [Requisitos previos del control remoto en System Center Configuration Manager](../../../../core/clients/manage/remote-control/prerequisites-for-remote-control.md)  
 
@@ -34,9 +32,9 @@ A continuación se indican tres formas de iniciar el visor de control remoto:
 
 -   En un símbolo del sistema de Windows.  
 
--   En el menú **Inicio** de Windows en un equipo que ejecute la consola de Configuration Manager desde el grupo de programas **Microsoft System Center**.  
+-   En el menú **Inicio** de Windows, en un equipo que ejecute la consola de Configuration Manager, en el grupo de programas **Microsoft System Center**.  
 
-### <a name="to-remotely-administer-a-client-computer-from-the-configuration-manager-console"></a>Para administrar de forma remota un equipo cliente desde la consola de Configuration Manager  
+## <a name="to-remotely-administer-a-client-computer-from-the-configuration-manager-console"></a>Para administrar de forma remota un equipo cliente desde la consola de Configuration Manager  
 
 1.  En la consola de Configuration Manager, seleccione **Activos y compatibilidad** > **Dispositivos** o **Recopilaciones de dispositivos**.  
 
@@ -50,38 +48,41 @@ A continuación se indican tres formas de iniciar el visor de control remoto:
     > [!NOTE]  
     >  Si el equipo al que se conecta tiene varios monitores, la visualización de todos los monitores se muestra en la ventana de control remoto.  
 
-    -   **Archivo - Conectar**: se establece una conexión con otro equipo. Esta opción no está disponible cuando está activa una sesión de control remoto.  
-
-    -   **Archivo - Desconectar**: desconecta la sesión de control remoto activa, pero no cierra la ventana **Control remoto de Configuration Manager**.  
-
-    -   **Archivo - Salir**: desconecta la sesión de control remoto activa y cierra la ventana **Control remoto de Configuration Manager**.  
-
-        > [!NOTE]  
-        >  Cuando se desconecta una sesión de control remoto, se elimina el contenido del Portapapeles de Windows en el equipo que está visualizando.  
-
-    -   **Ver pantalla completa**: maximiza la ventana **Control remoto de Configuration Manager**.  
+    -   **File**
+        - **Conectar**: se establece una conexión con otro equipo. Esta opción no está disponible cuando está activa una sesión de control remoto.  
+        -   **Desconectar**: desconecta la sesión de control remoto activa, pero no cierra la ventana **Control remoto de Configuration Manager**.  
+        - **Salir**: desconecta la sesión de control remoto activa y cierra la ventana **Control remoto de Configuration Manager**.  
 
         > [!NOTE]  
-        >  Para salir del modo de pantalla completa, presione Ctrl+Alt+Interrumpir.  
+        >  Cuando se desconecta una sesión de control remoto, se elimina el contenido del Portapapeles de Windows en el equipo que está visualizando.
 
-    -   **Vista - Ajustar tamaño al contenido**: ajusta la visualización del equipo remoto al tamaño de la ventana **Control remoto de Configuration Manager**.  
 
-    -   **Vista - Barra de estado**: activa o desactiva la visualización de la barra de estado de la ventana **Control remoto de Configuration Manager**.  
+    - **Ver**
+      - **Profundidad de color**: elija 16 bits o 32 bits por píxel.
+      -  **Pantalla completa**: maximiza la ventana **Control remoto de Configuration Manager**. Para salir del modo de pantalla completa, presione Ctrl+Alt+Interrumpir.  
+      - **Optimizar para conexión de ancho de banda bajo**: elija esta opción si la conexión es de ancho de banda bajo.
+      - **Mostrar:**
+        - **Todas las pantallas**: se ha agregado en Configuration Manager 1902. Si el equipo al que se conecta tiene varios monitores, la visualización de todos los monitores se muestra en la ventana de control remoto. **Todas las pantallas** es la única vista para equipos con varios monitores antes de 1902.
+        -  **Primera pantalla**: se ha agregado en Configuration Manager 1902. La *primera pantalla* se encuentra arriba a la izquierda, tal como se muestra en la configuración de pantalla de Windows. No puede seleccionar una pantalla específica. Cuando cambie la configuración del visor, vuelva a conectar la sesión remota. El visor guarda su preferencia para futuras conexiones.
+        -  **Ajustar tamaño al contenido**: ajusta la visualización del equipo remoto al tamaño de la ventana **Control remoto de Configuration Manager**.
+       - **Barra de estado**: activa o desactiva la visualización de la barra de estado de la ventana **Control remoto de Configuration Manager**.  
 
-    -   **Acción - Enviar tecla Ctrl+Alt+Supr**: envía la combinación de teclas Ctrl+Alt+Supr al equipo remoto.  
+       > [!NOTE]  
+       >  El visor guarda su preferencia para futuras conexiones.
 
-    -   **Acción - Habilitar uso compartido del Portapapeles**: le permite copiar elementos del equipo remoto y pegar elementos en él. Si cambia este valor, debe reiniciar la sesión de control remoto para que el cambio surta efecto.  
+    -   **Acción**
+        - **Enviar tecla Ctrl+Alt+Supr**: envía la combinación de teclas Ctrl+Alt+Supr al equipo remoto. 
+        - **Habilitar uso compartido del Portapapeles**: le permite copiar elementos del equipo remoto y pegar elementos en él. Si cambia este valor, debe reiniciar la sesión de control remoto para que el cambio surta efecto.   
+          - Si no quiere habilitar el uso compartido del Portapapeles en la consola de Configuration Manager, en el equipo que ejecuta la consola, establezca el valor de la clave de registro **HKEY_CURRENT_USER\Software\Microsoft\ConfigMgr10\Remote Control\Clipboard Sharing** en **0**.
+        - **Habilitar traducción del teclado**: traduce la distribución del teclado del equipo que ejecuta la consola al diseño del dispositivo conectado.
+        - **Bloquear teclado y mouse remotos**: bloquea el teclado y el mouse remotos para impedir que el usuario use el equipo remoto.  
 
-        > [!NOTE]  
-        >  Si no quiere habilitar el uso compartido del Portapapeles en la consola de Configuration Manager, en el equipo que ejecuta la consola, establezca el valor de la clave de registro, **HKEY_CURRENT_USER\Software\Microsoft\ConfigMgr10\Remote Control\Clipboard Sharing** en **0**.  
+    -   **Ayuda**
+        - **Acerca del control remoto**: muestra la versión actual del visor.  
 
-    -   **Acción - Bloquear teclado y mouse remotos**: bloquea el teclado y el mouse remotos para impedir que el usuario use el equipo remoto.  
+5.  Los usuarios del equipo remoto pueden ver más información sobre la sesión de control remoto al hacer clic en el icono **Control remoto** de Configuration Manager. El icono se encuentra en el área de estado de Windows o el icono en la barra de sesión de control remoto.  
 
-    -   **Ayuda - Acerca del control remoto**: muestra la versión actual del visor.  
-
-5.  Los usuarios del equipo remoto pueden ver más información sobre la sesión de control remoto al hacer clic en el icono **Control remoto** de Configuration Manager del área de notificación de Windows o en el icono de la barra de la sesión de control remoto.  
-
-### <a name="to-start-the-remote-control-viewer-from-the-windows-command-line"></a>Puede iniciar el visor de control remoto desde la línea de comandos de Windows.  
+## <a name="to-start-the-remote-control-viewer-from-the-windows-command-line"></a>Puede iniciar el visor de control remoto desde la línea de comandos de Windows.  
 
 -   En el símbolo del sistema de Windows, escriba _<carpeta de instalación de Configuration Manager\>_**\AdminConsole\Bin\x64\CmRcViewer.exe**  
 

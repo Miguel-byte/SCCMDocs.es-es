@@ -2,7 +2,7 @@
 title: Requisitos previos de los sitios
 titleSuffix: Configuration Manager
 description: Obtenga información sobre los requisitos previos necesarios para instalar los distintos tipos de sitios de Configuration Manager.
-ms.date: 09/04/2018
+ms.date: 04/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5a56739eee4d116014f89b3a7e7835e3e87a62ac
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 51569f04a8665f230030da7fec4bc67042263d92
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56124595"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673588"
 ---
 # <a name="prerequisites-for-installing-configuration-manager-sites"></a>Requisitos previos para instalar sitios de Configuration Manager
 
@@ -37,6 +37,15 @@ Si va a instalar un sitio de administración central como parte de una expansió
 
 
 ###  <a name="bkmk_PrereqPri"></a> Requisitos previos para instalar un sitio primario o un sitio de administración central  
+
+- Deben instalarse los siguientes roles de Windows Server, características y componentes de Windows:  
+    - .NET framework 3.5 SP1 (o posterior)
+    - .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1 o 4.7.2
+    - Compresión diferencial remota
+    - Windows ADK
+    - Visual C++ Redistributable  
+    
+    Para obtener más información, consulte [Requisitos previos de sistema de sitio](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012sspreq)  
 
 - La cuenta de usuario que instale el sitio debe tener los siguientes derechos:  
 
@@ -136,7 +145,15 @@ Para resolver el problema, siga estos pasos:
 
 ## <a name="bkmk_secondary"></a> Sitios secundarios
 
-A continuación se detallan los requisitos previos para instalar los sitios secundarios:
+A continuación se detallan los requisitos previos para instalar los sitios secundarios:  
+
+- Deben instalarse los siguientes roles de Windows Server, características y componentes de Windows:  
+    - .NET framework 3.5 SP1 (o posterior)
+    - .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1 o 4.7.2
+    - Compresión diferencial remota
+    - Visual C++ Redistributable  
+    
+    Para obtener más información, consulte [Requisitos previos de sistema de sitio](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012secpreq)  
 
 - El administrador que configura la instalación del sitio secundario en la consola de Configuration Manager debe tener derechos de administración basada en roles equivalentes al rol de seguridad **Administrador de infraestructura** o **Administrador total**.  
 

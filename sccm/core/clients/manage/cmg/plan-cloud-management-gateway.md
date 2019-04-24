@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f50bb18edf782d5012e90db0b4b21a2309ad4f0b
-ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
+ms.openlocfilehash: f9057a2126a548ebb8706e905b86edb702f0ff35
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58196898"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673690"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Planificación de Cloud Management Gateway en Configuration Manager
 
@@ -175,7 +175,7 @@ Del mismo modo, cuando los clientes de París se mueven hacia Internet, se comun
     - A partir de la versión 1806, cuando se usa la opción del sitio **Usar los certificados generados por Configuration Manager para sistemas de sitios HTTP**, el punto de administración puede ser HTTP. Para obtener más información, vea [HTTP mejorado](/sccm/core/plan-design/hierarchy/enhanced-http).  
 
 
-- Puede que sea necesaria la integración con **Azure AD** para los clientes de Windows 10. Para obtener más información, vea [Configuración de servicios de Azure](/sccm/core/servers/deploy/configure/azure-services-wizard).  
+- La integración con **Azure AD** es necesaria para las implementaciones de Azure Resource Manager. Es posible que también sea necesaria para los clientes de Windows 10. Para obtener más información, vea [Configuración de servicios de Azure](/sccm/core/servers/deploy/configure/azure-services-wizard).  
 
 - Los clientes deben usar **IPv4**.  
 

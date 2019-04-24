@@ -2,7 +2,7 @@
 title: Puertos usados para las conexiones
 titleSuffix: Configuration Manager
 description: Obtenga información sobre los puertos de red necesarios y personalizables que usa Configuration Manager para las conexiones.
-ms.date: 01/29/2019
+ms.date: 04/11/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7aaadae5feaff2aa55e521c4b7438f4f1d24209a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 99df201cb3525a124b42d5d599d4a74708258bad
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156821"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673724"
 ---
 # <a name="ports-used-in-configuration-manager"></a>Puertos usados en Configuration Manager
 
@@ -584,6 +584,14 @@ Para más información, vea [Puertos y flujo de datos](/sccm/core/plan-design/hi
 |-----------------|---------|---------|  
 |Asignador de extremos de RPC|135|135|  
 |RPC (DCOM)|--|DINÁMICA <sup>[Nota 6](#bkmk_note6)</sup>|  
+
+
+###  <a name="BKMK_PortsSite-RCL"></a> Servidor de sitio -- > Servidor que hospeda el recurso compartido de biblioteca de contenido remoto  
+ A partir de la versión 1806, puede reubicar la biblioteca de contenido en otra ubicación de almacenamiento para liberar espacio de disco duro en los servidores de sitio primario o de administración central. Para obtener más información, consulte [Configuración de una biblioteca de contenido remoto para el servidor de sitio](/sccm/core/plan-design/hierarchy/the-content-library#bkmk_remote).  
+
+|Descripción|UDP|TCP|  
+|-----------------|---------|---------|  
+|Bloque de mensajes del servidor (SMB)|--|445|  
 
 
 ###  <a name="BKMK_PortsSite-RSP"></a> Servidor de sitio &lt; -- > Punto de servicios de informes  
