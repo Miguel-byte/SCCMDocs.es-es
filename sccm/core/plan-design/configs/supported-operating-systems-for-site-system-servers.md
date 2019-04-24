@@ -2,7 +2,7 @@
 title: Servidores de sistema de sitio admitidos
 titleSuffix: Configuration Manager
 description: Obtenga información sobre qué versiones de Windows puede usar para hospedar un sitio o rol de sistema de sitio de Configuration Manager.
-ms.date: 01/15/2019
+ms.date: 04/16/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5352d1d43de97375eb66389586778d7c23c2aa0
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 125d139548b827d349864496cd636622449b8fe3
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56138711"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673639"
 ---
 # <a name="supported-operating-systems-for-configuration-manager-site-system-servers"></a>Sistemas operativos compatibles con servidores de sistema de sitio de Configuration Manager
 
@@ -233,6 +233,7 @@ Esta compatibilidad tiene las siguientes limitaciones:
 
 La instalación de Server Core de las siguientes versiones de sistema operativo de servidor se puede usar como **punto de distribución**: 
 
+- Windows Server 2019 (a partir de la versión 1810 de Configuration Manager)  
 - Windows Server, versión 1809 (a partir de la versión 1810 de Configuration Manager)  
 - Windows Server, versión 1803 (a partir de la versión 1802 de Configuration Manager)  
 - Windows Server, versión 1709 (a partir de la versión 1710 de Configuration Manager)  
