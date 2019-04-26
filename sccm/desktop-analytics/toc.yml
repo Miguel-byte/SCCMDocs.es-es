@@ -1,51 +1,44 @@
-items:
 - name: Análisis de escritorio
   items:
-  - name: Información general
-    href: overview.md
-  - name: Tutoriales
-    items:
-    - name: Fase piloto de Office 365
-      href: tutorial-office-365.md
-  - name: Conceptos
-    items:
-    - name: Planes de implementación
-      href: about-deployment-plans.md
-    - name: Activos
-      href: about-assets.md
-    - name: Actualizaciones de calidad y características
-      href: about-updates.md
-    - name: Riesgo de compatibilidad con aplicaciones Windows
-      href: compat-risk.md
-    - name: Supervisión del estado de mantenimiento
-      href: health-status-monitoring.md
-  - name: Guías de procedimientos
-    items:
-    - name: Configuración del análisis de escritorio
-      href: set-up.md
-    - name: Conexión de Configuration Manager
-      href: connect-configmgr.md
-    - name: Inscribir dispositivos
-      href: enroll-devices.md
-    - name: Creación de planes de implementación
-      href: create-deployment-plans.md
-    - name: Implementación en la fase piloto
-      href: deploy-pilot.md
-    - name: Implementación en producción
-      href: deploy-prod.md
-    - name: Evaluación de la compatibilidad con App Health Analyzer
-      href: app-health-analyzer.md
-  - name: Referencia
-    items:
-    - name: Habilitación del uso compartido de datos
-      href: enable-data-sharing.md
-    - name: Solución de problemas
-      href: troubleshooting.md
-    - name: Privacidad
-      href: privacy.md
-ms.openlocfilehash: 473ddb150610af13b099bc601e05e8c50be6aac8
-ms.sourcegitcommit: ad25a7bdd983c5a0e4c95bffdc61c9a1ebcbb765
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55073194"
+    - name: Información general
+      href: overview.md
+    - name: Tutoriales
+      items:
+        - name: Fase piloto de Office 365
+          href: tutorial-office-365.md
+    - name: Conceptos
+      items:
+        - name: Planes de implementación
+          href: about-deployment-plans.md
+        - name: Activos
+          href: about-assets.md
+        - name: Actualizaciones de calidad y características
+          href: about-updates.md
+        - name: Riesgo de compatibilidad con aplicaciones Windows
+          href: compat-risk.md
+        - name: Supervisión del estado de mantenimiento
+          href: health-status-monitoring.md
+    - name: Guías de procedimientos
+      items:
+        - name: Configuración del análisis de escritorio
+          href: set-up.md
+        - name: Conexión de Configuration Manager
+          href: connect-configmgr.md
+        - name: Inscribir dispositivos
+          href: enroll-devices.md
+        - name: Creación de planes de implementación
+          href: create-deployment-plans.md
+        - name: Implementación en la fase piloto
+          href: deploy-pilot.md
+        - name: Implementación en producción
+          href: deploy-prod.md
+        - name: Evaluación de la compatibilidad con App Health Analyzer
+          href: app-health-analyzer.md
+    - name: Referencia
+      items:
+        - name: Habilitación del uso compartido de datos
+          href: enable-data-sharing.md
+        - name: Solución de problemas
+          href: troubleshooting.md
+        - name: Privacidad
+          href: privacy.md
