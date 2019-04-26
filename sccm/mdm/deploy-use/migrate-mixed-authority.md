@@ -12,11 +12,11 @@ ms.technology: configmgr-hybrid
 ms.assetid: 6f0201d7-5714-4ba0-b2bf-d1acd0203e9a
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b7f2875852b49ab8af9b1f34c4747f12a6620896
-ms.sourcegitcommit: fd16fc2b681608fd6def5bad2cedffbcd1f2423a
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56405682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62282503"
 ---
 # <a name="change-the-mdm-authority-for-specific-users-mixed-mdm-authority"></a>Cambio de la entidad de MDM para usuarios específicos (entidad de MDM mixta) 
 
@@ -34,7 +34,7 @@ Puede configurar una entidad de MDM mixta en el mismo inquilino. Administrar alg
 Administrar los usuarios migrados y sus dispositivos en Intune. Seguir administrando otros dispositivos en Configuration Manager. Para comprobar que todo funciona según lo previsto, comience con un grupo de prueba pequeño de usuarios. A continuación, migra gradualmente más grupos de usuarios. Cuando esté listo, cambiar la entidad de MDM de inquilino de Configuration Manager a Intune independiente. 
 
 > [!Important]  
-> Desde el 13 de agosto de 2018, la administración híbrida de dispositivos móviles es una [característica en desuso](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Para más información, vea [¿Qué es la Administración híbrida de dispositivos móviles (MDM)?](/sccm/mdm/understand/hybrid-mobile-device-management). <!--Intune feature 2683117-->  
+> Desde el 13 de agosto de 2018, la administración híbrida de dispositivos móviles es una [característica en desuso](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Para más información, vea [¿Qué es la Administración híbrida de dispositivos móviles (MDM)?](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
 
 
 
@@ -45,7 +45,7 @@ Administrar los usuarios migrados y sus dispositivos en Intune. Seguir administr
 - Los dispositivos de los usuarios de la recopilación asociada con la suscripción de Intune pueden inscribirse en MDM híbrida. Todos los dispositivos asociados a usuarios no están en la colección se administran en Intune, siempre y cuando el usuario tenga una licencia de Intune o EMS.   
 
     > [!Note]  
-    > Los usuarios pueden inscribirse en Intune independiente, incluso si se les ha bloqueado a través de la consola de Configuration Manager. Para bloquear completamente la inscripción de un usuario, no asigne licencias para Intune a los usuarios no deseados. No pueden inscribirse sin licencia.<!--SCCMDocs issue 738-->  
+    > Los usuarios pueden inscribirse en Intune independiente, incluso si se les ha bloqueado a través de la consola de Configuration Manager. Para bloquear completamente la inscripción de un usuario, no asigne licencias para Intune a los usuarios no deseados. No se inscriben sin una licencia.<!--SCCMDocs issue 738-->  
 
 - Al migrar un usuario a Intune, los usuarios y dispositivos aparecen en Intune en Azure Portal después de 15 minutos aproximadamente.   
 
@@ -85,7 +85,7 @@ Administrar los usuarios migrados y sus dispositivos en Intune. Seguir administr
 - No migre las cuentas de usuario que se han agregado como administradores de inscripción de dispositivos en Configuration Manager. Más adelante, cuando cambie su entidad de MDM de inquilino a Intune, estas cuentas de usuario se migrarán correctamente. Si migra la cuenta de usuario DEM antes del cambio de entidad MDM de inquilino, debe agregar manualmente el usuario como un DEM en Intune en Azure. Sin embargo, los dispositivos inscritos mediante un DEM no se migran correctamente. Llame al servicio de soporte técnico para migrar estos dispositivos. Para obtener más información, consulte [Agregar un administrador de inscripción de dispositivos](https://docs.microsoft.com/intune/device-enrollment-manager-enroll#add-a-device-enrollment-manager).  
 
     > [!Note]  
-    > En el modo de entidad mixta, no mueva estas cuentas a Intune quitándolas de la recopilación en la nube de Configuration Manager. Si lo hace, el usuario se convierte en un usuario estándar y no puede inscribir más de 15 dispositivos. En su lugar, migre estos usuarios y sus dispositivos solo cuando cambie por completo la entidad de MDM para el inquilino.<!--Intune bug 2174210-->  
+    > En el modo de entidad mixta, no mueva estas cuentas a Intune quitándolas de la recopilación en la nube de Configuration Manager. Si lo hace, el usuario se convierte en un usuario estándar y no puede inscribir más de 15 dispositivos. En su lugar, puede migrar estos usuarios y sus dispositivos cuando cambie por completo la entidad de MDM para el inquilino.<!--Intune bug 2174210-->  
 
 - Los dispositivos inscritos mediante un DEM y dispositivos sin [afinidad entre usuario y](/sccm/mdm/deploy-use/user-affinity-for-hybrid-managed-devices) no se migran automáticamente a la nueva entidad MDM. Para cambiar la autoridad de administración para estos dispositivos MDM, consulte [Migración de dispositivos sin afinidad de usuario](#migrate-devices-without-user-affinity).  
 

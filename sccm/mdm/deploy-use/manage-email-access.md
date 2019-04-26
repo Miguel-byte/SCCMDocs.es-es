@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2ee4ed8f102507b4d62a1ccbfe1cc38240e85df9
-ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58196864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260548"
 ---
 # <a name="manage-email-access-in-configuration-manager"></a>Administrar el acceso de correo electrónico en Configuration Manager
 
@@ -176,7 +176,7 @@ Para obtener más información sobre cómo configurar la directiva de cumplimien
 #### <a name="for-exchange-online-and-tenants-in-the-new-exchange-online-dedicated-environment"></a>Para Exchange Online (y los inquilinos del nuevo entorno de Exchange Online dedicado)
 
 > [!NOTE]  
-> También puede crear la directiva de acceso condicional en la consola de administración de Azure AD. La consola de administración de Azure AD le permite crear las directivas de acceso condicional de dispositivos de Intune (denominada directiva de acceso condicional basada en dispositivos en Azure AD), además de otras directivas de acceso condicional, como la autenticación multifactor. También puede configurar directivas de acceso condicional para aplicaciones empresariales de terceros, como Salesforce y Box, compatibles con Azure AD. Para obtener más información, consulte [How To: Requerir que los dispositivos administrados para el acceso a la aplicación en la nube con acceso condicional](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices).  
+> También puede crear la directiva de acceso condicional en la consola de administración de Azure AD. La consola de administración de Azure AD le permite crear las directivas de acceso condicional de dispositivos de Intune (denominada directiva de acceso condicional basada en dispositivos en Azure AD), además de otras directivas de acceso condicional, como la autenticación multifactor. También puede configurar directivas de acceso condicional para aplicaciones empresariales de terceros, como Salesforce y Box, compatibles con Azure AD. Para obtener más información, consulte [How To: Uso obligatorio de dispositivos administrados para el acceso a aplicaciones en la nube mediante el acceso condicional](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices)  
 
 Las directivas de acceso condicional de Exchange Online utilizan el siguiente flujo para evaluar si se permitirá o bloqueará el acceso a los dispositivos.  
 

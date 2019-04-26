@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 006a887a3989d7f05b7cf44b13562e644e6f7d94
-ms.sourcegitcommit: d23ccf7b95e6c2a6b156975194ebbc375cb5e6ea
+ms.openlocfilehash: 66b7d7da7081a4523378c0dc4b2a00917ac16ea9
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60124410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261424"
 ---
 # <a name="tutorial-deploy-office-365-to-pilot"></a>Tutorial: Implementación piloto de Office 365
 
@@ -121,7 +121,7 @@ Utilice este procedimiento para iniciar sesión el análisis de escritorio y con
 
         Para agregar un usuario a cualquier grupo, escriba su dirección de correo electrónico o de nombre en el **escriba la dirección de correo electrónico o nombre** sección del grupo adecuado. Cuando termine, seleccione **siguiente**.
 
-El siguiente paso puede realizarse mediante un **propietario del área de trabajo** o **colaborador**. 
+El siguiente paso puede realizarse mediante un **propietario del área de trabajo** o **colaborador**. Para obtener más información, consulte [requisitos previos](/sccm/desktop-analytics/overview#prerequisites).
 
 5. En la página para **configurar el área de trabajo**:  
 

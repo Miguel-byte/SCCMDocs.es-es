@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b75b82f632c8bfbbc11a2b11d58ab83116e2180a
-ms.sourcegitcommit: d23ccf7b95e6c2a6b156975194ebbc375cb5e6ea
+ms.openlocfilehash: 7f59e7a9feb53370b069852b871ce2a2c333dda0
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60124444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258204"
 ---
 # <a name="how-to-set-up-desktop-analytics"></a>Cómo configurar el análisis de escritorio
 
@@ -68,8 +68,10 @@ El siguiente paso puede realizarse mediante un **propietario del área de trabaj
         1. Escriba un **nombre de área de trabajo**.<!--do we have any guidance for this name?-->  
 
         2. Seleccione la lista desplegable para **seleccione el nombre de la suscripción de Azure para esta área de trabajo**y elija la suscripción de Azure para esta área de trabajo.  
+        
+        3. **Crear nuevo** grupo de recursos o **usar existente**. 
 
-        3. Seleccione el **región** en la lista y, a continuación, seleccione **agregar**.  
+        4. Seleccione el **región** en la lista y, a continuación, seleccione **agregar**.  
 
 6. Seleccione un área de trabajo nueva o existente y, a continuación, seleccione **establecer como área de trabajo de análisis de escritorio**.  A continuación, seleccione **continuar** en el **confirmar y concederle acceso** cuadro de diálogo.  
 

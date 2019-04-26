@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: aff4fcc67325645387aea1e57354321769a515ca
-ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57558072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62217022"
 ---
 # <a name="set-up-a-microsoft-intune-subscription-for-on-premises-mdm-in-configuration-manager"></a>Configurar una suscripción de Microsoft Intune para MDM local en Configuration Manager
 
@@ -27,7 +27,7 @@ Administrador de configuración local administración de dispositivos móviles (
 Antes de instalar los roles de sistema de sitio requeridos para MDM local, configure la suscripción a Intune. Esta acción minimiza el tiempo necesario para que los roles de sistema de sitio recién instalados puedan funcionar.  
 
 > [!Note]  
-> A partir de la versión 1810, una conexión a Intune ya no es necesaria para nuevas implementaciones de MDM local.<!--3607730, fka 1359124--> La organización sigue necesitando licencias de Intune para usar esta característica. Actualmente no se puede quitar la conexión de Intune de las implementaciones de MDM locales existentes. Para más información, vea la [entrada del blog de soporte técnico de Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).  
+> A partir de la versión 1810, una conexión a Intune ya no es necesaria para nuevas implementaciones de MDM local.<!--3607730, fka 1359124--> La organización sigue necesitando licencias de Intune para usar esta característica. Actualmente no se puede quitar la conexión de Intune de las implementaciones locales de MDM existentes. Para más información, vea la [entrada del blog de soporte técnico de Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).  
 
 
 

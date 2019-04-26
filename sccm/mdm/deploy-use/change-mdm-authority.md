@@ -12,11 +12,11 @@ ms.technology: configmgr-hybrid
 ms.assetid: cc397ab5-125f-4f17-905b-fab980194f49
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c0420113feaaf9c9485b8d1e3d488b07878c61b5
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56131972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233988"
 ---
 # <a name="change-your-mdm-authority"></a>Cambio de la entidad de MDM
 
@@ -27,7 +27,7 @@ Puede cambiar la entidad de MDM sin tener que ponerse en contacto con el Soporte
 En este artículo se cambia la entidad de MDM cuando no haya migrado previamente usuarios. Para cambiar la entidad de MDM una vez que haya [migrado un subconjunto de usuarios](migrate-hybridmdm-to-intunesa.md), vea [Cambio de la entidad de MDM](migrate-change-mdm-authority.md).
 
 > [!Important]  
-> Desde el 13 de agosto de 2018, la administración híbrida de dispositivos móviles es una [característica en desuso](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Para más información, vea [¿Qué es la Administración híbrida de dispositivos móviles (MDM)?](/sccm/mdm/understand/hybrid-mobile-device-management). <!--Intune feature 2683117-->  
+> Desde el 13 de agosto de 2018, la administración híbrida de dispositivos móviles es una [característica en desuso](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Para más información, vea [¿Qué es la Administración híbrida de dispositivos móviles (MDM)?](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
 
 
 
@@ -124,9 +124,9 @@ Una vez completado el cambio en la entidad de MDM, revise los siguientes pasos:
     
 - Si tiene problemas con algún dispositivo, anule su inscripción y vuelva a inscribirlo. Esta acción conecta con la nueva entidad y se administra lo más rápido posible.  
 
-- Si ha habilitado [Android for Work](/sccm/mdm/deploy-use/create-configuration-items-for-android-for-work-devices-managed-without-the-client) como un inquilino híbrido y, luego, migra el inquilino a Intune independiente, la opción de Android for Work en las restricciones de inscripción puede aparecer como bloqueada en lugar de permitida. Establézcala manualmente en **Permitir** para volver a habilitar la inscripción de Android for Work.<!--512117-->  
+- Si ha habilitado [Android for Work](/sccm/mdm/deploy-use/create-configuration-items-for-android-for-work-devices-managed-without-the-client) como un inquilino híbrido y, luego, migra el inquilino a Intune independiente, la opción de Android for Work en las restricciones de inscripción puede aparecer como bloqueada en lugar de permitida. Establézcala manualmente en **permitir** para volver a habilitar Android para la inscripción del trabajo.<!--512117-->  
 
-- Después de cambiar la entidad de MDM, el token de PCV de Apple y las[aplicaciones iOS compradas por volumen](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps) no se quitan automáticamente. Para limpiar esta información, siga los pasos de [Eliminación de un token de PCV de Apple](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps#delete-an-apple-vpp-token). Una vez completada la operación, el sitio quita el token. También quita los metadatos de la aplicación para ese token del nodo de la aplicación de almacén con licencia.<!--SCCMDocs issue 579-->  
+- Después de cambiar la entidad de MDM, el token de PCV de Apple y las[aplicaciones iOS compradas por volumen](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps) no se quitan automáticamente. Para limpiar esta información, siga los pasos de [Eliminación de un token de PCV de Apple](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps#delete-an-apple-vpp-token). Una vez completada la operación, el sitio quita el token. También quita desde el nodo de la aplicación con licencia de Store los metadatos de la aplicación para ese token.<!--SCCMDocs issue 579-->  
 
     En casos excepcionales, puede ver un error que indica que el sitio no pudo eliminar el objeto de administración.  
 

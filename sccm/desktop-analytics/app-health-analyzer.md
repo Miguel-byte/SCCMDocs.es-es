@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 21b4907667e055c9595b31eedf9da0ad516b5fec
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: d982094a427f1f67992584e3262493d3f4a96766
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62206564"
 ---
 # <a name="how-to-assess-compatibility-with-app-health-analyzer"></a>Cómo evaluar la compatibilidad con el analizador de mantenimiento de la aplicación
 
@@ -30,7 +30,7 @@ Utilice el Kit de herramientas del analizador de mantenimiento de la aplicación
 
 ## <a name="download"></a>Descargar
 
-Descargue el Kit de herramientas desde el [Microsoft Download Center](http://download.microsoft.com/download/3/7/D/37D7E378-D805-4822-A712-4EADBF50FC08/AppHealthAnalyzer.zip)<!-- (https://www.microsoft.com/download/details.aspx?id=57276) -->. Use siempre la versión más reciente.
+Póngase en contacto con su representante de Microsoft para obtener un vínculo de descarga. Use siempre la versión más reciente.
 
 La descarga es un archivo de Windows Installer (MSI). Instalar el Kit de herramientas del analizador de mantenimiento de la aplicación en el equipo del usuario. Al ejecutar el Kit de herramientas, un asistente le guía a través del proceso de creación de un informe de preparación para la aplicación.
 

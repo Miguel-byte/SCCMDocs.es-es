@@ -12,11 +12,11 @@ ms.technology: configmgr-hybrid
 ms.assetid: be503ec9-5324-4f7c-bcf5-77204328e99c
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9d6a909be4b1817b9a251046d666839e2e351443
-ms.sourcegitcommit: 0bf253085adeca0d9ea62d76497eb5ebf5ce89da
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57012435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62282174"
 ---
 # <a name="change-your-mdm-authority-to-intune-standalone"></a>Cambio de la entidad de MDM a Intune independiente
 
@@ -118,7 +118,8 @@ Después de cambiar la entidad de MDM, siga estos pasos para validar que los nue
 - Para los dispositivos que no están asociados a un usuario, llame al soporte técnico para ayudar a cambiar la entidad de MDM. 
 
 #### <a name="bkmk-ki-dep"></a> Registros de dispositivos de DEP de Apple
-<!--ICM 105091970--> Después de completar la migración de MDM híbrida, es posible que observe registros permanecen en la consola de administrador de configuración de dispositivo de DEP de Apple. Una vez que cambie la entidad de MDM a Intune, no se puede quitar estos dispositivos de Configuration Manager. 
+<!--ICM 105091970-->
+Después de completar la migración de MDM híbrida, es posible que observe registros permanecen en la consola de administrador de configuración de dispositivo de DEP de Apple. Una vez que cambie la entidad de MDM a Intune, no se puede quitar estos dispositivos de Configuration Manager. 
 
 Hay dos soluciones alternativas:
 
