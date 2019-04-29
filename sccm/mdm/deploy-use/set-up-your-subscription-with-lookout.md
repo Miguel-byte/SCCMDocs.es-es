@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 6f914cba7eee44f340bf5b696aca1854128aeb8b
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56141313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62228211"
 ---
 # <a name="set-up-your-subscription-for-lookout-mobile-threat-defense"></a>Configurar la suscripción con Lookout Mobile Threat Defense
 
@@ -134,7 +134,7 @@ En el módulo **Sistema**, en la página **Conectores**, especifique el número 
 
 
 ## <a name="configure-email-notifications"></a>Configurar notificaciones de correo electrónico
-Si quiere recibir alertas de correo electrónico para las amenazas, inicie sesión en la [consola de Lookout](https://aad.lookout.com) con la cuenta de usuario que debe recibir las notificaciones. En la pestaña **Preferences** (Preferencias) del módulo **System** (Sistema), seleccione los niveles de amenaza por los que se debería recibir una notificación y actívelos. Guarde los cambios.
+Si quiere recibir alertas de correo electrónico para las amenazas, inicie sesión en la [consola de Lookout](https://aad.lookout.com) con la cuenta de usuario que debe recibir las notificaciones. En la pestaña **Preferences** (Preferencias) del módulo **System** (Sistema), seleccione los niveles de amenaza por los que se debería recibir una notificación y **actívelos**. Guarde los cambios.
 
 ![captura de pantalla de la página de preferencias con la cuenta de usuario mostrada](media/lookout-email-notifications.png) Si ya no quiere recibir notificaciones de correo electrónico, desactive las notificaciones y guarde los cambios.
 
