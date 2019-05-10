@@ -22,7 +22,7 @@ ms.locfileid: "56755604"
 
 Debe asegurarse de que se pueda acceder a cada dispositivo que administre, sin importar dónde esté, siempre que se conecte. También debe proporcionar a cada usuario todo lo que necesite para mantenerse productivo, al tiempo que protege las aplicaciones y los datos. Con las acciones del dispositivo compatibles con Intune, puede resolver estas funciones críticas de forma remota.
 
-En el siguiente video, la Jefa Principal de Programas Heidi Cheng (F)* y el Jefe de Programas Senior Danny Guillory debate sobre las acciones remotas con la administración conjunta y demuestran su funcionamiento:
+En el siguiente video, la Jefa Principal de Programas Heidi Cheng (F) y el Jefe de Programas Senior Danny Guillory debate sobre las acciones remotas con la administración conjunta y demuestran su funcionamiento:
 
 > [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/Using-Co-Management-to-Execute-Remote-Actions/player]
 

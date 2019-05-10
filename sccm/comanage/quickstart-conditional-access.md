@@ -71,7 +71,7 @@ Para obtener más información, consulte la entrada de blog en [Enhancing condit
 
 La firma de consultoría informática Wipro usa el acceso condicional para proteger y administrar los dispositivos usados por sus 91 000 empleados. En caso práctico reciente, el Vicepresidente de TI de Wipro señaló lo siguiente:
 
-> *Lograr el acceso condicional es un gran logro para Wipro. Ahora, todos los empleados tienen acceso móvil a la información a petición. *
+> *Lograr el acceso condicional es un gran logro para Wipro. Ahora, todos los empleados tienen acceso móvil a la información a petición.*
 > *Hemos mejorado la productividad de nuestros empleados y nuestra situación en cuanto a seguridad. Ahora 91 000 empleados se benefician de un acceso muy seguro a más de 100 aplicaciones desde cualquier dispositivo, en cualquier lugar.*
 
 <!-- waiting for the case study to be public
