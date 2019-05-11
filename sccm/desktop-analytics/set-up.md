@@ -2,7 +2,7 @@
 title: Configuración del análisis de escritorio
 titleSuffix: Configuration Manager
 description: Guía de procedimientos para configurar y la incorporación para análisis del escritorio.
-ms.date: 04/15/2019
+ms.date: 04/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f59e7a9feb53370b069852b871ce2a2c333dda0
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 3b831d6f42e6a9c908b46bf21882cab58fa08483
+ms.sourcegitcommit: 9af73f5c1b93f6ccaea3e6a096f75a5fecd65c2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258204"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64559042"
 ---
 # <a name="how-to-set-up-desktop-analytics"></a>Cómo configurar el análisis de escritorio
 
@@ -52,9 +52,10 @@ Utilice este procedimiento para iniciar sesión el análisis de escritorio y con
 
         Para agregar un usuario a cualquier grupo, escriba su dirección de correo electrónico o de nombre en el **escriba la dirección de correo electrónico o nombre** sección del grupo adecuado. Cuando termine, seleccione **siguiente**.
 
-El siguiente paso puede realizarse mediante un **propietario del área de trabajo** o **colaborador**. Consulte [requisitos previos.](/sccm/desktop-analytics/overview#prerequisites) 
-
 5. En la página para **configurar el área de trabajo**:  
+
+    > [!Note]  
+    > Completar este paso como una **propietario del área de trabajo** o **colaborador**. Para obtener más información, consulte [requisitos previos](/sccm/desktop-analytics/overview#prerequisites).  
 
     - Para usar un área de trabajo para el análisis de escritorio, selecciónela y continúe con el paso siguiente.  
 
@@ -68,8 +69,8 @@ El siguiente paso puede realizarse mediante un **propietario del área de trabaj
         1. Escriba un **nombre de área de trabajo**.<!--do we have any guidance for this name?-->  
 
         2. Seleccione la lista desplegable para **seleccione el nombre de la suscripción de Azure para esta área de trabajo**y elija la suscripción de Azure para esta área de trabajo.  
-        
-        3. **Crear nuevo** grupo de recursos o **usar existente**. 
+
+        3. **Crear nuevo** grupo de recursos o **usar existente**.
 
         4. Seleccione el **región** en la lista y, a continuación, seleccione **agregar**.  
 
@@ -85,50 +86,6 @@ El siguiente paso puede realizarse mediante un **propietario del área de trabaj
 9. En el **últimos pasos** página, seleccione **vaya al escritorio Analytics**.
 
 El portal de Azure muestra el análisis de escritorio **inicio** página.
-
-
-
-## <a name="create-app-for-configuration-manager"></a>Crear aplicación de Configuration Manager
-
-Crear una aplicación en Azure AD para Configuration Manager.
-
-1. Abra el [portal Azure](http://portal.azure.com) como un usuario con permisos de administrador de empresa, vaya a **Azure Active Directory**y seleccione **registros de aplicaciones**. A continuación, seleccione **nuevo registro de aplicaciones**.  
-
-2. En el **crear** del panel, configure las siguientes opciones:  
-
-    - **Nombre**: un nombre único que identifica la aplicación, por ejemplo: `Desktop-Analytics-Connection`  
-
-    - **Tipo de aplicación**: **Aplicación Web / API**  
-
-    - **Dirección URL de inicio de sesión**: este valor no se usa Configuration Manager, pero necesario para Azure AD. Escriba una dirección URL válida y única, por ejemplo: `https://configmgrapp`  
-  
-   Seleccione **crear**.  
-
-3. Seleccione la aplicación y tenga en cuenta la **Id. de aplicación**. Este valor es un GUID que se usa para configurar la conexión de Configuration Manager.  
-
-4. Seleccione **configuración** en la aplicación y, a continuación, seleccione **claves**. En el **contraseñas** sección, especifique un **descripción de la clave**, especifique una fecha de expiración **duración**y, a continuación, seleccione **guardar**. Copia el **valor** de la clave, que se usa para configurar la conexión de Configuration Manager.
-
-    > [!Important]  
-    > Esta es la única oportunidad para copiar el valor de clave. Si no copia ahora, deberá crear otra clave.  
-    >
-    > Guarde el valor de clave en una ubicación segura.  
-
-5. En la aplicación **configuración** panel, seleccione **permisos necesarios**.  
-
-    1. En el **permisos necesarios** panel, seleccione **agregar**.  
-
-    2. En el **agregar acceso de API** panel, **seleccionar una API**.  
-
-    3. Busque el **Microservicio del Administrador de configuración** API. Selecciónelo y, a continuación, elija **seleccione**.  
-
-    4. En el **habilitar acceso** del panel, seleccione los permisos de aplicación: **Escribir datos de colección CM** y **leer datos de colección CM**. A continuación, elija **seleccione**.  
-
-    5. En el **agregar acceso de API** panel, seleccione **realiza**.  
-
-6. En el **permisos necesarios** página, seleccione **concederlos**. Seleccione **Sí**.  
-
-7. Copie el identificador de inquilino de Azure AD. Este valor es un GUID que se usa para configurar la conexión de Configuration Manager. Seleccione **Azure Active Directory** en el menú principal y, a continuación, seleccione **propiedades**. Copia el **Id. de directorio** valor.  
-
 
 
 ## <a name="next-steps"></a>Pasos siguientes
