@@ -1,3 +1,4 @@
+- name: Administración de aplicaciones
 - name: Conocer y explorar
   items:
     - name: Introducción
@@ -10,13 +11,16 @@
   items:
     - name: Planear y configurar la administración de aplicaciones
       href: plan-design/plan-for-and-configure-application-management.md
+    - name: Planeamiento del centro de software
+      href: plan-design/plan-for-software-center.md
     - name: Seguridad y privacidad
       href: plan-design/security-and-privacy-for-application-management.md
 - name: Implementar y usar
   items:
     - name: Crear aplicaciones
-      href: deploy-use/create-applications.md
       items:
+        - name: Crear aplicaciones
+          href: deploy-use/create-applications.md
         - name: Creación de aplicaciones de equipos Mac
           href: get-started/creating-mac-computer-applications.md
         - name: Creación de aplicaciones Windows
@@ -70,13 +74,15 @@
         - name: Desinstalar aplicaciones
           href: deploy-use/uninstall-applications.md
     - name: Ejecutar y administrar scripts
-      href: deploy-use/create-deploy-scripts.md
       items:
+        - name: Ejecutar y administrar scripts
+          href: deploy-use/create-deploy-scripts.md
         - name: Más información sobre la seguridad del script de PowerShell
           href: deploy-use/learn-script-security.md
     - name: Administrador de conversión de paquetes
-      href: pcm/package-conversion-manager.md
       items:
+        - name: Administrador de conversión de paquetes
+          href: pcm/package-conversion-manager.md
         - name: Cómo analizar y convertir paquetes
           href: pcm/how-to-analyze-and-convert.md
         - name: Solución de problemas del Administrador de conversión de paquetes

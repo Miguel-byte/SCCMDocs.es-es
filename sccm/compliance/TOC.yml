@@ -1,3 +1,4 @@
+- name: Cumplimiento de dispositivos
 - name: Conocer y explorar
   items:
     - name: Asegurar el cumplimiento de dispositivos
@@ -10,9 +11,10 @@
   items:
     - name: Planear y configurar la configuración de cumplimiento
       href: plan-design/plan-for-and-configure-compliance-settings.md
-    - name: Tareas comunes para administrar el cumplimiento
-      href: plan-design/common-tasks-for-managing-compliance.md
+    - name: Tareas para administrar el cumplimiento
       items:
+        - name: Tareas comunes para administrar el cumplimiento
+          href: plan-design/common-tasks-for-managing-compliance.md
         - name: Dispositivos con el cliente de Configuration Manager
           href: plan-design/common-tasks-for-managing-compliance-on-devices-with-the-client.md
         - name: Crear e implementar líneas base de configuración
@@ -20,8 +22,9 @@
     - name: Seguridad y privacidad
       href: plan-design/security-and-privacy-for-compliance-settings.md
     - name: Extensiones de Security Content Automation Protocol (SCAP)
-      href: plan-design/scap/about-scap.md
       items:
+        - name: Acerca de las extensiones SCAP
+          href: plan-design/scap/about-scap.md
         - name: Instalación y configuración de extensiones SCAP
           href: plan-design/scap/install-configure-scap.md
         - name: Implementar y supervisar el cumplimiento de SCAP
@@ -31,10 +34,10 @@
 - name: Implementar y usar
   items:
     - name: Crear elementos de configuración
-      href: deploy-use/create-configuration-items.md
       items:
+        - name: Información general de crear elementos de configuración
+          href: deploy-use/create-configuration-items.md
         - name: Dispositivos administrados con el cliente de Configuration Manager
-          href: deploy-use/configuration-items-for-devices-managed-with-the-client.md
           items:
             - name: Windows 10
               href: deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md

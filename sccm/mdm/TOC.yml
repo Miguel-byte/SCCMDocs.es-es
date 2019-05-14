@@ -1,3 +1,4 @@
+- name: Administración de dispositivos móviles
 - name: Información general
   items:
     - name: Qué es MDM híbrida
@@ -5,15 +6,17 @@
     - name: Novedades de la MDM híbrida
       href: understand/whats-new-in-hybrid-mobile-device-management.md
 - name: Planear y diseñar
-  href: plan-design/plan-hybrid-mobile-device-management.md
   items:
+    - name: Información general de planear y diseñar
+      href: plan-design/plan-hybrid-mobile-device-management.md
     - name: Plataformas de dispositivos compatibles
       href: plan-design/supported-device-platforms-for-hybrid.md
     - name: Métodos de inscripción de dispositivos
       href: plan-design/device-enrollment-methods.md
 - name: Introducción
-  href: deploy-use/setup-hybrid-mdm.md
   items:
+    - name: Pasos de configuración
+      href: deploy-use/setup-hybrid-mdm.md
     - name: Creación de una recopilación de MDM
       href: deploy-use/create-mdm-collection.md
     - name: Confirmación de los requisitos de nombre de dominio
@@ -25,8 +28,9 @@
     - name: Crear el punto de conexión de servicio
       href: deploy-use/create-service-connection-point.md
     - name: Habilitación de la inscripción de plataforma
-      href: deploy-use/enable-platform-enrollment.md
       items:
+        - name: Información general de habilitación de la inscripción de plataforma
+          href: deploy-use/enable-platform-enrollment.md
         - name: iOS y Mac
           href: deploy-use/enroll-hybrid-ios-mac.md
         - name: Windows
@@ -42,8 +46,9 @@
     - name: Inscribir dispositivos propiedad del usuario (BYOD)
       href: deploy-use/enroll-user-owned-devices.md
     - name: Inscribir dispositivos de propiedad corporativa
-      href: deploy-use/enroll-company-owned-devices.md
       items:
+        - name: Información general de inscribir dispositivos de propiedad corporativa
+          href: deploy-use/enroll-company-owned-devices.md
         - name: Inscripción directa de iOS DEP
           href: deploy-use/ios-device-enrollment-program-for-hybrid.md
         - name: Inscribir Apple Configurator
@@ -63,8 +68,9 @@
     - name: Configuración del inventario de software
       href: deploy-use/software-inventory-mobile-devices.md
     - name: Administrar la configuración de cumplimiento
-      href: deploy-use/manage-compliance-settings.md
       items:
+        - name: Escenarios de cumplimiento
+          href: deploy-use/manage-compliance-settings.md
         - name: Windows 8.1 y Windows 10
           href: deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md
         - name: Windows Phone
@@ -78,8 +84,9 @@
     - name: Sincronizar dispositivos inscritos en Intune
       href: deploy-use/sync-intune-device.md
     - name: Administración de aplicaciones
-      href: deploy-use/management-tasks-applications.md
       items:
+        - name: Información general de administración de aplicaciones
+          href: deploy-use/management-tasks-applications.md
         - name: Creación de aplicaciones de iOS
           href: deploy-use/creating-ios-applications.md
         - name: Directivas de configuración de aplicaciones de iOS
@@ -103,8 +110,9 @@
     - name: Cambio de la entidad de MDM
       href: deploy-use/change-mdm-authority.md
     - name: Iniciar la migración de MDM híbrida a Intune independiente
-      href: deploy-use/migrate-hybridmdm-to-intunesa.md
       items:
+        - name: Información general de migración de MDM híbrida a Intune independiente
+          href: deploy-use/migrate-hybridmdm-to-intunesa.md
         - name: Importación de datos de Configuration Manager en Microsoft Intune
           href: deploy-use/migrate-import-data.md
         - name: Preparación de Intune para la migración de usuarios
@@ -128,11 +136,13 @@
         - name: Configuración de Windows Hello para empresas
           href: deploy-use/windows-hello-for-business-settings.md
     - name: Administrar el acceso condicional
-      href: deploy-use/manage-access-to-services.md
       items:
+        - name: Información general de acceso condicional y requisitos
+          href: deploy-use/manage-access-to-services.md
         - name: Directivas de cumplimiento de dispositivos
-          href: deploy-use/device-compliance-policies.md
           items:
+            - name: Información general de directivas de cumplimiento de dispositivos
+              href: deploy-use/device-compliance-policies.md
             - name: Acciones de no cumplimiento
               href: deploy-use/actions-for-noncompliance.md
         - name: Crear una directiva de cumplimiento de dispositivos
@@ -148,11 +158,13 @@
         - name: Administración del acceso de equipos a los servicios de Office 365
           href: deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md
     - name: Administrar el acceso basándose en el riesgo de dispositivo
-      href: deploy-use/mobile-threat-defense.md
       items:
+        - name: Acceso basado en el riesgo de dispositivo
+          href: deploy-use/mobile-threat-defense.md
         - name: Lookout en Configuration Manager
-          href: deploy-use/lookout-mobile-threat-defense-in-configuration-manager.md
           items:
+            - name: Información general de Lookout
+              href: deploy-use/lookout-mobile-threat-defense-in-configuration-manager.md
             - name: Configurar Lookout Mobile Threat Defense
               href: deploy-use/set-up-your-subscription-with-lookout.md
             - name: Habilitar Lookout en Intune
@@ -171,9 +183,10 @@
       href: understand/manage-mobile-devices-with-on-premises-infrastructure.md
     - name: Planear la MDM local
       href: plan-design/plan-on-premises-mdm.md
-    - name: Pasos de configuración
-      href: get-started/preparation-steps-for-on-premises-mdm.md
+    - name: Configuración
       items:
+        - name: Pasos de configuración
+          href: get-started/preparation-steps-for-on-premises-mdm.md
         - name: Configurar la suscripción a Intune
           href: get-started/set-up-intune-subscription-on-premises-mdm.md
         - name: Instalar roles locales
@@ -183,8 +196,9 @@
         - name: Configurar para la inscripción
           href: get-started/set-up-device-enrollment-on-premises-mdm.md
     - name: Inscribir dispositivos en MDM local
-      href: deploy-use/enroll-devices-on-premises-mdm.md
       items:
+        - name: Información general de inscripción
+          href: deploy-use/enroll-devices-on-premises-mdm.md
         - name: Inscripción de usuarios
           href: deploy-use/user-enroll-devices-on-premises-mdm.md
         - name: Inscripción masiva
