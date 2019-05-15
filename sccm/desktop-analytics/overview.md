@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52879853e3d3286234ccd51479adddac94098441
-ms.sourcegitcommit: 9af73f5c1b93f6ccaea3e6a096f75a5fecd65c2f
+ms.openlocfilehash: 6827f94a0191aee9c1fe1e20978e6414050fca7c
+ms.sourcegitcommit: ab9f2a7fb7ea3a0c65808fce2975ab25a670281f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64559092"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65612501"
 ---
 # <a name="what-is-desktop-analytics"></a>¿Qué es el análisis de escritorio?
 
@@ -70,7 +70,7 @@ Para utilizar el análisis de escritorio, asegúrese de que su entorno cumple lo
 
 ### <a name="technical"></a>Técnica
 
-- Una suscripción activa de Azure  
+- Una suscripción activa de Azure, con [administrador Global](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator) permisos  
 
     - **Propietario del área de trabajo** o **colaborador** permisos para **configurar el área de trabajo**y los roles siguientes:  
 
