@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6827f94a0191aee9c1fe1e20978e6414050fca7c
-ms.sourcegitcommit: ab9f2a7fb7ea3a0c65808fce2975ab25a670281f
+ms.openlocfilehash: 78e9454212bb8264926c1aba5262f06db1798abe
+ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612501"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65673434"
 ---
 # <a name="what-is-desktop-analytics"></a>¿Qué es el análisis de escritorio?
 
@@ -101,20 +101,14 @@ Para utilizar el análisis de escritorio, asegúrese de que su entorno cumple lo
 
 ### <a name="licensing"></a>Licencias
 
-Mayoría de las características de análisis de escritorio no requiere licencias adicionales ni suscripciones. Cuando se configuran correctamente, uso de análisis de escritorio no incurrir en ningún gasto de Azure.
+Escritorio Analytics requiere una de las suscripciones de licencias siguientes:
 
-Para obtener acceso a información de estado de Windows o para exportar datos, existen requisitos de licencia adicionales. Si no tiene una de las siguientes suscripciones, todavía puede configurar y utilizar el análisis de escritorio, pero no es con licencia para usar la información de estado de Windows o para exportar los datos:
+- Windows 10 Enterprise E3 o E5; o Microsoft 365 F1, E3 o E5  
 
-- Windows 10 Enterprise o Windows 10 Education: cada dispositivo con Software Assurance activo  
+- Windows 10 Education A3 o A5; o Microsoft 365 A3 o A5  
 
-- Windows 10 Enterprise E3 o E5: suscripción por usuario o por dispositivo (incluido con Microsoft 365 F1, E3 o E5)  
+- Windows VDA E3 o E5  
 
-- Windows 10 Education A3 o A5 (incluido con Microsoft 365 educación A3 o A5)  
-
-- Windows Virtual Desktop acceso E3 o E5: por dispositivo de la suscripción por usuario  
-
-> [!Note]  
-> Las licencias por dispositivo, no tienes que activar cada dispositivo con una licencia. Basta con suficientes licencias para los dispositivos inscritos en análisis de escritorio.  
 
 
 

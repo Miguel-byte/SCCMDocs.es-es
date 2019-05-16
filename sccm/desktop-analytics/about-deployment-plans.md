@@ -2,7 +2,7 @@
 title: Planes de implementación en escritorio Analytics
 titleSuffix: Configuration Manager
 description: Obtenga información sobre los planes de implementación en escritorio Analytics.
-ms.date: 04/22/2019
+ms.date: 05/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91cd7fc450ee53f900ae890e3a698c26c789ba8c
-ms.sourcegitcommit: 4023fb6fb534d8a0d589c8208f021e3311c7167f
+ms.openlocfilehash: b44684f897e7aad4365c39e58c9bfd486bde7cbb
+ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64880583"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65673293"
 ---
 # <a name="about-deployment-plans-in-desktop-analytics"></a>Acerca de los planes de implementación en escritorio Analytics
 
@@ -51,8 +51,6 @@ Como parte de su plan de implementación, realice las siguientes acciones:
 Análisis de escritorio actualiza diariamente datos del plan de implementación. Los cambios que realice podrían no aparecer durante 24 horas. Estos cambios incluyen asignar importancia a una aplicación, o elegir un dispositivo para incluir en una prueba piloto.  
 
 Después de conectarse a análisis de escritorio a Configuration Manager, seleccione las colecciones de los planes de implementación. A continuación, esta integración le permite implementar Windows a una colección en función de los datos de análisis de escritorio.
-
-Mientras análisis escritorio funciona mejor con recopilaciones de Configuration Manager, también puede crear grupos de dispositivos en Log Analytics. Para obtener más información, consulte [búsquedas de registros de grupos de equipos en Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-computer-groups).
 
 
 
