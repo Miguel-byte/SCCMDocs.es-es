@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 5bd637b1-d7a1-411b-877a-c7aae9741173
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9d36ac033b197c21122b49aba70bdeaef4f9b5ac
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: 6e6e603210342f5acc3e66328fca95e964dde2bf
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802859"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65495514"
 ---
 # <a name="whats-new-in-version-1802-of-system-center-configuration-manager"></a>Novedades de la versión 1802 de System Center Configuration Manager
 
@@ -214,12 +214,12 @@ Esta versión incluye las siguientes mejoras para la implementación del sistema
      - Compatibilidad con todos los escenarios de implementación de sistemas operativos desde el Centro de Software, el entorno PXE y soportes físicos.
      - Mejoras en las acciones de la consola como copiar, importar, exportar y advertir durante la eliminación de objetos.
      - Compatibilidad con el [Asistente para crear archivos de contenido preconfigurados](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent).
-     - Integración con Verificación de la implementación. Para obtener más información, vea [Implementaciones de secuencias de tareas de alto riesgo](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS). 
+     - Integración con Verificación de la implementación. Para obtener más información, vea [Implementaciones de secuencias de tareas de alto riesgo](/sccm/osd/deploy-use/deploy-a-task-sequence). 
      - El paso Ejecutar secuencia de tareas ahora puede usarse en los distintos niveles de secuencias de tareas, no solo en una relación de elementos primarios y secundarios. Las relaciones de varios niveles aumentan la complejidad, así que úselas con precaución. Estas relaciones se siguen comprobando para las referencias circulares.
     
 ### <a name="deployment-templates-for-task-sequences"></a>Plantillas de implementación para secuencias de tareas
 <!-- 1357391 -->
-El [Asistente para la implementación de secuencias de tareas](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS) ahora puede crear una plantilla de implementación. La plantilla de implementación puede guardarse y aplicarse a una secuencia de tareas nueva o existente para crear una implementación. 
+El [Asistente para la implementación de secuencias de tareas](/sccm/osd/deploy-use/deploy-a-task-sequence) ahora puede crear una plantilla de implementación. La plantilla de implementación puede guardarse y aplicarse a una secuencia de tareas nueva o existente para crear una implementación. 
 
 ### <a name="phased-deployments-for-task-sequences"></a>Implementaciones por fases para secuencias de tareas
 <!--1356837-->
@@ -287,11 +287,11 @@ En el informe **Detalles de mantenimiento de Windows 10 para una colección espe
 
 ### <a name="improvements-to-configuration-manager-policies-for-windows-defender-exploit-guard"></a>Mejoras en las directivas de Configuration Manager para Protección contra vulnerabilidades de seguridad de Windows Defender
 <!-- 1356220 -->
-Se han agregado nuevos parámetros de directivas para los componentes [Reducción de la superficie expuesta a ataques](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#BKMK_ASR) y [Acceso controlado a carpetas](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#BKMK_CFA) en Configuration Manager para [Protección contra vulnerabilidades de seguridad de Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard).
+Se han agregado nuevos parámetros de directivas para los componentes [Reducción de la superficie expuesta a ataques](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#bkmk_ASR) y [Acceso controlado a carpetas](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#bkmk_CFA) en Configuration Manager para [Protección contra vulnerabilidades de seguridad de Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard).
 
 ### <a name="new-host-interaction-settings-for-windows-defender-application-guard"></a>Nueva configuración de interacción de host para Protección de aplicaciones de Windows Defender
 <!-- 1356256 -->
-Para Windows 10 versión 1709 y dispositivos posteriores, hay dos nuevas opciones de interacción de host para [Protección de aplicaciones de Windows Defender](/sccm/protect/deploy-use/create-deploy-application-guard-policy#BKMK_HIS): 
+Para Windows 10 versión 1709 y dispositivos posteriores, hay dos nuevas opciones de interacción de host para [Protección de aplicaciones de Windows Defender](/sccm/protect/deploy-use/create-deploy-application-guard-policy#bkmk_HIS): 
 - A los sitios web se les puede conceder acceso al procesador de gráficos virtuales del host. 
 - Los archivos descargados en el contenedor se pueden conservar en el host. 
 

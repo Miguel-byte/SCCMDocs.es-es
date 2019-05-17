@@ -7,22 +7,22 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 6af92de2-b2c7-4d5c-affd-6cce81979fb5
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96a100131d8fe0e9c289cdf4d272aeefb43fbf15
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 26ea0ed36a8e7f59a475d6e10d26eb2275c20311
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56140412"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501188"
 ---
 # <a name="checklist-for-installing-update-1802-for-system-center-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 1802 de System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Cuando se usa la rama actual de System Center Configuration Manager, se puede instalar la actualización en la consola para la versión 1802 para actualizar la jerarquía desde una versión anterior. <!-- baseline only statement: -->(Como la versión 1802 también está disponible como [medio de línea base](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions), se puede usar el medio de instalación para instalar el primer sitio de una jerarquía nueva).
+Cuando se usa la rama actual de System Center Configuration Manager, se puede instalar la actualización en la consola para la versión 1802 para actualizar la jerarquía desde una versión anterior. <!-- baseline only statement: -->(Como la versión 1802 también está disponible como [medio de línea de base](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions), puede usar el medio de instalación para instalar el primer sitio de una jerarquía nueva).
 
 Para obtener la actualización de la versión 1802, se debe usar un punto de conexión del servicio en el sitio de nivel superior de la jerarquía. Este rol de sistema de sitio puede realizarse en el modo en línea o sin conexión. Después de que su jerarquía descargue el paquete de actualización de Microsoft, lo podrá encontrar en la consola, en el área de trabajo **Administración** del nodo **Actualizaciones y mantenimiento**.
 
@@ -108,7 +108,8 @@ Para obtener más información, consulte [Réplicas de bases de datos para punto
 Si utiliza un grupo de disponibilidad, asegúrese de que dicho grupo está establecido para la conmutación por error manual antes de iniciar la instalación de la actualización. Después de actualizar el sitio, puede restaurar la conmutación por error a automática. Para obtener más información, vea  [Preparación para usar grupos de disponibilidad Always On de SQL Server con Configuration Manager](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).
 
 **Volver a configurar los puntos de actualización de software que usan NLB:**   
-<!-- Support for NLBs is fully removed with 1702. When 1702 is no longer in support, this statement can drop --> Configuration Manager no puede actualizar un sitio que usa un clúster de equilibrio de carga de red (NLB) para hospedar puntos de actualización de software.
+<!-- Support for NLBs is fully removed with 1702. When 1702 is no longer in support, this statement can drop -->
+Configuration Manager no puede actualizar un sitio que usa un clúster de equilibrio de carga de red (NLB) para hospedar puntos de actualización de software.
 
 Si utiliza clústeres NLB para puntos de actualización de software, use Windows PowerShell para quitar el clúster NLB.
 Para obtener más información, vea  [Planear actualizaciones de software en Configuration Manager](/sccm/sum/plan-design/plan-for-software-updates).
