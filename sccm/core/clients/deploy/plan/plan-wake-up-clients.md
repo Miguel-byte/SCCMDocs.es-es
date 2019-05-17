@@ -2,25 +2,32 @@
 title: Reactivación de clientes
 titleSuffix: Configuration Manager
 description: Planee la reactivación de clientes en System Center Configuration Manager mediante Wake on LAN (WOL).
-ms.date: 05/23/2018
+ms.date: 04/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
 ms.assetid: 52ee82b2-0b91-4829-89df-80a6abc0e63a
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ad20f88d6296a45c97e7c04d94624f9341d369e
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: a16d598b80dd18802e42cae51aeba3c91a4d707c
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56125983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62201420"
 ---
 # <a name="plan-how-to-wake-up-clients-in-system-center-configuration-manager"></a>Planear la reactivación de clientes en System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (ramificación actual)*
+
+ Configuration Manager admite paquetes de reactivación tradicionales para reactivar equipos en modo de suspensión si desea instalar software requerido, como actualizaciones de software y aplicaciones.
+
+> [!NOTE]
+> En este artículo se describe cómo funciona una versión anterior de Wake on LAN. Esta funcionalidad sigue existiendo en la versión 1810 de Configuration Manager, que también incluye una versión más reciente de Wake on LAN. Ambas versiones de Wake on LAN se pueden habilitar de manera simultánea y en muchos casos será así. Para más información sobre cómo funciona la versión nueva de Wake on LAN a partir de la versión 1810 y cómo permitir ambas de las versiones o alguna de ellas, consulte [Configurar Wake on LAN](/sccm/core/clients/deploy/configure-wake-on-lan).  
+
+## <a name="how-to-wake-up-clients-in-system-center-configuration-manager"></a>Planeamiento de la reactivación de clientes en System Center Configuration Manager
 
  Configuration Manager admite paquetes de reactivación tradicionales para reactivar equipos en modo de suspensión si desea instalar software requerido, como actualizaciones de software y aplicaciones.  
 
@@ -30,7 +37,7 @@ Puede complementar el método de los paquetes de reactivación tradicionales med
 
 2. Si no hay respuesta desde los demás equipos, se asume que están en modo de suspensión. Los equipos que están activos se convierten en el *equipo administrador* de la subred.  
 
-    Dado que es posible que un equipo no responda por un motivo distinto a estar inactivo (por ejemplo, si está apagado o fuera de la red o si ya no se aplica la configuración del cliente proxy de activación), se enviará a los equipos un paquete de reactivación cada día a las 14.00 h (hora local). Dejará de suponerse que los equipos que no responden están inactivos, y no se reactivarán mediante el proxy de reactivación.  
+    Dado que es posible que un equipo no responda por un motivo distinto a estar inactivo (por ejemplo, si está apagado o fuera de la red o si ya no se aplica la configuración del cliente proxy de activación), se enviará a los equipos un paquete de reactivación cada día a las 2:00 p.m. (hora local). Dejará de suponerse que los equipos que no responden están inactivos, y no se reactivarán mediante el proxy de reactivación.  
 
     Para admitir el proxy de reactivación, es necesario que al menos tres equipos estén activos para cada subred. Para conseguir este requisito, se eligen tres equipos de manera no determinista para que sean los *equipos guardianes* para la subred. Este estado significa que permanecerán activos, independientemente de la directiva de energía que tengan configurada para que entren en modo de suspensión o hibernación después de un determinado período de inactividad. Los equipos guardianes obedecen los comandos de apagado o reinicio, por ejemplo, resultantes de las tareas de mantenimiento. Si esta acción ocurre, los demás equipos guardianes activan a otros equipos de la subred para que esta siga teniendo tres equipos guardianes.  
 
@@ -84,7 +91,7 @@ Si quiere reactivar equipos para la instalación programada de software, deberá
 
 Decida si quiere usar paquetes de difusiones dirigidas a subred o paquetes de unidifusión y qué número de puerto UDP usar. De forma predeterminada, los paquetes de reactivación tradicionales se transmiten mediante el puerto 9 de UDP, pero, para aumentar la seguridad, puede seleccionar un puerto alternativo para el sitio si lo admiten los enrutadores y firewalls intervinientes.  
 
-### <a name="choose-between-unicast-and-subnet-directed-broadcast-for-wake-on-lan"></a>elija entre Unidifusión y Difusión dirigida a subred para Wake-on-LAN  
+## <a name="choose-between-unicast-and-subnet-directed-broadcast-for-wake-on-lan"></a>elija entre Unidifusión y Difusión dirigida a subred para Wake-on-LAN  
  Si decide reactivar equipos mediante el envío de paquetes de reactivación tradicionales, deberá decidir si desea transmitir paquetes de unidifusión o paquetes de difusión dirigida a subred. Si usa el proxy de reactivación, deberá usar paquetes de unidifusión. De lo contrario, utilice la siguiente tabla como ayuda para determinar qué método de transmisión desea elegir.  
 
 |Método de transmisión|Ventaja|Desventaja|  

@@ -2,8 +2,8 @@
 title: Requisitos previos para las actualizaciones de software
 titleSuffix: Configuration Manager
 description: Obtenga información sobre los requisitos previos para las actualizaciones de software en System Center Configuration Manager.
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.date: 02/02/2018
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 395c22b3fb7652a1da4652d1bf259bffb601c109
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 92e1d0e672d4fc5e6e98f87ba92cec2602f7d240
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133568"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65496208"
 ---
 # <a name="prerequisites-for-software-updates-in-system-center-configuration-manager"></a>Requisitos previos para las actualizaciones de software en System Center Configuration Manager
 

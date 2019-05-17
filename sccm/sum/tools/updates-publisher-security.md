@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
 ms.assetid: a7f91e63-4750-402e-9970-dd14be7f76a3
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2a0dbe80e2333df85893365a366d5862842ffa3d
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 045a1daef8da0863ed7957ce4c9d3d48cfacca64
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56125415"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65496192"
 ---
 # <a name="manage-certificates-and-security-for-updates-publisher"></a>Administrar certificados y seguridad de Updates Publisher
 
@@ -74,7 +74,7 @@ El siguiente ejemplo muestra cómo configurar el certificado de firma en equipos
 
    -   Para los certificados autofirmados: agregue el certificado a los almacenes de certificados **Entidades de certificación raíz de confianza** y **Editores de confianza**.
 
-   -   Para los certificados emitidos por entidades de certificación (CA): Agregue el certificado al almacén de certificados **Editores de confianza**.
+   -   Para los certificados emitidos por una entidad de certificación (CA): agregue el certificado al almacén de certificados **Editores de confianza**.
 
    > [!NOTE]
    > El WUA también comprueba si la opción de directiva de grupo **Allow signed content from intranet Microsoft update service location** (Permitir contenido firmado procedente de la ubicación del servicio Microsoft Update de la intranet) está habilitada en el equipo local. Esta opción de directiva debe estar habilitada para que el Agente de Windows Update pueda examinar las actualizaciones que se crearon y publicaron con Updates Publisher. Para obtener más información sobre cómo habilitar esta opción de directiva de grupo, vea [Cómo configurar la directiva de grupo en los equipos cliente](<https://technet.microsoft.com/library/bb530967.aspx(d=robot>).

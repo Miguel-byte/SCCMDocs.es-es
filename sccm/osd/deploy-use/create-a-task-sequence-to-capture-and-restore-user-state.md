@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0077cd6a906da59a06f4cf619b74ddc0af947cea
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 709442083cd2d9c935aeb2c5fe6c2ad30a2dddf5
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133925"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083045"
 ---
 # <a name="create-a-task-sequence-to-capture-and-restore-user-state-in-configuration-manager"></a>Creación de una secuencia de tareas para capturar y restaurar el estado de usuario en Configuration Manager
 
@@ -30,11 +30,11 @@ ms.locfileid: "56133925"
 
  Para capturar y restaurar el estado del usuario, agregue los pasos siguientes a la secuencia de tareas:  
 
- - [Solicitar almacén de estado](/sccm/osd/understand/task-sequence-steps#BKMK_RequestStateStore): en caso de que se almacene el estado de usuario en el punto de migración de estado, necesita este paso.  
+ - [Solicitar almacén de estado](/sccm/osd/understand/task-sequence-steps#BKMK_RequestStateStore): si almacena el estado de usuario en el punto de migración de estado, necesita este paso.  
 
 - [Capturar estado de usuario](/sccm/osd/understand/task-sequence-steps#BKMK_CaptureUserState): este paso captura los datos de estado de usuario. A continuación, almacena los datos en el punto de migración de estado o el disco local mediante vínculos físicos.  
 
-- [Restaurar estado de usuario](/sccm/osd/understand/task-sequence-steps#BKMK_RestoreUserState): este paso restaura los datos de estado de usuario en el equipo de destino. Puede recuperar los datos desde un punto de migración de estado o si tiene un vínculo físico en el disco local.  
+- [Restaurar estado de usuario](/sccm/osd/understand/task-sequence-steps#BKMK_RestoreUserState): este paso permite restaurar los datos del estado de usuario en el equipo de destino. Puede recuperar los datos desde un punto de migración de estado o si tiene un vínculo físico en el disco local.  
 
 - [Liberar almacén de estado](/sccm/osd/understand/task-sequence-steps#BKMK_ReleaseStateStore): en caso de que se almacene el estado de usuario en el punto de migración de estado, necesita este paso. Este paso quita los datos del punto de migración de estado.  
 
@@ -62,7 +62,7 @@ ms.locfileid: "56133925"
     >  La acción de la secuencia de tareas que se ejecuta antes del paso **Liberar almacén de estado** debe finalizar correctamente para que se inicie el paso **Liberar almacén de estado**.  
 
 
- Implemente esta secuencia de tareas para capturar el estado de usuario en un equipo de destino. Para más información sobre cómo implementar secuencias de tareas, vea [Deploy a task sequence (Implementar una secuencia de tareas)](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS).  
+ Implemente esta secuencia de tareas para capturar el estado de usuario en un equipo de destino. Para más información sobre cómo implementar secuencias de tareas, vea [Deploy a task sequence (Implementar una secuencia de tareas)](/sccm/osd/deploy-use/deploy-a-task-sequence).  
 
 
 
@@ -86,7 +86,7 @@ ms.locfileid: "56133925"
    >  La acción de la secuencia de tareas que se ejecuta antes del paso **Liberar almacén de estado** debe finalizar correctamente para que se inicie el paso **Liberar almacén de estado**.  
 
 
- Implemente esta secuencia de tareas para restaurar el estado de usuario en un equipo de destino. Para más información sobre la implementación de secuencias de tareas, vea [Deploy a task sequence (Implementar una secuencia de tareas)](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS).  
+ Implemente esta secuencia de tareas para restaurar el estado de usuario en un equipo de destino. Para más información sobre la implementación de secuencias de tareas, vea [Deploy a task sequence (Implementar una secuencia de tareas)](/sccm/osd/deploy-use/deploy-a-task-sequence).  
 
 
 

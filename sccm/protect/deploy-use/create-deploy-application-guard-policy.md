@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: 33a6c1d9-4dd8-411c-a748-693a5bd2ea5a
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf5345cd54882ae46171b7d3800e1ed818834ecb
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: 3e2eb7aa483c48ee6099cbb1605c082c9b0315ee
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802247"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500623"
 ---
 # <a name="create-and-deploy-windows-defender-application-guard-policy"></a>Creación e implementación de directivas de Protección de aplicaciones de Windows Defender 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
@@ -33,7 +33,7 @@ Para crear e implementar una directiva de Protección de aplicaciones de Windows
 1. En la consola de Configuration Manager, elija **Activos y compatibilidad**.
 2. En el área de trabajo **Activos y compatibilidad**, elija **Introducción** > **Endpoint Protection** > **Protección de aplicaciones de Windows Defender**.
 3. En la pestaña **Inicio**, en el grupo **Crear**, haga clic en **Crear directiva de Protección de aplicaciones de Windows Defender**.
-4. Con el [artículo](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard) como referencia, puede examinar y configurar las opciones disponibles. Configuration Manager permite establecer determinadas configuraciones de directiva, vea [configuración de interacción de host](#BKMK_HIS) y [comportamiento de la aplicación](#BKMK_AppB).
+4. Con el [artículo](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard) como referencia, puede examinar y configurar las opciones disponibles. Configuration Manager permite establecer determinadas configuraciones de directiva, vea [configuración de interacción de host](#bkmk_HIS) y [comportamiento de la aplicación](#bkmk_ABS).
 5. En la página **Definición de red**, debe especificar la identidad corporativa y definir los límites de la red corporativa.
 
     > [!NOTE]

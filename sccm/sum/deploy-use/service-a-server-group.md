@@ -2,8 +2,8 @@
 title: Dar servicio a un grupo de servidores
 titleSuffix: Configuration Manager
 description: La consola de System Center Configuration Manager proporciona alertas y estados para supervisar la compatibilidad y las actualizaciones.
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.date: 12/07/2016
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 304a83ea-0f72-437d-9688-2e6e0c7526dd
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aac5c9d6c683447fe7dda50e6dcfd52b7024656d
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 68e4ed043e4a3c0efb77ef69d8bf294d63a0b7fa
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56131649"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500065"
 ---
 # <a name="service-a-server-group"></a>Dar servicio a un grupo de servidores
 

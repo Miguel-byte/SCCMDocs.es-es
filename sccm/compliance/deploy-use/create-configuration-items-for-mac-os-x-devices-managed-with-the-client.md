@@ -2,7 +2,7 @@
 title: 'Creación de elementos de configuración para equipos Mac administrados por el cliente '
 titleSuffix: Configuration Manager
 description: Use el elemento de configuración de Mac OS X de System Center Configuration Manager para administrar la configuración de los dispositivos Mac OS X.
-ms.date: 03/28/2017
+ms.date: 05/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -11,19 +11,19 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf610c3310265f8b7dd6b467640617928a51258f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 07ef57dba35fc78bcf4e108ec571106b099b9145
+ms.sourcegitcommit: 99dfe4fb9e9cfd20c44380ae442b3a5b895a0d9b
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56124060"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65214788"
 ---
 # <a name="how-to-create-configuration-items-for-mac-os-x-devices-managed-with-the-system-center-configuration-manager-client"></a>Cómo crear elementos de configuración para dispositivos Mac OS X administrados con el cliente de System Center Configuration Manager
 Use el elemento de configuración de **Mac OS X (personalizado)** de System Center Configuration Manager para administrar la configuración de los dispositivos Mac OS X que administra el cliente de Configuration Manager.  
   
  El sistema operativo Mac OS X usa archivos de lista de propiedades (o plist) para almacenar la configuración de la aplicación. Use la configuración de cumplimiento para evaluar y corregir la configuración en un archivo de lista de propiedades. También puede administrar la configuración de Mac OS X escribiendo un script de shell que devuelva un valor que pueda evaluar y corregir para el cumplimiento.  
   
-### <a name="to-create-a-custom-mac-os-x-configuration-item"></a>Para crear un elemento de configuración personalizado de Mac OS X  
+## <a name="to-create-a-custom-mac-os-x-configuration-item"></a>Para crear un elemento de configuración personalizado de Mac OS X  
   
 1. En la consola de Configuration Manager, haga clic en **Activos y compatibilidad**.  
   
@@ -81,16 +81,16 @@ Use el elemento de configuración de **Mac OS X (personalizado)** de System Cent
   
 14. En el cuadro de diálogo **Crear regla** , proporcione la siguiente información:  
   
-    -   **Nombre:** escriba un nombre para la regla de cumplimiento.  
+    -   **Nombre:** Escriba un nombre para la regla de cumplimiento.  
   
-    -   **Descripción:** escriba una descripción para la regla de cumplimiento.  
+    -   **Descripción:** Escriba una descripción para la regla de cumplimiento.  
   
-    -   **Configuración seleccionada:** haga clic en **Examinar** para abrir el cuadro de diálogo **Seleccionar configuración**. Seleccione la configuración que desea definir una regla de, o haga clic en **nueva configuración**. Cuando haya terminado, haga clic en **seleccione**.  
+    -   **Configuración seleccionada:** Haga clic en **Examinar** para abrir el **Seleccione configuración** cuadro de diálogo. Seleccione la configuración que desea definir una regla de, o haga clic en **nueva configuración**. Cuando haya terminado, haga clic en **seleccione**.  
   
         > [!TIP]  
         >  También puede hacer clic en **propiedades** para ver información acerca de la configuración seleccionada actualmente.  
   
-    -   **Tipo de regla**: seleccione el tipo de regla de cumplimiento que quiere usar:  
+    -   **Tipo de regla:** seleccione el tipo de regla de cumplimiento que quiere usar:  
   
         -   **Valor:** cree una regla que compare el valor devuelto por el elemento de configuración con un valor que especifique.  
   
@@ -145,7 +145,7 @@ Use el elemento de configuración de **Mac OS X (personalizado)** de System Cent
   
             -   **La configuración no debe existir en dispositivos cliente**  
   
-        -   **Gravedad de la falta de cumplimiento de los informes:** especifique el nivel de gravedad que se indica si se produce un error en esta regla de cumplimiento. Los niveles de gravedad disponibles son los siguientes:  
+        -   **Gravedad de no conformidad para los informes:** Especificar el nivel de gravedad se indica si se produce un error en esta regla de compatibilidad. Los niveles de gravedad disponibles son los siguientes:  
   
             -   **Ninguno**: los equipos que no cumplan esta regla de compatibilidad no notificarán ninguna gravedad de error en los informes de Configuration Manager.  
   
@@ -168,5 +168,6 @@ Use el elemento de configuración de **Mac OS X (personalizado)** de System Cent
   
     Si desea agregar este elemento de configuración a una línea base de configuración, vea [Crear líneas base de configuración en System Center Configuration Manager](../../compliance/deploy-use/create-configuration-baselines.md).  
   
-## <a name="see-also"></a>Véase también  
- [Elementos de configuración para dispositivos administrados con el cliente de System Center Configuration Manager](../../compliance/deploy-use/configuration-items-for-devices-managed-with-the-client.md)
+## <a name="next-steps"></a>Pasos siguientes
+
+ [Elementos de configuración para dispositivos administrados con el cliente de System Center Configuration Manager](../../compliance/deploy-use/create-configuration-items.md)

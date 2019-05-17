@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4c18d6320397281156e39624ea8dc50e6d0539ed
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: c6d0cecc348076bcf728cb08ba29500ae55d1c77
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56139915"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65082875"
 ---
 # <a name="create-a-task-sequence-to-install-an-operating-system-in-system-center-configuration-manager"></a>Crear una secuencia de tareas para instalar un sistema operativo en System Center Configuration Manager
 
@@ -51,7 +51,7 @@ Use secuencias de tareas de System Center Configuration Manager para instalar au
 
 5. En la página **Información de secuencia de tareas** , especifique la siguiente configuración y, a continuación, haga clic en **Siguiente**.  
 
-   -   **Nombre de la secuencia de tareas**: especifique un nombre que identifique la secuencia de tareas.  
+   -   **Nombre de secuencia de tareas**: especifique un nombre que identifique la secuencia de tareas.  
 
    -   **Descripción**: especifique una descripción de la tarea que se realiza mediante la secuencia de tareas.  
 
@@ -62,7 +62,7 @@ Use secuencias de tareas de System Center Configuration Manager para instalar au
 
 6. En la página **Instalar Windows** , especifique la siguiente configuración y, a continuación, haga clic en **Siguiente**.  
 
-   -   **Paquete de imagen**: especifique el paquete que contiene la imagen de sistema operativo que desea instalar. Para obtener más información, consulte [Administrar imágenes de sistema operativo](../get-started/manage-operating-system-images.md).  
+   -   **Paquete de imágenes**: especifique el paquete que contiene la imagen de sistema operativo que desea instalar. Para más información, vea [Manage operating system images (Administrar imágenes de sistema operativo)](../get-started/manage-operating-system-images.md).  
 
    -   **Imagen**: si el paquete de imágenes de sistema operativo contiene varias imágenes, especifique el índice de la imagen de sistema operativo que desea instalar.  
 
@@ -70,7 +70,7 @@ Use secuencias de tareas de System Center Configuration Manager para instalar au
 
    -   **Clave de producto**: especifique la clave de producto para el sistema operativo Windows que desea instalar. Puede especificar claves de licencia por volumen codificadas y claves de producto estándar. Si utiliza una clave de producto no codificada, cada grupo de 5 caracteres debe estar separado por un guión (-). Por ejemplo: *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
 
-   -   **Modo de licencia de servidor**: especifique que la licencia de servidor es **Por puesto**, **Por servidor**, o bien que no se especifica ninguna licencia. Si la licencia de servidor es **Por servidor**, especifique también el número máximo de conexiones de servidor.  
+   -   **Modo de licencia de servidor**: especifique que la licencia de servidor sea **Por puesto**, **Por servidor**o que no se especifica ninguna licencia. Si la licencia de servidor es **Por servidor**, especifique también el número máximo de conexiones de servidor.  
 
    -   Especifique cómo administrar la cuenta de administrador que se utiliza cuando se implementa la imagen de sistema operativo.  
 
@@ -110,7 +110,7 @@ Use secuencias de tareas de System Center Configuration Manager para instalar au
 
 12. Complete el asistente.  
 
-    Ahora puede implementar la secuencia de tareas en una recopilación de equipos.  Para obtener más información, vea [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS).  
+    Ahora puede implementar la secuencia de tareas en una recopilación de equipos.  Para obtener más información, vea [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence).  
 
 ##  <a name="BKMK_InstallExistingOSImageTSExample"></a> Ejemplo de secuencia de tareas para instalar la imagen de sistema operativo existente  
  Use la tabla siguiente como guía para crear una secuencia de tareas que implemente un sistema operativo mediante una imagen de sistema operativo existente. La tabla le ayudará a decidir la secuencia general de los pasos de la secuencia de tareas y cómo organizar y estructurar los pasos de la secuencia de tareas en grupos lógicos. La secuencia de tareas que cree puede variar desde este ejemplo y puede contener más o menos pasos de secuencia de tareas y grupos.  

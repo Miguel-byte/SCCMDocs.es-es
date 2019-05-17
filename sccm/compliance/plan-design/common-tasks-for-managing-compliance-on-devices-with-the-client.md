@@ -2,7 +2,7 @@
 title: 'Tareas comunes de administración de cumplimiento para dispositivos administrados por el cliente '
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la configuración de cumplimiento de System Center Configuration Manager al repasar algunos escenarios comunes.
-ms.date: 10/06/2016
+ms.date: 05/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a06c4294e85d3942ea3c795f3621d15ffb0ad32f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 82826e6b57e479599d02637ee0d8b95dc3173d6f
+ms.sourcegitcommit: 99dfe4fb9e9cfd20c44380ae442b3a5b895a0d9b
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56120807"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65214564"
 ---
 # <a name="common-tasks-for-managing-compliance-on-devices-with-the-system-center-configuration-manager-client"></a>Tareas comunes para administrar el cumplimiento en dispositivos que tienen el cliente de System Center Configuration Manager
 
@@ -24,7 +24,7 @@ ms.locfileid: "56120807"
 
 Los escenarios de este tema ofrecen una introducción al uso de la configuración de cumplimiento de System Center Configuration Manager al repasar algunos escenarios habituales que podría encontrarse.  
 
- Si ya está familiarizado con la configuración de cumplimiento, encontrará documentación detallada sobre todas las características que usa en la sección [Configuration items for devices managed with the System Center Configuration Manager client (Elementos de configuración de dispositivos administrados con el cliente de System Center Configuration Manager)](../../compliance/deploy-use/configuration-items-for-devices-managed-with-the-client.md).  
+ Si ya está familiarizado con la configuración de cumplimiento, encontrará documentación detallada sobre todas las características que usa en la sección [Configuration items for devices managed with the System Center Configuration Manager client (Elementos de configuración de dispositivos administrados con el cliente de System Center Configuration Manager)](../../compliance/deploy-use/create-configuration-items.md).  
 
  Antes de empezar, lea [Get started with compliance settings (Introducción a la configuración de cumplimiento)](../../compliance/get-started/get-started-with-compliance-settings.md) para conocer algunos conceptos básicos sobre la configuración de cumplimiento y lea también [Planear y configurar las opciones de cumplimiento](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md) para implementar los requisitos previos necesarios.  
 
@@ -37,11 +37,11 @@ Los escenarios de este tema ofrecen una introducción al uso de la configuració
 
 4.  En la pestaña **General** del Asistente para crear elemento de configuración que se muestra a continuación, especifique un nombre y una descripción para el elemento de configuración y luego elija el tipo de elemento de configuración adecuado para cada escenario de este tema.  
 
-     ![Muestra la página general del Asistente para crear elemento de configuración.](/sccm/compliance/plan-design/media/Compliance-Settings-Wizard---1.png)  
+     ![Muestra la página general del Asistente para crear elemento de configuración.](/sccm/mdm/deploy-use/media/Compliance-Settings-Wizard---1.png)  
 
 ## <a name="scenarios-for-windows-10-devices-managed-with-the-configuration-manager-client"></a>Escenarios para dispositivos Windows 10 administrados con el cliente de Configuration Manager  
 
-### <a name="scenario-disable-the-use-of-bluetooth-on-windows-10-devices"></a>Escenario: deshabilitar el uso de Bluetooth en dispositivos Windows 10  
+### <a name="scenario-disable-the-use-of-bluetooth-on-windows-10-devices"></a>Escenario: deshabilitar el uso de Bluetooth en dispositivos Windows 10  
  En este escenario, el departamento de seguridad ha identificado la característica Bluetooth en los dispositivos como un medio que podría usarse para transmitir información corporativa confidencial fuera de la empresa. Recientemente ha actualizado todos los equipos a Windows 10 y ahora decide deshabilitar la característica Bluetooth en estos dispositivos.  
 
 1. En la página **General** del Asistente para crear elemento de configuración, seleccione el tipo de elemento de configuración **Windows 10** y luego haga clic en **Siguiente**.  
@@ -107,3 +107,7 @@ Los escenarios de este tema ofrecen una introducción al uso de la configuració
 6. Complete el asistente para crear el elemento de configuración.  
 
    Ahora puede usar la información del tema [Tareas comunes para crear e implementar líneas de base de configuración](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) como ayuda para implementar la configuración que ha creado en los dispositivos.  
+
+## <a name="next-steps"></a>Pasos siguientes
+
+[Crear e implementar líneas base de configuración](/sccm/compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines)

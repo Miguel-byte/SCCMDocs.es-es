@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99cd37d0034725c85709e454960171714cd3db13
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: fa86d335b94db796f37955462abddeb9451ccf4e
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133823"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083140"
 ---
 # <a name="use-software-center-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>Use Centro de software para implementar Windows a través de la red con System Center Configuration Manager
 
@@ -34,8 +34,8 @@ Complete los pasos de uno de los escenarios de implementación de sistema operat
 Para que la implementación de sistema operativo esté disponible en el Centro de software, configure la implementación. Puede configurar la implementación en la página **Configuración de implementación** del Asistente para implementar software o en la pestaña **Configuración de implementación** en las propiedades de la implementación. Para la configuración **Estar disponible para** , configure **Solo clientes de Configuration Manager** o **PXE, medios y clientes de Configuration Manager**. Una vez que el sistema implemente el sistema operativo, este aparecerá en el Centro de software para los miembros de la recopilación de destino.
 
 ##  <a name="BKMK_Deploy"></a> Implemente la secuencia de tareas en los equipos.  
-Implemente el sistema operativo en una recopilación de destino. Para obtener más información, vea [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS). Al implementar sistemas operativos para el Centro de software, puede configurar si la implementación es necesaria o está disponible.
+Implemente el sistema operativo en una recopilación de destino. Para obtener más información, vea [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence). Al implementar sistemas operativos para el Centro de software, puede configurar si la implementación es necesaria o está disponible.
 
--   **Implementación requerida**: las implementaciones necesarias harán que el sistema operativo esté disponible en el Centro de software, pero se iniciará automáticamente según la programación de asignación configurada.
+-   **Implementación necesaria**: las implementaciones necesarias harán que el sistema operativo esté disponible en el Centro de software, pero se iniciará automáticamente según la programación de asignación configurada.
 
 -   **Implementación disponible**: el sistema operativo estará disponible en el Centro de software y el usuario puede instalarlo a petición.

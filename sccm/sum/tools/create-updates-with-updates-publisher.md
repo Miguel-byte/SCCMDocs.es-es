@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
 ms.assetid: 46a1a8ac-126c-4ee6-ae09-32dfbdb83368
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0cf0665e3302181370b3d2d08b4071be3527852a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: ec448f0d2752cda2509b6daa0302ff521044bef4
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56141143"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65493754"
 ---
 # <a name="create--software-updates-and-update-bundles-with-updates-publisher"></a>Crear actualizaciones de software y actualizar agrupaciones con Updates Publisher
 
@@ -55,13 +55,13 @@ Dado que estos dos asistentes tienen un flujo de trabajo similar, el procedimien
 
     __Propiedades localizadas:__
 
-   - **Idiomas**: seleccione un idioma y luego especifique un título y una descripción. Después puede seleccionar idiomas adicionales, uno a uno, donde cada idioma admite su propio título y descripción.
+   - **Idioma**: seleccione un idioma y luego especifique un título y una descripción. Después puede seleccionar idiomas adicionales, uno a uno, donde cada idioma admite su propio título y descripción.
 
    - **Título**: escriba el nombre de la actualización. Este nombre se muestra en el área de trabajo Actualizaciones de la consola de Updates Publisher.
 
    - **Descripción**: descripción detallada de la actualización. Puede incluir lo que instala la actualización, además de cómo y cuándo se debe usar.
 
-     **Clasificación:** las siguientes son algunas descripciones frecuentes para las distintas clasificaciones.
+     **Clasificación**: estas son algunas descripciones frecuentes para las distintas clasificaciones.
 
    - **Actualización**: actualización de una aplicación o un archivo que está instalado actualmente.
 
@@ -71,15 +71,15 @@ Dado que estos dos asistentes tienen un flujo de trabajo similar, el procedimien
 
    - **Seguridad**: actualización de amplia distribución para un problema específico del producto, relacionado con la seguridad.
 
-   - **Paquete acumulativo de actualizaciones**: un conjunto acumulativo de revisiones que se empaquetan para facilitar la implementación. Estas revisiones pueden incluir actualizaciones de seguridad, actualizaciones críticas, actualizaciones, etc. Un paquete acumulativo de revisiones suele relacionarse, por lo general, con un área específica; por ejemplo, una característica del producto o de la seguridad.
+   - **Paquete acumulativo de actualizaciones**: conjunto acumulativo de revisiones que se recopilan para facilitar la implementación. Estas revisiones pueden incluir actualizaciones de seguridad, actualizaciones críticas, actualizaciones, etc. Un paquete acumulativo de revisiones suele relacionarse, por lo general, con un área específica; por ejemplo, una característica del producto o de la seguridad.
 
-   - **Service Pack**: un conjunto acumulativo de revisiones que se aplican a una aplicación. Estas revisiones pueden incluir actualizaciones de seguridad, actualizaciones críticas, actualizaciones de software, etc.
+   - **Service Pack**. conjunto acumulativo de revisiones correspondientes a una aplicación. Estas revisiones pueden incluir actualizaciones de seguridad, actualizaciones críticas, actualizaciones de software, etc.
 
    - **Herramienta**: especifica una herramienta o característica que ayuda a realizar una o varias tareas.
 
      -   **Controlador**: actualización del software de controlador.
 
-   **Proveedor:** especifique un proveedor para la actualización. Puede usar la lista desplegable para usar valores de actualizaciones que se encuentran en el repositorio. Cuando especifique un proveedor, el asistente crea una carpeta con el nombre del proveedor en **Todas las actualizaciones de software** en el **área de trabajo Actualizaciones** si esa carpeta no existe ya. Los siguientes son nombres reservados de Windows Server Update Services (WSUS) que no se pueden especificar para actualizaciones creadas por el usuario:
+   **Proveedor**: especifica un proveedor para actualización. Puede usar la lista desplegable para usar valores de actualizaciones que se encuentran en el repositorio. Cuando especifique un proveedor, el asistente crea una carpeta con el nombre del proveedor en **Todas las actualizaciones de software** en el **área de trabajo Actualizaciones** si esa carpeta no existe ya. Los siguientes son nombres reservados de Windows Server Update Services (WSUS) que no se pueden especificar para actualizaciones creadas por el usuario:
    >*   Microsoft Corporation
    >*   Microsoft
    >*   Actualizar
@@ -100,30 +100,30 @@ Dado que estos dos asistentes tienen un flujo de trabajo similar, el procedimien
 
 **Producto**: especifique el tipo de producto al que se destina la actualización. Puede usar la lista desplegable para usar valores de actualizaciones que se encuentran en el repositorio. La misma lista de nombres reservados de WSUS que no se pueden usar con **Proveedor**, tampoco se pueden usar con **Producto**.
 
- **Dirección URL de información adicional**: especifique la dirección URL donde se puede encontrar más información sobre esta actualización. Debe usar letras minúsculas en **https** o **http** al escribir esta dirección URL.
+ **URL de información adicional**: especifique la dirección URL donde se encuentra más información sobre esta actualización. Debe usar letras minúsculas en **https** o **http** al escribir esta dirección URL.
 
 4. En la página **Información opcional**, puede configurar detalles que ofrezcan información adicional sobre la actualización.
 
-   -   **Id. de boletín**: los identificadores de boletín suelen proporcionarlos los proveedores de la actualización, aunque no siempre.
+   -   **Id. de boletín**: los identificadores de boletín suelen proporcionarlos los proveedores de actualización, aunque no siempre.
 
-   -   **Id. de artículo**: si hay un artículo de actualización de software disponible, este identificador puede resultar útil para quienes busquen información adicional sobre la actualización.
+   -   **Id. de artículo**: si hay un articulo de actualización de software disponible, este identificador puede resultar útil para quienes busquen información adicional sobre la actualización.
 
-   -   **Identificadores de CVE:** enumere uno o varios identificadores de Common Vulnerabilities and Exposures (Vulnerabilidades y exposiciones comunes, CVE) que ofrecen información de seguridad sobre la actualización o la agrupación de actualizaciones. Cuando muestre más de uno, use un punto y coma para separar los identificadores de CVE; por ejemplo: *CVE1;CVE2.*
+   -   **CVE IDs** (Id de CVE): muestra uno o varios identificadores de Common Vulnerabilities and Exposures (Vulnerabilidades y exposiciones comunes, CVE) que ofrecen información de seguridad sobre la actualización o la agrupación de actualizaciones. Cuando muestre más de uno, use punto y coma para separar los identificadores de CVE; por ejemplo: *CVE1;CVE2.*
 
-   -   **Dirección URL de soporte técnico:** indique la dirección URL que contiene información de soporte técnico para esta actualización, si está disponible. Debe usar letras minúsculas en **https** o **http** al escribir esta dirección URL.
+   -   **Dirección URL de soporte**: muestra la dirección URL que contiene información de soporte técnico para esta actualización, si está disponible. Debe usar letras minúsculas en **https** o **http** al escribir esta dirección URL.
 
-   -   **Gravedad:** establezca el nivel de gravedad de esta actualización.
+   -   **Gravedad**: establezca el nivel de gravedad de esta actualización.
 
-   -   **Impacto:** se pueden usar las opciones siguientes para especificar el impacto:
+   -   **Impacto**: pueden usarse las siguientes opciones para especificar el impacto:
        -   **Normal** : use esta opción para indicar que la actualización requiere procedimientos de instalación típica.
        -   **Menor**: use esta opción para indicar que la actualización requiere procedimientos de instalación mínima.
        -   **Requires exclusive handling** (Requiere manipulación exclusiva): use esta opción para indicar que la actualización debe instalarse automáticamente, excluyente de otras actualizaciones.   <br /><br />
 
-   -   **Comportamiento de reinicio:** use esta opción para proporcionar información sobre el comportamiento de reinicio de las actualizaciones. Esta opción no afecta al comportamiento real de la instalación de actualización.
+   -   **Comportamiento de reinicio**: use esta opción para proporcionar información sobre el comportamiento de reinicio de las actualizaciones. Esta opción no afecta al comportamiento real de la instalación de actualización.
 
-       -   **No reiniciar nunca**: el equipo no realiza nunca un reinicio del sistema después de instalar la actualización de software.
-       -   **Siempre requiere reinicio**: el equipo realiza siempre un reinicio del sistema después de instalar la actualización de software.
-       -   **Puede solicitar reinicio**: después de instalar la actualización de software, el equipo solicita un reinicio del sistema solo en caso de que sea necesario. El usuario tiene la posibilidad de posponer el reinicio. Es el valor predeterminado. <br /><br />
+       -   **Never reboots** (No se reinicia nunca): el equipo no realiza nunca un reinicio del sistema después de instalar la actualización de software.
+       -   **Always requires reboot** (Siempre requiere reinicio): el equipo realiza siempre un reinicio del sistema después de instalar la actualización de software.
+       -   **Can request reboot** (Puede solicitar reinicio): después de instalar la actualización de software, el equipo solicita un reinicio del sistema solo en caso necesario. El usuario tiene la posibilidad de posponer el reinicio. Es el valor predeterminado. <br /><br />
 
 5. En la página **Requisitos previos**, especifique los requisitos previos que deben instalarse en un equipo para poder instalar esta actualización. Los requisitos previos pueden ser **detectoids** u otras actualizaciones. Los detectoids son reglas de alto nivel como, por ejemplo, una que requiera que la CPU de los equipos sea un procesador de 64 bit. Los detectoids también pueden especificar actualizaciones que deben instalarse para poder instalar esta actualización.
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6030bb1a02a94e61cf3ef53b6d90f7b6a5ae4f7a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 32a645f95d25c92809723ae735f566535fc4043d
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122107"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083306"
 ---
 # <a name="planning-considerations-for-automating-tasks-in-configuration-manager"></a>Consideraciones de planeamiento para la automatización de tareas en Configuration Manager
 
@@ -92,12 +92,13 @@ ms.locfileid: "56122107"
 
 
 ## <a name="add-child-task-sequences-to-a-task-sequence"></a>Adición de secuencias de tareas secundarias a una secuencia de tareas
- <!--1261338--> A partir de Configuration Manager versión 1710, puede agregar un nuevo paso de secuencia de tareas que ejecute otra secuencia de tareas. Este paso crea una relación primario-secundario entre las secuencias de tareas. El uso de este paso le permite crear más secuencias de tareas modulares que puede volver a usar.  
+ <!--1261338-->
+ A partir de Configuration Manager versión 1710, puede agregar un nuevo paso de secuencia de tareas que ejecute otra secuencia de tareas. Este paso crea una relación primario-secundario entre las secuencias de tareas. El uso de este paso le permite crear más secuencias de tareas modulares que puede volver a usar.  
 
  Para obtener más información, vea [Ejecutar secuencia de tareas](/sccm/osd/understand/task-sequence-steps#child-task-sequence). 
 
  > [!Note]  
- > Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para más información, vea [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+ > Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para obtener más información, consulte [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
 
 
 
@@ -190,7 +191,7 @@ ms.locfileid: "56122107"
  >   
  >  Si los clientes descargan secuencias de tareas fuera de una ventana de mantenimiento, la secuencia de tareas se descarga dos veces. En este escenario, el cliente descarga la secuencia de tareas, deshabilita el filtro de escritura, reinicia el equipo y, a continuación, descarga la secuencia de tareas de nuevo. Este comportamiento se debe a que la secuencia de tareas se descargó originalmente en la superposición temporal, que se borra al reiniciarse el dispositivo.  
 
- Para obtener más información sobre cómo implementar secuencias de tareas, consulte [Implementar una secuencia de tareas](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS).  
+ Para obtener más información sobre cómo implementar secuencias de tareas, consulte [Implementar una secuencia de tareas](/sccm/osd/deploy-use/deploy-a-task-sequence).  
 
 
 
@@ -267,7 +268,7 @@ Para obtener más información, vea [HTTP mejorado](/sccm/core/plan-design/hiera
 > [!Note]  
 > Los escenarios de implementación de sistema operativo siguientes aún requieren el uso de una cuenta de acceso a la red:
 >  
-> - La [opción de implementación](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS) de secuencia de tareas, **Acceder al contenido directamente desde un punto de distribución cuando sea necesario mediante la ejecución de la secuencia de tareas**   
+> - La [opción de implementación](/sccm/osd/deploy-use/deploy-a-task-sequence) de secuencia de tareas, **Acceder al contenido directamente desde un punto de distribución cuando sea necesario mediante la ejecución de la secuencia de tareas**   
 > - La opción de paso [Solicitar almacén de estado](/sccm/osd/understand/task-sequence-steps#BKMK_RequestStateStore), **Use la cuenta de acceso a la red si la cuenta de equipo no puede conectarse a un almacén de estado** 
 > - Al conectarse a un dominio de confianza o a través de bosques de Active Directory 
 > - La opción de paso [Aplicar imagen de sistema operativo](/sccm/osd/understand/task-sequence-steps#BKMK_ApplyOperatingSystemImage), **Acceder al contenido directamente desde el punto de distribución** 

@@ -2,8 +2,8 @@
 title: Introducción a las actualizaciones de software
 titleSuffix: Configuration Manager
 description: Descubra los conceptos básicos de las actualizaciones de software en System Center Configuration Manager.
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.date: 10/30/2017
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac745419dafea6a8fc86ddf1c744944f8f5698b2
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: e95055473cc5d61b10ee06e43456f3f7dfeb428b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56125041"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65493362"
 ---
 # <a name="introduction-to-software-updates-in-system-center-configuration-manager"></a>Introducción a las actualizaciones de software en System Center Configuration Manager
 
@@ -130,19 +130,19 @@ Para ver un escenario de ejemplo que muestra cómo podría implementar actualiza
 
  Con inclusión de la programación de exámenes, el examen de cumplimiento de las actualizaciones de software se puede iniciar de las siguientes maneras:  
 
--   **Programación de exploración de actualización de software**: la exploración de cumplimiento de las actualizaciones de software se inicia en la programación de exploración definida en la configuración del agente cliente de actualizaciones de software. Para obtener más información sobre cómo configurar el cliente de actualizaciones de software, consulte la [configuración de cliente de las actualizaciones de software](../../core/clients/deploy/about-client-settings.md#software-updates).  
+-   **Programación de exámenes de las actualizaciones de software**: el examen de cumplimiento de las actualizaciones de software se inicia según la programación de exámenes configurada en las opciones del Agente cliente de actualizaciones de software. Para obtener más información sobre cómo configurar el cliente de actualizaciones de software, consulte la [configuración de cliente de las actualizaciones de software](../../core/clients/deploy/about-client-settings.md#software-updates).  
 
 -   **Acción de Propiedades de Configuration Manager**: el usuario puede iniciar la acción **Ciclo de detecciones de actualizaciones de software** o **Ciclo de evaluación de implementación de actualizaciones de software** en la pestaña **Acción** del cuadro de diálogo **Propiedades de Configuration Manager** en el equipo cliente.  
 
--   **Programación de reevaluación de implementación**: La evaluación de la implementación y el examen de cumplimiento de las actualizaciones de software se inician según la programación de reevaluación de implementación configurada en las opciones del Agente cliente de actualizaciones de software. Para obtener más información sobre el cliente de actualizaciones de software, consulte la [configuración de cliente de las actualizaciones de software](../../core/clients/deploy/about-client-settings.md#software-updates).  
+-   **Programación de reevaluación de implementación**: la evaluación de la implementación y el examen de cumplimiento de las actualizaciones de software se inician según la programación de reevaluación de implementación configurada en las opciones del Agente cliente de actualizaciones de software. Para obtener más información sobre el cliente de actualizaciones de software, consulte la [configuración de cliente de las actualizaciones de software](../../core/clients/deploy/about-client-settings.md#software-updates).  
 
--   **Antes de descargar los archivos de actualización**: Cuando un equipo cliente recibe una directiva de asignación para una nueva implementación necesaria, el Agente cliente de actualizaciones de software descarga los archivos de actualización de software en la caché del cliente local. Antes de descargar los archivos de actualización de software, el agente cliente inicia un examen para comprobar que la actualización de software sigue siendo necesaria.  
+-   **Antes de descargar los archivos de actualización**: cuando un equipo cliente recibe una directiva de asignación para una nueva implementación necesaria, el Agente cliente de actualizaciones de software descarga los archivos de actualización de software en la memoria caché del cliente local. Antes de descargar los archivos de actualización de software, el agente cliente inicia un examen para comprobar que la actualización de software sigue siendo necesaria.  
 
--   **Antes de la instalación de las actualizaciones de software**: Justo antes de la instalación de las actualizaciones de software, el Agente cliente de actualizaciones de software inicia un examen para comprobar que las actualizaciones de software siguen siendo necesarias.  
+-   **Antes de la instalación de las actualizaciones de software:**: justo antes de la instalación de las actualizaciones de software, el Agente cliente de actualizaciones de software inicia un examen para comprobar que las actualizaciones de software siguen siendo necesarias.  
 
--   **Después de la instalación de las actualizaciones de software**: Justo después de completarse la instalación de una actualización de software, el Agente cliente de actualizaciones de software inicia un examen para comprobar que las actualizaciones de software ya no son necesarias y crea un nuevo mensaje de estado que indica que la actualización de software está instalada. Si la instalación finalizó pero es necesario reiniciar el equipo, el mensaje de estado indica que el equipo cliente tiene pendiente un reinicio.  
+-   **Después de la instalación de las actualizaciones de software**: justo después de completarse la instalación de una actualización de software, el Agente cliente de actualizaciones de software inicia un examen para comprobar que las actualizaciones de software ya no son necesarias y crea un nuevo mensaje de estado que indica que la actualización de software está instalada. Si la instalación finalizó pero es necesario reiniciar el equipo, el mensaje de estado indica que el equipo cliente tiene pendiente un reinicio.  
 
--   **Después del reinicio del sistema**: Cuando un equipo cliente tiene pendiente un reinicio del sistema para que finalice la instalación de la actualización de software, el Agente cliente de actualizaciones de software inicia un examen después del reinicio para comprobar que la actualización de software ya no es necesaria y crea un mensaje de estado que indica que la actualización de software está instalada.  
+-   **Después del reinicio del sistema**: cuando un equipo cliente tiene pendiente un reinicio del sistema para que finalice la instalación de la actualización de software, el Agente cliente de actualizaciones de software inicia un examen después del reinicio para comprobar que la actualización de software ya no es necesaria y crea un mensaje de estado que indica que la actualización de software está instalada.  
 
 #### <a name="time-to-live-value"></a>Valor de período de vida  
  El software actualiza los metadatos necesarios para que el examen de cumplimiento de las actualizaciones de software se almacene en el equipo cliente local y, de forma predeterminada, sea válido hasta 24 horas. Este valor se denomina período de vida (TTL).  

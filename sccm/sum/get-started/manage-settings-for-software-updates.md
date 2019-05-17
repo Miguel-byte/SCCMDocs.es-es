@@ -2,21 +2,21 @@
 title: Administración de la configuración de actualizaciones de software
 titleSuffix: Configuration Manager
 description: Obtenga información acerca de la configuración de cliente adecuada para las actualizaciones de software en su sitio después de instalar el punto de actualización de software.
-author: aczechowski
 ms.date: 03/26/2017
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 manager: dougeby
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 848cb4e23240091c62ff9ca12c46fedae769010f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 90304156778f4f41b2ac35a2840a4a7e7bb4dc32
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56129024"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499785"
 ---
 #  <a name="BKMK_ManageSUSettings"></a> Administrar la configuración de las actualizaciones de software  
 
@@ -77,7 +77,7 @@ En la pestaña **Detalles de la actualización de software** , puede ver la sigu
 
 - **Clasificación de máxima gravedad**: especifica la clasificación de gravedad definida por el proveedor para la actualización de software.  
 
-- **Descripción**: proporciona información general sobre la condición que arregla o mejora la actualización de software.  
+- **Descripción**: ofrece información general sobre la condición que la actualización de software arregla o mejora.  
 
 - **Idiomas aplicables**: muestra los idiomas para los que es aplicable la actualización de software.  
 
@@ -88,11 +88,11 @@ En la pestaña **Información de contenido** , revise la siguiente información 
 
 -   **Id. de contenido**: especifica el identificador de contenido de la actualización de software.  
 
--   **Descargado**: indica si Configuration Manager ha descargado los archivos de la actualización de software.  
+-   **Descargados**: indica si Configuration Manager descargó los archivos de la actualización de software.  
 
--   **Idiomas**: especifica los idiomas de la actualización de software.  
+-   **Idioma**: especifica los idiomas de la actualización de software.  
 
--   **Ruta de origen**: especifica la ruta de acceso de los archivos de origen de la actualización de software.  
+-   **Ruta de acceso de origen**: especifica la ruta de acceso de los archivos de origen de la actualización de software.  
 
 -   **Tamaño (MB)**: especifica el tamaño de los archivos de origen de la actualización de software.  
 

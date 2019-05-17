@@ -2,21 +2,21 @@
 title: Administración de la sincronización de actualizaciones de software
 titleSuffix: Configuration Manager
 description: Siga estos pasos para programar la sincronización de actualizaciones de software, iniciar la sincronización de actualizaciones de software de forma manual y supervisar la sincronización de actualizaciones de software.
-author: aczechowski
 ms.date: 12/20/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: ea8698c4-9df5-4cf5-8b62-ab93115b4769
 manager: dougeby
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 543a7867ca40cded389ee3ce875845dd32631274
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 4ef815287321bf6c5554ff424da58276af0cc655
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123525"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65493929"
 ---
 #  <a name="BKMK_SUMSync"></a> Sincronizar actualizaciones de software
 

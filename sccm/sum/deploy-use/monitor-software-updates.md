@@ -2,8 +2,8 @@
 title: Supervisar actualizaciones de software
 titleSuffix: Configuration Manager
 description: La consola de System Center Configuration Manager proporciona alertas y estados para supervisar la compatibilidad y las actualizaciones.
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.date: 07/30/2018
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 9afd7b0f-5c8e-48bc-9a65-1f7d74103688
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9399900849ead41118cb727c3ec36cd8345e393b
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 5cd5c27aa04f25b044f74533983a214dc9f9341b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133112"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500152"
 ---
 # <a name="monitor-software-updates-in-system-center-configuration-manager"></a>Supervisar actualizaciones de software en System Center Configuration Manager
 

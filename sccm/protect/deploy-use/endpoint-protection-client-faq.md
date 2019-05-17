@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2f19fee37ab817670bd754d6da1ad1ebe9ccb452
-ms.sourcegitcommit: 369db96ee84299b5ab6d74b177e6366b3017fc54
+ms.openlocfilehash: e0f3e0a20874539b079541f363c6d494a738225f
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56589941"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500516"
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Preguntas más frecuentes sobre el cliente de Endpoint Protection
 
@@ -28,15 +28,15 @@ Estas preguntas más frecuentes están dirigidas a usuarios de equipos cuyos adm
 -   [¿Por qué es necesario el software antivirus y antispyware?](#why-do-i-need-antivirus-and-antispyware-software)  
 -   [¿Cómo puedo saber si mi equipo está infectado con software malintencionado?](#how-can-i-tell-if-my-computer-is-infected-with-malicious-software)
 -   [¿Cómo encuentro la versión de Windows Defender?](#how-can-i-find-the-version-of-windows-defender)
--   [¿Qué debo hacer si Windows Defender o Endpoint Protection detecta software malintencionado en mi equipo?](#what-should-i-do-if-windows-defender-or-endpoint-protection-detects-software-on-my-computer)  
+-   [¿Qué debo hacer si Windows Defender o Endpoint Protection detecta software malintencionado en mi equipo?](#what-should-i-do-if-windows-defender-or-endpoint-protection-detects-malicious-software-on-my-computer)  
 -   [¿Qué es un virus?](#what-is-a-virus)  
 -   [¿Qué es un spyware?](#what-is-spyware)  
--   [¿Cuál es la diferencia entre virus, spyware y otro software potencialmente peligroso?](#hat-s-the-difference-between-viruses-spyware-and-other-potentially-harmful-software)  
+-   [¿Cuál es la diferencia entre virus, spyware y otro software potencialmente peligroso?](#whats-the-difference-between-viruses-spyware-and-other-potentially-harmful-software)  
 -   [¿De dónde provienen los virus, el spyware y otro software potencialmente no deseado?](#where-do-viruses-spyware-and-other-potentially-unwanted-software-come-from)  
 -   [¿Puede mi equipo infectarse con software malintencionado sin mi conocimiento?](#can-i-get-malicious-software-without-knowing-it)  
 -   [¿Por qué es importante revisar los contratos de licencia antes de instalar software?](#why-is-it-important-to-review-license-agreements-before-installing-software)  
--   [¿Qué diferencias hay entre Endpoint Protection y Windows Defender?](#what-s-the-difference-between-endpoint-protection-and-windows-defender)  
--   [¿Por qué Windows Defender no detecta cookies?](#why-doesn-t-windows-defender-detect-cookies)  
+-   [¿Qué diferencias hay entre Endpoint Protection y Windows Defender?](#whats-the-difference-between-endpoint-protection-and-windows-defender)  
+-   [¿Por qué Windows Defender no detecta cookies?](#why-doesnt-windows-defender-detect-cookies)  
 -   [¿Cómo puedo evitar el malware?](#how-can-i-prevent-malware)  
 -   [¿Qué son las definiciones de virus y spyware?](#what-are-virus-and-spyware-definitions)  
 -   [¿Cómo mantengo las definiciones de virus y spyware actualizadas?](#how-do-i-keep-virus-and-spyware-definitions-up-to-date)  

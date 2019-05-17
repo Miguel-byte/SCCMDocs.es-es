@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7122d57696a7407731b93da20b995fc3e40949ac
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: 021fa2a29512fa3dde06af77093100f5c1dff0ad
+ms.sourcegitcommit: ab9f2a7fb7ea3a0c65808fce2975ab25a670281f
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802604"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65613053"
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>Administración de Office 365 ProPlus con Configuration Manager
 
@@ -203,7 +203,7 @@ Para asegurarse de que el canal de actualización está establecido para que las
 3. Agregue un nuevo paso **Ejecutar línea de comandos** antes del paso **Instalar actualizaciones de software** en la secuencia de tareas. Si Office 365 ProPlus se instala como parte de la misma secuencia de tareas, asegúrese de que este paso se ejecuta después de instalar Office.
 4. En el campo de la línea de comandos, escriba la línea de comandos que ejecutará la tarea programada. Vea el ejemplo siguiente asegurándose de que la cadena de comillas coincide con la ruta de acceso y el nombre de la tarea identificada en el paso 1.  
 
-    Ejemplo: `schtasks /run /tn "\Microsoft\Office\Office Automatic Updates"`
+    Ejemplo: `schtasks /run /tn "\Microsoft\Office\Office Automatic Updates 2.0"`
 5. Haga clic en **Aceptar**. 
 
 ## <a name="change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager"></a>Cambiar el canal de actualización después de permitir que los clientes de Office 365 reciban actualizaciones de Configuration Manager

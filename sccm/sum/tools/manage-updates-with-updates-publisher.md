@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
 ms.assetid: cd64994c-b426-4465-96cd-54b0edc2778d
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f658ce4757455e4e49cff6228ee37a38b8e4fa5
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 88cc03de66847143336425dbc4b730703d15378c
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56139500"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65493782"
 ---
 # <a name="manage-software-updates-in-updates-publisher"></a>Administrar actualizaciones de software en Updates Publisher
 
@@ -90,7 +90,7 @@ Hay dos maneras de publicar actualizaciones y agrupaciones:
 ### <a name="to-publish-updates-and-bundles"></a>Para publicar actualizaciones y agrupaciones
 1.  Vaya a **Updates Workspace** (Área de trabajo Actualizaciones) y seleccione una o varias actualizaciones y agrupaciones que quiera publicar. Luego elija **Publicar** en la pestaña **Inicio** de la cinta de opciones.
 
-2.  En la página **Seleccionar** del asistente para **publicación**, seleccione cómo quiere publicar las actualizaciones. Las opciones son las mismas que para [asignar actualizaciones](#assign-updates-and-bundles-to-a-publication): **Contenido completo**, **Solo metadatos**, o **Automático**.
+2.  En la página **Seleccionar** del asistente para **publicación**, seleccione cómo quiere publicar las actualizaciones. Las opciones son las mismas que para [asignar actualizaciones](#assign-updates-and-bundles-to-a-publication): **Full Content** (Contenido completo), **Solo metadatos** o **Automático**.
 
     También puede firmar todas las actualizaciones con un nuevo certificado de publicación.
 

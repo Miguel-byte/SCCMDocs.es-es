@@ -2,21 +2,21 @@
 title: 'Sincronización de actualizaciones sin conexión a Internet '
 titleSuffix: Configuration Manager
 description: Ejecute la sincronización de actualizaciones de software en el punto de actualización de software de nivel superior que está desconectado de Internet.
-author: aczechowski
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
 manager: dougeby
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ca643b348d9d6d2800c671d9985f10d08bf5d60
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 67b284e369268b184067e33d2a505585618795e5
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56130476"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65493978"
 ---
 # <a name="synchronize-software-updates-from-a-disconnected-software-update-point"></a>Sincronizar actualizaciones de software desde un punto de actualización de software desconectado  
 
@@ -71,7 +71,7 @@ ms.locfileid: "56130476"
 
      **wsusutil.exe export export.cab export.log**  
 
-     El formato se puede resumir como sigue: WSUSutil.exe va seguido de la opción de exportación, el nombre del archivo .cab de exportación creado durante la operación de exportación y el nombre de un archivo de registro. WSUSutil.exe exporta los metadatos desde el servidor de exportación y crea un archivo de registro de la operación.  
+     El formato se puede definir de la siguiente manera: WSUSutil.exe va seguido de la opción de exportación, el nombre del archivo .cab de exportación creado durante la operación de exportación y el nombre de un archivo de registro. WSUSutil.exe exporta los metadatos desde el servidor de exportación y crea un archivo de registro de la operación.  
 
     > [!NOTE]  
     >  Los nombres del paquete (archivo .cab) y del archivo de registro deben ser únicos en la carpeta actual.  
@@ -99,7 +99,7 @@ ms.locfileid: "56130476"
 
      **wsusutil.exe import export.cab import.log**  
 
-     El formato se puede resumir como sigue: WSUSutil.exe va seguido del comando de importación, el nombre del archivo del paquete (.cab) creado durante la operación de exportación, la ruta de acceso del archivo del paquete si se encuentra en una carpeta diferente y el nombre de un archivo de registro. WSUSutil.exe importa los metadatos desde el servidor de exportación y crea un archivo de registro de la operación.  
+     El formato se puede resumir de la siguiente manera: WSUSutil.exe va seguido del comando de importación, el nombre del archivo del paquete (.cab) creado durante la operación de exportación, la ruta de acceso del archivo del paquete si se encuentra en una carpeta diferente y el nombre de un archivo de registro. WSUSutil.exe importa los metadatos desde el servidor de exportación y crea un archivo de registro de la operación.  
 
 ## <a name="next-steps"></a>Pasos siguientes
 Después de sincronizar las actualizaciones de software por primera vez o después de que haya clasificaciones o productos nuevos, debe [configurar los productos y clasificaciones nuevos](configure-classifications-and-products.md) para sincronizar las actualizaciones de software con los nuevos criterios.

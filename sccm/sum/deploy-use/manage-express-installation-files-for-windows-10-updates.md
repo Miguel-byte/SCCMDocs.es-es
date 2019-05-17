@@ -2,8 +2,8 @@
 title: Administración de actualizaciones rápidas de Windows 10
 titleSuffix: Configuration Manager
 description: Configuration Manager admite archivos de instalación rápida para Windows 10, que proporciona descargas más pequeñas y tiempos de instalación más rápidos en los clientes.
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.date: 06/15/2018
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b8d8af88-e8ac-4deb-921b-975e2d2afd80
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c864b683c540e981f7506663182564cda1c379c2
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 503163fda1cae9802fe4ebdceabb9fd4424a35bb
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56137718"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500183"
 ---
 # <a name="manage-express-installation-files-for-windows-10-updates"></a>Administración de archivos de instalación rápida para actualizaciones de Windows 10
 
