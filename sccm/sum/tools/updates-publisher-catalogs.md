@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
 ms.assetid: 887f8029-1a3a-423c-a9c1-31dc0d693386
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 383cd0aaa8e20613cdef0009c95aa44c6b1117f1
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: ad9387b3864511af6e619d19be2107fab818f86e
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156498"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65493746"
 ---
 # <a name="manage-software-update-catalogs-in-updates-publisher"></a>Administrar catálogos de actualizaciones de software en Updates Publisher
 
@@ -48,22 +48,22 @@ Además de agregar catálogos y visualizar información sobre catálogos suscrit
 ## <a name="manage-update-catalogs"></a>Administrar catálogos de actualizaciones
 Puede ver la lista de catálogos que ha importado en la ventana **My Software Update Catalogs** (Mis catálogos de actualizaciones de software) del **área de trabajo Catálogos**. En esta área de trabajo puede:
 
--   **Agregar un catálogo de partner:** use una de las opciones siguientes para buscar nuevos catálogos de partner:
+-   **Add a partner catalog** (Agregar un catálogo de partner): use una de las opciones siguientes para buscar nuevos catálogos de partner:
 
     -   En la consola, vaya a **Updates Workspace** (Área de trabajo Actualizaciones)  > **Introducción**. En la ventana **Introducción**, elija **Add Partner Software Updates Catalogs** (Agregar catálogos de actualizaciones de software de partner).
 
     -   En la consola, vaya a **Catalogs Workspace** (Área de trabajo Catálogos) > **Mis catálogos**. Luego, en la cinta de opciones, elija **Add Catalogs** (Agregar catálogos).
 
--   **Agregar un catálogo de usuario:** En la consola, vaya a **Catalogs Workspace** (Área de trabajo Catálogos) > **Mis catálogos**. Luego, en la cinta de opciones, elija **Add Catalogs** (Agregar catálogos). Además de la ubicación del archivo .cab, debe especificar un Editor, Nombre y Descripción que identifique el catálogo.
+-   **Add a user catalog** (Agregar catálogo de usuario): en la consola, vaya a **Catalogs Workspace** (Área de trabajo Catálogos) > **Mis catálogos**. Luego, en la cinta de opciones, elija **Add Catalogs** (Agregar catálogos). Además de la ubicación del archivo .cab, debe especificar un Editor, Nombre y Descripción que identifique el catálogo.
 
 
--   **Comprobar las actualizaciones de catálogos:** seleccione uno o más catálogos y luego haga clic en **Actualizar** en la cinta.
+-   **Buscar actualizaciones a catálogos**: seleccione uno o más catálogos y luego elija **Actualizar** en la cinta de opciones.
 
--   **Editar un catálogo de usuario:** seleccione un catálogo de *usuario* y luego haga clic en **Editar** en la cinta. Luego puede modificar las propiedades definidas por el usuario.
+-   **Editar un catálogo de usuario**: seleccione un catalogo de *usuario* y luego elija **Editar** en la cinta de opciones. Luego puede modificar las propiedades definidas por el usuario.
 
--   **Eliminar catálogos:** seleccione uno o más catálogos y luego haga clic en **Quitar** en la cinta. Se eliminan el catálogo, la suscripción y las actualizaciones de esos catálogos del repositorio de Updates Publisher.
+-   **Eliminar catálogos**: seleccione uno o más catálogos y luego elija **Quitar** en la cinta de opciones. Se eliminan el catálogo, la suscripción y las actualizaciones de esos catálogos del repositorio de Updates Publisher.
 
--   **Agregar actualizaciones de un catálogo al repositorio**: haga clic en **Importar** en la cinta para iniciar el asistente para **importar catálogos**. Para obtener más información, vea [Importar actualizaciones](#import-updates)
+-   **Agregar actualizaciones de un catálogo al repositorio**: elija **Importar** en la cinta de opciones para iniciar el asistente para **importar catálogos**. Para obtener más información, vea [Importar actualizaciones](#import-updates)
 
 ## <a name="import-updates"></a>Importar actualizaciones
 Cuando se importa un catálogo, Updates Manager agrega las actualizaciones de ese catálogo al repositorio de Updates Publisher. Una vez importadas las actualizaciones, puede publicarlas en el servidor de actualización para ponerlas a disposición de los dispositivos administrados.
