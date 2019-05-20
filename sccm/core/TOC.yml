@@ -61,6 +61,8 @@
           href: understand/configuration-manager-on-azure.md
     - name: Preguntas más frecuentes sobre productos y licencias
       href: understand/product-and-licensing-faq.md
+    - name: Preguntas más frecuentes sobre rendimiento y tamaño deL sitio
+      href: understand/site-size-performance-faq.md
     - name: Preguntas más frecuentes sobre diagnósticos y datos de uso
       href: understand/frequently-asked-questions-about-diagnostics-and-usage-data.md
 - name: Planear y diseñar
@@ -101,8 +103,8 @@
           href: plan-design/configs/supported-configurations.md
         - name: Números de tamaño y escala
           href: plan-design/configs/size-and-scale-numbers.md
-        - name: Requisitos previos de sitio y sistema de sitio
-          href: plan-design/configs/site-and-site-system-prerequisites.md
+        - name: Directrices de rendimiento y tamaño del sitio
+          href: plan-design/configs/site-size-performance-guidelines.md
         - name: Sistemas operativos compatibles para los servidores de sistema de sitio
           href: plan-design/configs/supported-operating-systems-for-site-system-servers.md
         - name: Sistemas operativos compatibles con clientes y dispositivos
