@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
 ms.assetid: 4e620080-5400-45bb-87c2-fbdbc8aeacac
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17a233c7f71edfd9d294c33ee3b9813cc581b8c6
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 7a26aaa2d4e409e899763cedebd32ebf64c93ffa
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56124145"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65496380"
 ---
 # <a name="configure-options-for-updates-publisher"></a>Configurar opciones de Updates Publisher
 
@@ -59,7 +59,7 @@ Debe configurar Updates Publisher para que funcione con un servidor de actualiza
 
   -   **Examinar**: esta opción solo está disponible cuando el servidor de actualización está instalado en el servidor donde se ejecuta la consola. Después de seleccionar un certificado, debe elegir **Crear** para agregar el certificado al almacén de certificados de WSUS en el servidor de actualización. Debe especificar la contraseña del archivo **.pfx** de los certificados que seleccione con este método.
 
-  -   **Crear:** use esta opción para crear un certificado. Esta opción también agrega el certificado al almacén de certificados de WSUS en el servidor de actualización.
+  -   **Crear**: use esta opción para crear un certificado. Esta opción también agrega el certificado al almacén de certificados de WSUS en el servidor de actualización.
 
   **Si crea su propio certificado**, configure lo siguiente:
 
@@ -76,11 +76,11 @@ Use estas opciones cuando utilice Configuration Manager con Updates Publisher.
 
 -   **Specify the Configuration Manager server** (Especificar el servidor de Configuration Manager): después de habilitar la configuración con Configuration Manager, especifique la ubicación del servidor del sitio de nivel superior de la jerarquía de Configuration Manager. Si ese servidor es remoto con respecto a la instalación de Updates Publisher, especifique el FQDN del servidor del sitio. Elija **Prueba de conexión** para asegurarse de que se puede conectar al servidor del sitio.
 
--   **Configurar umbrales:** los umbrales se usan cuando se publican actualizaciones con el tipo de actualización automático. Los valores de umbral ayudan a determinar cuando se publica el contenido completo de una actualización en lugar de solo los metadatos. Para obtener más información sobre tipos de publicación, vea [Assign updates to a publication](/sccm/sum/tools/manage-updates-with-updates-publisher#assign-updates-and-bundles-to-a-publication) (Asignar actualizaciones a una publicación).
+-   **Configure thresholds** (Configurar umbrales): los umbrales se usan cuando se publican actualizaciones con el tipo de actualización automático. Los valores de umbral ayudan a determinar cuando se publica el contenido completo de una actualización en lugar de solo los metadatos. Para obtener más información sobre tipos de publicación, vea [Assign updates to a publication](/sccm/sum/tools/manage-updates-with-updates-publisher#assign-updates-and-bundles-to-a-publication) (Asignar actualizaciones a una publicación).
 
     Puede habilitar uno de los siguientes conjuntos de reglas, o bien ambos:
 
-    -   **Requested client count threshold** (Umbral de cuenta de clientes solicitados): este umbral define cuántos clientes deben solicitar una actualización para que Updates Publisher pueda publicar de forma automática el conjunto de contenido completo para esa actualización. Hasta que el número de clientes especificado soliciten la actualización, solo se publican los metadatos de las actualizaciones.
+    -   **Requested client count threshold** (Umbral de cuenta de clientes solicitados): este umbral define cuántos clientes deben solicitar una actualización para que Updates Publisher pueda publicar automáticamente el conjunto de contenido completo para esa actualización. Hasta que el número de clientes especificado soliciten la actualización, solo se publican los metadatos de las actualizaciones.
 
     -   **Package source size threshold (MB)** [Umbral de tamaño de origen del paquete (MB]): esta opción impide la publicación automática de actualizaciones que superen el tamaño especificado. Si el tamaño de las actualizaciones supera este valor, solo se publican los metadatos. Las actualizaciones de tamaño menor que el especificado pueden tener publicado su contenido completo.
 
@@ -101,17 +101,17 @@ El contenido de editores que no son de confianza puede dañar los equipos client
 ## <a name="advanced"></a>avanzadas
 Las opciones avanzadas incluyen:
 
--   **Ubicación del repositorio:** vea y modifique la ubicación del archivo de base de datos, **scupdb.sdf**. Este archivo es el repositorio de Updates Publisher.
+-   **Ubicación del repositorio**: vea y modifique la ubicación del archivo de base de datos, **scupdb.sdf**. Este archivo es el repositorio de Updates Publisher.
 
--   **Marca de tiempo:** cuando se habilita, se agrega a las actualizaciones que firma una marca de tiempo que identifica cuándo se han firmado. Una actualización que se firme mientras un certificado sea válido se puede usar después de que el certificado expire. De manera predeterminada, las actualizaciones de software no se pueden implementar después de que su certificado de firma expire.
+-   **Marca de tiempo**: cuando se habilita, se agrega a las actualizaciones que firma una marca de tiempo que identifica cuándo se firmó. Una actualización que se firme mientras un certificado sea válido se puede usar después de que el certificado expire. De manera predeterminada, las actualizaciones de software no se pueden implementar después de que su certificado de firma expire.
 
--   **Check for updates to subscribed catalogs** (Buscar actualizaciones de catálogos suscritos): cada vez que se inicia Updates Publisher, puede buscar de forma automática actualizaciones de los catálogos a lo que se haya suscrito. Cuando se encuentra una actualización de catálogo, se ofrecen detalles como **Alertas recientes** en la ventana **Introducción** del **área de trabajo Actualizaciones**.
+-   **Check for updates to subscribed catalogs** (Buscar actualizaciones de catálogos suscritos): cada vez que Updates Publisher se inicia, puede buscar automáticamente actualizaciones de los catálogos a lo que se haya suscrito. Cuando se encuentra una actualización de catálogo, se ofrecen detalles como **Alertas recientes** en la ventana **Introducción** del **área de trabajo Actualizaciones**.
 
 -   **Revocación de certificados**: elija esta opción para habilitar comprobaciones de revocación de certificados.
 
 -   **Local source publishing** (Publicación de origen local): Updates Publisher puede usar una copia local de una actualización que publique antes de descargar esa actualización de Internet. La ubicación puede ser una carpeta en el equipo que ejecuta Updates Publisher. De manera predeterminada, esta ubicación es **Mis documentos\LocalSourcePublishing.** Úsela cuando haya descargado una o más actualizaciones anteriormente o haya realizado modificaciones a una actualización que quiera implementar.
 
--   **Asistente para la limpieza de actualizaciones de software:** inicia al Asistente para la limpieza de actualizaciones. El asistente hace que expiren las actualizaciones que están en el servidor de actualización pero no en el repositorio de Updates Publisher. Vea [Expire unreferenced updates](#expire-unreferenced-software-updates) (Expirar actualizaciones sin referencia) para obtener más información.
+-   **Software Updates Cleanup Wizard** (Asistente para la limpieza de actualizaciones de software): inicia el asistente para la limpieza de actualizaciones. El asistente hace que expiren las actualizaciones que están en el servidor de actualización pero no en el repositorio de Updates Publisher. Vea [Expire unreferenced updates](#expire-unreferenced-software-updates) (Expirar actualizaciones sin referencia) para obtener más información.
 
 ## <a name="updates"></a>Actualizaciones
  Updates Publisher puede buscar nuevas actualizaciones automáticamente cada vez que se abre. También puede optar por recibir compilaciones de vista previa de Updates Publisher.
@@ -122,7 +122,7 @@ para abrir **Propiedades de Updates Publisher** y elija **Buscar actualización*
 Cuando Updates Publisher encuentra una nueva actualización, muestra la ventana **Actualización disponible** y se tiene la posibilidad de instalarla. Si opta por no instalar la actualización, la próxima vea que abra la consola se le ofrecerá esa posibilidad.
 
 ## <a name="logging"></a>Registro
-Updates Publisher registra información básica sobre Updates Publisher en **&lt;*ruta de acceso*&gt;\Windows\Temp\UpdatesPublisher.log**.
+Updates Publisher registra información básica sobre Updates Publisher en **%WINDIR%\Temp\UpdatesPublisher.log**.
 
 Use el Bloc de notas o **CMTrace** para ver el registro. CMTrace es la herramienta de archivos de registro de Configuration Manager que se encuentra en la carpeta **SMSSetup\Tools**Tools del medio de origen de Configuration Manager.
 

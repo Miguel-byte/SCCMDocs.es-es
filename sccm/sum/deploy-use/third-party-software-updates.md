@@ -7,20 +7,20 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
 ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e361760d9d7a2b21f42dc7b9504d653b584fca0a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 04963f6c565a9cb83655416dd706d5dd9055a29b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56132445"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499913"
 ---
 # <a name="enable-third-party-updates"></a>Habilitar actualizaciones de terceros 
 
-*Se aplica a: System Center Configuration Manager, versión 1806*
+*Se aplica a: System Center Configuration Manager versión 1806*
 
 A partir de la versión 1806, el nodo **Catálogos de actualizaciones de software de terceros** de la consola de Configuration Manager permite suscribirse a catálogos de terceros, publicar sus actualizaciones en el punto de actualización de software (SUP) e implementarlas posteriormente en los clientes.  <!--1357605, 1352101, 1358714-->
 
@@ -112,7 +112,7 @@ Los *catálogos de asociados* son catálogos de proveedores de software que tien
     - **Publicador**: el nombre de la organización que publica el catálogo. 
     - **Nombre**: nombre del catálogo que se va a mostrar en la consola de Configuration Manager. 
     - **Descripción**: una descripción del catálogo. 
-    - **Dirección URL de soporte técnico** (opcional): dirección HTTPS válida de un sitio web para obtener ayuda sobre el catálogo. 
+    - **URL de soporte técnico** (opcional): dirección HTTPS válida de un sitio web para obtener ayuda sobre el catálogo. 
     - **Contacto de soporte técnico** (opcional): información de contacto para obtener ayuda sobre el catálogo. 
 2. Haga clic en **Siguiente** para revisar el resumen del catálogo y continuar con el **asistente para catálogos personalizados de actualizaciones de software de terceros** hasta su finalización.
 

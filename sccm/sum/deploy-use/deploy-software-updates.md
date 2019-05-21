@@ -2,8 +2,8 @@
 title: Implementar actualizaciones de software
 titleSuffix: Configuration Manager
 description: Obtenga información sobre cómo implementar de forma manual o automática las actualizaciones de software en la consola de Configuration Manager.
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.date: 11/27/2018
 ms.topic: conceptual
@@ -11,18 +11,18 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cabcb57a429e0fb14732cead98902ca5b43957af
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: d01e01bf8318e5d4016420044a5f2f49c9b6965c
+ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156770"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65673371"
 ---
 # <a name="deploy-software-updates"></a>Implementar actualizaciones de software  
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-La fase de implementación de actualizaciones de software es el proceso de implementar las actualizaciones de software. Independientemente de cómo implemente las actualizaciones de software, el sitio:
+La fase de implementación de actualizaciones de software es el proceso de implementar actualizaciones de software. Independientemente de cómo implemente las actualizaciones de software, el sitio:
 - Agrega las actualizaciones a un grupo de actualizaciones de software
 - Distribuye el contenido de actualización a puntos de distribución
 - Implementa el grupo de actualizaciones en los clientes  
@@ -114,7 +114,8 @@ Para obtener más información y pasos detallados, vea [Implementar actualizacio
 
 ## <a name="bkmk_phased"></a> Implementación de actualizaciones de software por fases
 
-<!--1358146--> A partir de la versión 1810, cree implementaciones por fases de actualizaciones de software. Las Implementaciones por fases permiten organizar un lanzamiento de software coordinado y secuencial según criterios y grupos personalizables.
+<!--1358146-->
+A partir de la versión 1810, cree implementaciones por fases de actualizaciones de software. Las Implementaciones por fases permiten organizar un lanzamiento de software coordinado y secuencial según criterios y grupos personalizables.
 
 Para más información, vea [Crear implementaciones por fases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
 

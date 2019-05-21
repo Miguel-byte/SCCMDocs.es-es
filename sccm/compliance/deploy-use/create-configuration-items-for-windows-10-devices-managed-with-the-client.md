@@ -2,7 +2,7 @@
 title: 'Creación de elementos de configuración para Windows 10 administrado por el cliente '
 titleSuffix: Configuration Manager
 description: Use el elemento de configuración de Windows 10 de System Center Configuration Manager para administrar la configuración de los equipos con Windows 10 que administra el cliente de Configuration Manager.
-ms.date: 03/28/2017
+ms.date: 05/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e7215214c315af5965344c2b3c8ffbd29d522012
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 6a26ffcb0d88f50902e82049102825af956a4027
+ms.sourcegitcommit: 99dfe4fb9e9cfd20c44380ae442b3a5b895a0d9b
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56121029"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65214925"
 ---
 # <a name="how-to-create-configuration-items-for-windows-10-devices-managed-with-the-system-center-configuration-manager-client"></a>Cómo crear elementos de configuración para dispositivos Windows 10 administrados con el cliente de System Center Configuration Manager
 Use el elemento de configuración de **Windows 10** de System Center Configuration Manager para administrar la configuración de los equipos con Windows 10 que administra el cliente de Configuration Manager.  
@@ -42,16 +42,16 @@ Use el elemento de configuración de **Windows 10** de System Center Configurati
   
 7. En la página **Plataformas admitidas** del asistente, seleccione las plataformas de Windows 10 específicas que evaluarán el elemento de configuración.  
   
-8. En la página **Configuración del dispositivo** del asistente, seleccione el grupo de configuración que quiere configurar. Vea [Windows 10 configuration item settings reference](#BKMK_Ref) en este tema para obtener detalles y, a continuación, haga clic en **Siguiente**.  
+8. En la página **Configuración del dispositivo** del asistente, seleccione el grupo de configuración que quiere configurar. Consulte [Referencia a configuración de elemento de configuración de Windows 10](#BKMK_Ref) en este artículo para más información y, luego, haga clic en **Siguiente**.  
   
    > [!TIP]  
    >  Si el valor que quiere no aparece, seleccione la casilla **Configurar opciones adicionales que no se encuentran en los grupos de configuración predeterminados**.  
   
-9. En cada página de configuración, configure las opciones que necesita y si quiere corregirlas cuando no sean conformes en dispositivos (si se admite).  
+9. En cada página de configuración, configure las opciones que necesita y si quiere corregirlas cuando no sean conformes en los dispositivos (si se admite).  
   
 10. Para cada grupo de configuración, también puede elegir la gravedad que se notificará cuando se encuentre que un elemento de configuración no es conforme entre las siguientes:  
   
-    -   **Ninguno**: los dispositivos que no cumplan esta regla de compatibilidad no notificarán ninguna gravedad de error en los informes de Configuration Manager.  
+    -   **Ninguna**: los dispositivos que no sigan esta regla de cumplimiento no notificarán ninguna gravedad de error en los informes de Configuration Manager.  
   
     -   **Información**: los dispositivos que no cumplan esta regla de compatibilidad notificarán una gravedad de error de **Información** en los informes de Configuration Manager.  
   
@@ -61,7 +61,7 @@ Use el elemento de configuración de **Windows 10** de System Center Configurati
   
     -   **Crítico con evento**: los dispositivos que no cumplan esta regla de compatibilidad notificarán una gravedad de error de **Crítico** en los informes de Configuration Manager. Este nivel de gravedad también se registra como evento de Windows en el registro de eventos de la aplicación.  
   
-11. En la página **Aplicabilidad de plataforma** del asistente, revise cualquier configuración que no sea conforme a las plataformas admitidas que seleccionó anteriormente. Puede regresar y eliminar esta configuración o puede continuar.  
+11. En la página **Aplicabilidad de plataforma** del asistente, revise cualquier configuración que no sea compatible con las plataformas admitidas que seleccionó anteriormente. Puede regresar y eliminar esta configuración o puede continuar.  
   
     > [!TIP]  
     >  No se evalúa el cumplimiento de la configuración no admitida.  
@@ -70,7 +70,7 @@ Use el elemento de configuración de **Windows 10** de System Center Configurati
   
     Puede ver el nuevo elemento de configuración en el nodo **Elementos de configuración** del área de trabajo **Activos y compatibilidad** .  
   
-##  <a name="windows-10-configuration-item-settings-reference"></a>Referencia a configuración de elemento de configuración de Windows 10  
+## <a name="BKMK_Ref"></a> Windows 10 configuration item settings reference  
   
 ### <a name="password"></a>Contraseña  
   
@@ -83,7 +83,7 @@ Use el elemento de configuración de **Windows 10** de System Center Configurati
 |**Número de intentos de inicio de sesión incorrectos antes de que se borre un dispositivo**|Borra el dispositivo si hay este número de intentos de inicio de sesión incorrectos.|  
 |**Tiempo de inactividad antes de que se bloquee el dispositivo**|Especifica cuántos minutos el dispositivo debe estar inactivo antes de se bloquee automáticamente.|  
 |**Complejidad de la contraseña**|Elija si se puede especificar un PIN como "1234" o si se debe proporcionar una contraseña segura.|
-|**Número de conjuntos de caracteres complejos que se requieren para la contraseña**|Si ha seleccionado una contraseña **segura**, use esta opción para configurar el número de conjuntos de caracteres complejos necesarios. Para una contraseña segura, se debe establecer en al menos **3**, lo que significa que se requieren tanto números como letras. Seleccione **4** si quiere exigir una contraseña que, además, requiera caracteres especiales como **($%**.<br>(Solo Windows 10)  |
+|**Número de conjuntos de caracteres complejos que se requieren para la contraseña**|Si ha seleccionado una contraseña **segura**, use esta opción para configurar el número de conjuntos de caracteres complejos necesarios. Para una contraseña segura, este valor se debe establecer en al menos **3, lo que significa que se requieren tanto números como letras. Seleccione **4** si quiere exigir una contraseña que, además, requiera caracteres especiales como **($%**.<br>(Solo Windows 10)  |
   
 ###  <a name="device"></a>Dispositivo  
   
@@ -133,4 +133,4 @@ Windows Information Protection (anteriormente, Protección de datos de empresa) 
 Para obtener información sobre cómo configurar Windows Information Protection con Configuration Manager, vea [Protege los datos de tu empresa con Windows Information Protection (WIP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
   
 ## <a name="see-also"></a>Véase también  
- [Elementos de configuración para dispositivos administrados con el cliente de System Center Configuration Manager](../../compliance/deploy-use/configuration-items-for-devices-managed-with-the-client.md)
+ [Elementos de configuración para dispositivos administrados con el cliente de System Center Configuration Manager](../../compliance/deploy-use/create-configuration-items.md)

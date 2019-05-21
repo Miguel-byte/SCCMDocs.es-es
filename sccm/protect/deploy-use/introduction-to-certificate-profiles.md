@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: 41dcc259-f147-4420-bff2-b65bdf8cff77
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5872a6a8ee69e50d0abfe5840a087aaf83ab7aa5
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 07d6ecefb2cc4cded7ce43bad3f681f8f335ec4e
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156617"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500450"
 ---
 # <a name="introduction-to-certificate-profiles-in-system-center-configuration-manager"></a>Introducción a los perfiles de certificado en System Center Configuration Manager
 
@@ -50,12 +50,12 @@ Los perfiles de certificado proporcionan las siguientes capacidades de administr
 
     Para crear un perfil de certificado de **Protocolo de inscripción de certificados simple (SCEP)**, cree primero un perfil de **Certificado de CA de confianza**.
 
--   **Intercambio de información personal (.pfx)**: solicite un certificado .pfx (también conocido como PKCS #12) para un dispositivo o usuario.<!--1321368-->  
+-   **Intercambio de información personal (.pfx)**: solicite un certificado .pfx (también conocido como PKCS #12) para un dispositivo o un usuario.<!--1321368-->  
 
     Puede crear perfiles de certificado PFX [importando las credenciales](/sccm/mdm/deploy-use/import-pfx-certificate-profiles) de certificados existentes o [definiendo una autoridad de certificación](/sccm/mdm/deploy-use/create-pfx-certificate-profiles) para procesar las solicitudes.
 
     > [!Note]  
-    > Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para más información, vea [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+    > Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para obtener más información, consulte [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
 
     A partir de la versión 1706, puede usar Microsoft o Entrust como entidades de certificación de certificados **Intercambio de información personal (.pfx)**.
 

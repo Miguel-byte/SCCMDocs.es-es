@@ -1,8 +1,8 @@
 ---
 title: Crear medios preconfigurados
 titleSuffix: Configuration Manager
-description: Cree medios preconfigurados en System Center Configuration Manager para simplificar la implementación de Windows en varios escenarios.
-ms.date: 04/11/2017
+description: Use medios preconfigurados en Configuration Manager para simplificar la implementación de Windows en varios escenarios.
+ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,132 +11,173 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 166d9653ac1ca5ca192333788fb760dcd030856a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 8cba7fff1ec7144abfa5f92c25c73d36d5d7c749
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56137531"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65082788"
 ---
-# <a name="create-prestaged-media-with-system-center-configuration-manager"></a>Crear medios preconfigurados con System Center Configuration Manager
+# <a name="create-prestaged-media"></a>Crear medios preconfigurados
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Los medios preconfigurados de System Center Configuration Manager son un archivo Windows Imaging Format (WIM) que puede ser instalado en un equipo sin sistema operativo por el fabricante o en un centro de configuración empresarial no relacionado con el entorno de Configuration Manager.  
-Los medios preconfigurados contienen la imagen de arranque que se utiliza para iniciar el equipo de destino y la imagen de sistema operativo que se aplica al equipo de destino. También puede especificar las aplicaciones, los paquetes y los paquetes de controladores que quiere incluir como parte de los medios preconfigurados. La secuencia de tareas que implementa el sistema operativo no se incluye en el medio. Los medios preconfigurados se aplican a la unidad de disco duro de un nuevo equipo antes de enviar el equipo al usuario final. Use los medios preconfigurados para los siguientes escenarios de implementación de sistema operativo:  
+Los medios preconfigurados en Configuration Manager son un archivo de imagen de Windows (WIM). Se pueden instalar en un equipo sin sistema operativo por el fabricante o en su centro de almacenamiento provisional que no está conectado al entorno de producción de Configuration Manager. Los medios preconfigurados contienen la imagen de arranque que se usa para iniciar el equipo de destino y la imagen de sistema operativo que se aplica al equipo de destino. También puede especificar las aplicaciones, los paquetes y los paquetes de controladores que quiere incluir como parte de los medios preconfigurados. La secuencia de tareas que implementa el sistema operativo no se incluye en los medios. Los medios preconfigurados se aplican a la unidad de disco duro de un nuevo equipo antes de enviar el equipo al usuario final.
 
-- [Crear una imagen para un OEM en fábrica o en un almacén local](../../osd/deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md)  
+Use los medios preconfigurados para los siguientes escenarios de implementación del sistema operativo:  
 
-- [Instalar una nueva versión de Windows en un equipo nuevo (sin sistema operativo)](install-new-windows-version-new-computer-bare-metal.md)  
+- [Crear una imagen para un OEM en fábrica o en un almacén local](/sccm/osd/deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot)  
 
-- [Implementar Windows to Go](deploy-windows-to-go.md)  
+- [Instalar una nueva versión de Windows en un equipo nuevo (sin sistema operativo)](/sccm/osd/deploy-use/install-new-windows-version-new-computer-bare-metal)  
 
-  Cuando el equipo se inicia por primera vez después de la aplicación del medio preconfigurado, el equipo arranca en Windows PE y se conecta a un punto de administración para encontrar la secuencia de tareas que completa el proceso de implementación de sistema operativo. Puede especificar las aplicaciones, los paquetes y los paquetes de controladores que quiere incluir como parte de los medios preconfigurados. Al implementar una secuencia de tareas que usa un medio preconfigurado, el asistente comprueba en primer lugar la presencia de contenido válido en la memoria caché local de la secuencia de tareas y, si el contenido no se encuentra o se ha revisado, el asistente lo descarga del punto de distribución.  
+- [Deploy Windows to Go](/sccm/osd/deploy-use/deploy-windows-to-go) (Implementación de Windows to Go)  
 
-##  <a name="BKMK_CreatePrestagedMedia"></a> Creación de medios preconfigurados  
- Antes de crear medios preconfigurados con el Asistente para crear medio de secuencia de tareas, asegúrese de que se cumplen las condiciones siguientes:  
 
-|Tarea|Descripción|  
-|----------|-----------------|  
-|Imagen de arranque|Tenga en cuenta los siguientes datos sobre la imagen de arranque que usará en la secuencia de tareas para implementar el sistema operativo:<br /><br /> - La arquitectura de la imagen de arranque debe ser adecuada para la arquitectura del equipo de destino. Por ejemplo, un equipo de destino x64 puede arrancar y ejecutar una imagen de arranque x86 o x64. Sin embargo, un equipo de destino x86 solo puede arrancar y ejecutar una imagen de arranque x86.<br />- Asegúrese de que la imagen de arranque contiene los controladores de almacenamiento y de red necesarios para aprovisionar el equipo de destino.|  
-|Crear una secuencia de tareas para implementar un sistema operativo|Como parte de los medios preconfigurados, debe especificar la secuencia de tareas para implementar un sistema operativo.<br /><br /> - Para conocer los pasos necesarios para crear una nueva secuencia de tareas, consulte [Create a task sequence to install an operating system](../../osd/deploy-use/create-a-task-sequence-to-install-an-operating-system.md) (Crear una secuencia de tareas para instalar un sistema operativo).<br />- Para obtener más información sobre las secuencias de tareas, consulte [Manage task sequences to automate tasks](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md) (Administrar secuencias de tareas para automatizar tareas).|  
-|Distribuir todo el contenido asociado con la secuencia de tareas|Debe distribuir todo el contenido requerido por la secuencia de tareas a un punto de distribución como mínimo. Esto incluye la imagen de arranque, la imagen de sistema operativo y otros archivos asociados. El asistente recopila la información desde el punto de distribución al crear los medios independientes. Debe tener derechos de acceso de **lectura** para la biblioteca de contenido de dicho punto de distribución.  Para obtener más información, consulte [About the content library](../../core/plan-design/hierarchy/the-content-library.md) (Acerca de la biblioteca de contenido).|  
-|Unidad de disco duro del equipo de destino|El disco duro del equipo de destino debe estar formateado antes de que se realice una copia intermedia del medio preconfigurado en dicha unidad. Si el disco duro no está formateado cuando se aplique el medio, la secuencia de tareas que implementa el sistema operativo producirá un error al intentar iniciar el equipo de destino.|  
+## <a name="usage"></a>Uso
+
+Cuando el equipo se inicia por primera vez después de haber aplicado los medios preconfigurados, el equipo se inicia en Windows PE. Se conecta a un punto de administración para encontrar la secuencia de tareas que completa el proceso de implementación del sistema operativo. Al implementar una secuencia de tareas que usa medios preconfigurados, el cliente comprueba primero que el contenido de la caché de secuencia de tareas local sea válido. Si el contenido no se encuentra o se ha revisado, el cliente lo descarga desde un punto de distribución o un homólogo.  
+
+
+## <a name="prerequisites"></a>Requisitos previos
+
+Antes de crear medios preconfigurados con el Asistente para crear medio de secuencia de tareas, asegúrese de que se cumplen las condiciones siguientes:
+
+### <a name="boot-image"></a>Imagen de arranque
+
+Tenga en cuenta los siguientes puntos sobre la imagen de arranque que usará en la secuencia de tareas para implementar el sistema operativo:
+
+- La arquitectura de la imagen de arranque debe ser adecuada para la arquitectura del equipo de destino. Por ejemplo, un equipo de destino x64 puede arrancar y ejecutar una imagen de arranque x86 o x64. Sin embargo, un equipo de destino x86 solo puede arrancar y ejecutar una imagen de arranque x86.
+- Asegúrese de que la imagen de arranque contenga los controladores de almacenamiento y red necesarios para aprovisionar el equipo de destino.
+
+### <a name="create-a-task-sequence-to-deploy-an-os"></a>Creación de una secuencia de tareas para implementar un sistema operativo
+
+Como parte de los medios preconfigurados, especifique la secuencia de tareas para implementar el sistema operativo. Para más información, consulte [Crear una secuencia de tareas para instalar un sistema operativo](/sccm/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system).
+
+### <a name="distribute-all-content-associated-with-the-task-sequence"></a>Distribuir todo el contenido asociado con la secuencia de tareas
+
+Distribuya todo el contenido requerido por la secuencia de tareas a un punto de distribución como mínimo. Este contenido incluye la imagen de arranque, la imagen de sistema operativo y otros archivos asociados. El asistente recopila el contenido del punto de distribución al crear los medios preconfigurados.
+
+Su cuenta de usuario necesita al menos acceso de **Lectura** a la biblioteca de contenido en ese punto de distribución. Para obtener más información, consulte [Distribute content (Distribución del contenido)](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute).
+
+### <a name="hard-drive-on-the-destination-computer"></a>Unidad de disco duro del equipo de destino
+
+La unidad de disco duro del equipo de destino debe estar formateada antes de aplicarle los medios preconfigurados. Si la unidad de disco duro no está formateada cuando se apliquen los medios, la secuencia de tareas que implementa el sistema operativo producirá un error al intentar iniciar el equipo de destino.
 
 > [!NOTE]  
->  El Asistente para crear medio de secuencia de tareas establece la siguiente condición de variable de secuencia de tareas en el medio: **_SMSTSMediaType = OEMMedia**. Puede usar esta condición en la secuencia de tareas.  
+> El Asistente para crear medio de secuencia de tareas establece la siguiente condición de variable de secuencia de tareas en el medio: **_SMSTSMediaType = OEMMedia**. Puede usar esta misma condición en la secuencia de tareas.  
 
- Utilice el procedimiento siguiente para crear medios preconfigurados.  
 
-#### <a name="to-create-prestaged-media"></a>Para crear medios preconfigurados  
+## <a name="process"></a>Proceso
 
-1.  En la consola de Configuration Manager, haga clic en **Biblioteca de software**.  
+1. En la consola de Configuration Manager, vaya al área de trabajo **Biblioteca de software**, expanda **Sistemas operativos** y seleccione el nodo **Secuencias de tareas**.  
 
-2.  En el área de trabajo **Biblioteca de software** , expanda **Sistemas operativos**y, a continuación, haga clic en **Secuencias de tareas**.  
+2. En la pestaña **Inicio** de la cinta de opciones, en el grupo **Crear**, haga clic en **Crear medio de secuencia de tareas**. Esta acción inicia el Asistente para crear medio de secuencia de tareas.  
 
-3.  En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear medio de secuencia de tareas** para iniciar el Asistente para crear medio de secuencia de tareas.  
+3. En la página **Seleccionar tipo de medio**, especifique las siguientes opciones:  
 
-4.  En la página **Seleccionar tipo de medio** , especifique la información siguiente y, a continuación, haga clic en **Siguiente**.  
+    - Seleccione **Medio preconfigurado**.  
 
-    -   Seleccione **Medio preconfigurado**.  
-
-    -   Opcionalmente, si desea permitir que el sistema operativo se implemente sin intervención del usuario, seleccione **Permitir la implementación desatendida de sistema operativo**. Cuando se selecciona esta opción, no se pide al usuario información de configuración de red ni secuencias de tareas opcionales. No obstante, se seguirá solicitando una contraseña al usuario si el medio está configurado para la protección con contraseña.  
-
-5.  En la página **Administración de medio** , especifique la información siguiente y, a continuación, haga clic en **Siguiente**.  
-
-    -   Seleccione **Medio dinámico** si desea permitir que un punto de administración redirija el medio a otro punto de administración, según la ubicación del cliente en los límites del sitio.  
-
-    -   Seleccione **Medio basado en sitio** si desea que el medio solo se ponga en contacto con el punto de administración especificado.  
-
-6.  En la página **Propiedades de medio**  , especifique la información siguiente y, a continuación, haga clic en **Siguiente**.  
-
-    -   **Creado por**: especifique la persona que creó el medio.  
-
-    -   **Versión**: especifique el número de versión del medio.  
-
-    -   **Comentario**: escriba una descripción única del uso del medio.  
-
-    -   **Archivo multimedia**: especifique el nombre y la ruta de acceso de los archivos de salida. El asistente escribe los archivos de salida en esta ubicación. Por ejemplo: **\\\nombre de servidor\carpeta\archivo de salida.iso**  
-
-7.  En la página **Seguridad** , especifique la información siguiente y, a continuación, haga clic en **Siguiente**.  
-
-    -   Active la casilla **Habilitar compatibilidad de equipos desconocida** para permitir que el medio implemente un sistema operativo en un equipo que no esté administrado por Configuration Manager. No hay ningún registro de estos equipos en la base de datos de Configuration Manager.  Para obtener más información, consulte [Prepare for unknown computer deployments](../get-started/prepare-for-unknown-computer-deployments.md) (Preparación para implementaciones en equipos desconocidos).  
-
-    -   Active la casilla **Proteger medio con contraseña** y escriba una contraseña segura para ayudar a proteger el medio frente a un acceso no autorizado. Cuando se especifica una contraseña, el usuario debe proporcionar esa contraseña para utilizar el medio preconfigurado.  
+    - Opcionalmente, si quiere permitir solo que el sistema operativo se implemente sin requerir intervención del usuario, seleccione **Permitir la implementación desatendida de sistema operativo**.  
 
         > [!IMPORTANT]  
-        >  Por motivos de seguridad, asigne siempre una contraseña para ayudar a proteger el medio preconfigurado.  
+        > Cuando se selecciona esta opción, no se solicita al usuario que proporcione información de configuración de red ni que realice secuencias de tareas opcionales. Si se configura el medio para la protección con contraseña, se seguirá solicitando una contraseña al usuario.  
 
-    -   Para comunicaciones HTTP, seleccione **Crear certificado autofirmado de medio**y, a continuación, especifique las fechas de inicio y de expiración del certificado.  
+4. En la página **Administración de medio**, especifique una de las siguientes opciones:  
 
-    -   Para comunicaciones HTTPS, seleccione **Importar certificado PKI**y, a continuación, especifique el certificado que desea importar y su contraseña.  
+    - **Medio dinámico**: permite que un punto de administración redirija el medio a otro punto de administración, según la ubicación del cliente en los límites del sitio.  
 
-         Para obtener más información sobre este certificado de cliente que se usa para imágenes de arranque, consulte [PKI certificate requirements](../../core/plan-design/network/pki-certificate-requirements.md) (Requisitos de certificado PKI).  
+    - **Medio basado en sitio**: el medio solo se pone en contacto con el punto de administración especificado.  
 
-    -   **Afinidad entre usuario y dispositivo**: para admitir la administración centrada en el usuario en Configuration Manager, especifique cómo quiere que el medio asocie los usuarios con el equipo de destino. Para obtener más información sobre cómo es compatible la implementación de sistema operativo con la afinidad entre usuario y dispositivo, consulte [Associate users with a destination computer](../get-started/associate-users-with-a-destination-computer.md) (Asociar usuarios con un equipo de destino).  
+5. En la página **Propiedades de medio**, especifique la siguiente información:  
 
-        -   Especifique **Permitir afinidad de dispositivo de usuario con autoaprobación** si desea que el medio asocie automáticamente los usuarios al equipo de destino. Esta funcionalidad se basa en las acciones de la secuencia de tareas que implementa el sistema operativo. En este escenario, la secuencia de tareas crea una relación entre los usuarios especificados y el equipo de destino cuando se implementa el sistema operativo en el equipo de destino.  
+    - **Creado por**: especifique el autor de lo medio.  
 
-        -   Especifique **Permitir afinidad de dispositivo de usuario pendiente de la aprobación del administrador** si desea que el medio asocie los usuarios al equipo de destino después de conceder la aprobación. Esta funcionalidad se basa en el ámbito de la secuencia de tareas que implementa el sistema operativo. En este escenario, la secuencia de tareas crea una relación entre los usuarios especificados y el equipo de destino, pero espera la aprobación del usuario administrativo antes de implementar el sistema operativo.  
+    - **Versión**: especifique el número de versión del medio.  
 
-        -   Especifique **No permitir afinidad de dispositivo de usuario** si no desea que el medio asocie usuarios al equipo de destino. En este escenario, la secuencia de tareas no asocia usuarios al equipo de destino cuando se implementa el sistema operativo.  
+    - **Comentario**: escriba una descripción única del uso del medio.  
 
-8.  En la página **Secuencia de tareas** , especifique la secuencia de tareas que se ejecutará en el equipo de destino. El contenido al que hace referencia la secuencia de tareas se muestra en **Esta secuencia de tareas hace referencia al siguiente contenido**. Compruebe el contenido y, después, haga clic en **Siguiente**.  
+    - **Archivo multimedia**: especifique el nombre y la ruta de acceso de los archivos de salida. El asistente escribe los archivos de salida en esta ubicación. Por ejemplo: `\\servername\folder\outputfile.wim`  
 
-9. En la página **Imagen de arranque** , especifique la información siguiente y, a continuación, haga clic en **Siguiente**.  
+    - **Carpeta de almacenamiento provisional**:<!--1359388-->el proceso de creación de medios puede requerir una gran cantidad de espacio en disco temporal. De forma predeterminada, esta ubicación es similar a la siguiente ruta de acceso: `%UserProfile%\AppData\Local\Temp`. A partir de la versión 1902, para ofrecer mayor flexibilidad con respecto al almacenamiento de estos archivos temporales, cambie este valor a otra unidad y ruta de acceso.  
 
-    > [!IMPORTANT]  
-    >  La arquitectura de la imagen de arranque que se distribuye debe ser adecuada para la arquitectura del equipo de destino. Por ejemplo, un equipo de destino x64 puede arrancar y ejecutar una imagen de arranque x86 o x64. Sin embargo, un equipo de destino x86 solo puede arrancar y ejecutar una imagen de arranque x86.  
+6. En la página **Seguridad**, especifique las siguientes opciones:  
 
-    -   En el cuadro **Imagen de arranque** , especifique la imagen de arranque para iniciar el equipo de destino. Para más información, vea [Manage boot images (Administrar imágenes de arranque)](../get-started/manage-boot-images.md).  
+    - **Habilitar compatibilidad de equipos desconocida**: permite que el medio implemente un sistema operativo en un equipo que no esté administrado por Configuration Manager. No hay ningún registro de estos equipos en la base de datos de Configuration Manager. Para obtener más información, consulte [Prepare for unknown computer deployments](/sccm/osd/get-started/prepare-for-unknown-computer-deployments) (Preparación para implementaciones en equipos desconocidos).  
 
-    -   En el cuadro **Punto de distribución** , especifique el punto de distribución donde reside la imagen de arranque. El asistente recupera la imagen de arranque desde el punto de distribución y la escribe en el medio.  
+    - **Proteger medio con contraseña**: escriba una contraseña segura para ayudar a proteger el medio frente al acceso no autorizado. Cuando se especifica una contraseña, el usuario debe proporcionar esa contraseña para utilizar el medio preconfigurado.  
 
-        > [!NOTE]  
-        >  Debe tener derechos de acceso de **lectura** para la biblioteca de contenido en el punto de distribución. Para obtener más información, consulte [About the content library](../../core/plan-design/hierarchy/the-content-library.md) (Acerca de la biblioteca de contenido).  
+        > [!IMPORTANT]  
+        > Por motivos de seguridad, asigne siempre una contraseña para ayudar a proteger el medio preconfigurado.  
 
-    -   Si seleccionó **Medio basado en sitio** en la página **Administración de medio** de este asistente, en el cuadro **Punto de administración** , especifique un punto de administración de un sitio primario.  
+    - Para las comunicaciones HTTP, seleccione **Crear certificado autofirmado de medio**. A continuación, especifique la fecha de inicio y expiración del certificado.  
 
-    -   Si seleccionó **Medio dinámico** en la página **Administración de medio** de este asistente, en el cuadro **Puntos de administración asociados** , especifique los puntos de administración del sitio primario que se usarán y un orden de prioridad para las comunicaciones iniciales.  
+    - Para comunicaciones HTTPS, seleccione **Importar certificado PKI**. A continuación, especifique el certificado que desea importar y su contraseña.  
 
-10. En la página **Imágenes** , especifique la información siguiente y, a continuación, haga clic en **Siguiente**.  
+        Para más información sobre este certificado de cliente que se usa para imágenes de arranque, consulte [Requisitos de certificados PKI](/sccm/core/plan-design/network/pki-certificate-requirements).  
 
-    -   En el cuadro **Paquete de imágenes** , especifique la imagen de sistema operativo. Para obtener más información, consulte [Manage operating system images](../get-started/manage-operating-system-images.md) (Administrar imágenes de sistema operativo).  
+    - **Afinidad entre usuario y dispositivo**: para admitir la administración centrada en el usuario en Configuration Manager, especifique cómo quiere que el medio asocie los usuarios con el equipo de destino. Para más información sobre cómo la implementación del sistema operativo admite la afinidad entre usuario y dispositivo, consulte [Asociación de usuario a un equipo de destino](/sccm/osd/get-started/associate-users-with-a-destination-computer).  
 
-    -   Si el paquete contiene varias imágenes de sistema operativo, en el cuadro **Índice de imágenes** , especifique la imagen que desee implementar.  
+        - **Permitir afinidad de dispositivo de usuario con autoaprobación**: el medio asocia automáticamente los usuarios al equipo de destino. Esta funcionalidad se basa en las acciones de la secuencia de tareas que implementa el sistema operativo. En este escenario, la secuencia de tareas crea una relación entre los usuarios especificados y el equipo de destino cuando implementa el sistema operativo en el equipo de destino.  
 
-    -   En el cuadro **Punto de distribución** , especifique el punto de distribución donde reside el paquete de imágenes de sistema operativo. El asistente recupera la imagen de sistema operativo desde el punto de distribución y la escribe en el medio.  
+        - **Permitir afinidad de dispositivo de usuario pendiente de la aprobación del administrador**: el medio asocia los usuarios al equipo de destino después de conceder la aprobación. Esta funcionalidad se basa en el ámbito de la secuencia de tareas que implementa el sistema operativo. En este escenario, la secuencia de tareas crea una relación entre los usuarios especificados y el equipo de destino, pero espera la aprobación del usuario administrativo antes de implementar el sistema operativo.  
 
-11. En la página **Personalización** , especifique la siguiente información y, a continuación, haga clic en **Siguiente**.  
+        - **No permitir afinidad de dispositivo de usuario**: el medio no asocia los usuarios con el equipo de destino. En este escenario, la secuencia de tareas no asocia los usuarios con el equipo de destino cuando se implementa el sistema operativo.  
 
-    -   Especifique las variables que la secuencia de tareas utiliza para implementar el sistema operativo.  
+7. En la página **Secuencia de tareas**, seleccione la secuencia de tareas que se ejecuta en el equipo de destino. Compruebe la lista de contenido al que hace referencia la secuencia de tareas.  
 
-    -   Especifique los comandos de preinicio que desee ejecutar antes de que se ejecute la secuencia de tareas. Los comandos de preinicio son un script o un ejecutable que puede interactuar con el usuario en Windows PE antes de que se ejecute la secuencia de tareas para instalar el sistema operativo. Para obtener más información sobre los comandos de preinicio para los medios, consulte [Prestart commands for task sequence media](../understand/prestart-commands-for-task-sequence-media.md) (Comandos de preinicio para medios de secuencia de tareas).  
+    - **Detectar dependencias de aplicación asociadas y agregarlas a este medio**: también agrega contenido a los medios para las dependencias de la aplicación.  
 
         > [!TIP]  
-        >  Durante la creación de medios de secuencia de tareas, la secuencia de tareas escribe el identificador de paquete y el comando de preinicio, incluidos los valores de las variables de secuencia de tareas, en el archivo de registro CreateTSMedia.log en el equipo que ejecuta la consola de Configuration Manager. Puede revisar este archivo de registro para comprobar el valor de las variables de secuencia de tareas.  
+        > Si no ve las dependencias de aplicación esperadas, anule la selección y, a continuación, vuelva a seleccionar esta opción para actualizar la lista.  
 
-12. Complete el asistente.  
+8. En la página **Imagen de arranque**, especifique las opciones siguientes:  
+
+    > [!IMPORTANT]  
+    > La arquitectura de la imagen de arranque que se distribuye debe ser adecuada para la arquitectura del equipo de destino. Por ejemplo, un equipo de destino x64 puede arrancar y ejecutar una imagen de arranque x86 o x64. Sin embargo, un equipo de destino x86 solo puede arrancar y ejecutar una imagen de arranque x86.  
+
+    - **Imagen de arranque**: seleccione la imagen de arranque para iniciar el equipo de destino.  
+
+    - **Punto de distribución**: seleccione el punto de distribución que tiene la imagen de arranque. El asistente recupera la imagen de arranque desde el punto de distribución y la escribe en el medio.  
+
+        > [!NOTE]  
+        > Su cuenta de usuario necesita al menos permisos de **Lectura** para la biblioteca de contenido en el punto de distribución.  
+
+    - **Punto de administración**: solo para *medios basados en sitio*, seleccione un punto de administración desde un sitio primario.  
+
+    - **Puntos de administración asociados**: solo para *medios dinámicos*, seleccione los puntos de administración de sitio primario para usar y un orden de prioridad para la comunicación inicial.  
+
+9. En la página **Imágenes**, especifique las siguientes opciones:  
+
+    - **Paquete de imágenes**: especifique la imagen del sistema operativo que se usará. Para más información, vea [Administrar imágenes de SO](/sccm/osd/get-started/manage-operating-system-images).  
+
+    - **Índice de imagen**: si el paquete contiene varias imágenes del sistema operativo, especifique el índice de la imagen que se implementará.  
+
+    - **Punto de distribución**: especifique el punto de distribución que tiene el paquete de la imagen del sistema operativo. El asistente obtiene la imagen del sistema operativo del punto de distribución y la escribe en el medio.  
+
+10. En la página **Seleccionar aplicación**, seleccione aplicaciones adicionales para agregar al archivo de medios preconfigurados.  
+
+11. En la página **Seleccionar paquete**, seleccione paquetes adicionales para agregar al archivo de medios preconfigurados.  
+
+12. En **Seleccionar el paquete de controladores**, seleccione los paquetes de controladores adicionales para agregar al archivo de medios preconfigurados.  
+
+13. En la página **Puntos de distribución**, seleccione uno o varios puntos de distribución de los que obtener el contenido.  
+
+    Configuration Manager solo muestra los puntos de distribución que incluyen el contenido. Antes de continuar, distribuya todo el contenido asociado a la secuencia de tareas en al menos un punto de distribución. Después de distribuir el contenido, actualice la lista de puntos de distribución. Quite los puntos de distribución ya haya seleccionado en esta página, vaya a la página anterior y después regrese a la página **Puntos de distribución**. O bien, reinicie al asistente. Para obtener más información, consulte [Distribuir contenido al que hace referencia una secuencia de tareas](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DistributeTS) y [Administración del contenido y de la infraestructura de contenido](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure).  
+
+14. En la página **Personalización**, especifique las siguientes opciones:  
+
+    - Agregue las variables que usa la secuencia de tareas.  
+
+    - **Habilitar comando de preinicio**: especifique los comandos de preinicio que quiere ejecutar antes de la ejecución de la secuencia de tareas. Los comandos de preinicio son un script o un ejecutable que puede interactuar con el usuario en Windows PE antes de que se ejecute la secuencia de tareas. Para obtener más información, consulte [Prestart commands for task sequence media](/sccm/osd/understand/prestart-commands-for-task-sequence-media) (Comandos de preinicio para medios de secuencia de tareas).  
+
+        > [!TIP]  
+        > Durante la creación de medios, la secuencia de tareas escribe el identificador de paquete y el comando de preinicio, incluidos los valores de las variables de secuencia de tareas, en el archivo de registro **CreateTSMedia.log** en el equipo que ejecuta la consola de Configuration Manager. Puede revisar este archivo de registro para comprobar el valor de las variables de secuencia de tareas.  
+
+        Si el comando de preinicio necesita contenido, seleccione la opción **Incluir archivos para el comando de preinicio**.  
+
+15. Complete el asistente.  
+
 
 ## <a name="next-steps"></a>Pasos siguientes
-[Escenarios para implementar sistemas operativos de empresa](scenarios-to-deploy-enterprise-operating-systems.md)
+
+[Crear una imagen para un OEM en fábrica o en un almacén local](/sccm/osd/deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot)

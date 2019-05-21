@@ -2,7 +2,7 @@
 title: Crear medios independientes
 titleSuffix: Configuration Manager
 description: Use un medio independiente para implementar el sistema operativo en un equipo sin conexión de red.
-ms.date: 02/09/2018
+ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,166 +11,182 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cdf2c0e1501707e836c914265e0edf2d9c88521f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: a00da1511c6410088f318fc619bbddc537e20708
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56138076"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083230"
 ---
-# <a name="create-stand-alone-media-with-system-center-configuration-manager"></a>Crear medios independientes con System Center Configuration Manager
+# <a name="create-stand-alone-media"></a>Crear medios independientes
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Los medios independientes de Configuration Manager contienen todo lo necesario para implementar el sistema operativo (SO) en un equipo que no esté conectado a la red. Use medios independientes en los siguientes escenarios de implementación de sistema operativo:  
+Los medios independientes de Configuration Manager contienen todo lo necesario para implementar el sistema operativo en un equipo sin una conexión de red.
 
--   [Actualizar un equipo existente con una nueva versión de Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
+Use medios independientes en los siguientes escenarios de implementación de sistema operativo:  
 
--   [Instalar una nueva versión de Windows en un equipo nuevo (sin sistema operativo)](install-new-windows-version-new-computer-bare-metal.md)  
+- [Actualizar un equipo existente con una nueva versión de Windows](/sccm/osd/deploy-use/refresh-an-existing-computer-with-a-new-version-of-windows)  
 
--   [Actualizar Windows a la versión más reciente](upgrade-windows-to-the-latest-version.md)  
+- [Instalar una nueva versión de Windows en un equipo nuevo (sin sistema operativo)](/sccm/osd/deploy-use/install-new-windows-version-new-computer-bare-metal)  
 
-Los medios independientes incluyen la secuencia de tareas que automatiza los pasos para instalar el sistema operativo, además de otros contenidos necesarios como la imagen de arranque, la imagen del sistema operativo y los controladores de dispositivos. Dado que los medios independientes contienen todo lo necesario para implementar el sistema operativo, requieren más espacio en disco que otros tipos de medios. Al crear un medio independiente en un sitio de administración central, el cliente recupera su código de sitio asignado de Active Directory. Los medios independientes que se crean en los sitios secundarios asignan automáticamente al cliente el código de sitio para dicho sitio.  
-
-##  <a name="BKMK_CreateStandAloneMedia"></a> Crear medios independientes  
-Antes de crear medios independientes con el Asistente para crear medio de secuencia de tareas, asegúrese de que se cumplen las condiciones siguientes:  
-
-### <a name="create-a-task-sequence-to-deploy-an-operating-system"></a>Crear una secuencia de tareas para implementar un sistema operativo
-Como parte de los medios independientes, debe especificar la secuencia de tareas para implementar un sistema operativo. Para obtener los pasos para crear una nueva secuencia de tareas, consulte [Create a task sequence to install an operating system in System Center Configuration Manager](create-a-task-sequence-to-install-an-operating-system.md) (Crear una secuencia de tareas para instalar un sistema operativo en System Center Configuration Manager).
-
-No se admiten las siguientes acciones para medios independientes:
-- El paso **Aplicar controladores automáticamente** en la secuencia de tareas. Los medios independientes no admiten la aplicación automática de controladores de dispositivos desde el catálogo de controladores. Use el paso **Aplicar paquete de controladores** para que un conjunto especificado de controladores esté disponible en el programa de instalación de Windows.
-- El paso **Descargar contenido de paquete** de la secuencia de tareas. La información del punto de administración no está disponible en los medios independientes, por lo que se producirá un error en el paso al intentar enumerar las ubicaciones de contenido.
-- Instalación de actualizaciones de software.
-- Instalación de software antes de implementar un sistema operativo.
-- Secuencias de tareas para implementaciones que no son de sistema operativo.
-- Asociación de usuarios con el equipo de destino para admitir la afinidad de dispositivo de usuario.
-- El paquete dinámico se instala a través de la tarea **Instalar paquetes**.
-- La aplicación dinámica se instala a través de la tarea **Instalar aplicación**.
-
-> [!NOTE]    
-> Podría producirse un error si la secuencia de tareas incluye el paso [Instalar paquete](../../osd/understand/task-sequence-steps.md#BKMK_InstallPackage) y usted crea los medios independientes en un sitio de administración central. El sitio de administración central no tiene las directivas de configuración de cliente necesarias. Estas directivas sirven para habilitar al agente de distribución de software durante la ejecución de la secuencia de tareas. Es probable que aparezca el siguiente error en el archivo CreateTsMedia.log:    
->     
-> `WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)`    
-> 
-> Para los medios independientes que incluyan un paso **Instalar paquete**, cree los medios independientes en un sitio primario que tenga habilitado el agente de distribución de software. 
->
-> O bien, agregue un paso [Ejecutar línea de comandos](../understand/task-sequence-steps.md#BKMK_RunCommandLine) después del paso [Instalar Windows y Configuration Manager](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) y antes del primer paso **Instalar paquete** de la secuencia de tareas. El paso **Ejecutar línea de comandos** ejecuta el siguiente comando de WMIC para habilitar el agente de distribución de software antes del primer paso Instalar paquete:    
->    
-> `WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE`
+- [Actualizar Windows a la versión más reciente](/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version)  
 
 
-> [!IMPORTANT]    
-> Con medios independientes, no seleccione la opción **Usar paquete de cliente de preproducción cuando esté disponible** en la secuencia de tareas **Instalar Windows y Configuration Manager**. Un medio independiente no admite el uso de esta opción. Para obtener más información sobre esta configuración, consulte [Instalar Windows y Configuration Manager](/sccm/osd/understand/task-sequence-steps#BKMK_SetupWindowsandConfigMgr).
+## <a name="usage"></a>Uso
+
+Los medios independientes incluyen la secuencia de tareas que automatiza los pasos para instalar el sistema operativo, además de otros contenidos necesarios Este contenido incluye la imagen de arranque, la imagen del sistema operativo y los controladores de dispositivos. Dado que los medios independientes contienen todo lo necesario para implementar el sistema operativo, requieren más espacio en disco que otros tipos de medios.
+
+Al crear un medio independiente en un sitio de administración central, el cliente recupera su código de sitio asignado de Active Directory. Los medios independientes que se crean en los sitios secundarios asignan automáticamente al cliente el código de sitio para dicho sitio.  
 
 
-### <a name="distribute-all-content-associated-with-the-task-sequence"></a>Distribuir todo el contenido asociado con la secuencia de tareas
-Distribuya todo el contenido requerido por la secuencia de tareas a un punto de distribución como mínimo. Este contenido incluye la imagen de arranque, la imagen de sistema operativo y otros archivos asociados. El asistente recopila la información desde el punto de distribución al crear los medios independientes. Debe tener derechos de acceso de **lectura** para la biblioteca de contenido de dicho punto de distribución. Para obtener más información, consulte [Distribuir contenido al que hace referencia una secuencia de tareas](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS).
+## <a name="prerequisites"></a>Requisitos previos
 
-### <a name="prepare-the-removable-usb-drive"></a>Preparar la unidad USB extraíble
-*Para una unidad USB extraíble:*
+Antes de crear medios independientes con el Asistente para crear medio de secuencia de tareas, asegúrese de que se cumplen las condiciones siguientes:
 
-Si utiliza una unidad USB extraíble, conecte la unidad USB al equipo donde se ejecuta el asistente. Windows debe identificar la unidad USB como un dispositivo extraíble. El asistente escribe directamente en la unidad extraíble cuando crea los medios. Los medios independientes utilizan un sistema de archivos FAT32. No se pueden crear medios independientes en una unidad flash USB cuyo contenido incluye un archivo de más de 4 GB de tamaño.
+### <a name="create-a-task-sequence-to-deploy-an-os"></a>Creación de una secuencia de tareas para implementar un sistema operativo
 
-### <a name="create-an-output-folder"></a>Crear una carpeta de salida
-*Para un conjunto de CD o DVD:*
+Como parte de los medios independientes, debe especificar la secuencia de tareas para implementar un sistema operativo. Para más información, consulte [Crear una secuencia de tareas para instalar un sistema operativo](/sccm/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system).
 
-Antes de ejecutar el Asistente para crear medio de secuencia de tareas para crear medios para un conjunto de CD o DVD, debe crear una carpeta para los archivos de salida creados por el asistente. El medio creado para un conjunto de CD o DVD se escribe como archivo .iso directamente en esa carpeta.
+#### <a name="unsupported-actions-for-stand-alone-media"></a>Acciones no compatibles con medios independientes
 
+No se admiten las siguientes acciones en medios independientes:
 
- Use el procedimiento siguiente para crear medios independientes para una unidad USB extraíble o un conjunto de CD o DVD.  
+- El paso [Aplicar controladores automáticamente](/sccm/osd/understand/task-sequence-steps#BKMK_AutoApplyDrivers) en la secuencia de tareas. Los medios independientes no admiten la aplicación automática de controladores de dispositivos desde el catálogo de controladores. Use el paso [Aplicar paquete de controladores](/sccm/osd/understand/task-sequence-steps#BKMK_ApplyDriverPackage) para que un conjunto especificado de controladores esté disponible en el programa de instalación de Windows.  
 
-## <a name="to-create-stand-alone-media"></a>Para crear medios independientes  
+- El paso [Descargar contenido de paquete](/sccm/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent) de la secuencia de tareas. La información del punto de administración no está disponible en medios independientes, por lo que se producirá un error en el paso al intentar enumerar las ubicaciones de contenido.  
 
-1. En la consola de Configuration Manager, haga clic en **Biblioteca de software**.  
+- Instalación de actualizaciones de software.  
 
-2. En el área de trabajo **Biblioteca de software** , expanda **Sistemas operativos**y, a continuación, haga clic en **Secuencias de tareas**.  
+- Instalación de software antes de implementar el sistema operativo.  
 
-3. En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear medio de secuencia de tareas** para iniciar el Asistente para crear medio de secuencia de tareas.  
+- Secuencias de tareas personalizadas para implementaciones sin sistema operativo.  
 
-4. En la página **Seleccionar tipo de medio** , especifique las opciones siguientes y, a continuación, haga clic en **Siguiente**.  
+- Asociación de usuarios con el equipo de destino para admitir la afinidad de dispositivo de usuario.  
 
-   -   Seleccione **Medio independiente**.  
+- El paquete dinámico se instala a través del paso [Instalar paquetes](/sccm/osd/understand/task-sequence-steps#BKMK_InstallPackage).  
 
-   -   Opcionalmente, si desea permitir que el sistema operativo se implemente sin intervención del usuario, seleccione **Permitir la implementación desatendida de sistema operativo**. Cuando se selecciona esta opción, no se solicita al usuario que brinde información de configuración de red ni que realice secuencias de tareas opcionales. Se seguirá solicitando una contraseña al usuario si el medio está configurado para la protección con contraseña.  
+- La aplicación dinámica se instala a través del paso [Instalar aplicación](/sccm/osd/understand/task-sequence-steps#BKMK_InstallApplication).
 
-5. En la página **Tipo de medios**, especifique si el medio es una unidad USB extraíble o un conjunto de CD/DVD:  
-
-   > [!IMPORTANT]  
-   >  De manera predeterminada, los medios independientes utilizan un sistema de archivos FAT32. No se pueden crear medios independientes en una unidad USB extraíble cuyo contenido incluya un archivo de más de 4 GB de tamaño.  
-
-   - Si selecciona **Unidad USB extraíble**, especifique la unidad en la que quiere almacenar el contenido.  
-
-     - **Formatear la unidad USB extraíble (FAT32) y hacerla de arranque** : de forma predeterminada, permita que Configuration Manager prepare la unidad USB. Muchos de los nuevos dispositivos UEFI requieren una partición FAT32 de arranque. Sin embargo, este formato también limita el tamaño de los archivos y la capacidad total de la unidad. Si ya ha formateado y configurado la unidad extraíble, deshabilite esta opción. 
-
-   - Si selecciona **Conjunto de CD/DVD**, especifique la capacidad del medio y el nombre y la ruta de acceso de los archivos de salida. El asistente escribe los archivos de salida en esta ubicación. Por ejemplo: **\\\nombre de servidor\carpeta\archivo de salida.iso**  
-
-      Si la capacidad de los medios es demasiado pequeña para almacenar todo el contenido, se crean varios archivos y debe almacenar el contenido en varios CD o DVD. Si se requieren varios medios, Configuration Manager agrega un número de secuencia al nombre de cada archivo de salida que crea. Además, si implementa una aplicación junto con el sistema operativo y la aplicación no cabe en un solo medio, Configuration Manager almacena la aplicación en varios medios. Cuando se ejecuta el medio independiente, Configuration Manager pide al usuario el siguiente medio en el que se almacena la aplicación.   
-
-      > [!IMPORTANT]  
-      >  Si selecciona una imagen .iso existente, el Asistente para crear medio de secuencia de tareas elimina la imagen de la unidad o el recurso compartido cuando pasa a la siguiente página del asistente. Se elimina la imagen existente incluso si, a continuación, se cancela al asistente.  
-
-     Haga clic en **Siguiente**.  
-
-6. En la página **Seguridad**, elija una de las siguientes opciones de configuración y después haga clic en **Siguiente**:
-   - **Proteger medio con contraseña:**: escriba una contraseña segura para ayudar a proteger el medio. Si se especifica una contraseña, será necesaria para utilizar el medio.  
-
-       > [!IMPORTANT]  
-       >  En un medio independiente, se cifran únicamente los pasos de la secuencia de tareas y sus variables. El contenido restante del medio no se cifra: no incluya información confidencial en los scripts de secuencia de tareas. Almacene e implemente la información confidencial mediante el uso de variables de secuencia de tareas.  
-
-   - **Seleccionar el intervalo de fechas de validez de este medio independiente** (a partir de la versión 1702): establezca fechas de inicio y expiración opcionales en los medios. Estas opciones están deshabilitadas de forma predeterminada. Las fechas se comparan con la hora del sistema del equipo antes de que se ejecuten los medios independientes. Cuando la hora del sistema es anterior a la hora de inicio o posterior a la hora de expiración, los medios independientes no se inician. Estas opciones también están disponibles mediante el cmdlet de PowerShell New-CMStandaloneMedia.
-7. En la página **CD/DVD independiente** , especifique la secuencia de tareas que implementa el sistema operativo y, a continuación, haga clic en **Siguiente**. Para agregar contenido a los medios independientes para las dependencias de la aplicación, elija **Detectar dependencias de aplicación asociadas y agregarlas a este medio**.
-   > [!TIP]
-   > Si no ve las dependencias de aplicación esperadas, anule la selección y luego vuelva a seleccionar la configuración **Detectar dependencias de aplicación asociadas y agregarlas a este medio** para actualizar la lista.
-
-   El asistente le permite seleccionar las secuencias de tareas asociadas con una imagen de arranque.  
-
-8. En la página **Seleccionar aplicación** (disponible a partir de la versión 1702), especifique el contenido de la aplicación que desea incluir como parte del archivo multimedia y después haga clic en **Siguiente**.
-9. En la página **Seleccionar paquete** (disponible a partir de la versión 1702), especifique el contenido del paquete que desea incluir como parte del archivo multimedia y después haga clic en **Siguiente**.
-10. En la página **Seleccionar el paquete de controladores** (disponible a partir de la versión 1702), especifique el contenido del paquete de controladores que desea incluir como parte del archivo multimedia y después haga clic en **Siguiente**.
-11. En la página **Puntos de distribución**, especifique los puntos que tengan el contenido necesario y luego haga clic en **Siguiente**.  
-
-    Configuration Manager solo muestra los puntos de distribución que incluyen el contenido. Antes de continuar, distribuya todo el contenido asociado a la secuencia de tareas en al menos un punto de distribución. Después de distribuir el contenido, actualice la lista de puntos de distribución. Quite los puntos de distribución ya haya seleccionado en esta página, vaya a la página anterior y después regrese a la página **Puntos de distribución**. O bien, reinicie al asistente. Para obtener más información, consulte [Distribuir contenido al que hace referencia una secuencia de tareas](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS) y [Administración del contenido y de la infraestructura de contenido](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
-
-    > [!NOTE]  
-    >  Debe tener derechos de acceso de **lectura** para la biblioteca de contenido en los puntos de distribución.  
-
-12. En la página **Personalización** , especifique la siguiente información y, a continuación, haga clic en **Siguiente**.  
-
-    -   Especifique las variables que la secuencia de tareas utiliza para implementar el sistema operativo.  
-
-    -   Especifique los comandos de preinicio que desea ejecutar antes de la secuencia de tareas. Los comandos de preinicio son un script o un archivo ejecutable que se ejecuta en Windows PE antes de que se inicie la secuencia de tareas. Para obtener más información, consulte [Prestart commands for task sequence media](../understand/prestart-commands-for-task-sequence-media.md) (Comandos de preinicio para medios de secuencia de tareas).  
-
-         Si lo desea, active la casilla **Incluir archivos para el comando de preinicio** para incluir los archivos que el comando de preinicio necesita.  
-
-        > [!TIP]  
-        >  Durante la creación de medios de secuencia de tareas, Configuration Manager escribe el identificador de paquete y la línea de comandos de preinicio en el archivo **CreateTSMedia.log** en el equipo que ejecuta la consola de Configuration Manager. Esta salida incluye el valor de las variables de secuencia de tareas. Revise este archivo de registro para comprobar el valor de las variables de secuencia de tareas.  
-
-13. Complete el asistente.  
-
-    Los archivos de medios independientes (.iso) se crean en la carpeta de destino. Si seleccionó **CD/DVD independiente**, ahora puede copiar los archivos de salida a un conjunto de CD o DVD.  
-
-##  <a name="BKMK_StandAloneMediaTSExample"></a> Ejemplo de secuencia de tareas de medios independientes  
- Utilice la tabla siguiente como guía al crear una secuencia de tareas para implementar un sistema operativo mediante medios independientes. La tabla le ayuda a decidir la secuencia general de los pasos de secuencia de tareas. También ayuda a organizar y estructurar los pasos de secuencia de tareas en grupos lógicos. La secuencia de tareas que cree puede variar de este ejemplo y puede contener más o menos pasos de secuencia de tareas y grupos.  
+- La opción **Usar paquete de cliente de preproducción cuando esté disponible** del paso de secuencia de tareas **Instalar Windows y Configuration Manager**. Para obtener más información sobre esta configuración, consulte [Instalar Windows y Configuration Manager](/sccm/osd/understand/task-sequence-steps#BKMK_SetupWindowsandConfigMgr).  
 
 > [!NOTE]  
->  Siempre debe utilizar al Asistente para medios de secuencia de tareas para crear medios independientes.  
+> Podría producirse un error si la secuencia de tareas incluye el paso [Instalar paquete](/sccm/osd/understand/task-sequence-steps#BKMK_InstallPackage) y usted crea los medios independientes en un sitio de administración central. El sitio de administración central no tiene las directivas de configuración de cliente necesarias. Estas directivas son necesarias para habilitar al agente de distribución de software durante la ejecución de la secuencia de tareas. Es probable que aparezca el siguiente error en el archivo **CreateTsMedia.log**:  
+>
+> `WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)`
+>
+> Para los medios independientes que incluyan un paso **Instalar paquete**, cree los medios independientes en un sitio primario que tenga habilitado el agente de distribución de software.
+>
+> También puede usar un paso [Ejecutar línea de comandos](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) personalizado. Agréguelo después del paso [Instalar Windows y Configuration Manager](/sccm/osd/understand/task-sequence-steps#BKMK_SetupWindowsandConfigMgr) y antes del primer paso **Instalar paquete**. El paso **Ejecutar línea de comandos** ejecuta el siguiente comando de WMIC para habilitar el agente de distribución de software antes del primer paso Instalar paquete:  
+>
+> `WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE`
 
-|Grupo de secuencias de tareas o paso a paso|Descripción|  
-|---------------------------------|-----------------|  
-|Capturar archivos y configuraciones - **(nuevo grupo de secuencia de tareas)**|Crear un grupo de secuencia de tareas. Un grupo de secuencia de tareas mantiene los pasos de la secuencia de tareas similares para una mejor organización y control de errores.|  
-|Capturar configuración de Windows|Utilice este paso de secuencia de tareas para capturar la configuración de Windows en el equipo de destino antes de restablecer la imagen inicial. Capture el nombre de equipo, la información de los usuarios y la organización, y la configuración de zona horaria.|  
-|Capturar configuración de red|Utilice este paso de la secuencia de tareas para capturar a la configuración de red desde el equipo que recibe la secuencia de tareas. Puede capturar a la pertenencia de grupo de trabajo o dominio del equipo y el adaptador de red, información de configuración.|  
-|Capturar archivos de usuario y configuraciones: **(nuevo subgrupo de secuencia de tareas)**|Crear un grupo de secuencia de tareas dentro de un grupo de secuencia de tareas. Este subgrupo contiene los pasos para capturar los datos de estado de usuario desde el equipo de destino antes de restablecer la imagen inicial. De forma similar al grupo inicial que agregó, este subgrupo mantiene pasos de secuencia de tareas parecidos para una mejor organización y control de errores.|  
-|Ubicación de establecer el estado Local|Utilice este paso de la secuencia de tareas para especificar una ubicación local mediante la variable de secuencia de tareas de ruta protegida. El estado del usuario se almacena en un directorio protegido en el disco duro.|  
-|Capturar estado de usuario|Use este paso de la secuencia de tareas para capturar los archivos de usuario y la configuración que desee migrar al nuevo sistema operativo.|  
-|Instalar el sistema operativo: **(nuevo grupo de secuencia de tareas)**|Cree otro subgrupo de secuencia de tareas. Este subgrupo contiene los pasos necesarios para instalar el sistema operativo.|  
-|Reiniciar en Windows PE o disco duro|Utilice este paso de la secuencia de tareas para especificar las opciones de reinicio del equipo que recibe esta secuencia de tareas. Este paso muestra un mensaje al usuario indicándole que el equipo se está reiniciando para continuar con la instalación.<br /><br /> Este paso usa solo lectura **_SMSTSInWinPE** variable de secuencia de tareas. Si el valor asociado es igual a **false**, el paso de la secuencia de tareas continúa.|  
-|Aplicar sistema operativo|Utilice este paso de la secuencia de tareas para instalar la imagen de sistema operativo en el equipo de destino. Este paso elimina todos los archivos del volumen, salvo los archivos de control específicos de Configuration Manager. A continuación, aplica todas las imágenes de volumen incluidas en el archivo WIM al volumen de disco secuencial correspondiente. También puede especificar un **sysprep** archivo de respuesta para configurar qué partición de disco que se utilizará para la instalación.|  
-|Aplicar configuraciones de Windows|Utilice este paso de secuencia de tareas para definir la información de configuración de valores de Windows para el equipo de destino. Esta configuración incluye información de usuarios e información organizativa, información de clave de producto o licencia, zona horaria y la contraseña de administrador local.|  
-|Aplicar configuración de red|Utilice este paso de la secuencia de tareas para especificar la información de configuración de red o grupo de trabajo del equipo de destino. También puede especificar si el equipo utiliza un servidor DHCP o puede asignar estáticamente la información de dirección IP.|  
-|Aplicar paquete de controladores|Utilice este paso de la secuencia de tareas para hacer que todos los controladores de dispositivo en un paquete de controladores disponibles para su uso por el programa de instalación de Windows. Todos los controladores de dispositivo necesarios deben estar contenidos en el medio independiente.|  
-|La instalación de sistema operativo: **(nuevo grupo de secuencia de tareas)**|Cree otro subgrupo de secuencia de tareas. Este subgrupo contiene los pasos necesarios para instalar el cliente de Configuration Manager.|  
-|Instalar Windows y Configuration Manager|Use este paso de secuencia de tareas para instalar el software cliente de Configuration Manager. Configuration Manager instala y registra el GUID del cliente de Configuration Manager. Puede asignar los parámetros de instalación necesarios en la ventana **Propiedades de instalación** .|  
-|Restaurar archivos de usuario y la configuración - **(nuevo grupo de secuencia de tareas)**|Cree otro subgrupo de secuencia de tareas. Este subgrupo contiene los pasos necesarios para restaurar el estado del usuario.|  
-|Restaurar estado de usuario|Utilice este paso de secuencia de tareas para iniciar la herramienta de migración de estado de usuario (USMT). USMT restaura en el equipo de destino el estado de usuario y la configuración que se ha capturado previamente con el paso Capturar estado de usuario.|  
+### <a name="distribute-all-content-associated-with-the-task-sequence"></a>Distribuir todo el contenido asociado con la secuencia de tareas
+
+Distribuya todo el contenido requerido por la secuencia de tareas a un punto de distribución como mínimo. Este contenido incluye la imagen de arranque, la imagen de sistema operativo y otros archivos asociados. El asistente recopila la información del punto de distribución al crear los medios.
+
+Su cuenta de usuario necesita al menos acceso de **Lectura** a la biblioteca de contenido en ese punto de distribución. Para obtener más información, consulte [Distribute content (Distribución del contenido)](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute).
+
+### <a name="prepare-the-removable-usb-drive"></a>Preparar la unidad USB extraíble
+
+Si usa una unidad USB extraíble, conéctela al equipo donde se ejecuta el Asistente para crear medio de secuencia de tareas. Windows debe identificar la unidad USB como un dispositivo extraíble. El asistente escribe directamente en la unidad extraíble cuando crea los medios.
+
+Los medios independientes utilizan un sistema de archivos FAT32. No se pueden crear medios independientes en una unidad USB extraíble cuyo contenido incluya un archivo de más de 4 GB de tamaño.
+
+### <a name="create-an-output-folder"></a>Crear una carpeta de salida
+
+Antes de ejecutar el Asistente para crear medio de secuencia de tareas para crear medios para un conjunto de CD o DVD, cree una carpeta para los archivos de salida que se crean. Los medios que se crean para un conjunto de CD o DVD se escriben como un archivo .ISO directamente en la carpeta.
+
+
+## <a name="process"></a>Proceso
+
+1. En la consola de Configuration Manager, vaya al área de trabajo **Biblioteca de software**, expanda **Sistemas operativos** y seleccione el nodo **Secuencias de tareas**.  
+
+2. En la pestaña **Inicio** de la cinta de opciones, en el grupo **Crear**, haga clic en **Crear medio de secuencia de tareas**. Esta acción inicia el Asistente para crear medio de secuencia de tareas.  
+
+3. En la página **Seleccionar tipo de medio**, especifique las siguientes opciones:  
+
+    - Seleccione **Medio independiente**.  
+
+    - Opcionalmente, si quiere permitir solo que el sistema operativo se implemente sin requerir intervención del usuario, seleccione **Permitir la implementación desatendida de sistema operativo**.  
+
+        > [!IMPORTANT]  
+        > Cuando se selecciona esta opción, no se solicita al usuario que proporcione información de configuración de red ni que realice secuencias de tareas opcionales. Si se configura el medio para la protección con contraseña, se seguirá solicitando una contraseña al usuario.  
+
+4. En la página **Tipo de medios**, especifique si el medio es una **unidad USB extraíble** o un **conjunto de CD/DVD**. Luego, configure las siguientes opciones:  
+
+    > [!IMPORTANT]  
+    > Los medios usan un sistema de archivos FAT32. No puede crear medios en una unidad USB cuyo contenido incluya un archivo de más de 4 GB de tamaño.  
+
+    - Si selecciona **Unidad USB extraíble**, especifique dónde quiere almacenar el contenido.  
+
+        - **Formatear la unidad USB extraíble (FAT32) y hacerla de arranque**: de forma predeterminada, deje que Configuration Manager prepare la unidad USB. Muchos de los nuevos dispositivos UEFI requieren una partición FAT32 de arranque. Sin embargo, este formato también limita el tamaño de los archivos y la capacidad total de la unidad. Si ya ha formateado y configurado la unidad extraíble, deshabilite esta opción.
+
+    - Si selecciona **Conjunto de CD/DVD**, especifique la capacidad del medio (**Tamaño de medio**) y el nombre y la ruta de acceso del archivo de salida (**Archivo multimedia**). El asistente escribe los archivos de salida en esta ubicación. Por ejemplo: `\\servername\folder\outputfile.iso`  
+
+        Si la capacidad del medio es demasiado pequeña para almacenar todo el contenido, crea varios archivos. A continuación, deberá almacenar el contenido en varios CD o DVD. Si se requieren varios archivos multimedia, Configuration Manager agrega un número de secuencia al nombre de cada archivo de salida que crea.  
+
+        Si implementa una aplicación junto con el sistema operativo y la aplicación no cabe en un solo medio, Configuration Manager almacena la aplicación en varios medios. Cuando se ejecuta el medio independiente, Configuration Manager pide al usuario el siguiente medio en el que se almacena la aplicación.  
+
+        > [!IMPORTANT]  
+        > Si selecciona una imagen .iso existente, el Asistente para crear medio de secuencia de tareas elimina la imagen de la unidad o el recurso compartido cuando pasa a la siguiente página del asistente. Se elimina la imagen existente incluso si, a continuación, se cancela al asistente.  
+
+    - **Carpeta de almacenamiento provisional**:<!--1359388-->el proceso de creación de medios puede requerir una gran cantidad de espacio en disco temporal. De forma predeterminada, esta ubicación es similar a la siguiente ruta de acceso: `%UserProfile%\AppData\Local\Temp`. A partir de la versión 1902, para ofrecer mayor flexibilidad con respecto al almacenamiento de estos archivos temporales, cambie este valor a otra unidad y ruta de acceso.  
+
+    - **Etiqueta de medio**:<!--1359388-->a partir de la versión 1902, agregue una etiqueta al medio de secuencia de tareas. Esta etiqueta ayuda a identificar mejor el medio después de crearlo. El valor predeterminado es `Configuration Manager`. Este campo de texto aparece en las siguientes ubicaciones:  
+
+        - Si monta un archivo ISO, Windows muestra esta etiqueta como el nombre de la unidad montada  
+
+        - Si aplica formato a una unidad USB, usa los primeros 11 caracteres de la etiqueta como nombre  
+
+        - Configuration Manager escribe un archivo de texto denominado `MediaLabel.txt` en la raíz del medio. De forma predeterminada, el archivo incluye una sola línea de texto: `label=Configuration Manager`. Si personaliza la etiqueta del medio, esta línea usa la etiqueta personalizada en lugar del valor predeterminado.  
+
+    - **Incluir archivo autorun.inf en el medio**:<!-- 4090666 -->a partir de la versión 1902, Configuration Manager no agrega un archivo autorun.inf de forma predeterminada. Normalmente, los productos antimalware bloquean este archivo. Para obtener más información sobre la característica de ejecución automática de Windows, vea [Creating an AutoRun-enabled CD-ROM Application](https://docs.microsoft.com/windows/desktop/shell/autoplay) (Creación de una aplicación de CD-ROM con ejecución automática habilitada). Si todavía lo necesita en su escenario, seleccione esta opción para incluir el archivo.  
+
+5. En la página **Seguridad**, especifique las siguientes opciones:
+
+    - **Proteger medio con contraseña**: escriba una contraseña segura para ayudar a proteger el medio frente al acceso no autorizado. Al especificar una contraseña, el usuario debe proporcionar dicha contraseña para poder usar el medio.  
+
+        > [!IMPORTANT]  
+        > Por seguridad, asigne siempre una contraseña para ayudar a proteger el medio.  
+        >
+        > En un medio independiente, solo se cifran los pasos de la secuencia de tareas y sus variables. No se cifra el contenido restante del medio. No incluya información confidencial en los scripts de la secuencia de tareas. Almacene e implemente la información confidencial mediante el uso de variables de secuencia de tareas.  
+
+    - **Seleccionar el intervalo de fechas de validez de este medio independiente**: establezca las fechas de inicio y expiración opcionales en el medio. Esta configuración está deshabilitada de manera predeterminada. Las fechas se comparan con la hora del sistema del equipo antes de que se ejecuten los medios independientes. Cuando la hora del sistema es anterior a la hora de inicio o posterior a la hora de expiración, los medios independientes no se inician. Estas opciones también están disponibles mediante el cmdlet de PowerShell [New-CMStandaloneMedia](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmstandalonemedia?view=sccm-ps).  
+
+6. En la página **CD/DVD independiente**, seleccione la secuencia de tareas que implementa el sistema operativo. Solo se pueden seleccionar esas secuencias de tareas que están asociadas con una imagen de arranque. Compruebe la lista de contenido al que hace referencia la secuencia de tareas.  
+
+    - **Detectar dependencias de aplicación asociadas y agregarlas a este medio**: también agrega contenido a los medios para las dependencias de la aplicación.  
+
+        > [!TIP]  
+        > Si no ve las dependencias de aplicación esperadas, anule la selección y, a continuación, vuelva a seleccionar esta opción para actualizar la lista.  
+
+7. En la página **Seleccionar aplicación**, especifique contenido adicional de la aplicación que se incluirá como parte del archivo multimedia.  
+
+8. En la página **Seleccionar paquete**, especifique contenido adicional del paquete que se incluirá como parte del archivo multimedia.  
+
+9. En la página **Seleccionar paquete de controladores**, especifique contenido adicional del paquete de controladores que se incluirá como parte del archivo multimedia.  
+
+10. En la página **Puntos de distribución**, especifique los puntos que contienen el contenido necesario.  
+
+    Configuration Manager solo muestra los puntos de distribución que incluyen el contenido. Antes de continuar, distribuya todo el contenido asociado a la secuencia de tareas en al menos un punto de distribución. Después de distribuir el contenido, actualice la lista de puntos de distribución. Quite los puntos de distribución ya haya seleccionado en esta página, vaya a la página anterior y después regrese a la página **Puntos de distribución**. O bien, reinicie al asistente. Para obtener más información, consulte [Distribuir contenido al que hace referencia una secuencia de tareas](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DistributeTS) y [Administración del contenido y de la infraestructura de contenido](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure).  
+
+11. En la página **Personalización**, especifique las siguientes opciones:  
+
+    - Agregue las variables que usa la secuencia de tareas.  
+
+    - **Habilitar comando de preinicio**: especifique los comandos de preinicio que quiere ejecutar antes de la ejecución de la secuencia de tareas. Los comandos de preinicio son un script o un ejecutable que puede interactuar con el usuario en Windows PE antes de que se ejecute la secuencia de tareas. Para obtener más información, consulte [Prestart commands for task sequence media](/sccm/osd/understand/prestart-commands-for-task-sequence-media) (Comandos de preinicio para medios de secuencia de tareas).  
+
+        > [!TIP]  
+        > Durante la creación de medios, la secuencia de tareas escribe el identificador de paquete y el comando de preinicio, incluidos los valores de las variables de secuencia de tareas, en el archivo de registro **CreateTSMedia.log** en el equipo que ejecuta la consola de Configuration Manager. Puede revisar este archivo de registro para comprobar el valor de las variables de secuencia de tareas.  
+
+        Si el comando de preinicio necesita contenido, seleccione la opción **Incluir archivos para el comando de preinicio**.  
+
+12. Complete el asistente.  
+
+Los archivos de medios independientes (.iso) se crean en la carpeta de destino. Si seleccionó **Conjunto de CD/DVD**, copie los archivos de salida en un conjunto de CD o DVD.
+
+
+## <a name="next-steps"></a>Pasos siguientes
+
+[Use stand-alone media to deploy Windows without using the network](/sccm/osd/deploy-use/use-stand-alone-media-to-deploy-windows-without-using-the-network) (Uso de medios independientes para implementar Windows sin usar la red)

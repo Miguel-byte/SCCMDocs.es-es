@@ -2,21 +2,21 @@
 title: Administración y supervisión de implementaciones por fases
 titleSuffix: Configuration Manager
 description: Aprenda a administrar y supervisar las implementaciones por fases para el software en Configuration Manager.
-ms.date: 11/27/2018
+ms.date: 04/16/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
 ms.assetid: dc245916-bc11-4983-9c4d-015f655007c1
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ebf89e46b33649f12ea5770d6e771e811a66094
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: f378fd399a874b0db3844bbf02528dfe92981db5
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56125738"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500664"
 ---
 # <a name="manage-and-monitor-phased-deployments"></a>Administración y supervisión de implementaciones por fases
 
@@ -35,16 +35,16 @@ Cuando se selecciona la opción **Iniciar manualmente la segunda fase de impleme
 
 1. Cómo se inicia esta acción varía según el tipo de software implementado:  
 
-    - **Aplicación** (solo en la versión 1806 o posteriores): vaya al área de trabajo **Biblioteca de software**, expanda **Administración de aplicaciones** y seleccione el nodo **Aplicaciones**.   
+    - **Aplicación** (solo en la versión 1806 y posteriores): vaya al área de trabajo **Biblioteca de software**, expanda **Administración de aplicaciones** y seleccione **Aplicaciones**.   
 
-    - **Actualización de software** (solo en la versión 1810 o posteriores): vaya al área de trabajo **Biblioteca de software** y, después, seleccione uno de los nodos siguientes:    
+    - **Actualización de software** (solo en la versión 1810 o en versiones posteriores): vaya al área de trabajo **Biblioteca de software** y después seleccione uno de los nodos siguientes:    
         - Actualizaciones de software  
             - **Todas las actualizaciones de software**  
             - **Grupos de actualizaciones de software**   
         - Mantenimiento de Windows 10, **Todas las actualizaciones de Windows 10**  
         - Administración de cliente de Office 365, **Actualizaciones de Office 365**  
 
-    - **Secuencia de tareas**: En el área de trabajo **Biblioteca de software**, expanda **Sistemas operativos** y seleccione **Secuencias de tareas**.   
+    - **Secuencia de tareas**: vaya al área de trabajo **Biblioteca de software**, expanda **Sistemas operativos** y haga clic en **Secuencias de tareas**.   
 
 2. Seleccione el software con la implementación por fases.  
 
@@ -62,16 +62,16 @@ Puede suspender o reanudar manualmente una implementación por fases. Por ejempl
 
 1. Cómo se inicia esta acción varía según el tipo de software implementado:  
 
-    - **Aplicación** (solo en la versión 1806 o posteriores): vaya al área de trabajo **Biblioteca de software**, expanda **Administración de aplicaciones** y seleccione el nodo **Aplicaciones**.   
+    - **Aplicación** (solo en la versión 1806 y posteriores): vaya al área de trabajo **Biblioteca de software**, expanda **Administración de aplicaciones** y seleccione **Aplicaciones**.   
 
-    - **Actualización de software** (solo en la versión 1810 o posteriores): vaya al área de trabajo **Biblioteca de software** y, después, seleccione uno de los nodos siguientes:    
+    - **Actualización de software** (solo en la versión 1810 o en versiones posteriores): vaya al área de trabajo **Biblioteca de software** y después seleccione uno de los nodos siguientes:    
         - Actualizaciones de software  
             - **Todas las actualizaciones de software**  
             - **Grupos de actualizaciones de software**   
         - Mantenimiento de Windows 10, **Todas las actualizaciones de Windows 10**  
         - Administración de cliente de Office 365, **Actualizaciones de Office 365**  
 
-    - **Secuencia de tareas**: En el área de trabajo **Biblioteca de software**, expanda **Sistemas operativos** y seleccione **Secuencias de tareas**. Seleccione una secuencia de tareas existente y después haga clic en **Crear implementación por fases** en la cinta.  
+    - **Secuencia de tareas**: vaya al área de trabajo **Biblioteca de software**, expanda **Sistemas operativos** y haga clic en **Secuencias de tareas**. Seleccione una secuencia de tareas existente y después haga clic en **Crear implementación por fases** en la cinta.  
 
 2. Seleccione el software con la implementación por fases.  
 
@@ -86,14 +86,15 @@ When you suspend a phased deployment, it sets the available and deadline times o
 
 ## <a name="bkmk_monitor"></a> Supervisar
 <!--1358577-->
+A partir de la versión 1902, las implementaciones por fases tienen su propio nodo de supervisión dedicado, lo que facilita la identificación de las implementaciones de este tipo que ha creado y la navegación a la vista de supervisión de implementaciones por fases. En el área de trabajo **Supervisión**, seleccione **Implementaciones por fases** y haga doble clic en una de las implementaciones por fases para ver el estado. <!--3555949-->
 
-A partir de la versión 1806, las implementaciones por fases ahora tienen una experiencia de supervisión nativa. En el nodo **Implementaciones** del área de trabajo **Supervisión**, seleccione una implementación por fases y luego haga clic en **Estado de implementación por fases** en la cinta de opciones.
+En Configuration Manager 1806 y 1810, puede ver la experiencia de supervisión nativa de las implementaciones por fases. En el nodo **Implementaciones** del área de trabajo **Supervisión**, seleccione una implementación por fases y luego haga clic en **Estado de implementación por fases** en la cinta de opciones.
 
 ![Panel de estado de implementación por fases que muestra el estado de dos fases](media/1358577-phased-deployment-status.png)
 
 Este panel muestra la siguiente información para cada fase de la implementación:  
 
-- **Dispositivos en total**: número de dispositivos que abarca esta fase.  
+- **Dispositivos en total** o **Total de recursos**: el número de dispositivos que abarca esta fase.  
 
 - **Estado**: indica el estado actual de esta fase. Cada fase puede tener uno de los siguientes estados:  
 
@@ -103,15 +104,15 @@ Este panel muestra la siguiente información para cada fase de la implementació
 
     - **Suspendida**: un administrador ha suspendido la implementación.  
 
-- **Progreso**: estados de implementación con códigos de color de los clientes. Por ejemplo: Correcto, En curso, Error, Requisitos no cumplidos y Desconocido. 
+- **Progreso**: los estados de implementación con códigos de color de los clientes. Por ejemplo: Correcto, En curso, Error, Requisitos no cumplidos y Desconocido. 
 
 #### <a name="success-criteria-tile"></a>Icono Criterios de éxito
 
-Use el menú desplegable **Fase de selección** para cambiar la vista al icono **Criterios de éxito**. Este icono compara el **Objetivo de la fase** con el cumplimiento actual de la implementación. Con la configuración predeterminada, el objetivo de esta fase es 95 %. Este valor significa que la implementación necesita un cumplimiento del 95 % para pasar a la siguiente fase. 
+Use el menú desplegable **Fase de selección** para cambiar la vista al icono **Criterios de éxito**. Este icono compara el **Objetivo de la fase** con el cumplimiento actual de la implementación. Con la configuración predeterminada, el objetivo de esta fase es 95 %. Este valor significa que la implementación necesita un cumplimiento del 95 % para pasar a la siguiente fase.
 
-En este ejemplo, el objetivo de esta fase es el 65 %, y el cumplimiento actual es un 66,7 %. La implementación por fases se mueve automáticamente a la segunda fase, porque la primera fase cumple los criterios de éxito.  
+En este ejemplo, el objetivo de la fase es el 65 % y el cumplimiento actual es del 66,7 %. La implementación por fases se mueve automáticamente a la segunda fase, porque la primera fase cumple los criterios de éxito.  
 
-![Icono Criterios de éxito de ejemplo de Estado de implementación por fases](media/pod-status-success-criteria-tile.png)
+   ![Ejemplo de icono de criterios de éxito del estado de la implementación por fases donde el objetivo es un 65 %.](media/pod-status-success-criteria-tile.png)
 
 El objetivo de esta fase es el mismo que el **Porcentaje de éxito de la implementación** en la Configuración de fase de la *siguiente* fase. Para que la implementación por fases inicie la fase siguiente, esa segunda fase define los criterios de éxito de la primera fase. Para ver esta configuración: 
 

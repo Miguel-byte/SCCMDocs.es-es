@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: 3b9c4027-a98b-406b-935c-ccabcfe713df
-author: aczechowski
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 411811c4047cd781d0edcd5cc345ff82acc80f91
-ms.sourcegitcommit: 0a23cde6112cbb5987f433bffcf6f223b994ba72
+ms.openlocfilehash: 976a6b149175b817ea7039faf1f909a73f2b514d
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56667450"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500522"
 ---
 #  <a name="using-configuration-manager-software-updates-to-deliver-definition-updates"></a>El uso de las actualizaciones de Software de Configuration Manager para entregar actualizaciones de definiciones
 
@@ -52,7 +52,7 @@ ms.locfileid: "56667450"
 7. En la página **Configuración de implementación** del asistente, en la lista **Nivel de detalle**, seleccione **Solo mensajes de error** y haga clic en **Siguiente**.
 
    > [!NOTE]
-   >  Seleccionar **solo mensajes de error** reducirá el número de mensajes de estado devuelto por la implementación de la definición. Esta configuración ayuda a reducir el uso del procesamiento de la CPU en los servidores de Configuration Manager.
+   >  Al seleccionar **Solo mensajes de error** se reducirá el número de mensajes de estado que se devuelven en la implementación de definición. Esta configuración ayuda a reducir el uso del procesamiento de la CPU en los servidores de Configuration Manager.
 
 8. En la lista **Filtros de propiedad** , seleccione la casilla **Actualizar clasificación** .
 

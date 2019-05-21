@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37a468a2b9727d66f7d3fe0cafd1aae044585b2a
-ms.sourcegitcommit: e18853c214c95e4d21b2f032aba6d17c21e97027
-ms.translationtype: HT
+ms.openlocfilehash: eb07b154c1da9c7b93f2d8e0f06b825eb52fd561
+ms.sourcegitcommit: 417e3834a42b415a8e129327dd3c15cc0c7ec5a2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443960"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65443203"
 ---
 # <a name="install-updates-publisher"></a>Instalar Updates Publisher
 
@@ -45,7 +45,7 @@ Los siguientes requisitos se aplican al equipo donde se ejecuta Updates Publishe
     -   En Windows Server, instale la Consola de administración predeterminada para cumplir este requisito.
     -   En Windows 10 y Windows 8.1, instale las [Herramientas de administración remota del servidor (RSAT) para sistemas operativos Windows](https://support.microsoft.com/help/2693643/remote-server-administration-tools-rsat-for-windows-operating-systems). Esto instala la compatibilidad necesaria para usar Updates Publisher (*API y cmdlets de PowerShell* e *Interfaz de usuario de la Consola de administración*).
 -   **Permisos**:
-    -   Instalación: Administrador local
+    -   Instalación: administrador local
     -   Mayoría de las operaciones: usuario local
     -   Publicación u operaciones que implican WSUS: miembro del grupo de administradores de WSUS en el servidor WSUS.
 
@@ -103,12 +103,10 @@ Se admiten los idiomas siguientes en títulos y descripciones de actualizaciones
 -   Ruso
 -   Español
 
-
-
 ## <a name="install-updates-publisher"></a>Instalar Updates Publisher
 Obtenga el **UpdatesPubliser.msi** para instalar System Center Updates Publisher desde el [Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=55543).
 
-Para instalar Updates Publisher, ejecute el **UpdatesPublisher.msi** en un equipo que cumpla los *requisitos previos*. El instalador crea la siguiente carpeta para que contenga los archivos necesarios para ejecutar Updates Publisher: *&lt;ruta de acceso&gt;\Archivos de programa\Microsoft\UpdatesPublisher*.
+Para instalar Updates Publisher, ejecute el **UpdatesPublisher.msi** en un equipo que cumpla los *requisitos previos*. El instalador crea la siguiente carpeta para que contenga los archivos necesarios para ejecutar Updates Publisher: %Archivos de programa%\Microsoft\UpdatesPublisher*.
 
 Puesto que esta carpeta contiene todos los archivos necesarios para usar Updates Publisher, puede copiar la carpeta y su contenido en otra ubicación o en otro equipo y luego usar Updates Publisher desde esa ubicación. Pero la nueva ubicación o el nuevo equipo debe cumplir los requisitos previos para ejecutar Updates Publisher.
 
@@ -118,4 +116,3 @@ Cuando finalice la instalación, ejecute **UpdatesPublisher.exe** desde la carpe
  Después de instalar Updates Publisher, se recomienda [configurar las opciones](updates-publisher-options.md) de Updates Publisher. Debe configurar algunas opciones para poder usar algunas características de Updates Publisher.
 
  Pero, si quiere usar los valores predeterminados y no tiene previsto implementar actualizaciones en un servidor de actualización ni en dispositivos administrados, puede ir directamente a la sección sobre cómo [administrar catálogos de actualizaciones de software](updates-publisher-catalogs.md) o cómo [crear actualizaciones de software](create-updates-with-updates-publisher.md) y crear sus propios catálogos de actualizaciones.
-

@@ -2,7 +2,7 @@
 title: Crear aplicaciones
 titleSuffix: Configuration Manager
 description: Cree aplicaciones con tipos de implementación, métodos de detección y requisitos para instalar el software.
-ms.date: 03/04/2019
+ms.date: 05/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 236ae6e9efafcfe24f064fb643a43524eee3718d
-ms.sourcegitcommit: 4ab85212268e76d3fd22f00e6c74edaa5abde60c
+ms.openlocfilehash: e796996f870fcdd8428f3a16b08eee56d249cfa6
+ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426947"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65673391"
 ---
 # <a name="create-applications-in-configuration-manager"></a>Crear aplicaciones en Configuration Manager
 
@@ -88,7 +88,7 @@ Después, detecte automáticamente o especifique manualmente la información de 
 
     -   **Usar una conexión VPN automática (si está configurada)**: si ha implementado un perfil de VPN en el dispositivo en el que el usuario inicia la aplicación, la VPN se conectará cuando se inicie. Esta opción es solo para Windows 8.1 y Windows Phone 8.1. En dispositivos Windows Phone 8.1, las conexiones VPN automáticas no se admiten si se ha implementado más de un perfil de VPN en el dispositivo. Para obtener más información, vea [Perfiles de VPN](/sccm/protect/deploy-use/vpn-profiles).  
 
-    - **Aprovisionar esta aplicación para todos los usuarios en el dispositivo**<!--1358310-->: a partir de la versión 1806, una aplicación se aprovisiona con un paquete de aplicación de Windows para todos los usuarios en el dispositivo. Para obtener más información, vea [Creación de aplicaciones Windows](/sccm/apps/get-started/creating-windows-applications#bkmk_provision).  
+    - **Aprovisionar esta aplicación para todos los usuarios del dispositivo**:<!--1358310-->a partir de la versión 1806, una aplicación se aprovisiona con un paquete de aplicación de Windows para todos los usuarios en el dispositivo. Para obtener más información, vea [Creación de aplicaciones Windows](/sccm/apps/get-started/creating-windows-applications#bkmk_provision).  
 
        > [!Tip]  
        > Si va a modificar una aplicación existente, esta opción está en la pestaña de **Experiencia del usuario** de las propiedades del tipo de implementación del paquete de la aplicación de Windows.  
@@ -126,6 +126,9 @@ Para agregar más tipos de implementación o configurar otras opciones, vea [Cre
         > Es necesario un nombre de aplicación localizado para cada versión de idioma que configure.  
 
     -   **Categorías de usuario**: haga clic en **Editar** para especificar categorías de la aplicación en el idioma que ha seleccionado. Los usuarios del Centro se software usan estas categorías como ayuda para filtrar y ordenar las aplicaciones disponibles.  
+
+        > [!IMPORTANT]  
+        > Las categorías de usuario solo se aplican a las implementaciones en recopilaciones de usuarios.  Si una aplicación se implementa en una recopilación de equipos, se omiten las categorías de usuario.
 
     -   **Documentación de usuario**: especifique la ubicación de un archivo con el que los usuarios del Centro de software pueden obtener más información sobre esta aplicación. Esta ubicación es una dirección de sitio web o un nombre de archivo y de ruta de acceso de red. Asegúrese de que los usuarios tengan acceso a esta ubicación.  
 
@@ -237,7 +240,7 @@ En la página **Contenido**, especifique la siguiente información:
 
 - **Programa de instalación**: especifique el nombre del programa de instalación y los parámetros de instalación necesarios.  
 
-    - **Inicio de instalación en**: opcionalmente, especifique la carpeta que contiene el programa de instalación para el tipo de implementación. Esta carpeta puede ser una ruta de acceso absoluta en el cliente o una ruta de acceso a la carpeta del punto de distribución que contiene los archivos de instalación.  
+    - **Inicio de instalación en**: opcionalmente, especifique la carpeta que contiene el programa de instalación para el tipo de implementación. Esta carpeta puede ser una ruta de acceso absoluta en el cliente, o una ruta de acceso a la carpeta del punto de distribución que contiene los archivos de instalación.  
 
 - **Programa de desinstalación**: opcionalmente, especifique el nombre del programa de desinstalación y los parámetros necesarios.  
 
@@ -263,7 +266,7 @@ Al ver las propiedades de un tipo de implementación, las siguientes opciones so
 
         - **Ubicación de contenido de desinstalación**: especifique la ruta de acceso de red para el contenido que se usa para desinstalar la aplicación.  
 
-- **Permitir que los clientes usen puntos de distribución del grupo de límite del sitio predeterminado**: especifique si los clientes deben descargar e instalar el software desde un punto de distribución en el grupo de límites predeterminados del sitio, cuando el contenido no está disponible desde un punto de distribución en el grupo actual o en los grupos de límites vecinos.  
+- **Permitir a los clientes usar puntos de distribución del grupo de límites del sitio predeterminado**: especifique si los clientes deben descargar e instalar el software desde un punto de distribución en el grupo de límites predeterminados del sitio, cuando el contenido no está disponible desde un punto de distribución en el grupo actual o en los grupos de límites vecinos.  
 
 - **Opciones de implementación**: especifique si los clientes deben descargar la aplicación al usar un punto de distribución desde un grupo vecino o los grupos de límites predeterminados del sitio.  
 
@@ -321,7 +324,7 @@ Continúe con la siguiente sección sobre el uso de un script personalizado como
 2.  En el cuadro de diálogo **Editor de scripts**, haga clic en la lista desplegable **Tipo de script**. Seleccione uno de los siguientes lenguajes de scripts para detectar el tipo de implementación: PowerShell, VBScript o JScript.  
 
     > [!Note]  
-    > A partir de la versión 1810, cuando un script de Windows PowerShell se ejecuta como un método de detección de la aplicación, el cliente de Configuration Manager llama a PowerShell con la `-NoProfile` parámetro. Esta opción inicia PowerShell sin perfiles. Un perfil de PowerShell es un script que se ejecuta cuando se inicia PowerShell. <!--3607762-->  
+    > A partir de la versión 1810, cuando un script de Windows PowerShell se ejecuta como un método de detección de aplicaciones, el cliente de Configuration Manager llama a PowerShell con el parámetro `-NoProfile`. Esta opción inicia PowerShell sin perfiles. Un perfil de PowerShell es un script que se ejecuta cuando se inicia PowerShell. <!--3607762-->  
 
 3.  En el cuadro **Contenido del script**, escriba el script que quiera usar o pegue el contenido de un script existente. Elija **Abrir** para ir a un script existente guardado. Haga clic en **Borrar** para quitar el texto en el campo de contenido del script. Si es necesario, habilite la opción **Ejecutar el script como proceso de 32 bits en clientes de 64 bits**.  
 
@@ -650,7 +653,7 @@ Configuration Manager admite los siguientes tipos de implementación para aplica
 | **Paquete de aplicación de Windows (\*.appx, \*.appxbundle)** | Para Windows 8 o posterior. Seleccione un archivo de paquete de aplicación de Windows o un paquete de agrupación de aplicaciones de Windows. |  
 | **Paquete de aplicación de Windows (\*.appx, \*.appxbundle, \*.msix, \*.msixbundle)** | A partir de la versión 1806, para los formatos de paquete de aplicación de Windows 10 (msix) y de lote de aplicaciones (msixbundle). Seleccione un archivo de paquete de aplicación de Windows o un paquete de agrupación de aplicaciones de Windows.<!--1357427--> |  
 | **Paquete de aplicación de Windows (en la Tienda Windows)** | Para Windows 8 o posterior. Especifique un vínculo a la aplicación en Microsoft Store o busque en la tienda para seleccionar la aplicación.<sup>[Nota 1](#bkmk_note1)</sup> |  
-| **Instalador de scripts** | Especifique un script o programa que se ejecuta en los clientes de Windows para instalar contenido o llevar a cabo una acción. Use este tipo de implementación para los instaladores setup.exe o los contenedores script. |  
+| **Instalador de scripts** | Especifique un script o programa que se ejecuta en los clientes de Windows para instalar contenido o llevar a cabo una acción. Use este tipo de implementación para los instaladores setup.exe o los contenedores de scripts. |  
 | **Microsoft Application Virtualization 4** | Un manifiesto de Microsoft App-V v4. |  
 | **Microsoft Application Virtualization 5** | Un archivo de paquete de Microsoft App-V v5. |  
 | **Paquete de aplicación de Windows Phone (archivo \*.xap)** | Un archivo de paquete de aplicación de Windows Phone. |  

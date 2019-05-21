@@ -5,18 +5,18 @@ description: Use Windows Update for Business para mantener actualizados los disp
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/28/2019
+ms.date: 04/25/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2929782880971b53be3b6013188f65d50d691c05
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: 36ab933876b96c0eebe87ba07932757147e334c0
+ms.sourcegitcommit: 9af73f5c1b93f6ccaea3e6a096f75a5fecd65c2f
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58523765"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64669126"
 ---
 # <a name="integration-with-windows-update-for-business-in-windows-10"></a>Integración con Windows Update for Business en Windows 10
 
@@ -25,8 +25,8 @@ ms.locfileid: "58523765"
 Windows Update para empresas (WUfB) permite mantener los dispositivos basados en Windows 10 de la organización siempre actualizados con las características de Windows y las defensas de seguridad más recientes cuando estos dispositivos se conectan directamente al servicio de Windows Update (WU). Configuration Manager puede diferenciar entre los equipos con Windows 10 que usan WUfB y WSUS para obtener actualizaciones de software.  
 
 >[!WARNING]
-> Si usa administración conjunta para los dispositivos y ha movido el [las directivas de actualización de Windows](/sccm/comanage/workloads#windows-update-policies) a Intune, a continuación, en los dispositivos obtendrá su [las directivas de actualización de Windows para la empresa de Intune](https://docs.microsoft.com/intune/windows-update-for-business-configure).
-> - Si tiene instalado el cliente de Configuration Manager en los dispositivos administrados conjuntamente, a continuación, configuración de las actualizaciones acumulativas y las actualizaciones de características se administra mediante Intune. Sin embargo, revisiones de terceros, si se habilita en [ **configuración de cliente**](/sccm/core/clients/deploy/about-client-settings#enable-third-party-software-updates), todavía es administrado por Configuration Manager.  
+> Si va a usar administración conjunta con los dispositivos y ha movido las [directivas de actualización de Windows](/sccm/comanage/workloads#windows-update-policies) a Intune, los dispositivos obtendrán sus [directivas de Windows Update para empresas de Intune](https://docs.microsoft.com/intune/windows-update-for-business-configure).
+> - Si sigue instalado el cliente de Configuration Manager en los dispositivos administrados conjuntamente, la configuración de actualizaciones acumulativas y actualizaciones de características se administra mediante Intune. Sin embargo, las revisiones de terceros, si están habilitadas en [**Configuración de cliente**](/sccm/core/clients/deploy/about-client-settings#enable-third-party-software-updates), aún se administran con Configuration Manager.  
 
  Algunas características de Configuration Manager ya no están disponibles cuando los clientes de Configuration Manager se configuran para recibir actualizaciones de WU, lo que incluye WUfB o Windows Insiders:  
 
@@ -44,7 +44,7 @@ Windows Update para empresas (WUfB) permite mantener los dispositivos basados en
 
 -   Configuration Manager no podrá implementar las actualizaciones de Microsoft, como Office, Internet Explorer y Visual Studio, en los clientes que están conectados a WUfB para recibir actualizaciones.  
 
--   Configuration Manager todavía puede implementar actualizaciones de terceros publicadas en WSUS y administradas a través de Configuration Manager en los clientes que están conectados a WUfB para recibir actualizaciones. Si no desea que las actualizaciones de terceros 3rd esté instalado en los clientes se conectan a WUfB, deshabilite la configuración con nombre de cliente [habilitar actualizaciones de software en clientes](/sccm/core/clients/deploy/about-client-settings#software-updates).
+-   Configuration Manager todavía puede implementar actualizaciones de terceros publicadas en WSUS y administradas a través de Configuration Manager en los clientes que están conectados a WUfB para recibir actualizaciones. Si no quiere que se instalen actualizaciones de terceros en los clientes que se conectan a WUfB, deshabilite la configuración de cliente llamada [Habilitar actualizaciones de software en clientes](/sccm/core/clients/deploy/about-client-settings#software-updates).
 
 -   La implementación del cliente completo de Configuration Manager que usa la infraestructura de actualizaciones de software no funcionará para los clientes que están conectados a WUfB para recibir actualizaciones.  
 

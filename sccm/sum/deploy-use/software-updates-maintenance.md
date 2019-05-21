@@ -11,12 +11,12 @@ ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
 manager: dougeby
 ms.author: mstewart
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5146ba92da82aad6c8dfbf4d961a52e197d0a9b2
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: 1f8624e898e22ebb2eef66d72a242d02b36d342d
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58523833"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083353"
 ---
 # <a name="software-updates-maintenance"></a>Mantenimiento de las actualizaciones de software
 
@@ -60,7 +60,7 @@ A partir de la versión 1806, la opción de limpieza de WSUS se produce después
 <!--1357898 -->
 
 - La opción **Actualizaciones expiradas** para los servidores WSUS en CAS y sitios primarios.
-  - Los servidores WSUS para los sitios secundarios no ejecutan la limpieza de WSUS para las actualizaciones expiradas.
+  - Los servidores WSUS para sitios secundarios no ejecutan la limpieza de WSUS para actualizaciones expiradas.
 - Configuration Manager genera una lista de actualizaciones reemplazadas de su base de datos. La lista se basa en el comportamiento de sustitución en las propiedades del componente de punto de actualización de software.
   - Los elementos de configuración de actualización que cumplen los criterios de comportamiento de sustitución expiran en la consola de Configuration Manager.
   - Se rechazan las actualizaciones en WSUS para las CAS y los sitios primarios, pero no para los sitios secundarios.
@@ -80,7 +80,7 @@ Todo el mantenimiento de WSUS debe ejecutarse manualmente en las bases de datos 
 
 ## <a name="wsus-cleanup-behavior-starting-in-version-1810"></a>Comportamiento de limpieza de WSUS a partir de la versión 1810
 
-A partir de la versión 1810, puede especificar reglas de sustitución para las actualizaciones de características por separado de las actualizaciones que no son características en las propiedades de componente de punto de actualización de Software. La opción de limpieza de WSUS se produce después de cada sincronización y realiza los siguientes elementos de limpieza:
+A partir de la versión 1810, puede especificar reglas de sustitución por un lado para actualizaciones de características, y por otro para actualizaciones que no son de características, en las propiedades de componentes del punto de actualización de software. La opción de limpieza de WSUS se produce después de cada sincronización y realiza los siguientes elementos de limpieza:
 <!--2839349,3098809, 2977644-->
 
 - La opción **Actualizaciones expiradas** para los servidores WSUS en CAS, sitios primarios y sitios secundarios.
