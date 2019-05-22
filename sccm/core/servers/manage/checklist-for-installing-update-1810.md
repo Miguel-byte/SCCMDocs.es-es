@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: b87ac054-9b37-4725-a3f3-2340cfb10bff
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 11a67aa698340cd100ded1ca64b9a97960bc6b9b
-ms.sourcegitcommit: 56ec6933cf7bfc93842f55835ad336ee3a1c6ab5
+ms.openlocfilehash: c57042e6ea4db7b244b8617bbef99633d9026d1b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211676"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501124"
 ---
 # <a name="checklist-for-installing-update-1810-for-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 1810 de Configuration Manager
 
@@ -146,7 +146,8 @@ Para obtener más información, vea  [Actualizar clientes](/sccm/core/clients/m
 Para definir un período durante el cual se pueden instalar las actualizaciones de un servidor de sitio para ventanas de servicio. Esto puede ayudarle a controlar el momento en que los sitios de la jerarquía instalan la actualización. Para obtener más información, vea  [Ventanas de servicio para servidores de sitio](/sccm/core/servers/manage/service-windows).
 
 #### <a name="review-supported-extensions"></a>Revisar extensiones compatibles
-<!--SCCMdocs#587--> Si amplía Configuration Manager con otros productos de Microsoft o de asociados de Microsoft, confirme que sean compatibles con la versión 1810. Para ello, consulte al proveedor del producto. Por ejemplo, vea las [notas de la versión](/sccm/mdt/release-notes) de Microsoft Deployment Toolkit.
+<!--SCCMdocs#587-->
+Si amplía Configuration Manager con otros productos de Microsoft o de asociados de Microsoft, confirme que sean compatibles con la versión 1810. Para ello, consulte al proveedor del producto. Por ejemplo, vea las [notas de la versión](/sccm/mdt/release-notes) de Microsoft Deployment Toolkit.
 
 #### <a name="run-the-setup-prerequisite-checker"></a>Ejecutar el Comprobador de requisitos previos del programa de instalación   
 Cuando la actualización aparece en la consola como **Disponible**, puede ejecutar de manera independiente el Comprobador de requisitos previos antes de instalar la actualización. (Al instalar la actualización en el sitio, el Comprobador de requisitos previos vuelve a ejecutarse).
@@ -206,7 +207,7 @@ Después de actualizar un sitio primario, vuelva a configurar la réplica de bas
 Si ha deshabilitado las [tareas de mantenimiento](/sccm/core/servers/manage/maintenance-tasks) de bases de datos en un sitio antes de instalar la actualización, vuelva a configurar esas tareas. Use la misma configuración que había antes de la actualización.  
 
 
-#### <a name="update-clients"></a>Actualizar clientes
+#### <a name="update-clients"></a>Actualización de clientes
 Actualice los clientes de acuerdo con el plan que ha creado, especialmente si ha configurado el proyecto piloto del cliente antes de instalar la actualización. Para obtener más información, consulte [How to upgrade clients for Windows computers (Cómo actualizar clientes para equipos Windows)](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers).  
 
 

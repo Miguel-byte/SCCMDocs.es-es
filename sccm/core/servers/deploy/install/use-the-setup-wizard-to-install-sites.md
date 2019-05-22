@@ -6,16 +6,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 1f703376-5f2c-4fd2-8209-7028c931ddc7
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67c82a884a5d3df3b1e61e1f9f2c109ff2b7fef6
-ms.sourcegitcommit: af8693048e6706ffda72572374f56e0bc7dfce2c
+ms.openlocfilehash: 92c51158412b8bc9737c4851fc43dc2a7776488b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57737336"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501252"
 ---
 # <a name="use-the-setup-wizard-to-install-configuration-manager-sites"></a>Use el Asistente para instalación si quiere instalar sitios de Configuration Manager.
 
@@ -327,19 +327,19 @@ Use la consola de Configuration Manager para instalar un sitio secundario.
 
     - **Instalar y configurar una copia local de SQL Express en el equipo del sitio secundario**  
 
-        - **Puerto de servicio de SQL Server**: Especifique el puerto de servicio de SQL Server que SQL Server Express utilizará. Normalmente, el puerto de servicio está configurado para utilizar el puerto TCP 1433, pero se puede configurar otro puerto.  
+        - **Puerto de servicio de SQL Server**: especifique el puerto de servicio de SQL Server que SQL Server Express utilizará. Normalmente, el puerto de servicio está configurado para utilizar el puerto TCP 1433, pero se puede configurar otro puerto.  
 
-        - **Puerto de SQL Server Broker**: Especifique el puerto de SQL Server Service Broker (SSB) que SQL Server Express utilizará. Normalmente, Service Broker está configurado para utilizar el puerto TCP 4022, pero se puede configurar otro puerto. Especifique un puerto válido que no use ningún otro sitio o servicio y que no esté bloqueado por restricciones de firewall.  
+        - **Puerto de SQL Server Broker**: especifique el puerto de SQL Server Service Broker (SSB) que SQL Server Express utilizará. Normalmente, Service Broker está configurado para utilizar el puerto TCP 4022, pero se puede configurar otro puerto. Especifique un puerto válido que no use ningún otro sitio o servicio y que no esté bloqueado por restricciones de firewall.  
 
     - **Usar una instancia existente de SQL Server**  
 
         - **FQDN de SQL Server**: revise el FQDN del equipo que ejecuta SQL Server. Debe usar un servidor local que ejecute SQL Server para hospedar la base de datos del sitio secundario; esta configuración no se puede modificar.  
 
-        - **Instancia de SQL Server**: Especifique la instancia de SQL Server que se utilizará como base de datos del sitio secundario. Deje esta opción en blanco para utilizar la instancia predeterminada.  
+        - **Instancia de SQL Server**: especifique la instancia de SQL Server que se utilizará como base de datos del sitio secundario. Deje esta opción en blanco para utilizar la instancia predeterminada.  
 
-        - **Nombre de base de datos de sitio de ConfigMgr**: Especifique el nombre que se utilizará para la base de datos del sitio secundario.  
+        - **Nombre de base de datos de sitio de ConfigMgr**: especifique el nombre que se utilizará para la base de datos del sitio secundario.  
 
-        - **Puerto de SQL Server Broker**: Especifique el puerto de SQL Server Service Broker (SSB) que SQL Server utilizará. Especifique un puerto válido que no use ningún otro sitio o servicio y que no esté bloqueado por restricciones de firewall.  
+        - **Puerto de SQL Server Broker**: especifique el puerto de SQL Server Service Broker (SSB) que SQL Server utilizará. Especifique un puerto válido que no use ningún otro sitio o servicio y que no esté bloqueado por restricciones de firewall.  
 
     > [!TIP]  
     > Consulte [Versiones de SQL Server compatibles con System Center Configuration Manager](/sccm/core/plan-design/configs/support-for-sql-server-versions) para obtener una lista de las versiones de SQL Server compatibles con System Center Configuration Manager.  
@@ -371,7 +371,7 @@ Use la consola de Configuration Manager para instalar un sitio secundario.
 
     - **Reserva de espacio de unidad (MB)**: el valor que se configura en esta opción determina la cantidad de espacio libre de una unidad antes de que Configuration Manager elija una unidad diferente y continúe con el proceso de copia en esa unidad. Los archivos de contenido pueden ocupar varias unidades.  
 
-    - **Ubicaciones de contenido**: Especifique las ubicaciones de contenido de la biblioteca de contenido y el recurso compartido de paquete. Configuration Manager copia el contenido en la ubicación primaria de contenido hasta que la cantidad de espacio libre alcance el valor especificado en **Reserva de espacio de unidad (MB)**.  
+    - **Ubicaciones de contenido**: especifique las ubicaciones de contenido de la biblioteca de contenido y el recurso compartido de paquete. Configuration Manager copia el contenido en la ubicación primaria de contenido hasta que la cantidad de espacio libre alcance el valor especificado en **Reserva de espacio de unidad (MB)**.  
 
     De forma predeterminada, las ubicaciones de contenido se establecen como **Automático**. La ubicación del contenido principal se establece en la unidad de disco que tenga más espacio en disco en el momento de efectuar la instalación. La ubicación secundaria se establece en la unidad de disco que tenga el máximo espacio libre en disco después de la unidad principal. Cuando las unidades primaria y secundaria alcanzan el valor de la reserva de espacio de unidad, Configuration Manager selecciona otra unidad que esté disponible y que tenga la mayor cantidad de espacio disponible en disco, y continúa con el proceso de copia.  
 

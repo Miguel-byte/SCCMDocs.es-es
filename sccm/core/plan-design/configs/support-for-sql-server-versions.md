@@ -1,5 +1,5 @@
 ---
-title: Versiones de SQL Server admitidas
+title: Versiones compatibles de SQL Server
 titleSuffix: Configuration Manager
 description: Obtenga los requisitos de configuración y versión de SQL Server para hospedar una base de datos de sitio de Configuration Manager.
 ms.date: 08/14/2018
@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f2d2b10419cec019cc3c0791c7a7aadc016c15b
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: fdfb536607ce20cd9727882ad92c3ed963c69241
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133806"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499474"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Versiones de SQL Server compatibles con Configuration Manager
 
@@ -85,7 +85,8 @@ Puede usar esta versión de SQL Server, con una [versión 2 de actualización ac
   <!--SMS.498506-->
 
 ### <a name="sql-server-2016-sp2-standard-enterprise"></a>SQL Server 2016 SP2: Standard, Enterprise  
-<!--514985--> Puede usar esta versión de SQL Server sin una versión de actualización acumulativa mínima para los sitios siguientes:  
+<!--514985-->
+Puede usar esta versión de SQL Server sin una versión de actualización acumulativa mínima para los sitios siguientes:  
 
 -   Un sitio de administración central  
 -   Un sitio primario  
@@ -145,7 +146,8 @@ Puede usar esta versión de SQL Server sin una versión de actualización acumul
 
 ### <a name="sql-server-2017-express"></a>SQL Server 2017 Express   
 Puede usar esta versión de SQL Server, con una [versión 2 de actualización acumulativa](https://support.microsoft.com/help/4052574) mínima, empezando por [Configuration Manager versión 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710) para los sitios siguientes:
--   Un sitio secundario <!--SMS.498506-->
+-   Un sitio secundario
+<!--SMS.498506-->
 
 ### <a name="sql-server-2016-express-sp2"></a>SQL Server 2016 Express SP2  
 Puede usar esta versión de SQL Server sin una versión de actualización acumulativa mínima para los sitios siguientes:

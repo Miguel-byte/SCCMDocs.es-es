@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 3417ff88-7177-4a0d-8967-ab21fe7eba17
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 060b1f71519227673dd2b8b67b5def026e96f493
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: d686baa95cc29a2e4923c0572a0d056beeff9f5b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56131904"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499224"
 ---
 # <a name="step-by-step-example-deployment-of-the-pki-certificates-for-system-center-configuration-manager-windows-server-2008-certification-authority"></a>Ejemplo paso a paso de implementación de los certificados PKI para System Center Configuration Manager: Entidad de certificación de Windows Server 2008
 
@@ -72,7 +72,7 @@ Esta implementación de ejemplo paso a paso, que usa una entidad de certificaci�
 |Requisito de certificado|Descripción del certificado|  
 |-----------------------------|-----------------------------|  
 |Certificado de servidor web para los sistemas de sitio que ejecutan IIS|Este certificado se utiliza para cifrar los datos y autenticar el servidor en los clientes. Se debe instalar externamente desde System Center Configuration Manager en servidores de sistemas de sitio que ejecutan Internet Information Services (IIS) y que están configurados en System Center Configuration Manager para usar HTTPS.<br /><br /> Para conocer los pasos para configurar e instalar este certificado, vea [Implementación del certificado de servidor web para sistemas de sitio que ejecutan IIS](#BKMK_webserver2008_cm2012) en este tema.|  
-|Certificado de servicio para clientes que se conectan a puntos de distribución basados en la nube|Para conocer los pasos para configurar e instalar este certificado, vea [Implementación del certificado de servicio para puntos de distribución basados en la nube](#BKMK_clouddp2008_cm2012) en este tema.<br /><br /> **Importante:** Este certificado se utiliza junto con el certificado de administración de Windows Azure. Para obtener más información sobre el certificado de administración, vea [Crear un certificado de administración para Windows Azure](http://go.microsoft.com/fwlink/p/?LinkId=220281) y [Agregar un certificado de administración a una suscripción de Windows Azure](http://go.microsoft.com/fwlink/?LinkId=241722) en la sección Plataforma Windows Azure de MSDN Library.|  
+|Certificado de servicio para clientes que se conectan a puntos de distribución basados en la nube|Para conocer los pasos para configurar e instalar este certificado, vea [Implementación del certificado de servicio para puntos de distribución basados en la nube](#BKMK_clouddp2008_cm2012) en este tema.<br /><br /> **Importante:** Este certificado se utiliza junto con el certificado de administración de Microsoft Azure. Para obtener más información sobre el certificado de administración, vea [Crear un certificado de administración para Windows Azure](http://go.microsoft.com/fwlink/p/?LinkId=220281) y [Agregar un certificado de administración a una suscripción de Windows Azure](http://go.microsoft.com/fwlink/?LinkId=241722) en la sección Plataforma Windows Azure de MSDN Library.|  
 |Certificado de cliente para equipos Windows|Este certificado se usa para autenticar equipos cliente de System Center Configuration Manager en sistemas de sitio que están configurados para usar HTTPS. También puede usarse para puntos de administración y puntos de migración de estado para supervisar su estado de funcionamiento cuando están configurados para usar HTTPS. Se debe instalar externamente en los equipos desde System Center Configuration Manager.<br /><br /> Para conocer los pasos para configurar e instalar este certificado, vea [Implementación del certificado de cliente para equipos Windows](#BKMK_client2008_cm2012) en este tema.|  
 |Certificado de cliente para puntos de distribución|Este certificado tiene dos propósitos:<br /><br /> El certificado se utiliza para autenticar el punto de distribución en un punto de administración habilitado para HTTPS antes de que el punto de distribución envíe mensajes de estado.<br /><br /> Cuando está seleccionada la opción de punto de distribución **Habilitar compatibilidad de PXE para clientes** , el certificado se envía a equipos con arranque PXE para que puedan conectarse a un punto de administración habilitado para HTTPS durante la implementación del sistema operativo.<br /><br /> Para conocer los pasos para configurar e instalar este certificado, vea [Implementación del certificado de cliente para puntos de distribución](#BKMK_clientdistributionpoint2008_cm2012) en este tema.|  
 |Certificado de inscripción para dispositivos móviles|Este certificado se usa para autenticar clientes de dispositivos móviles de System Center Configuration Manager en sistemas de sitio que están configurados para usar HTTPS. Debe instalarse como parte de la inscripción de dispositivos móviles en System Center Configuration Manager, y selecciona la plantilla de certificado configurada como un valor de cliente de dispositivo móvil.<br /><br /> Para conocer los pasos para configurar este certificado, vea [Implementación del certificado de inscripción para dispositivos móviles](#BKMK_mobiledevices2008_cm2012) en este tema.|  

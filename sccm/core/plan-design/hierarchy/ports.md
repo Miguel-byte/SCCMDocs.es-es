@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99df201cb3525a124b42d5d599d4a74708258bad
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: a513eb15f9a8c841aa5896ee5d416bd7863d0cb9
+ms.sourcegitcommit: ab9f2a7fb7ea3a0c65808fce2975ab25a670281f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59673724"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65612796"
 ---
 # <a name="ports-used-in-configuration-manager"></a>Puertos usados en Configuration Manager
 
@@ -718,7 +718,7 @@ Después de la instalación, puede cambiar el puerto. No es necesario usar el mi
 #### <a name="bkmk_note4"></a> Nota 4: Demonio FTP trivial (TFTP)
 El servicio de sistema Demonio FTP Trivial (TFTP) no necesita un nombre de usuario o una contraseña, y es una parte integral de los Servicios de implementación de Windows (WDS). El servicio Demonio FTP Trivial implementa la compatibilidad con el protocolo TFTP definido por las siguientes RFC:  
 
-- RFC 350: TFTP  
+- RFC 1350: TFTP  
 
 - RFC 2347: extensión de opción  
 
@@ -730,7 +730,7 @@ TFTP está diseñado para admitir entornos de arranque sin disco. Los demonios T
 
 El punto de distribución habilitado con PXE y el cliente en Windows PE seleccionan puertos altos asignados dinámicamente para las transferencias de TFTP. Microsoft define estos puertos entre el 49152 y el 65535. Para más información, vea [Introducción al servicio y requisitos del puerto de red para Windows](https://support.microsoft.com/help/832017/service-overview-and-network-port-requirements-for-windows).
 
-Sin embargo, durante el arranque de PXE real, la tarjeta de red del dispositivo selecciona el puerto alto asignado dinámicamente que usa durante la transferencia TFTP. La tarjeta de red del dispositivo no está enlazada a los puertos altos asignados dinámicamente definidos por Microsoft. Solo está enlazada a los puertos definidos en RFC 350. Este puerto puede ser cualquiera entre el 0 y el 65535. Para más información sobre qué puertos altos asignados dinámicamente usan la tarjeta de red, póngase en contacto con el fabricante del hardware del dispositivo.
+Sin embargo, durante el arranque de PXE real, la tarjeta de red del dispositivo selecciona el puerto alto asignado dinámicamente que usa durante la transferencia TFTP. La tarjeta de red del dispositivo no está enlazada a los puertos altos asignados dinámicamente definidos por Microsoft. Solo está enlazada a los puertos definidos en RFC 1350. Este puerto puede ser cualquiera entre el 0 y el 65535. Para más información sobre qué puertos altos asignados dinámicamente usan la tarjeta de red, póngase en contacto con el fabricante del hardware del dispositivo.
 
 
 #### <a name="bkmk_note5"></a> Nota 5: Comunicación entre el servidor de sitio y los sistemas de sitio

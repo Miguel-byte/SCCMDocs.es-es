@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 8db92d67-5d9c-4e9c-80d0-ae6fa0dd4817
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 70612d3f60802892aa99bbc4fc006b9385cb8756
-ms.sourcegitcommit: af8693048e6706ffda72572374f56e0bc7dfce2c
+ms.openlocfilehash: b4f69d686a48af3c6e710c6aff592d71de1dbff1
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57737313"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65496985"
 ---
 # <a name="the-cdlatest-folder-for-configuration-manager"></a>La carpeta CD.Latest para Configuration Manager
 
@@ -62,7 +62,8 @@ Si quiere instalar un nuevo sitio primario secundario debajo de un sitio de admi
 Si va a expandir un sitio primario independiente mediante la instalación de un nuevo sitio de administración central, necesita usar el programa de instalación y los archivos de origen de la carpeta CD.Latest desde el sitio primario. Este proceso utiliza los archivos de origen de instalación que coinciden con la versión del sitio primario. Para obtener más información, consulte [Expandir un sitio primario independiente](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#bkmk_expand).
 
 ### <a name="install-a-secondary-site"></a>Instalar un sitio secundario
-<!-- SCCMDocs-pr issue #3164 --> Si quiere instalar un nuevo sitio secundario debajo de un sitio primario que ha instalado una o varias actualizaciones en la consola, use los archivos de origen de la carpeta CD.Latest desde el sitio primario. 
+<!-- SCCMDocs-pr issue #3164 -->
+Si quiere instalar un nuevo sitio secundario debajo de un sitio primario que ha instalado una o varias actualizaciones en la consola, use los archivos de origen de la carpeta CD.Latest desde el sitio primario. 
 
 Para obtener más información, vea [Instalar un sitio secundario](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#bkmk_secondary). 
 

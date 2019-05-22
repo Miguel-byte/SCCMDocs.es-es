@@ -2,21 +2,21 @@
 title: Novedades de la versión 1902
 titleSuffix: Configuration Manager
 description: Obtenga detalles sobre los cambios y las nuevas funcionalidades incorporados en la versión 1902 de la rama actual de Configuration Manager.
-ms.date: 04/17/2019
+ms.date: 05/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fbc38cdb72a2c8f595eed88e0b4b5b5e29374597
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: 0c88cdc52442463bb3788c80c45d6c074dd900f5
+ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59673656"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65673426"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Novedades de la versión 1902 de la rama actual de Configuration Manager
 
@@ -173,9 +173,9 @@ Para obtener más información, vea [Cómo administrar de forma remota un equipo
 
 ### <a name="specify-a-custom-port-for-peer-wakeup"></a>Especificación de un puerto personalizado para reactivación del mismo nivel
 <!--3605925-->
-Ahora puede especificar un número de puerto personalizado para el proxy de reactivación. En la configuración de cliente, en el grupo **Administración de energía**, establezca la configuración de **Número de puerto de Wake On LAN (UDP)**.  
+***[Actualizado]*** Ahora puede especificar un número de puerto personalizado para el proxy de reactivación. En la configuración de cliente, en el grupo **Administración de energía**, establezca la configuración de **Número de puerto de Wake On LAN (UDP)**.  
 
-<!-- For more information, see [How to configure Wake on LAN](/sccm/core/clients/deploy/configure-wake-on-lan). -->
+Para obtener más información, vea [Cómo configurar Wake on LAN](/sccm/core/clients/deploy/configure-wake-on-lan).
 
 
 
@@ -218,17 +218,30 @@ Ahora verá una barra de progreso más detallada durante una secuencia de tareas
 Esta característica funciona con cualquier versión admitida de Windows 10 y únicamente con la secuencia de tareas de actualización local. 
 
 
-### <a name="improvements-to-task-sequence-media-creation"></a>Mejoras en la creación de medios de secuencia de tareas 
+### <a name="improvements-to-task-sequence-media-creation"></a>Mejoras en la creación de medios de secuencia de tareas
+
 <!--3556027, fka 1359388-->
-Esta versión incluye varias mejoras para ayudarle a crear y administrar medios de secuencia de tareas. <!-- For more information, see [Create task sequence media](/sccm/osd/deploy-use/create-task-sequence-media). -->
+***[Actualizado]*** Esta versión incluye varias mejoras para ayudarle a crear y administrar mejor medios de secuencia de tareas. Para más información, vea los siguientes artículos sobre los tipos de medios específicos:
+
+- [Crear medios independientes](/sccm/osd/deploy-use/create-stand-alone-media)
+- [Crear medios preconfigurados](/sccm/osd/deploy-use/create-prestaged-media)
+- [Crear medios de arranque](/sccm/osd/deploy-use/create-bootable-media)
+- [Crear medios de captura](/sccm/osd/deploy-use/create-capture-media)
 
 #### <a name="specify-temporary-storage"></a>Especificar almacenamiento temporal
-Al crear medios de secuencia de tareas, personaliza la ubicación que usa el sitio para el almacenamiento temporal de datos. Este proceso puede requerir mucho espacio de unidad temporal. Este cambio proporciona mayor flexibilidad para elegir dónde almacenar estos archivos temporales. 
+
+Al crear medios de secuencia de tareas, personaliza la ubicación que usa el sitio para el almacenamiento temporal de datos. Este proceso puede requerir mucho espacio de unidad temporal. Este cambio proporciona mayor flexibilidad para elegir dónde almacenar estos archivos temporales.
 
 En el **Asistente para crear medio de secuencia de tareas**, especifique una ubicación para la **carpeta de almacenamiento provisional**. De forma predeterminada, esta ubicación es similar a la siguiente ruta de acceso: `%UserProfile%\AppData\Local\Temp`.
 
 #### <a name="add-a-label-to-the-media"></a>Agregar una etiqueta a los medios
+
 Ahora puede agregar una etiqueta a los medios de secuencia de tareas. Esta etiqueta ayuda a identificar mejor el medio después de crearlo. En el **Asistente para crear medio de secuencia de tareas**, especifique una **etiqueta de medio**.
+
+#### <a name="include-autoruninf-file-on-media"></a>Incluir archivo autorun.inf en el soporte físico
+
+<!-- 4090666 -->
+Al crear medios de secuencia de tareas, Configuration Manager no agrega un archivo autorun.inf. Normalmente, los productos antimalware bloquean este archivo. Aun así, si es necesario para su escenario, puede incluir el archivo.
 
 
 ### <a name="import-a-single-index-of-an-os-image"></a>Importación de un índice único de una imagen de sistema operativo
@@ -254,8 +267,9 @@ Cuando se cree una programación para actualizar una imagen de sistema operativo
 
 
 ### <a name="improvements-to-run-powershell-script-task-sequence-step"></a>Mejoras del paso de secuencia de tareas Ejecutar script de PowerShell
+
 <!--3556028, fka 1359389-->
-El paso de secuencia de tareas **Ejecutar script de PowerShell** incluye ahora las siguientes mejoras:  
+***[Actualizado]*** El paso de secuencia de tareas **Ejecutar script de PowerShell** incluye ahora las siguientes mejoras:  
 
 - Ahora puede escribir directamente código de Windows PowerShell en este paso. Este cambio permite ejecutar comandos de PowerShell durante una secuencia de tareas sin necesidad de crear y distribuir un paquete con el script.
 
@@ -271,17 +285,18 @@ El paso de secuencia de tareas **Ejecutar script de PowerShell** incluye ahora l
 
 - Para incluir los parámetros del script en el registro de la secuencia de tareas, establezca la variable de secuencia de tareas **OSDLogPowerShellParameters** en **TRUE**. De forma predeterminada, los parámetros no están en el registro.  
 
-- Otras mejoras que proporcionan una funcionalidad similar a la del paso [Ejecutar línea de comandos](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine). Por ejemplo, especifique credenciales de usuario alternativas o especifique un tiempo de espera. 
+- Otras mejoras que proporcionan una funcionalidad similar a la del paso [Ejecutar línea de comandos](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine). Por ejemplo, especifique credenciales de usuario alternativas o especifique un tiempo de espera.
 
 > [!Important]  
 > Para aprovechar esta nueva característica de Configuration Manager, después de actualizar el sitio, actualice también los clientes a la versión más reciente. Aunque la funcionalidad nueva aparece en la consola de Configuration Manager cuando se actualiza el sitio y la consola, la totalidad del escenario no es funcional hasta que la versión del cliente también es la más reciente.
 
-<!-- For more information, see [Run PowerShell Script](/sccm/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript). -->
+Para más información, vea [Ejecutar script de PowerShell](/sccm/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript).
 
 
 ### <a name="other-improvements-to-os-deployment"></a>Otras mejoras en la implementación del sistema operativo
+
 <!--3633146,3641475,3654172,3734270-->
-Esta versión incluye las siguientes mejoras en la implementación del sistema operativo:
+***[Actualizado]*** Esta versión incluye las siguientes mejoras en la implementación del sistema operativo:
 
 - Hay una nueva acción predeterminada **Ver** en las secuencias de tareas. <!--3633146-->  
 
@@ -296,20 +311,13 @@ Esta versión incluye las siguientes mejoras en la implementación del sistema o
 ## <a name="bkmk_userxp"></a> Centro de software
 
 ### <a name="replace-toast-notifications-with-dialog-window"></a>Reemplazo de las notificaciones del sistema por una ventana de cuadro de diálogo
+
 <!--3555947-->
-A veces los usuarios no ven la notificación del sistema de Windows sobre un reinicio o una implementación necesaria. Entonces no ven la experiencia de posponer el recordatorio. Este comportamiento puede conducir a una mala experiencia de usuario cuando el cliente llega a una fecha límite.
+***[Actualizado]*** A veces los usuarios no ven la notificación del sistema de Windows sobre un reinicio o una implementación necesaria. Entonces no ven la experiencia de posponer el recordatorio. Este comportamiento puede conducir a una mala experiencia de usuario cuando el cliente llega a una fecha límite.
 
-Ahora, si es necesario reiniciar las implementaciones o se requieren cambios de software, tiene la opción de utilizar una ventana de diálogo más intrusiva. 
+Ahora, si es necesario reiniciar las implementaciones o se requieren cambios de software, tiene la opción de utilizar una ventana de diálogo más intrusiva.
 
-#### <a name="software-changes-are-required"></a>Deben realizarse cambios en el software
-En la página **Experiencia del usuario**del Asistente para implementar software, seleccione la opción de notificación de usuario **Mostrar en el Centro de software y mostrar todas las notificaciones**. A continuación, seleccione la siguiente opción: **Cuando se requieren cambios de software, mostrar al usuario una ventana de diálogo en lugar de una notificación del sistema**.  
-
-<!-- For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex) -->
-
-#### <a name="restart-required"></a>Es necesario reiniciar
-En la configuración de cliente, en el grupo **Reinicio de equipo**, habilite la siguiente opción: **Cuando una implementación requiere reiniciar, mostrar al usuario una ventana de diálogo en lugar de una notificación del sistema**.  
-
-<!-- For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#computer-restart). -->
+Para más información, vea [Planeamiento del centro de software](/sccm/apps/plan-design/plan-for-software-center#bkmk_impact).
 
 
 ### <a name="configure-user-device-affinity-in-software-center"></a>Configuración de la afinidad entre usuario y dispositivo en el Centro de software
@@ -345,7 +353,7 @@ Especifique estos valores en el grupo de configuración de cliente **Centro de s
 <!--3734525-->
 ***[Actualizado]*** Ajuste la prioridad con la que los clientes instalan una actualización de características a través de [Mantenimiento de Windows 10](/sccm/osd/deploy-use/manage-windows-as-a-service). De forma predeterminada, los clientes ahora instalan las actualizaciones de características con mayor prioridad de procesamiento. 
 
-Use la configuración de cliente para configurar esta opción. En el grupo **Actualizaciones de software**, configure esta opción: **Especificación de la prioridad de subproceso para las actualizaciones de características**. 
+Use la configuración de cliente para configurar esta opción. En el grupo **Actualizaciones de software**, configure esta opción: **Especificación de la prioridad de subproceso para las actualizaciones de características**.
 
 Para más información, vea [Acerca de la configuración de cliente](/sccm/core/clients/deploy/about-client-settings#software-updates). 
 
@@ -384,9 +392,9 @@ Para más información, consulte [Administración de las actualizaciones de Offi
 
 ### <a name="office-products-on-lifecycle-dashboard"></a>Productos de Office en el panel de ciclo de vida
 <!--3556026-->
-El panel de ciclo de vida de los productos ahora incluye información sobre las versiones instaladas de Office 2003 hasta Office 2016. Los datos aparecen después de que el sitio ejecute la tarea de resumen del ciclo de vida, que es cada 24 horas.
+***[Actualizado]*** El panel de ciclo de vida de los productos ahora incluye información sobre las versiones instaladas de Office 2003 hasta Office 2016. Los datos aparecen después de que el sitio ejecute la tarea de resumen del ciclo de vida, que es cada 24 horas.
 
-<!-- For more information, see [Use the Product Lifecycle dashboard](/sccm/core/clients/manage/asset-intelligence/product-lifecycle-dashboard). -->
+Para más información, vea [Uso del panel de ciclo de vida del producto](/sccm/core/clients/manage/asset-intelligence/product-lifecycle-dashboard).
 
 
 
@@ -398,18 +406,18 @@ El panel de ciclo de vida de los productos ahora incluye información sobre las 
 
 ### <a name="dedicated-monitoring-for-phased-deployments"></a>Supervisión dedicada para implementaciones por fases
 <!--3555949-->
-Las implementaciones por fases ahora tienen su propio nodo de supervisión dedicado. Con este nodo es más fácil identificar las implementaciones por fases que creó y, después, ir a la vista de supervisión de la implementación por fases. En la consola de Configuration Manager, vaya al área de trabajo **Supervisión** y seleccione el nodo **Implementaciones por fases**. Se muestra la lista de implementaciones por fases.
+***[Actualizado]*** Las implementaciones por fases ahora tienen su propio nodo de supervisión dedicado. Con este nodo es más fácil identificar las implementaciones por fases que creó y, después, ir a la vista de supervisión de la implementación por fases. En la consola de Configuration Manager, vaya al área de trabajo **Supervisión** y seleccione el nodo **Implementaciones por fases**. Se muestra la lista de implementaciones por fases.
 
-<!-- For more information, see [Phased deployment monitoring view](/sccm/osd/deploy-use/manage-monitor-phased-deployments#bkmk_monitor). -->
+Para más información, vea la [vista de supervisión de implementaciones por fases](/sccm/osd/deploy-use/manage-monitor-phased-deployments#bkmk_monitor). 
 
 
 ### <a name="improvement-to-phased-deployment-success-criteria"></a>Mejora de los criterios de éxito para la implementación por fases
 <!--3555946-->
-Especifique criterios adicionales para el éxito de una fase en una implementación por fases. En lugar de solamente un porcentaje, este criterio ahora también puede ser el número de dispositivos implementados correctamente. Esta opción es útil cuando el tamaño de la colección es variable y tiene un número específico de dispositivos que deben implementarse correctamente para poder pasar a la siguiente fase. 
+***[Actualizado]*** Especifique criterios adicionales para el éxito de una fase en una implementación por fases. En lugar de solamente un porcentaje, este criterio ahora también puede ser el número de dispositivos implementados correctamente. Esta opción es útil cuando el tamaño de la colección es variable y tiene un número específico de dispositivos que deben implementarse correctamente para poder pasar a la siguiente fase. 
 
-Cree una implementación por fases para una secuencia de tareas, actualización de software o aplicación. En la página de configuración del asistente, seleccione la siguiente opción como criterios de éxito de la primera fase: **Número de dispositivos implementados correctamente**. 
+Cree una implementación por fases para una secuencia de tareas, actualización de software o aplicación. En la página de configuración del asistente, seleccione la siguiente opción como criterios de éxito de la primera fase: **Número de dispositivos implementados correctamente**.
 
-<!-- For more information, see [Create phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence). -->
+Para más información, vea [Crear implementaciones por fases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence).
 
 
 

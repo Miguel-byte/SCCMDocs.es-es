@@ -1,8 +1,8 @@
 ---
 title: Cuentas utilizadas
 titleSuffix: Configuration Manager
-description: Identifique y administre los grupos y las cuentas de Windows que se usan en Configuration Manager.
-ms.date: 03/29/2019
+description: Identifique y administre los grupos y las cuentas de Windows y los objetos de SQL que se usan en Configuration Manager.
+ms.date: 05/01/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a05ff407c3787283a58973f2861432a0a26a52b0
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: 7949808110d058bc1511abd1053e583b7f452cfa
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802791"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083570"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Cuentas que se usan en Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Use la información siguiente para identificar las cuentas y los grupos de Windows que se usan en Configuration Manager, cómo se usan y cualquier requisito.  
+Use la información siguiente para identificar las cuentas y los grupos de Windows y los objetos de SQL que se usan en Configuration Manager, cómo se usan y cualquier requisito.  
 
 - [Grupos de Windows que crea y usa Configuration Manager](#bkmk_groups)  
     - [ConfigMgr_CollectedFilesAccess](#configmgr_collectedfilesaccess)  
@@ -61,7 +61,10 @@ Use la información siguiente para identificar las cuentas y los grupos de Windo
     - [Cuenta de conexión de carpeta de red de secuencia de tareas](#task-sequence-network-folder-connection-account)  
     - [Cuenta de ejecución de secuencia de tareas](#task-sequence-run-as-account)  
 
-
+- [Objetos de usuario que Configuration Manager usa en SQL](#bkmk_sqlobjects)
+    - [smsdbuser_ReadOnly](#smsdbuser_ReadOnly)
+    - [smsdbuser_ReadWrite](#smsdbuser_ReadWrite)
+    - [smsdbuser_ReportSchema](#smsdbuser_ReportSchema)
 
 ## <a name="bkmk_groups"></a> Grupos de Windows que crea y usa Configuration Manager  
 
@@ -71,7 +74,7 @@ Use la información siguiente para identificar las cuentas y los grupos de Windo
 >  Cuando Configuration Manager crea un grupo en un equipo que es miembro del dominio, el grupo es un grupo de seguridad local. Si el equipo es un controlador de dominio, el grupo es un grupo local de dominio. Este tipo de grupo se comparte entre todos los controladores de dominio del dominio.  
 
 
-### <a name="configmgrcollectedfilesaccess"></a>ConfigMgr_CollectedFilesAccess
+### <a name="configmgr_collectedfilesaccess"></a> ConfigMgr_CollectedFilesAccess
 
 Configuration Manager usa este grupo para conceder acceso para ver los archivos recopilados por el inventario de software.  
 
@@ -89,7 +92,7 @@ Configuration Manager administra automáticamente la pertenencia al grupo. Entre
 De forma predeterminada, este grupo tiene el permiso **Lectura** en la siguiente carpeta del servidor de sitio: `C:\Program Files\Microsoft Configuration Manager\sinv.box\FileCol`.  
 
 
-### <a name="configmgrdviewaccess"></a>ConfigMgr_DViewAccess  
+### <a name="configmgr_dviewaccess"></a>ConfigMgr_DViewAccess  
 
  Se trata de un grupo de seguridad local que Configuration Manager crea en el servidor de base de datos del sitio o en el servidor de réplica de base de datos para un sitio primario secundario. El sitio lo crea cuando se usan vistas distribuidas para la replicación de base de datos entre los sitios de una jerarquía. Contiene el servidor de sitio y las cuentas de equipo de SQL Server del sitio de administración central.
 
@@ -589,3 +592,25 @@ Para obtener más información, vea [Planear actualizaciones de software](/sccm/
 >   
 >  Si la línea de comandos requiere acceso administrativo al equipo, considere la posibilidad de crear una cuenta de administrador local solo para esta cuenta en todos los equipos que ejecuten la secuencia de tareas. Elimine la cuenta cuando ya no la necesite.  
 
+
+## <a name="bkmk_sqlobjects"></a> Objetos de usuario que Configuration Manager usa en SQL 
+<!--SCCMDocs issue #1160-->
+Configuration Manager automáticamente crea y mantiene los siguientes objetos de usuario en SQL.  Estos objetos se encuentran en la base de datos de Configuration Manager, en Seguridad/Usuarios.  
+
+> [!IMPORTANT]  
+>  Modificar o quitar estos objetos puede provocar problemas drásticos dentro de un entorno de Configuration Manager.  Se recomienda no realizar ningún cambio en estos objetos.
+
+
+### <a name="smsdbuserreadonly"></a>smsdbuser_ReadOnly
+
+Este objeto se usa para ejecutar consultas en el contexto de solo lectura.  Este objeto se usa con varios procedimientos almacenados.
+
+
+### <a name="smsdbuserreadwrite"></a>smsdbuser_ReadWrite
+
+Este objeto se usa para proporcionar permisos para las instrucciones SQL dinámicas.
+
+
+### <a name="smsdbuserreportschema"></a>smsdbuser_ReportSchema
+
+Este objeto se usa para realizar ejecuciones de SQL Reporting.  El siguiente procedimiento almacenado se usa con esta función: spSRExecQuery.

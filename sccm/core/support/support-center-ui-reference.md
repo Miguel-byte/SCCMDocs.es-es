@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 41cdebfe-b595-40aa-a385-32e0746255ed
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 970d2fbf69a7c4c91a55cadf5d420988b2207ca2
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 7858497f1ff49e5068da066cc481ca5fd38f825f
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56131105"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500716"
 ---
 # <a name="support-center-user-interface-reference"></a>Referencia de la interfaz de usuario del Centro de soporte técnico
 
@@ -233,7 +233,7 @@ Los siguientes elementos de este menú solicitan una acción de cliente relacion
 
   - **Evaluación de implementación de actualizaciones de software**: inicia una tarea que evalúa las actualizaciones de software implementadas.  
 
-  - **Análisis de origen de actualizaciones de software**: inicia una tarea que analiza las ubicaciones de origen de las actualizaciones de software.  
+  - **Análisis de origen de actualizaciones de software**: inicia una tarea que analiza las ubicaciones de origen de las actualizaciones.  
 
   - **Actualización de lista de origen de Windows Installer**: inicia una tarea que actualiza la ubicación de origen de las instalaciones de Windows Installer (MSI).  
 

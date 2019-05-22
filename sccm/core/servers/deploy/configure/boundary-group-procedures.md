@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: a1fe22d0-4695-4de0-8bf0-e3475b03cf0e
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a7438a2815f615b029888d8fb1ca28f601735d5
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: fed583e07c59f61f5c06b8355f9d59f18dde47e6
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56140017"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499041"
 ---
 # <a name="how-to-configure-boundary-groups-for-configuration-manager"></a>Cómo configurar grupos de límites para Configuration Manager
 
@@ -102,7 +102,8 @@ Para más información, vea [Reserva](/sccm/core/servers/deploy/configure/bounda
 
 
 ### <a name="bkmk_options"></a> Configuración de opciones del grupo de límites
-<!--1356193--> A partir de la versión 1806, para configurar opciones adicionales para los clientes de este grupo de límites, cambie a la pestaña **Opciones**. Para más información, vea [Opciones de grupo de límites para descargas del mismo nivel](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).
+<!--1356193-->
+A partir de la versión 1806, para configurar opciones adicionales para los clientes de este grupo de límites, cambie a la pestaña **Opciones**. Para más información, vea ](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions)Opciones de grupo de límites para descargas del mismo nivel](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).
 
 - **Permitir descargas del mismo nivel en este grupo de límites**: Esta opción está habilitada de forma predeterminada. El punto de administración proporciona a los clientes una lista de ubicaciones de contenido que incluye orígenes del mismo nivel.  
 

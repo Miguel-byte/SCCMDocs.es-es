@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: bc6c3e5f-b9e2-400e-9d9d-446ff93c520c
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1609f162460d525a146289e70426783cd126912
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: b966654712dbe670ea200fbb4c975df26ecac542
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123440"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65495580"
 ---
 # <a name="what39s-new-in-version-1710-of-system-center-configuration-manager"></a>Novedades de la versión 1710 de System Center Configuration Manager
 
@@ -49,13 +49,13 @@ Version 1710 drops support for the following products:
 
 ## <a name="site-infrastructure"></a>Infraestructura del sitio
 
-### <a name="updates-for-peer-cache-----sms500850---"></a>Actualizaciones de la caché del mismo nivel <!-- sms500850 -->
+### <a name="updates-for-peer-cache-----sms500850---"></a>Actualizaciones de la caché del mismo nivel  <!-- sms500850 -->
 A partir de esta versión, la caché del mismo nivel ya no es una característica de versión preliminar.  En esta versión no se presenta ningún otro cambio. Para obtener más información, vea [Caché del mismo nivel para clientes de Configuration Manager](/sccm/core/plan-design/hierarchy/client-peer-cache).
 
-### <a name="cloud-distribution-point-support-for-azure-government-cloud------sms491428---"></a>Compatibilidad de los puntos de distribución en la nube con la nube de Azure Government<!-- sms491428 -->
+### <a name="cloud-distribution-point-support-for-azure-government-cloud------sms491428---"></a>Compatibilidad de los puntos de distribución en la nube con la nube de Azure Government   <!-- sms491428 -->
 Ahora puede usar [puntos de distribución en la nube](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point) en la nube de Azure Government.   
 
-### <a name="inventory-default-unit-revision----sms503697---"></a>Revisión de unidad de inventario predeterminado<!-- sms503697 -->
+### <a name="inventory-default-unit-revision----sms503697---"></a>Revisión de unidad de inventario predeterminado <!-- sms503697 -->
 Como en los dispositivos ahora se incluyen unidades de disco duro con tamaños en gigabytes (GB), terabytes (TB) y de mayor escala, en esta versión se cambia la unidad predeterminada (SMS_Units) que se usa en muchas vistas de megabytes (MB) a GB. Por ejemplo, el valor de v_gs_LogicalDisk.FreeSpace ahora indica unidades de GB.
 
 
@@ -65,9 +65,10 @@ Como en los dispositivos ahora se incluyen unidades de disco duro con tamaños e
 ## <a name="client-management"></a>Administración de cliente
 
 ### <a name="co-management-for-windows-10-devices"></a>Administración conjunta para dispositivos de Windows 10    
-<!-- 1350871 --> Las actualizaciones anteriores de Windows 10 ya permiten unir un dispositivo Windows 10 a Active Directory (AD) local y en la nube al mismo tiempo (Azure AD híbrido). A partir de la versión 1710 de Configuration Manager, la administración conjunta aprovecha esta mejora y permite administrar dispositivos de la versión 1709 de Windows 10 (también conocida con el nombre Fall Creators Update) de forma simultánea mediante Intune y Configuration Manager. Se trata de una solución que sirve de puente entre la administración tradicional y moderna, y proporciona un camino para realizar la transición con un enfoque por fases. Para más información, consulte [Administración conjunta para dispositivos de Windows 10](/sccm/comanage/overview).
+<!-- 1350871 -->
+Las actualizaciones anteriores de Windows 10 ya permiten unir un dispositivo Windows 10 a Active Directory (AD) local y en la nube al mismo tiempo (Azure AD híbrido). A partir de la versión 1710 de Configuration Manager, la administración conjunta aprovecha esta mejora y permite administrar dispositivos de la versión 1709 de Windows 10 (también conocida con el nombre Fall Creators Update) de forma simultánea mediante Intune y Configuration Manager. Se trata de una solución que sirve de puente entre la administración tradicional y moderna, y proporciona un camino para realizar la transición con un enfoque por fases. Para más información, consulte [Administración conjunta para dispositivos de Windows 10](/sccm/comanage/overview).
 
-### <a name="restart-computers-from-the-configuration-manager-console-----1356283---"></a>Reinicio de equipos desde la consola de Configuration Manager <!-- 1356283 -->
+### <a name="restart-computers-from-the-configuration-manager-console-----1356283---"></a>Reinicio de equipos desde la consola de Configuration Manager  <!-- 1356283 -->
 A partir de esta versión, puede usar la consola de Configuration Manager para identificar los dispositivos de cliente que requieren un reinicio y, después, usar una acción de notificación de cliente para reiniciarlos.
 
 Consulte [Cómo administrar clientes en System Center Configuration Manager](/sccm/core/clients/manage/manage-clients#restart-clients).
@@ -77,7 +78,7 @@ Consulte [Cómo administrar clientes en System Center Configuration Manager](/sc
 
 
 ## <a name="application-management"></a>Administración de aplicaciones
-### <a name="improvements-for-run-scripts------1236459---"></a>Mejoras en la funcionalidad de scripts de ejecución <!-- 1236459 -->
+### <a name="improvements-for-run-scripts------1236459---"></a>Mejoras en la funcionalidad de scripts de ejecución   <!-- 1236459 -->
 Esta versión ofrece varias mejoras en la funcionalidad de **scripts de ejecución**, que permite implementar scripts de PowerShell para ejecutarlos en los dispositivos administrados. Esta característica se introdujo por primera vez en la versión 1706.
 
 Estas son algunas de las mejoras:
@@ -88,7 +89,8 @@ Estas son algunas de las mejoras:
 Para obtener más información sobre el uso de la funcionalidad de scripts de ejecución, consulte [Creación y ejecución de scripts](../../../apps/deploy-use/create-deploy-scripts.md).
 
 ### <a name="new-mobile-application-management-policy-settings"></a>Configuración de nueva directiva de administración de aplicaciones móviles
-<!-- 1324760 --> Las siguientes opciones se han agregado a la configuración de directiva de administración de aplicaciones móviles:
+<!-- 1324760 -->
+Las siguientes opciones se han agregado a la configuración de directiva de administración de aplicaciones móviles:
 - **Deshabilitar sincronización de contactos**: impide que la aplicación guarde los datos en la aplicación de contactos nativa del dispositivo.
 - **Deshabilitar la impresión**: impide que la aplicación imprima datos profesionales o educativos.
 
@@ -101,7 +103,8 @@ Para agregar un icono para su aplicación en el Centro de software, consulte el 
 
 ## <a name="operating-system-deployment"></a>Implementación de sistema operativo
  > [!TIP]   
- > <!-- 1354281 --> A partir de la versión 1709 (también conocida como "Fall Creators Update") de Windows 10, Windows Media incluye varias ediciones. Al configurar una secuencia de tareas para usar un paquete de actualizaciones del sistema operativo o una imagen del sistema operativo, no olvide seleccionar una [edición que se pueda usar con Configuration Manager](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
+ > <!-- 1354281 -->
+ > A partir de la versión 1709 (también conocida como "Fall Creators Update") de Windows 10, Windows Media incluye varias ediciones. Al configurar una secuencia de tareas para usar un paquete de actualizaciones del sistema operativo o una imagen del sistema operativo, no olvide seleccionar una [edición que se pueda usar con Configuration Manager](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
 
 ### <a name="add-child-task-sequences-to-a-task-sequence"></a>Adición de secuencias de tareas secundarias a una secuencia de tareas
 <!-- 1261338 -->
@@ -111,13 +114,14 @@ Puede agregar un nuevo paso de secuencia de tareas que ejecute otra secuencia de
 Para obtener más información sobre la secuencia de tareas secundarias, lea la sección sobre [secuencias de tareas secundarias](/sccm/osd/understand/task-sequence-steps#child-task-sequence).
 
 ## <a name="software-center-customization"></a>Personalización de Centro de software
-<!-- 1351224 --> Puede agregar elementos de personalización de marca de empresa y especificar la visibilidad de las pestañas en el Centro de software. Puede agregar el nombre de compañía específico del Centro de software, establecer un tema de color para la configuración de Centro de software, establecer un logotipo de empresa y establecer las pestañas visibles para los dispositivos del cliente.
+<!-- 1351224 -->
+Puede agregar elementos de personalización de marca de empresa y especificar la visibilidad de las pestañas en el Centro de software. Puede agregar el nombre de compañía específico del Centro de software, establecer un tema de color para la configuración de Centro de software, establecer un logotipo de empresa y establecer las pestañas visibles para los dispositivos del cliente.
 
 Para obtener más información, consulte [Planear y configurar la administración de aplicaciones en Configuration Manager](/sccm/apps/plan-design/plan-for-and-configure-application-management).
 
 ## <a name="software-updates"></a>Actualizaciones de software
 
-### <a name="surface-driver-updates-----1098490---"></a>Actualizaciones de controladores de Surface <!-- 1098490 -->
+### <a name="surface-driver-updates-----1098490---"></a>Actualizaciones de controladores de Surface  <!-- 1098490 -->
 A partir de esta versión, la administración de actualizaciones de controladores de Surface ya no es una característica de versión preliminar.  
 
 
@@ -180,7 +184,7 @@ Para minimizar el riesgo de compatibilidad, los perfiles VPN existentes no se mo
 
 Para obtener más información, consulte [Perfiles de VPN en dispositivos móviles en System Center Configuration Manager](../../../mdm/deploy-use/create-vpn-profiles.md).
 
-### <a name="limited-support-for-cryptography-next-generation-cng-certificates----1356191---"></a>Compatibilidad limitada con certificados de Cryptography: Certificados de Next Generation (CNG) <!-- 1356191 -->
+### <a name="limited-support-for-cryptography-next-generation-cng-certificates----1356191---"></a>Compatibilidad limitada con certificados de Cryptography: Next Generation (CNG) <!-- 1356191 -->
 
 Configuration Manager tiene compatibilidad limitada con Cryptography: Next Generation (CNG). Los clientes de Configuration Manager pueden usar un certificado de autenticación del cliente PKI con clave privada en el proveedor de almacenamiento de claves (KSP) de CNG. Gracias a la compatibilidad con KSP, los clientes de Configuration Manager admiten una clave privada basada en hardware, como el KSP de TPM para los certificados de autenticación de cliente PKI.
 
@@ -199,7 +203,8 @@ También puede [crear e implementar directivas](/sccm/protect/deploy-use/create-
 También puede [crear e implementar directivas de Protección de aplicaciones de Windows Defender](/sccm/protect/deploy-use/create-deploy-application-guard-policy) con Configuration Manager Endpoint Protection.
 
 ### <a name="device-guard-policy-changes"></a>Cambios en la directiva de Device Guard
-<!-- 1355092 --> Se han realizado los siguientes tres cambios en relación con las directivas de Device Guard:
+<!-- 1355092 -->
+Se han realizado los siguientes tres cambios en relación con las directivas de Device Guard:
 
 - Las directivas de Device Guard se llaman ahora directivas de Windows Defender Application Control. Así, por ejemplo, el **Asistente para la creación de directivas de Device Guard** ahora se llama **Asistente para la creación de directivas de Windows Defender Application Control**.
 - Los dispositivos que utilizan Windows Fall Creators Update, versión 1709, para Windows no necesitan reiniciarse para aplicar las directivas de Windows Defender Application Control. Reiniciar sigue siendo la opción predeterminada, pero puede [desactivar los reinicios](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager).

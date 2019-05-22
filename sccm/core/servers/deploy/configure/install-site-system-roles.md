@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 61f5c774-7667-44ae-b8e4-a4951318b183
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d9028077d2d8fdae624ae7c10bfb7bf307f97a2
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 991db8c7076f9f76515aba17df6339c133f1d63e
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128331"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65498585"
 ---
 # <a name="install-site-system-roles-for-system-center-configuration-manager"></a>Instalación de roles de sistema de sitio para System Center Configuration Manager
 

@@ -2,7 +2,7 @@
 title: Acerca de la instalación y la actualización
 titleSuffix: Configuration Manager
 description: Obtenga información acerca de la diferencia entre las condiciones de instalación, actualización al administrar la infraestructura de Configuration Manager.
-ms.date: 1/11/2017
+ms.date: 04/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df4daee11a72100debb93270fc6e51ab1a5e2622
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 53803d154a871739c5dd8cf7eaff4eebf92fd651
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56140051"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083429"
 ---
 # <a name="about-upgrade-update-and-install-for-site-and-hierarchy-infrastructure"></a>Acerca de la actualización e instalación para sitios y jerarquía de infraestructura
 
@@ -34,11 +34,11 @@ Para obtener más información, consulte [Upgrade to System Center Configuration
 
 
 ## <a name="update"></a>Actualizar
-La *actualización* se usa para instalar actualizaciones en la consola para System Center Configuration Manager, y para actualizaciones fuera de banda que son actualizaciones que no se pueden enviar desde dentro de la consola de Configuration Manager. Las actualizaciones en la consola pueden modificar la versión del sitio de la rama actual (o sitio de vista previa técnica), por lo ejecuta una versión superior. Por ejemplo, si el sitio ejecuta la versión 1606, puede instalar una actualización para la versión 1610. Las actualizaciones también pueden instalar revisiones para un problema conocido sin modificar la versión de los sitios.      
+La *actualización* se usa para instalar actualizaciones en la consola para System Center Configuration Manager, y para actualizaciones fuera de banda que son actualizaciones que no se pueden enviar desde dentro de la consola de Configuration Manager. Las actualizaciones en la consola pueden modificar la versión del sitio de la rama actual (o sitio de vista previa técnica), por lo ejecuta una versión superior. Por ejemplo, si el sitio ejecuta la versión 1806, puede instalar una actualización para la versión 1810. Las actualizaciones también pueden instalar revisiones para un problema conocido sin modificar la versión del sitio.      
 
-Normalmente, las actualizaciones agregan revisiones de seguridad, mejoras de calidad y nuevas funciones a la implementación existente. Si usa la rama de versión preliminar técnica, una actualización puede instalar una versión más reciente de la versión preliminar técnica.
+Normalmente, las actualizaciones agregan revisiones de seguridad, mejoras de calidad y nuevas características a la implementación existente. Si usa la rama de versión preliminar técnica, una actualización puede instalar una versión más reciente de la versión preliminar técnica.
 -   Elija cuándo instalar la actualización en la consola, comenzando por el sitio del nivel superior de la jerarquía.
-- Puede instalar cualquier actualización disponible desde dentro de la consola. Por ejemplo, si su sitio ejecuta la versión 1602 y se ofrecen 1606 y 1610, considere instalar la versión 1610 porque cada versión incluye las funciones que estaban disponibles primero en las versiones publicadas anteriormente.
+- Puede instalar cualquier actualización disponible desde dentro de la consola. Por ejemplo, si su sitio ejecuta la versión 1802 y se ofrecen 1806 y 1810, considere instalar la versión 1810 porque cada versión incluye las características que estaban disponibles primero en las versiones publicadas anteriormente.
 - Después de que se complete una nueva actualización en el sitio de nivel superior, los sitios primarios principales inician automáticamente el proceso de actualización. Sin embargo, puede establecer [Ventanas de servicio](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkservicewindowa-service-windows-for-site-servers) para controlar la temporización de las actualizaciones.
 - Los sitios secundarios no instalan automáticamente las actualizaciones. En su lugar, inicie manualmente la actualización desde dentro de la consola de Configuration Manager.
 

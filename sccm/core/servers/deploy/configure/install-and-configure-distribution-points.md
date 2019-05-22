@@ -2,7 +2,7 @@
 title: Administración de puntos de distribución
 titleSuffix: Configuration Manager
 description: Use puntos de distribución para hospedar el contenido que implemente en dispositivos y usuarios.
-ms.date: 07/30/2018
+ms.date: 05/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d5d3a1efd2dc58cca06b18fc4221d52ce58bb7f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 3bd5a2b483551fc760b0dc69cd488bf1e3671732
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56125321"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65498658"
 ---
 # <a name="install-and-configure-distribution-points-in-configuration-manager"></a>Instalar y configurar puntos de distribución en Configuration Manager
 
@@ -169,7 +169,8 @@ Este proceso rellena automáticamente la pestaña **Miembros** de la ventana “
 
 
 ## <a name="bkmk_reassign"></a> Reasignar un punto de distribución
-<!-- 1306937 --> Muchos clientes tienen grandes infraestructuras de Configuration Manager y reducen los sitios primarios o secundarios para simplificar su entorno. Tienen que conservar los puntos de distribución en las ubicaciones de las sucursales para entregar el contenido a los clientes administrados. Estos puntos de distribución a menudo contienen varios terabytes o más de contenido. Este contenido es costoso en términos de tiempo y ancho de banda de red para distribuirlo entre estos servidores remotos. 
+<!-- 1306937 -->
+Muchos clientes tienen grandes infraestructuras de Configuration Manager y reducen los sitios primarios o secundarios para simplificar su entorno. Tienen que conservar los puntos de distribución en las ubicaciones de las sucursales para entregar el contenido a los clientes administrados. Estos puntos de distribución a menudo contienen varios terabytes o más de contenido. Este contenido es costoso en términos de tiempo y ancho de banda de red para distribuirlo entre estos servidores remotos. 
 
 A partir de la versión 1802, esta característica permite volver a asignar un punto de distribución a otro sitio primario sin redistribuir el contenido. Esta acción actualiza la asignación del sistema de sitio mientras se conserva todo el contenido en el servidor. Si necesita reasignar varios puntos de distribución, primero ejecute esta acción en un único punto de distribución. Después, continúe con otros servidores, de uno en uno.
 
@@ -190,7 +191,7 @@ Siga estos pasos para volver a asignar un punto de distribución:
 
 Supervise la reasignación del mismo modo que cuando se agrega un rol nuevo. El método más sencillo consiste en actualizar la vista de consola después de varios minutos. Agregue la columna de código de sitio a la vista. Este valor cambia cuando Configuration Manager reasigna el servidor. Si se intenta realizar otra acción en el servidor de destino antes de actualizar la vista de consola, se produce un error "objeto no encontrado". Asegúrese de que el proceso ha terminado y actualice la vista de consola antes de iniciar otras acciones en el servidor.
 
-Después de reasignar un punto de distribución, actualice el certificado del servidor. El servidor de sitio nuevo debe volver a cifrar este certificado con la clave pública y almacenarlo en la base de datos del sitio. Para obtener más información, vea la opción **Crear un certificado autofirmado o importar un certificado de cliente PKI para el punto de distribución** en la pestaña [General](#general) de las propiedades del punto de distribución. 
+Después de reasignar un punto de distribución, actualice el certificado del servidor. El servidor de sitio nuevo debe volver a cifrar este certificado con la clave pública y almacenarlo en la base de datos del sitio. Para obtener más información, vea la opción **Crear un certificado autofirmado o importar un certificado de cliente PKI para el punto de distribución** en la pestaña [General](#bkmk_config-general) de las propiedades del punto de distribución. 
 
 - Para los certificados PKI, no es necesario crear un certificado. Importe el mismo archivo .PFX y escriba la contraseña.  
 
@@ -255,7 +256,22 @@ Las opciones siguientes se encuentran en la página **Punto de distribución** d
 
 - **Habilitar y configurar BranchCache para este punto de distribución**: elija esta opción para permitir que Configuration Manager configure Windows BranchCache en el servidor de punto de distribución. Para obtener más información, vea [BranchCache](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#branchcache).  
 
-- **Ajustar la velocidad de descarga para usar el ancho de banda de red no utilizado (Windows LEDBAT)**<!--1358112-->: a partir de la versión 1806, habilite los puntos de distribución para usar el control de congestión de red. Para obtener más información, vea [Windows LEDBAT](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#windows-ledbat). El punto de distribución tiene que ejecutarse en la versión 1709 de Windows Server. No existen requisitos previos de cliente.  
+- **Ajustar la velocidad de descarga para usar el ancho de banda de red no utilizado (Windows LEDBAT)**<!--1358112-->: a partir de la versión 1806, habilite los puntos de distribución para usar el control de congestión de red. Para obtener más información, vea [Windows LEDBAT](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#windows-ledbat). Requisitos mínimos para la compatibilidad con LEDBAT:<!-- SCCMDocs issue 883 -->  
+
+    - Configuration Manager, versión 1806 (versión general)  
+
+        - Windows Server, versión 1709 o posterior  
+
+    - Configuration Manager, versión 1806 con el paquete acumulativo de actualizaciones (4462978), o posterior  
+
+        - Windows Server, versión 1709 o posterior
+        - Windows Server 2016 con las actualizaciones KB4132216 y KB4284833
+
+    - Configuration Manager, versión 1810 o posterior:
+
+        - Windows Server, versión 1709 o posterior
+        - Windows Server 2016 con las actualizaciones KB4132216 y KB4284833
+        - Windows Server 2019  
 
 - **Descripción**: descripción opcional para este rol de punto de distribución.  
 
@@ -343,12 +359,14 @@ Seleccione la opción **Habilitar compatibilidad de PXE para clientes** y, despu
 
 - **Habilitar un respondedor PXE sin Servicios de implementación de Windows**: a partir de la versión 1806, esta opción habilita un respondedor PXE en el punto de distribución que no requiere WDS (Servicios de implementación de Windows). El respondedor PXE es compatible con redes IPv6. Si habilita esta opción en un punto de distribución que ya sea compatible con PXE, Configuration Manager suspenderá el servicio WDS. Si deshabilita esta opción, pero activa la opción **Habilitar compatibilidad de PXE para clientes**, el punto de distribución volverá a habilitar WDS.<!--1357580-->  
 
-    > [!Note]
-    >No se permite usar el respondedor del entorno PXE sin WDS en servidores que también estén ejecutando un servidor DHCP.
+    > [!Note]  
+    > En la versión 1810 y anterior, no se permite usar el respondedor del entorno PXE sin WDS en servidores que también ejecutan un servidor DHCP.
+    >
+    > A partir de la versión 1902, cuando se habilita un respondedor del entorno PXE en un punto de distribución sin Servicio de implementación de Windows, ahora puede estar en el mismo servidor que el servicio DHCP. <!--3734270-->  
 
-- **Requerir una contraseña cuando los equipos usen PXE**: para proporcionar seguridad adicional para sus implementaciones de PXE, especifique una contraseña segura.  
+- **Requerir una contraseña cuando los equipos usen PXE**: para proporcionar seguridad adicional para sus implementaciones del entorno PXE, especifique una contraseña segura.  
 
-- **Afinidad entre usuario y dispositivo**: especifique cómo desea que el punto de distribución asocie usuarios al equipo de destino para las implementaciones de PXE. Elija una de las siguientes opciones:  
+- **Afinidad entre usuario y dispositivo**: especifique cómo desea que el punto de distribución asocie usuarios al equipo de destino para las implementaciones del entorno PXE. Elija una de las siguientes opciones:  
 
   - **Permitir afinidad de dispositivo de usuario con autoaprobación**: seleccione esta opción para asociar automáticamente los usuarios al equipo de destino sin tener que esperar aprobación.  
 
@@ -361,7 +379,7 @@ Seleccione la opción **Habilitar compatibilidad de PXE para clientes** y, despu
 - **Interfaces de red**: especifique que el punto de distribución responda a las solicitudes PXE desde todas las interfaces de red o desde interfaces de red específicas. Si el punto de distribución responde a interfaces de red específicas, especifique la dirección MAC de cada interfaz de red.  
 
     > [!Note]  
-    > Al cambiar la interfaz de red, reinicie el servicio WDS para asegurarse de que guarde correctamente la configuración. A partir de la versión 1806, al usar el servicio del respondedor PXE, reinicie el **Servicio del respondedor PXE de Configuration Manager** (SccmPxe).<!--SCCMDocs issue 642-->  
+    > Al cambiar la interfaz de red, reinicie el servicio WDS para asegurarse de que guarde correctamente la configuración. A partir de la versión 1806, al usar el servicio del respondedor del entorno PXE, reinicie el **Servicio del respondedor PXE de Configuration Manager** (SccmPxe).<!--SCCMDocs issue 642-->  
 
 - **Especificar retraso en la respuesta del servidor PXE (segundos)**: al usar varios servidores PXE, especifique cuánto tiempo tiene que esperar este punto de distribución compatible con PXE antes de que responda a solicitudes de equipos. De forma predeterminada, el punto de distribución compatible con PXE de Configuration Manager responde de inmediato.  
 
@@ -428,7 +446,7 @@ Administre el contenido que ha distribuido al punto de distribución. Realice un
 
 ### <a name="bkmk_config-valid"></a> Validación de contenido  
 
-Establezca una programación para validar la integridad de los archivos de contenido en el punto de distribución. Al habilitar la validación de contenido en una programación, Configuration Manager inicia el proceso en la hora programada. Verifica todo el contenido en el punto de distribución. También puede configurar la prioridad de la validación de contenido. De forma predeterminada, la prioridad está establecida en **La más baja**. Al aumentar la prioridad, puede incrementarse el uso del disco y el procesador en el servidor durante el proceso de validación, pero se completará más rápido. 
+Establezca una programación para validar la integridad de los archivos de contenido en el punto de distribución. Al habilitar la validación de contenido en una programación, Configuration Manager inicia el proceso en la hora programada. Verifica todo el contenido del punto de distribución en función de la clase de SCCMDP local SMS_PackagesInContLib. También puede configurar la prioridad de la validación de contenido. De forma predeterminada, la prioridad está establecida en **La más baja**. Al aumentar la prioridad, puede incrementarse el uso del disco y el procesador en el servidor durante el proceso de validación, pero se completará más rápido. 
 
 Para ver los resultados del proceso de validación de contenido, en el área de trabajo **Supervisión**, expanda **Estado de distribución** y luego elija el nodo **Estado de contenido**. Muestra el contenido de cada tipo de software (por ejemplo, aplicación, paquete de actualización de software e imagen de arranque).  
 

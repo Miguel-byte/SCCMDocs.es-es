@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e79ec4b19ad45c49438ef273bcaf031754cf7e7
-ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
+ms.openlocfilehash: 40cb1a96771181b395ec2f628e0f0c3c2efe29b7
+ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57558140"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65673310"
 ---
 # <a name="how-to-create-collections-in-configuration-manager"></a>Creación de recopilaciones en Configuration Manager
 
@@ -53,7 +53,7 @@ Para ver ejemplos de consultas que puede usar para crear recopilaciones, consult
 
 Puede facilitar la administración de los dispositivos mediante la asociación de las categorías de dispositivos con las recopilaciones de dispositivos. 
 
-Para obtener más información, consulte [Cómo clasificar automáticamente dispositivos en recopilaciones](/sccm/core/clients/manage/collections/automatically-categorize-devices-into-collections).<!-- SCCMDocs issue 552 -->
+Para más información, vea [Cómo clasificar automáticamente dispositivos en recopilaciones](/sccm/core/clients/manage/collections/automatically-categorize-devices-into-collections).<!-- SCCMDocs issue 552 -->
 
 
 ### <a name="include-collection-rule"></a>Regla de inclusión de recopilación
@@ -171,7 +171,7 @@ En el cuadro de diálogo **Propiedades de regla de consulta** , especifique la s
 
 - **Clase de recurso:** seleccione el tipo de recurso que quiera buscar y agregar a la recopilación. Seleccione uno de los valores de **Recurso del sistema** para buscar datos de inventario devueltos de equipos cliente o **Equipo desconocido** para seleccionar entre los valores devueltos por equipos desconocidos.  
 
-- **Editar instrucción de consulta**: abre el cuadro de diálogo **Propiedades de instrucción de consulta** donde puede crear una consulta para usarla como regla para la recopilación. Para obtener más información acerca de las consultas, consulte [Referencia técnica de consultas](/sccm/core/servers/manage/queries-technical-reference).  
+- **Editar instrucción de consulta**: abre el cuadro de diálogo **Propiedades de instrucción de consulta** donde puede crear una consulta para usarla como regla para la recopilación. Para más información sobre las consultas, vea [Introducción a las consultas](/sccm/core/servers/manage/introduction-to-queries).  
 
 
 ### <a name="bkmk-category"></a> Regla de categoría de dispositivos
@@ -182,7 +182,7 @@ Las siguientes acciones están disponibles en la ventana **Seleccionar categorí
 - **Cambiar nombre**: cambie el nombre de la categoría seleccionada
 - **Eliminar**: seleccione una o varias categorías y use esta acción para quitarlas de la lista
 
-Para obtener más información, consulte [Cómo clasificar automáticamente dispositivos en recopilaciones](/sccm/core/clients/manage/collections/automatically-categorize-devices-into-collections).<!-- SCCMDocs issue 552 -->
+Para más información, vea [Cómo clasificar automáticamente dispositivos en recopilaciones](/sccm/core/clients/manage/collections/automatically-categorize-devices-into-collections).<!-- SCCMDocs issue 552 -->
 
 
 ### <a name="bkmk-include"></a> Configuración de una regla de inclusión de recopilación  
@@ -218,3 +218,10 @@ Para obtener más información acerca de cómo exportar las colecciones, vea [Ad
 
 5. Complete el asistente para importar la recopilación. La nueva recopilación se muestra en el nodo **Recopilaciones de usuarios** o **Recopilaciones de dispositivos** del área de trabajo **Activos y compatibilidad** . Actualice o vuelva a cargar la consola de Configuration Manager para ver los miembros de la recopilación recién importada.  
 
+## <a name="bkmk_powershell"></a> Con PowerShell
+
+PowerShell puede usarse para crear e importar las recopilaciones.  Para obtener más información, vea:
+
+* [New-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmcollection)
+* [Set-CMCollection](https://docs.microsoft.com/powershell/module/ConfigurationManager/Set-CMCollection)
+* [Import-CMCollection](https://docs.microsoft.com/powershell/module/ConfigurationManager/Import-CMCollection)

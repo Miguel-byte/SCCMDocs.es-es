@@ -2,21 +2,21 @@
 title: CMTrace
 titleSuffix: Configuration Manager
 description: Obtenga información sobre cómo usar la herramienta CMTrace para ver los archivos de registro de Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 05/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 6a4a3290-5228-4871-918a-554aa1c20834
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87552016d1cd17e79abf01a9de9109195d3d2a70
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 988e834de78bac64be43600ca73d0d51ff29bf4b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56125330"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65496769"
 ---
 # <a name="cmtrace"></a>CMTrace
 
@@ -115,8 +115,8 @@ Las acciones siguientes están disponibles en el menú **Herramientas**:
 - [Filtro](#filter)
 - [Búsqueda de errores](#error-lookup)
 - [Pausar](#pause)
-- [Mostrar u ocultar detalles](#show-hide-details)
-- [Show/Hide Info Pane](#show-hide-info-pane) (Mostrar u ocultar panel de información)
+- [Mostrar u ocultar detalles](#show/hide-details)
+- [Show/Hide Info Pane](#show/hide-info-pane) (Mostrar u ocultar panel de información)
 
 #### <a name="find"></a>Buscar
 Busque una cadena de texto especificado en el archivo de registro abierto.  
@@ -141,7 +141,8 @@ Escriba una cadena que CMTrace use para buscar el texto de cada entrada del regi
 #### <a name="filter"></a>Filtro
 Muestra u oculta las líneas de registro según los criterios especificados. Aplique filtros a cualquiera de las cuatro columnas independientemente de si están visibles. Estas opciones se aplican a cada archivo de registro abierto. 
 
-Ejemplos: <!--SCCMDocs issue #603-->
+Ejemplo:
+<!--SCCMDocs issue #603-->
 - Filtro **smsts.log** en texto de entrada que contenga "la acción" o "el grupo". 
 - Filtro **InventoryAgent.log** cuando el texto de entrada contiene "destino".
 
@@ -230,7 +231,8 @@ CMTrace admite funcionalidad básica de arrastrar y colocar. Arrastre un archivo
 ## <a name="other-tips"></a>Otras sugerencias
 
 ### <a name="last-directory-registry-key"></a>Clave del registro de Last Directory
-<!--511280--> De forma predeterminada, CMTrace guarda la última ubicación del registro que se ha abierto. Este comportamiento es útil en el servidor de sitio porque el valor predeterminado es siempre la ruta de acceso de los registros. 
+<!--511280-->
+De forma predeterminada, CMTrace guarda la última ubicación del registro que se ha abierto. Este comportamiento es útil en el servidor de sitio porque el valor predeterminado es siempre la ruta de acceso de los registros. 
 
 La primera vez que se inicie en un cliente, el valor predeterminado es el directorio de trabajo actual. Esta ubicación puede ser la ruta de acceso donde guardó CMTrace o una ruta de acceso como `%userprofile%\Desktop`. 
 

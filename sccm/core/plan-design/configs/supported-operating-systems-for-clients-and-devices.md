@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 100fdd8e9032b1d16ae79b3cd52ffba3b3609446
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: af9d8c16033a22c828f014dfd4bad771851c08de
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56140167"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499335"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Versiones de SO admitidas para clientes y dispositivos de Configuration Manager
 
@@ -126,7 +126,7 @@ Las versiones de canal semestrales de Windows Server son instalaciones Server Co
 -   **Windows 10 Enterprise** (x86, x64)  
 
 -   **Windows 10 IoT Enterprise** (x86, x64)  
-    Esta versión incluye el canal de servicio a largo plazo (LTSC). Para obtener más información, vea [Overview of Windows 10 IoT Enterprise](https://docs.microsoft.com/windows/iot-core/windows-iot-enterprise) (Información general de Windows 10 IoT Enterprise).<!--SCCMDocs issue 560-->  
+    Esta versión incluye el canal de servicio a largo plazo (LTSC). Para más información, vea [Información general de Windows 10 IoT Enterprise](https://docs.microsoft.com/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->  
 
 -   **Windows Embedded 8.1 Industry** (x86, x64)    
 
@@ -342,7 +342,7 @@ Las siguientes versiones se admiten mediante el archivo .tar indicado.
 - **Windows 10 Pro Enterprise** (x86, x64)  
 
 - **Windows 10 IoT Enterprise** (x86, x64)  
-    Esta versión incluye el canal de servicio a largo plazo (LTSC). Para obtener más información, vea [Overview of Windows 10 IoT Enterprise](https://docs.microsoft.com/windows/iot-core/windows-iot-enterprise) (Información general de Windows 10 IoT Enterprise).<!--SCCMDocs issue 560-->  
+    Esta versión incluye el canal de servicio a largo plazo (LTSC). Para más información, vea [Información general de Windows 10 IoT Enterprise](https://docs.microsoft.com/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->  
 
 - **Windows 10 Mobile**  
 

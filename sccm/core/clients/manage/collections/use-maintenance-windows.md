@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 15dbcbb3d0528a2627ab00bf81c6de5f5441d9e2
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: cc4a984b15af66a5426d30f3fb4f0b68c794ba5f
+ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56120323"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65673335"
 ---
 # <a name="how-to-use-maintenance-windows-in-system-center-configuration-manager"></a>Cómo usar ventanas de mantenimiento en System Center Configuration Manager
 
@@ -66,3 +66,12 @@ Las ventanas de mantenimiento le permiten definir un período en el que pueden r
 7.  Haga una selección en la lista desplegable **Aplicar esta programación a**.  
 
 8.  Pulse **Aceptar** y, después, cierre el cuadro de diálogo **&lt;Propiedades\> de nombre de recopilación**.  
+ 
+## <a name="bkmk_powershell"></a> Con PowerShell
+
+PowerShell puede usarse para configurar ventanas de mantenimiento.  Para obtener más información, vea:
+
+* [Set-CMMaintenanceWindow](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmmaintenancewindow)
+* [Get-CMMaintenanceWindow](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmmaintenancewindow)
+* [New-CMMaintenanceWindow](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmmaintenancewindow)
+* [Remove-CMMaintenanceWindow](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmmaintenancewindow)

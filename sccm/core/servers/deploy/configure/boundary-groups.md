@@ -2,21 +2,21 @@
 title: Configurar grupos de límites
 titleSuffix: Configuration Manager
 description: Ayude a los clientes a encontrar sistemas de sitio mediante grupos de límites para organizar de manera lógica las ubicaciones de red relacionadas denominadas límites.
-ms.date: 11/27/2018
+ms.date: 05/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a1062cd5983c3eb0d1353b6387b7d9ee507df3b4
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 011f2cb69ec2de6070bc4f2266dbf73a0e1e7843
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56132646"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65498912"
 ---
 # <a name="configure-boundary-groups-for-configuration-manager"></a>Configuración de grupos de límites para Configuration Manager
 
@@ -41,7 +41,7 @@ Los clientes usan un grupo de límites para:
     - Puntos de administración preferidos  
 
         > [!Note]  
-        > Si usa puntos de administración preferidos, habilite esta opción para la jerarquía y no desde la configuración del grupo de límites. Para más información, vea [Habilitar el uso de puntos de administración preferidos](#to-enable-use-of-preferred-management-points).  
+        > Si usa puntos de administración preferidos, habilite esta opción para la jerarquía y no desde la configuración del grupo de límites. Para más información, vea [Habilitar el uso de puntos de administración preferidos](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_proc-prefer).  
 
 
 
@@ -185,13 +185,15 @@ En el archivo de registro **smsts.log** de la secuencia de tareas se muestra la 
 
 ### <a name="bkmk_bgoptions"></a> Opciones de grupo de límites para descargas del mismo nivel
 
-<!--1356193--> A partir de la versión 1806, los grupos de límites incluyen los siguientes valores de configuración adicionales para ofrecerle mayor control sobre la distribución de contenido en el entorno:  
+<!--1356193-->
+A partir de la versión 1806, los grupos de límites incluyen los siguientes valores de configuración adicionales para ofrecerle mayor control sobre la distribución de contenido en el entorno:  
 
 - [Permitir descargas del mismo nivel en este grupo de límites](#bkmk_bgoptions1)  
 
 - [Usar solo elementos del mismo nivel dentro de la misma subred durante las descargas del mismo nivel](#bkmk_bgoptions2)  
 
-<!--1358749--> En la versión 1810 se incorporan las opciones siguientes:  
+<!--1358749-->
+En la versión 1810 se incorporan las opciones siguientes:  
 
 - [Preferir puntos de distribución sobre elementos del mismo nivel con la misma subred](#bkmk_bgoptions3)  
 
@@ -280,7 +282,8 @@ Para obtener más información, consulte [Cambio manual de clientes a un nuevo p
 
 
 ## <a name="management-points"></a>Puntos de administración
-<!-- 1324594 --> A partir de la versión 1802, se configuran relaciones de reserva para los puntos de administración entre grupos de límites. Este comportamiento proporciona mayor control para los puntos de administración que utilizan los clientes. En la pestaña **Relaciones** de las propiedades del grupo de límites, hay una columna para el punto de administración. Cuando se agrega un nuevo grupo de límites de reserva, el tiempo de reserva para el punto de administración actualmente siempre es cero (0). Este comportamiento es el mismo para el **comportamiento predeterminado** en el grupo de límites predeterminado del sitio.
+<!-- 1324594 -->
+A partir de la versión 1802, se configuran relaciones de reserva para los puntos de administración entre grupos de límites. Este comportamiento proporciona mayor control para los puntos de administración que utilizan los clientes. En la pestaña **Relaciones** de las propiedades del grupo de límites, hay una columna para el punto de administración. Cuando se agrega un nuevo grupo de límites de reserva, el tiempo de reserva para el punto de administración actualmente siempre es cero (0). Este comportamiento es el mismo para el **comportamiento predeterminado** en el grupo de límites predeterminado del sitio.
 
 Anteriormente se producía un problema con frecuencia cuando tenía un punto de administración protegido en una red segura. Los clientes de la red corporativa principal reciben una directiva que incluye este punto de administración protegido, incluso aunque no se puedan comunicar con él a través de un firewall. Para solucionar este problema, utilice la opción **No usar reserva nunca** para asegurarse de que los clientes solo reservan para los puntos de administración con los que pueden comunicarse.
 

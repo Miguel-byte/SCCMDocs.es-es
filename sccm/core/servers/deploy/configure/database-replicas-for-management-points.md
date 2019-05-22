@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ce8cff2be91950ee7e43cd96f03ab41990170c9
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 3f03b5b01b443f1611d514e9a7473a93c8e0e5a0
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56139626"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499556"
 ---
 # <a name="database-replicas-for-management-points-for-system-center-configuration-manager"></a>Réplicas de bases de datos para puntos de administración de System Center Configuration Manager
 
@@ -115,13 +115,13 @@ Para configurar una réplica de base de datos, debe seguir los siguientes pasos:
 
     -   **Permisos de recurso compartido**:  
 
-        -   SYSTEM: **Escritura**  
+        -   SISTEMA: **Escritura**  
 
         -   ConfigMgr_MPReplicaAccess: **Lectura**  
 
     -   **Permisos NTFS**:  
 
-        -   SYSTEM: **Control total**  
+        -   SISTEMA: **Control total**  
 
         -   ConfigMgr_MPReplicaAccess: **Lectura**, **Lectura y ejecución**, **Mostrar el contenido de la carpeta**  
 
@@ -440,13 +440,13 @@ Para admitir la notificación de cliente con una réplica de base de datos para 
    > [!NOTE]  
    >  Cuando el servidor de réplica de base de datos no está en la instancia predeterminada de SQL Server, en este paso debe especificar el nombre de instancia junto con el nombre de la base de datos de réplica. Para ello, reemplace **&lt;nombre de base de datos de réplica\>** por **\nombre de instancia\\nombre de base de datos de réplica\>**.  
 
-4. A continuación, en el servidor de base de datos de sitio, ejecute el comando siguiente para exportar el certificado para el servidor de base de datos de sitio: **EXEC sp_BgbCreateAndBackupSQLCert '&lt;ruta de archivo de copia de seguridad de certificado\>'**  
+4. A continuación, en el servidor de base de datos de sitio, ejecute el comando siguiente para exportar el certificado para el servidor de base de datos del sitio: **EXEC sp_BgbCreateAndBackupSQLCert '&lt;ruta de archivo de copia de seguridad de certificado\>'**  
 
     Después de exportar el certificado del servidor de base de datos de sitio, coloque una copia del certificado en el servidor de réplica de base de datos.  
 
 5. Utilice **SQL Server Management Studio** para conectarse a la base de datos del servidor de réplica de base de datos. Después de conectarse a la base de datos del servidor de réplica de base de datos, ejecute una consulta para importar el certificado y especifique el código de sitio del sitio primario y el puerto de Service Broker que se utiliza en el servidor de base de datos de sitio. De esta forma, se configura el servidor de réplica de base de datos a fin de utilizar Service Broker para comunicarse con la base de datos del sitio primario.  
 
-    Ejecute la siguiente consulta para importar el certificado del servidor de base de datos de sitio: **EXEC sp_BgbConfigSSBForRemoteService '&lt;código de sitio\>', '&lt;puerto de SQL Service Broker\>', '&lt;ruta de archivo de certificado\>'**  
+    Ejecute la siguiente consulta para importar el certificado del servidor de base de datos del sitio: **EXEC sp_BgbConfigSSBForRemoteService '&lt;código de sitio\>', '&lt;puerto de SQL Service Broker\>', '&lt;ruta de archivo de certificado\>'**  
 
    Unos minutos después de completar la configuración de la base de datos de sitio y de la base de datos de réplica de base de datos, el administrador de notificaciones del sitio primario configura la conversación de Service Broker para la notificación de cliente desde la base de datos de sitio primario a la réplica de base de datos.  
 

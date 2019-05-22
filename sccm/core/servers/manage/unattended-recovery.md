@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 828c31d1-3d70-4412-b1a8-c92e7e504d39
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0da207f92ea2c11266831a0c03f5b846654e83a4
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 34072fe18bc2d0d751938ff536f6d4ba8e4c378b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56129007"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500947"
 ---
 # <a name="unattended-site-recovery-for-configuration-manager"></a>Recuperación de sitio desatendida de Configuration Manager   
 
@@ -43,8 +43,8 @@ ms.locfileid: "56129007"
 -   **Nombre de clave:** Acción
 
     -   **Obligatorio:** Sí
-    -   **Valores** RecuperarCCAR
-    -   **Detalles:** Recupera un sitio de administración central.
+    -   **Valores** RecoverCCAR
+    -   **Detalles:** recupera un sitio de administración central.
 
 
 -   **Nombre de clave:** CDLatest
@@ -72,7 +72,7 @@ ms.locfileid: "56129007"
 
 -   **Nombre de clave:** DatabaseRecoveryOptions
 
-    -   **Obligatorio:** Quizás
+    -   **Obligatorio:** quizás
     -   **Valores**   
          - **10** = restaurar la base de datos de sitio desde la copia de seguridad.  
          - **20** = usar una base de datos de sitio que se ha recuperado manualmente mediante otro método.   
@@ -83,7 +83,7 @@ ms.locfileid: "56129007"
 
 -   **Nombre de clave:** ReferenceSite  
 
-    -   **Obligatorio:** Quizás
+    -   **Obligatorio:** quizás
     -   **Valores** &lt;FQDNSitioReferencia\>
     -   **Detalles:** especifica el sitio primario de referencia. Si la copia de seguridad de la base de datos es anterior al período de retención de seguimiento de cambios, o si se recupera el sitio sin una copia de seguridad, el sitio de administración central usa el sitio de referencia para recuperar los datos globales.
 
@@ -102,9 +102,9 @@ ms.locfileid: "56129007"
 
 -   **Nombre de clave:** BackupLocation
 
-    -   **Obligatorio:** Quizás
+    -   **Obligatorio:** quizás
     -   **Valores** &lt;RutaDeAccesoAlConjuntoCopiaSeguridadBaseDatosSitio\>
-    -   **Detalles:** Especifica la ruta de acceso para el conjunto de copia de seguridad de base de datos de sitio. La clave **BackupLocation** es necesaria cuando configura un valor de **1** o **4** para la clave **ServerRecoveryOptions** , y configura un valor de **10** para la clave **DatabaseRecoveryOptions** .
+    -   **Detalles:** especifica la ruta de acceso al conjunto de copia de seguridad de base de datos de sitio. La clave **BackupLocation** es necesaria cuando configura un valor de **1** o **4** para la clave **ServerRecoveryOptions** , y configura un valor de **10** para la clave **DatabaseRecoveryOptions** .
 
 
 **Opciones**
@@ -128,7 +128,7 @@ ms.locfileid: "56129007"
 
   -   **Obligatorio:** Sí
   -   **Valores** SiteName
-  -   **Detalles:** Descripción de este sitio.
+  -   **Detalles:** descripción de este sitio.
 
 
 - **Nombre de clave:** SMSInstallDir
@@ -164,10 +164,10 @@ ms.locfileid: "56129007"
 
 - **Nombre de clave:** AdminConsole
 
-  -   **Obligatorio:** Quizás
+  -   **Obligatorio:** quizás
   -   **Valores** 0 o 1 0 = no instalar   
        1 = instalar
-  -   **Detalles:** Especifica si se va a instalar la consola de Configuration Manager. Esta clave es necesaria, salvo cuando **ServerRecoveryOptions** tiene un valor de **4**.
+  -   **Detalles:** especifica si se va a instalar la consola de Configuration Manager. Esta clave es necesaria, salvo cuando **ServerRecoveryOptions** tiene un valor de **4**.
 
 
 - **Nombre de clave:** JoinCEIP   
@@ -178,7 +178,7 @@ ms.locfileid: "56129007"
   -   **Valores** 0 o 1  
        0 = no unir  
        1 = unir
-  -   **Detalles:** Especifica si se va a participar en el Programa para la mejora de la experiencia del usuario.
+  -   **Detalles:** especifica si se va a participar en el Programa para la mejora de la experiencia del usuario.
 
 **SQLConfigOptions**
 
@@ -193,7 +193,7 @@ ms.locfileid: "56129007"
 
     -   **Obligatorio:** Sí
     -   **Valores** *&lt;NombreDeBaseDeDatosDeSitio\>* o *&lt;NombreInstancia\>*\\*&lt;NombreDeBaseDeDatosDeSitio\>*
-    -   **Detalles:** El nombre de la base de datos de SQL Server que se crea o utiliza para instalar la base de datos del sitio de administración central. Especifique el mismo nombre de base de datos que se usó antes de producirse el error.
+    -   **Detalles:** el nombre de la base de datos de SQL Server que se crea o utiliza para instalar la base de datos del sitio de administración central. Especifique el mismo nombre de base de datos que se usó antes de producirse el error.
 
         > [!IMPORTANT]  
         >  Si no se usa la instancia predeterminada, se debe especificar el nombre de instancia y el nombre de la base de datos del sitio.
@@ -202,7 +202,7 @@ ms.locfileid: "56129007"
 
     -   **Obligatorio:** No
     -   **Valores** &lt;*NúmeroDePuertoSSB*>
-    -   **Detalles:** Especifique el puerto de SQL Server Service Broker (SSB) utilizado por SQL Server. Normalmente, SSB está configurado para utilizar el puerto TCP 4022, pero se admiten otros puertos. Especifique el mismo puerto SSB que se usó antes de producirse el error.
+    -   **Detalles:** especifique el puerto de SQL Server Service Broker (SSB) utilizado por SQL Server. Normalmente, SSB está configurado para utilizar el puerto TCP 4022, pero se admiten otros puertos. Especifique el mismo puerto SSB que se usó antes de producirse el error.
 
 ## <a name="recover-a-primary-site-unattended"></a>Recuperación de un sitio primario desatendido
  Use la información siguiente para configurar un archivo de script de instalación desatendida para recuperar un sitio de administración central.
@@ -213,7 +213,7 @@ ms.locfileid: "56129007"
 
     -   **Obligatorio:** Sí
     -   **Valores** RecoverPrimarySite
-    -   **Detalles:** Recupera un sitio primario.
+    -   **Detalles:** recupera un sitio primario.
 
 
 -   **Nombre de clave:** CDLatest
@@ -243,7 +243,7 @@ ms.locfileid: "56129007"
 
 -   **Nombre de clave:** DatabaseRecoveryOptions
 
-    -   **Obligatorio:** Quizás
+    -   **Obligatorio:** quizás
     -   **Valores**   
          - **10** = restaurar la base de datos de sitio desde la copia de seguridad.  
          - **20** = usar una base de datos de sitio que se ha recuperado manualmente mediante otro método.     
@@ -261,9 +261,9 @@ ms.locfileid: "56129007"
 
 -   **Nombre de clave:** BackupLocation
 
-    -   **Obligatorio:** Quizás
+    -   **Obligatorio:** quizás
     -   **Valores** &lt;RutaDeAccesoAlConjuntoCopiaSeguridadBaseDatosSitio\>
-    -   **Detalles:** Especifica la ruta de acceso para el conjunto de copia de seguridad de base de datos de sitio. La clave **BackupLocation** es necesaria cuando configura un valor de **1** o **4** para la clave **ServerRecoveryOptions** , y configura un valor de **10** para la clave **DatabaseRecoveryOptions** .
+    -   **Detalles:** especifica la ruta de acceso al conjunto de copia de seguridad de base de datos de sitio. La clave **BackupLocation** es necesaria cuando configura un valor de **1** o **4** para la clave **ServerRecoveryOptions** , y configura un valor de **10** para la clave **DatabaseRecoveryOptions** .
 
 **Opciones**
 
@@ -287,7 +287,7 @@ ms.locfileid: "56129007"
 
     -   **Obligatorio:** Sí
     -   **Valores** SiteName
-    -   **Detalles:** Descripción de este sitio.
+    -   **Detalles:** descripción de este sitio.
 
 
 -   **Nombre de clave:** SMSInstallDir
@@ -325,11 +325,11 @@ ms.locfileid: "56129007"
 
 -   **Nombre de clave:** AdminConsole
 
-    -   **Obligatorio:** Quizás
+    -   **Obligatorio:** quizás
     -   **Valores** 0 o 1  
          0 = no instalar   
          1 = instalar  
-    -   **Detalles:** Especifica si se va a instalar la consola de Configuration Manager. Esta clave es necesaria, salvo cuando **ServerRecoveryOptions** tiene un valor de **4**.
+    -   **Detalles:** especifica si se va a instalar la consola de Configuration Manager. Esta clave es necesaria, salvo cuando **ServerRecoveryOptions** tiene un valor de **4**.
 
 -   **Nombre de clave:** JoinCEIP  
     > [!Note]  
@@ -339,7 +339,7 @@ ms.locfileid: "56129007"
     -   **Valores** 0 o 1    
          0 = no unir  
          1 = unir
-    -   **Detalles:** Especifica si se va a participar en el Programa para la mejora de la experiencia del usuario.
+    -   **Detalles:** especifica si se va a participar en el Programa para la mejora de la experiencia del usuario.
 
 
 **SQLConfigOptions**
@@ -355,7 +355,7 @@ ms.locfileid: "56129007"
 
     -   **Obligatorio:** Sí
     -   **Valores** *&lt;NombreDeBaseDeDatosDeSitio\>* o *&lt;NombreInstancia\>*\\*&lt;NombreDeBaseDeDatosDeSitio\>*
-    -   **Detalles:** El nombre de la base de datos de SQL Server que se crea o utiliza para instalar la base de datos del sitio de administración central. Especifique el mismo nombre de base de datos que se usó antes de producirse el error.
+    -   **Detalles:** el nombre de la base de datos de SQL Server que se crea o utiliza para instalar la base de datos del sitio de administración central. Especifique el mismo nombre de base de datos que se usó antes de producirse el error.
 
         > [!IMPORTANT]    
         >  Si no se usa la instancia predeterminada, se debe especificar el nombre de instancia y el nombre de la base de datos del sitio.
@@ -364,13 +364,13 @@ ms.locfileid: "56129007"
 
     -   **Obligatorio:** No
     -   **Valores** &lt;*NúmeroDePuertoSSB*>
-    -   **Detalles:** Especifique el puerto de SQL Server Service Broker (SSB) utilizado por SQL Server. Normalmente, SSB está configurado para utilizar el puerto TCP 4022, pero se admiten otros puertos. Especifique el mismo puerto SSB que se usó antes de producirse el error.
+    -   **Detalles:** especifique el puerto de SQL Server Service Broker (SSB) utilizado por SQL Server. Normalmente, SSB está configurado para utilizar el puerto TCP 4022, pero se admiten otros puertos. Especifique el mismo puerto SSB que se usó antes de producirse el error.
 
 **Jerarquía ExpansionOption**
 
 -   **Nombre de clave:** CCARSiteServer
 
-    -   **Obligatorio:** Quizás
+    -   **Obligatorio:** quizás
     -   **Valores** &lt;*CódigoDeSitioParaElSitioDeAdministraciónCentral*>
     -   **Detalles:** especifica el sitio de administración central al que se asocia un sitio primario al unirse a la jerarquía de Configuration Manager. Esta configuración es necesaria si el sitio primario estaba asociado con un sitio de administración central antes de producirse el error. Especifique el código de sitio que se usó para el sitio de administración central antes de que se produjera el error.
 
@@ -378,11 +378,11 @@ ms.locfileid: "56129007"
 
     -   **Obligatorio:** No
     -   **Valores** &lt;*Intervalo*>
-    -   **Detalles:** Especifica el intervalo de reintento (en minutos) para tratar de establecer una conexión con el sitio de administración central después de que se produce el error de conexión. Por ejemplo, si se produce un error en la conexión al sitio de administración central, el sitio primario espera el número de minutos especificado en CASRetryInterval y, después, vuelve a intentar la conexión.
+    -   **Detalles:** especifica el intervalo de reintento (en minutos) para tratar de establecer una conexión con el sitio de administración central después de que se produce el error de conexión. Por ejemplo, si se produce un error en la conexión al sitio de administración central, el sitio primario espera el número de minutos especificado en CASRetryInterval y, después, vuelve a intentar la conexión.
 
 
 -   **Nombre de clave:** WaitForCASTimeout
 
     -   **Obligatorio:** No
     -   **Valores** &lt;*Tiempo de espera*>
-    -   **Detalles:** Especifica el valor de tiempo de espera máximo (en minutos) de un sitio primario para conectarse al sitio de administración central. Por ejemplo, si se produce un error de conexión del sitio primario con el sitio de administración central, el sitio primario vuelve a tratar de establecer la conexión conforme al valor especificado para CASRetryInterval hasta que se alcanza el valor de tiempo de WaitForCASTimeout. Puede especificar un valor entre 0 y 100.
+    -   **Detalles:** especifica el valor de tiempo de espera máximo (en minutos) de un sitio primario para conectarse al sitio de administración central. Por ejemplo, si se produce un error de conexión del sitio primario con el sitio de administración central, el sitio primario vuelve a tratar de establecer la conexión conforme al valor especificado para CASRetryInterval hasta que se alcanza el valor de tiempo de WaitForCASTimeout. Puede especificar un valor entre 0 y 100.

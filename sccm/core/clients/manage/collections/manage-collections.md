@@ -2,7 +2,7 @@
 title: Administración de recopilaciones
 titleSuffix: Configuration Manager
 description: Realice tareas de administración de recopilaciones comunes en Configuration Manager.
-ms.date: 08/17/2018
+ms.date: 04/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93a502e9c77e05eedba1c2989cbae69e4080832f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 1a6b087b19a27bcb7cbc2fa2022d828aea58800b
+ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133738"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65673314"
 ---
 # <a name="how-to-manage-collections-in-configuration-manager"></a>Administración de recopilaciones en Configuration Manager
 
@@ -25,7 +25,7 @@ ms.locfileid: "56133738"
 Utilice la información de introducción de este artículo como ayuda para realizar tareas de administración para las recopilaciones en Configuration Manager.  
 
 > [!NOTE]  
->  Para obtener información sobre cómo crear recopilaciones de Configuration Manager, vea [How to create collections](/sccm/core/clients/manage/collections/create-collections) (Creación de recopilaciones).  
+>  Para obtener información sobre cómo crear recopilaciones de Configuration Manager, vea [How to create collections](/sccm/core/clients/manage/collections/create-collections) (Creación de recopilaciones).
 
 
 
@@ -53,7 +53,7 @@ Utilice la información de introducción de este artículo como ayuda para reali
  Se abre el **Asistente para la instalación de cliente**. Este asistente utiliza la instalación de inserción de cliente para instalar un cliente de Configuration Manager en todos los equipos de la recopilación seleccionada. Para obtener más información, vea [Instalación de inserción de cliente](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).
 
 
-#### <a name="run-script"></a>Ejecutar secuencia de comandos
+#### <a name="run-script"></a>Ejecutar script
  Se abre el Asistente para **ejecutar script** para ejecutar un script de PowerShell en todos los clientes de la recopilación. Para obtener más información, consulte [Creación y ejecución de scripts de PowerShell](/sccm/apps/deploy-use/create-deploy-scripts).
 
 
@@ -112,7 +112,7 @@ Utilice la información de introducción de este artículo como ayuda para reali
 
  - **Línea de base de configuración**: abre el cuadro de diálogo **Implementar líneas de base de configuración**. Configure la implementación de una o varias líneas base de configuración en la recopilación seleccionada. Para más información, vea [Cómo implementar líneas base de configuración](/sccm/compliance/deploy-use/deploy-configuration-baselines).  
 
- - **Secuencia de tareas**: abre el **Asistente para implementar software**. Seleccione y configure una implementación de secuencia de tareas en la recopilación seleccionada. Para obtener más información, vea [Manage task sequences to automate tasks](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS) (Administración de secuencias de tareas para automatizar tareas).  
+ - **Secuencia de tareas**: abre el **Asistente para implementar software**. Seleccione y configure una implementación de secuencia de tareas en la recopilación seleccionada. Para obtener más información, vea [Manage task sequences to automate tasks](/sccm/osd/deploy-use/deploy-a-task-sequence) (Administración de secuencias de tareas para automatizar tareas).  
 
  - **Actualizaciones de software**: se abre el **Asistente para implementar actualizaciones de software**. Configure la implementación de actualizaciones de software en los recursos de la recopilación seleccionada. Para obtener más información, vea [Administrar actualizaciones de software](/sccm/sum/understand/software-updates-introduction).  
 
@@ -127,7 +127,6 @@ Utilice la información de introducción de este artículo como ayuda para reali
 
 #### <a name="properties"></a>Propiedades
  Para obtener más información, consulte [Propiedades de recopilación](#BKMK_CollProp).  
-
 
 
 ## <a name="bkmk_user"></a> Administración de recopilaciones de usuarios  
@@ -152,10 +151,9 @@ Utilice la información de introducción de este artículo como ayuda para reali
  - **Implementar**  
      - **Aplicación**  
      - **Programa**  
-     - **Línea de base de configuración**   
+     - **Línea de base de configuración**
  - **Moverr**  
  - **Propiedades**
-
 
 
 ##  <a name="BKMK_CollProp"></a> Propiedades de recopilación  
@@ -188,3 +186,32 @@ Utilice la información de introducción de este artículo como ayuda para reali
 
 #### <a name="alerts"></a>Alertas 
  Configure cuándo se generan alertas del estado de los clientes y Endpoint Protection. Para obtener más información, vea [Cómo configurar el estado de cliente](/sccm/core/clients/deploy/configure-client-status) y [Cómo supervisar Endpoint Protection](/sccm/protect/deploy-use/monitor-endpoint-protection).  
+## <a name="bkmk_powershell"></a> Con PowerShell
+
+PowerShell puede usarse para administrar las recopilaciones.  Para obtener más información, vea:
+
+* [Get-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollection)
+* [Set-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmcollection)
+* [New-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmcollection)
+* [Copy-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/copy-cmcollection)
+* [Remove-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollection)
+* [Import-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/import-cmcollection)
+* [Export-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/export-cmcollection)
+* [Get-CMCollectionMember](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionmember)
+* [Get-CMCollectionSetting](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionsetting)
+* [Invoke-CMCollectionUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/invoke-cmcollectionupdate)
+* [Add-CMCollectionMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/add-cmcollectionmembershiprule)
+* [Set-CMCollectionPowerManagement](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmcollectionpowermanagement)
+* [Get-CMCollectionMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionmembershiprule)
+* [Remove-CMCollectionMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectionmembershiprule)
+* [Get-CMCollectionDirectMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectiondirectmembershiprule)
+* [Get-CMCollectionQueryMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionquerymembershiprule)
+* [Get-CMCollectionIncludeMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionincludemembershiprule)
+* [Add-CMCollectionToAdministrativeUser](https://docs.microsoft.com/powershell/module/configurationmanager/add-cmcollectiontoadministrativeuser)
+* [Remove-CMCollectionQueryMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectionquerymembershiprule)
+* [Remove-CMCollectionDirectMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectiondirectmembershiprule)
+* [Get-CMCollectionExcludeMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionexcludemembershiprule)
+* [Add-CMCollectionToDistributionPointGroup](https://docs.microsoft.com/powershell/module/configurationmanager/add-cmcollectiontodistributionpointgroup)
+* [Remove-CMCollectionIncludeMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectionincludemembershiprule)
+* [Remove-CMCollectionExcludeMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectionexcludemembershiprule)
+* [Remove-CMCollectionFromAdministrativeUser](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectionfromadministrativeuser)

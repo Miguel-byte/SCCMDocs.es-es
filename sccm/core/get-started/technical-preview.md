@@ -2,7 +2,7 @@
 title: Versiones de Technical Preview
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la rama de Technical Preview para probar nuevas funcionalidades y funcionalidades de Configuration Manager.
-ms.date: 04/03/2019
+ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2909de734954d9519c04bc02012c3bfe17c9b81f
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: c6797b25138bdd09dd4a879ef461d5420c38ab47
+ms.sourcegitcommit: 8eccf5429aabcef17d5762e4b03912ccad1215e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802519"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64928869"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview para Configuration Manager
 
@@ -119,19 +119,25 @@ Las características siguientes están disponibles con la versión de Technical 
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### <a name="technical-preview-version-1903"></a>Versión 1903 de Technical Preview
+### <a name="technical-preview-version-1904"></a>Versión 1904 de la versión preliminar técnica
 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor) <!--ID-->
 
-- [Programa de estimación de costes de servicios en la nube](/sccm/core/get-started/2019/technical-preview-1903#bkmk_cmg) <!--3555774-->  
+- [Panel de Upgrade Readiness para Office 365 ProPlus](/sccm/core/get-started/2019/technical-preview-1904#bkmk_o365) <!--4021125-->  
 
-- [Uso del punto de distribución como servidor de caché local para la Optimización de distribución](/sccm/core/get-started/2019/technical-preview-1903#bkmk_doinc) <!--3555764-->  
+- [Configurar la actualización dinámica durante las actualizaciones de características](/sccm/core/get-started/2019/technical-preview-1904#configure-dynamic-update-during-feature-updates) <!--4062619-->  
 
-- [Reclamación de bloqueo para editar secuencias de tareas](/sccm/core/get-started/2019/technical-preview-1903#bkmk_sedo) <!--3699337-->  
+- [GitHub y Centro de comunidad](/sccm/core/get-started/2019/technical-preview-1904#community-hub-and-github) <!--3555935,3555936-->  
 
-- [Obtención de detalles de actualizaciones necesarias](/sccm/core/get-started/2019/technical-preview-1903#bkmk_req-updates) <!--4224414-->  
+- [CMPivot independiente](/sccm/core/get-started/2019/technical-preview-1904#bkmk_cmpivot) <!--3555890-->  
 
-- [Mejoras en la creación de medios de secuencia de tareas](/sccm/core/get-started/2019/technical-preview-1903#bkmk_tsmedia) <!--4090666-->  
+- [Mejoras de la infraestructura del Centro de software](/sccm/core/get-started/2019/technical-preview-1904#bkmk_swctr) <!--3555950-->  
+
+- [Control mejorado del mantenimiento de WSUS](/sccm/core/get-started/2019/technical-preview-1904#improved-control-over-wsus-maintenance) <!--4110109-->  
+
+- [Imágenes de sistema operativo y paquetes de controladores de caché previa](/sccm/core/get-started/2019/technical-preview-1904#bkmk_precache) <!--4224642-->  
+
+- [Mejoras de la implementación del sistema operativo](/sccm/core/get-started/2019/technical-preview-1904#bkmk_osd) <!--2839943,4447680-->  
 
 > [!Note]  
 > Las características que estaban disponibles en una versión anterior de Technical Preview siguen estando disponibles en versiones posteriores. Del mismo modo, las características que se agregan a la rama actual de Configuration Manager siguen estando disponibles en la rama de Technical Preview.  
@@ -147,6 +153,11 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  | Característica | Versión de Technical Preview | Versión de rama actual |  
  |---------|---------------------------|------------------------|
+ | Programa de estimación de costes de servicios en la nube <!--3555774--> | [Versión preliminar técnica 1903](/sccm/core/get-started/2019/technical-preview-1903#bkmk_cmg) | ![Sin agregar](media/Red_X.gif) |
+ | Uso del punto de distribución como servidor de caché local para la Optimización de distribución <!--3555764--> | [Versión preliminar técnica 1903](/sccm/core/get-started/2019/technical-preview-1903#bkmk_doinc) | ![Sin agregar](media/Red_X.gif) |
+ | Reclamación de bloqueo para editar secuencias de tareas <!--3699337--> | [Versión preliminar técnica 1903](/sccm/core/get-started/2019/technical-preview-1903#bkmk_sedo) | ![Sin agregar](media/Red_X.gif) |
+ | Obtención de detalles de actualizaciones necesarias <!--4224414--> | [Versión preliminar técnica 1903](/sccm/core/get-started/2019/technical-preview-1903#bkmk_req-updates) | ![Sin agregar](media/Red_X.gif) |
+ | Mejoras en la creación de medios de secuencia de tareas <!--4090666--> | [Versión preliminar técnica 1903](/sccm/core/get-started/2019/technical-preview-1903#bkmk_tsmedia) | ![Sin agregar](media/Red_X.gif) |
  | Idiomas adicionales para las actualizaciones de Office 365 <!--3555955--> | [Tech Preview 1902.2](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_o365lang) | Versión 1902 |
  | Integración con los análisis para la preparación de Office 365 ProPlus <!--3735402--> | [Tech Preview 1902.2](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_o365) | Versión 1902 |
  | Mejora de los criterios de éxito para la implementación por fases <!--3555946--> | [Tech Preview 1902.2](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_pod) | Versión 1902 |
@@ -178,11 +189,7 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  | Detención del servicio en la nube cuando se supera el umbral <!--3735092--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmg) | Versión 1902 |
  | Tiempo de espera del modo de aprovisionamiento de cliente <!--3197824--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osdprov) | Versión 1902 |
  | Mejoras en la implementación del sistema operativo <!--3633146,3641475,3654172,3734270--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osd) | Versión 1902 |
- | Mejoras del paso de secuencia de tareas Ejecutar script de PowerShell <!--3556028 fka 1359389--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_posh) | Versión 1902 |
- | Mejoras de las aprobaciones de aplicación por correo electrónico <!--3594063--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_email) | Versión 1902 |
- | Configuración de la afinidad entre usuario y dispositivo en el Centro de software <!--3485366--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_uda) | Versión 1902 |
- | Mejoras en la consola de Configuration Manager <!--3594151--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_console) | Versión 1902 |
- | Descarga de informes desde el Centro de comunidad<!--3555936--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_hub) | ![Sin agregar](media/Red_X.gif) |
+
 
 ## <a name="features-in-previous-technical-previews"></a>Características de las versiones de Technical Preview anteriores
 
@@ -196,6 +203,7 @@ With each CB release, review and remove from this list for anything that's now a
 
 | Característica        | Versión de Technical Preview |  
 |----------------|---------------------------|
+| Descarga de informes desde el Centro de comunidad<!--3555936--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_hub) |
 | Centro de comunidad <!--3556020, fka 1357766--> | [Tech Preview 1807](capabilities-in-technical-preview-1807.md#bkmk_hub) |
 | Servicio del respondedor PXE basado en cliente <!--3556018, fka 1357148--> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |
 | Compatibilidad con el arranque de red de PXE para IPv6 <!--3601254, fka 1269793--> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|

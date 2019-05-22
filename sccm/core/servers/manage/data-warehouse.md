@@ -2,30 +2,31 @@
 title: Almacenamiento de datos
 titleSuffix: Configuration Manager
 description: Punto de servicio de almacenamiento de datos y base de datos para Configuration Manager
-ms.date: 11/27/2018
+ms.date: 05/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: aaf43e69-68b4-469a-ad58-9b66deb29057
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4630504cbbf4b00fbfa12b666e26b93fcda09ae5
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 02990fa09e18a9e46914ff622ed20f4cbb958f33
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56130180"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501131"
 ---
 #  <a name="the-data-warehouse-service-point-for-configuration-manager"></a>El punto de servicio de almacenamiento de datos para Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-<!--1277922--> Use el punto de servicio de almacenamiento de datos para almacenar y generar informes de datos históricos a largo plazo para su implementación de Configuration Manager.
+<!--1277922-->
+Use el punto de servicio de almacenamiento de datos para almacenar y generar informes de datos históricos a largo plazo para su implementación de Configuration Manager.
 
 > [!Note]  
-> Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para más información, vea [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+> Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para obtener más información, consulte [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
 
 
 El almacenamiento de datos admite hasta 2 TB de datos, con marcas de tiempo para el seguimiento de cambios. El almacenamiento de datos guarda datos sincronizando automáticamente la base de datos de sitio de Configuration Manager con la base de datos de almacenamiento de datos. Puede acceder a esta información desde su punto de servicio de informes. Los datos que se sincronizan con la base de datos de almacenamiento de datos se conservan durante tres años. Periódicamente, una tarea integrada quita los datos anteriores a este período.
@@ -84,12 +85,12 @@ Cada jerarquía admite una única instancia de este rol y puede encontrarse en c
 
 Para instalar el rol, use el **Asistente para agregar roles de sistema de sitio** o el **Asistente para crear servidor de sistema de sitio**. Para más información, consulte [Instalación de roles de sistema de sitio para System Center Configuration Manager](/sccm/core/servers/deploy/configure/install-site-system-roles). En la página **Selección de rol de sistema** del asistente, seleccione el rol **Punto de mantenimiento de almacenamiento de datos**. 
 
-Cuando instala el rol, Configuration Manager crea la base de datos de almacenamiento de datos en la instancia de SQL Server que especifique. Si especifica el nombre de una base de datos existente, Configuration Manager no creará ninguna base de datos, sino que utilizará la que especifique. Este proceso es el mismo que cuando se [mueve la base de datos de almacén de datos a un nuevo servidor SQL](#move-the-data-warehouse-database).
+Cuando instala el rol, Configuration Manager crea la base de datos de almacenamiento de datos en la instancia de SQL Server que especifique. Si especifica el nombre de una base de datos existente, Configuration Manager no creará ninguna base de datos, sino que utilizará la que especifique. Este proceso es el mismo que cuando se [mueve la base de datos de almacén de datos a un nuevo servidor SQL](#move-the-database).
 
 
 ### <a name="configure-properties"></a>Configuración de propiedades
 
-#### <a name="general-page"></a>Página General
+#### <a name="general-page"></a>Página general
 
 - **Nombre de dominio completo de SQL Server**: Especifique el nombre de dominio completo (FQDN) del servidor que hospeda la base de datos del punto de servicio de almacenamiento de datos.  
 

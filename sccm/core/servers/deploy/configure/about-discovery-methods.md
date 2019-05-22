@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: ed931751-18f2-4230-a09e-a0a329fbfa1c
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 59376c5b9846e32cc8b63666956424a11211f1c0
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 679f62bb38bab06c074c97e92ff7d3adcae80f1b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56130799"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501442"
 ---
 # <a name="about-discovery-methods-for-system-center-configuration-manager"></a>Acerca de los métodos de detección para System Center Configuration Manager
 
@@ -267,7 +267,7 @@ Para obtener más información sobre cómo configurar este método de detección
 Use este método para detectar la topología de la red y para detectar dispositivos de la red que tengan una dirección IP. Detección de redes busca en la red recursos habilitados para IP consultando las entidades siguientes: 
 - Servidores que ejecutan una implementación de Microsoft de DHCP.
 - Memorias caché de protocolo de resolución de direcciones (ARP) en enrutadores de red.
-- dispositivos habilitados para SNMP
+- Dispositivos habilitados para SNMP
 - Dominios de Active Directory.  
 
 Para usar la detección de redes, debe especificar el *nivel* de detección que se va a ejecutar. También puede configurar uno o más mecanismos de detección que permiten a Detección de redes consultar segmentos o dispositivos de red. Puede configurar asimismo las opciones que ayudan a controlar las acciones de detección en la red. Por último, puede definir una o más programaciones para la ejecución de Detección de redes.  

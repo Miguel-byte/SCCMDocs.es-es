@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 0da167f1-52cf-4dfd-8f73-833ca3eb8478
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5c85e3058a63868cfee28865c1be222919b29a8
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 434b53d24d050cc66cbb5e8bec7a681311f945b8
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56141830"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65498666"
 ---
 # <a name="command-line-options-for-setup-in-system-center-configuration-manager"></a>Opciones de la línea de comandos para la instalación en System Center Configuration Manager
 
@@ -75,7 +75,7 @@ ms.locfileid: "56141830"
 
     -   **Valores** ManageLanguages  
 
-    -   **Detalles:** Administra el servidor, el cliente y el soporte de idioma de cliente móvil en un sitio.  
+    -   **Detalles:** administra el servidor, el cliente y el soporte de idioma de cliente móvil en un sitio.  
 
 **Opciones**  
 
@@ -121,7 +121,7 @@ ms.locfileid: "56141830"
 
          1 = instalar  
 
-    -   **Detalles:** Especifica si están instalados los idiomas de cliente del dispositivo móvil.  
+    -   **Detalles:** especifica si están instalados los idiomas de cliente del dispositivo móvil.  
 
 -   **Nombre de clave:** PrerequisiteComp  
 
@@ -183,7 +183,7 @@ ms.locfileid: "56141830"
 
     -   **Valores:** <*código de sitio*>  
 
-    -   **Detalles:** Especifica los tres caracteres alfanuméricos que identifican el sitio de forma única en la jerarquía.  
+    -   **Detalles:** especifica los tres caracteres alfanuméricos que identifican el sitio de forma única en la jerarquía.  
 
 -   **Nombre de clave:** nombre de sitio.  
 
@@ -191,7 +191,7 @@ ms.locfileid: "56141830"
 
     -   **Valores:** <*nombre de sitio*>  
 
-    -   **Detalles:** Especifica el nombre para este sitio.  
+    -   **Detalles:** especifica el nombre para este sitio.  
 
 -   **Nombre de clave:** SMSInstallDir  
 
@@ -207,7 +207,7 @@ ms.locfileid: "56141830"
 
     -   **Valores:** <*FQDN del proveedor de SMS*>  
 
-    -   **Detalles:** Especifica el FQDN del servidor que hospedará el proveedor de SMS. Puede configurar proveedores de SMS adicionales para el sitio después de la instalación inicial.  
+    -   **Detalles:** especifica el FQDN del servidor que hospedará el proveedor de SMS. Puede configurar proveedores de SMS adicionales para el sitio después de la instalación inicial.  
 
 -   **Nombre de clave:** PrerequisiteComp  
 
@@ -239,7 +239,7 @@ ms.locfileid: "56141830"
 
          1 = instalar  
 
-    -   **Detalles:** Especifica si se va a instalar la consola de Configuration Manager.  
+    -   **Detalles:** especifica si se va a instalar la consola de Configuration Manager.  
 
 -   **Nombre de clave:** JoinCEIP  
     > [!Note]  
@@ -277,7 +277,7 @@ ms.locfileid: "56141830"
 
     -   **Valores** DEU, FRA, RUS, CHS, JPN, CHT, CSY, ESN, HUN, ITA, KOR, NLD, PLK, PTB, PTG, SVE, TRK o ZHH  
 
-    -   **Detalles:** Modifica un sitio después de instalarlo. Especifica los idiomas que se quitarán y que ya no estarán disponibles para la consola, los informes y los objetos de Configuration Manager. El inglés está disponible de forma predeterminada y no se puede quitar.  
+    -   **Detalles:** modifica un sitio después de instalarlo. Especifica los idiomas que se quitarán y que ya no estarán disponibles para la consola, los informes y los objetos de Configuration Manager. El inglés está disponible de forma predeterminada y no se puede quitar.  
 
 -   **Nombre de clave:** DeleteClientLanguages  
 
@@ -285,7 +285,7 @@ ms.locfileid: "56141830"
 
     -   **Valores** DEU, FRA, RUS, CHS, JPN, CHT, CSY, ESN, HUN, ITA, KOR, NLD, PLK, PTB, PTG, SVE, TRK o ZHH  
 
-    -   **Detalles:** Modifica un sitio después de instalarlo. Especifica los idiomas para quitar y cuáles ya no estarán disponibles para los equipos cliente. El inglés está disponible de forma predeterminada y no se puede quitar.  
+    -   **Detalles:** modifica un sitio después de instalarlo. Especifica los idiomas para quitar y cuáles ya no estarán disponibles para los equipos cliente. El inglés está disponible de forma predeterminada y no se puede quitar.  
 
 -   **Nombre de clave:** MobileDeviceLanguage  
 
@@ -297,7 +297,7 @@ ms.locfileid: "56141830"
 
          1 = instalar  
 
-    -   **Detalles:** Especifica si están instalados los idiomas de cliente del dispositivo móvil.  
+    -   **Detalles:** especifica si están instalados los idiomas de cliente del dispositivo móvil.  
 
 **SQLConfigOptions**  
 
@@ -326,7 +326,7 @@ ms.locfileid: "56141830"
 
     -   **Valores:** <*número de puerto SSB*>  
 
-    -   **Detalles:** Especifica el puerto de SQL Server Service Broker (SSB) que SQL Server utiliza. Normalmente, SSB está configurado para usar el puerto TCP 4022, pero se puede usar otro puerto.  
+    -   **Detalles:** especifica el puerto de SQL Server Service Broker (SSB) que SQL Server utiliza. Normalmente, SSB está configurado para usar el puerto TCP 4022, pero se puede usar otro puerto.  
 
 -   **Nombre de clave:** SQLDataFilePath  
 
@@ -405,7 +405,7 @@ Use los detalles siguientes para instalar un sitio primario mediante un archivo 
 
     -   **Valores** InstallPrimarySite  
 
-    -   **Detalles:** Instala un sitio primario.  
+    -   **Detalles:** instala un sitio primario.  
 
 -   **Nombre de clave:** CDLatest  
 
@@ -431,7 +431,7 @@ Use los detalles siguientes para instalar un sitio primario mediante un archivo 
 
     -   **Valores:** <*código de sitio*>  
 
-    -   **Detalles:** Especifica los tres caracteres alfanuméricos que identifican el sitio de forma única en la jerarquía.  
+    -   **Detalles:** especifica los tres caracteres alfanuméricos que identifican el sitio de forma única en la jerarquía.  
 
 -   **Nombre de clave:** SiteName  
 
@@ -439,7 +439,7 @@ Use los detalles siguientes para instalar un sitio primario mediante un archivo 
 
     -   **Valores:** <*nombre de sitio*>  
 
-    -   **Detalles:** Especifica el nombre para este sitio.  
+    -   **Detalles:** especifica el nombre para este sitio.  
 
 -   **Nombre de clave:** SMSInstallDir  
 
@@ -455,7 +455,7 @@ Use los detalles siguientes para instalar un sitio primario mediante un archivo 
 
     -   **Valores:** <*FQDN del proveedor de SMS*>  
 
-    -   **Detalles:** Especifica el FQDN del servidor que hospedará el proveedor de SMS. Puede configurar proveedores de SMS adicionales para el sitio después de la instalación inicial.  
+    -   **Detalles:** especifica el FQDN del servidor que hospedará el proveedor de SMS. Puede configurar proveedores de SMS adicionales para el sitio después de la instalación inicial.  
 
 -   **Nombre de clave:** PrerequisiteComp  
 
@@ -487,7 +487,7 @@ Use los detalles siguientes para instalar un sitio primario mediante un archivo 
 
          1 = instalar  
 
-    -   **Detalles:** Especifica si se va a instalar la consola de Configuration Manager.  
+    -   **Detalles:** especifica si se va a instalar la consola de Configuration Manager.  
 
 -   **Nombre de clave:** JoinCEIP  
     > [!Note]  
@@ -509,7 +509,7 @@ Use los detalles siguientes para instalar un sitio primario mediante un archivo 
 
     -   **Valores:** <*FQDN del servidor de sitio de punto de administración*>  
 
-    -   **Detalles:** Especifica el FQDN del servidor que hospedará el rol de sistema de sitio de punto de administración.  
+    -   **Detalles:** especifica el FQDN del servidor que hospedará el rol de sistema de sitio de punto de administración.  
 
 -   **Nombre de clave:** ManagementPointProtocol  
 
@@ -517,7 +517,7 @@ Use los detalles siguientes para instalar un sitio primario mediante un archivo 
 
     -   **Valores** HTTPS *o* HTTP  
 
-    -   **Detalles:** Especifica el protocolo que se utilizará para el punto de administración.  
+    -   **Detalles:** especifica el protocolo que se utilizará para el punto de administración.  
 
 -   **Nombre de clave:** DistributionPoint  
 
@@ -525,7 +525,7 @@ Use los detalles siguientes para instalar un sitio primario mediante un archivo 
 
     -   **Valores:** <*FQDN del servidor de sitio de punto de distribución*>  
 
-    -   **Detalles:** Especifica el protocolo que se utilizará para el punto de distribución.  
+    -   **Detalles:** especifica el protocolo que se utilizará para el punto de distribución.  
 
 -   **Nombre de clave:** DistributionPointProtocol  
 
@@ -533,7 +533,7 @@ Use los detalles siguientes para instalar un sitio primario mediante un archivo 
 
     -   **Valores** HTTPS *o* HTTP  
 
-    -   **Detalles:** Especifica el protocolo que se utilizará para el punto de distribución.  
+    -   **Detalles:** especifica el protocolo que se utilizará para el punto de distribución.  
 
 -   **Nombre de clave:** RoleCommunicationProtocol  
 
@@ -553,7 +553,7 @@ Use los detalles siguientes para instalar un sitio primario mediante un archivo 
 
          1 = usar  
 
-    -   **Detalles:** Especifica si los clientes van a utilizar un certificado PKI de cliente para comunicarse con roles de sistema de sitio.  
+    -   **Detalles:** especifica si los clientes van a utilizar un certificado PKI de cliente para comunicarse con roles de sistema de sitio.  
 
 -   **Nombre de clave:** AddServerLanguages  
 
@@ -577,7 +577,7 @@ Use los detalles siguientes para instalar un sitio primario mediante un archivo 
 
     -   **Valores** DEU, FRA, RUS, CHS, JPN, CHT, CSY, ESN, HUN, ITA, KOR, NLD, PLK, PTB, PTG, SVE, TRK o ZHH  
 
-    -   **Detalles:** Modifica un sitio después de instalarlo. Especifica los idiomas que se quitarán y que ya no estarán disponibles para la consola, los informes y los objetos de Configuration Manager. El inglés está disponible de forma predeterminada y no se puede quitar.  
+    -   **Detalles:** modifica un sitio después de instalarlo. Especifica los idiomas que se quitarán y que ya no estarán disponibles para la consola, los informes y los objetos de Configuration Manager. El inglés está disponible de forma predeterminada y no se puede quitar.  
 
 -   **Nombre de clave:** DeleteClientLanguages  
 
@@ -585,7 +585,7 @@ Use los detalles siguientes para instalar un sitio primario mediante un archivo 
 
     -   **Valores** DEU, FRA, RUS, CHS, JPN, CHT, CSY, ESN, HUN, ITA, KOR, NLD, PLK, PTB, PTG, SVE, TRK o ZHH  
 
-    -   **Detalles:** Modifica un sitio después de instalarlo. Especifica los idiomas para quitar y cuáles ya no estarán disponibles para los equipos cliente. El inglés está disponible de forma predeterminada y no se puede quitar.  
+    -   **Detalles:** modifica un sitio después de instalarlo. Especifica los idiomas para quitar y cuáles ya no estarán disponibles para los equipos cliente. El inglés está disponible de forma predeterminada y no se puede quitar.  
 
 -   **Nombre de clave:** MobileDeviceLanguage  
 
@@ -597,7 +597,7 @@ Use los detalles siguientes para instalar un sitio primario mediante un archivo 
 
          1 = instalar  
 
-    -   **Detalles:** Especifica si están instalados los idiomas de cliente del dispositivo móvil.  
+    -   **Detalles:** especifica si están instalados los idiomas de cliente del dispositivo móvil.  
 
 **SQLConfigOptions**  
 
@@ -660,7 +660,7 @@ Use los detalles siguientes para instalar un sitio primario mediante un archivo 
 
     -   **Valores:** <*Interval*>  
 
-    -   **Detalles:** Especifica el intervalo de reintento (en minutos) para tratar de establecer una conexión con el sitio de administración central después de que se produce el error de conexión. Por ejemplo, si se produce un error en la conexión al sitio de administración central, el sitio primario espera el número de minutos especificado para el valor **CASRetryInterval** y, después, vuelve a intentar la conexión.  
+    -   **Detalles:** especifica el intervalo de reintento (en minutos) para tratar de establecer una conexión con el sitio de administración central después de que se produce el error de conexión. Por ejemplo, si se produce un error en la conexión al sitio de administración central, el sitio primario espera el número de minutos especificado para el valor **CASRetryInterval** y, después, vuelve a intentar la conexión.  
 
 -   **Nombre de clave:** WaitForCASTimeout  
 
@@ -670,7 +670,7 @@ Use los detalles siguientes para instalar un sitio primario mediante un archivo 
 
          Un valor de **0** a **100**  
 
-    -   **Detalles:** Especifica el valor de tiempo de espera máximo (en minutos) de un sitio primario para conectarse al sitio de administración central. Por ejemplo, si se produce un error de conexión del sitio primario con el sitio de administración central, el sitio primario vuelve a tratar de establecer la conexión conforme al valor **CASRetryInterval** hasta que se alcanza el valor de tiempo de **WaitForCASTimeout**. Puede especificar un valor de **0** a **100**.  
+    -   **Detalles:** especifica el valor de tiempo de espera máximo (en minutos) de un sitio primario para conectarse al sitio de administración central. Por ejemplo, si se produce un error de conexión del sitio primario con el sitio de administración central, el sitio primario vuelve a tratar de establecer la conexión conforme al valor **CASRetryInterval** hasta que se alcanza el valor de tiempo de **WaitForCASTimeout**. Puede especificar un valor de **0** a **100**.  
 
 **CloudConnectorOptions**  
 
@@ -731,7 +731,7 @@ Use los detalles siguientes para instalar un sitio primario mediante un archivo 
 
     -   **Obligatorio:** Sí  
 
-    -   **Valores** RecuperarCCAR  
+    -   **Valores** RecoverCCAR  
 
     -   **Detalles:** recupera un sitio de administración central.  
 
@@ -807,7 +807,7 @@ Use los detalles siguientes para instalar un sitio primario mediante un archivo 
 
     -   **Valores:** <*ruta de acceso al conjunto de copia de seguridad de sitio*>  
 
-    -   **Detalles:** Especifica la ruta de acceso para el conjunto de copia de seguridad de base de datos de sitio.  
+    -   **Detalles:** especifica la ruta de acceso al conjunto de copia de seguridad de base de datos de sitio.  
 
 **Opciones**  
 
@@ -825,7 +825,7 @@ Use los detalles siguientes para instalar un sitio primario mediante un archivo 
 
     -   **Valores:** <*código de sitio*>  
 
-    -   **Detalles:** Especifica los tres caracteres alfanuméricos que identifican el sitio de forma única en la jerarquía. Especifique el código de sitio que usó el sitio antes de producirse el error.
+    -   **Detalles:** especifica los tres caracteres alfanuméricos que identifican el sitio de forma única en la jerarquía. Especifique el código de sitio que usó el sitio antes de producirse el error.
 
 -   **Nombre de clave:** SiteName  
 
@@ -833,7 +833,7 @@ Use los detalles siguientes para instalar un sitio primario mediante un archivo 
 
     -   **Valores:** <*nombre de sitio*>  
 
-    -   **Detalles:** Especifica el nombre para este sitio.  
+    -   **Detalles:** especifica el nombre para este sitio.  
 
 -   **Nombre de clave:** SMSInstallDir  
 
@@ -883,7 +883,7 @@ Use los detalles siguientes para instalar un sitio primario mediante un archivo 
 
          1 = instalar  
 
-    -   **Detalles:** Especifica si se va a instalar la consola de Configuration Manager.  
+    -   **Detalles:** especifica si se va a instalar la consola de Configuration Manager.  
 
 -   **Nombre de clave:** JoinCEIP  
     > [!Note]  
@@ -1069,7 +1069,7 @@ Use los detalles siguientes para instalar un sitio primario mediante un archivo 
 
     -   **Valores:** <*ruta de acceso al conjunto de copia de seguridad de sitio*>  
 
-    -   **Detalles:** Especifica la ruta de acceso para el conjunto de copia de seguridad de base de datos de sitio.  
+    -   **Detalles:** especifica la ruta de acceso al conjunto de copia de seguridad de base de datos de sitio.  
 
 **Opciones**  
 
@@ -1087,7 +1087,7 @@ Use los detalles siguientes para instalar un sitio primario mediante un archivo 
 
     -   **Valores:** <*código de sitio*>  
 
-    -   **Detalles:** Especifica los tres caracteres alfanuméricos que identifican el sitio de forma única en la jerarquía. Especifique el código de sitio que usó el sitio antes de producirse el error.
+    -   **Detalles:** especifica los tres caracteres alfanuméricos que identifican el sitio de forma única en la jerarquía. Especifique el código de sitio que usó el sitio antes de producirse el error.
 
 -   **Nombre de clave:** SiteName  
 
@@ -1095,7 +1095,7 @@ Use los detalles siguientes para instalar un sitio primario mediante un archivo 
 
     -   **Valores:** <*nombre de sitio*>  
 
-    -   **Detalles:** Especifica el nombre para este sitio.  
+    -   **Detalles:** especifica el nombre para este sitio.  
 
 -   **Nombre de clave:** SMSInstallDir  
 
@@ -1143,7 +1143,7 @@ Use los detalles siguientes para instalar un sitio primario mediante un archivo 
 
          1 = instalar  
 
-    -   **Detalles:** Especifica si se va a instalar la consola de Configuration Manager.  
+    -   **Detalles:** especifica si se va a instalar la consola de Configuration Manager.  
 
 -   **Nombre de clave:** JoinCEIP  
     > [!Note]  
@@ -1222,7 +1222,7 @@ Use los detalles siguientes para instalar un sitio primario mediante un archivo 
 
     -   **Valores:** <*Interval*>  
 
-    -   **Detalles:** Especifica el intervalo de reintento (en minutos) para tratar de establecer una conexión con el sitio de administración central después de que se produce el error de conexión. Por ejemplo, si se produce un error en la conexión al sitio de administración central, el sitio primario espera el número de minutos especificado para el valor **CASRetryInterval** y, después, vuelve a intentar la conexión.  
+    -   **Detalles:** especifica el intervalo de reintento (en minutos) para tratar de establecer una conexión con el sitio de administración central después de que se produce el error de conexión. Por ejemplo, si se produce un error en la conexión al sitio de administración central, el sitio primario espera el número de minutos especificado para el valor **CASRetryInterval** y, después, vuelve a intentar la conexión.  
 
 -   **Nombre de clave:** WaitForCASTimeout  
 
@@ -1230,7 +1230,7 @@ Use los detalles siguientes para instalar un sitio primario mediante un archivo 
 
     -   **Valores:** <*Tiempo de espera*>  
 
-    -   **Detalles:** Especifica el valor de tiempo de espera máximo (en minutos) de un sitio primario para conectarse al sitio de administración central. Por ejemplo, si se produce un error de conexión del sitio primario con el sitio de administración central, el sitio primario vuelve a tratar de establecer la conexión conforme al valor **CASRetryInterval** hasta que se alcanza el valor de tiempo de **WaitForCASTimeout**. Puede especificar un valor de **0** a **100**.  
+    -   **Detalles:** especifica el valor de tiempo de espera máximo (en minutos) de un sitio primario para conectarse al sitio de administración central. Por ejemplo, si se produce un error de conexión del sitio primario con el sitio de administración central, el sitio primario vuelve a tratar de establecer la conexión conforme al valor **CASRetryInterval** hasta que se alcanza el valor de tiempo de **WaitForCASTimeout**. Puede especificar un valor de **0** a **100**.  
 
 **CloudConnectorOptions**  
 

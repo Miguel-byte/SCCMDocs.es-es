@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 08e0382d-de05-4a76-ba5c-7223173f7066
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a96f9292256227da6a216a913c7a0be1be5c60d
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 33c10c82207d079dc5abd53c53673627888df955
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156719"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499741"
 ---
 # <a name="configure-asset-intelligence-in-system-center-configuration-manager"></a>Configurar Asset Intelligence en System Center Configuration Manager
 
@@ -200,9 +200,9 @@ Asset Intelligence coincide con los productos que se especifican en la declaraci
 |EffectiveQuantity|Valor entero|Sí|Número de licencias adquiridas|  
 |PONumber|Hasta 255 caracteres|No|Información del pedido de compra|  
 |ResellerName|Hasta 255 caracteres|No|Información del distribuidor|  
-|DateOfPurchase|Valor de fecha en el siguiente formato: MM/DD/AAAA|No|Informes de adquisición de la licencia|  
+|DateOfPurchase|Valor de fecha en el siguiente formato: DD/MM/AAAA|No|Informes de adquisición de la licencia|  
 |SupportPurchased|Valor de bit|No|0 o 1: escriba 0 para indicar sí; 1 para no|  
-|SupportExpirationDate|Valor de fecha en el siguiente formato: MM/DD/AAAA|No|Fecha de finalización del soporte técnico adquirido|  
+|SupportExpirationDate|Valor de fecha en el siguiente formato: DD/MM/AAAA|No|Fecha de finalización del soporte técnico adquirido|  
 |Comentarios|Hasta 255 caracteres|No|Comentarios opcionales|  
 
 ###  <a name="BKMK_ConfigureMaintenanceTasks"></a> Configure Asset Intelligence maintenance tasks  

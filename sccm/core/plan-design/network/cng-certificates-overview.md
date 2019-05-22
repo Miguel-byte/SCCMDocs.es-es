@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: dba904ae-7c44-46db-ae63-999b9821cb46
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2fb57705079072e6a656464f5b7252b2ce05ad9d
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 36db15b340a4122d44e60ee5a2a3eec101c16556
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123253"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499385"
 ---
 # <a name="cng-certificates-overview"></a>Introducción a los certificados CNG
 <!-- 1356191 --> 

@@ -2,7 +2,7 @@
 title: Supervisión de la administración conjunta
 titleSuffix: Configuration Manager
 description: Utilice el panel de administración conjunta para revisar información sobre los dispositivos administrados conjuntamente.
-ms.date: 01/14/2019
+ms.date: 04/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c731692bc2277cc5ce97e079387b392ca09ff3e
-ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.openlocfilehash: f10e71bbf3099bad4d367f068c4a5f9e098f97eb
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "56755588"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083278"
 ---
 # <a name="how-to-monitor-co-management-in-configuration-manager"></a>Supervisión de la administración conjunta en Configuration Manager
 
@@ -172,6 +172,7 @@ Para más información, consulte [MDM Registration Error Values](https://docs.mi
 
 en el nodo **Implementaciones** del área de trabajo **Supervisión** se crean dos directivas. Una es para el grupo piloto y otra para producción. Estas directivas solo informan del número de dispositivos donde Configuration Manager ha aplicado la directiva. No tienen en cuenta cuántos están inscritos en Intune, que es un requisito antes de que los dispositivos se puedan administrar conjuntamente.  
 
+La directiva de producción (CoMgmtSettingsProd) está destinada a la colección **Todos los sistemas**. Tiene una condición de aplicabilidad que comprueba la versión y el tipo de sistema operativo. Si el cliente es un sistema operativo de servidor o no es Windows 10, la directiva no se aplica y, por tanto, no se realiza ninguna acción.
 
 
 ## <a name="wmi-device-data"></a>Datos del dispositivo de WMI

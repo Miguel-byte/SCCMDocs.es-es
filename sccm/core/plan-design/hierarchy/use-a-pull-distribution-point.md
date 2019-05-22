@@ -2,7 +2,7 @@
 title: Punto de distribución de extracción
 titleSuffix: Configuration Manager
 description: Obtenga información sobre las configuraciones y las limitaciones del uso de un punto de distribución de extracción con Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 05/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a5336db0bd16d4845650bae775f2eff895e617fb
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 488fa5251711c8d9c7702e2b240a6f10602d447f
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56142279"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499282"
 ---
 # <a name="use-a-pull-distribution-point-with-configuration-manager"></a>Usar un punto de distribución de extracción con Configuration Manager
 
@@ -102,7 +102,7 @@ Cuando use un punto de distribución de extracción, revise y configure las sigu
 
 -   Los puntos de distribución de extracción no usan la configuración de la pestaña **General** de **Propiedades del componente de distribución de software** para cada sitio. Estas opciones incluyen **Configuración de distribución simultánea** y **Configuración de reintento de multidifusión**.  
 
--   Para transferir contenido de un punto de distribución de origen en un bosque remoto, instale el cliente de Configuration Manager en el punto de distribución de extracción. Además, configure una cuenta de acceso a la red con acceso al punto de distribución de origen. A partir de la versión 1806, si habilita la opción del sitio **Use los certificados generados por Configuration Manager en sistemas de sitios HTTP**, no necesita una cuenta de acceso a la red.<!--1358228-->  
+-   Para transferir contenido de un punto de distribución de origen en un bosque remoto, instale el cliente de Configuration Manager en el punto de distribución de extracción. Además, configure una cuenta de acceso a la red con acceso al punto de distribución de origen. A partir de la versión 1806, si habilita la opción del sitio **Usar los certificados generados por Configuration Manager para sistemas de sitios HTTP**, no necesita una cuenta de acceso a la red.<!--1358228-->  
 
 -   Si el punto de distribución de extracción también es un cliente de Configuration Manager, la versión del cliente debe ser la misma que la del sitio de Configuration Manager que instala el punto de distribución de extracción. El punto de distribución de extracción usa CCMFramework, que es común al punto de distribución de extracción y al cliente de Configuration Manager.  
 
@@ -120,7 +120,7 @@ Al configurar el punto de distribución de extracción, especifique uno o varios
 
 -   Use el SDK de Configuration Manager para especificar un punto de distribución de origen configurado para HTTPS. Para usar un punto de distribución de origen configurado para HTTPS, instale el cliente de Configuration Manager en el punto de distribución de extracción.  
 
--   A partir de la versión 1806, si sus oficinas remotas tienen una mejor conexión a Internet o si quiere reducir la carga en los vínculos a WAN, use como origen un [punto de distribución de nube](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point) en Microsoft Azure. El punto de distribución de extracción necesita acceso a Internet para comunicarse con Microsoft Azure. El contenido se debe distribuir al punto de distribución de nube de origen.<!--1321554-->  
+-   A partir de la versión 1806, si sus oficinas remotas tienen una mejor conexión a Internet o si quiere reducir la carga en los vínculos a WAN, use como origen un [punto de distribución de nube](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point) en Microsoft Azure. El punto de distribución de extracción necesita acceso a Internet para comunicarse con Microsoft Azure. El contenido debe distribuirse al punto de distribución de nube de origen.<!--1321554-->  
 
     > [!Note]  
     > Esta característica no genera gastos por almacenamiento de datos y salida de red en la suscripción de Azure. Para obtener más información, vea [Costo de la utilización de la distribución basada en la nube](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_cost).  

@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
 ms.assetid: 1026d616-2a20-4fb2-8604-d331763937f8
-author: aczechowski
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f378bb3bda5341e99eb06303d5fb5a8e13c8ac88
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: 4cba7c2bf782dce636117e71cb6982cd95ffb8ab
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58524072"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500092"
 ---
 # <a name="hardware-inventory-for-linux-and-unix-in-configuration-manager"></a>Inventario de hardware para Linux y UNIX en Configuration Manager
 
@@ -113,7 +113,7 @@ Las acciones del inventario de hardware se especifican en el archivo de registro
 
 1.  Copie la biblioteca del proveedor en cada equipo Linux y UNIX del que desea recopilar el inventario. El nombre de la biblioteca del proveedor es similar al siguiente: **XYZ_MyProvider.SO**  
 
-2.  A continuación, en cada equipo Linux y UNIX, registre la biblioteca del proveedor en el servidor OMI. El servidor OMI se instala en el equipo al instalar el cliente de Configuration Manager para Linux y UNIX, pero debe registrar manualmente los proveedores personalizados. Utilice la siguiente línea de comandos para registrar el proveedor: `/opt/microsoft/omi/bin/omireg XYZ_MyProvider.so`  
+2.  A continuación, en cada equipo Linux y UNIX, registre la biblioteca del proveedor en el servidor OMI. El servidor OMI se instala en el equipo al instalar el cliente de Configuration Manager para Linux y UNIX, pero debe registrar manualmente los proveedores personalizados. Utilice la siguiente línea de comandos para registrar el proveedor: `/opt/microsoft/omi/bin/omireg XYZ_MyProvider.so`.  
 
 3.  Después de registrar el nuevo proveedor, pruebe el proveedor mediante la herramienta **omicli** . La herramienta de **omicli** se instala en cada equipo Linux y UNIX al instalar el cliente de Configuration Manager para Linux y UNIX. Por ejemplo, donde **XYZ_MyProvider** es el nombre del proveedor que creó, ejecute el siguiente comando en el equipo: **/opt/microsoft/omi/bin/omicli ei root/cimv2 XYZ_MyProvider**  
 

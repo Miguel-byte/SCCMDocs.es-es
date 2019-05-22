@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: a79f83be-884c-48e6-94d6-ed0a68c22e2f
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8621f759a2e79090c6cd6dac5f2f3749147cabed
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: f2312cb68940f5d0eb3d0dd33d192d07b6801d8e
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133357"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501031"
 ---
 # <a name="management-insights-in-configuration-manager"></a>Información de administración en Configuration Manager
 
@@ -65,7 +65,8 @@ Las reglas de información de administración vuelven a evaluar su aplicabilidad
 
 El archivo de registro para reglas de información de administración es **SMS_DataEngine.log** en el servidor de sitio.
 
-<!--1357930--> A partir de la versión 1806, algunas reglas le permiten tomar medidas. Seleccione una regla y haga clic en **Más detalles**. Después, si está disponible, seleccione **Tomar medidas**. 
+<!--1357930-->
+A partir de la versión 1806, algunas reglas le permiten tomar medidas. Seleccione una regla y haga clic en **Más detalles**. Después, si está disponible, seleccione **Tomar medidas**. 
 
 En función de la regla, esta acción muestra uno de los siguientes comportamientos:  
 
@@ -144,7 +145,8 @@ Información que ayuda a simplificar la administración mediante la limpieza y r
 
 
 ### <a name="proactive-maintenance"></a>Mantenimiento proactivo
-<!--1352184--> A partir de la versión 1806, las reglas de este grupo resaltan posibles problemas de configuración que puede evitar mediante el mantenimiento de los objetos de Configuration Manager.    
+<!--1352184-->
+A partir de la versión 1806, las reglas de este grupo resaltan posibles problemas de configuración que puede evitar mediante el mantenimiento de los objetos de Configuration Manager.    
 
 - **Grupos de límites sin sistemas de sitio asignados**: sin los sistemas de sitio asignados, los grupos de límites solo pueden usarse para la asignación de sitio. Para obtener más información, vea [Configuración de grupos de límites](/sccm/core/servers/deploy/configure/boundary-groups).  
 

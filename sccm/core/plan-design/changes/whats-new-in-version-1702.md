@@ -7,17 +7,17 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 409e26e1-7716-4f1d-a0ee-34feabf20792
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2cc827b782f6776978c1a2361f1ed8d1659f23a3
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 55e29269bab2ed1a75f00848a59f3345d0a8c071
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128473"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65495150"
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>Novedades de la versión 1702 de System Center Configuration Manager
 
@@ -202,13 +202,13 @@ Esta versión presenta las siguientes mejoras:
 ### <a name="improvements-to-the-auto-apply-driver-task-sequence"></a>Mejoras en la secuencia de tareas Aplicar controladores automáticamente
 Ahora hay disponibles nuevas variables de secuencia de tareas para configurar el valor del tiempo de espera en el paso de secuencia de tareas de aplicación automática de controladores cuando se realizan solicitudes del catálogo HTTP. Están disponibles las siguientes variables y valores predeterminados (en segundos):
    - Valor predeterminado de SMSTSDriverRequestResolveTimeOut:  
-     Predeterminado: 60
+     Valor predeterminado: 60
    - Valor predeterminado de SMSTSDriverRequestConnectTimeOut:  
-     Predeterminado: 60
+     Valor predeterminado: 60
    - Valor predeterminado de SMSTSDriverRequestSendTimeOut:  
-     Predeterminado: 60
+     Valor predeterminado: 60
    - Valor predeterminado de SMSTSDriverRequestReceiveTimeOut:  
-     Predeterminado: 480
+     Valor predeterminado: 480
 
 ### <a name="windows-10-adk-tracked-by-build-version"></a>Seguimiento de Windows 10 ADK según la versión de compilación
 Ahora, la versión de compilación realiza un seguimiento de Windows 10 ADK para garantizar una experiencia más compatible al personalizar las imágenes de arranque de Windows 10. Por ejemplo, si el sitio usa Windows ADK para Windows 10, versión 1607, solo se pueden personalizar en la consola las imágenes de arranque con la versión 10.0.14393. Para más información sobre cómo personalizar las versiones de WinPE, vea [Personalizar imágenes de arranque](/sccm/osd/get-started/customize-boot-images).

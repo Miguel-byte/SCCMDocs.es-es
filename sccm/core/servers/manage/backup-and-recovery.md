@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e876e34929479654240ff220c3cad91043da0f83
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: aff3393dca29d558c62c0a508b8cbf6c98f9fbfa
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123144"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501219"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>Hacer una copia de seguridad de un sitio de Configuration Manager
 
@@ -67,6 +67,8 @@ Para simplificar el proceso de copia de seguridad, puede crear un archivo **Afte
 Puede realizar una copia de seguridad de un sitio de administración central y de un sitio primario. Los sitios secundarios o los servidores de sistema de sitio no tienen tareas de copia de seguridad.
 
 Cuando se ejecuta el servicio de copia de seguridad de Configuration Manager, sigue las instrucciones definidas en el archivo de control de copia de seguridad: `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box\Smsbkup.ctl`. Puede modificar el archivo de control de copia de seguridad para cambiar el comportamiento del servicio de copia de seguridad.  
+> [!NOTE]
+> Las modificaciones de **Smsbkup.ctl** se aplicarán después de reiniciar el servicio SMS_SITE_VSS_WRITER en el servidor de sitio.
 
 La información del estado de copia de seguridad del sitio se escribe en el archivo **Smsbkup.log** . Este archivo se crea en la carpeta de destino que se especifica en las propiedades de la tarea de mantenimiento Copia de seguridad del servidor del sitio.  
 

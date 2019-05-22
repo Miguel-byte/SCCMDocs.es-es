@@ -2,21 +2,21 @@
 title: Notas de la versión
 titleSuffix: Configuration Manager
 description: Obtenga información sobre problemas urgentes que todavía no se han corregido en el producto o no se han tratado en un artículo de Knowledge Base del soporte técnico de Microsoft.
-ms.date: 03/27/2019
+ms.date: 04/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a168e12000f11ca2bb6af8b1988f508910ab7263
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: 861d1d12c0df4b2f606a3f36983805fddd83711f
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58523969"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65497686"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Notas de la versión de Configuration Manager
 
@@ -145,6 +145,9 @@ Cambie el valor del Registro siguiente a `0` y reinicie el **Servicio Hacer clic
 ## <a name="mobile-device-management"></a>Administración de dispositivos móviles  
 
 ### <a name="validation-for-ios-app-link-sometimes-fails-on-valid-link"></a>A veces se produce un error de validación para el vínculo de la aplicación de iOS en un vínculo válido
+
+*Se aplica a: Configuration Manager, versión 1810 y anteriores*
+
 <!-- LSI 106004348 -->
 Cuando se crea una nueva aplicación de tipo **Paquete de aplicación para iOS en App Store**, el validador no acepta algunas direcciones URL válidas para **Ubicación**. En concreto, la App Store de iOS no requiere un valor para la sección de nombre de la aplicación de la dirección URL. Por ejemplo, ambos de los siguientes vínculos son válidos y apuntan a la misma aplicación, pero el **Asistente para crear aplicaciones** acepta solo el primero:
 - `https://itunes.apple.com/us/app/app-name/id123456789?mt=8`

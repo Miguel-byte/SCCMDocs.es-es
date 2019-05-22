@@ -2,27 +2,28 @@
 title: Support Center
 titleSuffix: Configuration Manager
 description: Solucione problemas de clientes de Configuration Manager con el Centro de soporte técnico.
-ms.date: 03/06/2019
+ms.date: 05/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: c631197d-7daa-4faa-9e22-980cd6d604c2
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 367c293794eea86ef8b7b7fb0e331ce0602b325e
-ms.sourcegitcommit: 544f335cfd1bfd0a1d4973439780e9f5e9ee8bed
+ms.openlocfilehash: 9246ea46787b1db466b8aca5d8a602617c80e26a
+ms.sourcegitcommit: ab9f2a7fb7ea3a0c65808fce2975ab25a670281f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562047"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65612517"
 ---
 # <a name="support-center-for-configuration-manager"></a>Centro de soporte técnico de Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-<!--1357489--> A partir de la versión 1810, use el Centro de soporte técnico para solucionar los problemas de los clientes, visualizar los registros en tiempo real o capturar el estado de un equipo cliente de Configuration Manager para su posterior análisis. Support Center es una única herramienta para consolidar muchas herramientas de solución de problemas del administrador. 
+<!--1357489-->
+A partir de la versión 1810, use el Centro de soporte técnico para solucionar los problemas de los clientes, visualizar los registros en tiempo real o capturar el estado de un equipo cliente de Configuration Manager para su posterior análisis. Support Center es una única herramienta para consolidar muchas herramientas de solución de problemas del administrador. 
 
 
 
@@ -46,7 +47,7 @@ El Centro de soporte técnico incluye la herramienta Visor del Centro de soporte
 
 ### <a name="support-center-log-file-viewer"></a>Visor de archivos de registro del Centro de soporte técnico
 
-El Centro de soporte técnico incluye un moderno visor de registros. Esta herramienta reemplaza a CMTrace. OneTrace proporciona una interfaz personalizable que admite pestañas y ventanas acoplables. Tiene una capa de presentación rápida y puede cargar archivos de registro de gran tamaño en segundos.
+El Centro de soporte técnico incluye un moderno visor de registros. Esta herramienta reemplaza a CMTrace y proporciona una interfaz personalizable que admite pestañas y ventanas acoplables. Tiene una capa de presentación rápida y puede cargar archivos de registro de gran tamaño en segundos.
 
 
 ### <a name="powershell-cmdlets"></a>Cmdlets de PowerShell
@@ -79,7 +80,8 @@ Una vez instalado, busque los siguientes elementos en el menú Iniciar del grupo
 ## <a name="known-issues"></a>Problemas conocidos 
 
 #### <a name="you-cant-install-the-latest-version-if-an-older-version-is-already-installed"></a>No se puede instalar la versión más reciente si ya está instalada una versión anterior
-<!--SCCMDocs-pr issue #3090--> Si ya tiene una versión anterior del centro de soporte técnico instalada, se produce un error en el programa de instalación de la versión 1810. Este problema se debe al control de versiones de los archivos en relación con la versión original y la versión más reciente. Para solucionar este problema, desinstale primero la versión anterior del centro de soporte técnico. A continuación, instale la versión más reciente desde la versión de Configuration Manager 1810.
+<!--SCCMDocs-pr issue #3090-->
+Si ya tiene una versión anterior del centro de soporte técnico instalada, se produce un error en el programa de instalación de la versión 1810. Este problema se debe al control de versiones de los archivos en relación con la versión original y la versión más reciente. Para solucionar este problema, desinstale primero la versión anterior del centro de soporte técnico. A continuación, instale la versión más reciente desde la versión de Configuration Manager 1810.
 
 #### <a name="remote-connections-must-include-computer-name-or-domain-as-part-of-the-user-name"></a>Las conexiones remotas deben incluir el nombre del equipo o el dominio como parte del nombre de usuario.
 Si se conecta a un cliente remoto desde el Centro de soporte técnico, cuando establezca la conexión debe proporcionar el nombre del equipo o el nombre de dominio de la cuenta de usuario. Si usa un nombre abreviado de equipo o de dominio (como `.\administrator`), la conexión se realiza correctamente, pero el Centro de soporte técnico no recopila datos del cliente. 
@@ -93,7 +95,8 @@ Al conectarse a clientes remotos mediante el cmdlet de PowerShell [New-CMMachine
 donde `<connection_name>` es el nombre de la conexión remota.
 
 #### <a name="application-deployment-evaluation-cycle-request-isnt-sent-correctly-to-remote-machines"></a>La solicitud del ciclo de evaluación de implementación de aplicación no se envía correctamente a máquinas remotas
-<!--2849356--> En el Centro de soporte técnico, si selecciona **Application deployment evaluation** (Evaluación de implementación de aplicaciones) en la acción **Invoke trigger** (Invocar desencadenador) de la pestaña **Contenido**, esta acción inicia una tarea que se evalúa como aplicaciones implementadas. Si está conectado a un cliente local, se evalúan tanto las implementaciones de aplicaciones de máquina como de usuario. Sin embargo, si está conectado a un cliente remoto, solo se evalúan las implementaciones de aplicaciones de máquina.
+<!--2849356-->
+En el Centro de soporte técnico, si selecciona **Application deployment evaluation** (Evaluación de implementación de aplicaciones) en la acción **Invoke trigger** (Invocar desencadenador) de la pestaña **Contenido**, esta acción inicia una tarea que evalúa las aplicaciones implementadas. Si está conectado a un cliente local, se evalúan tanto las implementaciones de aplicaciones de máquina como de usuario. Sin embargo, si está conectado a un cliente remoto, solo se evalúan las implementaciones de aplicaciones de máquina.
 
 
 ## <a name="next-steps"></a>Pasos siguientes

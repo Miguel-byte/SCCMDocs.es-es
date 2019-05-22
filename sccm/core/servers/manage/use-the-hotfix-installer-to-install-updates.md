@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: f3058277-c597-4dac-86d1-41b6f7e62b36
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67d2fc976b08e438c6f19a7fecca03761bb099f6
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 1ca292a5266c19bc4e2b1fbc69dd0c3fe869a58e
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56124737"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500918"
 ---
 # <a name="use-the-hotfix-installer-to-install-updates-for-system-center-configuration-manager"></a>Uso del instalador de revisiones para instalar actualizaciones para System Center Configuration Manager
 
@@ -95,7 +95,7 @@ El asistente también crea implementaciones que puede utilizar para instalar las
 |&lt;Nombre de servidor\>|Se trata del nombre del servidor de sitio donde se ejecuta la agrupación de actualizaciones.|  
 |SMS_&lt;Código de sitio\>|Se trata del nombre de recurso compartido de la carpeta de instalación de Configuration Manager.|  
 |&lt;Número de KB\>|Se trata del número de identificación del artículo de Knowledge Base para esta agrupación de actualizaciones.|  
-|&lt;Tipo de actualización\>|Estos son los tipos de actualizaciones de Configuration Manager. El asistente crea una carpeta independiente para cada tipo de actualización incluida en la agrupación de actualizaciones. Los nombres de carpeta representan los tipos de actualización. Incluyen los siguientes:<br /><br /> **Servidor**: incluye actualizaciones de los servidores de sitio, servidores de base de datos de sitio y equipos que ejecutan el proveedor de SMS.<br /><br /> **Cliente**: incluye actualizaciones del cliente de Configuration Manager.<br /><br /> **AdminConsole**: incluye actualizaciones de la consola de Configuration Manager.<br /><br /> Además de los tipos de actualización anteriores, el asistente crea una carpeta denominada **SCUP**. Esta carpeta no representa un tipo de actualización, sino que contiene el archivo .cab para Updates Publisher.|  
+|&lt;Tipo de actualización\>|Estos son los tipos de actualizaciones de Configuration Manager. El asistente crea una carpeta independiente para cada tipo de actualización incluida en la agrupación de actualizaciones. Los nombres de carpeta representan los tipos de actualización. Incluyen los siguientes:<br /><br /> **Servidor**: incluye actualizaciones de los servidores de sitio, servidores de base de datos del sitio y equipos que ejecutan el proveedor de SMS.<br /><br /> **Cliente**: incluye actualizaciones del cliente de Configuration Manager.<br /><br /> **AdminConsole**: incluye actualizaciones de la consola de Configuration Manager.<br /><br /> Además de los tipos de actualización anteriores, el asistente crea una carpeta denominada **SCUP**. Esta carpeta no representa un tipo de actualización, sino que contiene el archivo .cab para Updates Publisher.|  
 |&lt;Plataforma\>|Se trata de una carpeta específica de la plataforma. Contiene archivos de actualización que son específicos de un tipo de procesador.  Estas carpetas incluyen:<br /><br />- x64<br /><br /> - I386|  
 
 ##  <a name="bkmk_Install"></a> Instalación de actualizaciones  

@@ -1,6 +1,6 @@
 ---
 title: Docatón MMS 2019
-ms.date: 04/18/2019
+ms.date: 05/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: ffd912f5776f38f9a5af6fd0b628127d0100c926
-ms.sourcegitcommit: 14d27fa21dea8bbb48a410d01def651c31567bd6
+ms.openlocfilehash: 76970a024e54067aaa6a3059bb95a6c134a2e999
+ms.sourcegitcommit: 99dfe4fb9e9cfd20c44380ae442b3a5b895a0d9b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346668"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65214712"
 ---
 # <a name="mms-2019-docathon"></a>Docatón MMS 2019
 
@@ -97,7 +97,7 @@ Empiece a pensar y planear el objetivo que tiene para este evento. ¿Qué quiere
 
 ## <a name="contest-summary"></a>Resumen del concurso
 
-El concurso dura toda la semana, del 6 al 9 de mayo. Pueden participar todos los asistentes registrados a MMS 2019. Los premios se entregarán el jueves 9 de mayo, después de la [sesión de preguntas y respuestas con el equipo del producto ConfigMgr](https://sched.co/N6ge). Para ganar, debe estar presente en la cumbre MMS 2019, pero no es necesario que asista a esa sesión. Para cobrar un premio, si no está en la sesión, deberá ponerse en contacto con Aaron antes del viernes en la mañana, cuando él se va.
+El concurso dura toda la semana, del 6 al 9 de mayo. Pueden participar todos los asistentes registrados a MMS 2019. Envíe las entradas antes de las 3:00 p. m. (hora central) del jueves 9 de mayo de 2019. Los premios se entregarán el jueves 9 de mayo, después de la [sesión de preguntas y respuestas con el equipo del producto ConfigMgr](https://sched.co/N6ge). Para ganar, debe estar presente en la cumbre MMS 2019, pero no es necesario que asista a esa sesión. Para cobrar un premio, si no está en la sesión, deberá ponerse en contacto con Aaron antes del viernes en la mañana, cuando él se va.
 
 > [!Important]  
 > Debe incluir el hashtag **#MMS2019Docathon** en todas las contribuciones para que se acrediten.
@@ -206,7 +206,7 @@ REGLAS OFICIALES del concurso Evento Docatón de MMS 2019 de aprendizaje y conte
         - Más líneas cambiadas
         - Más artículos modificados
 
-    La selección de los ganadores se realizará después de las 5:00 p.m. (hora central) del jueves 9 de mayo de 2019.
+    La selección de los ganadores se realizará después de las 3:00 p. m. (hora central) del jueves 9 de mayo de 2019.
 
     Los ganadores recibirán una notificación en el Evento y deben reclamar el premio antes del cierre del mismo.
 

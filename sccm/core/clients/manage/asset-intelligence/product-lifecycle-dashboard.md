@@ -2,21 +2,21 @@
 title: Panel de ciclo de vida del producto
 titleSuffix: Configuration Manager
 description: Vea la Directiva del ciclo de vida de Microsoft con el panel de ciclo de vida del producto en Configuration Manager.
-ms.date: 11/27/2018
+ms.date: 05/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 8b5b144a-0e5f-4fcc-87b2-33b9bcdb5655
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 716c5218eafaf6297292fdd852589b7327e2ecaa
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: b8876f00ecb26aabd84f863ee1fcef4f2aac283a
+ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56120035"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65673400"
 ---
 # <a name="manage-microsoft-lifecycle-policy-with-configuration-manager"></a>Administrar la directiva de ciclo de vida de Microsoft con Configuration Manager
 
@@ -35,6 +35,8 @@ A partir de la versión 1810, el panel incluye información para System Center 2
  Para ver los datos en el panel del ciclo de vida del producto, se requieren los siguientes componentes:  
 
 - Internet Explorer 9 o una versión posterior debe estar instalado en el equipo que ejecuta la consola de Configuration Manager.  
+
+- Es necesario instalar y configurar un rol de punto de conexión de servicio. Para obtener actualizaciones de los datos de este panel, el punto de conexión de servicio debe estar en línea o sincronizarse regularmente en caso de que esté sin conexión. Para obtener más información, consulte [About the service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point) (Sobre el punto de conexión del servicio).
 
 - Un punto de servicios de informes es necesario para la funcionalidad de hipervínculo en el panel. Los informes de vínculos del panel para SQL Server Reporting Services (SSRS). Para obtener más información, vea [Generación de informes en Configuration Manager](/sccm/core/servers/manage/reporting).  
 
@@ -67,7 +69,8 @@ Cambie la vista seleccionando una de las siguientes opciones de la lista **Categ
 - **Cliente de Windows**: ver las versiones del SO del cliente de Windows  
 - **Windows Server**: ver las versiones del SO de Windows Server  
 - **Base de datos**: ver las versiones de SQL Server  
-- **Configuration Manager**: a partir de la versión 1810, ver las versiones de Configuration Manager  
+- **Configuration Manager**: a partir de la versión 1810, ver las versiones de Configuration Manager 
+- **Microsoft Office**: a partir de la versión 1902, vea la información de las versiones instaladas de Office 2003 a Office 2016 <!--3556026-->
 
 El panel presenta los iconos siguientes:  
 

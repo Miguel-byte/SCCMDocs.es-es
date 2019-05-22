@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 49505eb1-d44d-4121-8712-e0f3d8b15bf5
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6524fb7715c9bc3040996a16b4204464e0505123
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 38b2355159e3ce0472a5a5ceb0ff0a5f2275358d
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56139194"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499540"
 ---
 # <a name="configure-discovery-methods-for-configuration-manager"></a>Configurar métodos de detección para Configuration Manager
 
@@ -246,7 +246,7 @@ Para obtener más información, vea [Detección de usuarios de Azure AD](/sccm/c
  > Si se *crea* la aplicación de servidor desde Configuration Manager, Azure AD crea automáticamente los permisos con la aplicación. Deberá dar su consentimiento a la aplicación en Azure Portal.
 
  > [!Note]  
- > Si el usuario es una identidad federada o sincronizada, debe usar la [detección de usuarios de Active Directory](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser) de Configuration Manager, así como la detección de usuarios de Azure AD. Para obtener más información sobre las identidades híbridas, vea [Definición de una estrategia de adopción de identidad híbrida](/azure/active-directory/active-directory-hybrid-identity-design-considerations-identity-adoption-strategy).<!--497750-->
+ > Si el usuario es una identidad federada o sincronizada, debe usar la [detección de usuarios de Active Directory](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser) de Configuration Manager, así como la detección de usuarios de Azure AD. Para más información sobre las identidades híbridas, vea [Definición de una estrategia de adopción de identidad híbrida](/azure/active-directory/active-directory-hybrid-identity-design-considerations-identity-adoption-strategy).<!--497750-->
 
 
 

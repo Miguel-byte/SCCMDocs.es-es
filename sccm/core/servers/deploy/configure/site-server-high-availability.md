@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be3b70d91155b379881332ddb7c8d405d0d92e84
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: 9775bd47e91876a7651bb58fee50b2111f3b7ef1
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58523867"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083521"
 ---
 # <a name="site-server-high-availability-in-configuration-manager"></a>Alta disponibilidad de servidor de sitio en Configuration Manager
 
@@ -70,7 +70,7 @@ El equipo de operaciones e ingeniería de servicios principales de Microsoft us�
 
     - El servidor SQL Server que hospeda la base de datos de sitio puede utilizar una instancia predeterminada, una instancia con nombre, el [clúster de SQL Server](/sccm/core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database) o un [grupo de disponibilidad de SQL Server AlwaysOn](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).  
 
-    - Ambos servidores de sitio necesitan los roles de seguridad **sysadmin** y **securityadmin** en la instancia de SQL Server que hospeda la base de datos de sitio. El servidor de sitio original ya debería tener estos roles, así que agréguelos al nuevo servidor de sitio. Por ejemplo, el siguiente script SQL agrega estos roles al nuevo servidor de sitio **VM2** en el dominio Contoso:  
+    - Ambos servidores de sitio necesitan el rol de seguridad **sysadmin** en la instancia de SQL Server que hospeda la base de datos de sitio. El servidor de sitio original ya debería tener estos roles, así que agréguelos al nuevo servidor de sitio. Por ejemplo, el siguiente script SQL agrega estos roles al nuevo servidor de sitio **VM2** en el dominio Contoso:  
 
         ```SQL
         USE [master]
@@ -78,9 +78,7 @@ El equipo de operaciones e ingeniería de servicios principales de Microsoft us�
         CREATE LOGIN [contoso\vm2$] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
         GO
         ALTER SERVER ROLE [sysadmin] ADD MEMBER [contoso\vm2$]
-        GO
-        ALTER SERVER ROLE [securityadmin] ADD MEMBER [contoso\vm2$]
-        GO        
+        GO       
         ```
     - Los dos servidores de sitio necesitan acceso a la base de datos en la instancia de SQL Server. El servidor de sitio original ya debería tener este acceso, así que agréguelo al nuevo servidor de sitio. Por ejemplo, el siguiente script SQL agrega un inicio de sesión a la base de datos **CM_ABC** para el nuevo servidor de sitio **VM2** en el dominio Contoso:  
 

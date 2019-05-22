@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25283e513e256e8ce779df7b71ac6f6c17f1e370
-ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
+ms.openlocfilehash: aeef8e447d646df183f7f2075954e381b08d8c93
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58196831"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499734"
 ---
 # <a name="create-a-configuration-manager-technical-preview-lab-in-azure"></a>Creación de un laboratorio de Configuration Manager Technical Preview en Azure
 
@@ -33,7 +33,8 @@ Para más información sobre la rama actual de Configuration Manager, vea [Confi
 ## <a name="prerequisites"></a>Requisitos previos
 
 Para este proceso se necesita una suscripción de Azure en la que poder crear estos objetos: 
-- Tres máquinas virtuales Standard_D2s_v3
+- Dos máquinas virtuales Standard_B2s para el controlador de dominio y los roles MP y DP.
+- Una máquina virtual Standard_B2ms para el servidor de sitio principal y el servidor de SQL Database.
 - Cuenta de almacenamiento Standard_LRS
 
 > [!Tip]  

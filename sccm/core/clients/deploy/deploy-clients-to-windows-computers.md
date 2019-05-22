@@ -2,7 +2,7 @@
 title: Implementar clientes en Windows
 titleSuffix: Configuration Manager
 description: Obtenga información sobre cómo implementar el cliente de Configuration Manager en equipos Windows.
-ms.date: 07/30/2018
+ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 639521ecf0084b40bf61ac3d635ab4f5e55d1321
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 3260fb68d9ce334061fc39fe8d40cd68d109655e
+ms.sourcegitcommit: 99dfe4fb9e9cfd20c44380ae442b3a5b895a0d9b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123852"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65214717"
 ---
 # <a name="how-to-deploy-clients-to-windows-computers-in-configuration-manager"></a>Cómo implementar clientes en equipos Windows con Configuration Manager
 
@@ -38,7 +38,7 @@ Hay tres maneras principales de utilizar la inserción de cliente:
 
 - Inicie una instalación de inserción de cliente mediante la ejecución del Asistente para instalación de inserción de cliente para una recopilación o recurso específico dentro de una recopilación.  
 
-- Use el Asistente para instalación de inserción de cliente para instalar el cliente de Configuration Manager a los resultados de [consulta](/sccm/core/servers/manage/queries-technical-reference). Para que la instalación se realice correctamente, uno de los elementos devueltos por la consulta debe ser el atributo **ResourceID** de la clase **Recurso del sistema**.   
+- Use el Asistente para instalación de inserción de cliente para instalar el cliente de Configuration Manager a los resultados de [consulta](/sccm/core/servers/manage/introduction-to-queries). Para que la instalación se realice correctamente, uno de los elementos devueltos por la consulta debe ser el atributo **ResourceID** de la clase **Recurso del sistema**.   
 
 Si el servidor de sitio no se puede poner en contacto con el equipo cliente ni iniciar el proceso de instalación, reintenta automáticamente la instalación cada hora. El servidor continúa intentándolo hasta un máximo de siete días.  
 
@@ -60,7 +60,7 @@ Los archivos de registro de cliente proporcionan información más detallada sob
 
 4.  En la pestaña **General** de la ventana Propiedades de instalación de inserción de cliente, seleccione **Habilitar instalación de inserción de cliente automática en todo el sitio**.   
 
-5. A partir de la versión 1806, cuando actualice el sitio, activa una comprobación de Kerberos para la inserción de clientes. La opción **Permitir retroceso de conexión a NTLM** está habilitada de forma predeterminada, lo cual es coherente con el comportamiento anterior. Si el sitio no puede autenticar el cliente mediante Kerberos, vuelve a intentar la conexión mediante NTLM. La configuración recomendada para mejorar la seguridad consiste en deshabilitar esta configuración, lo que requiere Kerberos sin retroceso a NTLM.<!--1358204-->  
+5. A partir de la versión 1806, cuando actualice el sitio, activa una comprobación de Kerberos para la inserción de clientes. La opción **Permitir retroceso de conexión a NTLM** está habilitada de forma predeterminada, lo cual es coherente con el comportamiento anterior. Si el sitio no puede autenticar el cliente mediante Kerberos, vuelve a intentar la conexión mediante NTLM. La configuración recomendada para mejorar la seguridad consiste en deshabilitar esta configuración, lo que requiere Kerberos sin la reserva de NTLM.<!--1358204-->  
 
     > [!Note]  
     > Cuando se usa la inserción de cliente para instalar el cliente de Configuration Manager, el servidor de sitio crea una conexión remota al cliente. A partir de la versión 1806, el sitio puede requerir la autenticación mutua de Kerberos al no permitir el retroceso a NTLM antes de establecer la conexión. Esta mejora ayuda a proteger la comunicación entre el servidor y el cliente.  
