@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9775bd47e91876a7651bb58fee50b2111f3b7ef1
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.openlocfilehash: 5738be3bd84d7698e7b67128e3aff178d2460e52
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65083521"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176915"
 ---
 # <a name="site-server-high-availability-in-configuration-manager"></a>Alta disponibilidad de servidor de sitio en Configuration Manager
 
@@ -26,10 +26,10 @@ ms.locfileid: "65083521"
 
 Históricamente, se podía agregar redundancia a la mayoría de los roles de Configuration Manager si había varias instancias de estos roles en el entorno, excepto para el servidor de sitio. A partir de la versión 1806 de Configuration Manager, la alta disponibilidad del rol del servidor de sitio es una solución basada en Configuration Manager para instalar un servidor de sitio adicional en modo  *pasivo*. La versión 1810 agrega compatibilidad con la jerarquía, así que los sitios de administración central y los sitios primarios secundarios ahora pueden tener un servidor de sitio adicional en modo pasivo. El servidor de sitio en modo pasivo puede ser local o estar basado en la nube de Azure.
 
-Esta característica proporciona las siguientes ventajas: 
-- Redundancia y alta disponibilidad para el rol del servidor de sitio  
+Esta característica proporciona las siguientes ventajas: 
+- Redundancia y alta disponibilidad para el rol del servidor de sitio  
 - Cambiar más fácilmente el hardware o el sistema operativo del servidor de sitio  
-- Migrar más fácilmente el servidor de sitio a IaaS de Azure  
+- Migrar más fácilmente el servidor de sitio a IaaS de Azure  
 
 El servidor de sitio en modo pasivo se suma al servidor de sitio existente que está en modo *activo*. Un servidor de sitio en modo pasivo está disponible para uso inmediato, cuando sea necesario. Incluya este servidor de sitio adicional como parte del diseño general para que el servicio de Configuration Manager sea de [alta disponibilidad](/sccm/core/servers/deploy/configure/high-availability-options).  
 

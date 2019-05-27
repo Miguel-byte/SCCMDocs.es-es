@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 251a614aebce244edddfe362a5f7119ca9dd0c87
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 11ad5a0bef004b778ba431c9a2da30f51eafc443
+ms.sourcegitcommit: f531d0a622f220739710b2fe6644ea58d024064a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56132513"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65933297"
 ---
 # <a name="capabilities-in-technical-preview-1706-for-system-center-configuration-manager"></a>Funcionalidades de Technical Preview 1706 para System Center Configuration Manager
 
@@ -54,7 +54,8 @@ En este artículo se presentan las características disponibles en Technical Pre
 -->
 
 ## <a name="improved-boundary-groups-for-software-update-points"></a>Mejoras de los grupos de límites para puntos de actualización de software
-<!-- 1324591 --> Esta versión incluye mejoras para el modo en que los puntos de actualización de software funcionan con grupos de límites. A continuación se resume el nuevo comportamiento de la reserva:
+<!-- 1324591 -->
+Esta versión incluye mejoras para el modo en que los puntos de actualización de software funcionan con grupos de límites. A continuación se resume el nuevo comportamiento de la reserva:
 - La reserva para puntos de actualización de software usa ahora un tiempo configurable para aplicarse en los grupos de límites vecinos, con un tiempo mínimo de 120 minutos.
 
 - Independientemente de la configuración de la reserva, un cliente intenta alcanzar el último punto de actualización de software que utilizó durante 120 minutos. Tras no conseguir alcanzar ese servidor durante 120 minutos, el cliente consulta su grupo de puntos de actualización de software disponibles para encontrar otro nuevo.
@@ -76,7 +77,8 @@ Para obtener más información, vea [Puntos de actualización de software](/sccm
 
 
 ## <a name="site-server-role-high-availability"></a>Alta disponibilidad del rol del servidor de sitio
-<!-- 1128774 --> La alta disponibilidad para el rol del servidor de sitio es una solución basada en Configuration Manager para instalar un servidor de sitio primario adicional en modo *Pasivo*. El servidor de sitio en modo pasivo se suma al servidor de sitio primario existente que está en modo *Activo*. Un servidor de sitio en modo pasivo está disponible para su uso inmediato, cuando se requiera.
+<!-- 1128774 -->
+La alta disponibilidad para el rol del servidor de sitio es una solución basada en Configuration Manager para instalar un servidor de sitio primario adicional en modo *Pasivo*. El servidor de sitio en modo pasivo se suma al servidor de sitio primario existente que está en modo *Activo*. Un servidor de sitio en modo pasivo está disponible para su uso inmediato, cuando se requiera.
 
 Un servidor de sitio primario en el modo pasivo:
 -   Utiliza la misma base de datos de sitio que el servidor de sitio activo.
@@ -184,7 +186,8 @@ Intente realizar las tareas siguientes y luego envíenos sus **comentarios** des
 
 
 ## <a name="include-trust-for-specific-files-and-folders-in-a-device-guard-policy"></a>Inclusión de la confianza para determinados archivos y carpetas en una directiva de Device Guard
-<!-- 1324676 --> En esta versión, hemos agregado más funcionalidades para la administración de directivas de [Device Guard](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager).
+<!-- 1324676 -->
+En esta versión, hemos agregado más funcionalidades para la administración de directivas de [Device Guard](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager).
 
 Ahora tiene la posibilidad de agregar confianza para determinados archivos y carpetas en una directiva de Device Guard. Esto le permite:
 
@@ -200,7 +203,8 @@ Ahora tiene la posibilidad de agregar confianza para determinados archivos y car
 
 
 ## <a name="hide-task-sequence-progress"></a>Ocultación del progreso de la secuencia de tareas
-<!-- 1354291 --> En esta versión, puede controlar cuándo se muestra el progreso de la secuencia de tareas a los usuarios finales mediante una variable nueva. En la secuencia de tareas, use el paso **Configurar variable de secuencia de tareas** para establecer el valor de la variable **TSDisableProgressUI** a fin de ocultar o mostrar el progreso de la secuencia de tareas. Puede usar el paso Configurar variable de secuencia de tareas varias veces en una secuencia de tareas para cambiar el valor de la variable. Esto le permite ocultar o mostrar el progreso de la secuencia de tareas en secciones diferentes de la secuencia de tareas.
+<!-- 1354291 -->
+En esta versión, puede controlar cuándo se muestra el progreso de la secuencia de tareas a los usuarios finales mediante una variable nueva. En la secuencia de tareas, use el paso **Configurar variable de secuencia de tareas** para establecer el valor de la variable **TSDisableProgressUI** a fin de ocultar o mostrar el progreso de la secuencia de tareas. Puede usar el paso Configurar variable de secuencia de tareas varias veces en una secuencia de tareas para cambiar el valor de la variable. Esto le permite ocultar o mostrar el progreso de la secuencia de tareas en secciones diferentes de la secuencia de tareas.
 
 #### <a name="to-hide-task-sequence-progress"></a>Para ocultar el progreso de la secuencia de tareas
 En el editor de la secuencia de tareas, use el paso [Configurar variable de secuencia de tareas](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) para establecer el valor de la variable **TSDisableProgressUI** en **True** para ocultar el progreso de la secuencia de tareas.
@@ -209,7 +213,8 @@ En el editor de la secuencia de tareas, use el paso [Configurar variable de secu
 En el editor de la secuencia de tareas, use el paso [Configurar variable de secuencia de tareas](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) para establecer el valor de la variable **TSDisableProgressUI** en **False** para mostrar el progreso de la secuencia de tareas.
 
 ## <a name="specify-a-different-content-location-for-install-content-and-uninstall-content"></a>Especificación de una ubicación de contenido diferente para el contenido de instalación y el contenido de desinstalación
-<!-- 1097546 --> Actualmente, en Configuration Manager se especifica la ubicación de instalación que contiene los archivos de instalación de una aplicación. Al especificar una ubicación de instalación, esta se usa también como ubicación de desinstalación para el contenido de la aplicación.
+<!-- 1097546 -->
+Actualmente, en Configuration Manager se especifica la ubicación de instalación que contiene los archivos de instalación de una aplicación. Al especificar una ubicación de instalación, esta se usa también como ubicación de desinstalación para el contenido de la aplicación.
 Según sus comentarios, cuando se va a desinstalar una aplicación implementada y el contenido de la aplicación no está en el equipo cliente, el cliente descarga todos los archivos de instalación de la aplicación de nuevo antes de desinstalar la aplicación.
 Para solucionar este problema, ahora puede especificar tanto una ubicación para el contenido de instalación como una ubicación opcional para el contenido de desinstalación. Además, puede optar por no especificar una ubicación para el contenido de desinstalación.
 
@@ -226,7 +231,8 @@ Para solucionar este problema, ahora puede especificar tanto una ubicación para
 
 
 ## <a name="accessibility-improvements"></a>Mejoras de accesibilidad  
-<!--1253000 --> En esta versión preliminar se incluyen varias mejoras para las [características de accesibilidad](/sccm/core/understand/accessibility-features) en la consola de Configuration Manager. Entre ellos, se incluye:     
+<!--1253000 -->
+Esta versión preliminar incluye varias mejoras para las [características de accesibilidad](/sccm/core/understand/accessibility-features) en la consola de Configuration Manager. Entre ellos, se incluye:     
 
 **Nuevos métodos abreviados de teclado para desplazarse por la consola:**
 -   CTRL + M: establece el foco en el panel principal (central).
@@ -246,7 +252,8 @@ Para solucionar este problema, ahora puede especificar tanto una ubicación para
 
 
 ## <a name="changes-to-the-azure-services-wizard-to-support-upgrade-readiness"></a>Cambios en el Asistente para servicios de Azure para admitir Upgrade Readiness
-<!-- 1353331 --> A partir de esta versión, use el Asistente para servicios de Azure para configurar una conexión desde Configuration Manager en [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics). El uso del asistente simplifica la configuración del conector mediante un asistente común para los servicios de Azure relacionados.   
+<!-- 1353331 -->
+A partir de esta versión, use el Asistente para servicios de Azure para configurar una conexión desde Configuration Manager en [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics). El uso del asistente simplifica la configuración del conector mediante un asistente común para los servicios de Azure relacionados.   
 
 Si bien el método para configurar la conexión ha cambiado, los requisitos previos para la conexión y el modo en que se utiliza Upgrade Readiness permanecen inalterados.   
 
@@ -384,7 +391,8 @@ Después de ejecutar un script en los dispositivos cliente, siga este procedimie
 3. En la lista **Script Results** (Resultados del script) aparecen los resultados para cada script ejecutado en los dispositivos cliente. Un código de salida de script de **0** suele indicar que el script se ejecutó correctamente.
 
 ## <a name="pxe-network-boot-support-for-ipv6"></a>Compatibilidad con el arranque de red de PXE para IPv6
-<!-- 1269793 --> Ahora puede habilitar la compatibilidad con el arranque de red de PXE para IPv6 para iniciar una implementación de sistema operativo de la secuencia de tareas. Cuando se usa esta opción, los puntos de distribución habilitados para PXE admitirán tanto IPv4 como IPv6. Esta opción no requiere WDS y detendrá WDS si está presente.
+<!-- 1269793 -->
+Ahora puede habilitar la compatibilidad con el arranque de red de PXE para IPv6 para iniciar una implementación de sistema operativo de la secuencia de tareas. Cuando se usa esta opción, los puntos de distribución habilitados para PXE admitirán tanto IPv4 como IPv6. Esta opción no requiere WDS y detendrá WDS si está presente.
 
 #### <a name="to-enable-pxe-boot-support-for-ipv6"></a>Para habilitar la compatibilidad con el arranque de red de PXE para IPv6
 Utilice el siguiente procedimiento para habilitar la opción de compatibilidad con IPv6 para PXE.
@@ -393,7 +401,8 @@ Utilice el siguiente procedimiento para habilitar la opción de compatibilidad c
 2. En la pestaña **PXE**, seleccione **Support IPv6** (Compatibilidad con IPv6) para habilitar la compatibilidad de IPv6 para PXE.
 
 ## <a name="manage-microsoft-surface-driver-updates"></a>Administración de las actualizaciones de controladores de Microsoft Surface
-<!-- 1098490 --> Ahora puede usar Configuration Manager para administrar las actualizaciones de controladores de Microsoft Surface.
+<!-- 1098490 -->
+Ahora puede usar Configuration Manager para administrar las actualizaciones de controladores de Microsoft Surface.
 
 ### <a name="prerequisites"></a>Requisitos previos
 Todos los puntos de actualización de software deben ejecutar Windows Server 2016.
@@ -405,7 +414,8 @@ Intente realizar las tareas siguientes y luego envíenos sus **comentarios** des
 3. [Implemente los controladores de Microsoft Surface sincronizados](/sccm/sum/deploy-use/deploy-software-updates).
 
 ## <a name="configure-windows-update-for-business-deferral-policies"></a>Configuración de directivas de aplazamiento de Windows Update para empresas
-<!-- 1290890 --> Ahora puede configurar directivas de aplazamiento para actualizaciones de características de Windows 10 o actualizaciones de calidad para dispositivos con Windows 10 administradas directamente por Windows Update para empresas. Puede administrar las directivas de aplazamiento en el nuevo nodo **Directivas de Windows Update para empresas**, en **Biblioteca de Software** > **Mantenimiento de Windows 10**.
+<!-- 1290890 -->
+Ahora puede configurar directivas de aplazamiento para actualizaciones de características de Windows 10 o actualizaciones de calidad para dispositivos con Windows 10 administradas directamente por Windows Update para empresas. Puede administrar las directivas de aplazamiento en el nuevo nodo **Directivas de Windows Update para empresas**, en **Biblioteca de Software** > **Mantenimiento de Windows 10**.
 
 ### <a name="prerequisites"></a>Requisitos previos
 Los dispositivos con Windows 10 administrados por Windows Update para empresas deben tener conectividad a Internet.
@@ -443,7 +453,8 @@ Los dispositivos con Windows 10 administrados por Windows Update para empresas d
 
 
 ## <a name="support-for-entrust-certification-authorities"></a>Compatibilidad con entidades de certificación de Entrust
-<!-- 1350740 --> Configuration Manager ahora es compatible con entidades de certificación de Entrust; esto habilita la entrega de certificados PFX a dispositivos inscritos en Microsoft Intune.
+<!-- 1350740 -->
+Configuration Manager ahora es compatible con entidades de certificación de Entrust; esto habilita la entrega de certificados PFX a dispositivos inscritos en Microsoft Intune.
 
 Puede configurar Entrust como entidad de certificación al agregar un rol de Punto de registro de certificados en Configuration Manager. Al agregar un nuevo perfil de certificado que emite certificados PFX, puede seleccionar una entidad de certificación de Microsoft o Entrust.
 
@@ -453,7 +464,7 @@ Puede configurar Entrust como entidad de certificación al agregar un rol de Pun
 ## <a name="cisco-ipsec-support-for-ios-vpn-profiles"></a>Compatibilidad de Cisco (IPsec) con perfiles de VPN de iOS
 <!-- 1321367 -->
 
-Puede crear un perfil de VPN de iOS con Cisco (IPsec) como tipo de conexión. Para obtener más información, vea [Crear perfiles de VPN](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/create-vpn-profiles#create-vpn-profiles).
+Puede crear un perfil de VPN de iOS con Cisco (IPsec) como tipo de conexión. Para obtener más información, vea [Crear perfiles de VPN](https://docs.microsoft.com/sccm/mdm/deploy-use/create-vpn-profiles#create-vpn-profiles).
 
 
 ## <a name="new-windows-configuration-item-settings"></a>Nuevas opciones para elementos de configuración de Windows
@@ -533,7 +544,8 @@ A partir de esta versión, puede usar tres nuevas opciones de configuración par
 Vea [Proteger aplicaciones mediante directivas de administración de aplicaciones móviles en System Center Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/protect-apps-using-mam-policies) para probar la nueva configuración de la directiva de protección de aplicaciones.
 
 ## <a name="android-and-ios-enrollment-restrictions"></a>Restricciones de inscripción de iOS y Android
-<!-- 1290826 --> A partir de esta versión, los administradores pueden especificar que los usuarios no inscriban dispositivos personales Android o iOS en su entorno híbrido. Esto le permite limitar los dispositivos inscritos a aquellos declarados con anterioridad que pertenezcan a la empresa o a aquellos dispositivos iOS inscritos solo con el Programa de inscripción de dispositivos.
+<!-- 1290826 -->
+A partir de esta versión, los administradores pueden especificar que los usuarios no inscriban los dispositivos personales de Android o iOS en su entorno híbrido. Esto le permite limitar los dispositivos inscritos a aquellos declarados con anterioridad que pertenezcan a la empresa o a aquellos dispositivos iOS inscritos solo con el Programa de inscripción de dispositivos.
 
 ### <a name="try-it-out"></a>Haga la prueba
 1. En la consola de Configuration Manager, en el área de trabajo **Administración** , vaya a **Servicios en la nube** > **Suscripción a Microsoft Intune**.
@@ -563,7 +575,8 @@ Si se establece DisallowCrossProfileCopyPaste en true, se impide el comportamien
 4. Seleccione el valor de **Permitir uso compartido de datos entre perfiles de trabajo y perfiles personales** y luego complete el asistente.
 
 ## <a name="device-health-attestation-assessment-for-compliance-policies-for-conditional-access"></a>Evaluación de Atestación de estado de dispositivo para las directivas de cumplimiento de acceso condicional
-<!-- 1097546 --> A partir de esta versión, puede usar el estado de Atestación de estado de dispositivo como una regla de directiva de cumplimiento para el acceso condicional a los recursos de la empresa.
+<!-- 1097546 -->
+A partir de esta versión, puede utilizar el estado de Atestación de estado de dispositivo como una regla de directiva de cumplimiento para el acceso condicional a los recursos de la empresa.
 
 ### <a name="try-it-out"></a>Haga la prueba
 Seleccione una regla de Atestación de estado de dispositivo como parte de la evaluación de la directiva de cumplimiento.

@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 160425f461e0191a792185d1eb8ef9bfdec08b1c
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 01253487d7fb90aaa24dae6a55b9110e516ab4ad
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56130163"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176011"
 ---
 # <a name="capabilities-in-technical-preview-1708-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1708 para System Center Configuration Manager
 
@@ -74,14 +74,16 @@ El asistente muestra qué parámetros son obligatorios y cuáles son opcionales.
 Cuando se ejecute la secuencia de comandos, usará los valores de parámetro que haya configurado. Si no ha configurado un parámetro obligatorio, se pedirá al usuario final que proporcione el parámetro cuando se ejecute el script.
 
 ## <a name="management-insights"></a>Información de administración
-<!-- 1353967 --> Ahora puede obtener información sobre el estado actual del entorno en función del análisis de los datos de la base de datos del sitio. Esta información le ayuda a entender mejor el entorno y tomar medidas en consecuencia. Revise la información de administración en la consola de Configuration Manager en **Administración** > **Management Insights** > **All Insights** (Información de administración > Toda la información). En esta versión, ahora está disponible la siguiente información:
+<!-- 1353967 -->
+Ahora puede obtener información sobre el estado actual de su entorno en función del análisis de datos en la base de datos de sitio. Esta información le ayuda a entender mejor el entorno y tomar medidas en consecuencia. Revise la información de administración en la consola de Configuration Manager en **Administración** > **Management Insights** > **All Insights** (Información de administración > Toda la información). En esta versión, ahora está disponible la siguiente información:
 
 - **Aplicaciones sin implementaciones**: enumera las aplicaciones del entorno sin implementaciones activas. Esto le ayudará a encontrar y eliminar las aplicaciones sin usar para simplificar la lista de aplicaciones mostradas en la consola.
 - **Colecciones vacías**: enumera las colecciones del entorno que no tienen miembros. Puede eliminar estas recopilaciones para simplificar la lista que se muestra al implementar los objetos, por ejemplo.
 
 
 ## <a name="restart-computers-from-the-configuration-manager-console"></a>Reinicio de equipos desde la consola de Configuration Manager   
-<!-- 1356283 --> A partir de esta versión, puede usar la consola de Configuration Manager para identificar los dispositivos de cliente que requieren un reinicio y, después, usar una acción de notificación de cliente para reiniciarlos.
+<!-- 1356283 -->
+A partir de esta versión, puede usar la consola de Configuration Manager para identificar los dispositivos de cliente que requieren un reinicio y, después, usar una acción de notificación de cliente para reiniciarlos.
 
 Para identificar los dispositivos que están pendiente un reinicio, vaya a **Activos y compatibilidad** > **Dispositivos** y seleccione una recopilación con dispositivos que pueden necesitar un reinicio. Después de seleccionar una recopilación, puede ver el estado de cada dispositivo en el panel de detalles en una nueva columna denominada **Reinicio pendiente**. Cada dispositivo tiene un valor de **Sí** o **No**.
 
@@ -100,15 +102,16 @@ Intente realizar las tareas siguientes y luego envíenos sus **comentarios** des
 
 
 ## <a name="software-center-customization"></a>Personalización de Centro de software
-<!-- 1351224 --> Puede agregar elementos de personalización de marca de empresa y especificar la visibilidad de las pestañas en el Centro de software. Puede agregar el nombre de compañía específico del Centro de software, establecer un tema de color para la configuración de Centro de software, establecer un logotipo de empresa y establecer las pestañas visibles para los dispositivos del cliente.
+<!-- 1351224 -->
+Puede agregar elementos de personalización de marca de empresa y especificar la visibilidad de las pestañas en el Centro de software. Puede agregar el nombre de compañía específico del Centro de software, establecer un tema de color para la configuración de Centro de software, establecer un logotipo de empresa y establecer las pestañas visibles para los dispositivos del cliente.
 
 ### <a name="customize-software-center"></a>Personalización de Centro de software
 
 Para modificar el Centro de software:
 
-1. En la consola de **Configuration Manager**, elija  **Administración** > **Configuración de cliente**. Haga clic en la instancia de la configuración de cliente que desea.
-2. En la pestaña  **Inicio** , en el grupo  **Propiedades** , haga clic en  **Propiedades**.
-3. En el cuadro de diálogo  **Configuración predeterminada** , haga clic en  **Centro de software**.
+1. En la consola de **Configuration Manager**, elija **Administración** > **Configuración de cliente**. Haga clic en la instancia de la configuración de cliente que desea.
+2. En la pestaña **Inicio**, en el grupo **Propiedades**, elija **Propiedades**.
+3. En el cuadro de diálogo **Configuración predeterminada**, elija **Centro de software**.
 4. Seleccione **Sí** en **Select new settings to specify company information** (Seleccionar nueva configuración para especificar la información de la empresa) para habilitar la configuración de personalización del Centro de software.
 5. Escriba el **nombre de la empresa**.
 6. Seleccione la **combinación de colores para el Centro de software**.

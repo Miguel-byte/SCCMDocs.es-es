@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 301b7de8d991b7e272aa57e6d87e912d6c3df210
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 03368d543b539b018ba581277cb0ba7e6e8cb251
+ms.sourcegitcommit: f531d0a622f220739710b2fe6644ea58d024064a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65495397"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65933500"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Novedades de la versión 1806 de la rama actual de Configuration Manager
 
@@ -308,7 +308,7 @@ Para obtener más información, vea [Creación de aplicaciones Windows](/sccm/ap
 
 ### <a name="uninstall-application-on-approval-revocation"></a>Desinstalación de aplicaciones al revocarse la aprobación
 <!--1357891-->
-El comportamiento de revocar la aprobación de una aplicación ha cambiado. Ahora cuando se deniega la solicitud de la aplicación, el cliente desinstala la aplicación del dispositivo del usuario. Este comportamiento exige que se habilite la [característica opcional](https://docs.microsoft.com/en-us/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **Aprobación de solicitudes de aplicación para los usuarios por dispositivo**. 
+El comportamiento de revocar la aprobación de una aplicación ha cambiado. Ahora cuando se deniega la solicitud de la aplicación, el cliente desinstala la aplicación del dispositivo del usuario. Este comportamiento exige que se habilite la [característica opcional](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **Aprobación de solicitudes de aplicación para los usuarios por dispositivo**. 
 
 Para obtener más información, consulte [Deploy applications](/sccm/apps/deploy-use/deploy-applications#bkmk_approval) (Implementar aplicaciones).
 

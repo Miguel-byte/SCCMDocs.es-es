@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7949808110d058bc1511abd1053e583b7f452cfa
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.openlocfilehash: 5b9f4f95916a2d547f89cab7dac838b7fe68fb30
+ms.sourcegitcommit: f531d0a622f220739710b2fe6644ea58d024064a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65083570"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65933470"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Cuentas que se usan en Configuration Manager
 
@@ -526,7 +526,7 @@ Para obtener más información, vea [Planear actualizaciones de software](/sccm/
 > [!NOTE]  
 >  La cuenta de sitio de origen y la [cuenta de base de datos del sitio de origen](#source-site-database-account) se identifican como **Administrador de migraciones** en el nodo **Cuentas** del área de trabajo **Administración** en la consola de Configuration Manager.  
 
- Para más información, vea [Migración de datos entre jerarquías](https://docs.microsoft.com/en-us/sccm/core/migration/migrate-data-between-hierarchies).
+ Para más información, vea [Migración de datos entre jerarquías](https://docs.microsoft.com/sccm/core/migration/migrate-data-between-hierarchies).
 
 
 ### <a name="source-site-database-account"></a>Cuenta de base de datos del sitio de origen  
@@ -542,7 +542,7 @@ Para obtener más información, vea [Planear actualizaciones de software](/sccm/
 > [!NOTE]  
 >  La cuenta de sitio de origen y la [cuenta de base de datos del sitio de origen](#source-site-database-account) se identifican como **Administrador de migraciones** en el nodo **Cuentas** del área de trabajo **Administración** en la consola de Configuration Manager.  
 
- Para más información, vea [Migración de datos entre jerarquías](https://docs.microsoft.com/en-us/sccm/core/migration/migrate-data-between-hierarchies).
+ Para más información, vea [Migración de datos entre jerarquías](https://docs.microsoft.com/sccm/core/migration/migrate-data-between-hierarchies).
 
 
 ### <a name="task-sequence-domain-join-account"></a>Cuenta de unión de dominio de secuencia de tareas 

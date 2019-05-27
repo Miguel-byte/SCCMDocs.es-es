@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4cba7c2bf782dce636117e71cb6982cd95ffb8ab
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 18de1d67ecc1dfa6d9c5fb87355c4fed04e2c4c4
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500092"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176742"
 ---
 # <a name="hardware-inventory-for-linux-and-unix-in-configuration-manager"></a>Inventario de hardware para Linux y UNIX en Configuration Manager
 
@@ -39,7 +39,7 @@ El inventario de hardware para servidores Linux y UNIX utiliza un servidor de Mo
 
 A partir de la actualización acumulativa 1, el cliente para Linux y UNIX usa la versión 1.0.6 de **omiserver** de código abierto de **The Open Group**. (Antes de la actualización acumulativa 1, el cliente utilizaba **nanowbem** como servidor CIM).  
 
-El servidor CIM se instala como parte del cliente para Linux y UNIX. El cliente para Linux y UNIX se comunica directamente con el servidor CIM y no utiliza la interfaz de WS-MAN del servidor CIM. El puerto de WS-MAN en el servidor CIM está deshabilitado cuando se instala el cliente. Microsoft desarrolló el servidor CIM que ahora está disponible como código abierto a través del proyecto Open Management Infrastructure (OMI). Para obtener más información sobre el proyecto Open Management Infrastructure, consulte el sitio web de [The Open Group](https://go.microsoft.com/fwlink/p/?LinkId=262317) .  
+El servidor CIM se instala como parte del cliente para Linux y UNIX. El cliente para Linux y UNIX se comunica directamente con el servidor CIM y no utiliza la interfaz de WS-MAN del servidor CIM. El puerto de WS-MAN en el servidor CIM está deshabilitado cuando se instala el cliente. Microsoft desarrolló el servidor CIM que ahora está disponible como código abierto a través del proyecto Open Management Infrastructure (OMI). Para obtener más información sobre el proyecto Open Management Infrastructure, consulte el sitio web de [The Open Group](https://www.opengroup.org/) .  
 
 El inventario de hardware en servidores Linux y UNIX funciona mediante la asignación de clases y propiedades de WMI de Win32 existentes a clases y propiedades equivalentes para servidores Linux y UNIX. Esta asignación uno a uno de clases y propiedades permite que el inventario de hardware de Linux y UNIX se integre en Configuration Manager. Los datos de inventario de servidores Linux y UNIX se muestran junto con el inventario de equipos basados en Windows en la consola y los informes de Configuration Manager. Este comportamiento proporciona una experiencia de administración coherente y heterogénea.  
 

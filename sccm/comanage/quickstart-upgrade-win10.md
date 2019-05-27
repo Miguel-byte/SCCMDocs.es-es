@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0815a974f3b1f29f664a2948eed33de24c6ecff3
-ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.openlocfilehash: bbc042975840e5b4e840928f01257785f4859dd4
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "56755559"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176832"
 ---
 # <a name="upgrade-windows-10-for-co-management"></a>Actualización de Windows 10 para la administración conjunta
 
@@ -52,7 +52,7 @@ Estas son algunas sugerencias que aprendimos después de ayudar a miles de clien
 
 ## <a name="case-studies"></a>Casos prácticos
 
-Microsoft IT implementó Windows 10 en 96 000 usuarios distribuidos en Microsoft. La implementación incluyó tanto a usuarios remotos como a usuarios de la red corporativa. La implementación se completó en nueve semanas. Para más información sobre su experiencia, consulte el documento [Deploying Windows 10 at Microsoft as an in-place upgrade](https://www.microsoft.com/download/details.aspx?id=50377) (Implementación de Windows 10 en Microsoft como una actualización local).  
+Microsoft IT implementó Windows 10 en 96 000 usuarios distribuidos en Microsoft. La implementación incluyó tanto a usuarios remotos como a usuarios de la red corporativa. La implementación se completó en nueve semanas. Para más información sobre su experiencia, consulte el documento [Deploying Windows 10 at Microsoft as an in-place upgrade](https://www.microsoft.com/itshowcase/deploying-windows-10-at-microsoft-as-an-in-place-upgrade) (Implementación de Windows 10 en Microsoft como una actualización local).  
 
 Un fabricante europeo de software de gran tamaño usa exitosamente un grupo de usuarios pioneros. Después de las pruebas iniciales y los grupos piloto, unos 2000 empleados reciben las primeras actualizaciones y software. En este grupo se cuenta el personal de TI y usuarios voluntarios. Este nivel de compromiso con sus usuarios les brinda un mayor nivel de confianza al realizar las pruebas y más credibilidad cuando empiecen las implementaciones masivas.
 
