@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d0a32357001f37f537f13fe85e71a41f9cb658ac
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: e5178a84443779384e3223998ab8336b46c2d4d0
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122447"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176896"
 ---
 # <a name="manage-apps-from-the-microsoft-store-for-business-with-configuration-manager"></a>Administración de aplicaciones desde Microsoft Store para Empresas con Configuration Manager
 
@@ -27,7 +27,7 @@ ms.locfileid: "56122447"
 
 Microsoft Store para Empresas admite dos tipos de aplicaciones:
 
-- **En línea**: este tipo de licencia necesita que los usuarios y dispositivos se conecten a la tienda para obtener una aplicación y su licencia. Los dispositivos Windows 10 deben estar unidos a un dominio de Azure Active Directory (Azure AD).  
+- **En línea**: este tipo de licencia requiere que los usuarios y dispositivos se conecten a la tienda para obtener una aplicación y su licencia. Los dispositivos Windows 10 deben estar unidos a un dominio de Azure Active Directory (Azure AD).  
 
 - **Sin conexión**: este tipo permite almacenar las aplicaciones y licencias en caché para implementarlas directamente en la red local. No es necesario que los dispositivos se conecten a la tienda o tengan una conexión a Internet.
 
@@ -83,7 +83,7 @@ Después, se producen los comportamientos siguientes:
 
 - El usuario debe completar la instalación desde la tienda.  
 
-- En la consola de Configuration Manager, se muestra el siguiente error en los informes de estado de implementación de aplicaciones: “La aplicación de la Tienda Windows se abrió en el equipo cliente y está esperando a que el usuario complete la instalación”.  
+- En la consola de Configuration Manager, el estado de implementación de la aplicación se notifica con el error "La aplicación de Microsoft Store se abrió en el equipo cliente y está esperando a que el usuario complete la instalación".  
 
 En el siguiente ciclo de evaluación de la aplicación:  
 
@@ -125,9 +125,9 @@ En la página **Aplicación** del Asistente para servicios de Azure, configure e
 
 En la página **Configuraciones** del Asistente para servicios de Azure, especifique la información siguiente:  
 
-- **Ruta de acceso al almacenamiento de contenido de aplicaciones de Microsoft Store para Empresas**: especifique una ruta de red compartida, incluida la carpeta. Por ejemplo, `\\server\share\folder`. Cuando el servidor de sitio se sincronice con la tienda, almacena en caché el contenido en esta ubicación. Al crear una aplicación en Configuration Manager, el servidor de sitio copia el contenido de la aplicación de esta caché local a la biblioteca de contenido del sitio.  
+- **Ruta de acceso al almacenamiento de contenido de aplicaciones de Microsoft Store para Empresas**: especifique una ruta de acceso de red compartida, incluida una carpeta. Por ejemplo, `\\server\share\folder`. Cuando el servidor de sitio se sincronice con la tienda, almacena en caché el contenido en esta ubicación. Al crear una aplicación en Configuration Manager, el servidor de sitio copia el contenido de la aplicación de esta caché local a la biblioteca de contenido del sitio.  
 
-- **Idiomas seleccionados**: seleccione los idiomas que se van a sincronizar desde la tienda y se mostrarán a los usuarios en el Centro de software. Por ejemplo, si el usuario configura Windows para el alemán, en el Centro de software se muestran cadenas en alemán para la aplicación de la tienda. Este comportamiento requiere que ese idioma se sincronice y exista para la aplicación específica.    
+- **Idiomas seleccionados**: seleccione los idiomas que se van a sincronizar desde la tienda y se van a mostrar a los usuarios en el Centro de software. Por ejemplo, si el usuario configura Windows para el alemán, en el Centro de software se muestran cadenas en alemán para la aplicación de la tienda. Este comportamiento requiere que ese idioma se sincronice y exista para la aplicación específica.    
 
 - **Idioma predeterminado**: si el idioma del usuario no está disponible, seleccione el idioma predeterminado que se va a usar.  
 
@@ -167,3 +167,8 @@ Después de implementar aplicaciones en línea, las actualizaciones de esa aplic
 Al implementar aplicaciones sin conexión en dispositivos Windows 10 con el cliente de Configuration Manager, no permita a los usuarios actualizar aplicaciones externas en implementaciones de Configuration Manager. El control de las actualizaciones de las aplicaciones sin conexión es especialmente importante en entornos de varios usuarios como clases. Una opción para deshabilitar Microsoft Store es mediante la [directiva de grupo](https://docs.microsoft.com/windows/configuration/stop-employees-from-using-microsoft-store#a-href-idblock-store-group-policyablock-microsoft-store-using-group-policy). 
 
 Después de que el administrador de Microsoft Store para Empresas compre una aplicación sin conexión, no publique la aplicación a los usuarios a través de la tienda. Esta configuración garantiza que los usuarios no puedan instalar o actualizar en línea. Los usuarios solo reciben las actualizaciones de aplicaciones sin conexión a través de Configuration Manager. 
+
+## <a name="see-also"></a>Consulte también
+
+[Descripción y solución de problemas de integración de Microsoft Store para Empresas con ConfigMgr](https://support.microsoft.com/help/4010214)
+

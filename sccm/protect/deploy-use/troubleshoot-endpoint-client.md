@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b8bda1fd21ed3281142a717b768ff7d8c6ac3c3
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 3e0b8e6a522e367e17d6c13fad3896a6606d3e5c
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500422"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176072"
 ---
 # <a name="troubleshooting-windows-defender-or-endpoint-protection-client"></a>Solución de problemas del cliente de Windows Defender o Endpoint Protection
 
@@ -158,7 +158,7 @@ Si tiene problemas con Windows Defender o Endpoint Protection, póngase en conta
 
 ### <a name="step-7-contact-support"></a>Paso 7: ponerse en contacto con el servicio de soporte técnico  
 
--   Si no se resuelve el problema siguiendo los pasos, póngase en contacto con el soporte técnico. Para obtener más información, vea la [asistencia al cliente](http://go.microsoft.com/fwlink/?LinkID=196174) (http://go.microsoft.com/fwlink/?LinkID=196174).  
+-   Si no se resuelve el problema siguiendo los pasos, póngase en contacto con el soporte técnico. Para obtener más información, consulte la [asistencia al cliente](https://support.microsoft.com/contactus/).  
 
 ##  <a name="starting-windows-defender-or-endpoint-protection-service"></a>Iniciar el servicio de Windows Defender o Endpoint Protection  
  **Síntoma**  
@@ -183,7 +183,7 @@ Si tiene problemas con Windows Defender o Endpoint Protection, póngase en conta
 
 5.  Asegúrese de anotar los errores que puedan aparecer durante este proceso, envíe un caso en línea e incluya la información de los errores.  
 
-### <a name="step-3-remove-any-existing-internet-security-programs"></a>Paso 3: quitar cualquier programa de seguridad de Internet existente  
+### <a name="step-3-remove-any-existing-internet-security-programs"></a>Paso 3: Quitar cualquier programa de seguridad de Internet existente  
 
 1.  Haga clic en **Inicio** , busque **appwiz.cpl**y luego presione **Entrar**.  
 
@@ -211,7 +211,7 @@ Si tiene problemas con Windows Defender o Endpoint Protection, póngase en conta
 ##  <a name="internet-connection-issues"></a>Problemas de conexión de Internet  
  Con el fin de asegurarse de que el equipo recibe las actualizaciones más recientes de Windows Update, debe estar conectado a Internet.  
 
-### <a name="step-1-verify-that-your-computer-is-connected-to-the-internet"></a>Paso 1: comprobar que el equipo está conectado a Internet  
+### <a name="step-1-verify-that-your-computer-is-connected-to-the-internet"></a>Paso 1: Comprobar que el equipo está conectado a Internet  
 
 1.  Haga clic en **Inicio**, busque **ncpa.cpl**y luego presione **Entrar**.  
 
@@ -225,7 +225,7 @@ Si tiene problemas con Windows Defender o Endpoint Protection, póngase en conta
 
 -   Cierre todos los programas abiertos y reinicie el equipo.  
 
-### <a name="step-4-if-you-still-cant-connect-to-the-internet-check-your-connections"></a>Paso 4: si sigue sin poder conectarse a Internet, compruebe las conexiones  
+### <a name="step-4-if-you-still-cant-connect-to-the-internet-check-your-connections"></a>Paso 4: Si sigue sin poder conectarse a Internet, comprobar las conexiones  
 
 1.  Si usa una conexión de acceso telefónico, asegúrese de que la conexión del cable telefónico en el conector de la pared y en el módem estén bien conectadas.  
 

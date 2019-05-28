@@ -2,7 +2,7 @@
 title: Creación de una secuencia de tareas de actualización de SO
 titleSuffix: Configuration Manager
 description: Use una secuencia de tareas para actualizar automáticamente de Windows 7 o una versión posterior a Windows 10
-ms.date: 07/30/2018
+ms.date: 05/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc20a7e9be271bde8a5cd6464e2cebdf1ee9bad9
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: b1015573d62bdbbd317b9f787071e7725e5d4362
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56138609"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176117"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Crear una secuencia de tareas para actualizar un SO en Configuration Manager
 
@@ -58,22 +58,22 @@ Para actualizar el sistema operativo en los clientes, puede crear una secuencia 
 
 4.  En la página **Información de secuencia de tareas**, especifique la siguiente configuración y después haga clic en **Siguiente**:  
 
-    -   **Nombre de la secuencia de tareas**: especifique un nombre que identifique la secuencia de tareas.  
+    -   **Nombre de secuencia de tareas**: especifique un nombre que identifique la secuencia de tareas.  
 
-    -   **Descripción**: de manera opcional, especifique una descripción.  
+    -   **Descripción**: si quiere, especifique una descripción.  
 
 5.  En la página **Actualizar el sistema operativo de Windows**, especifique la siguiente configuración y luego haga clic en **Siguiente**:  
 
-    -   **Paquete de actualización**: especifique el paquete de actualización que contenga los archivos de origen de actualización del sistema operativo. Compruebe que ha seleccionado el paquete de actualización correcto examinando la información del panel **Propiedades**. Para más información, vea [Administrar paquetes de actualización de sistema operativo](/sccm/osd/get-started/manage-operating-system-upgrade-packages).  
+    -   **Paquete de actualización**: especifique el paquete de actualización que contiene los archivos de origen de actualización del sistema operativo. Compruebe que ha seleccionado el paquete de actualización correcto examinando la información del panel **Propiedades**. Para más información, vea [Administrar paquetes de actualización de sistema operativo](/sccm/osd/get-started/manage-operating-system-upgrade-packages).  
 
-    -   **Índice de ediciones**: si hay varios índices de edición del sistema operativo disponibles en el paquete, seleccione el índice de la edición deseada. De forma predeterminada, el asistente selecciona el primer índice.  
+    -   **Índice de edición**: si hay varios índices de edición del sistema operativo disponibles en el paquete, seleccione el índice de la edición deseada. De forma predeterminada, el asistente selecciona el primer índice.  
 
-    -   **Clave de producto**: especifique la clave de producto de Windows para el sistema operativo que quiera instalar. Puede especificar claves de licencia por volumen codificadas o claves de producto estándar. Si usa una clave de producto estándar, separe cada grupo de cinco caracteres por un guion (-). Por ejemplo: *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*. Si se trata de una actualización de una edición de licencia por volumen, la clave de producto puede no ser necesaria.  
+    -   **Clave de producto**: especifique la clave de producto para el sistema operativo que quiere instalar. Puede especificar claves de licencia por volumen codificadas o claves de producto estándar. Si usa una clave de producto estándar, separe cada grupo de cinco caracteres por un guion (-). Por ejemplo: *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*. Si se trata de una actualización de una edición de licencia por volumen, la clave de producto puede no ser necesaria.  
 
         > [!Note]  
         > Esta clave de producto puede ser una clave de activación múltiple (CAM) o una clave de licencias por volumen genérica (CLVG). Las CLVG también se conocen como claves de configuración de cliente del servicio de administración de claves (SAC). Para obtener más información, consulte [Plan para la activación por volumen](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). Para obtener una lista de claves de configuración de cliente KMS, consulte el [Apéndice A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) de la Guía de activación de Windows Server. 
 
-    -   **Omitir cualquier mensaje de compatibilidad descartable**: seleccione esta opción si va a actualizar a Windows Server 2016. Si no selecciona esta configuración, la secuencia de tareas no se completará, ya que el programa de instalación de Windows espera a que el usuario haga clic en **Confirmar** en un cuadro de diálogo de compatibilidad de aplicaciones de Windows.   
+    -   **Omitir cualquier mensaje de compatibilidad descartable**: seleccione esta configuración si actualiza a Windows Server 2016. Si no selecciona esta configuración, la secuencia de tareas no se completará, ya que el programa de instalación de Windows espera a que el usuario haga clic en **Confirmar** en un cuadro de diálogo de compatibilidad de aplicaciones de Windows.   
 
 7.  En la página **Incluir actualizaciones**, especifique si se van a instalar las actualizaciones de software necesarias, todas o ninguna. A continuación, haga clic en **Siguiente**. Si especifica que se instalen las actualizaciones, Configuration Manager instala solo las destinadas a las colecciones a las que pertenece el equipo de destino.  
 
@@ -93,10 +93,11 @@ A partir de la versión 1806, esta plantilla de secuencia de tareas también inc
 
 
 ## <a name="configure-pre-cache-content"></a>Configuración del contenido de la caché previa
-<!--1021244--> La característica de caché previa para las implementaciones disponibles de secuencias de tareas permite que los clientes descarguen el contenido del paquete de actualización del sistema operativo relevante antes de que un usuario instale la secuencia de tareas.  
+<!--1021244-->
+La característica de caché previa para las implementaciones disponibles de secuencias de tareas permite que los clientes descarguen el contenido del paquete de actualización del sistema operativo relevante antes de que un usuario instale la secuencia de tareas.  
 
 > [!Note]  
-> Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para más información, vea [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+> Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para obtener más información, consulte [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
 
 
 Por ejemplo, solo quiere una secuencia de tareas de actualización en contexto para todos los usuarios y tiene muchas arquitecturas y lenguajes. En versiones anteriores, el contenido se comienza a descargar cuando el usuario instala una implementación de secuencia de tareas disponible desde el Centro de software. Este retraso agrega tiempo adicional antes de que la instalación esté lista para iniciarse. Se descarga todo el contenido al que se hace referencia en la secuencia de tareas. Este contenido incluye el paquete de actualización de sistema operativo para todos los lenguajes y arquitecturas. Si cada paquete de actualización tiene aproximadamente 3 GB de tamaño, el contenido total es muy grande.
@@ -144,17 +145,17 @@ El contenido de caché previa proporciona la opción al cliente de descargar sol
 
 A partir de la versión 1802, la plantilla de secuencia de tareas predeterminada para la actualización en contexto de Windows 10 incluye grupos adicionales con las acciones recomendadas que se van a agregar antes del proceso de actualización. Estas acciones del grupo **Preparación para actualización** son comunes entre muchos clientes que están actualizando correctamente los dispositivos a Windows 10. Para los sitios en versiones anteriores a la 1802, agregue manualmente estas acciones a la secuencia de tareas en el grupo **Preparación para actualización**.  
 
-- **Comprobaciones de la batería**: agregue pasos a este grupo para comprobar si el equipo usa la batería o una conexión por cable. Esta acción requiere un script o utilidad personalizado a fin de realizar la comprobación.  
+- **Comprobaciones de batería**: agregue pasos a este grupo para comprobar si el equipo está usando la batería o un cable de alimentación. Esta acción requiere un script o utilidad personalizado a fin de realizar la comprobación. Por ejemplo: mediante WbemTest, conéctese al espacio de nombres `root\cimv2`. Después, ejecute la siguiente consulta: `Select Batterystatus From Win32_Battery where batterystatus != 2`. Si devuelve algún resultado, el dispositivo se está ejecutando con batería. En caso contrario, el dispositivo está conectado a la red por cable.  
 
 - **Comprobaciones de conexión por cable o red**: agregue pasos a este grupo para comprobar si el equipo está conectado a una red y no está usando una conexión inalámbrica. Esta acción requiere un script o utilidad personalizado a fin de realizar la comprobación.  
 
-- **Quitar aplicaciones no compatibles**: agregue pasos a este grupo para quitar las aplicaciones no compatibles con esta versión de Windows 10. El método para desinstalar una aplicación es diferente en cada situación.  
+- **Quitar aplicaciones no compatibles**: agregue pasos a este grupo para quitar todas las aplicaciones que no sean compatibles con esta versión de Windows 10. El método para desinstalar una aplicación es diferente en cada situación.  
 
     - Si la aplicación usa Windows Installer, copie la línea de comandos de **Desinstalar programa** desde la pestaña **Programas** en las propiedades del tipo de implementación de Windows Installer de la aplicación. Luego, agregue un paso para **Ejecutar línea de comandos** a este grupo con la línea de comandos de desinstalar programa. Por ejemplo: </br>`msiexec /x {150031D8-1234-4BA8-9F52-D6E5190D1CBA} /q`</br>  
 
-- **Quitar controladores no compatibles**: agregue pasos a este grupo para quitar los controladores no compatibles con esta versión de Windows 10.  
+- **Quitar controladores no compatibles**: agregue pasos a este grupo para quitar todos los controladores que no sean compatibles con esta versión de Windows 10.  
 
-- **Quitar o suspender seguridad de terceros**: agregue pasos a este grupo para quitar o suspender programas de seguridad de terceros, como antivirus.  
+- **Quitar/suspender seguridad de terceros**: agregue pasos a este grupo para quitar o suspender programas de seguridad de terceros, como antivirus.  
 
    - Si utiliza un programa de cifrado de disco de otro fabricante, indique su controlador de cifrado al programa de instalación de Windows con la [opción de línea de comandos](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#23) `/ReflectDrivers`. Agregue un paso para [establecer la variable de secuencia de tareas](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) a la secuencia de tareas en este grupo. Establezca la variable de secuencia de tareas en **OSDSetupAdditionalUpgradeOptions**. Establezca el valor en `/ReflectDrivers` con la ruta de acceso al controlador. Esta [variable de secuencia de tareas](/sccm/osd/understand/task-sequence-variables#OSDSetupAdditionalUpgradeOptions) anexa la línea de comandos del programa de instalación de Windows utilizada por la secuencia de tareas. Para obtener las instrucciones adicionales sobre este proceso, póngase en contacto con su proveedor de software.  
 
@@ -168,7 +169,7 @@ Use el paso [Descargar contenido de paquete](/sccm/osd/understand/task-sequence-
 -   Para descargar dinámicamente un paquete de controladores aplicables, use dos pasos **Descargar contenido de paquete** con condiciones para detectar el tipo de hardware adecuado para cada paquete de controlador. Configure los pasos **Descargar contenido de paquete** para que usen la misma variable. Después, use esa variable para el valor **Contenido preconfigurado** de la sección de controladores del paso **Actualizar sistema operativo**.  
 
     > [!NOTE]  
-    > Cuando hay más de un paquete, Configuration Manager agrega un sufijo numérico al nombre de variable. Por ejemplo, si especifica `%mycontent%` como variable personalizada, el cliente almacena todo el contenido al que se hace referencia en esta ubicación. Cuando se hace referencia a la variable en un paso posterior, como **Actualizar sistema operativo**, se usa con un sufijo numérico. En este ejemplo, `%mycontent01%` o `%mycontent02%`, donde el número se corresponde al orden en el que el paso **Descargar contenido de paquete** muestra este contenido específico.  
+    > Configuration Manager agrega un sufijo numérico al nombre de variable. Por ejemplo, si especifica `%mycontent%` como variable personalizada, el cliente almacena todo el contenido al que se hace referencia en esta ubicación. Cuando se hace referencia a la variable en un paso posterior, como **Actualizar sistema operativo**, se usa con un sufijo numérico. En este ejemplo, `%mycontent01%` o `%mycontent02%`, donde el número se corresponde al orden en el que el paso **Descargar contenido de paquete** muestra este contenido específico.  
 
 
 
@@ -181,13 +182,13 @@ Después de crear la secuencia de tareas, agregue pasos adicionales al grupo **P
 
 A partir de la versión 1802, la plantilla de secuencia de tareas predeterminada para la actualización en contexto de Windows 10 incluye grupos adicionales con las acciones recomendadas que se van a agregar después del proceso de actualización. Estas acciones del grupo **Posprocesamiento** son comunes entre muchos clientes que están actualizando correctamente los dispositivos a Windows 10. Para los sitios en versiones anteriores a la 1802, agregue manualmente estas acciones a la secuencia de tareas en el grupo **Posprocesamiento**.  
 
-- **Aplicar controladores basados en la instalación**: agregue pasos a este grupo para instalar controladores de instalación (.exe) a partir de paquetes.  
+- **Aplicar controladores basados en el programa de instalación**: agregue pasos a este grupo para instalar controladores basados en el programa de instalación (.exe) a partir de paquetes.  
 
-- **Instalar/Habilitar seguridad de terceros**: agregue pasos a este grupo para instalar o habilitar programas de seguridad de terceros, como antivirus.  
+- **Instalar/habilitar seguridad de terceros**: agregue pasos a este grupo para instalar o habilitar programas de seguridad de terceros, como antivirus.  
 
-- **Establecer aplicaciones predeterminadas de Windows y asociaciones**: agregue pasos a este grupo para establecer las aplicaciones predeterminadas de Windows y las asociaciones de archivos. En primer lugar, prepare un equipo de referencia con las asociaciones de aplicaciones deseadas. A continuación, ejecute la siguiente línea de comandos para exportar: </br>`dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`</br>Agregue el archivo XML a un paquete. Luego, ejecute el paso [Ejecutar línea de comandos](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) en este grupo. Especifique el paquete que contiene el archivo XML y, a continuación, especifique la siguiente línea de comandos: </br>`dism /online /Import-DefaultAppAssociations:DefaultAppAssocations.xml`</br> Para obtener más información, consulte [Export or import default application associations](/windows-hardware/manufacture/desktop/export-or-import-default-application-associations) (Exportación o importación de asociaciones de aplicaciones predeterminadas).  
+- **Establecer aplicaciones y asociaciones de Windows predeterminadas**: agregue pasos a este grupo para establecer las asociaciones de aplicaciones y archivos predeterminadas de Windows. En primer lugar, prepare un equipo de referencia con las asociaciones de aplicaciones deseadas. A continuación, ejecute la siguiente línea de comandos para exportar: </br>`dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`</br>Agregue el archivo XML a un paquete. Luego, ejecute el paso [Ejecutar línea de comandos](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) en este grupo. Especifique el paquete que contiene el archivo XML y, a continuación, especifique la siguiente línea de comandos: </br>`dism /online /Import-DefaultAppAssociations:DefaultAppAssocations.xml`</br> Para obtener más información, consulte [Export or import default application associations](/windows-hardware/manufacture/desktop/export-or-import-default-application-associations) (Exportación o importación de asociaciones de aplicaciones predeterminadas).  
 
-- **Aplicar personalizaciones**: agregue pasos a este grupo para aplicar personalizaciones al menú Inicio, como la organización de los grupos de programas. Para obtener más información, consulte [Customize the Start screen](/windows-hardware/manufacture/desktop/customize-the-start-screen) (Personalización de la pantalla Inicio).  
+- **Aplicar valores personalizados**: agregue pasos a este grupo para aplicar las personalizaciones del menú Inicio, como la organización de los grupos de programas. Para obtener más información, consulte [Customize the Start screen](/windows-hardware/manufacture/desktop/customize-the-start-screen) (Personalización de la pantalla Inicio).  
 
 
 
@@ -233,7 +234,7 @@ A partir de la versión 1806, la plantilla de secuencia de tareas predeterminada
 
 - Consulte la documentación de Windows para [solucionar los errores de actualización de Windows 10](https://docs.microsoft.com/windows/deployment/upgrade/resolve-windows-10-upgrade-errors). En este artículo también se incluye información detallada sobre el proceso de actualización.  
 
-- En el paso predeterminado **Comprobar preparación**, habilite **Garantizar espacio libre mínimo en disco (MB)**. Establezca el valor en al menos **16384** (16 GB) para un paquete de actualización de sistema operativo de 32 bits, o **20480** (20 GB) para 64 bits.  
+- En el paso predeterminado **Comprobar preparación**, habilite **Garantizar espacio libre mínimo en disco (MB)** . Establezca el valor en al menos **16384** (16 GB) para un paquete de actualización de sistema operativo de 32 bits, o **20480** (20 GB) para 64 bits.  
 
 - Use la [variable de secuencia de tareas](/sccm/osd/understand/task-sequence-variables#SMSTSDownloadRetryCount) **SMSTSDownloadRetryCount** para intentar descargar de nuevo la directiva. En este momento, el cliente lo reintenta de manera predeterminada dos veces; esta variable está configurada en dos (2). Si los clientes no utilizan una conexión de red intranet por cable, una mayor cantidad de reintentos ayudará al cliente a obtener la directiva. El uso de esta variable no tiene ningún efecto secundario, además del retraso que implica la imposibilidad de descargar la directiva.<!--501016--> Aumente también la variable **SMSTSDownloadRetryDelay** desde el valor predeterminado de 15 segundos.  
 
@@ -247,6 +248,6 @@ A partir de la versión 1806, la plantilla de secuencia de tareas predeterminada
 
 - Si desea cambiar el dispositivo de BIOS a UEFI durante esta secuencia de tareas, consulte [Conversión de BIOS a UEFI durante una actualización local](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade).  
 
-- Si usa el cifrado de disco BitLocker, en ese caso, de forma predeterminada el programa de instalación de Windows la suspende automáticamente durante la actualización. A partir de Windows 10, versión 1803, el programa de instalación de Windows incluye el parámetro de línea de comandos `/BitLocker` para controlar este comportamiento. Si los requisitos de seguridad exigen mantener el cifrado de disco activo en todo momento, utilice la [variable de secuencia de tareas](/sccm/osd/understand/task-sequence-variables#OSDSetupAdditionalUpgradeOptions) **OSDSetupAdditionalUpgradeOptions** en el grupo **Preparar para actualización** para incluir `/BitLocker TryKeepActive`. Para más información, vea [Opciones de la línea de comandos del programa de instalación de Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#33).<!--SCCMDocs issue #494-->  
+- Si usa el cifrado de disco BitLocker, en ese caso, de forma predeterminada el programa de instalación de Windows la suspende automáticamente durante la actualización. A partir de Windows 10, versión 1803, el programa de instalación de Windows incluye el parámetro de línea de comandos `/BitLocker` para controlar este comportamiento. Si los requisitos de seguridad exigen mantener el cifrado de disco activo en todo momento, utilice la [variable de secuencia de tareas](/sccm/osd/understand/task-sequence-variables#OSDSetupAdditionalUpgradeOptions) **OSDSetupAdditionalUpgradeOptions** en el grupo **Preparar para actualización** para incluir `/BitLocker TryKeepActive`. Para más información, consulte [Opciones de la línea de comandos del programa de instalación de Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#33).<!--SCCMDocs issue #494-->  
 
 - Algunos clientes quitan las aplicaciones predeterminadas aprovisionadas en Windows 10. Por ejemplo, la aplicación Bing El Tiempo o la Microsoft Solitaire Collection. En algunas situaciones, estas aplicaciones vuelven después de actualizar Windows 10. Para obtener más información, vea [How to keep apps removed from Windows 10 (Cómo mantener las aplicaciones eliminadas en Windows 10)](https://docs.microsoft.com/windows/application-management/remove-provisioned-apps-during-update). Agregue un paso **Ejecutar línea de comandos** a la secuencia de tareas en el grupo **Preparar para actualización**. Especifique una línea de comandos similar al ejemplo siguiente:</br> `cmd /c reg delete "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.BingWeather_8wekyb3d8bbwe" /f` <!--SCCMDocs issue #526-->  

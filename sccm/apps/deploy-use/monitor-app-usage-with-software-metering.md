@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c10dcc07ba2f67b004da462dbde17fb2200ec7a1
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 652c10cfcb4d53b32409dd5af83e7d55f2676463
+ms.sourcegitcommit: f531d0a622f220739710b2fe6644ea58d024064a
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65496801"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65933488"
 ---
 # <a name="software-metering-in-system-center-configuration-manager"></a>Medición de software en System Center Configuration Manager
 
@@ -163,14 +163,14 @@ La medición de software no tiene dependencias externas, solo dependencias dentr
 
   Woodgrove Bank ha implementado Microsoft Office 2010 como su conjunto de aplicaciones de productividad de oficina estándar. Sin embargo, para admitir una aplicación heredada, es necesario que algunos equipos continúen ejecutando Microsoft Office Word 2003. El departamento de TI quiere reducir los costos de licencia y de soporte mediante la eliminación de estas copias de Word 2003 si ya no se usa la aplicación heredada. El departamento de soporte técnico también quiere identificar a los usuarios usan la aplicación heredada.
 
-  John es el administrador de sistemas de TI de Woodgrove Bank y usa la medición de software en Configuration Manager para lograr estos objetivos de la empresa. Realiza las siguientes acciones:
+  El administrador de sistemas de TI de Woodgrove Bank usa la medición de software en Configuration Manager para lograr estos objetivos de negocio. El administrador realiza las siguientes acciones:
 
-- Juan comprueba los requisitos previos para la medición de software y confirma que el punto de servicios de informes está instalado y en funcionamiento.
-- Juan configura la configuración de cliente predeterminada para la medición de software:<br>Habilita la medición de software y usa la programación predeterminada de recopilación de datos de una vez cada siete días.<br>Configura el inventario de software para inventariar los archivos que tienen la extensión .exe mediante la configuración de la opción de cliente de inventario de software **Inventariar estos tipos de archivo**.<br>Agrega un nueva regla de medición de software, denominada **woodgrove.exe**, para supervisar la aplicación heredada.
-- John espera siete días y después los equipos cliente comienzan a notificar datos de uso sobre el archivo ejecutable **woodgrove.exe** .
-- John usa el informe de Configuration Manager denominado **Base de instalación para todos los programas de software medidos** para ver qué equipos tienen cargada la aplicación **woodgrove.exe**.
-- Después de seis meses, Juan ejecuta el informe **Equipos que tienen un programa medido instalado, pero que no han ejecutado el programa desde una fecha especificada**, al indicar la regla de medición de software y una fecha seis meses en el pasado. Este informe identifica 120 equipos que no han ejecutado el programa en los últimos seis meses.
-- Juan realiza algunas comprobaciones adicionales para confirmar que la aplicación heredada no es necesaria en los equipos identificados. A continuación, desinstala la aplicación heredada y la copia de Word 2003 de estos equipos.<br>Juan ejecuta el informe **Usuarios que han ejecutado un programa de software medido específico** para proporcionar al departamento de soporte técnico una lista de usuarios que siguen usando la aplicación heredada.
-- Juan sigue comprobando los informes de medición de software semanalmente y toma medidas correctivas si es necesario.
+- Comprueba los requisitos previos para la medición de software y confirma que el punto de servicios de informes está instalado y en funcionamiento.
+- Configura la configuración de cliente predeterminada para la medición de software:<br>El administrador habilita la medición de software y usa la programación predeterminada de recopilación de datos de una vez cada siete días.<br>El administrador configura el inventario de software para inventariar los archivos que tienen la extensión .exe mediante la configuración de la opción de cliente de inventario de software **Inventariar estos tipos de archivo**.<br>El administrador agrega un nueva regla de medición de software, denominada **woodgrove.exe**, para supervisar la aplicación heredada.
+- Espera siete días y después los equipos cliente comienzan a notificar datos de uso sobre el archivo ejecutable **woodgrove.exe**.
+- El administrador usa el informe de Configuration Manager denominado **Base de instalación para todos los programas de software medidos** para ver qué equipos tienen cargada la aplicación **woodgrove.exe**.
+- Después de seis meses, el administrador ejecuta el informe **Equipos que tienen un programa medido instalado, pero que no han ejecutado el programa desde una fecha especificada**, al indicar la regla de medición de software y una fecha seis meses en el pasado. Este informe identifica 120 equipos que no han ejecutado el programa en los últimos seis meses.
+- El administrador realiza algunas comprobaciones adicionales para confirmar que la aplicación heredada no es necesaria en los equipos identificados. A continuación, el administrador desinstala la aplicación heredada y la copia de Word 2003 de estos equipos.<br>El administrador ejecuta el informe **Usuarios que han ejecutado un programa de software medido específico** para proporcionar al departamento de soporte técnico una lista de usuarios que siguen usando la aplicación heredada.
+- El administrador sigue comprobando los informes de medición de software semanalmente y toma medidas correctivas si es necesario.
 
   Como resultado de esta estrategia, los costos del departamento de TI en materia de soporte técnico y licencias se reducen mediante la eliminación de las aplicaciones que ya no son necesarias. Además, el departamento de soporte técnico tiene ahora la lista deseada que detalla los usuarios que ejecutan la aplicación heredada.
