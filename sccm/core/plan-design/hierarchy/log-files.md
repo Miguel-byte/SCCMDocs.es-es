@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f86fccc965fd0d6147c55a7c9a3ad25b81e95aff
-ms.sourcegitcommit: 417e3834a42b415a8e129327dd3c15cc0c7ec5a2
+ms.openlocfilehash: 5994eb6ab241e35bd0b4c4ecceb9fe6c4ef35a00
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65443090"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176042"
 ---
 # <a name="log-files-in-configuration-manager"></a>Archivos de registro en Configuration Manager
 
@@ -115,7 +115,7 @@ En Configuration Manager, los componentes de cliente y servidor de sitio registr
     -   [Servidor WSUS](#BKMK_WSUSLog)  
 
 ##  <a name="BKMK_AboutLogs"></a> Acerca de los archivos de registro de Configuration Manager  
- La mayoría de los procesos de Configuration Manager escriben información operativa en un archivo de registro dedicado al proceso de que se trate. Los archivos de registro se identifican mediante las extensiones de archivo **.log** o **.lo_**. Configuration Manager escribe en un archivo .log hasta que dicho registro alcanza su tamaño máximo. Cuando el registro está lleno, el archivo .log se copia en un archivo con el mismo nombre pero con la extensión .lo_, y el proceso o el componente continúa escribiendo en el archivo .log. Cuando el archivo .log vuelve a alcanzar el tamaño máximo, se sobrescribe el archivo .lo_ y el proceso se repite. Algunos componentes establecen un historial de archivos de registro al anexar una marca de fecha y hora al nombre del archivo de registro y al conservar la extensión .log. Una excepción al tamaño máximo y al uso del archivo .lo_ es el cliente para Linux y UNIX. Para más información sobre el modo en que el cliente para UNIX y Linux usa los archivos de registro, vea [Administrar archivos de registro en el cliente para UNIX y Linux](#BKMK_ManageLinuxLogs) en este artículo.  
+ La mayoría de los procesos de Configuration Manager escriben información operativa en un archivo de registro dedicado al proceso de que se trate. Los archivos de registro se identifican mediante las extensiones de archivo **.log** o **.lo_** . Configuration Manager escribe en un archivo .log hasta que dicho registro alcanza su tamaño máximo. Cuando el registro está lleno, el archivo .log se copia en un archivo con el mismo nombre pero con la extensión .lo_, y el proceso o el componente continúa escribiendo en el archivo .log. Cuando el archivo .log vuelve a alcanzar el tamaño máximo, se sobrescribe el archivo .lo_ y el proceso se repite. Algunos componentes establecen un historial de archivos de registro al anexar una marca de fecha y hora al nombre del archivo de registro y al conservar la extensión .log. Una excepción al tamaño máximo y al uso del archivo .lo_ es el cliente para Linux y UNIX. Para más información sobre el modo en que el cliente para UNIX y Linux usa los archivos de registro, vea [Administrar archivos de registro en el cliente para UNIX y Linux](#BKMK_ManageLinuxLogs) en este artículo.  
 
  Para ver los registros, use la herramienta de visualización de registros de Configuration Manager, CMTrace, que se encuentra en la carpeta \\SMSSetup\\Tools del medio de origen de Configuration Manager. La herramienta CMTrace también se agrega a todas las imágenes de arranque que se agregan a la Biblioteca de software. A partir de la versión 1806, la herramienta de visualización de registros CMTrace se instala automáticamente con el cliente de Configuration Manager.<!--1357971--> Para obtener más información, vea [CMTrace](/sccm/core/support/cmtrace). 
 
@@ -416,7 +416,7 @@ El archivo de registro SMS_DM.log en el servidor de sistema de sitio además reg
 |Nombre del registro|Descripción|Equipo con el archivo de registro|  
 |--------------|-----------------|----------------------------|  
 |objreplmgr.log|Registra detalles sobre la replicación de archivos de notificación de actualizaciones de software de un sitio primario a sitios secundarios.|Servidor de sitio|  
-|PatchDownloader.log|Registra detalles sobre el proceso de descarga de actualizaciones de software del origen de actualizaciones al destino de descarga en el servidor de sitio.|Equipo que hospeda la consola de Configuration Manager desde la que se inician las descargas|  
+|PatchDownloader.log|Registra detalles sobre el proceso de descarga de actualizaciones de software del origen de actualizaciones al destino de descarga en el servidor de sitio.|Al descargar las actualizaciones manualmente, este archivo está en el directorio `%temp%` del equipo en el que usa la consola. Para las reglas de implementación automática, si el cliente de Configuration Manager está instalado en el servidor de sitio, este archivo está en el servidor de sitio en `%windir%\CCM\Logs`.|  
 |ruleengine.log|Registra detalles acerca de las reglas de implementación automática de identificación, descarga de contenido y creación de grupos de actualizaciones de software e implementación.|Servidor de sitio| 
 |SMS_ISVUPDATES_SYNCAGENT.log| Archivo de registro para la sincronización de actualizaciones de software de terceros a partir de la versión 1806 de Configuration Manager.| Actualización de software de nivel superior de la jerarquía de Configuration Manager.| 
 |SUPSetup.log|Registra detalles acerca de la instalación de un punto de actualización de software. Cuando se completa la instalación del punto de actualización de software, **Installation was successful** se escribe en este archivo de registro.|Servidor de sistema de sitio|  
@@ -782,7 +782,7 @@ En la tabla siguiente se incluyen los archivos de registro que contienen informa
 |Nombre del registro|Descripción|Equipo con el archivo de registro|  
 |--------------|-----------------|----------------------------|  
 |Ccmperf.log|Registra actividades relacionadas con el mantenimiento y la captura de datos relacionados con los contadores de rendimiento de cliente.|Cliente|  
-|PatchDownloader.log|Registra detalles sobre el proceso de descarga de actualizaciones de software del origen de actualizaciones al destino de descarga en el servidor de sitio.|Equipo que hospeda la consola de Configuration Manager desde la que se inician las descargas|  
+|PatchDownloader.log|Registra detalles sobre el proceso de descarga de actualizaciones de software del origen de actualizaciones al destino de descarga en el servidor de sitio.|Cuando las actualizaciones se descargan de forma manual, esto se encontrará en el directorio %temp% del usuario que ejecuta la consola en el equipo en el que se ejecute la consola. Para las reglas de implementación automática, se encontrará en el servidor de sitio en %windir%\CCM\Logs si el cliente de Configuration Manager está instalado en el servidor de sitio.|  
 |PolicyEvaluator.log|Registra los detalles acerca de la evaluación de directivas en los equipos cliente, incluidas las directivas de las actualizaciones de software.|Cliente|  
 |RebootCoordinator.log|Registra los detalles acerca de la coordinación de reinicios del sistema en los equipos cliente después de que se instalan las actualizaciones de software.|Cliente|  
 |ScanAgent.log|Registra los detalles acerca de cómo examinar las solicitudes de actualización de software, la ubicación de WSUS y acciones relacionadas.|Cliente|  

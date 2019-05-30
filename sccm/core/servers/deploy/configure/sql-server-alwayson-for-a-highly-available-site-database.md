@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 08f5e0d9986c59d9a2a37c26f3ed9e245ac62f41
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 6f70373f1fea7928e801c0ccdbbe75cf96e54d20
+ms.sourcegitcommit: f531d0a622f220739710b2fe6644ea58d024064a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56120051"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65933529"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Preparación para usar grupos de disponibilidad AlwaysOn de SQL Server con Configuration Manager
 
@@ -88,7 +88,7 @@ Cada instancia de SQL Server puede ejecutarse en una cuenta de usuario de domini
 - Se puede utilizar la réplica de confirmación asincrónica para recuperar una réplica sincrónica. Para obtener más información, vea [Opciones de recuperación de base de datos de sitio](/sccm/core/servers/manage/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption).  
 
     > [!Warning]  
-    > Configuration Manager no admite la *conmutación por error* para usar la réplica de confirmación asincrónica como la base de datos de sitio. Para obtener más información, consulte [Conmutación por error y modos de conmutación por error (grupos de disponibilidad AlwaysOn)](https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups?view=sql-server-2014).  
+    > Configuration Manager no admite la *conmutación por error* para usar la réplica de confirmación asincrónica como la base de datos de sitio. Para obtener más información, consulte [Conmutación por error y modos de conmutación por error (grupos de disponibilidad AlwaysOn)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups?view=sql-server-2014).  
 
 Configuration Manager no valida el estado de la réplica de confirmación asincrónica para confirmar que está actualizada. El uso de una réplica de confirmación asincrónica como base de datos de sitio puede poner en riesgo la integridad del sitio y los datos. Por diseño, una réplica de este tipo puede estar al margen de la sincronización. Para obtener más información, consulte [Información general de los grupos de disponibilidad AlwaysOn (SQL Server)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server).
 
@@ -247,7 +247,8 @@ Las siguientes limitaciones se aplican a todos los escenarios.
 - **MultiSubnetFailover**: no se admite usar un grupo de disponibilidad con Configuration Manager en una configuración de varias subredes. Tampoco puede usar la cadena de conexión de palabra clave [MutliSubnetFailover](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover).  
 
 #### <a name="sql-servers-that-host-additional-availability-groups"></a>Servidores SQL Server que hospedan grupos de disponibilidad adicionales
-<!--SCCMDocs issue 649--> Cuando el servidor SQL Server hospeda uno o varios grupos de disponibilidad además del grupo que usa para Configuration Manager, necesita una configuración específica en el momento de ejecutar el programa de instalación de Configuration Manager. Esta configuración también se necesita para instalar una actualización para Configuration Manager. Cada réplica de cada grupo de disponibilidad debe tener las siguientes configuraciones:
+<!--SCCMDocs issue 649-->
+Cuando en SQL Server se hospedan uno o varios grupos de disponibilidad además del grupo que se usa para Configuration Manager, necesita una configuración específica en el momento de ejecutar el programa de instalación de Configuration Manager. Esta configuración también se necesita para instalar una actualización para Configuration Manager. Cada réplica de cada grupo de disponibilidad debe tener las siguientes configuraciones:
 
 - Conmutación por error manual  
 - Permitir cualquier conexión de solo lectura  
@@ -268,7 +269,8 @@ Al ejecutar el programa de instalación de Configuration Manager para mover una 
 Es seguro omitir estos errores.
 
 #### <a name="site-expansion"></a>Expansión de sitios
-<!--SCCMDocs issue 568--> Si configura la base de datos de sitio para que un sitio primario independiente use SQL Always On, no puede expandir el sitio para que incluya un sitio de administración central. Si intenta este proceso, se produce un error. Para expandir el sitio, quite temporalmente la base de datos del sitio principal desde el grupo de disponibilidad.
+<!--SCCMDocs issue 568-->
+Si configura la base de datos de sitio para que un sitio primario independiente use Always On de SQL, no puede expandir el sitio para que incluya un sitio de administración central. Si intenta este proceso, se produce un error. Para expandir el sitio, quite temporalmente la base de datos del sitio principal desde el grupo de disponibilidad.
 
 
 
@@ -289,7 +291,7 @@ Configure el modelo de recuperación de la base de datos de sitio en **Completo*
 
 Utilice la opción de recuperación del sitio **Omitir recuperación de base de datos (use esta opción si la base de datos de sitio no se vio afectada)** si al menos un nodo del grupo de disponibilidad sigue funcionando.
 
-Cuando pierde todos los nodos de un grupo de disponibilidad, debe volver a crear el grupo de disponibilidad para recuperar el sitio. Configuration Manager no puede volver a generar o restaurar el nodo de disponibilidad. Vuelva a crear el grupo, restaure la copia de seguridad y vuelva a configurar SQL. Luego, use la opción de recuperación del sitio **Omitir recuperación de base de datos (use esta opción si la base de datos del sitio no se vio afectada)**.
+Cuando pierde todos los nodos de un grupo de disponibilidad, debe volver a crear el grupo de disponibilidad para recuperar el sitio. Configuration Manager no puede volver a generar o restaurar el nodo de disponibilidad. Vuelva a crear el grupo, restaure la copia de seguridad y vuelva a configurar SQL. Luego, use la opción de recuperación del sitio **Omitir recuperación de base de datos (use esta opción si la base de datos del sitio no se vio afectada)** .
 
 Para obtener más información, vea [Copia de seguridad y recuperación](/sccm/core/servers/manage/backup-and-recovery).
 

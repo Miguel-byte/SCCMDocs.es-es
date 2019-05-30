@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93862e95a3bae13582c2aa70daf2db22f9d621d8
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: cc88e70360599391c84e54e41e73b53ef3b70678
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65495469"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66177044"
 ---
 # <a name="what39s-new-in-version-1706-of-system-center-configuration-manager"></a>Novedades de la versión 1706 de System Center Configuration Manager
 
@@ -94,9 +94,9 @@ La integración mejorada permite lo siguiente:
 
   Esto se realiza mediante una [aplicación web de servidor de Azure](/azure/azure/app-service/app-service-authentication-overview#service-to-service-authentication) para proporcionar la información de suscripción y configuración que, de lo contrario, especificaría cada vez que configurase un nuevo componente o servicio de Configuration Manager con Azure. Para obtener más información, consulte [Azure Services Wizard](/sccm/core/servers/deploy/configure/azure-services-wizard) (Asistente para servicios de Azure).
 
--   Uso de Azure AD para autenticar los clientes en Internet para acceder a los sitios de Configuration Manager. Azure AD reemplaza la necesidad de configurar y usar certificados de autenticación del cliente. Esto requiere el rol de sistema de sitio de Cloud Management Gateway. Para obtener más información, consulte [Instalación y asignación de clientes de Configuration Manager desde Internet mediante Azure AD con fines de autenticación](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
+-   Use Azure AD para autenticar los clientes en Internet para acceder a los sitios de Configuration Manager. Azure AD reemplaza la necesidad de configurar y usar certificados de autenticación del cliente. Esto requiere el rol de sistema de sitio de Cloud Management Gateway. Para más información, vea [Instalación y asignación de clientes de Configuration Manager desde Internet mediante Azure AD con fines de autenticación](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
 
--   Instale y administre al cliente de Configuration Manager en equipos que se encuentran en Internet. Esto requiere el uso del rol de sistema de Cloud Management Gateway. Para obtener más información, consulte [Instalación y asignación de clientes de Configuration Manager desde Internet mediante Azure AD con fines de autenticación](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
+-   Instale y administre al cliente de Configuration Manager en equipos que se encuentran en Internet. Esto requiere el uso del rol de sistema de Cloud Management Gateway. Para más información, vea [Instalación y asignación de clientes de Configuration Manager desde Internet mediante Azure AD con fines de autenticación](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
 
 -   Configure la detección de usuarios de Azure AD.  Use el Asistente para servicios de Azure para configurar este nuevo método de detección. Este nuevo método consulta a Azure AD los datos de usuario que luego puede usar junto con datos de detección tradicional.  Se admiten tanto la sincronización completa como la sincronización delta.  Para obtener más información, consulte [Detección de usuario de Active Directory](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc).
 

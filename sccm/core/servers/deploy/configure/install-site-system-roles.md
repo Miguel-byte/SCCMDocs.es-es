@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 991db8c7076f9f76515aba17df6339c133f1d63e
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 5c93c7ead83a09bb882c5f0468d936c5188d46b2
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65498585"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176943"
 ---
 # <a name="install-site-system-roles-for-system-center-configuration-manager"></a>Instalación de roles de sistema de sitio para System Center Configuration Manager
 
@@ -69,7 +69,7 @@ Justo antes de instalar el rol de sistema de sitio, Configuration Manager compru
 4.  En la página **General** , especifique la configuración general del sistema de sitio y, a continuación, haga clic en **Siguiente**.  
 
     > [!TIP]  
-    >  Para tener acceso al nuevo rol de sistema de sitio desde Internet, asegúrese de especificar un FQDN de Internet.  
+    >  Para acceder al nuevo rol de sistema de sitio desde Internet, asegúrese de especificar un FQDN de Internet.  
 
 5.  En la página **Proxy**, especifique la configuración de un servidor proxy si los roles de sistema de sitio que se ejecutan en ese servidor de sistema de sitio necesitan un servidor proxy para conectarse a ubicaciones en Internet. A continuación, haga clic en **Siguiente**.  
 

@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28e0326cf370d000052eb3bc675e70377d7954c5
-ms.sourcegitcommit: 234f97fde834f94b75f90850378521cf0c5a2343
+ms.openlocfilehash: 7eb322550c6d11426240736d3d0c6b9ff2c9764f
+ms.sourcegitcommit: abfc9e1b3945637fa93ca8d3a11519493a5d5391
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "64945090"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66264555"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Tutorial: Implementación piloto de Windows 10
 
@@ -140,6 +140,10 @@ Utilice este procedimiento para iniciar sesión el análisis de escritorio y con
 6. Seleccione un área de trabajo nueva o existente y, a continuación, seleccione **establecer como área de trabajo de análisis de escritorio**.  A continuación, seleccione **continuar** en el **confirmar y concederle acceso** cuadro de diálogo.  
 
 7. En la nueva pestaña del explorador, elija una cuenta para que use para iniciar sesión. Seleccione la opción de **dar su consentimiento en nombre de su organización** y seleccione **Accept**.  
+
+
+    > [!Note]  
+    > Este consentimiento consiste en asignar el rol de lector de Log Analytics para el área de trabajo de la aplicación de MALogAnalyticsReader. Este rol de aplicación es necesario por el análisis de escritorio. Para obtener más información, consulte [rol de aplicación MALogAnalyticsReader](/sccm/desktop-analytics/troubleshooting#bkmk_MALogAnalyticsReader).  
 
 8. En la página a **configurar el área de trabajo**, seleccione **siguiente**.  
 
@@ -311,11 +315,11 @@ Utilice este procedimiento para implementar Windows 10 en Configuration Manager 
 
 5. Complete el Asistente para paquete de actualización de sistema operativo agregar.  
 
-#### <a name="distribute-content"></a>Distribuir contenido
+#### <a name="distribute-content"></a>Distribución de contenido
 
 A continuación, distribuya el paquete de actualización del sistema operativo a puntos de distribución.  
 
-1. Seleccione el paquete de actualización del sistema operativo en la lista. En el **inicio** pestaña de la cinta de opciones, en el **implementación** grupo, seleccione **distribuir contenido**. Se abre el Asistente para distribuir contenido.  
+1. Seleccione el paquete de actualización del sistema operativo en la lista. En la pestaña **Inicio** de la cinta de opciones, vaya al grupo **Implementación** y seleccione **Distribuir contenido**. Se abre el Asistente para distribuir contenido.  
 
 2. En el **General** , comprueba que el contenido que aparece es el contenido que desea distribuir y, a continuación, seleccione **siguiente**.  
 

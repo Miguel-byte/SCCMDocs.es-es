@@ -2,7 +2,7 @@
 title: Compatibilidad con Windows 10
 titleSuffix: Configuration Manager
 description: Obtenga información sobre las versiones de Windows 10 que se admiten como clientes o para OSD con System Center Configuration Manager.
-ms.date: 03/27/2019
+ms.date: 05/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,24 +11,25 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c20c4219ce9fedda0cf18d1f1fcc0241a9c058ca
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: d3ac15d0039377d4635e531052abcec72503b1c4
+ms.sourcegitcommit: d1df13fc95a1f1540177c294555d9be26161b9cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499489"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974183"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Compatibilidad con Windows 10 en Configuration Manager  
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Obtenga información sobre las versiones de Windows 10 que admite Configuration Manager, incluidas:
+
 - [Windows 10 como cliente de Configuration Manager](#windows-10-as-a-client)
 - [Windows Assessment and Deployment Kit (ADK) para Windows 10](#windows-10-adk)
 
 > [!Tip]
 > Las compilaciones de Windows Server como cliente se admiten del mismo modo que la versión de Windows 10 asociada. Por ejemplo, Windows Server 2016 es la misma versión de compilación que Windows 10 LTSB 2016 y Windows Server versión 1803 es la misma versión de compilación que Windows 10 versión 1803.
-> 
+>
 > Para más información sobre Windows Server como sistema de sitios, vea [Sistemas operativos compatibles con servidores de sistema de sitio de Configuration Manager](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers#the-server-core-installation-of-windows-server-version-1803).
 
 
@@ -55,25 +56,25 @@ En la tabla siguiente se enumeran las versiones de Windows 10 que puede usar com
 |---------------------|-----|-----|-----|-----|-----|
 | Enterprise 2015 LTSB <!--10/14/2025-->   | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) |
 | Enterprise 2016 LTSB <!--10/13/2026-->   | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) |
-| Enterprise LTSC 2019 <!--10/10/2028-->   | ![No compatible](media/Red_X.png)   | ![No compatible](media/Red_X.png)   | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) |
-| 1607   <!--04/09/2019-->   | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) |
+| Enterprise LTSC 2019 <!--01/09/2029-->   | ![No compatible](media/Red_X.png)   | ![No compatible](media/Red_X.png)   | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) |
 | 1703   <!--10/08/2019-->   | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) |
 | 1709   <!--04/14/2020-->   | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) |
 | 1803   <!--11/10/2020-->   | ![No compatible](media/Red_X.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) |
-| 1809   <!--04/12/2021?-->   | ![No compatible](media/Red_X.png) | ![No compatible](media/Red_X.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) |
+| 1809   <!--05/11/2021-->   | ![No compatible](media/Red_X.png) | ![No compatible](media/Red_X.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) |
+| 1903   <!--TBD-->   | ![No compatible](media/Red_X.png) | ![No compatible](media/Red_X.png) | ![No compatible](media/Red_X.png) | ![No compatible](media/Red_X.png) | ![Compatible.](media/green_check.png) |
 
 <!-- lifecycle reference: https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet -->
 
 > [!Note]  
-> En la compatibilidad para las versiones del Canal semianual de Windows 10, se incluyen las ediciones siguientes: Enterprise, Pro, Education y Pro Education.   
+> En la compatibilidad para las versiones del Canal semianual de Windows 10, se incluyen las ediciones siguientes: Enterprise, Pro, Education y Pro Education.  
 
 | Clave |
 |--|
 | ![Compatible](media/green_check.png) = **Compatible**  |
 | ![No compatible](media/Red_X.png) = **Not supported** |
 
- > [!NOTE]  
- > A partir de la versión 1802, Configuration Manager es compatible con el cliente en dispositivos ARM64 de Windows 10. Las características de administración de cliente existentes deben funcionar con estos nuevos dispositivos. Por ejemplo, el inventario de hardware y software, las actualizaciones de software y la administración de aplicaciones. La implementación de SO no se admite actualmente. <!-- 1353704 --> 
+> [!NOTE]  
+> A partir de la versión 1802, Configuration Manager es compatible con el cliente en dispositivos ARM64 de Windows 10. Las características de administración de cliente existentes deben funcionar con estos nuevos dispositivos. Por ejemplo, el inventario de hardware y software, las actualizaciones de software y la administración de aplicaciones. La implementación de SO no se admite actualmente. <!-- 1353704 -->
 
 Para más información sobre el ciclo de vida de Windows, vea [Hoja de datos del ciclo de vida de Windows](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
 
@@ -95,6 +96,7 @@ En la tabla siguiente se enumeran las versiones de Windows 10 ADK que puede usar
 | **1709**<br>(10.1.16299) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible con versiones anteriores](media/blue_compat.png) | ![No compatible](media/Red_X.png)   | ![No compatible](media/Red_X.png) |
 | **1803**<br>(10.1.17134) | ![No compatible](media/Red_X.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible con versiones anteriores](media/blue_compat.png) | ![Compatible con versiones anteriores](media/blue_compat.png) |
 | **1809**<br>(10.1.17763) | ![No compatible](media/Red_X.png) | ![No compatible](media/Red_X.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) |
+| **1903**<br>(10.1.18362) | ![No compatible](media/Red_X.png) | ![No compatible](media/Red_X.png) | ![No compatible](media/Red_X.png) | ![No compatible](media/Red_X.png) | ![Compatible.](media/green_check.png) |
 
 |Clave|
 |--|
@@ -103,7 +105,7 @@ En la tabla siguiente se enumeran las versiones de Windows 10 ADK que puede usar
 | ![No compatible](media/Red_X.png) = **Not supported** |
 
 > [!Note]  
-> Configuration Manager solo admite componentes x86 y amd64 de Windows 10 ADK. Actualmente no admite componentes ARM o ARM64. 
+> Configuration Manager solo admite componentes x86 y amd64 de Windows 10 ADK. Actualmente no admite componentes ARM o ARM64.
 
 > [!Tip]
 > Las compilaciones de Windows Server tienen el mismo requisito de Windows ADK que la versión de Windows 10 asociada. Por ejemplo, Windows Server 2016 es la misma versión de compilación que Windows 10 LTSB 2016.

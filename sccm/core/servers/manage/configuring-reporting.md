@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c65c85c6ec340fe595efa3bfd403e3c8d1d6a017
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: aa7d623cdd27258a265cd1b1ad22edeb78fe4da8
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56134680"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66177007"
 ---
 # <a name="configuring-reporting-in-system-center-configuration-manager"></a>Configuración de informes en System Center Configuration Manager
 
@@ -100,7 +100,7 @@ Para crear, modificar y ejecutar informes en la consola de System Center Configu
 
     -   **Sistema de sitio nuevo**: En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear servidor del sistema de sitio**. Se abre el **Asistente para crear servidor de sistema de sitio** .  
 
-    -   **Sistema de sitio existente**: haga clic en el servidor en el que desea instalar el rol de sistema de sitio del punto de servicios de informes. Al hacer clic en un servidor, se muestra en el panel de resultados una lista de los roles de sistema de sitio que ya están instalados en el servidor.  
+    -   **Sistema de sitio existente**: haga clic en el servidor en el que quiera instalar el rol de sistema de sitio del punto de servicios de informes. Al hacer clic en un servidor, se muestra en el panel de resultados una lista de los roles de sistema de sitio que ya están instalados en el servidor.  
 
          En la pestaña **Inicio** , en el grupo **Servidor** , haga clic en **Agregar rol de sistema de sitio**. Se abre el **Asistente para agregar roles de sistema de sitio** .  
 
@@ -225,7 +225,7 @@ Para crear, modificar y ejecutar informes en la consola de System Center Configu
 
     5.  En el cuadro de diálogo **Agregar o quitar complementos** , haga clic en **Aceptar**.  
 
-    6.  En la consola, expanda **Certificados (equipo local)**, expanda **Personas de confianza**y seleccione **Certificados**.  
+    6.  En la consola, expanda **Certificados (equipo local)** , expanda **Personas de confianza**y seleccione **Certificados**.  
 
     7.  Haga clic con el botón derecho en el certificado con el nombre descriptivo de &lt;*FQDN del servidor del sitio*>, haga clic en **Todas las tareas** y luego seleccione **Exportar**.  
 
@@ -235,7 +235,7 @@ Para crear, modificar y ejecutar informes en la consola de System Center Configu
 
     1.  Repita que los pasos anteriores del 1.a al 1.e para configurar el MMC del complemento **Certificado** en el equipo de punto de administración.  
 
-    2.  En la consola, expanda **Certificados (equipo local)**, expanda **Personas de confianza**, haga clic con el botón secundario en **Certificados**, seleccione **Todas las tareas**y, a continuación, seleccione **Importar** para iniciar el **Asistente para importación de certificados**.  
+    2.  En la consola, expanda **Certificados (equipo local)** , expanda **Personas de confianza**, haga clic con el botón secundario en **Certificados**, seleccione **Todas las tareas**y, a continuación, seleccione **Importar** para iniciar el **Asistente para importación de certificados**.  
 
     3.  En la página **Archivo para importar** , seleccione el certificado que guardó en el paso 1.h y, a continuación, haga clic en **Siguiente**.  
 
@@ -278,7 +278,7 @@ Para crear, modificar y ejecutar informes en la consola de System Center Configu
 6.  Haga clic en **Aceptar** para guardar los cambios y salir del cuadro de diálogo.  
 
 ## <a name="upgrading-sql-server"></a>Actualización de SQL Server  
- Tras actualizar SQL Server, y el servicio SQL Server Reporting Services que se usa como el origen de datos de un punto de servicios de informes, podría experimentar errores al ejecutar o editar informes desde la consola de Configuration Manager. Para que la generación de informes funcione correctamente en la consola de Configuration Manager, debe eliminar el rol de sistema de sitio de punto de servicios de informes para el sitio y volver a instalarlo. Sin embargo, tras la actualización puede continuar con la ejecución y edición de informes desde un explorador de Internet.  
+ Tras actualizar SQL Server, y el servicio SQL Server Reporting Services que se usa como el origen de datos de un punto de servicios de informes, podría experimentar errores al ejecutar o editar informes desde la consola de Configuration Manager. Para que la generación de informes funcione correctamente en la consola de Configuration Manager, debe eliminar el rol de sistema de sitio de punto de servicios de informes para el sitio y volver a instalarlo. Pero tras la actualización puede continuar con la ejecución y edición de informes desde un explorador de Internet.  
 
 ##  <a name="BKMK_ConfigureReportOptions"></a> Configuración de las opciones de informes  
  Use las opciones de informes de un sitio de Configuration Manager para seleccionar el punto de servicios de informes predeterminado que se usa para administrar los informes. Aunque puede haber más de un punto de servicios de informes en un sitio, solo el servidor de informes predeterminado seleccionado en Opciones de informes se utiliza para administrar los informes. Utilice el siguiente procedimiento para configurar las opciones de informes para su sitio.  

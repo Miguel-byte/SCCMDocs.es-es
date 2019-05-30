@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b62ca813b11a6c49366c80623e7c4462e2e4897
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: aa92ed294196d44aaafcf4e873c706e135928c90
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133908"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176646"
 ---
 # <a name="how-to-manage-clients-in-system-center-configuration-manager"></a>Cómo administrar clientes en System Center Configuration Manager
 
@@ -225,7 +225,7 @@ El cliente de Configuration Manager descarga el contenido del software necesario
 Si el cliente trata de descargar el contenido de un programa o aplicación cuyo tamaño es mayor que el de la caché, se produce un error de implementación debido a la falta de espacio en la caché. El cliente genera el mensaje de estado 10050 de tamaño de caché insuficiente. Si aumenta el tamaño de caché más adelante, el resultado es el siguiente:  
 
 -   Para un programa necesario: el cliente no reintenta descargar el contenido automáticamente. Vuelva a implementar el paquete y el programa en el cliente.  
--   Para una aplicación necesaria: el cliente vuelve a intentar descargar el contenido automáticamente cuando descarga su directiva de cliente.  
+-   Para una aplicación requerida: el cliente vuelve a intentar descargar el contenido automáticamente cuando descarga su directiva de cliente.  
 
 Si el cliente trata de descargar un paquete cuyo tamaño es inferior al de la caché, pero la caché está llena, se reintentan todas las implementaciones necesarias hasta que la caché disponga de espacio o se alcance el tiempo de espera de la descarga o el límite de número de reintentos. Si aumenta el tamaño de la caché más adelante, el cliente de Configuration Manager trata de volver a descargar el paquete durante el próximo intervalo de reintento. El cliente trata de descargar el contenido cada cuatro horas hasta un máximo de 18 intentos.  
 
@@ -304,10 +304,13 @@ Ajuste el tamaño de la caché del cliente sin tener que volver a instalar el cl
 
 1.  Abra un símbolo del sistema de Windows y cambie la carpeta a la ubicación en la que se encuentra CCMSetup.exe.  
 
-2.  Escriba **Ccmsetup.exe /uninstall**y, a continuación, presione **Entrar**.  
+2.  Escriba **CCMSetup.exe /uninstall** y después presione **Entrar**.  
 
 > [!NOTE]  
->  El proceso de desinstalación no muestra ningún resultado en la pantalla. Para comprobar que la desinstalación del cliente se ha realizado correctamente, examine el archivo de registro **CCMSetup.log** en la carpeta *%windir%\ ccmsetup* del equipo cliente.  
+>  El proceso de desinstalación no muestra ningún resultado en la pantalla. Para comprobar que la desinstalación del cliente se ha realizado correctamente, examine el archivo de registro **CCMSetup.log** de la carpeta *%windir%\ccmsetup\logs* en el equipo cliente.  
+
+> [!TIP]
+> Si tiene que esperar a que se complete el proceso de desinstalación antes de hacer algo más, ejecute `Wait-Process CCMSetup` en PowerShell. Este comando puede pausar un script hasta que se complete el proceso de CCMSetup.
 
 ##  <a name="BKMK_ConflictingRecords"></a> Administrar registros en conflicto para clientes de Configuration Manager  
  Configuration Manager usa el identificador de hardware para tratar de identificar los clientes que puedan estar duplicados y alertarle de los registros en conflicto. Por ejemplo, si reinstala un equipo, el identificador de hardware sería el mismo, pero el GUID que usa Configuration Manager es posible que cambie.  
@@ -425,6 +428,6 @@ Puede iniciar la recuperación de directivas con:
 
     -   Desplácese hasta el archivo en el Explorador de Windows y haga doble clic en el archivo de script.  
 
-    -   Abra un símbolo del sistema y escriba: **cscript &lt;ruta\nombredearchivo.vbs>**.  
+    -   Abra un símbolo del sistema y escriba: **cscript &lt;ruta\nombredearchivo.vbs>** .  
 
 5.  Pulse **Aceptar** en el cuadro de diálogo **Windows Script Host**.  

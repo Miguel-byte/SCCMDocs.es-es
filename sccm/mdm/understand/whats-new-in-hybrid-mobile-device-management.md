@@ -2,7 +2,7 @@
 title: Novedades de la MDM híbrida
 titleSuffix: Configuration Manager
 description: Obtenga información sobre las nuevas características de administración de dispositivos móviles disponibles para implementaciones híbridas con Configuration Manager e Intune.
-ms.date: 05/23/2019
+ms.date: 05/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fc41388c1586fc73ce93127dd0e6492f587d18be
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: b6a4cfbc7e9db5f4402278b73c2ca7ea1d869953
+ms.sourcegitcommit: 18a94eb78043cb565b05cd0e9469b939b29cccf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176676"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66355032"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Novedades de la administración híbrida de dispositivos móviles con Configuration Manager y Microsoft Intune
 
@@ -50,6 +50,12 @@ En cada sección de este artículo se enumeran las características híbridas or
 ## <a name="may-2019"></a>Mayo de 2019
 
 ### <a name="new-in-microsoft-intune"></a>Novedades de Microsoft Intune
+
+#### <a name="windows-company-portal-app"></a>Aplicación Portal de empresa de Windows
+
+<!-- 3316993 -->
+
+La aplicación de Portal de empresa de Windows ahora tiene una nueva página con la etiqueta **dispositivos**. El **dispositivos** página muestra los usuarios de todos los dispositivos inscritos. Los usuarios verán este cambio en el Portal de empresa cuando utiliza la versión 10.3.4291.0 y versiones posteriores. Para obtener más información, consulte [cómo configurar la aplicación de Portal de empresa de Microsoft Intune](https://docs.microsoft.com/intune/company-portal-app).
 
 #### <a name="android-enterprise-app-management"></a>Administración de aplicaciones de Android Enterprise
 
@@ -284,7 +290,7 @@ Los usuarios finales ahora pueden acceder a las propiedades y acciones principal
 #### <a name="pin-prompt-when-you-change-fingerprints-or-face-id-on-an-ios-device"></a>Solicitud de PIN al cambiar las huellas digitales o Face ID en un dispositivo iOS
 
 <!--2637704-->  
-Ahora se solicitará a los usuarios un PIN después de realizar cambios biométricos en su dispositivo iOS. Esto incluye los cambios en Face ID o huellas digitales registrados. El tiempo de la solicitud depende de la configuración del tiempo de expiración de *Volver a comprobar los requisitos de acceso después de (minutos)*.  Si no hay ningún PIN configurado, se pide al usuario que establezca uno.  
+Ahora se solicitará a los usuarios un PIN después de realizar cambios biométricos en su dispositivo iOS. Esto incluye los cambios en Face ID o huellas digitales registrados. El tiempo de la solicitud depende de la configuración del tiempo de expiración de *Volver a comprobar los requisitos de acceso después de (minutos)* .  Si no hay ningún PIN configurado, se pide al usuario que establezca uno.  
 
 Esta característica solo está disponible para iOS y requiere la participación de las aplicaciones que integran el SDK de aplicaciones de Intune para iOS, versión 8.1.1 o posteriores. La integración del SDK es necesaria para poder aplicar el comportamiento en las aplicaciones de destino. Esta integración ocurre de manera gradual y depende de los equipos de la aplicación específica. Algunas aplicaciones participantes incluyen WXP, Outlook, Managed Browser y Yammer.
 
@@ -628,7 +634,7 @@ Con Azure Active Directory (Azure AD), ya puede restringir el acceso a sitios we
 
   Vea [Proteger aplicaciones mediante directivas de administración de aplicaciones móviles en System Center Configuration Manager](/sccm/mdm/deploy-use/protect-apps-using-mam-policies) para probar la nueva configuración de la directiva de protección de aplicaciones.
 
-- **Compatibilidad con dispositivos Windows 10 (ARM64)**     
+- **Compatibilidad con dispositivos Windows 10 (ARM64)**      
   Cuando los dispositivos ARM64 que ejecutan Windows 10 estén disponibles, admiten los escenarios híbridos de administración de dispositivos móviles (MDM). Para más información, vea [Compatibilidad con dispositivos Windows 10 (ARM64)](/sccm/core/plan-design/changes/whats-new-in-version-1710#windows-10-arm64-device-support).
   <!-- 1355000 -->    
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9cf206bfb0774ee1d45c70e2a0c890a2f157ad65
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 9c3058eed3cd7fe4430824d5a55f155694a2ed44
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56127191"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66177016"
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-system-center-configuration-manager"></a>Más información sobre cómo los clientes buscan servicios y recursos de sitio para System Center Configuration Manager
 
@@ -148,7 +148,7 @@ Los clientes de la intranet pueden usar DNS para la ubicación del servicio. Est
 Considere la posibilidad de usar DNS para la ubicación del servicio cuando se cumpla alguna de las siguientes condiciones:
 -   El esquema de AD DS no se ha extendido para admitir Configuration Manager.
 -   Los clientes de la intranet se encuentran en un bosque que no está habilitado para la publicación de Configuration Manager.  
--   Hay clientes en equipos de grupo de trabajo que no están configurados para la administración de clientes de solo Internet (Un cliente de grupo de trabajo configurado para Internet se comunicará únicamente con puntos de administración con conexión a Internet y no usará DNS para la ubicación del servicio).  
+-   Hay clientes en equipos de grupo de trabajo que no están configurados para la administración de clientes de solo Internet. (Un cliente de grupo de trabajo configurado para Internet se comunicará únicamente con puntos de administración con conexión a Internet y no usará DNS para la ubicación del servicio).  
 -   Puede [configurar clientes para que busquen puntos de administración desde DNS](http://technet.microsoft.com/library/gg682055).  
 
 Cuando un sitio publica registros de ubicación del servicio de los puntos de administración en DNS:  

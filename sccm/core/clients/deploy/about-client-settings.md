@@ -2,7 +2,7 @@
 title: Configuración de cliente
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la configuración predeterminada y personalizada para controlar los comportamientos del cliente.
-ms.date: 05/01/2019
+ms.date: 05/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cfb3e50d2f438995db1d28229365caf48f1f6646
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.openlocfilehash: 3271c0fbd8673e33d7a7bf6a9c6da4b0ce978377
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65083279"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176787"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Información sobre la configuración de cliente en Configuration Manager
 
@@ -63,7 +63,7 @@ Configure el equipo cliente para [Windows BranchCache](/sccm/core/plan-design/co
 
 - **Habilitar BranchCache**: Habilita BranchCache en los equipos cliente.
 
-- **Tamaño máximo de la caché de BranchCache (porcentaje de disco)**: El porcentaje del disco que se permite usar a BranchCache.
+- **Tamaño máximo de la caché de BranchCache (porcentaje de disco)** : El porcentaje del disco que se permite usar a BranchCache.
 
 ### <a name="configure-client-cache-size"></a>Configurar el tamaño de la caché de cliente
 
@@ -72,7 +72,7 @@ En la caché del cliente de Configuration Manager en los equipos Windows se alma
 Si elige **Sí**, especifique lo siguiente:
 
 - **Tamaño máximo de caché (MB)**
-- **Tamaño de caché máximo (porcentaje de disco)**: El tamaño de la caché de cliente se expande hasta el tamaño máximo en megabytes (MB) o el porcentaje del disco, lo que sea inferior.
+- **Tamaño de caché máximo (porcentaje de disco)** : El tamaño de la caché de cliente se expande hasta el tamaño máximo en megabytes (MB) o el porcentaje del disco, lo que sea inferior.
 
 ### <a name="enable-configuration-manager-client-in-full-os-to-share-content"></a>Habilitar el cliente de Configuration Manager en el SO completo para compartir contenido
 
@@ -277,7 +277,7 @@ Esta opción requiere al menos la versión 2.0 de Windows PowerShell. El valor p
 >
 > - En el área de trabajo **Supervisión** de la consola se muestra el identificador de error **0x87D00327**. También muestra la descripción **El script no se firmó**.  
 > - Los informes muestran el tipo de error **Error de detección**. Luego muestran el código de error **0x87D00327** y la descripción **El script no se firmó**, o bien el código de error **0x87D00320** y la descripción **Aún no se ha instalado el host de script**. Un informe de ejemplo es **Detalles de errores de elementos de configuración en una línea base de configuración para un activo**.  
-> - El archivo **DcmWmiProvider.log** muestra el mensaje **El script no se firmó (Error: 87D00327; Origen: CCM)**.  
+> - El archivo **DcmWmiProvider.log** muestra el mensaje **El script no se firmó (Error: 87D00327; Origen: CCM)** .  
 
 ### <a name="show-notifications-for-new-deployments"></a>Mostrar notificaciones para nuevas implementaciones
 
@@ -494,16 +494,16 @@ Para obtener más información sobre el proxy de reactivación, vea [Planear la 
 
 Después, configure las siguientes opciones adicionales según sea necesario:
 
-- **Número de puerto de proxy de reactivación (UDP)**: El número de puerto que los clientes usan para enviar paquetes de reactivación a equipos en suspensión. Mantenga el puerto predeterminado 25536, o bien cambie el número por un valor de su elección.  
+- **Número de puerto de proxy de reactivación (UDP)** : El número de puerto que los clientes usan para enviar paquetes de reactivación a equipos en suspensión. Mantenga el puerto predeterminado 25536, o bien cambie el número por un valor de su elección.  
 
-- **Número de puerto de Wake on LAN (UDP)**: Mantenga el valor predeterminado de 9, a menos que haya cambiado el número de puerto de Wake on LAN (UDP) en la pestaña **Puertos** en las **Propiedades** del sitio.  
+- **Número de puerto de Wake on LAN (UDP)** : Mantenga el valor predeterminado de 9, a menos que haya cambiado el número de puerto de Wake on LAN (UDP) en la pestaña **Puertos** en las **Propiedades** del sitio.  
 
     > [!IMPORTANT]  
     > Este número debe coincidir con el número en las **Propiedades**del sitio. Si cambia este número en un lugar, este no se actualizará automáticamente en el otro lugar.  
 
 - **Excepción del Firewall de Windows Defender para el proxy de reactivación**: El cliente de Configuration Manager configura automáticamente el número de puerto del proxy de reactivación en los dispositivos que ejecutan Firewall de Windows Defender. Seleccione **Configurar** para especificar los perfiles de firewall deseados.  
 
-    Si los clientes ejecutan otro firewall, necesita configurarlo manualmente para permitir el **Número de puerto de proxy de reactivación (UDP)**.  
+    Si los clientes ejecutan otro firewall, necesita configurarlo manualmente para permitir el **Número de puerto de proxy de reactivación (UDP)** .  
 
 - **Prefijos de IPv6 si son necesarios para DirectAccess u otros dispositivos de red que intervengan. Use una coma para especificar varias entradas**: Escriba los prefijos de IPv6 necesarios para que el proxy de reactivación funcione en la red.
 
@@ -644,8 +644,10 @@ Establezca las opciones adicionales de este grupo en **Sí** para que las pesta�
     - **Nombre de pestaña**
     - **URL de contenido**
 
->[!NOTE]
-> Puede que algunas de las características de los sitios web no funcionen cuando se usen como una pestaña personalizada en el Centro de software. Asegúrese de probar los resultados antes de implementar esto en los clientes. <!--519659-->
+    >[!Important]  
+    > Puede que algunas de las características de los sitios web no funcionen cuando se usen como una pestaña personalizada en el Centro de software. Asegúrese de probar los resultados antes de implementar esto en los clientes. <!--519659-->
+    >
+    > Cuando agregue una pestaña personalizada, especifique solo direcciones de sitio web de intranet o de confianza.<!--SCCMDocs issue 1575-->
 
 Por ejemplo, si la organización no usa las directivas de cumplimiento y quiere ocultar la pestaña Compatibilidad de dispositivos en el Centro de software, establezca la opción **Habilitar pestaña Cumplimiento del dispositivo** en **No**.
 
@@ -718,7 +720,7 @@ Si quiere recopilar archivos de los equipos cliente, seleccione **Archivos** y, 
 
     - **Excluir archivos cifrados y comprimidos**: al seleccionar esta opción, no se recopila incluye ningún archivo comprimido o cifrado.  
 
-    - **Detener la recopilación de archivos cuando el tamaño total de archivos supere (KB)**: especifique el tamaño del archivo, en kilobytes (KB), después del cual el cliente detiene la recopilación de los archivos especificados.  
+    - **Detener la recopilación de archivos cuando el tamaño total de archivos supere (KB)** : especifique el tamaño del archivo, en kilobytes (KB), después del cual el cliente detiene la recopilación de los archivos especificados.  
 
     > [!NOTE]  
     > El servidor de sitio recopila las cinco versiones cambiadas recientemente de los archivos recopilados y las almacena en el directorio `<ConfigMgr installation directory>\Inboxes\Sinv.box\Filecol`. Si un archivo no ha cambiado desde el último ciclo de inventario de software, el archivo no se volverá recopilar.  

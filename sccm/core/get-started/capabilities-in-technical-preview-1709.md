@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ab5802ea43884ac23d434edd39569159ca48480a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 6aa1c324a3ff24feb14c6b867728a76252a8c19d
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56138439"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176021"
 ---
 # <a name="capabilities-in-technical-preview-1709-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1709 para System Center Configuration Manager
 
@@ -44,7 +44,8 @@ En este artículo se presentan las características disponibles en Technical Pre
 **Estas son las nuevas características que puede probar con esta versión.**  
 
 ## <a name="improved-vpn-profile-experience-in-configuration-manager-console"></a>Experiencia mejorada del perfil VPN en la consola de Configuration Manager
-<!-- 1313282 --> Con esta versión, hemos actualizado las páginas de propiedades y el Asistente para perfiles de VPN con el fin de mostrar una configuración más adecuada para la plataforma seleccionada. De manera específica:
+<!-- 1313282 -->
+Con esta versión hemos actualizado las páginas de propiedades y el asistente de perfiles VPN para mostrar una configuración más adecuada para la plataforma seleccionada. De manera específica:
 
 - Cada plataforma tiene su propio flujo de trabajo, lo que significa que los nuevos perfiles VPN contienen únicamente la configuración compatible con la plataforma.
 - Las páginas **Plataformas admitidas** ahora aparecen después de la página **General**.  Ahora se elige primero la plataforma antes de establecer los valores de propiedad.
@@ -78,7 +79,8 @@ Cree un perfil VPN siguiendo el proceso habitual. Tenga en cuenta que la primera
 A medida que seleccione distintas plataformas, observe que solo se muestran las opciones relevantes para la plataforma seleccionada.
 
 ## <a name="co-management-for-windows-10-devices"></a>Administración conjunta para dispositivos de Windows 10    
-<!-- 1350871 --> Muchos clientes quieren administrar los dispositivos Windows 10 de la misma manera que administran los dispositivos móviles mediante una solución simplificada, basada en la nube y de costo inferior, pero llevar a cabo la transición de la administración tradicional a una administración moderna puede resultar complicado. A partir de Windows 10, versión 1607 (también conocida como la Actualización de aniversario), puede unir un dispositivo Windows 10 a Active Directory (AD) local y a Azure AD basado en la nube al mismo tiempo (Azure AD híbrido). La administración conjunta aprovecha esta mejora y le permite administrar dispositivos Windows 10 de forma simultánea mediante Configuration Manager e Intune. Se trata de una solución que sirve de puente entre la administración tradicional y moderna, y proporciona un camino para realizar la transición con un enfoque por fases. 
+<!-- 1350871 -->
+Muchos clientes quieren administrar dispositivos de Windows 10 de la misma manera que administran dispositivos móviles mediante una solución simplificada, basada en la nube y de costo inferior, pero llevar a cabo la transición de la administración tradicional a una administración moderna puede resultar complicado. A partir de Windows 10, versión 1607 (también conocida como la Actualización de aniversario), puede unir un dispositivo Windows 10 a Active Directory (AD) local y a Azure AD basado en la nube al mismo tiempo (Azure AD híbrido). La administración conjunta aprovecha esta mejora y le permite administrar dispositivos Windows 10 de forma simultánea mediante Configuration Manager e Intune. Se trata de una solución que sirve de puente entre la administración tradicional y moderna, y proporciona un camino para realizar la transición con un enfoque por fases. 
 
 ### <a name="prerequisites"></a>Requisitos previos
 Debe cumplir los siguientes requisitos previos para poder habilitar la administración conjunta. Existen requisitos previos generales y distintos requisitos previos para los clientes existentes de Configuration Manager y dispositivos que no son clientes.
@@ -109,10 +111,10 @@ A continuación se indican los requisitos previos generales para poder habilitar
 Después de habilitar la administración conjunta, Configuration Manager sigue administrando todas las cargas de trabajo. Cuando decida que ya está listo, puede hacer que Intune empiece a administrar las cargas de trabajo disponibles. En esta versión puede hacer que Intune administre las siguientes cargas de trabajo.   
 
 #### <a name="compliance-policies"></a>Directivas de cumplimiento
-Las directivas de cumplimiento definen las reglas y los valores de configuración que un dispositivo debe cumplir para que se considere conforme a las directivas de acceso condicional. Las directivas de cumplimiento también se pueden usar para supervisar y corregir problemas de compatibilidad con dispositivos independientemente del acceso condicional. Para obtener más información, vea [Directivas de cumplimiento de dispositivos](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/device-compliance-policies).  
+Las directivas de cumplimiento definen las reglas y los valores de configuración que un dispositivo debe cumplir para que se considere conforme a las directivas de acceso condicional. Las directivas de cumplimiento también se pueden usar para supervisar y corregir problemas de compatibilidad con dispositivos independientemente del acceso condicional. Para obtener más información, vea [Directivas de cumplimiento de dispositivos](https://docs.microsoft.com/sccm/mdm/deploy-use/device-compliance-policies).  
 
 #### <a name="windows-update-for-business-policies"></a>Directivas de Windows Update para empresas
-Las directivas de Windows Update para empresas le permiten configurar directivas de aplazamiento para actualizaciones de características de Windows 10 o actualizaciones de calidad para dispositivos con Windows 10 administradas directamente por Windows Update para empresas. Para obtener más información, vea [Configuración de directivas de aplazamiento de Windows Update para empresas](https://docs.microsoft.com/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies).  
+Las directivas de Windows Update para empresas le permiten configurar directivas de aplazamiento para actualizaciones de características de Windows 10 o actualizaciones de calidad para dispositivos con Windows 10 administradas directamente por Windows Update para empresas. Para obtener más información, vea [Configuración de directivas de aplazamiento de Windows Update para empresas](https://docs.microsoft.com/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies).  
 
 ### <a name="remote-actions-available-in-intune-on-azure-for-co-managed-devices"></a>Acciones remotas disponibles en Intune para Azure para los dispositivos administrados conjuntamente
 Si un dispositivo de Windows 10 está habilitado para la administración conjunta, tiene a su disposición las siguientes acciones remotas de Intune en Azure:  
@@ -160,7 +162,7 @@ Por ejemplo, si tuviera los siguientes valores:
    >[!Note]    
    >Use el valor **MutualAuthPath** en la vista SQL **vProxy_Roles** para el valor **Dirección URL del punto de conexión de autenticación mutua de Cloud Management Gateway**.
 
-- **FQDN del punto de administración (MP)**: sccmmp.corp.contoso.com    
+- **FQDN del punto de administración (MP)** : sccmmp.corp.contoso.com    
 - **CódigoDeSitio**: PS1    
 - **Id. de inquilino de Azure AD**: 72F988BF-86F1-41AF-91AB-2D7CD011XXXX    
 - **Nombre del inquilino de Azure AD**: contoso    
@@ -177,7 +179,7 @@ ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualA
 > [!Tip]
 >Encontrará los parámetros de la línea de comandos del sitio siguiendo estos pasos:     
 > 1. En la consola de Configuration Manager, vaya a **Administración** > **Información general** > **Servicios de nube** > **Co-management** (Administración conjunta).  
-> 2. En la pestaña Home (Inicio), en el grupo Manage (Administrar), elija  **Configure co-management** (Configurar administración conjunta) para abrir el Co-management Onboarding Wizard (Asistente para la incorporación de la administración conjunta).    
+> 2. En la pestaña Inicio, en el grupo Administrar, elija **Configurar administración conjunta** para abrir el Asistente para la incorporación de la administración conjunta.    
 > 3. En la página de suscripción, haga clic en **Iniciar sesión**, inicie sesión con su inquilino de Intune y haga clic en **Siguiente**.    
 > 4. En la página de habilitación, haga clic en **Copiar** en la sección **Devices enrolled in Intune** (Dispositivos inscritos en Intune) para copiar la línea de comandos en el Portapapeles y, luego, guarde la línea de comandos para usarla en el procedimiento en el que se creará la aplicación.  
 > 5. Haga clic en **Cancelar** para salir del asistente.
@@ -186,21 +188,21 @@ ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualA
 Para los nuevos dispositivos de Windows 10, puede usar el servicio AutoPilot para definir la configuración rápida (OOBE), que incluye la unión del dispositivo a AD y a Azure AD, así como la inscripción del dispositivo en Intune. Luego, cree una aplicación en Intune para implementar el cliente de Configuration Manager.  
 1. Habilite AutoPilot para los nuevos dispositivos de Windows 10. Para más información, vea [Resumen de Windows AutoPilot](https://docs.microsoft.com/windows/deployment/windows-10-auto-pilot).  
 2. Configure la inscripción automática en Azure AD para que los dispositivos se inscriban automáticamente en Intune. Para más información, vea  [Inscripción de dispositivos Windows para Microsoft Intune](https://docs.microsoft.com/intune/windows-enroll).
-3. Cree una aplicación en Intune con el paquete del cliente de Configuration Manager e implemente la aplicación en los dispositivos de Windows 10 que quiera administrar de forma conjunta. Use la [línea de comandos para instalar el cliente de Configuration Manager](#command-line-to-install-configuration-manager-client) cuando siga los pasos necesarios para [instalar los clientes desde Internet mediante Azure AD](https://docs.microsoft.com/en-us/sccm/core/clients/deploy/deploy-clients-cmg-azure).   
+3. Cree una aplicación en Intune con el paquete del cliente de Configuration Manager e implemente la aplicación en los dispositivos de Windows 10 que quiera administrar de forma conjunta. Use la [línea de comandos para instalar el cliente de Configuration Manager](#command-line-to-install-configuration-manager-client) cuando siga los pasos para [instalar clientes desde Internet mediante Azure AD](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-cmg-azure).   
 
 #### <a name="windows-10-devices-not-enrolled-in-intune-or-a-configuration-manager-client"></a>Dispositivos de Windows 10 no inscritos en Intune o en un cliente de Configuration Manager
 Para los dispositivos de Windows 10 que no están inscritos en Intune o que tienen el cliente de Configuration Manager, puede usar la inscripción automática para inscribirlos en Intune. Luego, cree una aplicación en Intune para implementar el cliente de Configuration Manager.
 1. Configure la inscripción automática en Azure AD para que los dispositivos se inscriban automáticamente en Intune. Para más información, vea  [Inscripción de dispositivos Windows para Microsoft Intune](https://docs.microsoft.com/intune/windows-enroll).  
-2. Cree una aplicación en Intune con el paquete del cliente de Configuration Manager e implemente la aplicación en los dispositivos de Windows 10 que quiera administrar de forma conjunta. Use la [línea de comandos para instalar el cliente de Configuration Manager](#command-line-to-install-configuration-manager-client) cuando siga los pasos necesarios para [instalar los clientes desde Internet mediante Azure AD](https://docs.microsoft.com/en-us/sccm/core/clients/deploy/deploy-clients-cmg-azure).
+2. Cree una aplicación en Intune con el paquete del cliente de Configuration Manager e implemente la aplicación en los dispositivos de Windows 10 que quiera administrar de forma conjunta. Use la [línea de comandos para instalar el cliente de Configuration Manager](#command-line-to-install-configuration-manager-client) cuando siga los pasos para [instalar clientes desde Internet mediante Azure AD](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-cmg-azure).
 
 #### <a name="windows-10-devices-enrolled-in-intune"></a>Dispositivos de Windows 10 inscritos en Intune
-Para los dispositivos de Windows 10 que ya están inscritos en Intune, cree una aplicación en Intune para implementar el cliente de Configuration Manager. Use la [línea de comandos para instalar el cliente de Configuration Manager](#command-line-to-install-configuration-manager-client) cuando siga los pasos necesarios para [instalar los clientes desde Internet mediante Azure AD](https://docs.microsoft.com/en-us/sccm/core/clients/deploy/deploy-clients-cmg-azure).  
+Para los dispositivos de Windows 10 que ya están inscritos en Intune, cree una aplicación en Intune para implementar el cliente de Configuration Manager. Use la [línea de comandos para instalar el cliente de Configuration Manager](#command-line-to-install-configuration-manager-client) cuando siga los pasos para [instalar clientes desde Internet mediante Azure AD](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-cmg-azure).  
 
 ### <a name="switch-configuration-manager-workloads-to-intune"></a>Cambiar las cargas de trabajo de Configuration Manager a Intune
 En la sección anterior ha preparado dispositivos de Windows 10 para la administración conjunta. Estos dispositivos ahora están unidos a AD y a Azure AD, están inscritos en Intune y tienen el cliente de Configuration Manager. Es probable que aún tenga dispositivos de Windows 10 unidos a AD y que tenga el cliente de Configuration Manager, pero no que esté unido a Azure AD ni inscrito en Intune. En el siguiente procedimiento se proporcionan los pasos necesarios para habilitar la administración conjunta y preparar el resto de los dispositivos de Windows 10 (clientes de Configuration Manager sin la inscripción de Intune) para la administración conjunta. También podrá empezar a trasladar a Intune determinadas cargas de trabajo de Configuration Manager.
 
 1. En la consola de Configuration Manager, vaya a **Administración** > **Información general** > **Servicios de nube** > **Co-management** (Administración conjunta).    
-2. En la pestaña Home (Inicio), en el grupo Manage (Administrar), elija  **Configure co-management** (Configurar administración conjunta) para abrir el Co-management Onboarding Wizard (Asistente para la incorporación de la administración conjunta).    
+2. En la pestaña Inicio, en el grupo Administrar, elija **Configurar administración conjunta** para abrir el Asistente para la incorporación de la administración conjunta.    
 3. En la página de suscripción, haga clic en **Iniciar sesión**, inicie sesión con su inquilino de Intune y haga clic en **Siguiente**.   
 4. En la página de almacenamiento provisional, configure las opciones siguientes y haga clic en **Siguiente**:
     - **Grupo piloto**: el grupo piloto contiene una o varias colecciones que seleccione. Use este grupo como parte de la implementación por fases de la administración conjunta. Puede comenzar con un conjunto de prueba pequeños y, luego, agregar más colecciones al grupo piloto a medida que implemente la administración conjunta en más usuarios y dispositivos. Puede cambiar las colecciones del grupo piloto en cualquier momento desde las propiedades de la administración conjunta.

@@ -1,6 +1,6 @@
 ---
 title: Documentación en consola
-ms.date: 04/05/2019
+ms.date: 05/15/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -10,12 +10,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5959cb6af3fb7c433d02b21a8a8f8d99b991d8a6
-ms.sourcegitcommit: ab9f2a7fb7ea3a0c65808fce2975ab25a670281f
+ms.openlocfilehash: 81ebb0f12c7ef048d46eea2c13586b77b1fae326
+ms.sourcegitcommit: cab3dba5ebfe90f28cedee03c1840c9a395160cc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612564"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65839048"
 ---
 <!-- 
 - Feature 1357546
@@ -26,7 +26,11 @@ ms.locfileid: "65612564"
 
 # <a name="configuration-manager-documentation"></a>Documentación de Configuration Manager
 
+*Última actualización: 15/05/2019*
+
 Este contenido puede ayudarle a aprender a usar Configuration Manager.
+
+(Nota: Este contenido se actualiza el segundo lunes de cada mes, con datos del mes anterior).
 
 Vea los siguientes artículos para más información:
 
@@ -47,24 +51,23 @@ Lista recopilada manualmente de artículos importantes.
 - [Versiones de Technical Preview](https://docs.microsoft.com/sccm/core/get-started/technical-preview)
 - [Uso de servicios en la nube para complementar la infraestructura local](https://docs.microsoft.com/sccm/core/understand/use-cloud-services)
 - [Planificación de Cloud Management Gateway](https://docs.microsoft.com/sccm/core/clients/manage/plan-cloud-management-gateway)
-- [Migrar datos entre jerarquías](https://docs.microsoft.com/sccm/core/migration/migrate-data-between-hierarchies)
 
 ## <a name="trending"></a>Tendencias
 
-Los artículos más populares de marzo de 2019.
+Los artículos más populares entre el 1 y el 30 de abril de 2019.
 
 | Vistas de página | Título |
 |------------|-------|
-| 21716 | [Archivos de registro para la solución de problemas](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files)
-| 13321 | [Novedades de la versión 1810](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1810)
-| 11671 | [Puertos usados para las conexiones](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports)
-| 10930 | [Cómo implementar clientes en equipos Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers)
-| 8944 | [Actualizaciones y mantenimiento](https://docs.microsoft.com/sccm/core/servers/manage/updates)
-| 8941 | [Compatibilidad con Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10)
-| 8844 | [Instalación de la consola](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles)
-| 8797 | [Acerca de los parámetros y propiedades de instalación de cliente](https://docs.microsoft.com/sccm/core/clients/deploy/about-client-installation-properties)
-| 8035 | [Administrar las actualizaciones de Office 365 ProPlus](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates)
-| 7866 | [Implementar aplicaciones](https://docs.microsoft.com/sccm/apps/deploy-use/deploy-applications)
+| 21698 | [Archivos de registro para la solución de problemas](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) |
+| 21409 | [Novedades de la versión 1902](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1902) |
+| 11870 | [Puertos usados para las conexiones](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) |
+| 10980 | [Cómo implementar clientes en equipos Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
+| 9937 | [Compatibilidad con Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
+| 9101 | [Instalación de la consola](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles) |
+| 9003 | [Actualizaciones y mantenimiento](https://docs.microsoft.com/sccm/core/servers/manage/updates) |
+| 8383 | [Novedades de la versión 1810](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1810) |
+| 8237 | [Lista de comprobación de 1902](https://docs.microsoft.com/sccm/core/servers/manage/checklist-for-installing-update-1902) |
+| 8140 | [Administrar las actualizaciones de Office 365 ProPlus](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates) |
 
 ## <a name="recently-updated"></a>Actualizado recientemente
 
@@ -72,16 +75,16 @@ Artículos con una actualización reciente y significativa.
 
 | Últimas revisiones | Título |
 |---------------|-------|
-| 29/03/2019 | [Novedades de la versión 1902](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1902)
-| 29/03/2019 | [Versiones de Technical Preview](https://docs.microsoft.com/sccm/core/get-started/technical-preview)
-| 29/03/2019 | [CMPivot para datos en tiempo real](https://docs.microsoft.com/sccm/core/servers/manage/cmpivot)
-| 29/03/2019 | [Technical Preview 1903](https://docs.microsoft.com/sccm/core/get-started/2019/technical-preview-1903)
-| 29/03/2019 | [Solución de problemas de CMPivot](https://docs.microsoft.com/sccm/core/servers/manage/cmpivot-tsg)
-| 27/03/2019 | [Comprobaciones de requisitos previos](https://docs.microsoft.com/sccm/core/servers/deploy/install/list-of-prerequisite-checks)
-| 27/03/2019 | [Alta disponibilidad de servidor de sitio](https://docs.microsoft.com/sccm/core/servers/deploy/configure/site-server-high-availability)
-| 27/03/2019 | [Notas de la versión 1902 de PowerShell](https://docs.microsoft.com/powershell/sccm/1902-release-notes)
-| 27/03/2019 | [Cliente de interoperabilidad extendida](https://docs.microsoft.com/sccm/core/understand/interoperability-client)
-| 27/03/2019 | [Accesibilidad](https://docs.microsoft.com/sccm/core/understand/accessibility-features)
+| 2/5/2019 | [Configurar Wake On LAN](https://docs.microsoft.com/sccm/core/clients/deploy/configure-wake-on-lan) |
+| 30/4/2019 | [Supervisión de la administración conjunta](https://docs.microsoft.com/sccm/comanage/how-to-monitor) |
+| 30/4/2019 | [Vistas de SQL Server](https://docs.microsoft.com/sccm/develop/core/understand/sqlviews/sql-server-views-configuration-manager) |
+| 29/4/2019 | [Technical Preview 1904](https://docs.microsoft.com/sccm/core/get-started/2019/technical-preview-1904) |
+| 26/4/2019 | [Coexistencia de MDM de terceros](https://docs.microsoft.com/sccm/comanage/coexistence) |
+| 23/4/2019 | [Novedades de la versión 1902](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1902) |
+| 20/4/2019 | [Instalación de la consola](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles) |
+| 11/4/2019 | [Perfiles de OneDrive para la Empresa](https://docs.microsoft.com/sccm/compliance/deploy-use/onedrive-profile) |
+| 4/4/2019 | [Solución de problemas de CMPivot](https://docs.microsoft.com/sccm/core/servers/manage/cmpivot-tsg) |
+| 3/4/2019 | [Interfaz IProgressUI](https://docs.microsoft.com/sccm/develop/reference/core/clients/client-classes/iprogressui-interface) |
 
 ## <a name="troubleshooting-articles"></a>Artículos de solución de problemas
 

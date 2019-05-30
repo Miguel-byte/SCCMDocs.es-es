@@ -10,12 +10,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 985b439a9f74f92a68b1e1c70e4cca0580b819c0
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: bd2a745f7fc158739898930c9d05ea40724879b1
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56126801"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176087"
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Configuration Manager en Azure - Preguntas más frecuentes
 *Se aplica a: System Center Configuration Manager (Rama actual)*
@@ -138,7 +138,7 @@ El enfoque para la administración de contenido es en gran medida igual que para
 ### <a name="while-i-am-ok-with-the-limitations-of-cloud-based-distribution-points-i-dont-want-to-put-my-management-point-into-a-dmz-even-though-that-is-needed-to-support-my-internet-based-clients-do-i-have-any-other-options"></a>Aunque no tengo problemas con las limitaciones de los puntos de distribución basados en la nube, no quiero colocar mi punto de administración en una red perimetral, aunque sea necesario para admitir a mis clientes basados en Internet. ¿Tengo alguna otra opción?
 Sí. Con la versión 1610 de Configuration Manager, hemos presentado la [puerta de enlace de administración en la nube](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway) como una característica de versión preliminar. (Esta característica apareció por primera vez en la versión 1606 de Technical Preview como [Servicio de proxy en la nube](/sccm/core/get-started/capabilities-in-technical-preview-1606#a-namecloudproxyacloud-proxy-service-for-managing-clients-on-the-internet)).
 
-La **puerta de enlace de administración en la nube** proporciona una manera sencilla de administrar clientes de Configuration Manager en Internet. El servicio, que se implementa en Microsoft Azure y exige una suscripción de Azure, se conecta a la infraestructura local de Configuration Manager con un nuevo rol denominado punto de conexión de la puerta de enlace de administración en la nube. Una vez implementado y configurado, los clientes pueden acceder a los roles de sistema de sitio locales de Configuration Manager independientemente de si están conectados a la red interna privada o a Internet.
+**Cloud Management Gateway** proporciona una manera sencilla de administrar clientes de Configuration Manager en Internet. El servicio, que se implementa en Microsoft Azure y exige una suscripción de Azure, se conecta a la infraestructura local de Configuration Manager con un nuevo rol denominado punto de conexión de la puerta de enlace de administración en la nube. Una vez implementado y configurado, los clientes pueden acceder a los roles de sistema de sitio de Configuration Manager locales, con independencia de si están conectados a la red interna privada o a Internet.
 
 Puede empezar a usar la puerta de enlace de administración en la nube en su entorno y proporcionarnos comentarios para que la mejoremos. Para obtener más información sobre las características de versión preliminar, vea [Uso de las características de versión preliminar de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkprereleasea-use-pre-release-features-from-updates).
 
