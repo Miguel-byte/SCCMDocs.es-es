@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 007c3b68932a673b5d1971fbcf6919a7ad3adc70
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: cc22c66cfa4cf4e628dce7bf3cb268464610c933
+ms.sourcegitcommit: bfb8a17f60dcb9905e739045a5141ae45613fa2c
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802621"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198432"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Creación y ejecución de scripts de PowerShell desde la consola de Configuration Manager
 
@@ -54,8 +54,8 @@ Gracias a esta integración con System Center Configuration Manager, puede usar 
 - Para ejecutar scripts: la cuenta debe tener permisos de tipo **Ejecutar script** para las **colecciones**.
 
 Para obtener más información sobre los roles de seguridad de Configuration Manager:</br>
-[Ámbitos de seguridad para ejecutar scripts](#BKMK_Scopes)</br>
-[Roles de seguridad para ejecutar scripts](#BKMK_ScriptRoles)</br>
+[Ámbitos de seguridad para ejecutar scripts](#security-scopes)</br>
+[Roles de seguridad para ejecutar scripts](#bkmk_ScriptRoles)</br>
 [Conceptos básicos de la administración basada en roles](/sccm/core/understand/fundamentals-of-role-based-administration)
 
 ## <a name="limitations"></a>Limitaciones
@@ -72,7 +72,7 @@ La funcionalidad de ejecución de scripts actualmente admite lo siguiente:
 
 ## <a name="run-script-authors-and-approvers"></a>Autores y aprobadores de la funcionalidad de ejecución de scripts
 
-La funcionalidad de ejecución de scripts utiliza el concepto de *autores de scripts* y *aprobadores de scripts* como roles independientes para implementar y ejecutar un script. La separación de los roles de autor y aprobador permite una importante comprobación del proceso en la eficaz funcionalidad de ejecución de scripts. Hay un rol adicional de *ejecutores de scripts* que permite la ejecución de scripts, pero no la creación ni la aprobación de scripts. Vea [Crear roles de seguridad para scripts](#BKMK_ScriptRoles).
+La funcionalidad de ejecución de scripts utiliza el concepto de *autores de scripts* y *aprobadores de scripts* como roles independientes para implementar y ejecutar un script. La separación de los roles de autor y aprobador permite una importante comprobación del proceso en la eficaz funcionalidad de ejecución de scripts. Hay un rol adicional de *ejecutores de scripts* que permite la ejecución de scripts, pero no la creación ni la aprobación de scripts. Vea [Crear roles de seguridad para scripts](#bkmk_ScriptRoles).
 
 ### <a name="scripts-roles-control"></a>Control de los roles de scripts
 
