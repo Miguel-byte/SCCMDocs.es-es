@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2b396ad5955227494511355f6efdb88ecd901110
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: c1aec1447207d20393b0b8454851755ec85f5020
+ms.sourcegitcommit: abfc9e1b3945637fa93ca8d3a11519493a5d5391
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56120838"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66264362"
 ---
 # <a name="choose-a-device-management-solution-for-configuration-manager"></a>Elección de una solución de administración de dispositivos para Configuration Manager
 
@@ -26,7 +26,7 @@ Configuration Manager ofrece diferentes soluciones para la administración de eq
 
 
 > [!Important]  
-> Desde el 14 de agosto de 2018, la administración híbrida de dispositivos móviles es una [característica en desuso](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Para más información, vea [¿Qué es la Administración híbrida de dispositivos móviles (MDM)?](/sccm/mdm/understand/hybrid-mobile-device-management). <!--Intune feature 2683117-->  
+> Desde el 14 de agosto de 2018, la administración híbrida de dispositivos móviles es una [característica en desuso](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Para más información, vea [¿Qué es la Administración híbrida de dispositivos móviles (MDM)?](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
 <!-- SCCMDocs issue 1197 -->
 
 
@@ -36,7 +36,7 @@ Configuration Manager ofrece diferentes soluciones para la administración de eq
 En este artículo se tratan las cuatro soluciones siguientes de administración de dispositivos: 
 - [Cliente de Configuration Manager](#bkmk_sccm)
 - [Administración de dispositivos móviles (MDM) local con Configuration Manager](#bkmk_opmdm)
-- [Administración conjunta con Microsoft Intune](#bkmk_intune)
+- [Administración conjunta con Microsoft Intune](#bkmk_comanage)
 - [Microsoft Exchange](#bkmk_opmdm)
 
 Puede usar las soluciones de administración de dispositivos por sí solas o en combinación con otras. Por ejemplo, puede usar el enfoque de administración basada en cliente para administrar los equipos y los servidores de la organización y, además, usar la administración conjunta para administrar equipos portátiles basados en Internet. Al combinar los enfoques de esta manera, puede cubrir todas las necesidades de administración del dispositivo.  
