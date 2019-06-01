@@ -2,7 +2,7 @@
 title: Inscripción de dispositivos de escritorio Analytics
 titleSuffix: Configuration Manager
 description: Obtenga información sobre cómo inscribir dispositivos en el escritorio de análisis.
-ms.date: 04/05/2019
+ms.date: 04/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5d5e6665b0ddd2e7726af4b8ac8929d5019fedf
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 8d056d533a83290b638958ff78275ddec1409ec5
+ms.sourcegitcommit: 65e9b30e2b53ab9db679a7b1d50634a73c0028db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245888"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66429857"
 ---
 # <a name="how-to-enroll-devices-in-desktop-analytics"></a>Cómo inscribir dispositivos en el escritorio de análisis
 
@@ -81,7 +81,7 @@ Para obtener la mejor experiencia, instale las actualizaciones siguientes en fun
 > Al instalar estas actualizaciones, esperar los comportamientos siguientes:
 > 
 > - Los dispositivos que inscriba a Desktop Analytics aparecen en el servicio en menos de una hora  
-> - Dispositivos rápidamente informan del estado en las actualizaciones de características y calidad para Windows y Office  
+> - Dispositivos rápidamente informan del estado de las actualizaciones de calidad y la característica de Windows  
 >
 > Sin estas actualizaciones, estos procesos pueden tardar más de 48 horas para un dispositivo notificar al análisis de escritorio.  
 
@@ -127,7 +127,7 @@ Para cambiar esta configuración, use el procedimiento siguiente:
 
 2. En el **datos de diagnóstico** página, realice los cambios necesarios a la siguiente configuración:  
 
-    - **Id. comercial**: no es necesario cambiar o modificar este valor. Para obtener más información sobre cómo solucionar problemas con el identificador comercial, vea [configuración de identificador comercial](/sccm/desktop-analytics/troubleshooting#commercial-id-configuration).  
+    - **Id. comercial**: este valor se debería rellenar automáticamente con el identificador de. su organización Si no, asegúrese de que el servidor proxy está configurado en la lista blanca todos necesario [extremos](/sccm/desktop-analytics/enable-data-sharing#endpoints) antes de continuar. También puede recuperar el identificador comercial desde el **Connected Services** panel en el [portal de análisis de escritorio](https://aka.ms/m365aprod).   
 
     - **Nivel de datos de diagnóstico de Windows 10**: Para obtener más información, consulte [niveles de datos de diagnóstico](/sccm/desktop-analytics/enable-data-sharing#diagnostic-data-levels).  
 
@@ -135,7 +135,7 @@ Para cambiar esta configuración, use el procedimiento siguiente:
 
     Al realizar cambios en esta página, el **funcionalidad disponible** página muestra una vista previa de la funcionalidad de análisis de escritorio con la configuración de los datos de diagnóstico seleccionado.  
 
-3. En el **Microsoft 365 Analytics conexión** página, realice los cambios necesarios a la siguiente configuración:
+3. En el **Analytics la conexión a escritorio** página, realice los cambios necesarios a la siguiente configuración:
 
     - **Nombre para mostrar**: El portal de análisis de escritorio muestra esta conexión de Configuration Manager con este nombre.  
 
@@ -143,9 +143,10 @@ Para cambiar esta configuración, use el procedimiento siguiente:
 
     - **Los dispositivos de la recopilación de destino usa un proxy de usuario autenticado para la comunicación saliente**: De forma predeterminada, este valor es **No**. Si es necesario en su entorno, se establece en **Sí**. Para obtener más información, consulte [autenticación del servidor Proxy](/sccm/desktop-analytics/enable-data-sharing#proxy-server-authentication).  
 
-    - **Seleccione las recopilaciones específicas para sincronizar con análisis de escritorio**: Seleccione **agregar** para incluir las colecciones adicionales. Estas colecciones están disponibles en el portal de análisis de escritorio para su agrupación con planes de implementación. No olvide incluir colecciones de exclusión de pruebas y pruebas.  
+    - **Seleccione las recopilaciones específicas para sincronizar con análisis de escritorio**: Seleccione **agregar** para incluir las colecciones adicionales desde su **recopilación de destino** jerarquía. Estas colecciones están disponibles en el portal de análisis de escritorio para su agrupación con planes de implementación. No olvide incluir colecciones de exclusión de pruebas y pruebas.  <!-- 4097528 -->
 
-        Estas colecciones continuarán con la sincronización como sus cambios de pertenencia. Por ejemplo, el plan de implementación usa una colección con una regla de pertenencia a Windows 7. Como esos dispositivos se actualización a Windows 10 y Configuration Manager evalúa la pertenencia a recopilación, quitar esos dispositivos fuera de la recopilación y el plan de implementación.  
+        > [!Important] 
+        > Estas colecciones continuarán con la sincronización como sus cambios de pertenencia. Por ejemplo, el plan de implementación usa una colección con una regla de pertenencia a Windows 7. Como esos dispositivos se actualización a Windows 10 y Configuration Manager evalúa la pertenencia a recopilación, quitar esos dispositivos fuera de la recopilación y el plan de implementación.  
 
 
 ### <a name="windows-settings"></a>Configuración de Windows
@@ -167,7 +168,7 @@ Ver los valores en el editor de directivas de grupo en la siguiente ruta: **Conf
 
 ### <a name="device-name"></a>Nombre del dispositivo
 
-El nombre del dispositivo a partir de Windows 10, versión 1803, ya no se recopila de forma predeterminada. Recopilar el nombre del dispositivo con los datos de diagnóstico requiere una participación en independiente. Sin el nombre del dispositivo, es más difícil de identificar los dispositivos que requieren atención al evaluar una actualización a una nueva versión de Windows o de Office.
+El nombre del dispositivo a partir de Windows 10, versión 1803, ya no se recopila de forma predeterminada. Recopilar el nombre del dispositivo con los datos de diagnóstico requiere una participación en independiente. Sin el nombre del dispositivo, es más difícil de identificar los dispositivos que requieren atención al evaluar una actualización a una nueva versión de Windows.
 
 Si no envía el nombre del dispositivo, aparece en el escritorio de análisis como "Desconocido".
 
