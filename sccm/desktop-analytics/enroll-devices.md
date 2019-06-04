@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d056d533a83290b638958ff78275ddec1409ec5
-ms.sourcegitcommit: 65e9b30e2b53ab9db679a7b1d50634a73c0028db
+ms.openlocfilehash: bfe3094f63440d26a64d8d82cc44007141dd60df
+ms.sourcegitcommit: 65753c51fbf596f233fc75a5462ea4a44005c70b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66429857"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66463010"
 ---
 # <a name="how-to-enroll-devices-in-desktop-analytics"></a>Cómo inscribir dispositivos en el escritorio de análisis
 
@@ -127,7 +127,7 @@ Para cambiar esta configuración, use el procedimiento siguiente:
 
 2. En el **datos de diagnóstico** página, realice los cambios necesarios a la siguiente configuración:  
 
-    - **Id. comercial**: este valor se debería rellenar automáticamente con el identificador de. su organización Si no, asegúrese de que el servidor proxy está configurado en la lista blanca todos necesario [extremos](/sccm/desktop-analytics/enable-data-sharing#endpoints) antes de continuar. También puede recuperar el identificador comercial desde el **Connected Services** panel en el [portal de análisis de escritorio](https://aka.ms/m365aprod).   
+    - **Id. comercial**: este valor se debería rellenar automáticamente con el identificador de. su organización Si no, asegúrese de que el servidor proxy está configurado para permitir que todo lo necesario [extremos](/sccm/desktop-analytics/enable-data-sharing#endpoints) antes de continuar. También puede recuperar el identificador comercial desde el **Connected Services** panel en el [portal de análisis de escritorio](https://aka.ms/m365aprod).   
 
     - **Nivel de datos de diagnóstico de Windows 10**: Para obtener más información, consulte [niveles de datos de diagnóstico](/sccm/desktop-analytics/enable-data-sharing#diagnostic-data-levels).  
 

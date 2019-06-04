@@ -2,7 +2,7 @@
 title: Solución de problemas de análisis de escritorio
 titleSuffix: Configuration Manager
 description: Detalles técnicos para ayudarle a solucionar problemas relacionados con el análisis de escritorio.
-ms.date: 04/15/2019
+ms.date: 05/31/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f0da26f1ea2b7f7c0c49377cb934e451d56889b7
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: edb871cf9a12862f19109fe885bfb3a0e626f445
+ms.sourcegitcommit: 65753c51fbf596f233fc75a5462ea4a44005c70b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261521"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66463065"
 ---
 # <a name="troubleshooting-desktop-analytics"></a>Solución de problemas de análisis de escritorio
 
@@ -51,7 +51,31 @@ Use la **mantenimiento de la conexión** panel en Configuration Manager para pro
 
 Cuando se configura por primera vez el análisis de escritorio, estos gráficos no pueden mostrar datos completos. Puede tardar 2 y 3 días para los dispositivos activos enviar datos de diagnóstico para el servicio de análisis de escritorio, el servicio para procesar los datos y, a continuación, sincronizar con el sitio de Configuration Manager.<!-- 4098037 -->
 
-Si piensa que algunos dispositivos no están visibles en el escritorio de análisis, compruebe primero el porcentaje de **dispositivos conectados**. Si es inferior al 100%, asegúrese de que los dispositivos son compatibles con análisis de escritorio. Para obtener más información, consulte [Requisitos previos](/sccm/desktop-analytics/overview#prerequisites).
+
+### <a name="connection-details"></a>Detalles de conexión
+
+<!-- 4412133 -->
+
+Este icono muestra información básica como el inquilino conectado nombre y las horas de las actualizaciones del servicio. El **como destino dispositivos** valor es todos los dispositivos de la colección de destino, menos los siguientes tipos de dispositivos:
+
+- Dado de baja
+- Obsoleto
+- inactivo
+- no administrado
+
+Para obtener más información sobre estos Estados de dispositivo, consulte [acerca del estado de cliente](/sccm/core/clients/manage/monitor-clients#bkmk_about).
+
+> [!Note]  
+> Administrador de configuración de carga en el análisis de escritorio de todos los dispositivos de la colección de destino menos clientes retirados y obsoletos.
+
+### <a name="connected-devices"></a>Dispositivos conectados
+
+Si piensa que algunos dispositivos no están visibles en el escritorio de análisis, compruebe primero el porcentaje de **dispositivos conectados**. Este gráfico representa el porcentaje de dispositivos mediante la fórmula siguiente:
+
+- Numerador: El **como destino dispositivos** valor en el [detalles de conexión](#connection-details) icono
+- Denominador: Todos los dispositivos en Configuration Manager menos dispositivos administrados e inactivos
+
+Si es inferior al 100%, asegúrese de que los dispositivos son compatibles con análisis de escritorio. Para obtener más información, consulte [Requisitos previos](/sccm/desktop-analytics/overview#prerequisites).
 
 
 ### <a name="connection-health-states"></a>Estados de mantenimiento de conexión
@@ -114,7 +138,9 @@ Para ver una lista específica de dispositivos por estado, comience con la **man
 - Opción datos de diagnóstico de Windows
 - Participación datos comerciales en Windows
 - Conectividad de punto de conexión de diagnóstico de Windows
-- Conectividad de punto de conexión de diagnóstico de Office
+
+> [!Note]  
+> Omitir la columna para **conectividad de punto de conexión de diagnóstico de Office**. Está reservado para futuras funcionalidad.
 
 Estas columnas corresponden a la clave [requisitos previos](/sccm/desktop-analytics/overview#prerequisites) los dispositivos para comunicarse con el análisis de escritorio.
 
@@ -145,8 +171,9 @@ Las columnas siguientes están disponibles en la lista de dispositivos:
 - [Recuperación de Id. de SQM](#sqm-id-retrieval)  
 - [Recuperación del identificador de dispositivo único](#unique-device-identifier-retrieval)  
 - [Opción datos de diagnóstico de Windows](#windows-diagnostic-data-opt-in)  
-- [Conectividad de punto de conexión de diagnóstico de Office](#office-diagnostic-endpoint-connectivity)  
-- [Participación en Office datos de diagnóstico](#office-diagnostic-data-opt-in)
+
+> [!Note]  
+> Omitir las propiedades de **conectividad de punto de conexión de diagnóstico de Office** y **opt datos de diagnóstico de Office**. Están reservadas para la funcionalidad de futuras.
 
 #### <a name="appraiser-configuration"></a>Configuración de Appraiser
 
@@ -390,7 +417,7 @@ Asegúrese de que no tiene identificadores duplicados en su entorno. Por ejemplo
 <!--54-->
 Análisis de escritorio usa el servicio de Microsoft Account para una identidad de dispositivo más confiable.
 
-Asegúrese de que el **cuenta de inicio de sesión de Ayudante de Microsoft** el servicio no está deshabilitado. El tipo de inicio debe ser **Manual (desencadenador de inicio)**.
+Asegúrese de que el **cuenta de inicio de sesión de Ayudante de Microsoft** el servicio no está deshabilitado. El tipo de inicio debe ser **Manual (desencadenador de inicio)** .
 
 Para deshabilitar el acceso de cuenta de Microsoft del usuario final, use la configuración de directiva en lugar de bloquear este punto de conexión. Para obtener más información, consulte [cuenta Microsoft en la empresa](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication).
 
@@ -405,31 +432,6 @@ Esta propiedad comprueba que Windows está configurado correctamente para permit
 Compruebe los permisos de estas claves del registro. Asegúrese de que la cuenta sistema local puede tener acceso a estas claves para el cliente de Configuration Manager establecer. También puede deberse mediante un objeto de directiva de grupo en conflicto. Para obtener más información, consulte [configuración Windows](/sccm/desktop-analytics/enroll-devices#windows-settings).  
 
 Para obtener más información, revise M365AHandler.log en el cliente.  
-
-#### <a name="office-diagnostic-endpoint-connectivity"></a>Conectividad de punto de conexión de diagnóstico de Office
-
-<!-- 1001,1002,1003 -->
-
-Si esta comprobación se realiza correctamente, el dispositivo es capaz de conectarse a los puntos de conexión de diagnóstico de Office.
-
-En caso contrario, puede mostrar uno de los errores siguientes:
-
-- No se puede conectar al punto de conexión diagnóstico de Office (Aria). Compruebe la configuración de red o proxy  
-
-- No se puede conectar al punto de conexión diagnóstico de Office (Nexusrules). Compruebe la configuración de red o proxy  
-
-- No se puede conectar al punto de conexión diagnóstico de Office (Nexus). Compruebe la configuración de red o proxy  
-
-Asegúrese de que el dispositivo es capaz de comunicarse con el servicio. Para obtener más información, consulte [extremos](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
-
-#### <a name="office-diagnostic-data-opt-in"></a>Participación en Office datos de diagnóstico
-
-<!-- SCCMDocs-pr 3570 -->
-A partir de Configuration Manager versión 1902, puede cambiar el comportamiento para el envío de datos de diagnóstico y de servicio de Office para Microsoft. Esta propiedad comprueba que la configuración de directiva de Office está configuradas correctamente. Estos valores controlan los datos mínimos necesarios para ayudar a mantener Office seguro y actualizado, y ejecuta según lo esperado en el dispositivo está instalado.
-
-Para obtener más información, consulte [controla la información general sobre privacidad de Office 365 ProPlus](https://docs.microsoft.com/DeployOffice/privacy/overview-privacy-controls). Usa este artículo se detallan los controles de la privacidad de datos de diagnóstico que se recopilan y se envían a Microsoft acerca del software de cliente de Office en Windows en equipos de su organización.
-
-Esta comprobación no se realizará correctamente para los clientes de la versión de Configuration Manager 1810. Actualice al cliente a la versión más reciente. Considere la posibilidad de habilitar la actualización automática del cliente para el sitio de Configuration Manager. Para obtener más información, vea [Actualizar clientes](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).
 
 
 
@@ -479,13 +481,88 @@ Escritorio Analytics agrega las siguientes aplicaciones a Azure AD:
 
 - **Administrador de configuración de Microservicio**: Conecta Configuration Manager con análisis de escritorio. Esta aplicación no tiene ningún requisito de acceso.  
 
-- **Administración de cliente de Office 365**: Recupera los datos del área de trabajo de Log Analytics. Esta aplicación requiere acceso de escritura a Log Analytics.  
-
 - **MALogAnalyticsReader**: Recupera los grupos de OMS y los dispositivos creados en Log Analytics. Para obtener más información, consulte [rol de aplicación MALogAnalyticsReader](#bkmk_MALogAnalyticsReader).  
 
 Si necesita aprovisionar estas aplicaciones después de completar el conjunto de copia, vaya a la **servicios conectados** panel. Seleccione **configurar el acceso de usuarios y aplicaciones**y el aprovisionamiento de las aplicaciones.  
 
-- **Aplicación de Azure AD para Configuration Manager**. Si tiene que aprovisionar o solucionar problemas de conexión después de completar el conjunto de copia, consulte [crear aplicación de Configuration Manager](/sccm/desktop-analytics/set-up#create-app-for-configuration-manager). Esta aplicación requiere **escribir datos de colección CM** y **leer datos de colección CM** en el **Configuration Manager Service** API.  
+- **Aplicación de Azure AD para Configuration Manager**. Si tiene que aprovisionar o solucionar problemas de conexión después de completar el conjunto de copia, consulte [crear e importar aplicación de Configuration Manager](#create-and-import-app-for-configuration-manager). Esta aplicación requiere **escribir datos de colección CM** y **leer datos de colección CM** en el **Configuration Manager Service** API.  
+
+
+### <a name="create-and-import-app-for-configuration-manager"></a>Crear e importar aplicación de Configuration Manager
+
+Si no se puede crear esta aplicación de Azure AD desde el asistente Configurar servicios de Azure en Configuration Manager, siga estos pasos manualmente, crear e importar la aplicación de Configuration Manager.
+
+#### <a name="create-app-in-azure-ad"></a>Crear la aplicación en Azure AD
+
+1. Abra el [portal Azure](http://portal.azure.com) como un usuario con permisos de administrador de empresa, vaya a **Azure Active Directory**y seleccione **registros de aplicaciones**. A continuación, seleccione **nuevo registro de aplicaciones**.  
+
+2. En el **crear** del panel, configure las siguientes opciones:  
+
+    - **Nombre**: un nombre único que identifica la aplicación, por ejemplo: `Desktop-Analytics-Connection`  
+
+    - **Tipo de aplicación**: **Aplicación Web / API**  
+
+    - **Dirección URL de inicio de sesión**: este valor no se usa Configuration Manager, pero necesario para Azure AD. Escriba una dirección URL válida y única, por ejemplo: `https://configmgrapp`  
+  
+   Seleccione **crear**.  
+
+3. Seleccione la aplicación y tenga en cuenta la **Id. de aplicación**. Este valor es un GUID que se usa para configurar la conexión de Configuration Manager.  
+
+4. Seleccione **configuración** en la aplicación y, a continuación, seleccione **claves**. En el **contraseñas** sección, especifique un **descripción de la clave**, especifique una fecha de expiración **duración**y, a continuación, seleccione **guardar**. Copia el **valor** de la clave, que se usa para configurar la conexión de Configuration Manager.
+
+    > [!Important]  
+    > Esta es la única oportunidad para copiar el valor de clave. Si no copia ahora, deberá crear otra clave.  
+    >
+    > Guarde el valor de clave en una ubicación segura.  
+
+5. En la aplicación **configuración** panel, seleccione **permisos necesarios**.  
+
+    1. En el **permisos necesarios** panel, seleccione **agregar**.  
+
+    2. En el **agregar acceso de API** panel, **seleccionar una API**.  
+
+    3. Busque el **Microservicio del Administrador de configuración** API. Selecciónelo y, a continuación, elija **seleccione**.  
+
+    4. En el **habilitar acceso** del panel, seleccione los permisos de aplicación: **Escribir datos de colección CM** y **leer datos de colección CM**. A continuación, elija **seleccione**.  
+
+    5. En el **agregar acceso de API** panel, seleccione **realiza**.  
+
+6. En el **permisos necesarios** página, seleccione **concederlos**. Seleccione **Sí**.  
+
+7. Copie el identificador de inquilino de Azure AD. Este valor es un GUID que se usa para configurar la conexión de Configuration Manager. Seleccione **Azure Active Directory** en el menú principal y, a continuación, seleccione **propiedades**. Copia el **Id. de directorio** valor.  
+
+#### <a name="import-app-in-configuration-manager"></a>Importar aplicaciones en Configuration Manager
+
+1. En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Cloud Services** y haga clic en el nodo **Servicios de Azure**. Seleccione **configurar servicios de Azure** en la cinta de opciones.  
+
+2. En el **Azure Services** página del Asistente para servicios de Azure, configure las siguientes opciones:  
+
+    - Especifique un **Nombre** para el objeto en Configuration Manager.  
+
+    - Especifique una **Descripción** opcional para ayudar a identificar el servicio.  
+
+    - Seleccione **Desktop Analytics** en la lista de servicios disponibles.  
+  
+   Seleccione **Siguiente**.  
+
+3. En el **aplicación** , seleccione la adecuada **entorno Azure**. A continuación, seleccione **importación** para la aplicación web. Configure las siguientes opciones en el **importar aplicaciones** ventana:  
+
+    - **Nombre del inquilino de Azure AD**: Este nombre es cómo se llama en Configuration Manager  
+
+    - **Id. de inquilino de Azure AD**: El **Id. de directorio** que copió de Azure AD  
+
+    - **Id. de cliente**: El **Id. de aplicación** que copió desde la aplicación de Azure AD  
+
+    - **Clave secreta**: La clave **valor** que copió desde la aplicación de Azure AD  
+
+    - **Expiración de la clave secreta**: La misma fecha de expiración de la clave  
+
+    - **URI de id. de aplicación**: Esta configuración se debería rellenar automáticamente con el siguiente valor: `https://cmmicrosvc.manage.microsoft.com/`  
+  
+   Seleccione **compruebe**y, a continuación, seleccione **Aceptar** para cerrar la ventana Importar aplicaciones. Seleccione **siguiente** en la página de aplicación del Asistente para servicios de Azure.  
+
+Para seguir el resto del asistente en el **datos de diagnóstico** página, vea [conectar con el servicio](/sccm/desktop-analytics/connect-configmgr#bkmk_connect).
+
 
 ### <a name="bkmk_MALogAnalyticsReader"></a> Rol de aplicación MALogAnalyticsReader
 
@@ -495,7 +572,7 @@ Si hay un problema con este proceso durante el conjunto de copia, utilice el sig
 
 1. Vaya a la [portal Azure](http://portal.azure.com)y seleccione **todos los recursos**. Seleccione el área de trabajo de tipo **Log Analytics**.  
 
-2. En el menú del área de trabajo, seleccione **control de acceso (IAM)**, a continuación, seleccione **agregar**.  
+2. En el menú del área de trabajo, seleccione **control de acceso (IAM)** , a continuación, seleccione **agregar**.  
 
 3. En el **agregar permisos** del panel, configure las siguientes opciones:  
 

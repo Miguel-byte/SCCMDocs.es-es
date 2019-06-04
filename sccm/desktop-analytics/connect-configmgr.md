@@ -2,7 +2,7 @@
 title: Conexión de Configuration Manager
 titleSuffix: Configuration Manager
 description: Guía de procedimientos para conectar Configuration Manager con análisis de escritorio.
-ms.date: 04/05/2019
+ms.date: 04/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 11979d35829660633dd77059562dcf519e0af05b
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 905ea779082387996858727ef8c50f1835b3d61c
+ms.sourcegitcommit: 65753c51fbf596f233fc75a5462ea4a44005c70b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206151"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66463024"
 ---
 # <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>Cómo conectar Configuration Manager con análisis de escritorio
 
@@ -55,25 +55,35 @@ Utilice este procedimiento para conectar Configuration Manager para el análisis
   
    Seleccione **Siguiente**.  
 
-3. En el **aplicación** , seleccione la adecuada **entorno Azure**. A continuación, seleccione **importación** para la aplicación web. Configure las siguientes opciones en el **importar aplicaciones** ventana:  
+3. En el **aplicación** , seleccione la adecuada **entorno Azure**. A continuación, seleccione **examinar** para la aplicación web.  
 
-    - **Nombre del inquilino de Azure AD**: Este nombre es cómo se llama en Configuration Manager  
+4. Si tiene una aplicación existente que desea volver a usar para este servicio, elíjalo en la lista y seleccione **Aceptar**.  
 
-    - **Id. de inquilino de Azure AD**: El **Id. de directorio** que copió de Azure AD  
+5. En la mayoría de los casos, puede crear una aplicación para la conexión de escritorio análisis con este asistente. Seleccione **crear**.<!-- 3572123 -->  
 
-    - **Id. de cliente**: El **Id. de aplicación** que copió desde la aplicación de Azure AD  
+    > [!Tip]  
+    > Si no se puede crear la aplicación de este asistente, puede crear manualmente la aplicación en Azure AD y, a continuación, importar a Configuration Manager. Para obtener más información, consulte [crear e importar aplicación de Configuration Manager](/sccm/desktop-analytics/troubleshooting#create-and-import-app-for-configuration-manager).  
 
-    - **Clave secreta**: La clave **valor** que copió desde la aplicación de Azure AD  
+6. Configure las siguientes opciones en el **crear aplicación de servidor** ventana:  
 
-    - **Expiración de la clave secreta**: La misma fecha de expiración de la clave  
+    - **Nombre de aplicación**: Un nombre descriptivo para la aplicación en Azure AD.
 
-    - **URI de id. de aplicación**: Esta configuración se debería rellenar automáticamente con el siguiente valor: `https://cmmicrosvc.manage.microsoft.com/`  
-  
-   Seleccione **compruebe**y, a continuación, seleccione **Aceptar** para cerrar la ventana Importar aplicaciones. Seleccione **siguiente** en la página de aplicación del Asistente para servicios de Azure.  
+    - **Dirección URL de la página principal**: Configuration Manager no usa este valor, pero es necesario para Azure AD. De forma predeterminada, este valor es `https://ConfigMgrService`.  
 
-4. En el **datos de diagnóstico** página, configure las opciones siguientes:  
+    - **URI de id. de aplicación**: este valor debe ser único en el inquilino de Azure AD. En el token de acceso sirve por el cliente de Configuration Manager para solicitar acceso al servicio. De forma predeterminada, este valor es `https://ConfigMgrService`.  
 
-    - **Id. comercial**: este valor se debería rellenar automáticamente con el identificador de. su organización Si no, asegúrese de que el servidor proxy está configurado en la lista blanca todos necesario [extremos](/sccm/desktop-analytics/enable-data-sharing#endpoints) antes de continuar. También puede recuperar el identificador comercial desde el **Connected Services** panel en el [portal de análisis de escritorio](https://aka.ms/m365aprod).  
+    - **Período de validez de clave secreta**: elija **1 año** o **2 años** en la lista desplegable. El valor predeterminado es un año.  
+
+    Seleccione **inicie sesión en** . Después de autenticarse correctamente en Azure, en la página se muestra el **Nombre de inquilino de Azure AD** como referencia.
+        
+    > [!Note]  
+    > Completar este paso como una **Administrador de la compañía**. Configuration Manager no guarda estas credenciales. Este rol no requiere permisos de Configuration Manager y no tiene que ser la misma cuenta que ejecuta al Asistente para servicios de Azure.  
+
+    Haga clic en **Aceptar** para crear la aplicación web en Azure AD y cerrar el cuadro de diálogo Crear aplicación de servidor. En el cuadro de diálogo de la aplicación de servidor, seleccione **Aceptar**. A continuación, seleccione **siguiente** en la página de aplicación del Asistente para servicios de Azure.  
+
+7. En el **datos de diagnóstico** página, configure las opciones siguientes:  
+
+    - **Id. comercial**: este valor se debería rellenar automáticamente con el identificador de. su organización Si no, asegúrese de que el servidor proxy está configurado para permitir que todo lo necesario [extremos](/sccm/desktop-analytics/enable-data-sharing#endpoints) antes de continuar. También puede recuperar el identificador comercial desde el **Connected Services** panel en el [portal de análisis de escritorio](https://aka.ms/m365aprod).  
 
     - **Nivel de datos de diagnóstico de Windows 10**: seleccione al menos **mejorado (limitado)**  
 
@@ -86,7 +96,7 @@ Utilice este procedimiento para conectar Configuration Manager para el análisis
 
     ![Página de ejemplo la funcionalidad disponible en el Asistente para servicios de Azure](media/available-functionality.png)
 
-5. En el **colecciones** página, configure las opciones siguientes:  
+8. En el **colecciones** página, configure las opciones siguientes:  
 
     - **Nombre para mostrar**: El portal de análisis de escritorio muestra esta conexión de Configuration Manager con este nombre. Puede usarlo para diferenciar entre jerarquías diferentes. Por ejemplo, *laboratorio de pruebas* o *producción*.  
 
@@ -94,14 +104,13 @@ Utilice este procedimiento para conectar Configuration Manager para el análisis
 
     - **Los dispositivos de la recopilación de destino usa un proxy de usuario autenticado para la comunicación saliente**: De forma predeterminada, este valor es **No**. Si es necesario en su entorno, se establece en **Sí**.  
 
-    - **Seleccione las recopilaciones específicas para sincronizar con análisis de escritorio**: Seleccione **agregar** para incluir las colecciones adicionales. Estas colecciones están disponibles en el portal de análisis de escritorio para su agrupación con planes de implementación. No olvide incluir colecciones de exclusión de pruebas y pruebas.  
-
-        Estas colecciones continuarán con la sincronización como sus cambios de pertenencia. Por ejemplo, el plan de implementación usa una colección con una regla de pertenencia a Windows 7. Como esos dispositivos se actualización a Windows 10 y Configuration Manager evalúa la pertenencia a recopilación, quitar esos dispositivos fuera de la recopilación y el plan de implementación.  
+    - **Seleccione las recopilaciones específicas para sincronizar con análisis de escritorio**: Seleccione **agregar** para incluir las colecciones adicionales desde su **recopilación de destino** jerarquía. Estas colecciones están disponibles en el portal de análisis de escritorio para su agrupación con planes de implementación. No olvide incluir colecciones de exclusión de pruebas y pruebas.  <!-- 4097528 -->  
 
         > [!Important]  
-        > Asegúrese de que limitar estas colecciones adicionales en la colección de destino. En las propiedades de estas colecciones adicionales, el **recopilación de restricción** debe ser la misma colección, como el análisis de escritorio **recopilación de destino**.<!-- 4097528 -->  
+        > Estas colecciones continuarán con la sincronización como sus cambios de pertenencia. Por ejemplo, el plan de implementación usa una colección con una regla de pertenencia a Windows 7. Como esos dispositivos se actualización a Windows 10 y Configuration Manager evalúa la pertenencia a recopilación, quitar esos dispositivos fuera de la recopilación y el plan de implementación.  
 
-6. Complete el asistente.  
+
+9. Complete el asistente.  
 
 Configuration Manager crea una directiva de configuración para configurar los dispositivos en la colección de destino. Esta directiva incluye la configuración de datos de diagnóstico para habilitar dispositivos para enviar datos a Microsoft. De forma predeterminada, los clientes actualizan la directiva cada hora. Después de recibir la nueva configuración, puede ser más varias horas antes de que los datos están disponibles en análisis de escritorio.
 
@@ -109,11 +118,11 @@ Configuration Manager crea una directiva de configuración para configurar los d
 
 ## <a name="bkmk_monitor"></a> Supervisión de estado de conexión
 
-Supervisar la configuración de los dispositivos para el análisis de escritorio. En la consola de Configuration Manager, vaya a la **biblioteca de Software** área de trabajo, expanda el **mantenimiento de Microsoft 365** nodo y seleccione el **mantenimiento de la conexión** panel.  
+Supervisar la configuración de los dispositivos para el análisis de escritorio. En la consola de Configuration Manager, vaya a la **biblioteca de Software** área de trabajo, expanda el **escritorio Analytics mantenimiento** nodo y seleccione el **estado de conexión** panel.  
 
 Para obtener más información, consulte [supervisar el estado de conexión](/sccm/desktop-analytics/troubleshooting#monitor-connection-health).
 
-Configuration Manager se sincroniza todos los planes de implementación de escritorio Analytics dentro de 15 minutos después de crear la conexión. En la consola de Configuration Manager, vaya a la **biblioteca de Software** área de trabajo, expanda el **mantenimiento de Microsoft 365** nodo y seleccione el **planes de implementación** nodo.
+Configuration Manager sincroniza las colecciones dentro de 60 minutos después de crear la conexión. En el portal de análisis de escritorio, vaya a **piloto Global**y ver las colecciones de dispositivos de Configuration Manager.
 
 
 
