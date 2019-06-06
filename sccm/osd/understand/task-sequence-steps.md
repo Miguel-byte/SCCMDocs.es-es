@@ -2,7 +2,7 @@
 title: Pasos de la secuencia de tareas
 titleSuffix: Configuration Manager
 description: Obtenga información sobre los pasos que puede agregar a una secuencia de tareas de Configuration Manager.
-ms.date: 05/03/2019
+ms.date: 05/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0003b80362dadc1105450d2ba526620c1fabf560
-ms.sourcegitcommit: ab9f2a7fb7ea3a0c65808fce2975ab25a670281f
+ms.openlocfilehash: 2d257d9fd328b04b35ff4c4d29b8a8bbd82ae565
+ms.sourcegitcommit: 18a94eb78043cb565b05cd0e9469b939b29cccf0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65613064"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66355062"
 ---
 # <a name="task-sequence-steps"></a>Pasos de la secuencia de tareas
 
@@ -575,7 +575,7 @@ Habilite esta opción para especificar cualquiera de las siguientes opciones:
 
     Para obtener más información sobre cómo migrar datos mediante vínculos físicos, consulte el tema en el que se describe el [almacén de migración de vínculos físicos](https://docs.microsoft.com/windows/deployment/usmt/usmt-hard-link-migration-store).  
 
-- **Capturar en modo fuera de línea (solo Windows PE)**: habilite esta opción para capturar el estado de usuario en Windows PE en lugar de todo el sistema operativo.  
+- **Capturar en modo fuera de línea (solo Windows PE)** : habilite esta opción para capturar el estado de usuario en Windows PE en lugar de todo el sistema operativo.  
 
 #### <a name="capture-by-using-volume-copy-shadow-services-vss"></a>Capturar mediante el Servicio de instantánea de copia de volumen (VSS)
 
@@ -866,7 +866,7 @@ El número de disco físico del disco al que se va a dar formato. El número se 
 
 El tipo de disco al que dar formato. Hay dos opciones para seleccionar en la lista desplegable:
 
-- **Estándar (MBR)**: registro de arranque maestro  
+- **Estándar (MBR)** : registro de arranque maestro  
 - **GPT**: tabla de particiones GUID  
 
 > [!NOTE]  
@@ -1563,7 +1563,7 @@ El ejemplo siguiente contiene parámetros válidos:
 
 `-MyParameter1 MyValue1 -MyParameter2 MyValue2`  
 
-El ejemplo siguiente contiene parámetros no válidos. Los dos primeros elementos son parámetros de línea de comandos de Windows PowerShell (**-NoLogo** y **-ExecutionPolicy Unrestricted**). El script no consume estos parámetros.  
+El ejemplo siguiente contiene parámetros no válidos. Los dos primeros elementos son parámetros de línea de comandos de Windows PowerShell ( **-NoLogo** y **-ExecutionPolicy Unrestricted**). El script no consume estos parámetros.  
 
 `-NoLogo -ExecutionPolicy Unrestricted -File MyScript.ps1 -MyParameter1 MyValue1 -MyParameter2 MyValue2`
 
@@ -1814,7 +1814,7 @@ Este paso realiza las siguientes acciones:
 
 2. Habilite o deshabilite la cuenta de administrador local, según la opción seleccionada en el paso **Aplicar configuraciones de Windows**.  
 
-3. Instale el cliente de Configuration Manager mediante el paquete descargado anteriormente y las propiedades de instalación especificadas en este paso. El cliente se instala en "modo de aprovisionamiento". Este modo impide que el cliente procese nuevas solicitudes de directiva hasta que se complete la secuencia de tareas.  
+3. Instale el cliente de Configuration Manager mediante el paquete descargado anteriormente y las propiedades de instalación especificadas en este paso. El cliente se instala en "modo de aprovisionamiento". Este modo impide que el cliente procese nuevas solicitudes de directiva hasta que se complete la secuencia de tareas. Para obtener más información, vea [Modo de aprovisionamiento](/sccm/osd/understand/provisioning-mode).  
 
 4. Espere a que el cliente esté totalmente operativo.  
 
@@ -1906,7 +1906,7 @@ Especifique el número de minutos antes de que se produzca un error de Configura
 Realice el examen de compatibilidad del programa de instalación de Windows sin iniciar el proceso de actualización. Esta opción corresponde a la opción de línea de comandos de instalación de Windows `/Compat ScanOnly`. Implemente el paquete de actualización del sistema operativo completo con esta opción.
 
 <!--SCCMDocs-pr issue 2812-->
-A partir de la versión 1806, cuando se habilita esta opción, este paso no pone el cliente de Configuration Manager en modo de aprovisionamiento. El programa de instalación de Windows se ejecuta silenciosamente en segundo plano y el cliente continúa funcionando con normalidad.
+A partir de la versión 1806, cuando se habilita esta opción, este paso no pone el cliente de Configuration Manager en modo de aprovisionamiento. El programa de instalación de Windows se ejecuta silenciosamente en segundo plano y el cliente continúa funcionando con normalidad. Para obtener más información, vea [Modo de aprovisionamiento](/sccm/osd/understand/provisioning-mode).
 
 La instalación devuelve un código de salida como resultado de la exploración. En la tabla siguiente se proporcionan algunos de los códigos de salida más comunes:  
 

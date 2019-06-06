@@ -2,7 +2,7 @@
 title: Aprobar aplicaciones
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la configuración y los comportamientos de la aprobación de aplicaciones en Configuration Manager.
-ms.date: 12/14/2018
+ms.date: 05/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -11,19 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f78ec291701d15c0907aa780b4bed23b712995c7
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: d1352669db30ad2fad1d7287998227ce1556274d
+ms.sourcegitcommit: 3f43fa8462bf39b2c18b90a11a384d199c2822d8
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56135228"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403376"
 ---
 # <a name="approve-applications-in-configuration-manager"></a>Aprobar aplicaciones en Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Al [implementar una aplicación](/sccm/apps/deploy-use/deploy-applications) en Configuration Manager, se puede necesitar su aprobación antes de instalarla. Los usuarios solicitan la aplicación en el Centro de software y la solicitud se revisa en la consola de Configuration Manager. La solicitud se puede aprobar o denegar. 
-
+Al [implementar una aplicación](/sccm/apps/deploy-use/deploy-applications) en Configuration Manager, se puede necesitar su aprobación antes de instalarla. Los usuarios solicitan la aplicación en el Centro de software y la solicitud se revisa en la consola de Configuration Manager. La solicitud se puede aprobar o denegar.
 
 
 ## <a name="bkmk_approval"></a> Configuración de aprobación
@@ -31,6 +30,7 @@ Al [implementar una aplicación](/sccm/apps/deploy-use/deploy-applications) en C
 El comportamiento de aprobación de una aplicación depende de la versión de Configuration Manager. En la página **Configuración de implementación** de la implementación de aplicaciones aparece una de las siguientes opciones de aprobación:  
 
 #### <a name="require-administrator-approval-if-users-request-this-application"></a>Solicitar aprobación del administrador si los usuarios solicitan esta aplicación
+
 *Se aplica a las versiones 1710 y anteriores*
 
 El administrador aprueba las solicitudes de usuario sobre la aplicación para que el usuario pueda instalarla. La opción está atenuada cuando el propósito de implementación es **Obligatorio**, o bien cuando se implementa la aplicación en una colección de dispositivos.  
@@ -39,15 +39,15 @@ Las solicitudes de aprobación de aplicación se muestran en el nodo **Solicitud
 
 Después de aprobar una aplicación para la instalación, puede **Denegar** la solicitud en la consola de Configuration Manager. Esta acción no hace que el cliente desinstale la aplicación de los dispositivos. Impide que los usuarios instalen nuevas copias de la aplicación desde el Centro de software.  
 
-
 #### <a name="an-administrator-must-approve-a-request-for-this-application-on-the-device"></a>Un administrador debe aprobar una solicitud para esta aplicación en el dispositivo
+
 *Se aplica a las versiones 1802 y posteriores <sup>[Nota 1](#bkmk_note1)</sup>*
 
 <a name="bkmk_note1"></a>
 
 > [!Note]  
-> **Nota 1**: Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para obtener más información, consulte [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options). 
-> 
+> **Nota 1**: Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para obtener más información, consulte [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).
+>
 > Si no habilita esta característica, verá la experiencia anterior.  
 
 El administrador aprueba las solicitudes de usuario sobre la aplicación para que el usuario pueda instalarla en el dispositivo solicitado. Si el administrador aprueba la solicitud, el usuario solo tiene la posibilidad de instalar la aplicación en ese dispositivo. El usuario debe enviar otra solicitud para instalar la aplicación en otro dispositivo. La opción está atenuada cuando el propósito de implementación es **Obligatorio**, o bien cuando se implementa la aplicación en una colección de dispositivos. <!--1357015-->  
@@ -64,28 +64,33 @@ Después de aprobar una aplicación para la instalación, puede **Denegar** la s
 > [!Important]  
 > A partir de la versión 1806, *el comportamiento ha cambiado* al revocar la aprobación de una aplicación que se haya aprobado e instalado anteriormente. Ahora, al **Denegar** la solicitud de la aplicación, el cliente desinstala la aplicación del dispositivo del usuario.<!--1357891-->  
 
+Automatice el proceso de aprobación con el cmdlet [Approve-CMApprovalRequest](https://docs.microsoft.com/powershell/module/configurationmanager/approve-cmapprovalrequest?view=sccm-ps) de PowerShell. A partir de la versión 1902, este cmdlet incluye el parámetro **InstallActionBehavior**. Use este parámetro para especificar si quiere instalar la aplicación de inmediato o fuera del horario laboral.<!-- SCCMDocs-pr issue #3418 -->
 
 
 ## <a name="bkmk_email-approve"></a> Notificaciones por correo electrónico
+
 <!--1321550-->
 
 A partir de la versión 1810, configure notificaciones por correo electrónico para las solicitudes de aprobación de aplicaciones. Recibirá un correo electrónico cuando un usuario solicite una aplicación. Haga clic en los vínculos que aparecen en el correo electrónico para aprobar o denegar la solicitud, sin requerir la consola de Configuration Manager.
 
-Puede definir las direcciones de correo electrónico de los usuarios que pueden aprobar o denegar la solicitud durante la creación de una nueva implementación de la aplicación. Si necesita cambiar la lista de direcciones de correo electrónico más adelante, vaya al área de trabajo **Supervisión**, expanda **Alertas** y seleccione el nodo **Suscripciones**. Seleccione **Propiedades** desde una de las suscripciones de **Aprobar aplicación por correo electrónico** que está relacionada con la implementación de la aplicación. 
+Puede definir las direcciones de correo electrónico de los usuarios que pueden aprobar o denegar la solicitud durante la creación de una nueva implementación de la aplicación. Si necesita cambiar la lista de direcciones de correo electrónico más adelante, vaya al área de trabajo **Supervisión**, expanda **Alertas** y seleccione el nodo **Suscripciones**. Seleccione **Propiedades** desde una de las suscripciones de **Aprobar aplicación por correo electrónico** que está relacionada con la implementación de la aplicación.
 
-Si hay más de una alerta, puede determinar qué alerta va con cada implementación. Abra las propiedades de alerta y vea la lista de **Alertas seleccionadas** en la pestaña General. La implementación está habilitada como la alerta para esta suscripción. 
+Si hay más de una alerta, puede determinar qué alerta va con cada implementación. Abra las propiedades de alerta y vea la lista de **Alertas seleccionadas** en la pestaña General. La implementación está habilitada como la alerta para esta suscripción.
+
+Los usuarios pueden agregar un comentario a la solicitud desde el Centro de software. Este comentario se muestra en la solicitud de aplicación en la consola de Configuration Manager. A partir de la versión 1902, el comentario también se muestra en el correo electrónico. La inclusión de este comentario en el correo electrónico ayuda a los aprobadores a tomar una decisión más acertada para aprobar o denegar la solicitud.<!--3594063-->
 
 
 ### <a name="prerequisites"></a>Requisitos previos
 
 #### <a name="to-send-email-notifications-and-take-action-on-internal-network"></a>Para enviar notificaciones por correo electrónico y realizar acciones en la red interna
+
 Con estos requisitos previos, los destinatarios reciben un correo electrónico con una notificación de la solicitud. Si están en la red interna, también pueden aprobar o denegar la solicitud desde el correo electrónico.
 
 - Habilite la [característica opcional](/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **Aprobación de solicitudes de aplicación para los usuarios por dispositivo**.  
 
 - Configure la [notificación por correo electrónico para las alertas](/sccm/core/servers/manage/use-alerts-and-the-status-system#to-configure-email-notification-for-alerts).  
 
-- Habilite el proveedor de SMS para usar un certificado.<!--SCCMDocs-pr issue 3135--> Use una de las opciones siguientes:  
+- Habilitar el proveedor de SMS para usar un certificado.<!--SCCMDocs-pr issue 3135--> Use una de las opciones siguientes:  
 
     - Habilitar [HTTP mejorado](/sccm/core/plan-design/hierarchy/enhanced-http) (recomendado)  
 
@@ -94,8 +99,8 @@ Con estos requisitos previos, los destinatarios reciben un correo electrónico c
 
     - Enlazar manualmente un certificado basado en PKI al puerto 443 en IIS en el servidor que hospeda el rol de proveedor de SMS  
 
-
 #### <a name="to-take-action-from-internet"></a>Para realizar acciones desde Internet
+
 Con estos otros requisitos previos opcionales, los destinatarios pueden aprobar o denegar la solicitud desde cualquier lugar con acceso a Internet.
 
 - Habilite el servicio de administración Proveedor de SMS a través de Cloud Management Gateway. En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Configuración del sitio** y seleccione el nodo **Servidores y roles del sistema de sitios**. Seleccione el servidor con el rol Proveedor de SMS. En el panel de detalles, seleccione el rol **Proveedor de SMS** y luego seleccione **Propiedades** en la cinta, en la pestaña Rol del sitio. Seleccione la opción **Permitir el tráfico de Cloud Management Gateway de Configuration Manager para el servicio de administración**.  
@@ -126,7 +131,7 @@ Con estos otros requisitos previos opcionales, los destinatarios pueden aprobar 
 
             1. En el panel Editar manifiesto, busque la propiedad **oauth2AllowImplicitFlow**.  
 
-            2. Cambie su valor a **true**. Por ejemplo, toda la línea debe ser similar a la siguiente: `"oauth2AllowImplicitFlow": true,`   
+            2. Cambie su valor a **true**. Por ejemplo, toda la línea debe ser similar a la siguiente: `"oauth2AllowImplicitFlow": true,`  
 
             3. Seleccione **Guardar**.  
 
@@ -150,7 +155,6 @@ Con estos otros requisitos previos opcionales, los destinatarios pueden aprobar 
 Revise el archivo **NotiCtrl.log** en el servidor de sitio para solucionar problemas.
 
 
-## <a name="maintenance"></a>Mantenimiento 
+## <a name="maintenance"></a>Mantenimiento
 
 Configuration Manager almacena la información sobre las solicitudes de aprobación de aplicaciones en la base de datos del sitio. En el caso de las solicitudes que se cancelan o se deniegan, el sitio elimina el historial de solicitudes después de 30 días. Se puede configurar este comportamiento de eliminación con la [tarea de mantenimiento del sitio](/sccm/core/servers/manage/maintenance-tasks) **Eliminar datos antiguos de solicitud de la aplicación**. El sitio nunca elimina solicitudes de aplicaciones aprobadas o pendientes.
-

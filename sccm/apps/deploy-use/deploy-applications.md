@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c27e2d4bb90240ad2cfee5e0c470d7a6b8a76653
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
-ms.translationtype: MTE75
+ms.openlocfilehash: 7550987d9b9679085ad5b546274d0c503b9e28ac
+ms.sourcegitcommit: 3f43fa8462bf39b2c18b90a11a384d199c2822d8
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65083336"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403401"
 ---
 # <a name="deploy-applications-with-configuration-manager"></a>Implementar aplicaciones con Configuration Manager
 
@@ -68,7 +68,7 @@ En la página **General** del Asistente para implementar software, especifique l
     >[!Note]  
     > Si actualiza la aplicación dependiente después de implementar la aplicación principal, el sitio no distribuye automáticamente ningún contenido nuevo para la dependencia.  
 
-- **Comentarios (opcional)**: si quiere, escriba una descripción para esta implementación.  
+- **Comentarios (opcional)** : si quiere, escriba una descripción para esta implementación.  
 
 
 ### <a name="bkmk_deploy-content"></a> Opciones de **contenido** de implementación
@@ -309,6 +309,7 @@ Si se implementan aplicaciones como disponibles para los usuarios, a partir de l
 
 ## <a name="next-steps"></a>Pasos siguientes
 
- - [Supervisar aplicaciones](/sccm/apps/deploy-use/monitor-applications-from-the-console)
- - [Tareas de administración para aplicaciones](/sccm/apps/deploy-use/management-tasks-applications)
- - [Manual del usuario del Centro de software](/sccm/core/understand/software-center)
+- [Supervisar aplicaciones](/sccm/apps/deploy-use/monitor-applications-from-the-console)
+- [Solución de problemas de implementación de aplicaciones](/sccm/apps/deploy-use/troubleshoot-application-deployment)
+- [Tareas de administración para aplicaciones](/sccm/apps/deploy-use/management-tasks-applications)
+- [Manual del usuario del Centro de software](/sccm/core/understand/software-center)

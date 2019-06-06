@@ -11,12 +11,12 @@ ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
 author: mestew
 ms.author: mstewart
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9dbb2b7fadf13a49c25e2eb9bb6fcc608d3869f6
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 7f096f9ff9baaff2411289c27282ab53eb697b0b
+ms.sourcegitcommit: 18a94eb78043cb565b05cd0e9469b939b29cccf0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65495853"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354977"
 ---
 # <a name="icons-used-for-software-updates-in-system-center-configuration-manager"></a>Iconos que se usan para las actualizaciones de software en System Center Configuration Manager
 
@@ -77,11 +77,11 @@ Las actualizaciones de software sincronizadas se muestran en la consola de Confi
 
 - Implementa correctamente la actualización de software, pero el archivo de actualización de software se quita del paquete de implementación y ya no está disponible.  
 
-- Crea una implementación de actualizaciones de software en un sitio y el objeto de implementación se replica correctamente a un sitio secundario, pero el paquete de implementación no se replica correctamente al sitio secundario.  
+- Crea una implementación de actualizaciones de software en un sitio y el objeto de implementación se replica correctamente en un sitio secundario, pero el paquete de implementación no se replica correctamente en el sitio secundario.  
 
   **Preocupaciones operativas:**  
 
-  Si falta el contenido de una actualización de software, los clientes no pueden instalar la actualización de software hasta que el contenido esté disponible en un punto de distribución. Puede redistribuir el contenido a los puntos de distribución mediante la acción **Redistribuir** . Si falta el contenido de una actualización de software en una implementación creada en un sitio primario, la actualización de software se debe replicar o redistribuir al sitio secundario. Para obtener más información sobre la redistribución de contenido, consulte [Manage the content you have distributed](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage) (Administrar el contenido que ha distribuido).  
+  Si falta el contenido de una actualización de software, los clientes no pueden instalar la actualización de software hasta que el contenido esté disponible en un punto de distribución. Puede redistribuir el contenido a los puntos de distribución mediante la acción **Redistribuir** . Si falta el contenido de una actualización de software en una implementación creada en un sitio primario, la actualización de software se debe replicar o redistribuir al sitio secundario. Para obtener más información sobre la redistribución de contenido, consulte [Administrar el contenido distribuido](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage).  
 
 ### <a name="metadata-only-icon"></a>Icono de solo metadatos
  ![icono](../media/MetadataOnly.png "Icono de solo metadatos") El icono con la flecha azul representa una actualización de software de solo metadatos.
@@ -123,4 +123,9 @@ Las actualizaciones de software sincronizadas se muestran en la consola de Confi
 
  **Preocupaciones operativas:**  
 
- Si falta el contenido de una actualización de software, los clientes no pueden instalar la actualización de software hasta que el contenido esté disponible en un punto de distribución. Puede redistribuir el contenido a los puntos de distribución mediante la acción **Redistribuir** . Si falta el contenido de una actualización de software en una implementación creada en un sitio primario, la actualización de software se debe replicar o redistribuir al sitio secundario. Para obtener más información sobre la redistribución de contenido, consulte [Manage the content you have distributed](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage) (Administrar el contenido que ha distribuido).  
+ Si falta el contenido de una actualización de software, los clientes no pueden instalar la actualización de software hasta que el contenido esté disponible en un punto de distribución. Puede redistribuir el contenido a los puntos de distribución mediante la acción **Redistribuir** . Si falta el contenido de una actualización de software en una implementación creada en un sitio primario, la actualización de software se debe replicar o redistribuir al sitio secundario. Para obtener más información sobre la redistribución de contenido, consulte [Administrar el contenido distribuido](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage).  
+
+
+## <a name="next-steps"></a>Pasos siguientes 
+
+[Planear las actualizaciones de software](/sccm/sum/plan-design/plan-for-software-updates)

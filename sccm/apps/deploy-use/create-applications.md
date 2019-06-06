@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e796996f870fcdd8428f3a16b08eee56d249cfa6
-ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
+ms.openlocfilehash: c54eb02fe3de3246a7c8ed15e7589fcd4d9b1c9b
+ms.sourcegitcommit: abfc9e1b3945637fa93ca8d3a11519493a5d5391
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65673391"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66264428"
 ---
 # <a name="create-applications-in-configuration-manager"></a>Crear aplicaciones en Configuration Manager
 
@@ -86,7 +86,7 @@ Después, detecte automáticamente o especifique manualmente la información de 
 
     -   **Comportamiento de instalación**: seleccione una de las tres opciones para cómo Configuration Manager instala este tipo de implementación. Para obtener más información sobre estas opciones, vea [Experiencia de usuario](#bkmk_dt-ux).  
 
-    -   **Usar una conexión VPN automática (si está configurada)**: si ha implementado un perfil de VPN en el dispositivo en el que el usuario inicia la aplicación, la VPN se conectará cuando se inicie. Esta opción es solo para Windows 8.1 y Windows Phone 8.1. En dispositivos Windows Phone 8.1, las conexiones VPN automáticas no se admiten si se ha implementado más de un perfil de VPN en el dispositivo. Para obtener más información, vea [Perfiles de VPN](/sccm/protect/deploy-use/vpn-profiles).  
+    -   **Usar una conexión VPN automática (si está configurada)** : si ha implementado un perfil de VPN en el dispositivo en el que el usuario inicia la aplicación, la VPN se conectará cuando se inicie. Esta opción es solo para Windows 8.1 y Windows Phone 8.1. En dispositivos Windows Phone 8.1, las conexiones VPN automáticas no se admiten si se ha implementado más de un perfil de VPN en el dispositivo. Para obtener más información, vea [Perfiles de VPN](/sccm/protect/deploy-use/vpn-profiles).  
 
     - **Aprovisionar esta aplicación para todos los usuarios del dispositivo**:<!--1358310-->a partir de la versión 1806, una aplicación se aprovisiona con un paquete de aplicación de Windows para todos los usuarios en el dispositivo. Para obtener más información, vea [Creación de aplicaciones Windows](/sccm/apps/get-started/creating-windows-applications#bkmk_provision).  
 
@@ -209,7 +209,7 @@ Después use uno de los procedimientos siguientes para [detectar automáticament
 
     -   **Comportamiento de instalación**: seleccione una de las tres opciones para cómo Configuration Manager instala este tipo de implementación. Para obtener más información sobre estas opciones, vea [Experiencia de usuario](#bkmk_dt-ux).  
 
-    -   **Usar una conexión VPN automática (si está configurada)**: si ha implementado un perfil de VPN en el dispositivo en el que el usuario inicia la aplicación, la VPN se conectará cuando se inicie. Esta opción es solo para Windows 8.1 y Windows Phone 8.1. En dispositivos Windows Phone 8.1, las conexiones VPN automáticas no se admiten si se ha implementado más de un perfil de VPN en el dispositivo. Para obtener más información, vea [Perfiles de VPN](/sccm/protect/deploy-use/vpn-profiles).  
+    -   **Usar una conexión VPN automática (si está configurada)** : si ha implementado un perfil de VPN en el dispositivo en el que el usuario inicia la aplicación, la VPN se conectará cuando se inicie. Esta opción es solo para Windows 8.1 y Windows Phone 8.1. En dispositivos Windows Phone 8.1, las conexiones VPN automáticas no se admiten si se ha implementado más de un perfil de VPN en el dispositivo. Para obtener más información, vea [Perfiles de VPN](/sccm/protect/deploy-use/vpn-profiles).  
 
 4.  Seleccione **Siguiente** y continúe con [Opciones de contenido de tipo de implementación](#bkmk_dt-content).  
 
@@ -338,6 +338,9 @@ Continúe con la siguiente sección sobre el uso de un script personalizado como
 
 Configuration Manager comprueba los resultados del script. Lee los valores escritos por el script en la secuencia de salida estándar (STDOUT), la secuencia de error estándar (STDERR) y el código de salida. Si el script sale con un valor distinto de cero, se produce un error en el script y el estado de detección de la aplicación es *Desconocido*. Si el código de salida es cero y STDOUT contiene datos, el estado de detección de la aplicación es *Instalada*.
 
+> [!TIP]
+> Al escribir un script de detección, si devuelve un código de salida cero, pero no devuelve resultados (datos en STDOUT), la aplicación no se detectará como instalada. Para obtener más información, vea los ejemplos siguientes.
+
 Use las siguientes tablas para comprobar a partir de la salida de un script si una aplicación está instalada:  
 
 **Código de salida cero:**  
@@ -349,7 +352,6 @@ Use las siguientes tablas para comprobar a partir de la salida de un script si u
 |No está vacío|Vacío|Correcto|Instalado|
 |No está vacío|No está vacío|Correcto|Instalado|
 
-
 **Código de salida que no es cero:**  
 
 |STDOUT|STDERR|Resultado del script|Estado de detección de la aplicación|
@@ -359,34 +361,62 @@ Use las siguientes tablas para comprobar a partir de la salida de un script si u
 |No está vacío|Vacío|Error|Desconocida|
 |No está vacío|No está vacío|Error|Desconocida|
 
+**Ejemplos**
 
-**Ejemplos de VBScript**
-
-Use los siguientes ejemplos de VBScript para escribir sus propios scripts de detección de aplicaciones:  
+Use los siguientes ejemplos de PowerShell/VBScript para escribir sus propios scripts de detección de aplicaciones:  
 
 Ejemplo 1: el script devuelve un código de salida que no es cero. Este código indica que el script no se pudo ejecutar correctamente. En este caso, el estado de detección de la aplicación es desconocido.  
+
+``` PowerShell
+Exit 1
+```
+
 ``` VBScript
 WScript.Quit(1)
 ```
 
 Ejemplo 2: el script devuelve un código de salida de cero, pero el valor de STDERR no está vacío. Este resultado indica que el script no se pudo ejecutar correctamente. En este caso, el estado de detección de la aplicación es desconocido.  
+
+``` PowerShell
+Write-Error "Script failed"
+Exit 0
+```
+
 ``` VBScript
 WScript.StdErr.Write "Script failed"
 WScript.Quit(0)
 ```
 
 Ejemplo 3: el script devuelve un código de salida de cero, lo que indica que se ejecutó correctamente. En cambio, el valor de STDOUT está vacío, lo que indica que la aplicación no está instalada.  
+
+``` PowerShell
+Exit 0
+```
+
 ``` VBScript
 WScript.Quit(0)
 ```
 
 Ejemplo 4: el script devuelve un código de salida de cero, lo que indica que se ejecutó correctamente. El valor de STDOUT está vacío, lo que indica que la aplicación no está instalada.  
+
+``` PowerShell
+Write-Host "The application is installed"
+Exit 0
+```
+
 ``` VBScript
 WScript.StdOut.Write "The application is installed"
 WScript.Quit(0)
 ```
 
 Ejemplo 5: el script devuelve un código de salida de cero, lo que indica que se ejecutó correctamente. Los valores de STDOUT y STDERR no están vacíos, lo que indica que la aplicación está instalada.  
+
+``` PowerShell
+Write-Host "The application is installed"
+Write-Error "Completed"
+Exit 0
+```
+
 ``` VBScript
 WScript.StdOut.Write "The application is installed"
 WScript.StdErr.Write "Completed"
@@ -439,7 +469,7 @@ En la página **Experiencia del usuario** , especifique la siguiente informació
     >  
     > Instalar en el contexto de sistema y permitir a los usuarios interactuar con la instalación no es una configuración segura. Para obtener más información, vea [Seguridad y privacidad de la administración de aplicaciones](/sccm/apps/plan-design/security-and-privacy-for-application-management#bkmk_interact).  
 
-- **Duración máxima permitida de la ejecución (minutos)**: Especifica la duración máxima en minutos que espera que se ejecute el tipo de implementación en el equipo cliente. Especifique esta configuración como un número entero mayor que cero. El valor predeterminado es 120 minutos (dos horas).  
+- **Duración máxima permitida de la ejecución (minutos)** : Especifica la duración máxima en minutos que espera que se ejecute el tipo de implementación en el equipo cliente. Especifique esta configuración como un número entero mayor que cero. El valor predeterminado es 120 minutos (dos horas).  
 
     Se puede usar este valor para las siguientes acciones:  
 
@@ -450,7 +480,7 @@ En la página **Experiencia del usuario** , especifique la siguiente informació
     > [!IMPORTANT]  
     >  Se puede producir un conflicto si el **Tiempo de ejecución máximo permitido** es mayor que la ventana de mantenimiento programada. Si el usuario configura el tiempo de ejecución máximo en un periodo superior a la duración de las ventanas de mantenimiento disponibles, ese tipo de implementación no se ejecuta.  
 
-- **Tiempo de instalación estimado (minutos)**: especifique el tiempo de instalación estimado del tipo de implementación. Los usuarios ven este tiempo en el Centro de Software.  
+- **Tiempo de instalación estimado (minutos)** : especifique el tiempo de instalación estimado del tipo de implementación. Los usuarios ven este tiempo en el Centro de Software.  
 
 
 #### <a name="deployment-type-properties-user-experience-options"></a>Opciones de **experiencia del usuario** para propiedades del tipo de implementación
@@ -535,9 +565,9 @@ Especifique los códigos de retorno para controlar los comportamientos al finali
 
 3. Seleccione una **tipo de código** de la lista desplegable. Esta configuración define cómo Configuration Manager interpreta el código de retorno especificado de este tipo de implementación. Los tipos disponibles varían en función de la tecnología de tipo de implementación.   
 
-    - **Correcto (sin reinicio)**: el tipo de implementación se instaló correctamente y no es necesario reiniciar.  
+    - **Correcto (sin reinicio)** : el tipo de implementación se instaló correctamente y no es necesario reiniciar.  
 
-    - **Error (sin reinicio)**: no se pudo instalar el tipo de implementación.  
+    - **Error (sin reinicio)** : no se pudo instalar el tipo de implementación.  
 
     - **Reinicio en frío**: el tipo de implementación se instaló correctamente, pero requiere reiniciar el dispositivo. Nada se puede instalar hasta que se reinicie el dispositivo.  
 
@@ -551,7 +581,7 @@ Especifique los códigos de retorno para controlar los comportamientos al finali
 
 
 #### <a name="example-non-zero-success"></a>Ejemplo: correcto distinto de cero
-Va a implementar una aplicación que devuelve un código de salida de `1` cuando se instala correctamente. De forma predeterminada, Configuration Manager detecta este código de retorno distinto de cero como un error. Especifique el valor de código de retorno de `1` y seleccione el tipo de código **correcto (sin reinicio)**. Ahora Configuration Manager interpreta ese código de retorno como una operación correcta para este tipo de implementación.
+Va a implementar una aplicación que devuelve un código de salida de `1` cuando se instala correctamente. De forma predeterminada, Configuration Manager detecta este código de retorno distinto de cero como un error. Especifique el valor de código de retorno de `1` y seleccione el tipo de código **correcto (sin reinicio)** . Ahora Configuration Manager interpreta ese código de retorno como una operación correcta para este tipo de implementación.
 
 
 #### <a name="default-return-codes"></a>Códigos de retorno predeterminados

@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6f66eedd60c759395126363db9e672c45993d48
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 368fd0b4d86b1ee263bbe47619a4387db614b167
+ms.sourcegitcommit: abfc9e1b3945637fa93ca8d3a11519493a5d5391
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123971"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66264394"
 ---
 # <a name="management-tasks-for-system-center-configuration-manager-applications"></a>Tareas de administración de aplicaciones de System Center Configuration Manager
 
@@ -47,6 +47,7 @@ Para obtener más información sobre la creación de aplicaciones y los tipos de
 |**Implementar**|Abre el **Asistente para implementar software** , en el que puede implementar la aplicación seleccionada en recopilaciones de equipos en su jerarquía.<br /><br /> Consulte [Deploy applications](../../apps/deploy-use/deploy-applications.md) (Implementación de aplicaciones).|  
 |**Distribuir contenido**|Abre el **Asistente para distribuir contenido** , en el que puede copiar el contenido de la aplicación seleccionada en puntos de distribución en la jerarquía.<br /><br /> Consulte [Manage content and content infrastructure](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md) (Administración de contenido e infraestructura de contenido).|  
 |**Ver relaciones**|Muestra un diagrama gráfico de las relaciones de las aplicaciones seleccionadas con otras aplicaciones. Elija una de las siguientes opciones:<br><br><ul><li>**Dependencia**: muestra las aplicaciones que dependen de la aplicación seleccionada y las aplicaciones de las que la aplicación seleccionada depende.</li><li>**Sustitución**: muestra las aplicaciones que la aplicación seleccionada sustituye y las aplicaciones por las que se sustituye la aplicación seleccionada.</li><li>**Condiciones globales**: muestra las condiciones globales a las que esta aplicación hace referencia.</li></ol><br /> Consulte [Revise and supersede applications](../../apps/deploy-use/revise-and-supersede-applications.md) (Revisión y sustitución de aplicaciones) y [Cómo crear condiciones globales](../../apps/deploy-use/create-global-conditions.md).|  
+|**Copiar aplicaciones**|Copie (o duplique) aplicaciones de Configuration Manager para crear una nueva. Esta acción es útil para probar algo o cuando es necesario crear una aplicación similar. El sitio crea una aplicación con **-copy** anexado al nombre. Aunque el sitio copia la mayoría de los metadatos para la nueva aplicación, no copia ninguna implementación.|
 
 ##  <a name="manage-deployment-types"></a>Administración de tipos de implementaciones  
  En el área de trabajo **Biblioteca de software**, expanda **Administración de aplicaciones**, pulse **Aplicaciones** y, después, elija la aplicación que tenga el tipo de implementación que quiere administrar. En el panel de detalles, pulse la pestaña **Tipos de implementación**, elija el tipo de implementación que quiere administrar y, después, elija una tarea de administración.  
