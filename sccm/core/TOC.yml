@@ -51,7 +51,7 @@
       href: understand/configuration-manager-and-windows-as-service.md
     - name: Cliente de interoperabilidad extendida
       href: understand/interoperability-client.md
-    - name: Licencias para System Center Configuration Manager
+    - name: Licencias y ramas
       href: understand/learn-more-editions.md
     - name: Usar servicios en la nube
       items:
