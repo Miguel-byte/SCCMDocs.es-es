@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 47d2ee0cf82e9739d8e6364098be6c3033ce1ea2
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 0409e71e09297d23251235aa6093886319c80ae6
+ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218201"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66716253"
 ---
 # <a name="how-to-create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-system-center-configuration-manager-client"></a>Cómo crear elementos de configuración para dispositivos Android y Samsung KNOX administrados sin el cliente de System Center Configuration Manager
 
 Use el elemento de configuración de **Android y Samsung KNOX** de System Center Configuration Manager para administrar la configuración de los dispositivos Android y Samsung KNOX inscritos en Microsoft Intune o administrados mediante System Center Configuration Manager de forma local.  
 
-#### <a name="to-create-an-android-and-samsung-knox-configuration-item"></a>Cómo crear un elemento de configuración de Android y Samsung KNOX  
+## <a name="create-an-android-and-samsung-knox-configuration-item"></a>Crear un elemento de configuración de Android y Samsung KNOX  
 
 1. En la consola de Configuration Manager, elija **Activos y compatibilidad**.  
 
@@ -38,7 +38,7 @@ Use el elemento de configuración de **Android y Samsung KNOX** de System Center
 
 7. En la página **Plataformas admitidas** del asistente, elija las plataformas específicas de Android y Samsung KNOX que evaluarán el elemento de configuración.  
 
-8. En la página **Configuración del dispositivo** del asistente, elija el grupo de configuración que quiere configurar. Vea [Referencia de configuración de elementos de configuración de Android y Samsung KNOX](#BKMK_setref) en este tema para obtener detalles y, luego, elija **Siguiente**.  
+8. En la página **Configuración del dispositivo** del asistente, elija el grupo de configuración que quiere configurar. Vea [Referencia de configuración de elementos de configuración de Android y Samsung KNOX](#android-and-samsung-knox-configuration-item-settings-reference) en este tema para obtener detalles y, luego, elija **Siguiente**.  
 
     > [!TIP]  
     >  Si el valor que quiere no aparece, active la casilla **Configurar opciones adicionales que no se encuentran en los grupos de configuración predeterminados**.  
@@ -169,7 +169,7 @@ En la página **Aplicaciones compatibles y no compatibles (Android)** , especifi
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Lista de aplicaciones no compatibles** |                                                                                                                                                                                                                                                                               Especifica una lista de aplicaciones que se notificarán como no compatibles si los usuarios las instalan.                                                                                                                                                                                                                                                                               |
 |  **Lista de aplicaciones compatibles**   |                                                                                                                                                                                                                                                              Especifica una lista de aplicaciones que los usuarios pueden instalar. Cualquier otra aplicación instalada se notificará como no compatible.                                                                                                                                                                                                                                                               |
-|          **Agregar**           | Agrega una aplicación a la lista seleccionada. Especifique un nombre de su elección, opcionalmente el editor de la aplicación y la dirección URL de la aplicación en la tienda de aplicaciones.<br /><br /> Para especificar la dirección URL, en la [sección Aplicaciones de Google Play](https://play.google.com/store/apps), busque la aplicación que quiera usar.<br /><br /> Abra la página de la aplicación y copie la dirección URL en el Portapapeles. Ya puede utilizarla como dirección URL en una la lista de aplicaciones conformes o no conformes.<br /><br /> **Ejemplo:** Busque Google Play **Microsoft Office Mobile**. La dirección URL que usa será **<https://play.google.com/store/apps/details?id=com.microsoft.office.officehub>**. |
+|          **Agregar**           | Agrega una aplicación a la lista seleccionada. Especifique un nombre de su elección, opcionalmente el editor de la aplicación y la dirección URL de la aplicación en la tienda de aplicaciones.<br /><br /> Para especificar la dirección URL, en la [sección Aplicaciones de Google Play](https://play.google.com/store/apps), busque la aplicación que quiera usar.<br /><br /> Abra la página de la aplicación y copie la dirección URL en el Portapapeles. Ya puede utilizarla como dirección URL en una la lista de aplicaciones conformes o no conformes.<br /><br /> **Ejemplo:** Busque Google Play **Microsoft Office Mobile**. La dirección URL que usa será **<https://play.google.com/store/apps/details?id=com.microsoft.office.officehub>** . |
 |          **Editarar**          |                                                                                                                                                                                                                                                                                          Permite editar el nombre, el editor y la dirección URL de la aplicación seleccionada.                                                                                                                                                                                                                                                                                          |
 |         **Quitar**         |                                                                                                                                                                                                                                                                                                      Elimina la aplicación seleccionada de la lista.                                                                                                                                                                                                                                                                                                      |
 |         **Importarar**         |                                                                                                                                                                                                                                                 Importa la lista de las aplicaciones que ha especificado en un archivo de valores separados por comas. Utilice el formato, el nombre de la aplicación, el editor y la dirección URL de la aplicación en el archivo.                                                                                                                                                                                                                                                 |

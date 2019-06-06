@@ -2,7 +2,7 @@
 title: Análisis de escritorio
 titleSuffix: Configuration Manager
 description: Información general sobre el servicio de análisis de escritorio integrado con Configuration Manager.
-ms.date: 04/22/2019
+ms.date: 06/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: overview
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78e9454212bb8264926c1aba5262f06db1798abe
-ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
+ms.openlocfilehash: bdeffb3b2d478e4984ef721655b78aee5c47c36f
+ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65673434"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66716230"
 ---
 # <a name="what-is-desktop-analytics"></a>¿Qué es el análisis de escritorio?
 
@@ -89,6 +89,11 @@ Para utilizar el análisis de escritorio, asegúrese de que su entorno cumple lo
     - Instale las actualizaciones más recientes. Para obtener más información, consulte [actualizar dispositivos](/sccm/desktop-analytics/enroll-devices#update-devices).  
 
     - Los dispositivos también deben tener el cliente de Configuration Manager, versión 1810 con paquete acumulativo de actualizaciones 2 (4488598) o una versión posterior. Para obtener más información, consulte [actualizar Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
+
+    > [!Note]  
+    > Análisis de escritorio no es compatible con las actualizaciones de canal de mantenimiento a largo plazo (LTSC) de Windows 10. Para obtener más información, consulte [Windows como una información general del servicio](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).
+    >
+    > Escritorio Analytics está diseñado para el mejor escenario de actualización de soporte técnico en el contexto. Si necesita realizar cambios importantes, como de la arquitectura de 32 bits a 64 bits, utilice un escenario de creación de imágenes. Escritorio insights Analytics todavía resultan valiosos en estos escenarios de implementación de sistema operativo clásicos, pero puede pasar por alto la orientación específica de actualización en contexto. Para obtener más información, consulte [escenarios para implementar sistemas operativos de empresa con Configuration Manager](/sccm/osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems).
 
 - Datos de diagnóstico de Windows. Vea los siguientes artículos para más información:  
 

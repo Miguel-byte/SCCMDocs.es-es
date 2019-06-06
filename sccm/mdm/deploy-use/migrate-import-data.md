@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: b552391d-abc0-48a2-a429-93605a13a66a
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46b5034cb95193a07421fe79a445dac0f5b28503
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 0e7c9fde7298d4733c2f3abd9555edb989d7cb66
+ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232328"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66716209"
 ---
 # <a name="import-configuration-manager-data-to-microsoft-intune"></a>Importación de datos de Configuration Manager en Microsoft Intune 
 
@@ -145,7 +145,7 @@ Puede invalidar el nombre del grupo de Active Directory que Data Importer busca 
 #### <a name="find-the-collections-that-cant-be-imported"></a>Búsqueda de recopilaciones que no se puede importar
 Puede obtener una lista de todas las colecciones que no se pueden importar de forma que pueda agregarlas al archivo .csv de asignación de colecciones. 
 
-1. Ejecute la herramienta Data Importer y seleccione los objetos que desea importar. Utilice los procedimientos de [fase 1: Detectar objetos de Configuration Manager y recopilar datos](#phase-1:-discover-configuration-manager-objects-and-collect-data) y [fase 2: Resolver problemas y seleccionar los objetos que se va a importar](#phase-2:-resolve-issues-and-select-the-objects-to-import) para detectar y elegir los objetos. Después, en la página **Summary (Resumen)**, elija **Export details (Exportar detalles)** para crear un archivo .csv con detalles de todo lo seleccionado para importar, incluidos los objetos que no se pueden importar y las implementaciones.  
+1. Ejecute la herramienta Data Importer y seleccione los objetos que desea importar. Utilice los procedimientos de [fase 1: Detectar objetos de Configuration Manager y recopilar datos](#phase-1-discover-configuration-manager-objects-and-collect-data) y [fase 2: Resolver problemas y seleccionar los objetos que se va a importar](#phase-2-resolve-issues-and-select-the-objects-to-import) para detectar y elegir los objetos. Después, en la página **Summary (Resumen)** , elija **Export details (Exportar detalles)** para crear un archivo .csv con detalles de todo lo seleccionado para importar, incluidos los objetos que no se pueden importar y las implementaciones.  
 
 2. Abra el archivo .csv en Microsoft Excel y filtre los datos en función de **Deployment** (Implementación) para la columna **Type** (Tipo) y **No** para la columna **Importable**. La columna del nombre de la recopilación muestra todas las recopilaciones que deben agregarse a un archivo de asignación de recopilaciones para que las implementaciones se puedan importar.  
 
