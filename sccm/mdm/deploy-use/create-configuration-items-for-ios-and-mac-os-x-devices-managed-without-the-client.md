@@ -11,17 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1d511df5dc4b6e29a86d4eabacec9037ee204ecc
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: cadeb04e52e584cf260e84ee4bdd4ea6a07de23f
+ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176733"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66748308"
 ---
 # <a name="how-to-create-configuration-items-for-ios-and-mac-os-x-devices-managed-with-intune"></a>Creación de elementos de configuración para dispositivos iOS y Mac OS X administrados con Intune
+
 Use el elemento de configuración de **iOS y Mac OS X** de System Center Configuration Manager para administrar la configuración de los dispositivos iOS y Mac OS X inscritos en Microsoft Intune o que administra System Center Configuration Manager de forma local.  
   
-### <a name="to-create-an-ios-and-mac-os-x-configuration-item"></a>Cómo crear un elemento de configuración de iOS y Mac OS X  
+## <a name="create-an-ios-and-mac-os-x-configuration-item"></a>Crear un elemento de configuración de Mac OS X y iOS  
   
 1. En la consola de Configuration Manager, haga clic en **Activos y compatibilidad**.  
   
@@ -37,7 +38,7 @@ Use el elemento de configuración de **iOS y Mac OS X** de System Center Configu
   
 7. En la página **Plataformas admitidas** del asistente, seleccione las plataformas de iOS o Mac OS X concretas que evaluarán el elemento de configuración.  
   
-8. En la página **Configuración del dispositivo** del asistente, seleccione el grupo de configuración que quiere configurar. Vea [Referencia de configuración de elementos de configuración de iOS y Mac OS X](#BKMK_Setref) en este tema para obtener detalles y luego haga clic en **Siguiente**.  
+8. En la página **Configuración del dispositivo** del asistente, seleccione el grupo de configuración que quiere configurar. Vea [Referencia de configuración de elementos de configuración de iOS y Mac OS X](#ios-and-mac-os-x-configuration-item-settings-reference) en este tema para obtener detalles y luego haga clic en **Siguiente**.  
   
    > [!TIP]  
    >  Si el valor que quiere no aparece, seleccione la casilla **Configurar opciones adicionales que no se encuentran en los grupos de configuración predeterminados**.  
@@ -239,7 +240,7 @@ Use el elemento de configuración de **iOS y Mac OS X** de System Center Configu
   
         Abra la página de la aplicación y copie la dirección URL en el Portapapeles. Ya puede utilizarla como dirección URL en una la lista de aplicaciones conformes o no conformes.  
   
-        **Ejemplo:** Buscar en el almacén para el **Microsoft Word para iPad** app. La dirección URL que usa será **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.  
+        **Ejemplo:** Buscar en el almacén para el **Microsoft Word para iPad** app. La dirección URL que usa será **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8** .  
   
    -   **Editar**: permite editar el nombre, el editor y la dirección URL de la aplicación seleccionada.  
   
@@ -276,7 +277,7 @@ Use el elemento de configuración de **iOS y Mac OS X** de System Center Configu
      >  Para buscar el identificador de paquete de una aplicación, siga estos pasos en un equipo Mac que tenga la aplicación instalada:  
      > 
      > 1. Abra la carpeta en la que está instalada la aplicación (por ejemplo, **/Applications**)  
-     >    2.  Seleccione el paquete _<nombre de aplicación\>_**.app** y elija **Mostrar contenido del paquete**  
+     >    2.  Seleccione el paquete _<nombre de aplicación\>_ **.app** y elija **Mostrar contenido del paquete**  
      >    3.  Abra el archivo **Info.plist**  
      >    4.  Compruebe el valor asociado a la clave **CFBundleIdentifier**  
      > 
@@ -308,7 +309,7 @@ Use el elemento de configuración de **iOS y Mac OS X** de System Center Configu
   
 1.  En la página **Configurar opciones de perfil personalizado de iOS y Mac OS X** del **Asistente para crear un elemento de configuración**, especifique la siguiente información:  
   
-    -   **Nombre del perfil de configuración personalizado (que se muestra a los usuarios)**: especifique el nombre de la directiva que se mostrará en el dispositivo y en los informes de Configuration Manager.  
+    -   **Nombre del perfil de configuración personalizado (que se muestra a los usuarios)** : especifique el nombre de la directiva que se mostrará en el dispositivo y en los informes de Configuration Manager.  
   
     -   **Importar**: elija un archivo que haya exportado desde la herramienta Apple Configurator.  
   
@@ -359,7 +360,7 @@ Use el elemento de configuración de **iOS y Mac OS X** de System Center Configu
   
      - Copie la dirección URL de la página y úsela como dirección URL para especificar la aplicación que desea ejecutar en modo de pantalla completa.  
   
-     - **Ejemplo:** Busque **Microsoft Word para iPad**. La dirección URL que usa será **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.  
+     - **Ejemplo:** Busque **Microsoft Word para iPad**. La dirección URL que usa será **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8** .  
   
    - **Táctil**: habilita o deshabilita la pantalla táctil en el dispositivo.  
   

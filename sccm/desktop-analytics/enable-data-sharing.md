@@ -2,7 +2,7 @@
 title: Habilitación del uso compartido de datos
 titleSuffix: Configuration Manager
 description: Guía de referencia para uso compartido de datos de diagnóstico con análisis de escritorio.
-ms.date: 04/22/2019
+ms.date: 06/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a30dc89882146c892f5eeec1aacfc31efbfd038
-ms.sourcegitcommit: 65753c51fbf596f233fc75a5462ea4a44005c70b
+ms.openlocfilehash: dbe161fd744343927f0b373775182eccfd58c1b6
+ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66463064"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66748241"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Habilitar uso compartido para el escritorio de análisis de datos
 
@@ -56,6 +56,9 @@ Los artículos siguientes también son buenos recursos para mejor descripción d
 
 Para habilitar el uso compartido de datos, configure el servidor proxy para permitir que los siguientes extremos:
 
+> [!Important]  
+> Para privacidad e integridad de datos, Windows busca un certificado SSL de Microsoft al comunicarse con los puntos de conexión de datos de diagnóstico. Inspección e intercepción de SSL no son posibles. Para utilizar el análisis de escritorio, excluya estos puntos de conexión de inspección de SSL.<!-- BUG 4647542 -->
+
 | punto de conexión  | Función  |
 |-----------|-----------|
 | `https://v10c.events.data.microsoft.com` | Experiencia del usuario conectado y el punto de conexión de diagnóstico del componente. Utilizado por los dispositivos que ejecutan Windows 10, versión 1703 o posterior, con 2018-09 acumulativa update o posterior instalado. |
@@ -77,12 +80,6 @@ Para habilitar el uso compartido de datos, configure el servidor proxy para perm
 | `https://office.pipe.aria.microsoft.com` | Para la funcionalidad de futuros <!-- Used by Office clients to send diagnostic data events from universal/modern Office apps, and Win32 Office 16 versions later than 16.0.8702. It's used to collect usage and reliability signals events for Desktop Analytics. --> |
 | `https://graph.windows.net` | Se usa para recuperar automáticamente la configuración como CommercialId al adjuntar la jerarquía para el análisis de escritorio (en función de servidor de Configuration Manager). |
 | `https://fef.msua06.manage.microsoft.com` | Se usa para sincronizar miembros de la colección de dispositivo, planes de implementación y estado de preparación del dispositivo con análisis de escritorio (en función de servidor de Configuration Manager). |
-
-
-### <a name="ssl-inspection"></a>Inspección de SSL
-
-Para privacidad e integridad de datos, Windows busca un certificado SSL de Microsoft al comunicarse con los puntos de conexión de datos de diagnóstico. Inspección e intercepción de SSL no son posibles. Para utilizar el análisis de escritorio, excluir los puntos de conexión anteriores de la inspección de SSL.
-
 
 
 ## <a name="proxy-server-authentication"></a>Autenticación del servidor proxy

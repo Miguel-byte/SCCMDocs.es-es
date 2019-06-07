@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04b67b324927f4918ff5c0835896cb0d63a9e48c
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: b07fc7bf1c4a226456506d0131c3d6bad14b1766
+ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256054"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66748232"
 ---
 # <a name="ios-hybrid-enrollment-using-apple-configurator-with-configuration-manager"></a>Inscripción híbrida de iOS híbrido con Apple Configurator con Configuration Manager
 
@@ -68,7 +68,7 @@ Para obtener más información, consulte [Predeclare devices with IMEI and iOS s
 
 1.  En la consola de Configuration Manager, vaya a **Activos y compatibilidad** > **Información general** > **Todos los dispositivos corporativos** > **iOS** > **Perfiles de inscripción**.
 
-2.  Seleccione el perfil de inscripción que se va a implementar en los dispositivos móviles y haga clic en **Exportar...**.
+2.  Seleccione el perfil de inscripción que se va a implementar en los dispositivos móviles y haga clic en **Exportar...** .
 
 3.  Copie y guarde la **URL de perfil** en un archivo que pueda editar.   
 
@@ -86,7 +86,7 @@ Para obtener más información, consulte [Predeclare devices with IMEI and iOS s
 
     ```
 
-5.  Guarde la dirección URL de perfil editada. La usará para agregar la dirección URL de perfil de inscripción en Apple Configurator en la [siguiente sección](#step-4-prepare-the-device-with-apple-configurator).  
+5.  Guarde la dirección URL de perfil editada. La usará para agregar la dirección URL de perfil de inscripción en Apple Configurator en la [siguiente sección](#prepare-the-device-with-apple-configurator).  
 
 > [!NOTE]
 > La dirección URL del perfil de inscripción es válida durante dos semanas desde que se exporta. Después de dos semanas, debe exportar una nueva dirección URL para inscribir dispositivos iOS.
@@ -104,7 +104,7 @@ Para preparar los dispositivos iOS para la inscripción, conecte cada dispositiv
 
 3. En el panel de preferencias, seleccione **Servers** (Servidores) y haga clic en el símbolo "+" debajo del panel izquierdo para iniciar el asistente del servidor MDM. Haga clic en **Siguiente**.  
 
-4. Escriba el **Nombre** y la **URL de inscripción** que ha guardado [antes](#step-3-export-the-profile-to-deploy-to-ios-devices). Haga clic en **Siguiente**.  
+4. Escriba el **Nombre** y la **URL de inscripción** que ha guardado [antes](#export-the-profile-to-deploy-to-ios-devices). Haga clic en **Siguiente**.  
 
    > [!NOTE]
    > Si recibe una advertencia sobre los requisitos de perfil de confianza para Apple TV, puede cancelar con seguridad la opción **Trust Profile (Perfil de confianza)** haciendo clic en la "X" de color gris. También de forma segura, puede omitir cualquier advertencia de marcador de certificado.
@@ -118,13 +118,13 @@ Para preparar los dispositivos iOS para la inscripción, conecte cada dispositiv
    > [!WARNING]  
    >  Este proceso restablece los dispositivos a la configuración de fábrica. Antes de conectar el dispositivo, restablezca el dispositivo y enciéndalo. Como procedimiento recomendado, en el dispositivo debe aparecer la pantalla Hello antes de continuar.  
 
-7. Haga clic en **Prepare** (Preparar). En el panel **Prepare iOS Device (Preparar dispositivo iOS)**, seleccione **Manual** y, después, haga clic en **Siguiente**.  
+7. Haga clic en **Prepare** (Preparar). En el panel **Prepare iOS Device (Preparar dispositivo iOS)** , seleccione **Manual** y, después, haga clic en **Siguiente**.  
 
-8. En el panel **Enroll in MDM Server (Inscribir en servidor MDM)**, seleccione el nombre del servidor que ha creado y haga clic en **Siguiente**.  
+8. En el panel **Enroll in MDM Server (Inscribir en servidor MDM)** , seleccione el nombre del servidor que ha creado y haga clic en **Siguiente**.  
 
 9. En el panel **Create an Organization** (Crear una organización), elija la **organización** o cree una nueva y luego haga clic en **Next** (Siguiente).  
 
-10. En el panel **Configure iOS Setup Assistant (Configurar Asistente de configuración de iOS)**, elija los pasos que se van a presentar al usuario y, después, haga clic en **Preparar**. Si se le solicita, autentíquese para actualizar la configuración de confianza.  
+10. En el panel **Configure iOS Setup Assistant (Configurar Asistente de configuración de iOS)** , elija los pasos que se van a presentar al usuario y, después, haga clic en **Preparar**. Si se le solicita, autentíquese para actualizar la configuración de confianza.  
 
 11. Cuando termine, puede desconectar el cable USB.  
 
