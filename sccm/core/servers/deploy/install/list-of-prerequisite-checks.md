@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 12d40a64cd4300b80e8e625672f1da053814f437
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 3bed079e0037ea09afaf050ef08de16523678970
+ms.sourcegitcommit: 65e9b30e2b53ab9db679a7b1d50634a73c0028db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65497972"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66429817"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Lista de comprobaciones de requisitos previos de Configuration Manager
 
@@ -580,7 +580,7 @@ El Servicio de transferencia inteligente en segundo plano (BITS) está instalado
 
 ### <a name="cloud-management-gateway-requires-either-token-based-authentication-or-an-https-management-point"></a>Cloud Management Gateway requiere autenticación basada en tokens o un punto de administración HTTPS
 
-*Se aplica a: Cloud Management Gateway* 
+*Se aplica a: Cloud Management Gateway*
 
 Con algunas versiones de Configuration Manager, no puede usar un punto de administración de HTTP con Cloud Management Gateway (CMG). Configure la instancia de CMG para HTTPS, o configure el sitio para HTTP mejorado. Para obtener más información, consulte [Plan for cloud management gateway (Plan para la puerta de enlace de administración en la nube)](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).
 
@@ -746,7 +746,7 @@ Esta versión de SQL Native Client es compatible con TLS 1.2. Vea los siguientes
 
 - [Compatibilidad con TLS 1.2 para Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)  
 
-- [Cómo habilitar TLS 1.2 para Configuration Manager](https://support.microsoft.com/help/4040243/how-to-enable-tls-1-2-for-configuration-manager)  
+- [Cómo habilitar TLS 1.2 para Configuration Manager](/sccm/core/plan-design/security/enable-tls-1-2)  
 
 Configuration Manager usa SQL Server Native Client en los siguientes roles de sistema de sitio:<!-- SCCMDocs issue 1150 -->
 

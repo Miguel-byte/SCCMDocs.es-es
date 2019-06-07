@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 18de1d67ecc1dfa6d9c5fb87355c4fed04e2c4c4
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: 9b69e6039d7e3626b2e2f7d321bc9150e05ceee3
+ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176742"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66748280"
 ---
 # <a name="hardware-inventory-for-linux-and-unix-in-configuration-manager"></a>Inventario de hardware para Linux y UNIX en Configuration Manager
 
@@ -106,7 +106,7 @@ Las acciones del inventario de hardware se especifican en el archivo de registro
 ###  <a name="BKMK_LinuxProvider"></a> Cree un proveedor de  inventario de hardware personalizado para equipos UNIX y Linux:  
  Para crear un proveedor de inventario de hardware personalizado para el cliente de Configuration Manager para Linux y UNIX, use **OMI Source - v.1.0.6** y siga las instrucciones de la Guía de introducción de OMI. Este proceso incluye la creación de un archivo Managed Object Format (MOF) que define el esquema del nuevo proveedor. Después, importe el archivo MOF en Configuration Manager para habilitar la compatibilidad de la nueva clase de inventario personalizado.  
 
- Tanto OMI Source - v.1.0.6 como la Guía de introducción de OMI están disponibles para descargar desde el sitio web de [The Open Group](http://go.microsoft.com/fwlink/p/?LinkId=262317) . Puede encontrar estas descargas en la pestaña **Documentos** en la siguiente página web en el sitio web de OpenGroup.org: [Open Management Infrastructure (OMI)](http://go.microsoft.com/fwlink/p/?LinkId=286805).  
+ Tanto OMI Source - v.1.0.6 como la Guía de introducción de OMI están disponibles para descargar desde el sitio web de [The Open Group](https://github.com/microsoft/omi/blob/master/README.md) . Puede encontrar estas descargas en la pestaña **Documentos** en la siguiente página web en el sitio web de OpenGroup.org: [Open Management Infrastructure (OMI)](http://go.microsoft.com/fwlink/p/?LinkId=286805).  
 
 ###  <a name="BKMK_AddProvidertoLinux"></a> Configure cada equipo que ejecute Linux o UNIX con el proveedor de inventario de hardware personalizado:  
  Después de crear un proveedor de inventario personalizado, debe copiar y, a continuación, registrar el archivo de la biblioteca del proveedor en cada equipo que tiene el inventario que desea recopilar.  

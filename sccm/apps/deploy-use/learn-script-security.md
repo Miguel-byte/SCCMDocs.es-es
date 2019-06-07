@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5adc8809edc0a069269dfce71f302452a0e01b45
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 376d35ae0eaca282b9634e2c3eeb50b9c814f270
+ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56124036"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66748011"
 ---
 # <a name="learn-more-about-powershell-script-security"></a>Más información sobre la seguridad del script de PowerShell
 
@@ -49,8 +49,6 @@ Se ha elegido esta colección de vínculos para proporcionar a los administrador
 
 [Protecting Against Malicious Code Injection](https://blogs.msdn.microsoft.com/powershell/2006/11/22/protecting-against-malicious-code-injection/) (Protección contra la inserción de código malintencionado)
 
-[Information about security from the PowerShell Gallery](https://blogs.msdn.microsoft.com/powershell/2015/08/06/powershell-gallery-new-security-scan/) (Información sobre seguridad de la Galería de PowerShell)
-
 [PowerShell The Blue Team, discusses Deep Script block logging, Protected Event Logging, Antimalware Scan Interface, Secure Code Generation APIs](https://blogs.msdn.microsoft.com/powershell/2015/06/09/powershell-the-blue-team/) (Blue Team de PowerShell analiza el registro de bloques Deep Script, el registro de eventos protegido, la interfaz de examen antimalware y las API de generación de código seguro)
 
 [Para Windows 10, hay una API para una interfaz de examen antimalware](https://cloudblogs.microsoft.com/microsoftsecure/2015/06/09/windows-10-to-offer-application-developers-new-malware-defenses/?source=mmpc)
@@ -60,12 +58,12 @@ Pasar parámetros es una manera de disponer de flexibilidad con los scripts y de
 
 - Permitir únicamente el uso de parámetros predefinidos.
 - Usar la característica de expresión regular para validar los parámetros que se permiten.
-    - Ejemplo: Si solo se permite un intervalo determinado de valores, use una expresión regular para comprobar únicamente los caracteres o valores que pueden formar el intervalo.
+    - Ejemplo: si solo se permite un intervalo determinado de valores, use una expresión regular para comprobar únicamente los caracteres o valores que pueden formar el intervalo.
     - La validación de parámetros puede ayudar a evitar que los usuarios intenten usar determinados caracteres que se pueden escapar, como las comillas. Tenga en cuenta que puede haber varios tipos de comillas, por lo que el uso de expresiones regulares para validar los caracteres que se han elegido como permitidos a menudo es más fácil que intentar definir todas las entradas que no se permiten.
 - Aprovechar el módulo de PowerShell ["injection hunter"](https://www.powershellgallery.com/packages/InjectionHunter/1.0.0) (cazador de inserciones) de la Galería de PowerShell.
     - Puede haber falsos positivos, por lo que cuando algo se marque como sospechoso, busque la intención para determinar si se trata de un problema real o no. 
 - Microsoft Visual Studio tiene un analizador de scripts, que puede ayudar con la comprobación de la sintaxis de PowerShell.
-- En este vídeo, titulado “DEF CON 25 - Lee Holmes - Get $pwned: Attacking Battle Hardened Windows Server” (atacar una instancia de Windows Server preparada para la batalla), se proporciona información general sobre los tipos de problemas para los que puede protegerse (especialmente, la sección de 12:20 a 17:50):     <iframe width="560" height="315" src="https://www.youtube.com/embed/ahxMOAAani8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+- En este vídeo titulado "DEF CON 25 - Lee Holmes - Get $pwnd: Attacking Battle Hardened Windows Server" (DEF CON 25: Lee Holmes - Get $pwnd: ataques a Windows Server, curtido en mil batallas), se proporciona información general de los tipos de problemas contra los que se puede proteger (especialmente la sección de 12:20 a 17:50):     <iframe width="560" height="315" src="https://www.youtube.com/embed/ahxMOAAani8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## <a name="environment-recommendations"></a>Recomendaciones de entorno
 Recomendaciones generales para los administradores de PowerShell.

@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9ef05ac5a931addb5dd5a8dc7d1b04bd4d50e1c
-ms.sourcegitcommit: 417e3834a42b415a8e129327dd3c15cc0c7ec5a2
+ms.openlocfilehash: 07e69561580a22128cf9a5b7b97f33e10cbb0456
+ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65443117"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66716033"
 ---
 # <a name="capabilities-in-technical-preview-1805-for-system-center-configuration-manager"></a>Funcionalidades de Technical Preview 1805 para System Center Configuration Manager
 
@@ -71,12 +71,12 @@ Siga las instrucciones para crear una implementación por fases donde puede conf
         - **Porcentaje de éxito de la implementación**: especifique el porcentaje de dispositivos que completan correctamente la implementación para los criterios de éxito de la fase anterior.  
 
     - Condiciones para comenzar esta fase de implementación una vez que la anterior se complete correctamente  
-        - **Iniciar automáticamente esta fase después de un período de aplazamiento (en días)**: elija el número de días que se esperará antes de comenzar la siguiente fase después del éxito de la anterior. 
+        - **Iniciar automáticamente esta fase después de un período de aplazamiento (en días)** : elija el número de días que se esperará antes de comenzar la siguiente fase después del éxito de la anterior. 
         - **Empezar esta fase de la implementación manualmente**: no inicie esta fase automáticamente después de completar correctamente la primera.  
 
     - Una vez que un dispositivo se establece como destino, instalar el software
         - **Lo antes posible**: establece la fecha límite para la instalación en el dispositivo en cuanto el dispositivo se selecciona.
-        - **Hora límite (relativa a la hora a la que se destina el dispositivo)**: establece la fecha límite para la instalación en un número determinado de días después de que se seleccione el dispositivo.  
+        - **Hora límite (relativa a la hora a la que se destina el dispositivo)** : establece la fecha límite para la instalación en un número determinado de días después de que se seleccione el dispositivo.  
      
 7. Complete el asistente Configuración de fase.
 
@@ -175,7 +175,7 @@ Para más información sobre Windows LEDBAT, consulte la entrada de blog [New tr
 
 
 ### <a name="try-it-out"></a>Haga la prueba
- Intente completar las tareas. Y, luego, envíenos sus [comentarios](#bkmk_feedback) para que sepamos cómo le ha ido.
+ Intente completar las tareas. Y, luego, envíenos sus [comentarios](capabilities-in-technical-preview-1804.md#bkmk_feedback) para que sepamos cómo le ha ido.
 
 1. En la consola de Configuration Manager, vaya al área de trabajo **Administración**. Seleccione el nodo **Puntos de distribución**. Seleccione el punto de distribución de destino y haga clic en **Propiedades** en la cinta.  
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e8ebea21b735e6b93d73bf6ff5eb842243ef42d
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: fd2e95a82ab01c760ea14158f164e930a77db894
+ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56121869"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66748142"
 ---
 # <a name="how-to-use-task-sequence-variables-in-configuration-manager"></a>Uso de variables en una secuencia de tareas en Configuration Manager
 
@@ -54,7 +54,7 @@ ms.locfileid: "56121869"
 
  Las variables de acción de secuencia de tareas especifican los valores de configuración que utiliza un único paso de una secuencia de tareas. De forma predeterminada, el paso inicializa su configuración antes de ejecutarse. Esta configuración solo está disponible mientras se está ejecutando el paso asociado de la secuencia de tareas. La secuencia de tareas agrega el valor de la variable de acción al entorno antes de ejecutar el paso. Luego, quita el valor del entorno después de que se ejecuta el paso.
 
- Por ejemplo, agrega el paso **Ejecutar línea de comandos** a una secuencia de tareas. Este paso incluye un propiedad **Iniciar en**. La secuencia de tareas almacena un valor predeterminado para esta propiedad como variable **WorkingDirectory**. La secuencia de tareas inicializa este valor antes de ejecutar el paso **Ejecutar línea de comandos**. Mientras se ejecuta este paso, acceda al valor de propiedad **Iniciar en** desde el valor **WorkingDirectory**. Una vez completado el paso (etapa), la secuencia de tareas quita el valor de la variable **WorkingDirectory** del entorno. Si la secuencia de tareas incluye otro paso **Ejecutar línea de comandos**, inicializa una nueva variable **WorkingDirectory**. En ese momento, la secuencia de tareas establece la variable como el valor inicial para el paso actual. Para obtener más información, consulte [WorkingDirectory](using-task-sequence-variables.md#WorkingDirectory).  
+ Por ejemplo, agrega el paso **Ejecutar línea de comandos** a una secuencia de tareas. Este paso incluye un propiedad **Iniciar en**. La secuencia de tareas almacena un valor predeterminado para esta propiedad como variable **WorkingDirectory**. La secuencia de tareas inicializa este valor antes de ejecutar el paso **Ejecutar línea de comandos**. Mientras se ejecuta este paso, acceda al valor de propiedad **Iniciar en** desde el valor **WorkingDirectory**. Una vez completado el paso (etapa), la secuencia de tareas quita el valor de la variable **WorkingDirectory** del entorno. Si la secuencia de tareas incluye otro paso **Ejecutar línea de comandos**, inicializa una nueva variable **WorkingDirectory**. En ese momento, la secuencia de tareas establece la variable como el valor inicial para el paso actual. Para obtener más información, consulte [WorkingDirectory](/sccm/osd/understand/task-sequence-variables#WorkingDirectory).  
 
  El valor *predeterminado* de una variable de acción está presente cuando se ejecuta el paso. Si establece un *nuevo* valor, estará disponible para varios pasos de la secuencia de tareas. Si reemplaza un valor predeterminado, el nuevo valor permanece en el entorno. Este nuevo valor reemplaza al valor predeterminado para otros pasos en la secuencia de tareas. Por ejemplo, agregue un paso **Configurar variable de secuencia de tareas** como primer paso de la secuencia de tareas. Este paso establece la variable **WorkingDirectory** en `C:\`. Cualquier paso de **Ejecutar línea de comandos** de la secuencia de tareas usa el nuevo valor de directorio inicial.  
 
@@ -226,11 +226,11 @@ ms.locfileid: "56121869"
 
  3. En el cuadro de diálogo **Variable de secuencia de tareas**, especifique la siguiente configuración:  
 
-    - **Variable**: nombre de la variable. Por ejemplo, `_SMSTSInWinPE`.  
+    - **Variable**: el nombre de la variable. Por ejemplo, `_SMSTSInWinPE`.  
 
-    - **Condición**: condición para evaluar el valor variable. Por ejemplo, **igual a**.  
+    - **Condición**: la condición para evaluar el valor de la variable. Por ejemplo, **igual a**.  
 
-    - **Valor**: valor de la variable que se va a comprobar. Por ejemplo, `false`.  
+    - **Valor**: el valor de la variable que se va a comprobar. Por ejemplo, `false`.  
 
 
  Los tres ejemplos anteriores conforman en conjunto una condición para comprobar si la secuencia de tareas se está ejecutando desde una imagen de arranque de Windows PE: 

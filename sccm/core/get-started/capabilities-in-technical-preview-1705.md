@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44ffc6aa554e30ef96dbe09409ee5360d0ed236d
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 33055f0962ef1220d41a2c8ee463cb2380ff60db
+ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56129857"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66715954"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-system-center-configuration-manager"></a>Funcionalidades de Technical Preview 1705 para System Center Configuration Manager
 
@@ -135,10 +135,6 @@ Antes de usar una réplica asincrónica para recuperar la base de datos de sitio
 Para detener el sitio, puede usar la [herramienta de mantenimiento de jerarquía](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe) si desea detener servicios clave en el servidor del sitio. Use la línea de comandos: **Preinst.exe /stopsite**   
 
 Detener el sitio equivale a detener el servicio Administrador de componentes del sitio (sitecomp) seguido por el servicio SMS_Executive en el servidor del sitio.
-
-> [!TIP]  
-> Si usa una réplica pasiva principal (introducida en esta versión preliminar técnica como [alta disponibilidad del rol de servidor de sitio](#site-server-role-high-availability)), no será necesario detenerla. Solo debe detener el sitio principal activo.
-
 
 
 ## <a name="improved-user-notifications-for-office-365-updates"></a>Mejora en las notificaciones de usuario para las actualizaciones de Office 365
