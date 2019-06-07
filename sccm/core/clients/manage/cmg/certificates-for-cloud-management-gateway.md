@@ -10,12 +10,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69c5f446c465655adb1e9fee1b891a3152af47e9
-ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
+ms.openlocfilehash: 9368bedd80171077767ead54763abede2381c909
+ms.sourcegitcommit: bfb8a17f60dcb9905e739045a5141ae45613fa2c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58197102"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198451"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Certificados para Cloud Management Gateway
 
@@ -59,7 +59,7 @@ Los certificados para Cloud Management Gateway admiten las siguientes configurac
 
 Este certificado se proporciona al crear la instancia de CMG en la consola de Configuration Manager.
 
-CMG crea un servicio HTTPS al que se conectan los clientes basados en Internet. El servidor requiere un certificado de autenticación de servidor para crear el canal seguro. Puede adquirir un certificado para este fin de un proveedor público o emitirlo desde su propia infraestructura de clave pública (PKI). Para obtener más información, vea [Certificado raíz de confianza de CMG para clientes](#cmg-trusted-root-certificate-to-clients).
+CMG crea un servicio HTTPS al que se conectan los clientes basados en Internet. El servidor requiere un certificado de autenticación de servidor para crear el canal seguro. Puede adquirir un certificado para este fin de un proveedor público o emitirlo desde su propia infraestructura de clave pública (PKI). Para obtener más información, vea [Certificado raíz de confianza de CMG para clientes](#bkmk_cmgroot).
 
  > [!TIP]
  > Este certificado requiere un nombre único global para identificar el servicio de Azure. Antes de solicitar un certificado, confirme que el nombre de dominio de Azure deseado sea único. Por ejemplo, *GraniteFalls.CloudApp.Net*. Inicie sesión en [Microsoft Azure Portal](https://portal.azure.com). Seleccione **Crear un recurso**, elija la categoría **Proceso** y seleccione **Servicio en la nube**. En el campo **Nombre DNS**, escriba el prefijo deseado, por ejemplo, *GraniteFalls*. La interfaz mostrará si el nombre de dominio está disponible o si ya está en uso por otro servicio. No cree el servicio en el portal, simplemente use este proceso para comprobar si el nombre está disponible. 
@@ -193,9 +193,9 @@ Después de emitir un certificado de autenticación de cliente a un equipo, siga
 
     c. Seleccione el certificado siguiente en la cadena y seleccione **Ver certificado**.  
 
-6.  En este nuevo cuadro de diálogo de certificado, vaya a la pestaña **Detalles**. Seleccione **Copiar en archivo…**.  
+6.  En este nuevo cuadro de diálogo de certificado, vaya a la pestaña **Detalles**. Seleccione **Copiar en archivo…** .  
 
-7.  Complete el Asistente para exportar certificados con el formato de certificado predeterminado, **DER binario codificado X.509 (.CER)**. Anote el nombre y la ubicación del certificado exportado.  
+7.  Complete el Asistente para exportar certificados con el formato de certificado predeterminado, **DER binario codificado X.509 (.CER)** . Anote el nombre y la ubicación del certificado exportado.  
 
 8. Exporte todos los certificados de la ruta de acceso de certificación del certificado de autenticación del cliente original. Tome nota de qué certificados exportados son entidades de certificación intermedias y cuáles son entidades de certificación raíz de confianza.  
 

@@ -1,7 +1,7 @@
 ---
 title: Asistente para la instalación
 titleSuffix: Configuration Manager
-ms.date: 03/07/2019
+ms.date: 05/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 92c51158412b8bc9737c4851fc43dc2a7776488b
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: e69dbd246e9989494db95cfe5996862c7772822b
+ms.sourcegitcommit: bfb8a17f60dcb9905e739045a5141ae45613fa2c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65501252"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198495"
 ---
 # <a name="use-the-setup-wizard-to-install-configuration-manager-sites"></a>Use el Asistente para instalación si quiere instalar sitios de Configuration Manager.
 
@@ -117,6 +117,13 @@ Si va a instalar un sitio de administración central como parte de un escenario 
     - **Nombre de sitio**: todos los sitios requieren este nombre descriptivo, que ayuda a identificar el sitio.  
 
     - **Carpeta de instalación**: esta es la ruta a la carpeta de instalación de Configuration Manager. No se puede cambiar la ubicación después de instalar el sitio. La ruta de acceso no puede contener caracteres Unicode ni espacios finales.  
+
+        > [!NOTE]  
+        > Considere si quiere usar la carpeta de instalación predeterminada. Si usa la partición del SO predeterminada en un entorno de producción, es posible que experimente los problemas siguientes en el futuro:  
+        >
+        > - Si Configuration Manager usa el espacio en disco disponible adicional en la partición del SO, ni Windows ni Configuration Manager funcionarán correctamente. Si instala Configuration Manager en otra partición, el consumo del disco no afectará al sistema operativo.
+        > - El rendimiento de Configuration Manager es mejor con un disco rápido. Algunos diseños de servidor no optimizan el disco del SO para mejorar la velocidad.
+        > - Puede mantener, restaurar o reinstalar el sistema operativo sin afectar la instalación de Configuration Manager.  
 
 11. En la página **Instalación del sitio**, use la opción que coincida con su escenario:  
 
@@ -369,9 +376,9 @@ Use la consola de Configuration Manager para instalar un sitio secundario.
 
     Puede configurar hasta dos unidades de disco para la biblioteca de contenido y dos unidades de disco para el recurso compartido de paquete. En cambio, Configuration Manager puede usar otras unidades cuando las dos primeras alcancen la reserva de espacio de unidad configurada. La página **Configuración de unidad** le permite configurar la prioridad de las unidades de disco y la cantidad de espacio libre en disco que debe quedar en cada unidad de disco.  
 
-    - **Reserva de espacio de unidad (MB)**: el valor que se configura en esta opción determina la cantidad de espacio libre de una unidad antes de que Configuration Manager elija una unidad diferente y continúe con el proceso de copia en esa unidad. Los archivos de contenido pueden ocupar varias unidades.  
+    - **Reserva de espacio de unidad (MB)** : el valor que se configura en esta opción determina la cantidad de espacio libre de una unidad antes de que Configuration Manager elija una unidad diferente y continúe con el proceso de copia en esa unidad. Los archivos de contenido pueden ocupar varias unidades.  
 
-    - **Ubicaciones de contenido**: especifique las ubicaciones de contenido de la biblioteca de contenido y el recurso compartido de paquete. Configuration Manager copia el contenido en la ubicación primaria de contenido hasta que la cantidad de espacio libre alcance el valor especificado en **Reserva de espacio de unidad (MB)**.  
+    - **Ubicaciones de contenido**: especifique las ubicaciones de contenido de la biblioteca de contenido y el recurso compartido de paquete. Configuration Manager copia el contenido en la ubicación primaria de contenido hasta que la cantidad de espacio libre alcance el valor especificado en **Reserva de espacio de unidad (MB)** .  
 
     De forma predeterminada, las ubicaciones de contenido se establecen como **Automático**. La ubicación del contenido principal se establece en la unidad de disco que tenga más espacio en disco en el momento de efectuar la instalación. La ubicación secundaria se establece en la unidad de disco que tenga el máximo espacio libre en disco después de la unidad principal. Cuando las unidades primaria y secundaria alcanzan el valor de la reserva de espacio de unidad, Configuration Manager selecciona otra unidad que esté disponible y que tenga la mayor cantidad de espacio disponible en disco, y continúa con el proceso de copia.  
 

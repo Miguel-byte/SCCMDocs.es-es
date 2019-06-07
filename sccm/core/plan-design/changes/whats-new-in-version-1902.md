@@ -2,7 +2,7 @@
 title: Novedades de la versión 1902
 titleSuffix: Configuration Manager
 description: Obtenga detalles sobre los cambios y las nuevas funcionalidades incorporados en la versión 1902 de la rama actual de Configuration Manager.
-ms.date: 05/13/2019
+ms.date: 05/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c88cdc52442463bb3788c80c45d6c074dd900f5
-ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
+ms.openlocfilehash: 6b2468dc5f4cf7a9e1a715b3ec8e8a1d912a12b0
+ms.sourcegitcommit: 18a94eb78043cb565b05cd0e9469b939b29cccf0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65673426"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354872"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Novedades de la versión 1902 de la rama actual de Configuration Manager
 
@@ -74,12 +74,14 @@ La característica de conclusiones de administración tiene las siguientes regla
 
 
 ### <a name="improvement-to-enhanced-http"></a>Optimización de HTTP mejorado
+
 <!--3798957-->
-Ahora puede habilitar HTTP mejorado por sitio primario o para el sitio de administración central. 
 
-En las propiedades del sitio de administración central, seleccione la opción **Usar los certificados generados por Configuration Manager para sistemas de sitios HTTP**. Este valor de configuración solo se aplica a los roles de sistema de sitio del sitio de administración central. No es una configuración global para la jerarquía. 
+***[Actualizado]*** Ahora puede habilitar HTTP mejorado por sitio primario o para el sitio de administración central.
 
-<!-- For more information, see [enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http). -->
+En las propiedades del sitio de administración central, seleccione la opción **Usar los certificados generados por Configuration Manager para sistemas de sitios HTTP**. Este valor de configuración solo se aplica a los roles de sistema de sitio del sitio de administración central. No es una configuración global para la jerarquía.
+
+Para más información, vea [HTTP mejorado](/sccm/core/plan-design/hierarchy/enhanced-http).
 
 
 ### <a name="improvement-to-setup-prerequisites"></a>Mejoras de los requisitos previos del programa de instalación
@@ -136,33 +138,38 @@ Ahora puede **editar** o **copiar** un script de PowerShell existente que se usa
 
 ## <a name="bkmk_content"></a> Administración de contenido
 
-### <a name="distribution-point-maintenance-mode"></a>Modo de mantenimiento del punto de distribución 
-<!--3555754-->
-Ahora puede establecer un punto de distribución en modo de mantenimiento. Habilite el modo de mantenimiento cuando vaya a instalar actualizaciones de software o realizar cambios de hardware en el servidor.
+### <a name="distribution-point-maintenance-mode"></a>Modo de mantenimiento del punto de distribución
 
-Mientras el punto de distribución está en modo de mantenimiento, presenta estos comportamientos: 
+<!--3555754-->
+
+***[Actualizado]*** Ahora puede establecer un punto de distribución en modo de mantenimiento. Habilite el modo de mantenimiento cuando vaya a instalar actualizaciones de software o realizar cambios de hardware en el servidor.
+
+Mientras el punto de distribución está en modo de mantenimiento, presenta estos comportamientos:
 
 - El sitio no distribuye contenido a este punto de distribución.  
 
-- Los puntos de administración no devuelvan la ubicación de este punto de distribución a los clientes. 
+- Los puntos de administración no devuelvan la ubicación de este punto de distribución a los clientes.
 
-- Cuando se actualiza el sitio, todavía se actualiza un punto de distribución en modo de mantenimiento. 
+- Cuando se actualiza el sitio, todavía se actualiza un punto de distribución en modo de mantenimiento.
 
 - Las propiedades del punto de distribución son de solo lectura. Por ejemplo, no se puede cambiar el certificado ni agregar grupos de límites.  
 
-- Cualquier tarea programada, como la validación de contenido, se sigue ejecutando en la misma programación. 
+- Cualquier tarea programada, como la validación de contenido, se sigue ejecutando en la misma programación.
 
-<!-- For more information, see [Maintenance mode](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_maint) -->
+Para más información sobre esta característica, consulte [Modo de mantenimiento](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_maint).
+
+Para más información sobre cómo automatizar este proceso con el SDK de Configuration Manager, consulte artículo sobre el [método SetDPMaintenanceMode en la clase SMS_DistributionPointInfo](/sccm/develop/reference/core/servers/configure/setdpmaintenancemode-method-in-class-sms-distributionpointinfo).
 
 
 
 ## <a name="bkmk_client"></a> Administración de clientes
 
 ### <a name="client-provisioning-mode-timeout"></a>Tiempo de espera del modo de aprovisionamiento de cliente
-<!--3197824-->
-La secuencia de tareas establece una marca de tiempo cuando coloca el cliente en modo de aprovisionamiento. Un cliente en modo de aprovisionamiento comprueba cada 60 minutos la duración de tiempo transcurrido desde la marca de tiempo. Si ha estado en modo de aprovisionamiento durante más de 48 horas, el cliente sale del modo de aprovisionamiento automáticamente y reinicia el proceso. 
 
-<!-- For more information, see ... -->
+<!--3197824-->
+***[Actualizado]*** La secuencia de tareas establece una marca de tiempo cuando coloca el cliente en modo de aprovisionamiento. Un cliente en modo de aprovisionamiento comprueba cada 60 minutos la duración de tiempo transcurrido desde la marca de tiempo. Si ha estado en modo de aprovisionamiento durante más de 48 horas, el cliente sale del modo de aprovisionamiento automáticamente y reinicia el proceso.
+
+Para más información, consulte [Modo de aprovisionamiento](/sccm/osd/understand/provisioning-mode).
 
 ### <a name="view-first-screen-only-during-remote-control"></a>Visualización de la primera pantalla solo durante el control remoto
 <!--3231732-->
@@ -173,7 +180,7 @@ Para obtener más información, vea [Cómo administrar de forma remota un equipo
 
 ### <a name="specify-a-custom-port-for-peer-wakeup"></a>Especificación de un puerto personalizado para reactivación del mismo nivel
 <!--3605925-->
-***[Actualizado]*** Ahora puede especificar un número de puerto personalizado para el proxy de reactivación. En la configuración de cliente, en el grupo **Administración de energía**, establezca la configuración de **Número de puerto de Wake On LAN (UDP)**.  
+***[Actualizado]*** Ahora puede especificar un número de puerto personalizado para el proxy de reactivación. En la configuración de cliente, en el grupo **Administración de energía**, establezca la configuración de **Número de puerto de Wake On LAN (UDP)** .  
 
 Para obtener más información, vea [Cómo configurar Wake on LAN](/sccm/core/clients/deploy/configure-wake-on-lan).
 
@@ -191,10 +198,11 @@ Para obtener más información, vea [Cómo configurar Wake on LAN](/sccm/core/cl
 ## <a name="bkmk_app"></a> Administración de aplicaciones
 
 ### <a name="improvements-to-application-approvals-via-email"></a>Mejoras de las aprobaciones de aplicación por correo electrónico
-<!--3594063-->
-En esta versión se incluyen mejoras en la característica para recibir notificaciones por correo electrónico para las solicitudes de aplicación. Los usuarios siempre podían agregar un comentario a la solicitud desde el Centro de software. Este comentario se muestra en la solicitud de aplicación en la consola de Configuration Manager. Ahora el comentario también se muestra en el correo electrónico. La inclusión de este comentario en el correo electrónico ayuda a los aprobadores a tomar una decisión más acertada para aprobar o denegar la solicitud.
 
-<!-- For more information, see [Email notifications](/sccm/apps/deploy-use/app-approval#bkmk_email-approve). -->
+<!--3594063-->
+***[Actualizado]*** En esta versión se incluyen mejoras en la característica para recibir notificaciones por correo electrónico para las solicitudes de aplicación. Los usuarios siempre podían agregar un comentario a la solicitud desde el Centro de software. Este comentario se muestra en la solicitud de aplicación en la consola de Configuration Manager. Ahora el comentario también se muestra en el correo electrónico. La inclusión de este comentario en el correo electrónico ayuda a los aprobadores a tomar una decisión más acertada para aprobar o denegar la solicitud.
+
+Para más información, consulte [Notificaciones por correo electrónico](/sccm/apps/deploy-use/app-approval#bkmk_email-approve).
 
 
 ### <a name="improvements-to-package-conversion-manager"></a>Mejoras del Administrador de conversión de paquetes
@@ -245,25 +253,27 @@ Al crear medios de secuencia de tareas, Configuration Manager no agrega un archi
 
 
 ### <a name="import-a-single-index-of-an-os-image"></a>Importación de un índice único de una imagen de sistema operativo
+
 <!--3719699-->
-Al importar un archivo de imagen de Windows (WIM) en Configuration Manager, ahora puede especificar que se importe automáticamente un índice único en lugar de todos los índices de la imagen en el archivo. Esta opción ofrece estas ventajas:
+***[Actualizado]*** Al importar un archivo de imagen de Windows (WIM) en Configuration Manager, ahora puede especificar que se importe automáticamente un índice único en lugar de todos los índices de la imagen en el archivo. Esta opción ofrece estas ventajas:
 
 - Archivo de imagen más pequeño  
 - Instalación sin conexión más rápida  
-- Optimización del mantenimiento de imágenes, para un archivo de imagen más pequeño tras una instalación sin conexión 
+- Optimización del mantenimiento de imágenes, para un archivo de imagen más pequeño tras una instalación sin conexión
 
 Al importar una imagen del sistema operativo, seleccione la opción **Extraer un índice de imágenes específico del archivo WIM especificado**. Después, seleccione el índice de imagen en la lista.  
 
-<!-- For more information, see [Add an OS image](/sccm/osd/get-started/manage-operating-system-images#BKMK_AddOSImages). -->
+Para más información, consulte [Agregar una imagen de sistema operativo](/sccm/osd/get-started/manage-operating-system-images#BKMK_AddOSImages).
 
 
 ### <a name="optimized-image-servicing"></a>Servicio de imágenes optimizado
+
 <!--3555951-->
-Al aplicar actualizaciones de software a una imagen de sistema operativo, puede usar una nueva opción para optimizar los resultados que consiste en quitar cualquier actualización reemplazada. La optimización de la instalación sin conexión solo se aplica a imágenes con un índice único. 
+***[Actualizado]*** Al aplicar actualizaciones de software a una imagen de sistema operativo, puede usar una nueva opción para optimizar los resultados que consiste en quitar cualquier actualización reemplazada. La optimización de la instalación sin conexión solo se aplica a imágenes con un índice único.
 
-Cuando se cree una programación para actualizar una imagen de sistema operativo, seleccione la opción **Quitar las actualizaciones reemplazadas después de actualizar la imagen**. 
+Cuando se cree una programación para actualizar una imagen de sistema operativo, seleccione la opción **Quitar las actualizaciones reemplazadas después de actualizar la imagen**.
 
-<!-- For more information, see [Apply software updates to an image](/sccm/osd/get-started/manage-operating-system-images#BKMK_OSImagesApplyUpdates).  -->
+Para más información, vea [Aplicar las actualizaciones de software a una imagen](/sccm/osd/get-started/manage-operating-system-images#bkmk_resetbase).
 
 
 ### <a name="improvements-to-run-powershell-script-task-sequence-step"></a>Mejoras del paso de secuencia de tareas Ejecutar script de PowerShell
@@ -304,7 +314,7 @@ Para más información, vea [Ejecutar script de PowerShell](/sccm/osd/understand
 
 - Al establecer la variable de secuencia de tareas **OSDDoNotLogCommand** en True, ahora también se oculta la línea de comandos del paso Ejecutar línea de comandos en el archivo de registro. Antes solo se enmascaraba el nombre del programa en el paso Instalar paquete en el archivo smsts.log.<!--3654172-->  
 
-- Cuando se habilita un respondedor PXE en un punto de distribución sin Servicio de implementación de Windows, ahora puede ser en el mismo servidor que el servicio DHCP. <!--3734270-->  <!-- For more information, see ... -->
+- Cuando se habilita un respondedor PXE en un punto de distribución sin Servicio de implementación de Windows, ahora puede ser en el mismo servidor que el servicio DHCP. <!--3734270--> Para más información, consulte [Configurar al menos un punto de distribución para aceptar solicitudes del entorno PXE](/sccm/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network#BKMK_Configure).
 
 
 

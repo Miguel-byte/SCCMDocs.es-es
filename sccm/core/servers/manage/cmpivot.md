@@ -2,7 +2,7 @@
 title: CMPivot para datos en tiempo real
 titleSuffix: Configuration Manager
 description: Obtenga información sobre cómo usar CMPivot en Configuration Manager para realizar consultas en clientes en tiempo real.
-ms.date: 04/04/2019
+ms.date: 05/24/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd914030afb8490b11666fc953d846e03090b834
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: 975768c5bfaf239c1f8cd342c988e06dac5d1269
+ms.sourcegitcommit: abfc9e1b3945637fa93ca8d3a11519493a5d5391
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802655"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66264561"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>CMPivot para datos en tiempo real en Configuration Manager
 
@@ -86,7 +86,7 @@ Los siguientes componentes son necesarios para usar CMPivot:
 
      - Haga clic en una de las opciones de **Entidades** para agregarla a la cadena de consulta.  
 
-     - Los vínculos de **Table Operators** (Operadores de tabla), **Aggregation Functions** (Funciones de agregación) y **Funciones escalares** abren la documentación de referencia del lenguaje en el explorador web. CMPivot utiliza el mismo lenguaje de consulta que [Azure Log Analytics](https://docs.microsoft.com/azure/kusto/query/).  
+     - Los vínculos de **Table Operators** (Operadores de tabla), **Aggregation Functions** (Funciones de agregación) y **Funciones escalares** abren la documentación de referencia del lenguaje en el explorador web. CMPivot usa el [lenguaje de consulta de Kusto (KQL)](https://docs.microsoft.com/azure/kusto/query/).  
 
 3. Mantenga la ventana CMPivot abierta para ver los resultados de los clientes. Cuando cierre la ventana CMPivot, la sesión se completará.  
 
@@ -121,7 +121,7 @@ La ventana CMPivot contiene los elementos siguientes:
 
 5. El panel de consulta es donde se crea o se escribe una consulta que se ejecuta en los clientes de la colección.  
 
-    - CMPivot utiliza un subconjunto del mismo lenguaje de consulta que [Azure Log Analytics](https://docs.microsoft.com/azure/kusto/query/).  
+    - CMPivot usa un subconjunto del [lenguaje de consulta de Kusto (KQL)](https://docs.microsoft.com/azure/kusto/query/).  
 
     - Corte, copie o pegue contenido en el panel de consulta.  
 
@@ -202,7 +202,7 @@ Conforme aparezcan los resultados, haga clic con el botón derecho en la columna
 
 `Service | summarize dcount( Device ) by Name`
 
-En la fila del servicio **Explorador**, haga clic en el número de un hipervínculo en la columna **dcount_**. 
+En la fila del servicio **Explorador**, haga clic en el número de un hipervínculo en la columna **dcount_** . 
 
 `Service | where (Name == 'Browser') | summarize count() by Device`
 
@@ -260,10 +260,10 @@ A partir de la versión 1810 de Configuration Manager, CMPivot incluye las mejo
 
 ### <a name="bkmk_cmpivot-functions"></a> Funciones escalares
 CMPivot admite estas funciones escalares:
-- **ago()**: resta el intervalo de tiempo dado de la hora UTC actual.  
-- **datetime_diff()**: calcula la diferencia de calendario entre dos valores de fecha y hora.  
-- **now()**: devuelve la hora de reloj UTC actual.  
-- **bin()**: redondea valores a la baja a un número entero múltiplo del tamaño de una ubicación determinada.  
+- **ago()** : resta el intervalo de tiempo dado de la hora UTC actual.  
+- **datetime_diff()** : calcula la diferencia de calendario entre dos valores de fecha y hora.  
+- **now()** : devuelve la hora de reloj UTC actual.  
+- **bin()** : redondea valores a la baja a un número entero múltiplo del tamaño de una ubicación determinada.  
 
 > [!Note]  
 > El tipo de datos de fecha y hora representa un instante de tiempo, normalmente expresado como una fecha y hora del día. Los valores de tiempo se miden en unidades de 1 segundo. Siempre es un valor de fecha y hora en la zona horaria UTC. Siempre expresa literales de fecha y hora en formato ISO 8601, como por ejemplo, `yyyy-mm-dd HH:MM:ss`  
@@ -276,7 +276,7 @@ CMPivot admite estas funciones escalares:
 
 ### <a name="bkmk_cmpivot-charts"></a> Visualizaciones de representación
 
-CMPivot incluye ahora compatibilidad básica para [operador de representación](https://docs.microsoft.com/azure/kusto/query/renderoperator) de Log Analytics. Esta compatibilidad incluye estos tipos:  
+CMPivot ahora incluye compatibilidad básica para el [operador de representación](https://docs.microsoft.com/azure/kusto/query/renderoperator) de KQL. Esta compatibilidad incluye estos tipos:  
 - **barchart**: la primera columna es el eje X y puede ser texto, fecha y hora o un valor numérico. La segunda columna debe ser numérica y se muestra como una banda horizontal.  
 - **columnchart**: como barchart, con bandas verticales en lugar de bandas horizontales.  
 - **piechart**: la primera columna es el eje de color y la segunda columna es numérica.  
@@ -472,11 +472,11 @@ Una consulta agota el tiempo de espera después de una hora. Por ejemplo, una co
  - Scripts.log
  - StateMessage.log
 
-Para obtener más información, vea [Archivos de registro](/sccm/core/plan-design/hierarchy/log-files) y [Solución de problemas de CMPivot](/sccm/core/servers/manage/cmpivot-tsg.md).
+Para obtener más información, vea [Archivos de registro](/sccm/core/plan-design/hierarchy/log-files) y [Solución de problemas de CMPivot](/sccm/core/servers/manage/cmpivot-tsg).
 
 ## <a name="next-steps"></a>Pasos siguientes
  
-[Solución de problemas de CMPivot](/sccm/core/servers/manage/cmpivot-tsg.md)
+[Solución de problemas de CMPivot](/sccm/core/servers/manage/cmpivot-tsg)
 
 [Crear y ejecutar scripts de PowerShell](/sccm/apps/deploy-use/create-deploy-scripts)
 
