@@ -2,7 +2,7 @@
 title: Análisis de escritorio
 titleSuffix: Configuration Manager
 description: Información general sobre el servicio de análisis de escritorio integrado con Configuration Manager.
-ms.date: 06/04/2019
+ms.date: 06/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: overview
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bdeffb3b2d478e4984ef721655b78aee5c47c36f
-ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
+ms.openlocfilehash: 8dfa24f92ced6c69f90844e46dccf1df0e93f7a7
+ms.sourcegitcommit: 725e1bf7d3250c2b7b7be9da01135517428be7a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66716230"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821993"
 ---
 # <a name="what-is-desktop-analytics"></a>¿Qué es el análisis de escritorio?
 
@@ -80,7 +80,7 @@ Para utilizar el análisis de escritorio, asegúrese de que su entorno cumple lo
 
         - [**Propietario**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner), o [ **colaborador** ](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) y [ **Administrador de acceso de usuario** ](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) permisos en el suscripción para crear un área de trabajo en un grupo de recursos.  
 
-- Configuration Manager, versión 1810 con paquete acumulativo de actualizaciones 2 (4488598) o una versión posterior. Para obtener más información, consulte [actualizar Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
+- Configuration Manager, versión 1902 con paquete acumulativo de actualizaciones (4500571) o posterior. Para obtener más información, consulte [actualizar Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
 
     - **Administrador total** rol en Configuration Manager  
 
@@ -88,7 +88,7 @@ Para utilizar el análisis de escritorio, asegúrese de que su entorno cumple lo
 
     - Instale las actualizaciones más recientes. Para obtener más información, consulte [actualizar dispositivos](/sccm/desktop-analytics/enroll-devices#update-devices).  
 
-    - Los dispositivos también deben tener el cliente de Configuration Manager, versión 1810 con paquete acumulativo de actualizaciones 2 (4488598) o una versión posterior. Para obtener más información, consulte [actualizar Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
+    - Los dispositivos también deben tener el cliente de Configuration Manager, versión 1902 con paquete acumulativo de actualizaciones (4500571) o posterior. Para obtener más información, consulte [actualizar Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
 
     > [!Note]  
     > Análisis de escritorio no es compatible con las actualizaciones de canal de mantenimiento a largo plazo (LTSC) de Windows 10. Para obtener más información, consulte [Windows como una información general del servicio](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).

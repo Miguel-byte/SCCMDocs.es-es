@@ -2,7 +2,7 @@
 title: Solución de problemas de análisis de escritorio
 titleSuffix: Configuration Manager
 description: Detalles técnicos para ayudarle a solucionar problemas relacionados con el análisis de escritorio.
-ms.date: 06/05/2019
+ms.date: 06/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a1f54a2794b3a938366553c635e560ebe1adb320
-ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
+ms.openlocfilehash: 32e3d1185ff1f93a988074cdbc8dd7a14a4dcba8
+ms.sourcegitcommit: 725e1bf7d3250c2b7b7be9da01135517428be7a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66748125"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822100"
 ---
 # <a name="troubleshooting-desktop-analytics"></a>Solución de problemas de análisis de escritorio
 
@@ -95,7 +95,7 @@ Seleccione el nombre de categoría para quitar o agregarlo en el gráfico. Esta 
 
 El dispositivo tiene los siguientes atributos:
 
-- Una versión 1810 o posterior del cliente de Configuration Manager  
+- Una versión 1902 o posterior del cliente de Configuration Manager  
 - No hay ningún error de configuración  
 - Escritorio Analytics recibe datos de diagnóstico completados de este dispositivo en los últimos 28 días  
 - Escritorio Analytics tiene un inventario completo de la configuración del dispositivo y las aplicaciones instaladas  
@@ -118,7 +118,7 @@ Asegúrese de que el dispositivo es capaz de comunicarse con el servicio. Para o
 
 #### <a name="missing-prerequisites"></a>Requisitos previos que faltan
 
-El cliente de Configuration Manager no es de al menos la versión 1810 (5.0.8740).
+El cliente de Configuration Manager no es de al menos la versión 1902 (5.0.8790).
 
 Actualice al cliente a la versión más reciente. Considere la posibilidad de habilitar la actualización automática del cliente para el sitio de Configuration Manager. Para obtener más información, vea [Actualizar clientes](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).  
 
@@ -339,7 +339,7 @@ Compruebe los permisos de esta clave del registro. Asegúrese de que la cuenta s
 
 Hay un identificador distinto para el dispositivo. Esta clave del registro está usando la directiva de grupo. Tiene prioridad sobre el identificador proporcionado por el Administrador de configuración.  
 
-Para ver el identificador comercial en el portal de análisis de escritorio, use el procedimiento siguiente:
+<a name="bkmk_ViewCommercialID"></a> Para ver el identificador comercial en el portal de análisis de escritorio, use el procedimiento siguiente:
 
 1. Vaya al portal de Analytics de escritorio y seleccione **servicios conectados** en el grupo de configuración Global.  
 
@@ -348,7 +348,7 @@ Para ver el identificador comercial en el portal de análisis de escritorio, use
 ![Captura de pantalla de identificador comercial en el portal de análisis de escritorio](media/commercial-id.png)
 
 > [!Important]  
-> Solo **clave de Id. nuevo Get** cuando no se puede usar actual. Si regenera el identificador comercial, implementar el nuevo identificador en los dispositivos. Este proceso podría provocar la pérdida de datos de diagnóstico durante la transición.  
+> Solo **clave de Id. nuevo Get** cuando no se puede usar actual. Si regenera el identificador comercial, [volver a inscribir sus dispositivos con el nuevo identificador](/sccm/desktop-analytics/enroll-devices#device-enrollment). Este proceso podría provocar la pérdida de datos de diagnóstico durante la transición.  
 
 #### <a name="windows-commercial-data-opt-in"></a>Participación datos comerciales en Windows
 
@@ -604,14 +604,18 @@ El portal muestra una notificación que agrega la asignación de roles.
 ## <a name="data-latency"></a>Latencia de datos
 
 <!-- 3846531 -->
-Datos en el portal de análisis de escritorio se actualizan diariamente. Esta actualización incluye cambios en los dispositivos recopilados de los datos de diagnóstico y los cambios realizados en la configuración. Por ejemplo, cuando cambia un recurso **actualizar decisión**, puede causar cambios en el estado de preparación de los dispositivos con ese recurso instalado.
+Cuando se configura por primera vez el análisis de escritorio, los informes de Configuration Manager y el portal de análisis de escritorio no pueden mostrar datos completos de inmediato. Puede tardar 2 y 3 días para los dispositivos activos enviar datos de diagnóstico para el servicio de análisis de escritorio, el servicio para procesar los datos y, a continuación, sincronizar con el sitio de Configuration Manager.
 
-- **Los cambios del administrador** generalmente son procesadas por el servicio de análisis de escritorio en nueve horas. Por ejemplo, si realiza cambios a las 11:00 PM UTC, el portal debería reflejar dichos cambios antes de 08:00 A.M. UTC del día siguiente.
+Al sincronizar las recopilaciones de dispositivos de su jerarquía de Configuration Manager para el análisis de escritorio, puede tardar hasta 10 minutos para las colecciones que aparezca en el portal de análisis de escritorio.  De forma similar, cuando se crea un plan de implementación en escritorio Analytics, puede tardar hasta 10 minutos para las nuevas colecciones asociadas con el plan de implementación que aparezca en la jerarquía de Configuration Manager.  Las colecciones de la creación de los sitios primarios y el sitio de administración central se sincroniza con el análisis de escritorio.
 
-- **Cambios en los dispositivos** detectado UTC medianoche en la hora local por lo general se incluyen en la actualización diaria. Normalmente, hay otras 23 horas de latencia asociada con el procesamiento de cambios en los dispositivos en comparación con los cambios de administrador.
+En el portal de análisis de escritorio, existen dos tipos de datos: **Datos del administrador** y **datos de diagnóstico**:
 
-Si no ve los cambios que se actualiza dentro de estos marcos de tiempo, espere otra 24 horas para la próxima actualización diaria. Si ve retrasos más prolongados, compruebe el panel de estado del servicio. Si el servicio notifica un estado correcto, póngase en contacto con soporte técnico de Microsoft.
+- **Datos del administrador** hace referencia a los cambios que realice a la configuración de área de trabajo.  Por ejemplo, cuando cambia un recurso **actualizar decisión** o **importancia** va a cambiar los datos de administrador.  Estos cambios suelen tengan un efecto de interés, tal como puede modificar el estado de preparación de un dispositivo con el recurso en cuestión instalado.
 
-Cuando se configura por primera vez el análisis de escritorio, los gráficos en el portal de análisis de escritorio y de Configuration Manager no pueden mostrar datos completos. Puede tardar 2 y 3 días para los dispositivos activos enviar datos de diagnóstico para el servicio de análisis de escritorio, el servicio para procesar los datos y, a continuación, sincronizar con el sitio de Configuration Manager.
+- **Datos de diagnóstico** hace referencia a los metadatos del sistema que se cargan desde los dispositivos cliente a Microsoft.  Se trata de los datos que activa el análisis de escritorio e incluyen atributos tales como actualizan el estado de inventario de dispositivos y la seguridad y la característica.
 
-En una jerarquía de Configuration Manager, puede tardar 10 minutos para las nuevas colecciones que aparecerá para los planes de implementación. Las colecciones de la creación de los sitios primarios y el sitio de administración central se sincroniza con el análisis de escritorio.<!-- 3896921 -->
+De forma predeterminada, todos los datos en el portal es automáticamente para el análisis escritorio actualizan diariamente. Esta actualización incluye los cambios de datos de diagnóstico, así como los cambios realizados en la configuración (datos del administrador) y es generalmente visible en el portal de análisis de escritorio por 08:00 A.M. UTC cada día.
+
+Al realizar cambios en los datos de administrador, tiene la posibilidad de desencadenar una actualización y a petición de los datos de administrador en el área de trabajo abriendo el control flotante de moneda de datos y haga clic en "Aplicar cambios".  Este proceso normalmente tarda entre 15 y 60 minutos, dependiendo del tamaño del área de trabajo y el ámbito de los cambios que necesitan procesos.  Tenga en cuenta que solicita una petición de datos de actualización no dará como resultado de los cambios a los datos de diagnóstico.  Para más información sobre la solicitud de una actualización a petición, consulte nuestra página de preguntas más frecuentes.
+
+Si no ve los cambios que se actualiza dentro de los intervalos de tiempo indicados anteriormente, otro espere 24 horas para la próxima actualización diaria. Si ve retrasos más prolongados, compruebe el panel de estado del servicio. Si el servicio notifica un estado correcto, póngase en contacto con soporte técnico de Microsoft.<!-- 3896921 -->

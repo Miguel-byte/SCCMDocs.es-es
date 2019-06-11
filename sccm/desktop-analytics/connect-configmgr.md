@@ -2,7 +2,7 @@
 title: Conexión de Configuration Manager
 titleSuffix: Configuration Manager
 description: Guía de procedimientos para conectar Configuration Manager con análisis de escritorio.
-ms.date: 04/25/2019
+ms.date: 06/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 905ea779082387996858727ef8c50f1835b3d61c
-ms.sourcegitcommit: 65753c51fbf596f233fc75a5462ea4a44005c70b
+ms.openlocfilehash: 38391c5d922a33696dc10d761847e40c01e151cc
+ms.sourcegitcommit: 725e1bf7d3250c2b7b7be9da01135517428be7a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66463024"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822012"
 ---
 # <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>Cómo conectar Configuration Manager con análisis de escritorio
 
@@ -29,11 +29,11 @@ Análisis de escritorio está estrechamente integrado con Configuration Manager.
 
 ## <a name="bkmk_hotfix"></a> Actualizar el sitio
 
-En primer lugar, asegúrese de que el sitio de Configuration Manager se está ejecutando al menos la versión 1810. Para más información, vea [Instalar actualizaciones en consola para Configuration Manager](/sccm/core/servers/manage/install-in-console-updates).
+En primer lugar, asegúrese de que el sitio de Configuration Manager se está ejecutando al menos la versión 1902. Para más información, vea [Instalar actualizaciones en consola para Configuration Manager](/sccm/core/servers/manage/install-in-console-updates).
 
-También deberá instalar la versión 1810 actualización acumulativa 2 (4488598) para admitir la integración con análisis de escritorio. Para obtener más información sobre esta actualización, consulte [actualización acumulativa 2 de la rama actual de Configuration Manager, versión 1810](https://support.microsoft.com/help/4488598).
+También deberá instalar la versión 1902 acumulativo (4500571) para admitir la integración con análisis de escritorio. Para obtener más información sobre esta actualización, consulte [acumulativo de actualizaciones de la rama actual de Configuration Manager, versión 1902](https://support.microsoft.com/help/4500571).
 
-1. Actualice el sitio con el paquete acumulativo de actualizaciones para la versión 1810. Para más información, vea [Instalar actualizaciones en consola para Configuration Manager](/sccm/core/servers/manage/install-in-console-updates).  
+1. Actualice el sitio con el paquete acumulativo de actualizaciones para la versión 1902. Para más información, vea [Instalar actualizaciones en consola para Configuration Manager](/sccm/core/servers/manage/install-in-console-updates).  
 
 2. Actualice los clientes. Para simplificar el proceso, considere la posibilidad de usar la actualización automática del cliente. Para obtener más información, vea [Actualizar clientes](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).  
 
@@ -83,7 +83,7 @@ Utilice este procedimiento para conectar Configuration Manager para el análisis
 
 7. En el **datos de diagnóstico** página, configure las opciones siguientes:  
 
-    - **Id. comercial**: este valor se debería rellenar automáticamente con el identificador de. su organización Si no, asegúrese de que el servidor proxy está configurado para permitir que todo lo necesario [extremos](/sccm/desktop-analytics/enable-data-sharing#endpoints) antes de continuar. También puede recuperar el identificador comercial desde el **Connected Services** panel en el [portal de análisis de escritorio](https://aka.ms/m365aprod).  
+    - **Id. comercial**: este valor se debería rellenar automáticamente con el identificador de. su organización Si no, asegúrese de que el servidor proxy está configurado para permitir que todo lo necesario [extremos](/sccm/desktop-analytics/enable-data-sharing#endpoints) antes de continuar. También puede recuperar el identificador comercial manualmente desde el [portal de análisis de escritorio](/sccm/desktop-analytics/troubleshooting#bkmk_ViewCommercialID).  
 
     - **Nivel de datos de diagnóstico de Windows 10**: seleccione al menos **mejorado (limitado)**  
 

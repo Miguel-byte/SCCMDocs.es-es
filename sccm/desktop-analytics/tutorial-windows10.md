@@ -2,7 +2,7 @@
 title: 'Tutorial: implementar Windows 10'
 titleSuffix: Configuration Manager
 description: Un tutorial sobre el uso de escritorio de análisis y Configuration Manager para implementar Windows 10 en un grupo piloto.
-ms.date: 04/25/2019
+ms.date: 06/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: tutorial
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7eb322550c6d11426240736d3d0c6b9ff2c9764f
-ms.sourcegitcommit: abfc9e1b3945637fa93ca8d3a11519493a5d5391
+ms.openlocfilehash: 09259b62eba5a6cbd84b487f83f0fb26d7cbb7c1
+ms.sourcegitcommit: 725e1bf7d3250c2b7b7be9da01135517428be7a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66264555"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821960"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Tutorial: Implementación piloto de Windows 10
 
@@ -48,7 +48,7 @@ Antes de empezar este tutorial, asegúrese de que tiene los siguientes requisito
 
     Para obtener más información, consulte [requisitos previos de análisis de escritorio](/sccm/desktop-analytics/overview#prerequisites).
 
-- Configuration Manager, versión 1810 con paquete acumulativo de actualizaciones 2 (4488598) o posterior, con **Administrador total** rol  
+- Configuration Manager, versión 1902 con paquete acumulativo de actualizaciones (4500571) o posterior, con **Administrador total** rol  
 
 - Medios de instalación para la versión más reciente de Windows 10
 
@@ -58,7 +58,7 @@ Antes de empezar este tutorial, asegúrese de que tiene los siguientes requisito
 
     - La última actualización acumulativa de calidad de Windows 10  
 
-    - Administrador de configuración de la versión de cliente 1810 con paquete acumulativo de actualizaciones 2 (4488598) o posterior  
+    - La versión de cliente 1902 Configuration Manager con paquete acumulativo de actualizaciones (4500571) o posterior  
 
 - Aprobación de la empresa para configurar el nivel de datos de diagnóstico de Windows para **mejorado (limitado)** en los dispositivos pilotos  
 
@@ -77,8 +77,6 @@ Antes de empezar este tutorial, asegúrese de que tiene los siguientes requisito
     - `https://eaus2watcab02.blob.core.windows.net`  
     - `https://weus2watcab01.blob.core.windows.net`  
     - `https://weus2watcab02.blob.core.windows.net`  
-    - `https://www.msftncsi.com`  
-    - `https://www.msftconnecttest.com`  
     - `https://kmwatsonc.events.data.microsoft.com`  
     - `https://oca.telemetry.microsoft.com`  
     - `https://login.live.com`  
@@ -157,9 +155,9 @@ Utilice este procedimiento para actualizar Configuration Manager, conexión a es
 
 ### <a name="update-configuration-manager"></a>Actualizar Configuration Manager
 
-Instale el paquete acumulativo de actualizaciones de versión de Configuration Manager 1810 2 (4488598) para admitir la integración con análisis de escritorio. Para obtener más información sobre esta actualización, consulte [acumulativo de actualizaciones de la rama actual de Configuration Manager, versión 1810](https://support.microsoft.com/help/4488598).
+Instale el paquete de actualizaciones de Configuration Manager versión 1902 (4500571) para admitir la integración con análisis de escritorio. Para obtener más información sobre esta actualización, consulte [acumulativo de actualizaciones de la rama actual de Configuration Manager, versión 1902](https://support.microsoft.com/help/4500571).
 
-1. Actualice el sitio con el paquete acumulativo de actualizaciones para la versión 1810. Para más información, vea [Instalar actualizaciones en consola para Configuration Manager](/sccm/core/servers/manage/install-in-console-updates).  
+1. Actualice el sitio con el paquete acumulativo de actualizaciones para la versión 1902. Para más información, vea [Instalar actualizaciones en consola para Configuration Manager](/sccm/core/servers/manage/install-in-console-updates).  
 
 2. Actualice los clientes. Para simplificar el proceso, considere la posibilidad de usar la actualización automática del cliente. Para obtener más información, vea [Actualizar clientes](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).  
 
@@ -244,7 +242,7 @@ Utilice este procedimiento para crear un plan de implementación en escritorio A
 
     - **Nombre**: Planear un nombre único para la implementación, por ejemplo `Windows 10 pilot`  
 
-    - **Productos y versiones**: Seleccione el **Windows** producto y la versión recomendada más reciente disponible. Por ejemplo, **Windows 10, versión 1809 (recomendado)**.  
+    - **Productos y versiones**: Seleccione el **Windows** producto y la versión recomendada más reciente disponible. Por ejemplo, **Windows 10, versión 1809 (recomendado)** .  
 
     - **Grupos de dispositivos**: Seleccione uno o más grupos en la pestaña de Configuration Manager y, a continuación, seleccione **establecer como destino grupos**. Estos grupos son recopilaciones sincronizadas desde Configuration Manager.  
 

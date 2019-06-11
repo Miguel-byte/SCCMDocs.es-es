@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dbe161fd744343927f0b373775182eccfd58c1b6
-ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
+ms.openlocfilehash: 7292fdd3cc370af314cef95a4b782616e315a0cb
+ms.sourcegitcommit: 725e1bf7d3250c2b7b7be9da01135517428be7a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66748241"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821981"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Habilitar uso compartido para el escritorio de análisis de datos
 
@@ -70,8 +70,6 @@ Para habilitar el uso compartido de datos, configure el servidor proxy para perm
 | `https://watson.telemetry.microsoft.com` | Windows Error Reporting (WER). Se requiere para supervisar el estado de implementación de Windows 10, versión 1803 o una versión anterior. |
 | `https://umwatsonc.events.data.microsoft.com` | Windows Error Reporting (WER). Se requiere para los informes de estado dispositivo Windows 10, versión 1809 o posterior. |
 | `https://ceuswatcab01.blob.core.windows.net`<br> `https://ceuswatcab02.blob.core.windows.net`<br> `https://eaus2watcab01.blob.core.windows.net`<br> `https://eaus2watcab02.blob.core.windows.net`<br> `https://weus2watcab01.blob.core.windows.net`<br> `https://weus2watcab02.blob.core.windows.net` | Windows Error Reporting (WER). Se requiere para supervisar el estado de implementación de Windows 10, versión 1809 o posterior. |
-| `https://www.msftncsi.com` | Windows Error Reporting (WER). Se requiere para que el estado del dispositivo comprobar la conectividad. |
-| `https://www.msftconnecttest.com` | Windows Error Reporting (WER). Se requiere para que el estado del dispositivo comprobar la conectividad. |
 | `https://kmwatsonc.events.data.microsoft.com` | Análisis de bloqueos en línea. Se requiere para los informes de estado dispositivo Windows 10, versión 1809 o posterior. |
 | `https://oca.telemetry.microsoft.com`  | Análisis de bloqueos en línea (OCA). Se requiere para supervisar el estado de implementación de Windows 10, versión 1803 o una versión anterior. |
 | `https://login.live.com` | Debe para proporcionar una identidad de dispositivo más confiable para el análisis de escritorio. <br> <br>Para deshabilitar el acceso de cuenta de Microsoft del usuario final, use la configuración de directiva en lugar de bloquear este punto de conexión. Para obtener más información, consulte [cuenta Microsoft en la empresa](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication). |
