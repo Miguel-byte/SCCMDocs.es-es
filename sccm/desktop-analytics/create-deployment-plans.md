@@ -2,7 +2,7 @@
 title: Cómo crear planes de implementación
 titleSuffix: Configuration Manager
 description: Guía de procedimientos para crear planes de implementación en escritorio Analytics.
-ms.date: 01/25/2019
+ms.date: 06/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,21 +12,21 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35e8e883acafaa1d606d81402b868b8a755d0887
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: b65a700f5c9cdf3225dfb2ecd3c48d76119110f2
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208048"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834923"
 ---
-# <a name="how-to-create-deployment-plans-in-desktop-analytics"></a>Cómo crear planes de implementación en escritorio Analytics 
+# <a name="how-to-create-deployment-plans-in-desktop-analytics"></a>Cómo crear planes de implementación en escritorio Analytics
 
 > [!Note]  
 > Esta información se relaciona con un servicio en versión preliminar que puede modificarse sustancialmente antes de su lanzamiento comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información aquí proporcionada.  
 
 En este artículo proporciona los pasos para crear un plan de implementación en escritorio Analytics. Antes de empezar, primero [Obtenga información sobre los planes de implementación](/sccm/desktop-analytics/about-deployment-plans).
 
-Siga los pasos descritos en este artículo para usar un análisis de escritorio para crear un plan para la implementación de Windows 10 y Office 365 ProPlus. Crear planes de implementación para Windows 10, Office 365 ProPlus o ambos.
+Siga los pasos descritos en este artículo para usar un análisis de escritorio para crear un plan para la implementación de Windows 10.
 
 1. Abra el [portal de análisis de escritorio](https://aka.ms/m365aprod). Use las credenciales que tienen al menos **colaboradores del área de trabajo** permisos.  
 
@@ -38,15 +38,15 @@ Siga los pasos descritos en este artículo para usar un análisis de escritorio 
 
     - **Nombre**: Un nombre único para el plan de implementación  
 
-    - **Productos y versiones**: Elija qué productos y versiones para implementar. Microsoft recomienda crear planes de implementación para Office y Windows juntos y usar las versiones más recientes.  
+    - **Productos y versiones**: Elija qué versión de Windows 10 para implementar. Microsoft recomienda crear planes de implementación que usan la versión más reciente.  
 
     - **Grupos de dispositivos**: Seleccione uno o más grupos y, a continuación, seleccione **establecer como destino grupos**. Grupos con **SCCM** como el origen son colecciones sincronizadas desde Configuration Manager.  
 
-    - **Las reglas de preparación**: Estas reglas ayudan a determinar qué dispositivos necesarios para actualización. 
+    - **Las reglas de preparación**: Estas reglas ayudan a determinar qué dispositivos necesarios para actualización.  
 
-    - **Fecha de finalización**: Elija la fecha por el que Windows y Office deben distribuirse completamente en todos los dispositivos de destino.  
+    - **Fecha de finalización**: Elija la fecha por el que se deberían implementar totalmente Windows en todos los dispositivos de destino.  
 
-5. Seleccione **crear**. El nuevo plan aparece en la lista de planes de implementación mientras se está procesando. Proceso puede tardar hasta 48 horas antes de continuar con el paso siguiente.   
+5. Seleccione **crear**. El nuevo plan aparece en la lista de planes de implementación mientras se está procesando. Para acelerar el procesamiento, solicitar una actualización de datos y a petición. Para obtener más información, consulte [preguntas más frecuentes sobre análisis de escritorio](/sccm/desktop-analytics/faq##can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).  
 
 6. Abrir el plan de implementación, seleccione su nombre.  
 
@@ -54,15 +54,13 @@ Siga los pasos descritos en este artículo para usar un análisis de escritorio 
 
     1. En el **aplicaciones** pestaña, seleccione esta opción para mostrar sólo **no revisado** activos.  
 
-    2. Seleccione cada aplicación y, a continuación, seleccione **editar**. Puede seleccionar más de una aplicación para editar al mismo tiempo.   
+    2. Seleccione cada aplicación y, a continuación, seleccione **editar**. Puede seleccionar más de una aplicación para editar al mismo tiempo.  
 
-    3. Elija un nivel de importancia de la **importancia** lista. Si desea que el análisis de escritorio para validar el complemento durante el programa piloto, seleccione **crítico** o **importante**. No valida los complementos marcados como **importante no**. Tenga en cuenta la [riesgo compatibilidad](/sccm/desktop-analytics/compat-risk) y otra información del plan al asignar niveles de importancia.  
+    3. Elija un nivel de importancia de la **importancia** lista. Si desea que el análisis de escritorio para validar la aplicación durante el programa piloto, seleccione **crítico** o **importante**. No valida las aplicaciones marcadas como **importante no**. Tenga en cuenta la [riesgo compatibilidad](/sccm/desktop-analytics/compat-risk) y otra información del plan al asignar niveles de importancia.  
 
         Al asignar niveles de importancia, también puede elegir la decisión de actualización.  
 
     4. Seleccione **guardar** cuando haya terminado.  
-
-    5. Repita estos pasos para la **complementos de Office**.  
 
 8. En el menú del plan de implementación, en el **preparar** grupo, seleccione **identificar piloto**.  
 

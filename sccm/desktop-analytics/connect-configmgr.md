@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 38391c5d922a33696dc10d761847e40c01e151cc
-ms.sourcegitcommit: 725e1bf7d3250c2b7b7be9da01135517428be7a1
+ms.openlocfilehash: ad933e5158fea4cafed7ea84a938b6505d6df4e5
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66822012"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834949"
 ---
 # <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>Cómo conectar Configuration Manager con análisis de escritorio
 
@@ -85,8 +85,8 @@ Utilice este procedimiento para conectar Configuration Manager para el análisis
 
     - **Id. comercial**: este valor se debería rellenar automáticamente con el identificador de. su organización Si no, asegúrese de que el servidor proxy está configurado para permitir que todo lo necesario [extremos](/sccm/desktop-analytics/enable-data-sharing#endpoints) antes de continuar. También puede recuperar el identificador comercial manualmente desde el [portal de análisis de escritorio](/sccm/desktop-analytics/troubleshooting#bkmk_ViewCommercialID).  
 
-    - **Nivel de datos de diagnóstico de Windows 10**: seleccione al menos **mejorado (limitado)**  
-
+    - **Nivel de datos de diagnóstico de Windows 10**: seleccione al menos **básica**. Consulte [niveles de datos de diagnóstico](/sccm/desktop-analytics/enable-data-sharing#diagnostic-data-levels)
+  
     - **Permitir que el nombre del dispositivo en los datos de diagnóstico**: seleccione **habilitar**  
 
         > [!Note]  

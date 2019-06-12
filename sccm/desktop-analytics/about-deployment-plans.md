@@ -2,7 +2,7 @@
 title: Planes de implementación en escritorio Analytics
 titleSuffix: Configuration Manager
 description: Obtenga información sobre los planes de implementación en escritorio Analytics.
-ms.date: 05/14/2019
+ms.date: 06/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b44684f897e7aad4365c39e58c9bfd486bde7cbb
-ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
+ms.openlocfilehash: 88c78cef4717cc3a51a53b7fd5aba0cbefa93a8e
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65673293"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834941"
 ---
 # <a name="about-deployment-plans-in-desktop-analytics"></a>Acerca de los planes de implementación en escritorio Analytics
 
@@ -48,7 +48,7 @@ Como parte de su plan de implementación, realice las siguientes acciones:
 
 - Decidir cómo solucionar problemas con las aplicaciones basadas en las recomendaciones de análisis de escritorio  
 
-Análisis de escritorio actualiza diariamente datos del plan de implementación. Los cambios que realice podrían no aparecer durante 24 horas. Estos cambios incluyen asignar importancia a una aplicación, o elegir un dispositivo para incluir en una prueba piloto.  
+De forma predeterminada, el análisis de escritorio actualiza diariamente datos del plan de implementación. Los cambios que realice en un plan de implementación, como asignar importancia para una aplicación o elegir un dispositivo debe incluir en una prueba piloto, tarda hasta 24 horas en procesarse. Para acelerar este proceso, solicitar una actualización de datos y a petición. Para obtener más información, consulte [preguntas más frecuentes sobre análisis de escritorio](/sccm/desktop-analytics/faq#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).  
 
 Después de conectarse a análisis de escritorio a Configuration Manager, seleccione las colecciones de los planes de implementación. A continuación, esta integración le permite implementar Windows a una colección en función de los datos de análisis de escritorio.
 

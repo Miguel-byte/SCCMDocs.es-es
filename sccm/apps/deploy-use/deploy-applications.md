@@ -2,7 +2,7 @@
 title: Implementar aplicaciones
 titleSuffix: Configuration Manager
 description: Crear o simular una implementación de una aplicación en una recopilación de dispositivo o usuario
-ms.date: 05/01/2019
+ms.date: 06/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7550987d9b9679085ad5b546274d0c503b9e28ac
-ms.sourcegitcommit: 3f43fa8462bf39b2c18b90a11a384d199c2822d8
-ms.translationtype: HT
+ms.openlocfilehash: 5760b36ddb29c39d6887afb61445f1353f46bbec
+ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66403401"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66715677"
 ---
 # <a name="deploy-applications-with-configuration-manager"></a>Implementar aplicaciones con Configuration Manager
 
@@ -161,6 +161,12 @@ Puede que quiera ofrecer más tiempo a los usuarios para instalar las aplicacion
 
 Después de la fecha límite, el cliente instalará la aplicación en la primera ventana fuera del horario laboral que haya configurado el usuario, hasta ese período de gracia. Pero el usuario aún podrá abrir el Centro de software e instalar la aplicación en cualquier momento. Una vez que expira el período de gracia, el cumplimiento vuelve al comportamiento normal para implementaciones vencidas.
 
+![Diagrama de escala de tiempo del período de gracia](media/grace-period.svg)
+
+<!-- SCCMDocs issue #1599 -->
+
+> [!Note]  
+> La mayoría de las veces, esta característica aborda el escenario de cuando el dispositivo está apagado mientras el usuario está fuera de la oficina. Técnicamente, el período de gracia se inicia cuando el cliente obtiene la directiva después de la fecha límite de implementación. El mismo comportamiento se produce si detiene el servicio de cliente de Configuration Manager (CcmExec) y luego o reinicia en algún momento después de la fecha límite de implementación.
 
 ### <a name="bkmk_deploy-ux"></a> Configuración de la **experiencia del usuario** de implementación
 

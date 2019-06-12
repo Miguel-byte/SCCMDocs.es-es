@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b1015573d62bdbbd317b9f787071e7725e5d4362
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: c7932609d9a52968a3c610fd9c5a00326cced8d5
+ms.sourcegitcommit: 9c02c00c4061ab17beb3bc1cc895b533f3b55bc4
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176117"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66501719"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Crear una secuencia de tareas para actualizar un SO en Configuration Manager
 
@@ -147,7 +147,7 @@ A partir de la versión 1802, la plantilla de secuencia de tareas predeterminada
 
 - **Comprobaciones de batería**: agregue pasos a este grupo para comprobar si el equipo está usando la batería o un cable de alimentación. Esta acción requiere un script o utilidad personalizado a fin de realizar la comprobación. Por ejemplo: mediante WbemTest, conéctese al espacio de nombres `root\cimv2`. Después, ejecute la siguiente consulta: `Select Batterystatus From Win32_Battery where batterystatus != 2`. Si devuelve algún resultado, el dispositivo se está ejecutando con batería. En caso contrario, el dispositivo está conectado a la red por cable.  
 
-- **Comprobaciones de conexión por cable o red**: agregue pasos a este grupo para comprobar si el equipo está conectado a una red y no está usando una conexión inalámbrica. Esta acción requiere un script o utilidad personalizado a fin de realizar la comprobación.  
+- **Comprobaciones de conexión por cable o red**: agregue pasos a este grupo para comprobar si el equipo está conectado a una red y no está usando una conexión inalámbrica. Esta acción requiere un script o utilidad personalizado a fin de realizar la comprobación.  Por ejemplo: mediante WbemTest, conéctese al espacio de nombres `root\cimv2`. Después, ejecute la siguiente consulta: `Select * From Win32_NetworkAdapter Where NetConnectionStatus = 2 and PhysicalAdapter = 'True' and NetConnectionID = 'Wi-Fi'`. Si se devuelve algún resultado, el dispositivo esta funcionando con una conexión Wi-Fi. En caso contrario, el dispositivo está conectado a la red por cable.
 
 - **Quitar aplicaciones no compatibles**: agregue pasos a este grupo para quitar todas las aplicaciones que no sean compatibles con esta versión de Windows 10. El método para desinstalar una aplicación es diferente en cada situación.  
 

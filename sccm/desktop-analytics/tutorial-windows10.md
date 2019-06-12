@@ -2,7 +2,7 @@
 title: 'Tutorial: implementar Windows 10'
 titleSuffix: Configuration Manager
 description: Un tutorial sobre el uso de escritorio de análisis y Configuration Manager para implementar Windows 10 en un grupo piloto.
-ms.date: 06/07/2019
+ms.date: 06/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: tutorial
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 09259b62eba5a6cbd84b487f83f0fb26d7cbb7c1
-ms.sourcegitcommit: 725e1bf7d3250c2b7b7be9da01135517428be7a1
+ms.openlocfilehash: ba11906bb8febcd2c2c5ab9295d391680763e0cf
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821960"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834790"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Tutorial: Implementación piloto de Windows 10
 
@@ -256,7 +256,7 @@ Utilice este procedimiento para crear un plan de implementación en escritorio A
 
     - **Fecha de finalización**: Elija la fecha por el que se deberían implementar totalmente Windows en todos los dispositivos de destino.  
 
-5. Seleccione **crear**. El nuevo plan aparece en la lista de planes de implementación mientras se está procesando. Proceso puede tardar hasta 48 horas antes de continuar con el paso siguiente.  
+5. Seleccione **crear**. El nuevo plan aparece en la lista de planes de implementación mientras se está procesando. Para acelerar el procesamiento, solicitar una actualización de datos y a petición. Para obtener más información, consulte [preguntas más frecuentes sobre análisis de escritorio](/sccm/desktop-analytics/faq#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).
 
 6. Abrir el plan de implementación, seleccione su nombre.  
 

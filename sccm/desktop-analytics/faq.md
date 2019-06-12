@@ -2,7 +2,7 @@
 title: Preguntas más frecuentes sobre análisis de escritorio
 titleSuffix: Configuration Manager
 description: Preguntas frecuentes sobre el análisis de escritorio.
-ms.date: 04/26/2019
+ms.date: 06/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4596923f9a6a42ad98dc17257b22925ad0bc5eed
-ms.sourcegitcommit: 9af73f5c1b93f6ccaea3e6a096f75a5fecd65c2f
+ms.openlocfilehash: 1187688813c2d7a3308ed5ed53e29cb90640dda8
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2019
-ms.locfileid: "64562452"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834831"
 ---
 # <a name="desktop-analytics-faq"></a>Preguntas más frecuentes de análisis de escritorio
 
@@ -39,6 +39,13 @@ Sí. Para obtener más información, consulte [conversión de BIOS a UEFI durant
 ### <a name="can-i-use-desktop-analytics-with-windows-10-ltsc"></a>¿Puedo usar análisis de escritorio con Windows 10 LTSC?
 
 Aunque puede usar análisis de escritorio para ayudar con la actualización de los dispositivos de Windows 10 a largo plazo de mantenimiento canal (LTSC) en canal semianual de Windows 10, análisis de escritorio no admite las actualizaciones de Windows 10 LTSC. Este canal de Windows 10 no está pensada para un uso extenso y no recibe actualizaciones de características, por lo que no es un destino compatible con análisis de escritorio. Para obtener más información, consulte [Windows como una información general del servicio](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).
+
+### <a name="can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal"></a>¿Se puede reducir la cantidad de tiempo que tardan los datos actualizar en el portal de Mis análisis de escritorio?
+
+Hay dos tipos de datos en el portal de análisis de escritorio: Datos del administrador y los datos de diagnóstico. Para actualizar los datos de administrador a petición, abra la ventana flotante de moneda de datos y seleccione **aplicar cambios**. Esta acción desencadena inmediatamente una actualización única de los cambios de administrador en las áreas de trabajo pendientes. Los cambios propagan y están generalmente disponibles dentro de 15 a 60 minutos. El tiempo depende del tamaño del área de trabajo y el ámbito de los cambios pendientes. Puede solicitar una actualización de datos y a petición hasta seis veces en un plazo de 24 horas. 
+
+Todos los datos se actualizan automáticamente una vez al día, incluso si no solicita una actualización de datos y a petición. No hay ninguna manera de desencadenar una actualización de la petición de datos de diagnóstico. Para obtener más información sobre los diferentes tipos de datos de análisis de escritorio, consulte [latencia de datos](/sccm/desktop-analytics/troubleshooting#data-latency).
+
 
 ## <a name="privacy"></a>Privacidad
 

@@ -11,12 +11,12 @@ manager: dougeby
 author: mestew
 ms.author: mstewart
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 90304156778f4f41b2ac35a2840a4a7e7bb4dc32
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: b78d4212201a8ed1a08b7fecdb376cbdfdac7636
+ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499785"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66748219"
 ---
 #  <a name="BKMK_ManageSUSettings"></a> Administrar la configuración de las actualizaciones de software  
 
@@ -69,7 +69,11 @@ En las propiedades de la actualización de software, puede revisar información 
 ####  <a name="BKMK_SoftwareUpdateDetails"></a> Detalles de la actualización de software  
 En la pestaña **Detalles de la actualización de software** , puede ver la siguiente información de resumen sobre la actualización de software seleccionada:  
 
-- **Id. de boletín**: especifica el identificador de boletín asociado a las actualizaciones de software de seguridad. Para obtener detalles sobre el boletín de seguridad, busque el identificador del boletín en la página web de [Boletines de seguridad](http://go.microsoft.com/fwlink/p/?LinkId=58313) .  
+- **Id. de boletín**: especifica el identificador de boletín asociado a las actualizaciones de software de seguridad. Para obtener detalles sobre el boletín de seguridad, busque el identificador del boletín en la página web del [Centro de respuestas de seguridad de Microsoft](https://portal.msrc.microsoft.com/).  
+
+> [!NOTE]
+> Está cambiando la forma en que Microsoft documenta las actualizaciones de seguridad. En el modelo anterior se usaban las páginas web de los boletines de seguridad y se incluían los números de identificación de los boletines (por ejemplo, MS16-XXX) como punto de pivote. Esta forma de documentación de las actualizaciones de seguridad, incluidos los números de identificación de los boletines, se va a retirar y se va reemplazar por la Guía de actualizaciones de seguridad. En lugar de los identificadores de boletín, la nueva guía gira en torno a los números de identificación de vulnerabilidades y los números de identificación de artículos de KB. Para más información, consulte las [P+F sobre la Guía de actualizaciones de seguridad](https://www.microsoft.com/msrc/faqs-security-update-guide).
+
 
 - **Id. de artículo**: especifica el identificador de artículo de la actualización de software. El artículo al que se hace referencia proporciona información más detallada acerca de la actualización de software y qué soluciona o mejora.  
 
@@ -94,7 +98,7 @@ En la pestaña **Información de contenido** , revise la siguiente información 
 
 -   **Ruta de acceso de origen**: especifica la ruta de acceso de los archivos de origen de la actualización de software.  
 
--   **Tamaño (MB)**: especifica el tamaño de los archivos de origen de la actualización de software.  
+-   **Tamaño (MB)** : especifica el tamaño de los archivos de origen de la actualización de software.  
 
 ####  <a name="BKMK_CustomBundleInformation"></a> Información de agrupación personalizada  
 En la pestaña **Información de agrupación personalizada** , revise la información de agrupación personalizada de la actualización de software. Si la actualización de software seleccionada contiene actualizaciones de software agrupadas incluidas en el archivo de la actualización de software, éstas se muestran en la sección **Información de agrupación** . Esta pestaña no muestra las actualizaciones de software agrupadas que se incluyen en la pestaña **Información de contenido** , como los archivos de actualización para los distintos idiomas.  
@@ -134,6 +138,6 @@ De forma predeterminada, la lista de revocación de certificados (CRL) no se com
 Si se utiliza, la comprobación de CRL debe estar habilitada en las consolas de Configuration Manager que procesan las actualizaciones de software.  
 
 #### <a name="to-enable-crl-checking"></a>Para habilitar la comprobación de CRL  
-En el equipo que realiza la comprobación de CRL, desde el DVD del producto, ejecute lo siguiente desde un símbolo del sistema: **\SMSSETUP\BIN\X64\\**<*language*>**\UpdDwnldCfg.exe /checkrevocation**.  
+En el equipo que realiza la comprobación de CRL, desde el DVD del producto, ejecute lo siguiente desde un símbolo del sistema: **\SMSSETUP\BIN\X64\\** <*language*> **\UpdDwnldCfg.exe /checkrevocation**.  
 
 Por ejemplo, para Inglés (Estados Unidos) debe ejecutar **\SMSSETUP\BIN\X64\00000409\UpdDwnldCfg.exe /checkrevocation**  
