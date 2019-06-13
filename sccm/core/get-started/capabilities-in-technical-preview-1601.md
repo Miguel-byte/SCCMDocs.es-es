@@ -12,12 +12,12 @@ ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fa96b497ce942430c5a8391eefd41e939c634ae3
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: be84e7bfae54cf3099b588cce35b01a424c45b8f
+ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56143680"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66716007"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1601 para System Center Configuration Manager
 
@@ -93,7 +93,7 @@ En la versión Technical Preview 1601, hemos agregado compatibilidad con las sig
 
 -   **Acceso condicional con servicio de atestación de estado** Ahora puede restringir el acceso a los servicios de correo electrónico y 0365 según el estado de los dispositivos notificado por el servicio de atestación de estado.  Además, los dispositivos administrados por Intune se incluyen en los informes de estado de dispositivos.  
 
-    Se ha agregado una nueva regla de cumplimiento a la consola de Configuration Manager que permite especificar si debe permitir o bloquear el acceso de los dispositivos en función de su estado.  Para crear esta regla, abra el **Asistente para crear directivas de cumplimiento** y agregue una nueva regla.  Seleccione **Notificado como estado correcto por el servicio de atestación de estado** para la condición y establezca el valor en **True**.  Esto garantiza que solo los dispositivos que se notifican con un estado correcto tienen acceso a los recursos de la compañía. Para obtener detalles sobre el servicio de atestación de estado y cómo se notifica el estado de los dispositivos en Intune, vea [Device Health Attestation (Atestación de estado de un dispositivo)](#bkmk_devicehealth).  
+    Se ha agregado una nueva regla de cumplimiento a la consola de Configuration Manager que permite especificar si debe permitir o bloquear el acceso de los dispositivos en función de su estado.  Para crear esta regla, abra el **Asistente para crear directivas de cumplimiento** y agregue una nueva regla.  Seleccione **Notificado como estado correcto por el servicio de atestación de estado** para la condición y establezca el valor en **True**.  Esto garantiza que solo los dispositivos que se notifican con un estado correcto tienen acceso a los recursos de la compañía. Para obtener detalles sobre el servicio de atestación de estado y cómo se notifica el estado de los dispositivos en Intune, vea [Device Health Attestation (Atestación de estado de un dispositivo)](/sccm/core/get-started/capabilities-in-technical-preview-1512#bkmk_devicehealth).  
 
 -   **Nuevas opciones de directiva de cumplimiento:** las nuevas opciones de directiva de cumplimiento ayudan a mejorar la seguridad y la protección en los dispositivos que se usan para obtener acceso a los servicios de correo electrónico y SharePoint de la empresa:  
 

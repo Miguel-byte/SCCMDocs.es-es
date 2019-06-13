@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 801a4819e4bfc9c0f18b87915ea0969b0aa60dc3
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: ceb7f7156c505e73db3fba0d02d60ec044958846
+ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65497874"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66716116"
 ---
 # <a name="checklist-for-installing-update-1902-for-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 1902 de Configuration Manager
 
@@ -130,7 +130,7 @@ Cuando se ejecuta una tarea de mantenimiento de la base de datos de sitio durant
 Para obtener más información, vea  [Tareas de mantenimiento](/sccm/core/servers/manage/maintenance-tasks)  y [Referencia de las tareas de mantenimiento](/sccm/core/servers/manage/reference-for-maintenance-tasks).
 
 #### <a name="temporarily-stop-any-antivirus-software"></a>Detener temporalmente cualquier software antivirus 
-Antes de actualizar un sitio, detenga el software antivirus en los servidores de Configuration Manager. <!--SMS.503481--> 
+Antes de actualizar un sitio, detenga el software antivirus en los servidores de Configuration Manager. El software antivirus puede bloquear algunos archivos que deben actualizarse, lo que provoca que la actualización no pueda llevarse a cabo. <!--SMS.503481--> 
 
 #### <a name="create-a-backup-of-the-site-database"></a>Crear una copia de seguridad de la base de datos de sitio 
 Antes de actualizar el sitio, haga una copia de seguridad de la base de datos del sitio en el sitio de administración central y los sitios primarios. Esta copia de seguridad garantiza la disponibilidad de una copia de seguridad correcta para su uso para la recuperación ante desastres.
