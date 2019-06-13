@@ -103,7 +103,7 @@ Para más información, vea [Reserva](/sccm/core/servers/deploy/configure/bounda
 
 ### <a name="bkmk_options"></a> Configuración de opciones del grupo de límites
 <!--1356193-->
-A partir de la versión 1806, para configurar opciones adicionales para los clientes de este grupo de límites, cambie a la pestaña **Opciones**. Para más información, vea ](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions)Opciones de grupo de límites para descargas del mismo nivel](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).
+A partir de la versión 1806, para configurar opciones adicionales para los clientes de este grupo de límites, cambie a la pestaña **Opciones**. Para más información, vea [Opciones de grupo de límites para descargas del mismo nivel](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).
 
 - **Permitir descargas del mismo nivel en este grupo de límites**: Esta opción está habilitada de forma predeterminada. El punto de administración proporciona a los clientes una lista de ubicaciones de contenido que incluye orígenes del mismo nivel.  
 
