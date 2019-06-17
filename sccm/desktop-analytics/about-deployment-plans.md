@@ -2,7 +2,7 @@
 title: Planes de implementación en escritorio Analytics
 titleSuffix: Configuration Manager
 description: Obtenga información sobre los planes de implementación en escritorio Analytics.
-ms.date: 06/10/2019
+ms.date: 06/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88c78cef4717cc3a51a53b7fd5aba0cbefa93a8e
-ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
+ms.openlocfilehash: a8080d89995b6ed10efd996b4ad757151e315c74
+ms.sourcegitcommit: af207075c4a8bc59242a41d3192a4057452a0e55
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834941"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67141029"
 ---
 # <a name="about-deployment-plans-in-desktop-analytics"></a>Acerca de los planes de implementación en escritorio Analytics
 
@@ -62,6 +62,43 @@ Las siguientes reglas de disponibilidad están disponibles en los planes de impl
 
 - Instalar bajo el umbral de recuento para las aplicaciones de Windows. Si una aplicación está instalada en un mayor porcentaje de equipos a este umbral, el plan de implementación marca la aplicación como **Noteworthy**. Esta etiqueta significa que puede decidir cuán importante es la prueba durante la fase piloto.  
 
+
+## <a name="plan-assets"></a>Plan de recursos
+
+<!-- 4670224 -->
+
+Mientras el [activos](/sccm/desktop-analytics/about-assets) área también muestra los dispositivos y aplicaciones, el **Plan activos** área debajo de un plan de implementación específico incluye información adicional.
+
+### <a name="devices"></a>Dispositivos
+
+Consulte la **decisión de actualización de Windows** para cada dispositivo en el plan de implementación.
+
+Decisión de actualización de la Windows **dispositivo reemplazar** puede deberse a uno de los siguientes motivos:
+
+- Se produjo un error de una comprobación de procesador de Windows 10 necesarios. Para obtener más información, consulte [requisitos mínimos de hardware](https://docs.microsoft.com/windows-hardware/design/minimum/minimum-hardware-requirements-overview#31-processor).
+- Tiene un bloque de BIOS
+- No tiene memoria suficiente
+- Un componente crítico de arranque en el sistema tiene un controlador de bloqueo
+- No se pueden actualizar la marca y modelo
+- Hay un componente de la clase de la pantalla con un bloque de controlador que tiene todos los atributos siguientes:
+    - No se invalidan
+    - No hay ningún controlador en la nueva versión del sistema operativo
+    - Aún no está en Windows Update
+- Hay otro componente de plug and play en el sistema que bloquea la actualización
+- Hay un componente inalámbrico que usa un controlador XP emulados
+- Un componente de red con una conexión activa perderá su controlador. En otras palabras, después de la actualización podría perder conectividad de red.
+
+### <a name="apps"></a>Aplicaciones
+
+Establecer el **decisión de actualización** , así como la **importancia** para esta aplicación en este plan de implementación. Para obtener más información, consulte [cómo crear planes de implementación](/sccm/desktop-analytics/create-deployment-plans).
+
+En los detalles de la aplicación, también puede ver la información siguiente: Las recomendaciones, factores de riesgo de compatibilidad y problemas conocidos de Microsoft. Utilice esta información para ayudar a conjunto el **decisión de actualización**. Para obtener más información, consulte [Compatibility assessment de](/sccm/desktop-analytics/compat-assessment).
+
+Las aplicaciones que se muestra el escritorio de análisis como *notable* se basan en el umbral de recuento de baja de instalación para las reglas de preparación del plan de implementación. Para obtener más información, consulte [reglas de preparación](/sccm/desktop-analytics/create-deployment-plans#readiness-rules).
+
+### <a name="drivers"></a>Controladores
+
+Consulte la lista de los controladores incluidos con este plan de implementación. Establecer el **decisión de actualización**, revise la recomendación de Microsoft y vea los factores de riesgo de compatibilidad.
 
 
 ## <a name="importance"></a>Importancia

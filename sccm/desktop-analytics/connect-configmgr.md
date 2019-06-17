@@ -2,7 +2,7 @@
 title: Conexión de Configuration Manager
 titleSuffix: Configuration Manager
 description: Guía de procedimientos para conectar Configuration Manager con análisis de escritorio.
-ms.date: 06/07/2019
+ms.date: 06/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bdfed49a68963dc0d46a38810f0ac9dc8041d3fc
-ms.sourcegitcommit: e3c1eb0b75d79c05a750d49354c851d15d5e26a3
+ms.openlocfilehash: 7925bf44c78b6f8d51797145b5ae463ac3498eea
+ms.sourcegitcommit: af207075c4a8bc59242a41d3192a4057452a0e55
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67038780"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67141050"
 ---
 # <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>Cómo conectar Configuration Manager con análisis de escritorio
 
@@ -44,6 +44,9 @@ También deberá instalar la versión 1902 acumulativo (4500571) para admitir la
 Utilice este procedimiento para conectar Configuration Manager para el análisis de escritorio y configuración de dispositivos. Este procedimiento es un proceso único para asociar la jerarquía para el servicio en la nube.  
 
 1. En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Cloud Services** y haga clic en el nodo **Servicios de Azure**. Seleccione **configurar servicios de Azure** en la cinta de opciones.  
+
+    > [!Tip]  
+    > En la consola de Configuration Manager, vaya a la **biblioteca de Software** área de trabajo y seleccione el **Desktop Analytics mantenimiento** nodo. En el *nuevo para el análisis de escritorio?* , seleccione el segundo vínculo a *conectar Configuration Manager para el servicio de análisis de escritorio*.  
 
 2. En el **Azure Services** página del Asistente para servicios de Azure, configure las siguientes opciones:  
 

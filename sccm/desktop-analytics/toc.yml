@@ -4,8 +4,8 @@
       href: overview.md
     - name: Tutoriales
       items:
-        - name: Fase piloto de Office 365
-          href: tutorial-office-365.md
+        - name: "Windows\_10 piloto"
+          href: tutorial-windows10.md
     - name: Conceptos
       items:
         - name: Planes de implementación
@@ -38,7 +38,13 @@
       items:
         - name: Habilitación del uso compartido de datos
           href: enable-data-sharing.md
-        - name: Solución de problemas
-          href: troubleshooting.md
         - name: Privacidad
           href: privacy.md
+        - name: Solución de problemas
+          href: troubleshooting.md
+        - name: Supervisión del estado de conexión
+          href: monitor-connection-health.md
+        - name: Preguntas más frecuentes
+          href: faq.md
+        - name: Cierre de cuenta
+          href: account-close.md

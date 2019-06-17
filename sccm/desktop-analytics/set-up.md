@@ -2,7 +2,7 @@
 title: Configuración del análisis de escritorio
 titleSuffix: Configuration Manager
 description: Guía de procedimientos para configurar y la incorporación para análisis del escritorio.
-ms.date: 04/25/2019
+ms.date: 06/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3b831d6f42e6a9c908b46bf21882cab58fa08483
-ms.sourcegitcommit: 9af73f5c1b93f6ccaea3e6a096f75a5fecd65c2f
+ms.openlocfilehash: a54a6ad56e8ae7504314e5147f4d4d5b0b726562
+ms.sourcegitcommit: d47d2f03482e48d343e2139a341e61022331e6c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64559042"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67145971"
 ---
 # <a name="how-to-set-up-desktop-analytics"></a>Cómo configurar el análisis de escritorio
 
@@ -30,7 +30,10 @@ Utilice este procedimiento para iniciar sesión el análisis de escritorio y con
 
 ## <a name="initial-onboarding"></a>Incorporación inicial
 
-1. Abra el portal de análisis de escritorio en administración de dispositivos de Microsoft 365 como un usuario con **Administrador de la compañía** permisos. Seleccione **iniciar**.  
+1. Abra el [portal de análisis de escritorio](https://aka.ms/desktopanalytics) en administración de dispositivos de Microsoft 365 como un usuario con el **administrador Global** rol. Seleccione **iniciar**.  
+
+    > [!Tip]  
+    > Para acceder al portal Desktop Analytics desde la consola de Configuration Manager, vaya a la **biblioteca de Software** área de trabajo, seleccione el **Desktop Analytics mantenimiento** nodo y seleccione **Plan las implementaciones**.
 
 2. En el **acepte el contrato de servicio** página, revise el contrato de servicio y seleccione **Accept**.  
 

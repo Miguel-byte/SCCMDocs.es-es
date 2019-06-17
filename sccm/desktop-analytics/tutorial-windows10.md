@@ -2,7 +2,7 @@
 title: 'Tutorial: implementar Windows 10'
 titleSuffix: Configuration Manager
 description: Un tutorial sobre el uso de escritorio de análisis y Configuration Manager para implementar Windows 10 en un grupo piloto.
-ms.date: 06/10/2019
+ms.date: 06/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: tutorial
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba11906bb8febcd2c2c5ab9295d391680763e0cf
-ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
+ms.openlocfilehash: d8b73deb60cf88f0bdf428bb87250ce115a1084b
+ms.sourcegitcommit: d47d2f03482e48d343e2139a341e61022331e6c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834790"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67145812"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Tutorial: Implementación piloto de Windows 10
 
@@ -94,7 +94,7 @@ Antes de empezar este tutorial, asegúrese de que tiene los siguientes requisito
 
 Utilice este procedimiento para iniciar sesión el análisis de escritorio y configurarlo en su suscripción. Este procedimiento es un proceso único para configurar los análisis de escritorio de su organización.  
 
-1. Abra el portal de análisis de escritorio en administración de dispositivos de Microsoft 365 como un usuario con **administrador Global** permisos. Seleccione **iniciar**.  
+1. Abra el [portal de análisis de escritorio](https://aka.ms/desktopanalytics) en administración de dispositivos de Microsoft 365 como un usuario con **administrador Global** permisos. Seleccione **iniciar**.  
 
 2. En el **acepte el contrato de servicio** página, revise el contrato de servicio y seleccione **Accept**.  
 
@@ -232,7 +232,7 @@ Configuration Manager sincroniza las colecciones dentro de 60 minutos después d
 
 Utilice este procedimiento para crear un plan de implementación en escritorio Analytics.
 
-1. Abra el [portal de análisis de escritorio](https://aka.ms/m365aprod). Use las credenciales que tienen al menos **colaboradores del área de trabajo** permisos.  
+1. Abra el [portal de análisis de escritorio](https://aka.ms/desktopanalytics). Use las credenciales que tienen al menos **colaboradores del área de trabajo** permisos.  
 
 2. Seleccione **planes de implementación** en el grupo de administración.  
 
@@ -266,7 +266,7 @@ Utilice este procedimiento para crear un plan de implementación en escritorio A
 
     2. Seleccione cada aplicación y, a continuación, seleccione **editar**. Puede seleccionar más de una aplicación para editar al mismo tiempo.  
 
-    3. Elija un nivel de importancia de la **importancia** lista. Si desea que el análisis de escritorio para validar la aplicación durante el programa piloto, seleccione **crítico** o **importante**. No valida las aplicaciones marcadas como **importante no**. Tenga en cuenta la [riesgo compatibilidad](/sccm/desktop-analytics/compat-risk) y otra información del plan al asignar niveles de importancia.  
+    3. Elija un nivel de importancia de la **importancia** lista. Si desea que el análisis de escritorio para validar la aplicación durante el programa piloto, seleccione **crítico** o **importante**. No valida las aplicaciones marcadas como **importante no**. Evalúe su [compatibilidad](/sccm/desktop-analytics/compat-assessment) y otra información del plan al asignar niveles de importancia.  
 
         Al asignar niveles de importancia, también puede elegir la decisión de actualización.  
 

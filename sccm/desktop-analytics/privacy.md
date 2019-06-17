@@ -2,7 +2,7 @@
 title: Escritorio privacidad de datos de análisis
 titleSuffix: Configuration Manager
 description: Análisis de escritorio se compromete a privacidad de datos de cliente
-ms.date: 01/25/2019
+ms.date: 06/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 370bfc26b8a7b6ca0223803a36e765528460d89f
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: fb109bc126902f4d68b876860e8d5ec3ff514bb8
+ms.sourcegitcommit: d47d2f03482e48d343e2139a341e61022331e6c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258178"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67146003"
 ---
 # <a name="desktop-analytics-data-privacy"></a>Escritorio privacidad de datos de análisis
 
@@ -37,7 +37,7 @@ Análisis de escritorio se ha comprometido a privacidad de los datos al cliente,
 
 La siguiente ilustración muestra los datos de diagnóstico cómo fluye desde dispositivos individuales a través del servicio de datos de diagnóstico, almacenamiento de Azure Log Analytics y el área de trabajo de Log Analytics:
 
-![Diagrama que ilustra el flujo de datos de diagnóstico de dispositivos](media/da-data-flow-v1.png)
+![Diagrama que ilustra el flujo de datos de diagnóstico de dispositivos](media/da-data-flow.png)
 
 1. Inicie sesión en Azure portal e incorporarse a análisis de escritorio. Crear la aplicación de Azure AD para conectarse con Configuration Manager. Al configurar el análisis de escritorio, cree un área de trabajo de Azure Log Analytics en la ubicación de su elección.  
 
@@ -49,38 +49,21 @@ La siguiente ilustración muestra los datos de diagnóstico cómo fluye desde di
 
     3. Configuration Manager establece el identificador comercial, el nivel de datos de diagnóstico y otras opciones para los dispositivos en la colección de destino. Esta configuración especifica los dispositivos para que aparezca en el área de trabajo de análisis de escritorio.  
 
-    4. Implementar actualizaciones de compatibilidad para todos los dispositivos de destino. Opcionalmente, implementar la aplicación analizador de mantenimiento y Readiness Toolkit de Office a un conjunto representativo de los dispositivos. Estas herramientas proporcionan más información en línea personalizada de aplicaciones empresariales y las macros de Office.  
+    4. Implementar actualizaciones de compatibilidad para todos los dispositivos de destino.  
 
-3. Los dispositivos envían datos de diagnóstico a los servicios de administración de datos de diagnóstico de Microsoft para Windows y Office. Este servicio se hospeda en Estados Unidos.  
+3. Los dispositivos envían datos de diagnóstico para el servicio de administración de datos de diagnóstico de Microsoft para Windows. Este servicio se hospeda en Estados Unidos.  
 
-4. Cada día, Microsoft genera una instantánea de insights centradas en TI. Esta instantánea combina los datos de diagnóstico de Windows y Office con sus comentarios para los dispositivos inscritos. Este proceso se produce en un almacenamiento transitorio, que solo se usa por el análisis de escritorio. El almacenamiento transitorio se hospeda en centros de datos de Microsoft en Estados Unidos. Las instantáneas se segregan por Id. comercial.  
+4. Cada día, Microsoft genera una instantánea de insights centradas en TI. Esta instantánea combina los datos de diagnóstico de Windows con sus comentarios para los dispositivos inscritos. Este proceso se produce en un almacenamiento transitorio, que solo se usa por el análisis de escritorio. El almacenamiento transitorio se hospeda en centros de datos de Microsoft en Estados Unidos. Las instantáneas se segregan por Id. comercial.  
 
 5. Las instantáneas, a continuación, se copian en el área de trabajo de Azure Log Analytics correspondiente.  
 
 6. Escritorio Analytics almacena su entrada en el almacenamiento de Azure Log Analytics. Estas configuraciones incluyen planes de implementación y las decisiones de recurso para la actualización y de importancia.  
 
 
-<!-- ![Diagram illustrating flow of diagnostic data from devices](media/wa-data-flow-v1.png)
-
-1. Devices send diagnostic data to the Microsoft Diagnostic Data Management service. This service is hosted in the United States.  
-
-2. Set up and enrollment  
-
-    1. You create an Azure Log Analytics workspace when you set up Desktop Analytics. You choose the location and copy the commercial ID. This ID identifies your workspace.  
-    
-    2. When you connect Configuration Manager to Desktop Analytics, it sets the commercial ID on the devices in your target collection. This configuration specifies the devices to appear in your workspace.  
-
-3. Each day Microsoft produces a "snapshot" of IT-focused insights for each workspace in the Diagnostic Data Management service.  
-
-4. These snapshots are copied to transient storage, which is only used by Desktop Analytics. The transient storage is hosted in Microsoft data centers in the United States. The snapshots are segregated by commercial ID.  
-
-5. The snapshots are then copied to the appropriate Azure Log Analytics workspace.  
-
-6. Desktop Analytics stores your configurations in Analytics Azure storage. These configurations include deployment plans and asset upgrade decisions.  
--->
-
 
 ## <a name="other-resources"></a>Otros recursos
+
+Para privacidad relacionadas con las preguntas más frecuentes para el análisis de escritorio, consulte [preguntas más frecuentes de privacidad](/sccm/desktop-analytics/faq#privacy).
 
 Para obtener más información sobre los aspectos de privacidad relacionada, consulte los artículos siguientes:
 
@@ -103,18 +86,3 @@ Para obtener más información sobre los aspectos de privacidad relacionada, con
 - [Confianza en la nube de confianza](https://azure.microsoft.com/overview/trusted-cloud/)  
 
 - [Centro de confianza](https://www.microsoft.com/trustcenter)  
-
-
-
-## <a name="faq"></a>Preguntas más frecuentes
-
-### <a name="can-desktop-analytics-be-used-without-a-direct-client-connection-to-the-microsoft-data-management-service"></a>¿Análisis de escritorio se puede usar sin una conexión directa desde el cliente al servicio de administración de datos de Microsoft?
-No, todo el servicio funciona con datos de diagnóstico de Windows, lo que requiere que los dispositivos tienen esta conectividad directa.
-
-
-### <a name="can-i-choose-the-data-center-location"></a>¿Puedo elegir la ubicación del centro de datos?
-
-Para Azure Log Analytics: Sí, al configurar el análisis de escritorio y crear el área de trabajo de Log Analytics.
-
-Para el servicio de administración de datos de Microsoft y análisis de almacenamiento de Azure: No, estos dos servicios se hospedan en los Estados Unidos.
-

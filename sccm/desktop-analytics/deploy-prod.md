@@ -2,7 +2,7 @@
 title: Cómo se implementa en producción
 titleSuffix: Configuration Manager
 description: Guía de procedimientos para implementar en un grupo de producción de análisis de escritorio.
-ms.date: 04/22/2019
+ms.date: 06/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 20067da8eccf9896bcd948f8efa2becd2b35a707
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.openlocfilehash: e93b08766da4abc37ca3663de5fe2919f1953833
+ms.sourcegitcommit: d47d2f03482e48d343e2139a341e61022331e6c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65083474"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67146057"
 ---
 # <a name="how-to-deploy-to-production-with-desktop-analytics"></a>Cómo se implementa en producción con análisis de escritorio
 
@@ -76,23 +76,15 @@ También podría haber recursos en el **atención necesitado** o **resultados mi
 Revise todas las aplicaciones. Una vez que un dispositivo determinado tiene una decisión de actualización positiva para todos los activos, a continuación, su estado cambia a "listo para producción". Ver el recuento actual en la página principal para el plan de implementación seleccionando el tercer paso de implementación, **implementar**.
 
 
-
 ## <a name="bkmk_deploy"></a> Implementar en dispositivos que están preparados
 
 Configuration Manager usa los datos de análisis de escritorio para crear una colección para la implementación de producción. No implemente la secuencia de tareas mediante una implementación tradicional. Utilice el procedimiento siguiente para crear una implementación integrada de análisis de escritorio:
 
-1. En la consola de Configuration Manager, vaya a la **biblioteca de Software**, expanda **Desktop Analytics mantenimiento**y seleccione el **planes de implementación** nodo.  
+Si ha seguido el proceso recomendado para [implementar en dispositivos pilotos](/sccm/desktop-analytics/deploy-pilot#deploy-to-pilot-devices), la implementación por fases de Configuration Manager está lista. Marcar activos como *listo*, análisis de escritorio sincroniza automáticamente los dispositivos en Configuration Manager. Estos dispositivos, a continuación, se agregan a la colección de producción. Cuando la implementación por fases se mueve a la segunda fase, estos dispositivos de producción reciben la implementación de actualización.
 
-2. Seleccione el plan de implementación y, a continuación, seleccione **detalles del Plan de implementación** en la cinta de opciones.  
+Si ha configurado la implementación por fases para **iniciar manualmente la segunda implementación fase**, tiene que mover manualmente a la siguiente fase. Para obtener más información, vea [Administración y supervisión de implementaciones por fases](/sccm/osd/deploy-use/manage-monitor-phased-deployments#bkmk_move).
 
-3. En el **el estado de producción** icono, seleccione **secuencia de tareas** en la lista desplegable.  
-
-    > [!Note]  
-    > No use la **aplicación** opción. Está reservado para futuras funcionalidad.
-
-    Seleccione **implementar**. Esta acción inicia al Asistente para implementar Software para el tipo de objeto seleccionado.
-
-Para obtener más información, vea [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence).
+Si ha creado una implementación única integrada en análisis de escritorio a la colección piloto, deberá Repita el proceso para implementar en la colección de producción.
 
 
 ### <a name="address-deployment-alerts"></a>Alerta de implementación de dirección
@@ -106,7 +98,6 @@ Como con la implementación piloto, análisis de escritorio le advierte de los p
 - Necesita atención - problemas (ordenados por tipo de problema)
 
 ![Producción de captura de pantalla de escritorio Analytics estado de implementación](media/prod-deployment-status.png)
-
 
 
 ## <a name="bkmk_monitor"></a> Supervisar el estado de dispositivos actualizados
