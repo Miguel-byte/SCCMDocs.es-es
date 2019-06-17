@@ -14,8 +14,8 @@
           href: about-assets.md
         - name: Actualizaciones de calidad y características
           href: about-updates.md
-        - name: Riesgo de compatibilidad con aplicaciones Windows
-          href: compat-risk.md
+        - name: Evaluación de compatibilidad
+          href: compat-assessment.md
         - name: Supervisión del estado de mantenimiento
           href: health-status-monitoring.md
     - name: Guías de procedimientos
@@ -32,8 +32,6 @@
           href: deploy-pilot.md
         - name: Implementación en producción
           href: deploy-prod.md
-        - name: Evaluación de la compatibilidad con App Health Analyzer
-          href: app-health-analyzer.md
     - name: Referencia
       items:
         - name: Habilitación del uso compartido de datos
