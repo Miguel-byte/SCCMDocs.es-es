@@ -2,7 +2,7 @@
 title: Habilitación del uso compartido de datos
 titleSuffix: Configuration Manager
 description: Guía de referencia para uso compartido de datos de diagnóstico con análisis de escritorio.
-ms.date: 06/05/2019
+ms.date: 06/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,14 +10,13 @@ ms.assetid: be680198-4cea-4378-a686-d52f382ba483
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7292fdd3cc370af314cef95a4b782616e315a0cb
-ms.sourcegitcommit: 725e1bf7d3250c2b7b7be9da01135517428be7a1
+ms.openlocfilehash: 3eff032113b92055b32cb81c6cae9363c368a421
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821981"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159108"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Habilitar uso compartido para el escritorio de análisis de datos
 
@@ -61,6 +60,7 @@ Para habilitar el uso compartido de datos, configure el servidor proxy para perm
 
 | punto de conexión  | Función  |
 |-----------|-----------|
+| `https://aka.ms` | Utilizado para localizar el servicio |
 | `https://v10c.events.data.microsoft.com` | Experiencia del usuario conectado y el punto de conexión de diagnóstico del componente. Utilizado por los dispositivos que ejecutan Windows 10, versión 1703 o posterior, con 2018-09 acumulativa update o posterior instalado. |
 | `https://v10.events.data.microsoft.com` | Experiencia del usuario conectado y el punto de conexión de diagnóstico del componente. Utilizado por los dispositivos que ejecutan Windows 10, versión 1803 o posterior, _sin_ instalada la actualización acumulativa de 2018-09. |
 | `https://v10.vortex-win.data.microsoft.com` | Experiencia del usuario conectado y el punto de conexión de diagnóstico del componente. Utilizado por dispositivos que ejecutan Windows 10, versión 1709 o versiones anterior. |

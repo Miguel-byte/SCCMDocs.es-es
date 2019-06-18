@@ -10,14 +10,13 @@ ms.assetid: 637fbd8e-b8ea-4c7e-95ee-a60a323c496e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e18e2e43e9bb768f81233fb2d2deda0ae05c1961
-ms.sourcegitcommit: d47d2f03482e48d343e2139a341e61022331e6c2
+ms.openlocfilehash: 5ee3d2c35424820658f91628b5f6e23be41498b2
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67145837"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159132"
 ---
 # <a name="how-to-deploy-to-pilot-with-desktop-analytics"></a>Implementación piloto con análisis de escritorio
 
@@ -58,12 +57,9 @@ También puede tomar decisiones de todo el sistema acerca de las colecciones de 
     - Todos los dispositivos de TI
     - Oficina del director ejecutivo
 - En el **piloto Global** configuración, incluye el **dispositivos informáticos todas** colecciones. Excluir la **office CEO** colección.
-- Crear un plan de implementación y seleccione el **todo Windows 10 clientes** colección.
-- Su **piloto dispositivos incluidos** lista contiene los siguientes conjuntos de dispositivos:
-    - Los dispositivos en la lista de inclusión piloto global: **Todos los dispositivos de TI**
-    - Colecciones que también forman parte del grupo de destino del plan de implementación: **Todos los clientes de Windows 10**
-- Análisis de escritorio se excluyen de la **adicionales recomendados dispositivos** enumerar los dispositivos en la prueba piloto global *exclusión* lista: **Oficina del director ejecutivo**
-- Solo las dos primeras colecciones se consideran como parte de la prueba piloto. Después de que las actualizaciones correctas a esos grupos y los activos se *listo*, Analytics escritorio sincroniza los dispositivos en el **office CEO** a la recopilación de producción de Configuration Manager.
+- Crear un plan de implementación y seleccione **todo Windows 10 clientes** colección como su **grupo de destino**.
+- El **piloto dispositivos incluidos** lista contiene el subconjunto de los dispositivos en su **grupo de destino**: **Todos los clientes de Windows 10** que también están en el proyecto piloto Global *inclusión* lista: **Todos los dispositivos de TI**  
+- El **dispositivos adicionales recomienda** listas contiene un conjunto de dispositivos de su **grupo de destino** que proporcionan la máxima cobertura y redundancia para los recursos importantes.  Análisis de escritorio excluyen de esta lista los dispositivos en la prueba piloto global *exclusión* lista: **Oficina del director ejecutivo**
 
 
 ## <a name="address-issues"></a>Solucionar problemas
@@ -117,12 +113,9 @@ Configuration Manager usa los datos de análisis de escritorio para crear colecc
     > [!Note]  
     > Usar la configuración predeterminada para **iniciar automáticamente esta fase tras un período de aplazamiento (en días)** . Para que la segunda fase de inicio, se deben cumplir los siguientes criterios:
     >
-    > 1. Dispositivos pilotos deben actualizar y Enviar atrás revisión los datos de diagnóstico.
     > 1. La primera fase alcanza el **porcentaje de éxito de implementación** criterios de éxito. Esta configuración en la implementación por fases.
     > 1. Debe revisar y tomar decisiones de actualización en el escritorio de análisis para marcar recursos importantes y esenciales como *listo*. Para obtener más información, consulte [revisar los recursos que necesitan una decisión de actualización](/sccm/desktop-analytics/deploy-prod#bkmk_review).
     > 1. Análisis de escritorio sincroniza a las colecciones de Configuration Manager los dispositivos de producción que cumplen el *listo* criterios.
-    >
-    > Cuando el Administrador de configuración por fases implementación mueve automáticamente a la fase siguiente, solo se aplica a los dispositivos que se sincroniza el análisis de escritorio en la colección de producción.
 
 > [!Important]  
 > Estas colecciones continuarán con la sincronización como sus cambios de pertenencia. Por ejemplo, si identifica un problema con un recurso y márquelo como **no se puede**, los dispositivos con ese recurso ya no cumplen la *listo* criterios. Estos dispositivos se quitan de la colección de la implementación de producción.
@@ -138,7 +131,7 @@ Abra el plan de implementación. El **decisión de actualizar preparación - est
 
 - **Completa de la decisión de actualización**: Uno de los siguientes estados:
     - Los dispositivos a los recursos importantes que son **listo** o **preparado con la corrección**
-    - El estado del dispositivo es **bloqueado**, **dispositivo reemplazar** o **volver a instalar el dispositivo**
+    - El estado del dispositivo es **bloqueado**, [ **dispositivo reemplazar** ](/sccm/desktop-analytics/about-deployment-plans#plan-assets) o **volver a instalar el dispositivo**
 
 - **No se ha revisado**: Dispositivos con activos notables **no revisado** o **revisión en curso**
 

@@ -10,14 +10,13 @@ ms.assetid: 63e08f3f-9558-4ed7-9bf3-3a185ddaac5c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: acaefcf2c505786dcc65fa7c74063765ca2fe0cf
-ms.sourcegitcommit: e3c1eb0b75d79c05a750d49354c851d15d5e26a3
+ms.openlocfilehash: 305c31c2a40e51b84a0a5da671db1c3f6dad6f2e
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67038651"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159008"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>Solución de problemas de análisis de escritorio
 
@@ -43,7 +42,7 @@ Muchos problemas comunes están provocados por los requisitos previos que faltan
 
 
 
-## <a name="monitor-connection-health"></a>Supervisión de estado de conexión
+## <a name="monitor-connection-health"></a>Supervisión del estado de conexión
 
 Use la **mantenimiento de la conexión** panel en Configuration Manager para profundizar en categorías por estado de dispositivos. En la consola de Configuration Manager, vaya a la **biblioteca de Software** área de trabajo, expanda el **escritorio Analytics mantenimiento** nodo y seleccione el **estado de conexión** panel.  
 
@@ -52,29 +51,7 @@ Para obtener más información, consulte [supervisar el estado de conexión](/sc
 
 ## <a name="log-files"></a>Archivos de registro
 
-Use los siguientes archivos de registro para ayudar a solucionar problemas con Analytics escritorio integrado con Configuration Manager.
-
-
-### <a name="service-connection-point"></a>Punto de conexión de servicio
-
-Los siguientes archivos de registro están en el punto de conexión de servicio en el siguiente directorio: `C:\Program Files\Configuration Manager\Logs\M365A`:
-
-| Registro | Descripción |
-|---------|---------|
-| **M365ADeploymentPlanWorker.log** | Información acerca de la sincronización del plan de implementación de análisis de escritorio en la nube de servicio en el Administrador de configuración local |
-| **M365ADeviceHealthWorker.log** | Información sobre el estado del dispositivo se cargue desde el Administrador de configuración para la nube de Microsoft |
-| **M365AUploadWorker.log** | Información sobre la recopilación y el dispositivo se cargue desde el Administrador de configuración para la nube de Microsoft |
-| **SmsAdminUI.log** | Información acerca de la actividad de la consola de Configuration Manager, como la configuración de los servicios de nube de Azure  |
-
-
-### <a name="configuration-manager-client"></a>Cliente de Configuration Manager
-
-Los siguientes archivos de registro se encuentran en el cliente de Configuration Manager en el siguiente directorio: `C:\Windows\CCM\logs`:
-
-| Registro | Descripción |
-|---------|---------|
-| **M365AHandler.log** | Información sobre la configuración de directiva de análisis de escritorio |
-
+Para obtener más información, consulte [los archivos de registro para el análisis de escritorio](/sccm/core/plan-design/hierarchy/log-files#desktop-analytics)
 
 ### <a name="enable-verbose-logging"></a>Habilitar el registro detallado
 

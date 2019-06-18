@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6a4cfbc7e9db5f4402278b73c2ca7ea1d869953
-ms.sourcegitcommit: 18a94eb78043cb565b05cd0e9469b939b29cccf0
-ms.translationtype: MT
+ms.openlocfilehash: c0b8d24e536348ed853762cb5aa620e76495e064
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66355032"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159438"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Novedades de la administración híbrida de dispositivos móviles con Configuration Manager y Microsoft Intune
 
@@ -201,7 +201,7 @@ El nuevo [página Estado del inquilino](https://docs.microsoft.com/intune/tenant
 #### <a name="new-help-and-support-experience-in-company-portal-for-windows-10"></a>La nueva ayuda y soporte técnico de experiencia en el Portal de empresa para Windows 10
 
 <!--1488939-->  
-La nueva página de Ayuda del Portal de empresa y soporte técnico ayuda a los usuarios a solucionar problemas y solicitar ayuda para problemas de aplicación y el acceso. En la página nueva, pueden enviar por correo electrónico de error y los detalles de registro de diagnóstico y encontrar los detalles del departamento de soporte técnico de su organización. También encontrará una sección de preguntas más frecuentes con vínculos a la documentación pertinente de Intune. Para obtener más información y capturas de pantalla, consulte [Obtenga ayuda y soporte técnico en el Portal de empresa para Windows 10](https://docs.microsoft.com/intune-user-help/help-and-support-windows-cpapp).
+La nueva página de Ayuda del Portal de empresa y soporte técnico ayuda a los usuarios a solucionar problemas y solicitar ayuda para problemas de aplicación y el acceso. En la página nueva, pueden enviar por correo electrónico de error y los detalles de registro de diagnóstico y encontrar los detalles del departamento de soporte técnico de su organización. También encontrará una sección de preguntas más frecuentes con vínculos a la documentación pertinente de Intune. Para obtener más información y capturas de pantalla, consulte [Obtenga ayuda y soporte técnico en el Portal de empresa para Windows 10](https://docs.microsoft.com/intune-user-help/help-support-windows-cpapp).
 
 #### <a name="some-bitlocker-settings-support-windows-10-pro-edition"></a>Algunas opciones de configuración de BitLocker admiten la edición Windows 10 Pro
 
@@ -376,7 +376,7 @@ La vista **Instaladas** de la página **Aplicaciones** le permite ver detalles s
 #### <a name="more-opportunities-to-sync-in-the-company-portal-app-for-windows"></a>Más oportunidades para la sincronización en la aplicación de Portal de empresa para Windows
 
 <!--2683177-->  
-La aplicación de Portal de empresa para Windows ahora le permite iniciar una sincronización directamente desde la barra de tareas de Windows y el menú Inicio. Esta característica es especialmente útil si la única tarea es sincronizar dispositivos y obtener acceso a recursos corporativos. Para obtener acceso a la nueva característica, haga clic con el botón derecho en el icono de Portal de empresa que está anclado a la barra de tareas o al menú Inicio. En las opciones de menú, seleccione **Sincronizar este dispositivo**. (Este menú también se conoce como una Jump List.) Portal de empresa se abre en la página **Configuración** e inicia la sincronización. Para obtener información sobre el procedimiento actualizado, vea [Sincronización manual del dispositivo Windows](https://docs.microsoft.com/intune/intune-user-help/sync-your-device-manually-windows#sync-from-device-taskbar-or-start-menu).
+La aplicación de Portal de empresa para Windows ahora le permite iniciar una sincronización directamente desde la barra de tareas de Windows y el menú Inicio. Esta característica es especialmente útil si la única tarea es sincronizar dispositivos y obtener acceso a recursos corporativos. Para obtener acceso a la nueva característica, haga clic con el botón derecho en el icono de Portal de empresa que está anclado a la barra de tareas o al menú Inicio. En las opciones de menú, seleccione **Sincronizar este dispositivo**. (Este menú también se conoce como una Jump List.) Portal de empresa se abre en la página **Configuración** e inicia la sincronización. Para obtener información sobre el procedimiento actualizado, vea [Sincronización manual del dispositivo Windows](https://docs.microsoft.com/intune-user-help/sync-your-device-manually-windows#sync-from-device-taskbar-or-start-menu).
 
 
 

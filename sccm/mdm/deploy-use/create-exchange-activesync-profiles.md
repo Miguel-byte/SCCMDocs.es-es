@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3bf178465f5aff508daca1d87b1b548a42db931d
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: a9d1b5e96dc8d2a43dfc39b9d1b2cd9678c083c9
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275739"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159423"
 ---
 # <a name="exchange-activesync-email-profiles-in-system-center-configuration-manager"></a>Perfiles de correo electrónico de Exchange ActiveSync en System Center Configuration Manager
 
@@ -40,7 +40,7 @@ Para implementar los perfiles de correo electrónico en los dispositivos, debe i
 
  Además de configurar una cuenta de correo electrónico en el dispositivo, también puede configurar opciones de sincronización de contactos, calendarios y tareas.  
 
- Cuando cree un perfil de correo electrónico, puede incluir una amplia gama de opciones de seguridad. Estas opciones incluyen certificados para la identidad, el cifrado y la firma que se han configurado mediante de perfiles de certificado de System Center Configuration Manager. Para obtener más información sobre los perfiles de certificado, consulte [Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles.md) (Perfiles de certificado en Configuration Manager).    
+ Cuando cree un perfil de correo electrónico, puede incluir una amplia gama de opciones de seguridad. Estas opciones incluyen certificados para la identidad, el cifrado y la firma que se han configurado mediante de perfiles de certificado de System Center Configuration Manager. Para obtener más información sobre los perfiles de certificado, consulte [Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles) (Perfiles de certificado en Configuration Manager).    
 
 ## <a name="create-an-exchange-activesync-email-profile"></a>Creación de un perfil de correo electrónico de Exchange ActiveSync  
 
