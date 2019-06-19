@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 27df5154a55717a06924bc906edd2c7f6a4f9a2b
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
-ms.translationtype: HT
+ms.openlocfilehash: 78926fb271bf1663dbd497f1894e3b4acbffd08b
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67158365"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194642"
 ---
 # <a name="past-hybrid-features-with-system-center-configuration-manager-and-microsoft-intune"></a>Características híbridas anteriores con System Center Configuration Manager y Microsoft Intune
 
@@ -113,7 +113,7 @@ Las siguientes características no estaban disponibles anteriormente en las vers
 
 - [Compatibilidad de Android for Work](/sccm/core/plan-design/changes/whats-new-in-version-1702##android-for-work-support)
 - [Configuración de cumplimiento de aplicaciones no compatibles](/sccm/core/plan-design/changes/whats-new-in-version-1702#conditional-access-device-compliance-policy-improvements)
-- [Creación y distribución de certificados PFX y compatibilidad con S/MIME](/sccm/core/plan-design/changes/whats-new-in-version-1702#improvements-to-certificate-profiles)
+- [Creación y distribución de certificados PFX y compatibilidad con S/MIME](/sccm/core/plan-design/changes/whats-new-in-version-1702#mobile-device-management)
 - [En los asistentes para creación de MDM híbrida, ya no se pueden seleccionar como destino las versiones de iOS y Android](/sccm/core/plan-design/changes/whats-new-in-version-1702#android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm)
 
 También se incluyen las siguientes características adicionales híbridas en la versión 1702 de Configuration Manager (rama actual):
@@ -192,7 +192,7 @@ También se incluyen las siguientes características adicionales híbridas en la
 
 - **Se ha resuelto el problema por el que los dispositivos iOS están inactivos o la consola de administración no puede comunicarse con ellos**
 
-  Cuando los dispositivos de los usuarios pierden el contacto con Intune, puede aplicar nuevos pasos de solución de problemas para ayudarles a recuperar el acceso a los recursos de la empresa. Vea [Los dispositivos iOS están inactivos o la consola de administración no puede comunicarse con ellos](https://docs.microsoft.com/intune/troubleshoot/troubleshoot-device-enrollment-in-intune#devices-are-inactive-or-the-admin-console-cannot-communicate-with-them).
+  Cuando los dispositivos de los usuarios pierden el contacto con Intune, puede aplicar nuevos pasos de solución de problemas para ayudarles a recuperar el acceso a los recursos de la empresa. Vea [Los dispositivos iOS están inactivos o la consola de administración no puede comunicarse con ellos](https://docs.microsoft.com/intune/troubleshoot/troubleshoot-device-enrollment-in-intune#devices-are-inactive-or-the-admin-console-cant-communicate-with-them).
 
 ### <a name="new-in-configuration-manager-technical-preview-1701"></a>Novedades de Configuration Manager Technical Preview 1701
 
@@ -571,7 +571,7 @@ No se ha incorporado ninguna característica híbrida nueva en junio de 2016 par
 
   Acciones comunes como **Retirar/borrar**, **Restablecer contraseña**, **Bloqueo remoto** y **Omitir bloqueo de activación** ahora se encuentran en el menú **Acciones de dispositivo remoto**, al que se accede desde el área de trabajo **Activos y compatibilidad**.
 
-  Para obtener más información, consulte [New experience for remote device actions](/sccm/core/get-started/capabilities-in-technical-preview-1605#new-experience-for-remote-device-actions) (Nueva experiencia para acciones del dispositivo remoto) en [Capabilities in Technical Preview 1605 for System Center Configuration Manager](/sccm/core/get-started/capabilities-in-technical-preview-1605) (Capacidades de Technical Preview 1605 para System Center Configuration Manager).  
+  Para obtener más información, consulte [New experience for remote device actions](/sccm/core/get-started/capabilities-in-technical-preview-1605#BKMK_Remote) (Nueva experiencia para acciones del dispositivo remoto) en [Capabilities in Technical Preview 1605 for System Center Configuration Manager](/sccm/core/get-started/capabilities-in-technical-preview-1605) (Capacidades de Technical Preview 1605 para System Center Configuration Manager).  
 
 - **Tienda Windows para aplicaciones empresariales**
 
@@ -635,7 +635,7 @@ No se ha incorporado ninguna característica híbrida nueva en junio de 2016 par
 - **Buscar, administrar y distribuir aplicaciones de la Tienda Windows para empresas para dispositivos Windows 10 desde la consola de Configuration Manager**
 
 
-  Hay compatibilidad con la Tienda Windows para empresas en Configuration Manager Technical Preview 1604 para ayudarle a buscar, administrar y distribuir aplicaciones en los dispositivos Windows 10 que administre. Para obtener información, consulte [Manage volume-purchased apps from the Windows Store for Business](/sccm/core/get-started/capabilities-in-technical-preview-1604#manage-volume-purchased-apps-from-the-windows-store-for-business) (Administración de aplicaciones adquiridas por volumen de la Tienda Windows para empresas) en [Capabilities in Technical Preview 1604 for System Center Configuration Manager](/sccm/core/get-started/capabilities-in-technical-preview-1604) (Capacidades de Technical Preview 1604 para System Center Configuration Manager).  
+  Hay compatibilidad con la Tienda Windows para empresas en Configuration Manager Technical Preview 1604 para ayudarle a buscar, administrar y distribuir aplicaciones en los dispositivos Windows 10 que administre. Para obtener información, consulte [Manage volume-purchased apps from the Windows Store for Business](/sccm/core/get-started/capabilities-in-technical-preview-1604#BKMK_WindowsVPP) (Administración de aplicaciones adquiridas por volumen de la Tienda Windows para empresas) en [Capabilities in Technical Preview 1604 for System Center Configuration Manager](/sccm/core/get-started/capabilities-in-technical-preview-1604) (Capacidades de Technical Preview 1604 para System Center Configuration Manager).  
 
 - **Configuración de Smart Lock para dispositivos Android**
 

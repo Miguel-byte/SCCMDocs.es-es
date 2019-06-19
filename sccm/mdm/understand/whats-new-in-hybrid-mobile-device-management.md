@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c0b8d24e536348ed853762cb5aa620e76495e064
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
-ms.translationtype: HT
+ms.openlocfilehash: da4798b958e0fd66e53024a2a104a67b3c1b93ea
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159438"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194608"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Novedades de la administración híbrida de dispositivos móviles con Configuration Manager y Microsoft Intune
 
@@ -646,7 +646,7 @@ Con Azure Active Directory (Azure AD), ya puede restringir el acceso a sitios we
 ### <a name="new-in-configuration-manger-technical-preview-1711"></a>Novedades de Configuration Manager Technical Preview 1711
 
 - **Nuevas opciones de directivas de cumplimiento para Windows 10**   
-  Ahora puede configurar nuevas opciones para las directivas de conformidad en los dispositivos Windows 10. La nueva configuración incluye directivas para Firewall, Control de cuentas de usuario, Antivirus de Windows Defender y control de versiones de compilación del sistema operativo. Para obtener información, vea [Nuevas opciones de directivas de cumplimiento para Windows 10](/sccm/core/get-started/capabilities-in-technical-preview-1711#new-compliance-policy-options-for-windows-10).
+  Ahora puede configurar nuevas opciones para las directivas de conformidad en los dispositivos Windows 10. La nueva configuración incluye directivas para Firewall, Control de cuentas de usuario, Antivirus de Windows Defender y control de versiones de compilación del sistema operativo. Para obtener información, vea [Nuevas opciones de directivas de cumplimiento para Windows 10](/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client).
 
 
 
@@ -704,7 +704,7 @@ Con Azure Active Directory (Azure AD), ya puede restringir el acceso a sitios we
   <!--1428681-->    
 
 - **Bloqueo de la inscripción de los dispositivos Samsung Knox no compatibles**   
-  La aplicación del Portal de empresa solo intenta inscribir los dispositivos Samsung Knox compatibles. Para evitar errores de activación de KNOX que impidan la inscripción de MDM, solo se intenta la inscripción de dispositivos si el dispositivo aparece en la [lista de dispositivos publicados por Samsung](https://www.samsungknox.com/knox-supported-devices/knox-workspace). Puede que algunos dispositivos Samsung tengan números de modelo que admitan KNOX y otros no. Compruebe la compatibilidad de Knox con su revendedor de dispositivos antes de su compra e implementación. Puede encontrar la lista completa de dispositivos comprobados en la [configuración de directivas de Android y Samsung KNOX Standard](https://docs.microsoft.com/intune-classic/deploy-use/android-policy-settings-in-microsoft-intune#supported-samsung-knox-standard-devices).
+  La aplicación del Portal de empresa solo intenta inscribir los dispositivos Samsung Knox compatibles. Para evitar errores de activación de KNOX que impidan la inscripción de MDM, solo se intenta la inscripción de dispositivos si el dispositivo aparece en la [lista de dispositivos publicados por Samsung](https://www.samsungknox.com/knox-supported-devices/knox-workspace). Puede que algunos dispositivos Samsung tengan números de modelo que admitan KNOX y otros no. Compruebe la compatibilidad de Knox con su revendedor de dispositivos antes de su compra e implementación. Puede encontrar la lista completa de dispositivos comprobados en [inscribir automáticamente los dispositivos Android mediante el uso Knox Mobile inscripción de Samsung](https://docs.microsoft.com/intune/android-samsung-knox-mobile-enroll#prerequisites).
   <!-- 1490695 -->     
 
 - **Finalización del soporte técnico para Android 4.3 y versiones anteriores**     
@@ -712,7 +712,7 @@ Con Azure Active Directory (Azure AD), ya puede restringir el acceso a sitios we
   <!--1171126, 1326920 -->     
 
 - **Información a los usuarios finales de qué información del dispositivo se puede ver en los dispositivos inscritos**     
-  Se va a agregar la opción **Tipo de propiedad** a la pantalla Detalles del dispositivo en todas las aplicaciones del Portal de empresa. Esta información permite a los usuarios obtener más información sobre privacidad directamente en el artículo [¿Qué información puede ver mi empresa cuando inscribo mi dispositivo?](https://docs.microsoft.com/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune). Esta mejora se va a implementar en todas las aplicaciones de Portal de empresa en un futuro cercano. Esta característica se anunció para iOS en [septiembre](https://docs.microsoft.com/intune/whats-new#week-of-september-11-2017). 
+  Se va a agregar la opción **Tipo de propiedad** a la pantalla Detalles del dispositivo en todas las aplicaciones del Portal de empresa. Esta información permite a los usuarios obtener más información sobre privacidad directamente en el artículo [¿Qué información puede ver mi empresa cuando inscribo mi dispositivo?](https://docs.microsoft.com/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune). Esta mejora se va a implementar en todas las aplicaciones de Portal de empresa en un futuro cercano. Esta característica se anunció para iOS en [septiembre](#september-2017). 
   <!--1165314-->     
 
 

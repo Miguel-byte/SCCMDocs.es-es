@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4e829d92b099be3fbf77796ea604d9d33db252c
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 8762282c6a5007642e2cc174b9d2496b2d705c24
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273654"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194659"
 ---
 # <a name="configure-and-deploy-lookout-for-work-apps"></a>Configurar e implementar aplicaciones Lookout for Work
 
@@ -68,7 +68,7 @@ En este artículo se explica cómo configurar e implementar la aplicación Looko
        | Lookout MTP     | Acceder a Lookout MTP         |
        | Microsoft Graph     | Iniciar sesión y leer el perfil de usuario        |  
 
-   Para más información, vea [Configurar una aplicación de cliente nativo](/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#optional-configure-a-native-client-application).  
+   Para más información, vea [Configurar una aplicación de cliente nativo](/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#configure-a-native-client-application).  
 
 
 4. En Configuration Manager, cargue el archivo .ipa con la nueva firma. Establezca la versión mínima del sistema operativo en iOS 8.0 o posterior. Para obtener más información, consulte [Crear aplicaciones iOS](/sccm/apps/get-started/creating-ios-applications).   

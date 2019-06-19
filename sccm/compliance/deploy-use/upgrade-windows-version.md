@@ -2,7 +2,7 @@
 title: Actualización de dispositivos Windows a una versión diferente
 titleSuffix: Configuration Manager
 description: Actualice dispositivos que ejecuten Windows 10 Escritorio o Windows 10 Mobile a otra edición más reciente de forma automática con Configuration Manager.
-ms.date: 01/26/2018
+ms.date: 06/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3cda70e7a5f1b2cf7dec079a7e933af48f0bf8ad
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 87105e2f9fa090c171b35ed4cb8a6523c624eca4
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128405"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834849"
 ---
 # <a name="upgrade-windows-devices-with-the-edition-upgrade-policy-in-system-center-configuration-manager"></a>Actualizar dispositivos de Windows con la directiva de actualización de edición en System Center Configuration Manager
 
@@ -39,9 +39,9 @@ Los dispositivos deben estar inscritos en Microsoft Intune o ejecutar el softwar
 ## <a name="before-you-start"></a>Antes de empezar  
  Antes de empezar a actualizar dispositivos a la versión más reciente, consulte los requisitos previos siguientes:  
 
--   Para las ediciones de escritorio de Windows 10: una clave de producto válida para la nueva versión de Windows en todos los dispositivos donde quiera aplicar la directiva. Esta clave de producto puede ser una clave de activación múltiple (CAM) o una clave de licencias por volumen genérica (CLVG). Las CLVG también se conocen como claves de configuración de cliente del servicio de administración de claves (SAC). Para obtener más información, consulte [Plan para la activación por volumen](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). Para obtener una lista de claves de configuración de cliente KMS, consulte el [Apéndice A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) de la Guía de activación de Windows Server. <!--496871-->  
+-   Para las ediciones de escritorio de Windows 10: una clave de producto válida para instalar la nueva versión de Windows en todos los dispositivos de destino de la directiva. Esta clave de producto puede ser una clave de activación múltiple (CAM) o una clave de licencias por volumen genérica (CLVG). Las CLVG también se conocen como claves de configuración de cliente del servicio de administración de claves (SAC). Para obtener más información, consulte [Plan para la activación por volumen](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). Para obtener una lista de claves de configuración de cliente KMS, consulte el [Apéndice A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) de la Guía de activación de Windows Server. <!--496871-->  
 
--   Para Windows 10 Mobile: un archivo de licencia XML del Centro de servicios de licencias por volumen (VLSC) de Microsoft. Este archivo contiene la información de licencia para la nueva versión de Windows en todos los dispositivos de destino de la directiva.
+-   Para Windows 10 Mobile: un archivo de licencia XML del Centro de servicios de licencias por volumen (CSLV) de Microsoft. Este archivo contiene la información de licencia para la nueva versión de Windows en todos los dispositivos de destino de la directiva.
 
 - Para administrar este tipo de directiva, debe ocupar el rol de seguridad de **Administrador total** de Configuration Manager.
 
@@ -91,8 +91,8 @@ Supervise esta implementación desde el nodo **Implementaciones** del espacio de
 
 Estos errores no significan que hubo un error en la implementación. En el equipo de destino, compruebe que la actualización se realizó correctamente.
 
-Una vez que el cliente haya evaluado la directiva de destino, se reiniciará en un plazo de dos horas para que se aplique la actualización. Asegúrese de informar a los usuarios a los que implemente la directiva, o prográmela para que se ejecute fuera del horario laboral de los usuarios.
+Una vez que el cliente haya evaluado la directiva de destino, aplicará la actualización un plazo de dos horas. [Si la ruta de actualización requiere un reinicio](https://docs.microsoft.com/windows/deployment/upgrade/windows-10-edition-upgrades), se reiniciará en ese momento. Asegúrese de informar a los usuarios a los que implemente la directiva, o prográmela para que se ejecute fuera del horario laboral de los usuarios.
 
-Si aparece el siguiente error en **DcmWmiProvider.log** del cliente, asegúrese de usar la clave correcta para su escenario de activación. Para obtener más información, consulte la sección [Antes de empezar](#before-you-start). Si usa un servicio de administración de claves para la activación, asegúrese de usar un [clave de configuración de cliente KMS](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys).  <!-- 496871 -->   
+Si aparece el siguiente error en **DcmWmiProvider.log** en el cliente, asegúrese de usar la clave correcta para su escenario de activación. Para obtener más información, consulte la sección [Antes de empezar](#before-you-start). Si usa un servicio de administración de claves para la activación, asegúrese de usar una [clave de configuración de cliente KMS](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys).  <!-- 496871 -->   
 
 `Failed to execute CheckApplicabilityMethod with error = 0x80041001 OsEditionUpgradeProvider`

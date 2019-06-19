@@ -2,7 +2,7 @@
 title: Pasos de la secuencia de tareas
 titleSuffix: Configuration Manager
 description: Obtenga información sobre los pasos que puede agregar a una secuencia de tareas de Configuration Manager.
-ms.date: 05/28/2019
+ms.date: 06/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d257d9fd328b04b35ff4c4d29b8a8bbd82ae565
-ms.sourcegitcommit: 18a94eb78043cb565b05cd0e9469b939b29cccf0
-ms.translationtype: MTE75
+ms.openlocfilehash: 6229c0fe0702eac61b482c31195fd35fe3c5792f
+ms.sourcegitcommit: c43996b3cf083d919ff1ccc3d510af664aec4ed4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66355062"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67047002"
 ---
 # <a name="task-sequence-steps"></a>Pasos de la secuencia de tareas
 
@@ -1525,6 +1525,9 @@ Utilice las siguientes variables de secuencia de tareas con este paso:
 - [OSDLogPowerShellParameters](/sccm/osd/understand/task-sequence-variables#OSDLogPowerShellParameters) (a partir de la versión 1902)<!--3556028-->  
 
 Para agregar este paso en el editor de secuencia de tareas, seleccione **Agregar**, **General** y **Ejecutar Script PowerShell**.
+
+> [!Note]  
+> Use scripts de PowerShell firmados en formato Unicode. El formato ANSI, que es el predeterminado, no funciona con este paso.
 
 ### <a name="properties"></a>Propiedades  
 

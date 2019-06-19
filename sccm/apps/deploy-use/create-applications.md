@@ -2,7 +2,7 @@
 title: Crear aplicaciones
 titleSuffix: Configuration Manager
 description: Cree aplicaciones con tipos de implementación, métodos de detección y requisitos para instalar el software.
-ms.date: 05/08/2019
+ms.date: 06/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c54eb02fe3de3246a7c8ed15e7589fcd4d9b1c9b
-ms.sourcegitcommit: abfc9e1b3945637fa93ca8d3a11519493a5d5391
+ms.openlocfilehash: 6302ca8e1f01f51bef09df2175c4525effd89a7e
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66264428"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834814"
 ---
 # <a name="create-applications-in-configuration-manager"></a>Crear aplicaciones en Configuration Manager
 
@@ -312,9 +312,25 @@ Este procedimiento configura un método de detección que indica la presencia de
 
 4.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Regla de detección**.  
 
-Cuando cree más de un método de detección para un tipo de implementación, debe crear una lógica más compleja mediante la agrupación de las cláusulas. 
+Cuando cree más de un método de detección para un tipo de implementación, puede crear una lógica más compleja mediante la agrupación de las cláusulas.  
 
-Continúe con la siguiente sección sobre el uso de un script personalizado como un método de detección. También puede saltar a las opciones de [Experiencia del usuario](#bkmk_dt-ux) para el tipo de implementación.
+#### <a name="group-detection-clauses-optional"></a>Agrupación de cláusulas de detección *(opcional)*
+
+1.  Cree tres o más cláusulas del método de detección en un tipo de implementación.  
+
+2.  Seleccione dos o más cláusulas consecutivas y, a continuación, elija **Grupo**. Verá los paréntesis agregados a las columnas asociadas, que mostrarán dónde empieza y acaba el grupo.  
+
+    Ejemplo: 
+
+    | Conector  |  ( | Cláusula           |  PE).  | 
+    |------------|----|------------------|-----| 
+    |            |    | Código de producto de MSI |     | 
+    | \- O bien -         | (  | file1.text existe|     | 
+    | And        |    | file2.txt existe | PE).   | 
+
+3.  Para quitar el grupo, seleccione las cláusulas agrupadas y, a continuación, Elija **Desagrupar**.  
+
+*Continúe* con la siguiente sección sobre el uso de un script personalizado como método de detección. También puede *saltar* a las opciones de [Experiencia del usuario](#bkmk_dt-ux) para el tipo de implementación.
 
 
 #### <a name="bkmk_detect-script"></a> Usar un script personalizado para determinar la presencia de un tipo de implementación  
