@@ -48,7 +48,7 @@ Para completar este procedimiento, la cuenta que utilice debe cumplir los requis
    - **Será miembro del grupo de disponibilidad:**  
      Si utiliza este servidor como miembro de la réplica principal inicial del grupo de disponibilidad, no es necesario restaurar una copia de la base de datos de sitio en este u otro servidor del grupo. La base de datos ya estará disponible en la réplica principal, y SQL Server replicará la base de datos en las réplicas secundarias en un paso posterior.  
 
-     -    **No será miembro del grupo de disponibilidad:**   
+     -    **No será miembro del grupo de disponibilidad:**    
      Restaure una copia de la base de datos de sitio en el servidor que hospedará la réplica principal del grupo.
 
    Para obtener información sobre cómo completar este paso, vea [Crear una copia de seguridad completa de base de datos (SQL Server)](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server) y [Restaurar una copia de seguridad de base de datos con SSMS](/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms) en la documentación de SQL Server.
