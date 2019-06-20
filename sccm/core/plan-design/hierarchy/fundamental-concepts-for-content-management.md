@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ffed5e06cca06c5976ac81eecfaca53032bdbc2
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: abb8e846598a9ae0d69eb1b134911ec83006b966
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56140085"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834901"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Aspectos básicos de la administración de contenido en Configuration Manager
 
@@ -88,14 +88,16 @@ Para obtener más información, vea [Compatibilidad con Windows BranchCache](/sc
 
 
 ## <a name="delivery-optimization"></a>Optimización de entrega
-<!-- 1324696 --> Los grupos de límites de Configuration Manager se usan para definir y regular la distribución de contenido a través de la red corporativa y en las oficinas remotas. La [optimización de distribución de Windows](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) es una tecnología entre iguales basada en la nube para compartir contenido entre los dispositivos de Windows 10. A partir de la versión 1802, configure la optimización de entrega para usar los grupos de límites al compartir contenido entre iguales. La configuración de cliente aplica el identificador del grupo de límites como el identificador del grupo de optimización de entrega en el cliente. Cuando el cliente se comunica con el servicio en la nube de optimización de distribución, utiliza este identificador para buscar elementos del mismo nivel con el contenido deseado. Para obtener más información, vea la configuración de cliente de [optimización de distribución](/sccm/core/clients/deploy/about-client-settings#delivery-optimization).
+<!-- 1324696 -->
+Los grupos de límites de Configuration Manager se usan para definir y regular la distribución de contenido a través de la red corporativa y en las oficinas remotas. La [optimización de distribución de Windows](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) es una tecnología entre iguales basada en la nube para compartir contenido entre los dispositivos de Windows 10. A partir de la versión 1802, configure la optimización de entrega para usar los grupos de límites al compartir contenido entre iguales. La configuración de cliente aplica el identificador del grupo de límites como el identificador del grupo de optimización de entrega en el cliente. Cuando el cliente se comunica con el servicio en la nube de optimización de distribución, utiliza este identificador para buscar elementos del mismo nivel con el contenido deseado. Para obtener más información, vea la configuración de cliente de [optimización de distribución](/sccm/core/clients/deploy/about-client-settings#delivery-optimization).
 
 La Optimización de distribución es la tecnología recomendada para [optimizar la distribución de actualizaciones de Windows 10](/sccm/sum/deploy-use/optimize-windows-10-update-delivery) de archivos de instalación rápida para actualizaciones de calidad de Windows 10.
 
 
 
 ## <a name="windows-ledbat"></a>Windows LEDBAT
-<!--1358112--> Windows Low Extra Delay Background Transport (LEDBAT) es una característica de control de congestión de la red de Windows Server que permite administrar transferencias de red en segundo plano. En los puntos de distribución que se ejecuten en versiones compatibles de Windows Server, habilite una opción para ayudar a ajustar el tráfico de red. Después, los clientes solo usarán el ancho de banda de red cuando esté disponible. 
+<!--1358112-->
+Windows Low Extra Delay Background Transport (LEDBAT) es una característica de control de congestión de la red de Windows Server que permite administrar transferencias de red en segundo plano. En los puntos de distribución que se ejecuten en versiones compatibles de Windows Server, habilite una opción para ayudar a ajustar el tráfico de red. Después, los clientes solo usarán el ancho de banda de red cuando esté disponible. 
 
 Para obtener información general sobre Windows LEDBAT, vea la entrada de blog [Nuevos avances en transporte](https://blogs.technet.microsoft.com/networking/2016/07/18/announcing-new-transport-advancements-in-the-anniversary-update-for-windows-10-and-windows-server-2016/).
 
@@ -108,7 +110,7 @@ El almacenamiento en caché del mismo nivel de cliente ayuda a administrar la im
 
 Primero, implemente la configuración de cliente que habilite la caché de sistemas del mismo nivel en una colección. Después, los miembros de esa colección pueden actuar como un origen de contenido del mismo nivel para otros clientes del mismo grupo de límites.
 
-A partir de la versión 1806, los orígenes de caché de sistemas del mismo nivel de clientes pueden dividir el contenido en varias partes. Estas partes reducen al mínimo la transferencia de red para usar menos WAN. El punto de administración proporciona un seguimiento más detallado de las partes de contenido Intenta eliminar más de una descarga del mismo contenido por grupo de límites.<!--1357346-->
+A partir de la versión 1806, los orígenes de caché de sistemas del mismo nivel de clientes pueden dividir el contenido en varias partes. Estas partes reducen al mínimo la transferencia de red para usar menos WAN. El punto de administración proporciona un seguimiento más detallado de las partes de contenido e intenta eliminar más de una descarga del mismo contenido por grupo de límites.<!--1357346-->
 
 Para obtener más información, vea [Caché del mismo nivel para clientes de Configuration Manager](/sccm/core/plan-design/hierarchy/client-peer-cache).
 
@@ -134,13 +136,15 @@ Para obtener más información, consulte [Almacenamiento en caché del mismo niv
 
     -   Se necesitan puntos de distribución accesibles desde Internet para aceptar conexiones HTTPS.  
 
-    -   Se puede usar un punto de distribución de nube.  
+    -   Puede usar un punto de distribución de nube o Cloud Management Gateway (CMG).  
+    
+        *   A partir de la versión 1806, una CMG también puede servir contenido a los clientes. Esta funcionalidad reduce los certificados necesarios y el costo de máquinas virtuales de Azure. Para obtener más información, vea [Modify a CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway) (Modificar una instancia de CMG).
 
 -   **Grupo de trabajo**:  
 
     -   Requiere que los puntos de distribución acepten HTTPS.  
 
-    -   Se puede usar un punto de distribución de nube.  
+    -   Se puede usar un punto de distribución de nube o una instancia de CMG.  
 
 
 
@@ -187,7 +191,7 @@ Los puntos de distribución estándar admiten una variedad de configuraciones y 
 
 - **BranchCache**, **Caché del mismo nivel** y **Optimización de distribución** son tecnologías punto a punto para reducir el ancho de banda de red que se usa al implementar contenido.  
 
-- Existen otras configuraciones para implementaciones de sistema operativo, como **[PXE](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments#BKMK_PXEDistributionPoint)** y **[Multidifusión](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments#BKMK_DPMulticast)**.  
+- Existen otras configuraciones para implementaciones de sistema operativo, como **[PXE](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments#BKMK_PXEDistributionPoint)** y **[Multidifusión](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments#BKMK_DPMulticast)** .  
 
 - Opciones para **dispositivos móviles**   
   

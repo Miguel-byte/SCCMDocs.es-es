@@ -2,7 +2,7 @@
 title: Actualizar la infraestructura local
 titleSuffix: Configuration Manager
 description: Obtenga información sobre cómo actualizar la infraestructura, como SQL Server y el sistema operativo de sistemas de sitio.
-ms.date: 11/27/2018
+ms.date: 06/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac4f22b6da6f0ed3c743848efc5477577376116b
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: a361ff057d6448169088f383ac8373673a97294d
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500933"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834964"
 ---
 # <a name="upgrade-on-premises-infrastructure-that-supports-configuration-manager"></a>Actualizar la infraestructura local compatible con Configuration Manager
 
@@ -211,6 +211,8 @@ Configuration Manager es compatible con la actualización local de SQL Server a 
 
 - SQL Server 2014  
 
+Esto incluye la actualización de SQL Server Express a una versión más reciente en los sitios secundarios.
+
 Al actualizar la versión de SQL Server que hospeda la base de datos de sitio, debe actualizar la versión de SQL Server que se usa en los sitios en el siguiente orden:
 
 1. Actualice primero SQL Server en el sitio de administración central.  
@@ -219,7 +221,7 @@ Al actualizar la versión de SQL Server que hospeda la base de datos de sitio, d
 
 3. Actualice los sitios primarios principales en último lugar. Estos sitios incluyen tanto los sitios primarios secundarios, que informan a un sitio de administración central, como los sitios primarios independientes, que están en el sitio de nivel superior de una jerarquía.  
 
-
+ 
 ### <a name="sql-server-cardinality-estimation-level"></a>Nivel de estimación de cardinalidad de SQL Server   
 
 Al actualizar una base de datos del sitio a partir de una versión anterior de SQL Server, la base de datos conserva su nivel existente de estimación de cardinalidad (CE) de SQL si se encuentra en el mínimo permitido para esa instancia de SQL Server. La actualización de SQL Server con una base de datos en un nivel de compatibilidad inferior al nivel permitido establece automáticamente la base de datos en el nivel de compatibilidad más bajo que permite SQL Server.

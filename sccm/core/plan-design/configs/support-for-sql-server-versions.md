@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fdfb536607ce20cd9727882ad92c3ed963c69241
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 367ab11340ef36b0caaf23e84f26bdda921ee158
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499474"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834744"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Versiones de SQL Server compatibles con Configuration Manager
 
@@ -213,7 +213,7 @@ Puede usar esta versión de SQL Server sin una versión de actualización acumul
 
 -   **Para un servidor de bases de datos que está instalado en el mismo equipo que el servidor de sitio**: Limite la memoria para SQL Server al 50-80 % de la memoria de sistema direccionable disponible.  
 
--   **Para un servidor de bases de datos dedicado (ubicación remota con respecto al servidor de sitio)**: Limite la memoria para SQL Server al 80-90 % de la memoria de sistema direccionable disponible.  
+-   **Para un servidor de bases de datos dedicado (ubicación remota con respecto al servidor de sitio)** : Limite la memoria para SQL Server al 80-90 % de la memoria de sistema direccionable disponible.  
 
 -   **Para una reserva de memoria para el grupo de búferes de cada instancia de SQL Server en uso**:  
 
@@ -227,7 +227,8 @@ Puede usar esta versión de SQL Server sin una versión de actualización acumul
 ### <a name="sql-server-clr-integration"></a>Integración de CLR de SQL Server  
   La base de datos de sitio requiere Common Language Runtime (CLR) para habilitarse. Esta opción se habilita de forma automática cuando se instala Configuration Manager. Para obtener más información sobre CLR, consulte [Introducción a la integración CLR de SQL Server](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).  
 
-
+### <a name="sql-server-service-broker-ssb"></a>SQL Server Service Broker (SSB)
+ SQL Server Service Broker es necesario tanto para la replicación entre sitios como para un único sitio principal. 
 
 ##  <a name="bkmk_optional"></a> Configuraciones opcionales para SQL Server  
  Las siguientes configuraciones son opcionales para cada base de datos que use una instalación completa de SQL Server.  

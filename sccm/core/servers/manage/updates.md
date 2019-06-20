@@ -2,7 +2,7 @@
 title: Actualizaciones y mantenimiento
 titleSuffix: Configuration Manager
 description: Conozca el método de servicio en la consola denominado Actualizaciones y mantenimiento con el que es más fácil encontrar e instalar actualizaciones recomendadas.
-ms.date: 03/27/2019
+ms.date: 06/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6ebe46963001a4ccc5932afa14ec7eb206dc1c4
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: bb875529224655fb56aeea5636bf92c7ddaf8b2c
+ms.sourcegitcommit: 725e1bf7d3250c2b7b7be9da01135517428be7a1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65496865"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822051"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Actualizaciones y servicio para Configuration Manager
 
@@ -28,10 +28,10 @@ Configuration Manager usa un método de servicio en la consola denominado **Actu
 > Los términos *actualizar* e *instalar* se usan para describir dos conceptos independientes en Configuration Manager. Para obtener más información sobre cómo se usa cada término, vea [Acerca de la actualización e instalación](/sccm/core/understand/upgrade-update-install).  
 
 
-
 ##  <a name="bkmk_Baselines"></a> Versiones de línea de base y versiones de actualización  
 
-Use la versión de línea de base más reciente cuando instale un sitio nuevo en una jerarquía nueva. 
+Use la versión de línea de base más reciente cuando instale un sitio nuevo en una jerarquía nueva.
+
 - Además, use una versión de línea base para actualizar desde System Center 2012 Configuration Manager.  
 
 - Después de actualizar a la rama actual de Configuration Manager, no use las versiones de línea base para mantenerse al día. Use solo [actualizaciones en la consola](/sccm/core/servers/manage/install-in-console-updates) para actualizar a la versión más reciente.  
@@ -40,24 +40,24 @@ Use la versión de línea de base más reciente cuando instale un sitio nuevo en
 
 Una vez que instala una versión de línea de base, las versiones adicionales de Configuration Manager se encuentran disponibles como actualizaciones en la consola. Las actualizaciones en la consola actualizan la infraestructura a la versión más reciente de Configuration Manager.  
 
--   Las actualizaciones en la consola se instalan para actualizar la versión del sitio de primer nivel.  
+- Las actualizaciones en la consola se instalan para actualizar la versión del sitio de primer nivel.  
 
--   Las actualizaciones que se instalan en el sitio de administración central se instalan automáticamente en los sitios primarios y secundarios. Controle esta sincronización mediante una ventana de mantenimiento en el sitio primario.  
+- Las actualizaciones que se instalan en el sitio de administración central se instalan automáticamente en los sitios primarios y secundarios. Controle esta sincronización mediante una ventana de mantenimiento en el sitio primario.  
 
--   Actualice manualmente los sitios secundarios a una nueva versión de actualización desde la consola.  
+- Actualice manualmente los sitios secundarios a una nueva versión de actualización desde la consola.  
 
 Cuando instala una actualización, esta almacena los archivos de instalación de esa versión en el servidor de sitio, en una carpeta denominada **CD.Latest**. Para obtener más información sobre estos archivos, vea [La carpeta CD.Latest](/sccm/core/servers/manage/the-cd.latest-folder).  
 
--   Use los archivos de la carpeta CD.Latest durante la recuperación del sitio. Además, cuando la jerarquía ya no ejecute una versión de línea base, use estos archivos para instalar otros sitios.  
+- Use los archivos de la carpeta CD.Latest durante la recuperación del sitio. Además, cuando la jerarquía ya no ejecute una versión de línea base, use estos archivos para instalar otros sitios.  
 
--   No puede usar archivos de instalación de CD.Latest para instalar el primer sitio de una jerarquía nueva ni para actualizar un sitio desde System Center 2012 Configuration Manager.  
-
+- No puede usar archivos de instalación de CD.Latest para instalar el primer sitio de una jerarquía nueva ni para actualizar un sitio desde System Center 2012 Configuration Manager.  
 
 ### <a name="version-details"></a>Detalles de la versión
 
 Algunas actualizaciones de Configuration Manager se encuentran disponibles tanto como una versión de actualización en la consola para la infraestructura existente como una versión de línea de base nueva.  
 
 #### <a name="supported-versions"></a>Versiones admitidas
+
 Las siguientes versiones admitidas de Configuration Manager están actualmente disponibles como línea de base, actualización, o ambas:  
 
 | Versión | Fecha de disponibilidad | [Fecha de finalización del soporte técnico](/sccm/core/servers/manage/current-branch-versions-supported) | Línea de base | Actualización en la consola |  
@@ -68,17 +68,19 @@ Las siguientes versiones admitidas de Configuration Manager están actualmente d
 | [1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)<br /><br /> 5.00.8634.1000 | 22 de marzo de 2018 | 22 de septiembre de 2019 | Sí<sup>[Nota 1](#bkmk_note1)</sup> | Sí |
 | [1710](/sccm/core/plan-design/changes/whats-new-in-version-1710)<br /><br /> 5.00.8577.1000 | 20 de noviembre de 2017 | 20 de mayo de 2019 | No | Sí |
 
-<a name="bkmk_note1"></a> 
+<a name="bkmk_note1"></a>
 
 > [!Note]  
-> <sup>**Nota 1:**</sup> El medio de línea de base está disponible como parte de las versiones siguientes en el [Centro de servicios de licencias por volumen](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC):
+> <sup>**Nota 1:** </sup> El medio de línea de base está disponible como parte de las versiones siguientes en el [Centro de servicios de licencias por volumen](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC):
+>
 > - System Center Config Mgr (rama actual)
 > - System Center 2016 Datacenter
 > - System Center 2016 Standard  
-> 
+>
 > Por ejemplo, busque `System Center Config Mgr (current branch)` en el VLSC. Busque el medio de línea de base en la lista de archivos y descargue el de esa versión.  
 
 #### <a name="historical-versions"></a>Historial de versiones
+
 En la siguiente tabla se enumeran las versiones históricas de la rama actual de Configuration Manager que están fuera del soporte técnico:
 
 | Versión | Fecha de disponibilidad | Fecha de finalización del soporte técnico | Línea de base | Actualización en la consola |  
@@ -92,16 +94,16 @@ En la siguiente tabla se enumeran las versiones históricas de la rama actual de
 | 1511 <br /><br /> 5.00.8325.1000 | 8 de diciembre de 2015 | 8 de diciembre de 2016 | Sí | No |  
 
 #### <a name="how-to-check-the-version"></a>Cómo comprobar la versión
+
 Para comprobar la versión del sitio de Configuration Manager, en la consola, vaya a **Acerca de System Center Configuration Manager** en la esquina superior izquierda de la consola. Este cuadro de diálogo muestra las versiones del sitio y la consola.  
 
- > [!Note]  
- > A partir de la versión 1802, la versión de la consola ahora es ligeramente diferente de la versión del sitio. La versión secundaria de la consola ahora corresponde a la versión de lanzamiento de Configuration Manager. Por ejemplo, en Configuration Manager versión 1802, la versión de sitio inicial es 5.0.8634.1000 y la versión inicial de la consola es 5. **1802**.1082.1700. Los números de compilación (1082) y revisión (1700) pueden cambiar con futuras revisiones de la versión 1802.
+> [!Note]  
+> A partir de la versión 1802, la versión de la consola ahora es ligeramente diferente de la versión del sitio. La versión secundaria de la consola ahora corresponde a la versión de lanzamiento de Configuration Manager. Por ejemplo, en Configuration Manager versión 1802, la versión de sitio inicial es 5.0.8634.1000 y la versión inicial de la consola es 5. **1802**.1082.1700. Los números de compilación (1082) y revisión (1700) pueden cambiar con futuras revisiones de la versión 1802.
 
 
+## <a name="bkmk_inconsole"></a> Actualizaciones y servicio en la consola  
 
-##  <a name="bkmk_inconsole"></a> Actualizaciones y servicio en la consola  
-
-Cuando usa una instalación lista para producción de la rama actual de Configuration Manager, la mayoría de las actualizaciones están disponibles con el canal **Actualizaciones y mantenimiento**. Este método identifica, descarga y pone a disposición las actualizaciones que se aplican a la versión y la configuración actual de la infraestructura. Incluye solo las actualizaciones que Microsoft recomienda para todos los clientes.   
+Cuando usa una instalación lista para producción de la rama actual de Configuration Manager, la mayoría de las actualizaciones están disponibles con el canal **Actualizaciones y mantenimiento**. Este método identifica, descarga y pone a disposición las actualizaciones que se aplican a la versión y la configuración actual de la infraestructura. Incluye solo las actualizaciones que Microsoft recomienda para todos los clientes.
 
 Estas actualizaciones incluyen:  
 
@@ -111,7 +113,10 @@ Estas actualizaciones incluyen:
 
 - Revisiones para la versión de Configuration Manager que todos los clientes deben instalar.
 
-Las actualizaciones en la consola proporcionan mayor estabilidad y solucionan problemas comunes. Reemplazan los tipos de actualización vistos para versiones anteriores del producto por Service Packs, actualizaciones acumulativas, revisiones aplicables a todos los clientes y la extensión para Microsoft Intune. 
+    > [!Note]  
+    > A partir de la versión 1902, ahora las revisiones en la consola tienen relaciones de sustitución. Para obtener más información, vea [Sustitución para las revisiones en la consola](#bkmk_supersede).
+
+Las actualizaciones en la consola proporcionan mayor estabilidad y solucionan problemas comunes. Reemplazan los tipos de actualización vistos para versiones anteriores del producto por Service Packs, actualizaciones acumulativas, revisiones aplicables a todos los clientes y la extensión para Microsoft Intune.
 
 Las actualizaciones en la consola se pueden aplicar a uno o varios de los siguientes sistemas:  
 
@@ -150,32 +155,47 @@ Cuando se instala una actualización en la consola, se produce el siguiente proc
 > [!NOTE]  
 > La rama actual de Configuration Manager, la rama de mantenimiento a largo plazo y la rama de Technical Preview son versiones distintas. Las actualizaciones que se aplican a una rama no están disponibles como actualizaciones en consola para las demás. Para más información sobre las diferentes ramas, consulte [Which branch of Configuration Manager should I use (¿Qué rama de Configuration Manager debo usar?)](/sccm/core/understand/which-branch-should-i-use).
 
+### <a name="bkmk_supersede"></a> Sustitución para las revisiones en la consola
+
+<!-- 3229613 -->
+A partir de la versión 1902, ahora las revisiones en la consola tienen relaciones de sustitución. Cuando Microsoft publica una nueva revisión de Configuration Manager, en la consola no se mostrarán todas las revisiones que se han sustituido por esta nueva revisión. Este nuevo comportamiento permite determinar qué revisiones se van a instalar.
+
+### <a name="supersedence-example"></a>Ejemplo de sustitución
+
+Hay tres revisiones disponibles: Revisión A, Revisión B y Revisión C. La Revisión A se ha reemplazado por la Revisión B y esta por la Revisión C.
+
+|Revisión A|Revisión B|Revisión C|Vista en la consola|
+|--------|--------|--------|---------------|
+|Sin instalar|Sin instalar|Sin instalar|Se muestran las tres revisiones|
+|Instalado|Instalado|Sin instalar|La Revisión B se muestra como instalada<br/>La Revisión C se muestra como lista para instalar|
+|Sin instalar|Sin instalar|Instalado|La Revisión C se muestra como instalada|
 
 
-##  <a name="bkmk_outofband"></a> Revisiones fuera de banda  
+## <a name="bkmk_outofband"></a> Revisiones fuera de banda  
 
 Algunas revisiones se publican con disponibilidad limitada para abordar problemas concretos. Otras revisiones se aplican a todos los clientes, pero no se pueden instalar con el método en la consola. Estas revisiones se entregan fuera de banda y no se detectan desde el servicio en la nube de Microsoft.  
 
-Normalmente, cuando se busca corregir o atajar un problema con la implementación de Configuration Manager, se puede obtener información sobre las revisiones fuera de banda desde los servicios de asistencia al cliente de Microsoft, en un artículo de Knowledge Base del servicio de soporte técnico de Microsoft o en el [blog del equipo de Configuration Manager](https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/bg-p/ConfigurationManagerBlog). 
+Normalmente, cuando se busca corregir o atajar un problema con la implementación de Configuration Manager, se puede obtener información sobre las revisiones fuera de banda desde los servicios de asistencia al cliente de Microsoft, en un artículo de Knowledge Base del servicio de soporte técnico de Microsoft o en el [blog del equipo de Configuration Manager](https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/bg-p/ConfigurationManagerBlog).
 
 Instale estas revisiones manualmente, mediante uno de estos dos métodos:  
 
 #### <a name="update-registration-tool"></a>Herramienta de registro de actualizaciones
+
 Esta herramienta importa manualmente la revisión a la consola de Configuration Manager. Luego instala la actualización como si fuera una actualización en la consola que se detecta automáticamente.  
 
 Este método se usa para las revisiones que usan la siguiente estructura de nombre de archivo:  
-  `<Product>-<product version>-<KB article ID>-ConfigMgr.Update.exe`    
+    `<Product>-<product version>-<KB article ID>-ConfigMgr.Update.exe`
 
 Para obtener más información, vea [Use the update registration tool to import hotfixes](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes) (Uso de la herramienta de registro de actualizaciones para importar revisiones).  
 
 #### <a name="hotfix-installer"></a>Instalador de revisiones
+
 Use esta herramienta para instalar manualmente una revisión que no se puede instalar con el método en la consola.  
 
-Este método se emplea para las correcciones que usan la siguiente estructura de nombre de archivo:   
-   `<Product>-<product version>-<KB article ID>-<platform>-<language>.exe`  
+Este método se emplea para las correcciones que usan la siguiente estructura de nombre de archivo:  
+    `<Product>-<product version>-<KB article ID>-<platform>-<language>.exe`  
 
 Para obtener más información, vea [Uso del instalador de revisiones para instalar actualizaciones](/sccm/core/servers/manage/use-the-hotfix-installer-to-install-updates).  
-
 
 
 ## <a name="next-steps"></a>Pasos siguientes
@@ -189,6 +209,5 @@ Los siguientes artículos pueden ayudarle a obtener información sobre cómo enc
 - [Uso de la herramienta de registro de actualizaciones para importar revisiones](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
 
 - [Uso del instalador de revisiones para instalar actualizaciones](/sccm/core/servers/manage/use-the-hotfix-installer-to-install-updates)  
-
 
 Para más información sobre la rama Technical Preview, vea [Technical Preview](/sccm/core/get-started/technical-preview).

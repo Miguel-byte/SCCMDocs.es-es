@@ -2,7 +2,7 @@
 title: Planeamiento de implementación de clientes en dispositivos de Windows Embedded
 titleSuffix: Configuration Manager
 description: Planee la implementación del cliente en dispositivos Windows Embedded en System Center Configuration Manager.
-ms.date: 04/23/2017
+ms.date: 06/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ba85b6d1e545f467816b3e8dddeec04ae4192a4
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 1fd221ecb62a74e9ff3a56815fbdeacdd27ca026
+ms.sourcegitcommit: e3c1eb0b75d79c05a750d49354c851d15d5e26a3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123692"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67038335"
 ---
 # <a name="planning-for-client-deployment-to-windows-embedded-devices-in-system-center-configuration-manager"></a>Planeación de la implementación del cliente en dispositivos Windows Embedded en System Center Configuration Manager
 
@@ -76,11 +76,14 @@ ms.locfileid: "56123692"
 >   -   CCMINSTALLDIR\ServiceData  
 >   -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
 > 
-> **Solo para dispositivos que usen FBWF y UWF:** Cuando los clientes de un grupo de trabajo usan certificados para la autenticación de los puntos de administración, debe excluir también la clave privada para asegurarse de que el cliente continúa comunicándose con el punto de administración. En estos dispositivos, configure las siguientes excepciones:  
+> **Solo para dispositivos que usen FBWF y UWF:** Cuando los clientes de un grupo de trabajo usan certificados para la autenticación en puntos de administración, también debe excluir la clave privada para asegurarse de que el cliente continúa comunicándose con el punto de administración. En estos dispositivos, configure las siguientes excepciones:  
 > 
 > - c:\Windows\System32\Microsoft\Protect  
 >   -   c:\ProgramData\Microsoft\Crypto  
 >   -   HKEY_LOCAL_MACHINE\Software\Microsoft\SystemCertificates\SMS\Certificates  
+
+> [!NOTE]
+> El cliente de Configuration Manager no necesita excepciones adicionales a las documentadas en el cuadro **Importante** anterior. La adición de excepciones adicionales relacionadas con Configuration Manager o WMI (WBEM) puede provocar errores de Configuration Manager, incluido el bloqueo de los dispositivos en el modo de mantenimiento o que experimenten bucles de reinicio. Las excepciones innecesarias incluyen el directorio de cliente de Configuration Manager, los directorios CCMcache y CCMSetup, el directorio de caché de la secuencia de tareas, el directorio WBEM y las claves del Registro relacionadas con Configuration Manager.
 
  Para ver un ejemplo de cómo implementar y administrar dispositivos de Windows Embedded con el filtro de escritura habilitado en Configuration Manager, consulte [Escenario de ejemplo para implementar y administrar clientes de Configuration Manager en dispositivos Windows Embedded](../../../../core/clients/deploy/example-scenario-for-deploying-and-managing-clients-on-windows-embedded-devices.md).  
 

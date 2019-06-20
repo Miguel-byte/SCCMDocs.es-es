@@ -3,8 +3,8 @@ title: Tutorial&#58; Habilitación de la administración conjunta para los nuevo
 titleSuffix: Configuration Manager
 description: Configure la administración conjunta para dispositivos Windows 10 para Configuration Manager e Intune.
 keywords: ''
-author: brenduns
-ms.author: brenduns
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 03/08/2019
 ms.topic: tutorial
@@ -12,12 +12,12 @@ ms.prod: configuration-manager
 ms.service: ''
 ms.technology: ''
 ms.assetid: ''
-ms.openlocfilehash: 61400d382a539efa495af99795e32fc1f2a517ab
-ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.openlocfilehash: 3c02a9c05e2c7d24654684f122edcd3eb5a84e06
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "57737363"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834864"
 ---
 # <a name="tutorial-enable-co-management-for-new-internet-based-devices"></a>Tutorial: Habilitación de la administración conjunta para nuevos dispositivos basados en Internet
 Con la administración conjunta, puede mantener sus procesos estandarizados para el uso de Configuration Manager para administrar los equipos de su organización. Al mismo tiempo, está invirtiendo en la nube mediante el uso de Intune para la seguridad y el aprovisionamiento moderno. 
@@ -165,7 +165,7 @@ Exporte el *certificado de autenticación de servidor de CMG* del servidor. La r
 
 3. En el Asistente para exportar certificado, seleccione **Siguiente**, **Exportar la clave privada** y **Siguiente**.  
 
-4. En la página Formato de archivo de exportación, seleccione **Intercambio de información Personal: PKCS #12 (.PFX)**, seleccione **Siguiente** y proporcione una contraseña. Para el nombre de archivo, especifique un nombre como **C:\ConfigMgrCloudMGServer**. Deberá hacer referencia a este archivo cuando se crea la instancia de CMG en Azure.  
+4. En la página Formato de archivo de exportación, seleccione **Intercambio de información Personal: PKCS #12 (.PFX)** , seleccione **Siguiente** y proporcione una contraseña. Para el nombre de archivo, especifique un nombre como **C:\ConfigMgrCloudMGServer**. Deberá hacer referencia a este archivo cuando se crea la instancia de CMG en Azure.  
 
 5. Seleccione **Siguiente** y, a continuación, confirme la configuración siguiente antes de seleccionar **Finalizar** para completar la exportación:  
 
@@ -357,7 +357,7 @@ Una vez establecidas las configuraciones de Azure, los roles del sistema de siti
 
 4. En la página *Habilitación*, en la lista desplegable *Inscripción automática en Intune*, seleccione una de las siguientes opciones:  
 
-   - **Piloto**  - *(recomendado)*: Los miembros de la colección que especifique se inscriben automáticamente en Intune y pueden administrarse de forma conjunta. Especifique la colección piloto en la página *Ensayo* de este asistente. Esta opción permite probar la administración conjunta en un subconjunto de los clientes. Luego, puede implementar la administración conjunta para clientes adicionales utilizando un enfoque por fases.  
+   - **Piloto**  -  *(recomendado)* : Los miembros de la colección que especifique se inscriben automáticamente en Intune y pueden administrarse de forma conjunta. Especifique la colección piloto en la página *Ensayo* de este asistente. Esta opción permite probar la administración conjunta en un subconjunto de los clientes. Luego, puede implementar la administración conjunta para clientes adicionales utilizando un enfoque por fases.  
 
    - **Todos**: la administración conjunta está habilitada para todos los clientes.  
 

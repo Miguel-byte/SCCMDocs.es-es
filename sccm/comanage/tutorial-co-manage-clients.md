@@ -2,21 +2,21 @@
 title: Tutorial&#58; Habilitación de la administración conjunta para clientes existentes de Configuration Manager
 titleSuffix: Configuration Manager
 description: Configure la administración conjunta con Microsoft Intune cuando ya administra dispositivos Windows 10 con Configuration Manager.
-ms.date: 03/08/2019
+ms.date: 06/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: tutorial
 ms.assetid: 140c522f-d09a-40b6-a4b0-e0d14742834a
-author: brenduns
-ms.author: brenduns
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af526f531ed81de105aea9d6c5d7f2ea81e8f104
-ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.openlocfilehash: 8b19f54d60ed0594be4a51b5abcef69304a27ece
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "57737281"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834764"
 ---
 # <a name="tutorial-enable-co-management-for-existing-configuration-manager-clients"></a>Tutorial: Habilitación de la administración conjunta para clientes existentes de Configuration Manager
 Con la administración conjunta, puede mantener sus procesos estandarizados para el uso de Configuration Manager para administrar los equipos de su organización. Al mismo tiempo, está invirtiendo en la nube mediante el uso de Intune para la seguridad y el aprovisionamiento moderno.  
@@ -98,14 +98,13 @@ Para configurar Azure AD Connect, necesita credenciales de administrador global 
 4. En la página **Información general**, seleccione **Siguiente**.
 5. En la página **Conectarse a Azure AD**, escriba las credenciales de administrador global para el inquilino de Azure AD.
 6. En la página **Opciones de dispositivo**, seleccione **Configurar la combinación de Azure AD híbrido** y, a continuación, seleccione **Siguiente**.
-7. En la página **SCP**, para cada bosque local que desee que Azure AD Connect configure para el punto de conexión de servicio (SCP), realice los siguientes pasos y luego seleccione **Siguiente**:  
+7. En la página **Sistemas operativos de dispositivos**, seleccione los sistemas operativos que usan los dispositivos en su entorno de Active Directory y, a continuación, seleccione **Siguiente**.  
+
+   Puede seleccionar la opción para admitir los dispositivos unidos al dominio de nivel inferior de Windows, pero tenga en cuenta que la administración conjunta de dispositivos solo se admite para Windows 10.
+8. En la página **SCP**, para cada bosque local que desee que Azure AD Connect configure para el punto de conexión de servicio (SCP), realice los siguientes pasos y luego seleccione **Siguiente**:  
    1. Seleccione el bosque.  
    2. Seleccione el servicio de autenticación.  Si tiene un dominio federado, seleccione el servidor de AD FS, a menos que su organización tenga exclusivamente clientes de Windows 10 y haya configurado la sincronización de equipo o dispositivo o su organización use [SeamlessSSO](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso).  
    3. Haga clic en **Agregar** para escribir las credenciales de administrador de empresa.  
-8. En la página **Sistemas operativos de dispositivos**, seleccione los sistemas operativos que usan los dispositivos en su entorno de Active Directory y, a continuación, seleccione **Siguiente**.  
-
-   Puede seleccionar la opción para admitir los dispositivos unidos al dominio de nivel inferior de Windows, pero tenga en cuenta que la administración conjunta de dispositivos solo se admite para Windows 10.
-
 9. Si tiene un dominio administrado, omita este paso.  
 
    En la página **Configuración de federación**, escriba las credenciales del administrador de AD FS y, a continuación, seleccione **Siguiente**.
@@ -131,7 +130,7 @@ A continuación, configuraremos la inscripción automática de dispositivos con 
 
 La inscripción automática también permite a los usuarios inscribir sus dispositivos Windows 10 en Intune. Inscriba dispositivos cuando un usuario agregue su cuenta profesional a su dispositivo personal, o cuando un dispositivo corporativo esté unido a Azure Active Directory.  
 
-1. Inicie sesión en [Azure Portal](https://portal.azure.com/) y seleccione **Azure Active Directory** > **Movilidad (MDM y MAM)** > **Microsoft Intune** .  
+1. Inicie sesión en [Azure Portal](https://portal.azure.com/) y seleccione **Azure Active Directory** > **Movilidad (MDM y MAM)**  > **Microsoft Intune** .  
 
 2. Configure el **ámbito de usuario de MDM**. Especifique una de las opciones siguientes para configurar qué dispositivos de usuarios se administran por Microsoft Intune y acepte la configuración predeterminada para los valores de la dirección URL.  
 
@@ -193,7 +192,7 @@ Con Azure AD configurado, las configuraciones del cliente de Configuration Manag
 
 4. En la página Habilitación, en la lista desplegable *Inscripción automática en Intune*, seleccione una de las siguientes opciones:  
 
-   - **Piloto**  - *(recomendado)*: Los miembros de la colección que especifique se inscriben automáticamente en Intune y pueden administrarse de forma conjunta. Especifique la colección piloto en la página *Ensayo* de este asistente. Esta opción permite probar la administración conjunta en un subconjunto de los clientes. Luego, puede implementar la administración conjunta para clientes adicionales utilizando un enfoque por fases.  
+   - **Piloto**  -  *(recomendado)* : Los miembros de la colección que especifique se inscriben automáticamente en Intune y pueden administrarse de forma conjunta. Especifique la colección piloto en la página *Ensayo* de este asistente. Esta opción permite probar la administración conjunta en un subconjunto de los clientes. Luego, puede implementar la administración conjunta para clientes adicionales utilizando un enfoque por fases.  
 
    - **Todos**: la administración conjunta está habilitada para todos los clientes.  
 

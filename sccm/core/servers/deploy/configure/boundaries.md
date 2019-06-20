@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4bb3cfa86275562ad46c4fdc988719a493f42bf
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 8c6a6e8a346c53d1f2bc8abdc2c2f2d0b9fafb64
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499059"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834879"
 ---
 # <a name="define-network-locations-as-boundaries-for-system-center-configuration-manager"></a>Definición de las ubicaciones de red como límites para System Center Configuration Manager
 
@@ -50,9 +50,10 @@ Cada límite está disponible para que lo use cada sitio de la jerarquía. Despu
         >  Puede especificar la **Red** y la **Máscara de subred** para que el **Id. de subred** se especifique automáticamente. Cuando se guarda el límite, se guarda solo el valor de Id. de subred.  
 
     -   Si selecciona **Sitio de Active Directory**, debe especificarlo o **Examinar** para buscar un sitio de Active Directory en el bosque local del servidor de sitio.  
+        
+        - Cuando se especifica un sitio de Active Directory para un límite, el límite incluye cada subred de IP que sea miembro de ese sitio de Active Directory. Si cambia la configuración del sitio de Active Directory en Active Directory, también cambiarán las ubicaciones de red incluidas en este límite.  
 
-        > [!IMPORTANT]  
-        >  Cuando se especifica un sitio de Active Directory para un límite, el límite incluye cada subred de IP que sea miembro de ese sitio de Active Directory. Si cambia la configuración del sitio de Active Directory en Active Directory, también cambiarán las ubicaciones de red incluidas en este límite.  
+        - Los límites de sitio de Active Directory no funcionan para los clientes de Azure AD puros. Si se desplazan en el entorno local, no pertenecerán a ningún límite si solo se han definido mediante sitios de AD.
 
     -   Si selecciona **Prefijo IPv6**, debe especificar un **Prefijo** en el formato de prefijo IPv6.  
 
