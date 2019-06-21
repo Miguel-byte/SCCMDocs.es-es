@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 818abdeb24d4c050bb8517bffda9ece0b012852c
-ms.sourcegitcommit: abfc9e1b3945637fa93ca8d3a11519493a5d5391
+ms.openlocfilehash: e1957dc89e808920daf7e4f40e0d3774afe8b5c5
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66264413"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286556"
 ---
 # <a name="packages-and-programs-in-system-center-configuration-manager"></a>Paquetes y programas en System Center Configuration Manager
 
@@ -287,7 +287,7 @@ Los paquetes pueden usar algunas características nuevas de Configuration Manage
 |----------|----------------------|  
 |**Crear archivo de contenido preconfigurado**|Abre el **Asistente para crear archivos de contenido preconfigurados**, que le permite crear un archivo que incluye el contenido del paquete que se puede importar manualmente a otro sitio. Esto es útil en situaciones donde tiene poco ancho de banda entre el servidor de sitio y el punto de distribución.|  
 |**Crear el programa**|Abre el **Asistente para crear programas**, que le permite crear un programa para este paquete.|  
-|**Exportarar**|Abre el **Asistente para exportar paquete**, que le permite exportar el paquete seleccionado y su contenido en un archivo.<br /><br /> Para obtener información sobre cómo importar paquetes y programas, consulte [Crear un paquete y programa](/sccm/apps/deploy-use/packages-and-programs#create-packages-and-programs) en este tema.|  
+|**Exportarar**|Abre el **Asistente para exportar paquete**, que le permite exportar el paquete seleccionado y su contenido en un archivo.<br /><br /> Para obtener información sobre cómo importar paquetes y programas, consulte [Crear un paquete y programa](/sccm/apps/deploy-use/packages-and-programs#create-a-package-and-program) en este tema.|  
 |**Implementar**|Abre el **Asistente para implementar software**, que le permite implementar el paquete y el programa seleccionados en una recopilación. Para obtener más información, vea [Implementar paquetes y programas](/sccm/apps/deploy-use/packages-and-programs#deploy-packages-and-programs) en este tema.|  
 |**Distribuir contenido**|Abre el **Asistente para distribuir contenido**, que le permite enviar el contenido asociado con el paquete y el programa a puntos de distribución o grupos de puntos de distribución seleccionados.|  
 |**Actualizar puntos de distribución**|Actualiza los puntos de distribución con el contenido más reciente para el programa y el paquete seleccionados.|  

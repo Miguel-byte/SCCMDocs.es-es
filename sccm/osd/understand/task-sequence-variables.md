@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f903fad2bb0654cd445eeedaca6ddf902bff725
-ms.sourcegitcommit: 99dfe4fb9e9cfd20c44380ae442b3a5b895a0d9b
+ms.openlocfilehash: 3e1ad62c8b8b0f780670e7baf7ebf11de7f6b483
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65214981"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194578"
 ---
 # <a name="task-sequence-variables"></a>Variables de la secuencia de tareas
 
@@ -257,7 +257,7 @@ Bias,StandardBias,DaylightBias,StandardDate.wYear,wMonth,wDayOfWeek,wDay,wHour,w
 
 #### <a name="example"></a>Ejemplo
 
-Para la zona horaria **Hora oriental (EE. UU. y Canadá)**:
+Para la zona horaria **Hora oriental (EE. UU. y Canadá)** :
 
 ```
 300,0,-60,0,11,0,1,2,0,0,0,0,3,0,2,2,0,0,0,Eastern Standard Time,Eastern Daylight Time
@@ -505,7 +505,7 @@ En lugar de generar una clave de inicio aleatoria para la opción de administrac
 
 Especifica un nombre de cuenta de Windows que tiene permisos para almacenar la imagen capturada en un recurso compartido de red ([OSDCaptureDestination](#OSDCaptureDestination)). Especifique también el valor de [OSDCaptureAccountPassword](#OSDCaptureAccountPassword).
 
-Para obtener más información sobre la cuenta de captura de imagen del sistema operativo, consulte [Cuentas](/sccm/core/plan-design/hierarchy/accounts#capture-operating-system-image-account).
+Para obtener más información sobre la cuenta de captura de imagen del sistema operativo, consulte [Cuentas](/sccm/core/plan-design/hierarchy/accounts#capture-os-image-account).
 
 ### <a name="OSDCaptureAccountPassword"></a> OSDCaptureAccountPassword
 
@@ -697,7 +697,7 @@ Para más información, vea [Opciones de línea de comandos del marco DISM de Wi
 
 Especifica la cuenta de usuario de dominio que se utiliza para agregar el equipo de destino al dominio. Esta variable es necesaria para unirse a un dominio.
 
-Para obtener más información sobre la cuenta de unión a dominio de la secuencia de tareas, consulte [Cuentas](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-domain-joining-account).
+Para obtener más información sobre la cuenta de unión a dominio de la secuencia de tareas, consulte [Cuentas](/sccm/core/plan-design/hierarchy/accounts#task-sequence-domain-join-account).
 
 ### <a name="OSDJoinDomainName"></a> OSDJoinDomainName
 
@@ -1246,7 +1246,7 @@ Para obtener más información, vea [Acerca de los parámetros y propiedades de 
 
 Especifica la cuenta de usuario que se utiliza para conectarse al recurso compartido de red en [SMSConnectNetworkFolderPath](#SMSConnectNetworkFolderPath). Especifique la contraseña de la cuenta con el valor [SMSConnectNetworkFolderPassword](#SMSConnectNetworkFolderPassword).
 
-Para obtener más información sobre la cuenta de conexión de la carpeta de red de la secuencia de tareas, consulte [Cuentas](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-network-folder-connection-account).
+Para obtener más información sobre la cuenta de conexión de la carpeta de red de la secuencia de tareas, consulte [Cuentas](/sccm/core/plan-design/hierarchy/accounts#task-sequence-network-folder-connection-account).
 
 ### <a name="SMSConnectNetworkFolderDriveLetter"></a> SMSConnectNetworkFolderDriveLetter
 

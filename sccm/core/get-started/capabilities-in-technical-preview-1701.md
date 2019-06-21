@@ -12,12 +12,12 @@ manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4edec748950b4601c4f5889f180f74c158171b33
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: b2d72e0134bdc4f7033ff37c54bed4898fce6832
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56136820"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286214"
 ---
 # <a name="capabilities-in-technical-preview-1701-for-system-center-configuration-manager"></a>Funciones de Technical Preview 1701 para System Center Configuration Manager
 
@@ -62,10 +62,10 @@ A continuación se describe el comportamiento de los puntos de actualización de
   Cuando un cliente use la reserva, usará las opciones de configuración del grupo de límites para la reserva a fin de crear un grupo de puntos de actualización de software disponibles. Este grupo contiene todos los puntos de actualización de software del *grupo de límites actual* del cliente, los *grupos de límites vecinos* y el *grupo de límites predeterminado del sitio* del cliente.
 
 - **Configuración del grupo de límites de sitio predeterminado.**  
-  Considere la posibilidad de agregar un punto de actualización de software a la *Default-Site-Boundary-Group&lt;CódigoDeSitio >*. Esto garantiza que los clientes que no sean miembros de otro grupo de límites puedan recurrir a la reserva para buscar un punto de actualización de software.
+  Considere la posibilidad de agregar un punto de actualización de software a la *Default-Site-Boundary-Group&lt;CódigoDeSitio >* . Esto garantiza que los clientes que no sean miembros de otro grupo de límites puedan recurrir a la reserva para buscar un punto de actualización de software.
 
 
-Para administrar los puntos de actualización de software de grupos de límites, use los [procedimientos de la documentación de la Rama actual](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#procedures-for-boundary-groups), pero recuerde que los tiempos de reserva que puede configurar aún no se usan para los puntos de actualización de software.
+Para administrar los puntos de actualización de software de grupos de límites, use los [procedimientos de la documentación de la Rama actual](/sccm/core/servers/deploy/configure/boundary-group-procedures), pero recuerde que los tiempos de reserva que puede configurar aún no se usan para los puntos de actualización de software.
 
 
 ## <a name="hardware-inventory-collects-uefi-information"></a>El inventario de hardware recopila información de UEFI
@@ -116,7 +116,7 @@ Para ello, modifique un archivo de configuración de modo que apunte a la nube d
      &lt;value>&lt;/value>   
      &lt;/setting>
 
-   - **Editado:**     
+   - **Editado:**      
      &lt;setting name="FairFaxArmResourceId" serializeAs="String"> &lt;value><https://management.usgovcloudapi.net/&lt;/value>>  
      &lt;/setting>
 

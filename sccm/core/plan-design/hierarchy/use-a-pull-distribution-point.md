@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 488fa5251711c8d9c7702e2b240a6f10602d447f
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: f3e759ef44170c460118d3629d8a7b9648ed8528
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499282"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251649"
 ---
 # <a name="use-a-pull-distribution-point-with-configuration-manager"></a>Usar un punto de distribución de extracción con Configuration Manager
 
@@ -42,7 +42,7 @@ Los puntos de distribución de extracción admiten las mismas configuraciones y 
 > [!IMPORTANT]  
 > Aunque un punto de distribución de extracción admite comunicaciones a través de HTTP y HTTPS, cuando use la consola de Configuration Manager, solo podrá especificar puntos de distribución de origen configurados para HTTP. Puede usar el SDK de Configuration Manager para especificar un punto de distribución de origen configurado para HTTPS.  
 
-Configure un punto de distribución de extracción cuando instale el punto de distribución. Después de crear un punto de distribución, puede configurarlo como un punto de distribución de extracción si modifica las propiedades de rol. Para obtener más información sobre cómo habilitar un punto de distribución como punto de distribución de extracción, vea [Punto de distribución de extracción](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#pull-distribution-point).  
+Configure un punto de distribución de extracción cuando instale el punto de distribución. Después de crear un punto de distribución, puede configurarlo como un punto de distribución de extracción si modifica las propiedades de rol. Para obtener más información sobre cómo habilitar un punto de distribución como punto de distribución de extracción, vea [Punto de distribución de extracción](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pull).  
 
 Quite la configuración para que el punto de distribución deje de ser de extracción, mediante la edición de las propiedades del punto de distribución. Cuando se quita la configuración de punto de distribución de extracción, vuelve a su funcionamiento normal. El servidor de sitio administra las transferencias de contenido futuras al punto de distribución.  
 
@@ -74,13 +74,13 @@ Cuando use un punto de distribución de extracción, revise y configure las sigu
 
     -   **Número de reintentos**: número de veces que el administrador de transferencia de paquetes intenta notificar al punto de distribución de extracción que descargue el contenido. Después de intentarlo este número de veces, el Administrador de transferencia de paquetes cancela la transferencia. Este valor es 30 de forma predeterminada.  
 
-    -   **Retraso antes de cada reintento (minutos)**: número de minutos que el administrador de transferencia de paquetes espera entre cada intento. Este valor es 20 de forma predeterminada.  
+    -   **Retraso antes de cada reintento (minutos)** : número de minutos que el administrador de transferencia de paquetes espera entre cada intento. Este valor es 20 de forma predeterminada.  
 
 5.  En la lista **Configuración del sondeo de estado**, revise los valores siguientes:  
 
     -   **Número de sondeos**: número de veces que el Administrador de transferencia de paquetes establece el contacto con el punto de distribución de extracción para recuperar el estado del trabajo. Si intenta este número de veces antes de que se complete el trabajo, el Administrador de transferencia de paquetes cancela la transferencia. Este valor es 72 de forma predeterminada.   
 
-    -   **Retraso antes de cada reintento (minutos)**: número de minutos que el administrador de transferencia de paquetes espera entre cada intento. Este valor es 60 de forma predeterminada.   
+    -   **Retraso antes de cada reintento (minutos)** : número de minutos que el administrador de transferencia de paquetes espera entre cada intento. Este valor es 60 de forma predeterminada.   
     
     > [!NOTE]  
     >  Cuando el Administrador de transferencia de paquetes cancela un trabajo porque supera el número de reintentos de sondeo, el punto de distribución de extracción continúa con la descarga del contenido. Cuando termina, el punto de distribución de extracción envía el mensaje de estado adecuado y el estado nuevo se refleja en la consola.  

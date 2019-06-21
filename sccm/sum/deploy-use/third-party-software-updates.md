@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04963f6c565a9cb83655416dd706d5dd9055a29b
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 3279ba7cd78ca6fc10ddb8662ac816679d01d7cf
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499913"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194688"
 ---
 # <a name="enable-third-party-updates"></a>Habilitar actualizaciones de terceros 
 
@@ -90,7 +90,7 @@ Si tiene que configurar manualmente el certificado, por ejemplo, porque necesita
 
 
 ## <a name="enable-third-party-updates-on-the-clients"></a>Habilitar actualizaciones de terceros en los clientes
-Habilite las actualizaciones de terceros en los clientes en la configuración de cliente. El valor establece la directiva del agente de Windows Update para [Permitir actualizaciones firmadas procedentes de una ubicación del servicio Microsoft Update en la intranet](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates#BKMK_comp3). Este valor de cliente además instala el certificado de firma de WSUS en el almacén Editores de confianza del cliente. El registro de administración de certificados se ve en `updatesdeployment.log` en los clientes.  Ejecute estos pasos para cada valor de cliente personalizado que quiera usar para las actualizaciones de terceros. Para obtener más información, vea el artículo [Acerca de la configuración de cliente](/sccm/core/clients/deploy/about-client-settings#Enable-third-party-software-updates).
+Habilite las actualizaciones de terceros en los clientes en la configuración de cliente. El valor establece la directiva del agente de Windows Update para [Permitir actualizaciones firmadas procedentes de una ubicación del servicio Microsoft Update en la intranet](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates#allow-signed-updates-from-an-intranet-microsoft-update-service-location). Este valor de cliente además instala el certificado de firma de WSUS en el almacén Editores de confianza del cliente. El registro de administración de certificados se ve en `updatesdeployment.log` en los clientes.  Ejecute estos pasos para cada valor de cliente personalizado que quiera usar para las actualizaciones de terceros. Para obtener más información, vea el artículo [Acerca de la configuración de cliente](/sccm/core/clients/deploy/about-client-settings#enable-third-party-software-updates).
 
 1. En la consola de Configuration Manager, vaya al área de trabajo **Administración** y seleccione el nodo **Configuración de cliente**.
 2. Seleccione un valor de cliente personalizado existente o cree uno nuevo. 

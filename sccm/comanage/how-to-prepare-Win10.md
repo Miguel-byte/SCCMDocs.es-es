@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31779b3588617816df4309461ed7715b20b0abd4
-ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.openlocfilehash: 5600743af8acc0da121454aef2d90167c3ded5fa
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "57558038"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286618"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>Preparación de dispositivos basados en Internet para la administración conjunta
 
@@ -41,7 +41,7 @@ A partir de la versión 1802, use Configuration Manager para recopilar y notific
 
 2. Ejecute el informe, **Información de dispositivo Windows Autopilot** y observe los resultados.  
 
-3. En el visor de informes, seleccione el icono **Exportar** y elija la opción **CSV (delimitado por comas)**.  
+3. En el visor de informes, seleccione el icono **Exportar** y elija la opción **CSV (delimitado por comas)** .  
 
 4. Después de guardar el archivo, cargue los datos en Microsoft Store para Empresas y Educación.  
 
@@ -88,7 +88,7 @@ A partir de la versión 1806, se necesitan menos propiedades de línea de comand
 - Si usa su propio certificado SSL de PKI y su CRL no está publicada en Internet, se requiere el parámetro siguiente:  
     - /noCRLCheck  
     
-     Para más información, consulte el artículo sobre el [planeamiento de CRL](/sccm/core/plan-design/security/plan-for-security#-plan-for-the-site-server-signing-certificate-self-signed).  
+     Para más información, consulte el artículo sobre el [planeamiento de CRL](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForCRLs).  
 
 A partir de la versión 1810, el sitio publica información adicional de Azure AD para Cloud Management Gateway (CMG). Un cliente unido a Azure AD obtiene esta información de la instancia de CMG durante el proceso de ccmsetup, mediante el mismo inquilino al que está unido. Este comportamiento simplifica más la inscripción de dispositivos en la administración conjunta de un entorno con más de un inquilino de Azure AD. Ahora las dos únicas propiedades de ccmsetup requeridas son **CCMHOSTNAME** y **SMSSiteCode**.<!--3607731-->
 

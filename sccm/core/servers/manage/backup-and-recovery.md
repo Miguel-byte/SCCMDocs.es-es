@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aff3393dca29d558c62c0a508b8cbf6c98f9fbfa
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 243e38273488f72e3e5e693270b10d6865c3a422
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65501219"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67252241"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>Hacer una copia de seguridad de un sitio de Configuration Manager
 
@@ -60,7 +60,7 @@ Puede automatizar la copia de seguridad de sitios de Configuration Manager media
 -   Realiza copias de seguridad de carpetas y archivos específicos
 -   Realiza copias de seguridad de la carpeta [CD.Latest](/sccm/core/servers/manage/the-cd.latest-folder)   
 
-Planee una ejecución de la tarea de copia de seguridad del sitio predeterminada como mínimo cada cinco días. Esta programación se debe a que Configuration Manager usa un *período de retención de seguimiento de cambios de SQL Server* de cinco días. Para obtener más información, vea [SQL Server change tracking retention period](/sccm/protect/understand/recover-sites#bkmk_SQLretention) (Período de retención de seguimiento de cambios de SQL Server).
+Planee una ejecución de la tarea de copia de seguridad del sitio predeterminada como mínimo cada cinco días. Esta programación se debe a que Configuration Manager usa un *período de retención de seguimiento de cambios de SQL Server* de cinco días. Para obtener más información, vea [SQL Server change tracking retention period](/sccm/core/servers/manage/recover-sites#sql-server-change-tracking-retention-period) (Período de retención de seguimiento de cambios de SQL Server).
 
 Para simplificar el proceso de copia de seguridad, puede crear un archivo **AfterBackup.bat**. Este script ejecuta automáticamente acciones posteriores a la copia de seguridad después de que la tarea de copia de seguridad finalice correctamente. Use el archivo AfterBackup.bat para archivar la instantánea de copia de seguridad en una ubicación segura. También puede usar el archivo AfterBackup.bat para copiar archivos en la carpeta de copia de seguridad o para iniciar otras tareas de copia de seguridad.  
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5e6aca35dcadf145c0b93f0c984767099eb8960
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.openlocfilehash: ca1c06a5778bf168b216474f65d79e5c4c636e61
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65083558"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159308"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>Planeación de la seguridad en Configuration Manager
 
@@ -307,7 +307,7 @@ Debido al número de opciones de configuración de Configuration Manager, no exi
 
 1.  En el servidor de sitio, abra el archivo siguiente en un editor de texto: `<Configuration Manager install directory>\bin\mobileclient.tcf`  
 
-2.  Busque la entrada, **SMSPublicRootKey=**. Copie la clave de esa línea y cierre el archivo sin realizar ningún cambio.  
+2.  Busque la entrada, **SMSPublicRootKey=** . Copie la clave de esa línea y cierre el archivo sin realizar ningún cambio.  
 
 3.  Cree un nuevo archivo de texto y pegue la información de la clave copiada del archivo mobileclient.tcf.  
 
@@ -323,7 +323,7 @@ Debido al número de opciones de configuración de Configuration Manager, no exi
 
 1.  En el servidor de sitio, abra el archivo siguiente en un editor de texto: `<Configuration Manager install directory>\bin\mobileclient.tcf`  
 
-2.  Busque la entrada, **SMSPublicRootKey=**. Copie la clave de esa línea y cierre el archivo sin realizar ningún cambio.  
+2.  Busque la entrada, **SMSPublicRootKey=** . Copie la clave de esa línea y cierre el archivo sin realizar ningún cambio.  
 
 3.  Instale el cliente mediante cualquier método de instalación que acepte las propiedades de client.msi. Especifique la propiedad de client.msi siguiente: `SMSPublicRootKey=<key>` donde `<key>` es la cadena que se ha copiado de mobileclient.tcf.  
 
@@ -441,7 +441,7 @@ Para más información, vea [Plan for the SMS Provider](/sccm/core/plan-design/h
 
 - [Comunicaciones entre puntos de conexión](/sccm/core/plan-design/hierarchy/communications-between-endpoints)  
 
-- [Referencia técnica de controles criptográficos](/sccm/core/plan-design/security/cryptographic-controls-tehnical-reference)  
+- [Referencia técnica de controles criptográficos](/sccm/core/plan-design/security/cryptographic-controls-technical-reference)  
 
 - [Requisitos de certificados PKI](/sccm/core/plan-design/network/pki-certificate-requirements)  
 

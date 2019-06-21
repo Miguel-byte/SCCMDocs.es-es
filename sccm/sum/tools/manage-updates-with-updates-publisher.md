@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88cc03de66847143336425dbc4b730703d15378c
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 1802c4f21939026f6775daecd9fe011d23ae7a38
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65493782"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159515"
 ---
 # <a name="manage-software-updates-in-updates-publisher"></a>Administrar actualizaciones de software en Updates Publisher
 
@@ -44,7 +44,7 @@ Una nueva copia que se cree tiene un estado de **Unexpired** (Vigente), pero, si
 ## <a name="edit-updates-and-bundles"></a>Editar actualizaciones y agrupaciones
 Puede seleccionar actualizaciones y agrupaciones que se encuentren en el repositorio para modificarlas.
 
-En el **área de trabajo Actualizaciones**, seleccione una actualización o agrupación y luego elija **Editar** en la pestaña **Inicio** para abrir el asistente de edición. Las actualizaciones y agrupaciones tienen asistentes independientes pero estrechamente relacionados que presentan las mismas opciones que los asistentes para [crear actualizaciones](/sccm/sum/tools/create-updates-with-updates-publisher#the-create-update-wizard) o [crear agrupaciones](/sccm/sum/tools/create-updates-with-updates-publisher#the-create-bundle-wizard).
+En el **área de trabajo Actualizaciones**, seleccione una actualización o agrupación y luego elija **Editar** en la pestaña **Inicio** para abrir el asistente de edición. Las actualizaciones y agrupaciones tienen asistentes independientes pero estrechamente relacionados que presentan las mismas opciones que los asistentes para [crear actualizaciones](/sccm/sum/tools/create-updates-with-updates-publisher#use-the-create-update-wizard) o [crear agrupaciones](/sccm/sum/tools/create-updates-with-updates-publisher#use-the-create-bundle-wizard).
 
 Al editar, puede cambiar los detalles disponibles sobre la actualización o agrupación para poder usarlos en su entorno. Por ejemplo, puede editar las reglas de aplicabilidad o prioridad o cambiar el idioma. También puede cambiar el producto y proveedor para mover la actualización o agrupación a una carpeta personalizada con el fin de agrupar actualizaciones para su propio uso.
 
@@ -73,7 +73,7 @@ Cuando asigna actualizaciones a una publicación:
 
     -   Use **Assign software update to a new publication** (Asignar actualización de software a una nueva publicación) cuando no tenga una publicación adecuada. Se creará una publicación con el nombre que especifique.
 
-Después de asignar actualizaciones a una publicación, puede usar el **área de trabajo Publicaciones** para [publicar](/sccm/sum/tools/updates-publisher-publications#publish-pubilcations) o [exportar](/sccm/sum/tools/updates-publisher-publications#export-a-pubilcation) la publicación como grupo.
+Después de asignar actualizaciones a una publicación, puede usar el **área de trabajo Publicaciones** para [publicar](/sccm/sum/tools/updates-publisher-publications#publish-publications) o [exportar](/sccm/sum/tools/updates-publisher-publications#export-a-publication) la publicación como grupo.
 
 ## <a name="publish-updates-and-bundles-from-the-updates-workspace"></a>Publicar actualizaciones y agrupaciones desde el área de trabajo Actualizaciones
 Cuando publica actualizaciones y agrupaciones, Updates Publisher agrega información sobre esas actualizaciones y agrupaciones (metadatos) y, posiblemente, los archivos binarios de las actualizaciones (contenido completo), a un servidor de actualización para la implementación en dispositivos.
@@ -82,7 +82,7 @@ Para tener la posibilidad de publicar, debe configurar la opción [Servidor de a
 
 Hay dos maneras de publicar actualizaciones y agrupaciones:
 -   Directamente desde el área de trabajo Actualizaciones. (Vea el procedimiento siguiente, *Para publicar actualizaciones y agrupaciones*).
--   Como una [publicación](/sccm/sum/tools/updates-publisher-publications#publish-pubilcations) desde el área de trabajo Publicaciones.  
+-   Como una [publicación](/sccm/sum/tools/updates-publisher-publications#publish-publications) desde el área de trabajo Publicaciones.  
 
 > [!NOTE]   
 > Updates Publisher solo puede publicar actualizaciones cuyo tamaño sea de 375 megabytes (MB) o menos.
@@ -99,7 +99,7 @@ Hay dos maneras de publicar actualizaciones y agrupaciones:
 Si la publicación no se lleva a cabo, se le ofrece un vínculo al archivo UpdatesPublisher.log que puede proporcionar más información.
 
 ## <a name="export-updates"></a>Exportar actualizaciones
-Puede exportar actualizaciones y agrupaciones desde el repositorio de Updates Publisher para crear un catálogo de actualizaciones personalizado. Después, puede [agregar](/sccm/sum/tools/updates-publisher-catalogs#add-software-update-catalogs) y luego [importar](/sccm/sum/tools/updates-publisher-catalogs#mport-updates) ese catálogo a otra instancia de Updates Publisher. (También puede [exportar actualizaciones como una publicación](/sccm/sum/tools/updates-publisher-publications##export-a-publication)).
+Puede exportar actualizaciones y agrupaciones desde el repositorio de Updates Publisher para crear un catálogo de actualizaciones personalizado. Después, puede [agregar](/sccm/sum/tools/updates-publisher-catalogs#add-software-update-catalogs) y luego [importar](/sccm/sum/tools/updates-publisher-catalogs#import-updates) ese catálogo a otra instancia de Updates Publisher. (También puede [exportar actualizaciones como una publicación](/sccm/sum/tools/updates-publisher-publications##export-a-publication)).
 
 Para exportar directamente, vaya a **Updates Workspace** (Área de trabajo Actualizaciones)  > **Todas las actualizaciones de software** y seleccione una o más actualizaciones y agrupaciones. No puede exportar una carpeta de proveedor o producto, pero puede seleccionar una carpeta y luego elegir las actualizaciones de la carpeta que quiera exportar.
 
@@ -114,7 +114,7 @@ Vaya a **Updates Workspace** (Área de trabajo Actualizaciones)  > **Todas las a
 
 -   Si la selección solo contiene actualizaciones o agrupaciones que no se han publicado o que han expirado, se le pedirá que confirme la eliminación antes de quitarlas.
 
--   Si la selección incluye una actualización o agrupación que se ha publicado y aún no ha expirado, recibirá una advertencia. Debe hacer que esas actualizaciones [expiren](/sccm/sum/tools/updates-publisher-pubilcations#expire-or-reactivate-updates-and-bundles) y publicar ese cambio antes de eliminarlas del repositorio.  
+-   Si la selección incluye una actualización o agrupación que se ha publicado y aún no ha expirado, recibirá una advertencia. Debe hacer que esas actualizaciones [expiren](/sccm/sum/tools/updates-publisher-publications#expire-or-reactivate-updates-and-bundles) y publicar ese cambio antes de eliminarlas del repositorio.  
 
 Si elimina una actualización o agrupación de un proveedor y luego la importa de nuevo al catálogo, la actualización se restaura en el repositorio.
 

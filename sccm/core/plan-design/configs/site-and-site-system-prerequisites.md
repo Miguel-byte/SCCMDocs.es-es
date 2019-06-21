@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6bb18dbb093f6182186f648bcde02407f3c14c5a
-ms.sourcegitcommit: e3c1eb0b75d79c05a750d49354c851d15d5e26a3
+ms.openlocfilehash: daee7a247fd12637736caa9c341798950a66c786
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67038563"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251858"
 ---
 # <a name="site-and-site-system-prerequisites-for-configuration-manager"></a>Sitio y requisitos previos de sistema de sitio para Configuration Manager
 
@@ -558,7 +558,7 @@ Requiere la configuración predeterminada de IIS.
 
 ##  <a name="bkmk_2008"></a> Requisitos previos para Windows Server 2008 R2 y Windows Server 2008  
 
-Windows Server 2008 y Windows Server 2008 R2 tienen ahora soporte extendido y ya no están dentro del soporte estándar, tal y como se detalla en el [Ciclo de vida de soporte técnico de Microsoft](https://support.microsoft.com/lifecycle). Para obtener más información sobre la compatibilidad futura de estos sistemas operativos como servidores de sistema de sitio con Configuration Manager, consulte [Removed and deprecated server operating systems](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems) (Sistemas operativos de servidor eliminados y en desuso).  
+Windows Server 2008 y Windows Server 2008 R2 tienen ahora soporte extendido y ya no están dentro del soporte estándar, tal y como se detalla en el [Ciclo de vida de soporte técnico de Microsoft](https://support.microsoft.com/lifecycle). Para obtener más información sobre la compatibilidad futura de estos sistemas operativos como servidores de sistema de sitio con Configuration Manager, consulte [Removed and deprecated server operating systems](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#server-os) (Sistemas operativos de servidor eliminados y en desuso).  
 
 Estas versiones de sistema operativo no son compatibles con servidores de sitio o la mayoría de los roles del sistema de sitio. Todavía se admiten para el rol de sistema de sitio del punto de distribución, incluidos los puntos de distribución de extracción y para el entorno PXE y la multidifusión.
 

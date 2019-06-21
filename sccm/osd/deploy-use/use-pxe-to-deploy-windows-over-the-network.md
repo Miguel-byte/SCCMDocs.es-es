@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 71fab49dc6ba5d949aeaf48145e1f7d0446c0f91
-ms.sourcegitcommit: 18a94eb78043cb565b05cd0e9469b939b29cccf0
+ms.openlocfilehash: f707eb4b4fabf98d6e436f038f932515749c35c4
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66354997"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194446"
 ---
 # <a name="use-pxe-to-deploy-windows-over-the-network-with-configuration-manager"></a>Usar el entorno PXE para implementar Windows a través de la red con Configuration Manager
 
@@ -126,7 +126,7 @@ Implemente el sistema operativo en una recopilación de destino. Para obtener m�
 
 - **Implementación disponible**: las implementaciones disponibles requieren que el usuario esté presente en el equipo de destino. El usuario debe presionar la tecla **F12** para continuar el proceso de arranque de PXE. Si el usuario no está presente para presionar **F12**, el equipo arrancará en el sistema operativo actual o desde el siguiente dispositivo de arranque disponible.
 
-Puede realizar de nuevo una implementación del entorno PXE requerida. Para ello, borre el estado de la última implementación del entorno PXE asignada a un equipo o a una recopilación de Configuration Manager. Para obtener más información sobre la acción **Borrar implementaciones de PXE requeridas**, vea [Administrar clientes](/sccm/core/clients/manage/manage-clients#BKMK_ManagingClients_DevicesNode) o [Administrar recopilaciones](/sccm/core/clients/manage/collections/manage-collections#how-to-manage-device-collections). Esta acción restablece el estado de la implementación, y vuelve a instalar las implementaciones requeridas más recientes.
+Puede realizar de nuevo una implementación del entorno PXE requerida. Para ello, borre el estado de la última implementación del entorno PXE asignada a un equipo o a una recopilación de Configuration Manager. Para obtener más información sobre la acción **Borrar implementaciones de PXE requeridas**, vea [Administrar clientes](/sccm/core/clients/manage/manage-clients#BKMK_ManagingClients_DevicesNode) o [Administrar recopilaciones](/sccm/core/clients/manage/collections/manage-collections#bkmk_device). Esta acción restablece el estado de la implementación, y vuelve a instalar las implementaciones requeridas más recientes.
 
 > [!IMPORTANT]  
 > El protocolo PXE no es seguro. Asegúrese de que el servidor PXE y el cliente de PXE se encuentran en una red físicamente segura, como, por ejemplo, en un centro de datos, para evitar accesos no autorizados al sitio.

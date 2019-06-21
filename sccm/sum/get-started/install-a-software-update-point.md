@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b099a645-6434-498f-a408-1d438e394396
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a8961e86ff5184463dd156e2394150968046fb8
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: 618dd44a32e624a67f03bb18ea01169dd80daeb7
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58523799"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194662"
 ---
 # <a name="install-and-configure-a-software-update-point"></a>Instalar y configurar un punto de actualización de software  
 
@@ -147,7 +147,7 @@ ms.locfileid: "58523799"
 >  La página **Idiomas** del asistente solo está disponible cuando se instala el punto de actualización de software en el sitio de administración central. Es posible configurar los idiomas del archivo de actualización de software en los sitios secundarios de la pestaña **Idiomas** , en Propiedades de componente de punto de actualización de software.  
 
 ## <a name="third-party-updates"></a>Actualizaciones de terceros
-A partir de Configuration Manager versión 1802, puede habilitar las actualizaciones de terceros para los clientes de Configuration Manager. Cuando usa la opción Habilitar actualizaciones de software de terceros en las propiedades de componente de SUP, este descargará el certificado de firma usado por WSUS para las actualizaciones de terceros. Esta opción no está disponible durante la instalación del punto de actualización de software y debe configurarse una vez instalado el SUP. Para habilitar la configuración de cliente para las actualizaciones de terceros, vea el artículo [Acerca de la configuración de cliente en System Center Configuration Manager](/sccm/core/clients/deploy/about-client-settings#Enable-third-party-software-updates).
+A partir de Configuration Manager versión 1802, puede habilitar las actualizaciones de terceros para los clientes de Configuration Manager. Cuando usa la opción Habilitar actualizaciones de software de terceros en las propiedades de componente de SUP, este descargará el certificado de firma usado por WSUS para las actualizaciones de terceros. Esta opción no está disponible durante la instalación del punto de actualización de software y debe configurarse una vez instalado el SUP. Para habilitar la configuración de cliente para las actualizaciones de terceros, vea el artículo [Acerca de la configuración de cliente en System Center Configuration Manager](/sccm/core/clients/deploy/about-client-settings#enable-third-party-software-updates).
 
 ## <a name="next-steps"></a>Pasos siguientes
 Ha instalado el punto de actualización de software comenzando por el sitio de nivel superior de la jerarquía de Configuration Manager. Repita los procedimientos de este artículo para instalar el punto de actualización de software en los sitios secundarios.

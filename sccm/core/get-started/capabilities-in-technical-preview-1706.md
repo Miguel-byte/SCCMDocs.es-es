@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 11ad5a0bef004b778ba431c9a2da30f51eafc443
-ms.sourcegitcommit: f531d0a622f220739710b2fe6644ea58d024064a
+ms.openlocfilehash: bbc26ed19de04fd3000d6c3ca713bb2a705ce8ea
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65933297"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286222"
 ---
 # <a name="capabilities-in-technical-preview-1706-for-system-center-configuration-manager"></a>Funcionalidades de Technical Preview 1706 para System Center Configuration Manager
 
@@ -258,10 +258,10 @@ A partir de esta versión, use el Asistente para servicios de Azure para configu
 Si bien el método para configurar la conexión ha cambiado, los requisitos previos para la conexión y el modo en que se utiliza Upgrade Readiness permanecen inalterados.   
 
 ### <a name="prerequisites-for-upgrade-readiness"></a>Requisitos previos para Upgrade Readiness
-Los requisitos previos para una [conexión a Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics#create-a-connection-to-upgrade-readiness) son los mismos que se detallan para la Rama actual de Configuration Manager. Se repiten aquí para su comodidad:  
+Los requisitos previos para una [conexión a Upgrade Readiness](/sccm/core/clients/manage/upgrade-readiness#connect-configuration-manager-to-upgrade-readiness) son los mismos que se detallan para la Rama actual de Configuration Manager. Se repiten aquí para su comodidad:  
 
 **Requisitos previos**
--   Para agregar la conexión, el entorno de Configuration Manager debe configurar primero un [punto de conexión de servicio](/sccm/core/servers/deploy/configure/about-the-service-connection-point) en un [modo en línea](/sccm/core/servers/deploy/configure/about-the-service-connection-point#a-namebkmkmodesa-modes-of-operation). Al agregar la conexión en el entorno, también se instala Microsoft Monitoring Agent en el equipo que ejecuta este rol de sistema de sitio.
+-   Para agregar la conexión, el entorno de Configuration Manager debe configurar primero un [punto de conexión de servicio](/sccm/core/servers/deploy/configure/about-the-service-connection-point) en un [modo en línea](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_modes). Al agregar la conexión en el entorno, también se instala Microsoft Monitoring Agent en el equipo que ejecuta este rol de sistema de sitio.
 -   Registre Configuration Manager como una herramienta de administración de "Aplicación web o API web" y obtenga el [identificador de cliente de este registro](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/).
 -   Cree una clave de cliente para la herramienta de administración registrada en Azure Active Directory.
 -   En el Portal de administración de Azure, proporcione la aplicación web registrada con permiso de acceso a OMS, como se describe en [Concesión de permisos a Configuration Manager para acceder a OMS](https://azure.microsoft.com/documentation/articles/log-analytics-sccm/#provide-configuration-manager-with-permissions-to-oms).
@@ -410,7 +410,7 @@ Todos los puntos de actualización de software deben ejecutar Windows Server 201
 ### <a name="try-it-out"></a>Haga la prueba
 Intente realizar las tareas siguientes y luego envíenos sus **comentarios** desde la pestaña **Inicio** de la cinta para comunicarnos si funcionó:
 1. Habilite la sincronización para controladores de Microsoft Surface. Siga el procedimiento de [Configurar las clasificaciones y los productos](/sccm/sum/get-started/configure-classifications-and-products) y seleccione **Incluir actualizaciones de controladores y firmware de Microsoft Surface** en la pestaña **Clasificaciones** para habilitar los controladores de Surface.
-2. [Sincronice los controladores de Microsoft Surface](/sccm/sum/get-started/synchronize-software-updates.md).
+2. [Sincronice los controladores de Microsoft Surface](/sccm/sum/get-started/synchronize-software-updates).
 3. [Implemente los controladores de Microsoft Surface sincronizados](/sccm/sum/deploy-use/deploy-software-updates).
 
 ## <a name="configure-windows-update-for-business-deferral-policies"></a>Configuración de directivas de aplazamiento de Windows Update para empresas
@@ -427,12 +427,12 @@ Los dispositivos con Windows 10 administrados por Windows Update para empresas d
 4. En la página **Deferral Policies** (Directivas de aplazamiento), configure si se van a aplazar o pausar las actualizaciones de características.    
     Las actualizaciones de características son generalmente nuevas características de Windows. Después de configurar el parámetro **Nivel de preparación de la rama**, puede definir si le gustaría aplazar la recepción de actualizaciones de características después de que se pongan a disposición de los usuarios por parte de Microsoft, y por cuánto tiempo.
     - **Nivel de preparación de la rama**: configure la rama para la que el dispositivo recibirá actualizaciones de Windows (Rama actual o Rama actual para empresas).
-    - **Período de aplazamiento (días)**:  especifique el número de días durante los que se aplazarán las actualizaciones de características. Puede aplazar la recepción de estas actualizaciones de características durante un período de 180 días a partir de su lanzamiento.
-    - **Pausar el inicio de las actualizaciones de características:**: seleccione si quiere pausar la recepción de actualizaciones de características para los dispositivos durante un período de hasta 60 días a partir del momento en que se pausen las actualizaciones. Una vez que transcurra el máximo de días, la funcionalidad de pausa expirará automáticamente y el dispositivo buscará actualizaciones aplicables en Windows Update. Después de este análisis, puede pausar las actualizaciones de nuevo. Puede quitar la pausa de las actualizaciones de características desactivando la casilla.   
+    - **Período de aplazamiento (días)** :  especifique el número de días durante los que se aplazarán las actualizaciones de características. Puede aplazar la recepción de estas actualizaciones de características durante un período de 180 días a partir de su lanzamiento.
+    - **Pausar el inicio de las actualizaciones de características:** : seleccione si quiere pausar la recepción de actualizaciones de características para los dispositivos durante un período de hasta 60 días a partir del momento en que se pausen las actualizaciones. Una vez que transcurra el máximo de días, la funcionalidad de pausa expirará automáticamente y el dispositivo buscará actualizaciones aplicables en Windows Update. Después de este análisis, puede pausar las actualizaciones de nuevo. Puede quitar la pausa de las actualizaciones de características desactivando la casilla.   
 5. Elija si desea aplazar o pausar las actualizaciones de calidad.     
     Las actualizaciones de calidad suelen ser correcciones y mejoras en la funcionalidad de Windows existente y normalmente se publican el primer martes de cada mes, aunque pueden publicarse en cualquier momento por parte de Microsoft. Puede definir si desea aplazar la recepción de actualizaciones de calidad después de su lanzamiento, y por cuánto tiempo.
-    - **Período de aplazamiento (días)**: especifique el número de días durante los que se aplazarán las actualizaciones de características. Puede aplazar la recepción de estas actualizaciones de características durante un período de 180 días a partir de su lanzamiento.
-    - **Pausar el inicio de actualizaciones de calidad:**: seleccione si quiere pausar la recepción de actualizaciones de calidad para los dispositivos durante un período de hasta 35 días a partir del momento en que se pausen las actualizaciones. Una vez que transcurra el máximo de días, la funcionalidad de pausa expirará automáticamente y el dispositivo buscará actualizaciones aplicables en Windows Update. Después de este análisis, puede pausar las actualizaciones de nuevo. Puede quitar la pausa de las actualizaciones de calidad desactivando la casilla.
+    - **Período de aplazamiento (días)** : especifique el número de días durante los que se aplazarán las actualizaciones de características. Puede aplazar la recepción de estas actualizaciones de características durante un período de 180 días a partir de su lanzamiento.
+    - **Pausar el inicio de actualizaciones de calidad:** : seleccione si quiere pausar la recepción de actualizaciones de calidad para los dispositivos durante un período de hasta 35 días a partir del momento en que se pausen las actualizaciones. Una vez que transcurra el máximo de días, la funcionalidad de pausa expirará automáticamente y el dispositivo buscará actualizaciones aplicables en Windows Update. Después de este análisis, puede pausar las actualizaciones de nuevo. Puede quitar la pausa de las actualizaciones de calidad desactivando la casilla.
 6. Seleccione **Instalar actualizaciones de otros productos de Microsoft** para habilitar el parámetro de directiva de grupo que permite que la configuración de aplazamiento sea aplicable a Microsoft Update, así como a las actualizaciones de Windows Update.
 7. Seleccione **Include drivers with Windows Update** (Incluir controladores con Windows Update) para actualizar automáticamente los controladores desde las actualizaciones de Windows Update. Si desactiva esta opción, no se descargan las actualizaciones de controladores desde Windows Update.
 8. Complete el asistente para crear la nueva directiva de aplazamiento.
@@ -446,7 +446,7 @@ Los dispositivos con Windows 10 administrados por Windows Update para empresas d
     - **Corregir las reglas no compatibles cuando se admita**: seleccione esta opción para corregir de forma automática las reglas que no sean compatibles con Instrumental de administración de Windows (WMI), el Registro, los scripts y toda la configuración de los dispositivos móviles que Configuration Manager haya inscrito.
     - **Permitir la corrección fuera de la ventana de mantenimiento**: si se ha configurado una ventana de mantenimiento para la colección en la que se va a implementar la directiva, habilite esta opción para permitir que la configuración de cumplimiento corrija el valor fuera de la ventana de mantenimiento. Para obtener más información sobre las ventanas de mantenimiento, consulte [Cómo utilizar las ventanas de mantenimiento](/sccm/core/clients/manage/collections/use-maintenance-windows).
     - **Generar una alerta**: configura una alerta que se genera si la compatibilidad de la línea base de configuración es inferior a un determinado porcentaje en una hora y fecha especificadas. También puede especificar si desea que se envíe una alerta a System Center Operations Manager.
-    - **Retraso aleatorio (horas)**: especifica una ventana de retraso lo suficientemente grande para evitar un procesamiento excesivo en el Servicio de inscripción de dispositivos de red. El valor predeterminado es 64 horas.
+    - **Retraso aleatorio (horas)** : especifica una ventana de retraso lo suficientemente grande para evitar un procesamiento excesivo en el Servicio de inscripción de dispositivos de red. El valor predeterminado es 64 horas.
     - **Programación**: especifique la programación de evaluación de cumplimiento según la cual se evalúa el perfil implementado en los equipos cliente. La programación puede ser simple o personalizada. Los equipos cliente evalúan el perfil cuando el usuario inicia sesión.
 4.  Complete el asistente para implementar el perfil.
 

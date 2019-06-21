@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 600b786bbb2f718868c5d08c722621682582f4e1
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 726df4e6ddbfc34194fd25951d6dbafd1e9008ad
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500640"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159542"
 ---
 # <a name="create-certificate-profiles"></a>Crear perfiles de certificado
 
@@ -25,7 +25,7 @@ ms.locfileid: "65500640"
 
 Use perfiles de certificado en Configuration Manager (SCCM) para aprovisionar dispositivos administrados con los certificados que necesitan para obtener acceso a los recursos de empresa. Antes de crear perfiles de certificado, configure la infraestructura de certificados como se describe en [Set up certificate infrastructure for System Center Configuration Manager](certificate-infrastructure.md) (Configurar la infraestructura de certificados para System Center Configuration Manager).  
 
-En este tema, se describe cómo crear perfiles de certificado raíz de confianza y SCEP. Si quiere crear perfiles de certificado PFX, consulte [Create PFX certificate profiles](../../protect/deploy-use/create-pfx-certificate-profiles.md) (Crear perfiles de certificado PFX).
+En este tema, se describe cómo crear perfiles de certificado raíz de confianza y SCEP. Si quiere crear perfiles de certificado PFX, consulte [Create PFX certificate profiles](/sccm/mdm/deploy-use/create-pfx-certificate-profiles) (Crear perfiles de certificado PFX).
 
 Para crear un perfil de certificado, siga estos pasos:
 
@@ -56,11 +56,11 @@ En la página **General** del Asistente para crear perfil de certificado, especi
 
 -   **Certificado de CA de confianza**: seleccione este tipo de perfil de certificado si desea implementar un certificado de entidad de certificación raíz (CA) de confianza o uno intermedio para formar una cadena de certificados de confianza en los casos en los que el usuario o el dispositivo deban autenticar otro dispositivo. Por ejemplo, el dispositivo puede ser un servidor de Servicio de autenticación remota telefónica de usuario (RADIUS) o un servidor de red privada virtual (VPN). También debe configurar un perfil de certificado de CA de confianza antes de crear un perfil de certificado de SCEP. En este caso, el certificado de CA de confianza debe ser el certificado raíz de confianza de la CA que emitirá el certificado para el usuario o el dispositivo.  
 
--   **Configuración de Protocolo de inscripción de certificados simple (SCEP)**: seleccione este tipo de perfil de certificado si desea solicitar un certificado para un dispositivo o usuario mediante el Protocolo de inscripción de certificados simple y el servicio de rol Servicio de inscripción de dispositivos de red.
+-   **Configuración de Protocolo de inscripción de certificados simple (SCEP)** : seleccione este tipo de perfil de certificado si desea solicitar un certificado para un dispositivo o usuario mediante el Protocolo de inscripción de certificados simple y el servicio de rol Servicio de inscripción de dispositivos de red.
 
--   **Intercambio de información personal: configuración de PKCS #12 (PFX): importar**: seleccione esta opción para importar un certificado PFX. Para obtener más información sobre la creación de certificados PFX, consulte el artículo sobre cómo [importar perfiles de certificado PFX](/sccm/mdm/deploy-use/import-pfx-certificate-profiles.md).
+-   **Intercambio de información personal: configuración de PKCS #12 (PFX): importar**: seleccione esta opción para importar un certificado PFX. Para obtener más información sobre la creación de certificados PFX, consulte el artículo sobre cómo [importar perfiles de certificado PFX](/sccm/mdm/deploy-use/import-pfx-certificate-profiles).
 
--   **Intercambio de información personal -- Configuración de PKCS #12 (PFX) -- Crear**: seleccione esta opción para procesar certificados PFX con una entidad de certificación. Para obtener más información sobre la creación de certificados PFX, consulte [Create PFX certificate profiles](/sccm/mdm/deploy-use/create-pfx-certificate-profiles.md) (Crear perfiles de certificado PFX).
+-   **Intercambio de información personal -- Configuración de PKCS #12 (PFX) -- Crear**: seleccione esta opción para procesar certificados PFX con una entidad de certificación. Para obtener más información sobre la creación de certificados PFX, consulte [Create PFX certificate profiles](/sccm/mdm/deploy-use/create-pfx-certificate-profiles) (Crear perfiles de certificado PFX).
 
 
 ## <a name="configure-a-trusted-ca-certificate"></a>Configurar un certificado de CA de confianza  
@@ -97,11 +97,11 @@ En la página **General** del Asistente para crear perfil de certificado, especi
 
    -  **Reintentos**: especifique el número de veces que el dispositivo intenta enviar automáticamente la solicitud de certificado al servidor que ejecuta el Servicio de inscripción de dispositivos de red. Esta configuración es compatible con el escenario en el que un administrador de CA debe aprobar una solicitud de certificado para que sea aceptada. Esta opción se utiliza normalmente en entornos de alta seguridad o si tiene una CA emisora independiente en vez de una CA empresarial. También puede utilizar este valor para realizar pruebas, de forma que pueda examinar las opciones de la solicitud de certificado antes de que la CA emisora procese la solicitud de certificado. Utilice esta opción con el valor **Intervalo entre reintentos (minutos)** .  
 
-   -   **Intervalo entre reintentos (minutos)**: especifique el intervalo en minutos entre cada intento de inscripción cuando se usa la aprobación del administrador de CA antes de que la CA emisora procese la solicitud de certificado. Si utiliza la aprobación del administrador para realizar pruebas, es probable que desee especificar un valor bajo para no tener que esperar mucho tiempo a que el dispositivo reintente la solicitud de certificado después de aprobarla. Sin embargo, si utiliza la aprobación del administrador en una red de producción, es probable que desee especificar un valor mayor para otorgar al administrador de CA tiempo suficiente para comprobar y aprobar o denegar aprobaciones pendientes.  
+   -   **Intervalo entre reintentos (minutos)** : especifique el intervalo en minutos entre cada intento de inscripción cuando se usa la aprobación del administrador de CA antes de que la CA emisora procese la solicitud de certificado. Si utiliza la aprobación del administrador para realizar pruebas, es probable que desee especificar un valor bajo para no tener que esperar mucho tiempo a que el dispositivo reintente la solicitud de certificado después de aprobarla. Sin embargo, si utiliza la aprobación del administrador en una red de producción, es probable que desee especificar un valor mayor para otorgar al administrador de CA tiempo suficiente para comprobar y aprobar o denegar aprobaciones pendientes.  
 
-   -   **Umbral de renovación (%)**: especifique qué porcentaje de la duración del certificado tiene que quedar para que el dispositivo solicite la renovación del certificado.  
+   -   **Umbral de renovación (%)** : especifique qué porcentaje de la duración del certificado tiene que quedar para que el dispositivo solicite la renovación del certificado.  
 
-   -   **Proveedor de almacenamiento de claves (KSP)**: especifique donde se almacenará la clave del certificado. Elija uno de los siguientes valores:  
+   -   **Proveedor de almacenamiento de claves (KSP)** : especifique donde se almacenará la clave del certificado. Elija uno de los siguientes valores:  
 
    -   **Instalar en Módulo de plataforma segura (TPM) si está presente**: instala la clave en el TPM. Si el TPM no está presente, la clave se instalará en el proveedor de almacenamiento de la clave de software.  
 
@@ -131,7 +131,7 @@ En la página **General** del Asistente para crear perfil de certificado, especi
 
    -   Si escribe el nombre de la plantilla de certificado, asegúrese de que el nombre coincide exactamente con una de las plantillas de certificado que se muestran en el Registro del servidor que ejecuta el Servicio de inscripción de dispositivos de red. Asegúrese de que especifica el nombre de la plantilla de certificado y no el nombre para mostrar de la plantilla de certificado.  
 
-   Para buscar los nombres de las plantillas de certificado, vaya a la siguiente clave: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP. Verá las plantillas de certificado como los valores de **EncryptionTemplate**, **GeneralPurposeTemplate**y **SignatureTemplate**. De forma predeterminada, el valor de las tres plantillas de certificado es **IPSECIntermediateOffline**, que se asigna al nombre de plantilla para mostrar **IPSEC (solicitud sin conexión)**.  
+   Para buscar los nombres de las plantillas de certificado, vaya a la siguiente clave: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP. Verá las plantillas de certificado como los valores de **EncryptionTemplate**, **GeneralPurposeTemplate**y **SignatureTemplate**. De forma predeterminada, el valor de las tres plantillas de certificado es **IPSECIntermediateOffline**, que se asigna al nombre de plantilla para mostrar **IPSEC (solicitud sin conexión)** .  
 
    > [!WARNING]  
    > 
@@ -166,7 +166,7 @@ En la página **General** del Asistente para crear perfil de certificado, especi
    La plantilla de certificado seleccionada debe configurarse con como mínimo una de las dos opciones de uso de clave anteriores. En caso contrario, se mostrará el mensaje **Key usage in CSR and challenge do not match (El uso de la clave en la CSR y en el desafío no coinciden)** en el archivo de registro del punto de registro de certificado ( **Crp.log**).  
 
 
-- **Tamaño de la clave (bits)**: seleccione el tamaño de la clave, en bits.  
+- **Tamaño de la clave (bits)** : seleccione el tamaño de la clave, en bits.  
 
 - **Uso de clave mejorado**: haga clic en **Seleccionar** para agregar valores para la finalidad prevista del certificado. En la mayoría de los casos, el certificado requerirá **Autenticación de cliente** para que el usuario o dispositivo pueda autenticarse en un servidor. Sin embargo, puede agregar otros usos de clave según sea necesario.  
 

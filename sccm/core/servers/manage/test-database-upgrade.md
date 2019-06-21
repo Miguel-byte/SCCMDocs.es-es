@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db33a822c762922a04cbfe695435950023384f93
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: c25e2d2aac1c1763df4282e92114257ee34065ac
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65501004"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194126"
 ---
 # <a name="test-the-database-upgrade-when-installing-an-update"></a>Prueba de la actualización de la base de datos al instalar una actualización
 
@@ -30,9 +30,9 @@ Esta actualización de prueba está en desuso debido a los cambios introducidos 
 Los cambios afectan al modo de instalar actualizaciones, como la lógica que revierte automáticamente una actualización con errores sin necesidad de ejecutar una recuperación del sitio. Estos cambios habilitan el uso de la consola para administrar las instalaciones de actualizaciones e incluyen una opción para [reintentar la instalación de una actualización con errores](/sccm/core/servers/manage/install-in-console-updates#bkmk_retry).
 
 > [!TIP]
-> Cuando se actualiza a System Center Configuration Manager desde un producto anterior, como System Center 2012 Configuration Manager, [se sigue recomendando la ejecución de actualizaciones de base de datos de prueba](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager#a-namebkmktesta-test-the-site-database-upgrade).
+> Cuando se actualiza a System Center Configuration Manager desde un producto anterior, como System Center 2012 Configuration Manager, [se sigue recomendando la ejecución de actualizaciones de base de datos de prueba](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager#bkmk_test).
 
-Si aún tiene previsto probar la actualización de una base de datos de sitio cuando instala una actualización en la consola, la información siguiente complementa las [instrucciones para instalar una actualización en la consola](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates).
+Si aún tiene previsto probar la actualización de una base de datos de sitio cuando instala una actualización en la consola, la información siguiente complementa las [instrucciones para instalar una actualización en la consola](/sccm/core/servers/manage/install-in-console-updates#bkmk_install).
 
 ## <a name="prepare-to-run-a-test-database-upgrade"></a>Preparación de la ejecución de una actualización de la base de datos de prueba  
 Antes de instalar una actualización nueva en la jerarquía, como la 1702, puede probar la actualización de la base de datos de sitio.

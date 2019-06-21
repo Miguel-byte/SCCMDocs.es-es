@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2380c1a543f223c4e9cdf905c8b3782c91f6387b
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 5cf48e73e2d273fcff6b6b99cf0eaa06cababa16
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65494815"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159500"
 ---
 # <a name="manage-windows-as-a-service-using-system-center-configuration-manager"></a>Administración de Windows como servicio mediante System Center Configuration Manager
 
@@ -136,7 +136,7 @@ ms.locfileid: "65494815"
 
    -   **Especificar el estado de disponibilidad de Windows al que debe aplicarse este plan de mantenimiento**: seleccione una de estas opciones:  
 
-       -   **Canal semianual (dirigido)**: en este modelo de servicio, las actualizaciones de las características están disponibles en cuanto Microsoft las vaya lanzando.
+       -   **Canal semianual (dirigido)** : en este modelo de servicio, las actualizaciones de las características están disponibles en cuanto Microsoft las vaya lanzando.
 
        -   **Canal semianual**: Este canal de mantenimiento normalmente se usa para una implementación amplia. Los clientes de Windows 10 en el canal semianual reciben la misma versión de Windows 10 que los dispositivos en el canal dirigido, solo que más tarde.
 
@@ -288,4 +288,4 @@ Use el siguiente procedimiento para modificar las propiedades de un plan de mant
     >  Puede revisar las alertas de las actualizaciones de software recientes en el área de trabajo **Biblioteca de software** del nodo **Actualizaciones de software** .  
 
 **Para más información:** <br/>
-[Aspectos básicos de Configuration Manager como servicio y de Windows como servicio](/sccm/core/understand/configuration-manager-and-windows-as-service.md)
+[Aspectos básicos de Configuration Manager como servicio y de Windows como servicio](/sccm/core/understand/configuration-manager-and-windows-as-service)

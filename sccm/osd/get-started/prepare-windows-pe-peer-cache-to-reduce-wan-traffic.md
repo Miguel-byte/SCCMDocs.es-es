@@ -2,7 +2,7 @@
 title: Preparar el almacenamiento en caché del mismo nivel de Windows PE para reducir el tráfico WAN
 titleSuffix: Configuration Manager
 description: Almacenamiento en caché del mismo nivel de Windows PE funciona en Windows PE para obtener contenido de un elemento local de mismo nivel y minimizar el tráfico WAN cuando no hay ningún punto de distribución local.
-ms.date: 10/06/2016
+ms.date: 06/18/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bedaeed065121e18089cb6b1847397ba5cfdb35a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 80dffb04d7f6ef097ad5b629690e704d1c9a263f
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128762"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286581"
 ---
 # <a name="prepare-windows-pe-peer-cache-to-reduce-wan-traffic-in-system-center-configuration-manager"></a>Preparar el almacenamiento en caché del mismo nivel de Windows PE para reducir el tráfico WAN en System Center Configuration Manager
 
@@ -64,9 +64,11 @@ Use las siguientes secciones para administrar Almacenamiento en caché del mismo
 
 -   El cliente de Configuration Manager debe poder comunicarse a través de los siguientes puertos de la red:  
 
-    -   Puerto para la difusión de red inicial para buscar un origen de caché del mismo nivel. De forma predeterminada, este puerto es 8004.  
+    -   Puerto para la difusión de red inicial para buscar un origen de caché del mismo nivel. De forma predeterminada, este es el puerto UDP 8004.  
 
-    -   Puerto para el contenido que se descarga de un origen de caché del mismo nivel (HTTP y HTTPS). De forma predeterminada, este puerto es 8003.  
+    -   Puerto para el contenido que se descarga de un origen de caché del mismo nivel (HTTP y HTTPS). De forma predeterminada, este es el puerto TCP 8003.  
+    
+        Para obtener más información, consulte [puertos se usan para las conexiones](/sccm/core/plan-design/hierarchy/ports#BKMK_PortsClient-ClientWakeUp).  
 
         > [!TIP]  
         >  Los clientes usarán HTTPS para descargar contenido cuando esté disponible. Sin embargo, se usará el mismo número de puerto para HTTP o HTTPS.  
@@ -114,7 +116,7 @@ Use las siguientes secciones para administrar Almacenamiento en caché del mismo
 
 - **SMSTSPeerDownload**  
 
-   Valor:  TRUE  
+   Valor: TRUE  
 
    Esto permite al cliente usar Almacenamiento en caché del mismo nivel en Windows PE.  
 

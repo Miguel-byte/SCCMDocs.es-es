@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55e29269bab2ed1a75f00848a59f3345d0a8c071
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 89ba5d63b1a033db49da73cc0df3fa0a41f2b696
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65495150"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285850"
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>Novedades de la versión 1702 de System Center Configuration Manager
 
@@ -30,7 +30,7 @@ La actualización 1702 para la rama actual de System Center Configuration Manage
 >  Más información acerca de:    
 >   - [Instalación de nuevos sitios](https://technet.microsoft.com/library/mt590197.aspx)  
 >   - [Instalación de actualizaciones en los sitios](https://technet.microsoft.com/library/mt607046.aspx)  
->   - [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
+>   - [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 En las secciones siguientes se proporcionan detalles sobre los cambios y las nuevas funciones introducidas en la versión 1702 de Configuration Manager.  
 
@@ -38,9 +38,9 @@ En las secciones siguientes se proporcionan detalles sobre los cambios y las nue
 Obtenga información sobre los cambios de compatibilidad antes de implementarlos en [Elementos eliminados y en desuso](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated).
 
 La versión 1702 anula la compatibilidad de los siguientes productos:
-- **SQL Server 2008 R2**, para los servidores de base de datos del sitio. La interrupción de la compatibilidad se [anunció por primera vez](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-support-for-sql-server-versions-as-a-site-database) el 10 de julio de 2015. Esta versión de SQL Server sigue siendo compatible cuando se utiliza una versión de Configuration Manager anterior a la versión 1702.
-- **Windows Server 2008 R2**, para servidores del sistema de sitios y la mayoría de roles de sistema de sitio. La interrupción de la compatibilidad se [anunció por primera vez](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems) el 10 de julio de 2015. Esta versión de Windows sigue siendo compatible cuando se utiliza una versión de Configuration Manager anterior a la versión 1702.  
-- **Windows Server 2008**, para servidores del sistema de sitios y la mayoría de roles de sistema de sitio. La interrupción de la compatibilidad se [anunció por primera vez](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems) el 10 de julio de 2015.
+- **SQL Server 2008 R2**, para los servidores de base de datos del sitio. La interrupción de la compatibilidad se [anunció por primera vez](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#sql-server) el 10 de julio de 2015. Esta versión de SQL Server sigue siendo compatible cuando se utiliza una versión de Configuration Manager anterior a la versión 1702.
+- **Windows Server 2008 R2**, para servidores del sistema de sitios y la mayoría de roles de sistema de sitio. La interrupción de la compatibilidad se [anunció por primera vez](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#server-os) el 10 de julio de 2015. Esta versión de Windows sigue siendo compatible cuando se utiliza una versión de Configuration Manager anterior a la versión 1702.  
+- **Windows Server 2008**, para servidores del sistema de sitios y la mayoría de roles de sistema de sitio. La interrupción de la compatibilidad se [anunció por primera vez](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#server-os) el 10 de julio de 2015.
 - **Windows XP Embedded**, como un sistema operativo cliente. La interrupción de la compatibilidad se [anunció por primera vez](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-client#deprecated-client-operating-systems) el 10 de julio de 2015. Esta versión de Windows sigue siendo compatible cuando se utiliza una versión de Configuration Manager anterior a la versión 1702.
 
 
@@ -118,7 +118,7 @@ Además, se han agregado tres nuevos informes al punto de notificación. Puede u
 
 
 ### <a name="use-the-oms-connector-with-the-azure-government-cloud"></a>Uso del conector de OMS con la nube de Azure Government
-Puede usar el conector de OMS para conectarse a Log Analytics de OMS en la nube de Microsoft Azure Government. Para ello, debe modificar un archivo de configuración antes de instalar el conector de OMS para que el conector pueda trabajar con la nube de Government. Para más información, vea [Uso del conector de OMS con la nube de Azure Government](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite#fairfaxconfig).
+Puede usar el conector de OMS para conectarse a Log Analytics de OMS en la nube de Microsoft Azure Government. Para ello, debe modificar un archivo de configuración antes de instalar el conector de OMS para que el conector pueda trabajar con la nube de Government. Para más información, vea [Uso del conector de OMS con la nube de Azure Government](/sccm/core/clients/manage/sync-data-log-analytics).
 
 ### <a name="software-update-points-are-added-to-boundary-groups"></a>Los puntos de actualización de software se agregan a grupos de límites
 A partir de la versión 1702, los clientes utilizan grupos de límites para encontrar un nuevo punto de actualización de software, además de para reservar y buscar un nuevo punto de actualización de software si ya no pueden acceder al actual. Puede agregar puntos de actualización de software individuales a grupos de límites diferentes para controlar qué servidores puede encontrar un cliente. Para más información, vea [puntos de actualización de software](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points) en el tema de [configuración de grupos de límites](/sccm/core/servers/deploy/configure/boundary-groups).
@@ -326,7 +326,7 @@ A partir de la versión 1702, tiene a su disposición nuevas formas de supervisa
 ## <a name="protect-devices"></a>Proteger los dispositivos
 
 ### <a name="detect-outdated-antimalware-client-versions"></a>Detección de versiones del cliente antimalware obsoletas
-A partir de la versión 1702, puede configurar una alerta para asegurarse de que los clientes de Endpoint Protection no están obsoletos. Para más información, vea [Alerta para clientes de malware obsoletos](/sccm/protect/deploy-use/endpoint-configure-alerts#detect-outdated-antimalware-client-versions).
+A partir de la versión 1702, puede configurar una alerta para asegurarse de que los clientes de Endpoint Protection no están obsoletos. Para más información, vea [Alerta para clientes de malware obsoletos](/sccm/protect/deploy-use/endpoint-configure-alerts#alert-for-outdated-malware-client).
 
 ### <a name="device-health-attestation-updates"></a>Actualizaciones de Atestación de estado de dispositivo
 El servicio Atestación de estado de dispositivo para clientes locales ahora puede configurarse y administrarse desde el punto de administración. Para más información, vea [Atestación de estado](/sccm/core/servers/manage/health-attestation).

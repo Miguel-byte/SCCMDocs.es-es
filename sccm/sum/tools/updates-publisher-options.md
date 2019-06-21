@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a26aaa2d4e409e899763cedebd32ebf64c93ffa
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 2d576057c1ca7940a8d09bcfa305b80b178a6006
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65496380"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159520"
 ---
 # <a name="configure-options-for-updates-publisher"></a>Configurar opciones de Updates Publisher
 
@@ -40,7 +40,7 @@ Las opciones se dividen en las siguientes categorías:
 -   Registro
 
 ## <a name="update-server"></a>Servidor de actualización
-Debe configurar Updates Publisher para que funcione con un servidor de actualización como Windows Server Update Services (WSUS) para poder [publicar actualizaciones](/sccm/sum/tools/manage-updates-with-updates-publisher#publish-updates-and-bundles). Esto incluye especificar el servidor, los métodos de conexión a ese servidor cuando es remoto con respecto a la consola y un certificado que use las actualizaciones firmadas digitalmente que publique.
+Debe configurar Updates Publisher para que funcione con un servidor de actualización como Windows Server Update Services (WSUS) para poder [publicar actualizaciones](/sccm/sum/tools/manage-updates-with-updates-publisher#publish-updates-and-bundles-from-the-updates-workspace). Esto incluye especificar el servidor, los métodos de conexión a ese servidor cuando es remoto con respecto a la consola y un certificado que use las actualizaciones firmadas digitalmente que publique.
 
 - **Configurar un servidor de actualización**. Cuando configure un servidor de actualización, seleccione el servidor WSUS de nivel superior (servidor de actualización) de la jerarquía de Configuration Manager para que todos los sitios secundarios tengan acceso a las actualizaciones que publique.
 

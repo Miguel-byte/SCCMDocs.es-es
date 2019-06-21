@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f70373f1fea7928e801c0ccdbbe75cf96e54d20
-ms.sourcegitcommit: f531d0a622f220739710b2fe6644ea58d024064a
+ms.openlocfilehash: 2fba1d6793b2b285cc9874de316bb2c435a526e8
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65933529"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67252303"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Preparación para usar grupos de disponibilidad AlwaysOn de SQL Server con Configuration Manager
 
@@ -41,8 +41,8 @@ Los siguientes escenarios son compatibles con el uso de grupos de disponibilidad
 
 - [Crear un grupo de disponibilidad para su uso con Configuration Manager](/sccm/core/servers/deploy/configure/configure-aoag#create-and-configure-an-availability-group)  
 - [Configurar un sitio para utilizar un grupo de disponibilidad](/sccm/core/servers/deploy/configure/configure-aoag#configure-a-site-to-use-the-database-in-the-availability-group)  
-- [Agregar o quitar a miembros de la réplica sincrónica de un grupo de disponibilidad que hospeda una base de datos de sitio](/sccm/core/servers/deploy/configure/configure-aoag#add-and-remove-synchronous-replica-members)  
-- [Configurar réplicas de confirmación asincrónica](/sccm/core/servers/deploy/configure/configure-aoag#configure-an-asynchronous-commit-repilca)  
+- [Agregar o quitar a miembros de la réplica sincrónica de un grupo de disponibilidad que hospeda una base de datos de sitio](/sccm/core/servers/deploy/configure/configure-aoag#add-or-remove-synchronous-replica-members)  
+- [Configurar réplicas de confirmación asincrónica](/sccm/core/servers/deploy/configure/configure-aoag#configure-an-asynchronous-commit-replica)  
 - [Recuperar un sitio de una réplica de confirmación asincrónica](/sccm/core/servers/deploy/configure/configure-aoag#use-the-asynchronous-replica-to-recover-your-site)  
 - [Sacar una base de datos de sitio de un grupo de disponibilidad a una instancia predeterminada o con nombre de un servidor SQL Server independiente](/sccm/core/servers/deploy/configure/configure-aoag#stop-using-an-availability-group)  
 
@@ -85,7 +85,7 @@ Cada instancia de SQL Server puede ejecutarse en una cuenta de usuario de domini
 
 - Use el mismo número y tipo de réplicas en un grupo de disponibilidad que admita la versión de SQL Server.
 
-- Se puede utilizar la réplica de confirmación asincrónica para recuperar una réplica sincrónica. Para obtener más información, vea [Opciones de recuperación de base de datos de sitio](/sccm/core/servers/manage/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption).  
+- Se puede utilizar la réplica de confirmación asincrónica para recuperar una réplica sincrónica. Para obtener más información, vea [Opciones de recuperación de base de datos de sitio](/sccm/core/servers/manage/recover-sites#site-database-recovery-options).  
 
     > [!Warning]  
     > Configuration Manager no admite la *conmutación por error* para usar la réplica de confirmación asincrónica como la base de datos de sitio. Para obtener más información, consulte [Conmutación por error y modos de conmutación por error (grupos de disponibilidad AlwaysOn)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups?view=sql-server-2014).  

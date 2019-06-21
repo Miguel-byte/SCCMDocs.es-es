@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 63eb7fa579d002b4cae48ed0a43a2246350e2633
-ms.sourcegitcommit: f531d0a622f220739710b2fe6644ea58d024064a
+ms.openlocfilehash: fbbaf7322b0103b9958b4d7b2c66c018d12d20a4
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65933311"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194617"
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>Administración de Office 365 ProPlus con Configuration Manager
 
@@ -114,7 +114,7 @@ Siga estos pasos para implementar actualizaciones de Office 365 con Configuratio
 >
 > Si Office 365 ProPlus se instaló recientemente y, dependiendo de cómo se haya instalado, es posible que el canal de actualización aún no se haya establecido. En ese caso, las actualizaciones implementadas se detectarán como no aplicables. Hay un [tarea programada de Actualizaciones automáticas](https://docs.microsoft.com/deployoffice/overview-of-the-update-process-for-office-365-proplus) creada cuando se instala Office 365 ProPlus. En esta situación, es necesario ejecutar esta tarea al menos una vez para que el canal de actualización se establezca y las actualizaciones se detecten como aplicables.
 >
-> Si Office 365 ProPlus se instaló recientemente y las actualizaciones implementadas no se detectan, desde el puto de vista de las pruebas, puede iniciar la tarea de Actualizaciones automáticas de Office manualmente y luego iniciar el [ciclo de evaluación de implementación de Actualizaciones de software](https://docs.microsoft.com/sccm/sum/understand/software-updates-introduction#scan-for-software-updates-compliance-process) en el cliente. Para instrucciones sobre cómo hacer esto en una secuencia de tareas, consulte [Actualización de Office 365 ProPlus en una secuencia de tareas](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#updating-office-365-ProPlus-in-a-task-sequence).
+> Si Office 365 ProPlus se instaló recientemente y las actualizaciones implementadas no se detectan, desde el puto de vista de las pruebas, puede iniciar la tarea de Actualizaciones automáticas de Office manualmente y luego iniciar el [ciclo de evaluación de implementación de Actualizaciones de software](https://docs.microsoft.com/sccm/sum/understand/software-updates-introduction#scan-for-software-updates-compliance-process) en el cliente. Para instrucciones sobre cómo hacer esto en una secuencia de tareas, consulte [Actualización de Office 365 ProPlus en una secuencia de tareas](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#updating-office-365-proplus-in-a-task-sequence).
 
 ## <a name="restart-behavior-and-client-notifications-for-office-365-updates"></a>Comportamiento al reiniciar y notificaciones de cliente para las actualizaciones de Office 365
 Al implementar una actualización en un cliente de Office 365, el comportamiento de reinicio y las notificaciones de cliente serán distintas en función de la versión de Configuration Manager. En la tabla siguiente se proporciona información sobre la experiencia de usuario final cuando el cliente recibe una actualización de Office 365:

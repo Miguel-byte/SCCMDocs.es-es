@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6aa1c324a3ff24feb14c6b867728a76252a8c19d
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: 13db7793b0d5a5b4f0845af21f976089205fdc7d
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176021"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286165"
 ---
 # <a name="capabilities-in-technical-preview-1709-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1709 para System Center Configuration Manager
 
@@ -118,7 +118,7 @@ Las directivas de Windows Update para empresas le permiten configurar directivas
 
 ### <a name="remote-actions-available-in-intune-on-azure-for-co-managed-devices"></a>Acciones remotas disponibles en Intune para Azure para los dispositivos administrados conjuntamente
 Si un dispositivo de Windows 10 está habilitado para la administración conjunta, tiene a su disposición las siguientes acciones remotas de Intune en Azure:  
-- [Restablecimiento de la configuración de fábrica](https://docs.microsoft.com/intune/devices-wipe#factory-reset)
+- [Restablecimiento de la configuración de fábrica](https://docs.microsoft.com/intune/devices-wipe#wipe)
 - [Borrado selectivo](https://docs.microsoft.com/intune/apps-selective-wipe)
 - [Eliminar dispositivos](https://docs.microsoft.com/intune/devices-wipe#delete-devices-from-the-azure-active-directory-portal)
 - [Reiniciar dispositivo](https://docs.microsoft.com/intune/device-restart)

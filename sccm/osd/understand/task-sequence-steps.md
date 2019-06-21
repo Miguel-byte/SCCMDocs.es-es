@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6229c0fe0702eac61b482c31195fd35fe3c5792f
-ms.sourcegitcommit: c43996b3cf083d919ff1ccc3d510af664aec4ed4
-ms.translationtype: HT
+ms.openlocfilehash: 2d510ab884e471a6fc4803826c9c19e21b614273
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67047002"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285594"
 ---
 # <a name="task-sequence-steps"></a>Pasos de la secuencia de tareas
 
@@ -171,7 +171,7 @@ Seleccione esta opción para que el equipo de destino se una al dominio especifi
 
 #### <a name="account"></a>Cuenta
 
-Seleccione **Establecer** para especificar una cuenta con los permisos necesarios para unir el equipo al dominio. En el cuadro de diálogo **Cuenta de usuario de Windows** puede especificar el nombre de usuario con el formato siguiente: `Domain\User`. Para obtener más información, consulte [Cuenta de unión de dominio](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-domain-joining-account).
+Seleccione **Establecer** para especificar una cuenta con los permisos necesarios para unir el equipo al dominio. En el cuadro de diálogo **Cuenta de usuario de Windows** puede especificar el nombre de usuario con el formato siguiente: `Domain\User`. Para obtener más información, consulte [Cuenta de unión de dominio](/sccm/core/plan-design/hierarchy/accounts#task-sequence-domain-join-account).
 
 #### <a name="adapter-settings"></a>Configuración del adaptador
 
@@ -462,7 +462,7 @@ Configuration Manager captura cada volumen (unidad) del equipo de referencia com
 
 El sistema operativo instalado en el equipo de referencia debe ser una versión de Windows que sea compatible con Configuration Manager. Use la herramienta SysPrep para preparar el sistema operativo en el equipo de referencia. El volumen del sistema operativo instalado y el volumen de arranque deben ser el mismo.  
 
-Especifique una cuenta con permisos de escritura en el recurso compartido de red seleccionado. Para obtener más información sobre la cuenta de captura de imagen del sistema operativo, consulte [Cuentas](/sccm/core/plan-design/hierarchy/accounts#capture-operating-system-image-account).
+Especifique una cuenta con permisos de escritura en el recurso compartido de red seleccionado. Para obtener más información sobre la cuenta de captura de imagen del sistema operativo, consulte [Cuentas](/sccm/core/plan-design/hierarchy/accounts#capture-os-image-account).
 
 Este paso de secuencia de tareas solo se ejecuta en Windows PE, No se ejecuta en el sistema operativo completo.
 
@@ -680,7 +680,7 @@ Seleccione la letra de unidad local que se va a asignar a esta conexión.
 
 #### <a name="account"></a>Cuenta
 
-Seleccione **Establecer** para especificar la cuenta de usuario con permisos para conectarse a esta carpeta de red. Para obtener más información sobre la cuenta de conexión de la carpeta de red de la secuencia de tareas, consulte [Cuentas](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-network-folder-connection-account).
+Seleccione **Establecer** para especificar la cuenta de usuario con permisos para conectarse a esta carpeta de red. Para obtener más información sobre la cuenta de conexión de la carpeta de red de la secuencia de tareas, consulte [Cuentas](/sccm/core/plan-design/hierarchy/accounts#task-sequence-network-folder-connection-account).
 
 
 
@@ -731,6 +731,9 @@ Este paso funciona bien en una secuencia de tareas para actualizar un sistema op
 > Al implementar una secuencia de tareas que contiene este paso, no seleccione **Descargar todo el contenido localmente antes de iniciar la secuencia de tareas** o **Acceder al contenido directamente desde un punto de distribución** para **Opciones de implementación** en la página **Puntos de distribución** del Asistente para implementar software.  
 
 Este paso se ejecuta en el sistema operativo completo o Windows PE. En Windows PE no se admite la opción de guardar el paquete en la caché de cliente de Configuration Manager.
+
+> [!NOTE]  
+> El **descargar contenido de paquete** tarea no se admite para su uso con medios independientes. Para obtener más información, consulte [no admite acciones para medios independientes](/sccm/osd/deploy-use/create-stand-alone-media#unsupported-actions-for-stand-alone-media).  
 
 Para agregar este paso en el editor de secuencia de tareas, seleccione **Agregar**, **Software** y **Descargar contenido de paquete**.
 
@@ -1158,7 +1161,7 @@ Si lo desea, escriba o busque una unidad organizativa (OU) en el dominio especif
 
 #### <a name="enter-the-account-which-has-permission-to-join-the-domain"></a>Especifique la cuenta que tiene permiso para unirse al dominio
 
-Seleccione **Establecer** para escribir el nombre de usuario y la contraseña de una cuenta con permisos para unirse al dominio. Escriba la cuenta en el formato: `Domain\account`. Para obtener más información sobre la cuenta de unión a dominio de la secuencia de tareas, consulte [Cuentas](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-domain-joining-account).  
+Seleccione **Establecer** para escribir el nombre de usuario y la contraseña de una cuenta con permisos para unirse al dominio. Escriba la cuenta en el formato: `Domain\account`. Para obtener más información sobre la cuenta de unión a dominio de la secuencia de tareas, consulte [Cuentas](/sccm/core/plan-design/hierarchy/accounts#task-sequence-domain-join-account).  
 
 
 

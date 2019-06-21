@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1e01d423df30e36bcf5e7613aee22962077787b
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 2e0ad2568c250cbaab0f52f76b98750153aa0b05
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499264"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67252348"
 ---
 # <a name="configure-sql-server-always-on-availability-groups-for-configuration-manager"></a>Configuración de grupos de disponibilidad AlwaysOn de SQL Server para Configuration Manager
 
@@ -122,7 +122,7 @@ Para este procedimiento, utilice la información de [Remove a Secondary Replica 
 A partir de 1706 de versión de Configuration Manager, puede agregar una réplica asincrónica a un grupo de disponibilidad que se utilice con Configuration Manager. Para ello, no hace falta ejecutar los scripts de configuración necesarios para configurar una réplica sincrónica. (El motivo es que no se admite el uso de esa réplica asincrónica como la base de datos de sitio). Consulte la [documentación de SQL Server](https://msdn.microsoft.com/library/hh213247(v=sql.120).aspx(d=robot)) para obtener información sobre cómo agregar réplicas secundarias a grupos de disponibilidad.
 
 ## <a name="use-the-asynchronous-replica-to-recover-your-site"></a>Uso de la réplica asincrónica para la recuperación del sitio
-Con la versión 1706 de Configuration Manager y posteriores, puede usar una réplica asincrónica para recuperar la base de datos de sitio. Para ello, debe detener el sitio primario activo para evitar que se realicen escrituras adicionales en la base de datos de sitio. Una vez detenido el sitio, puede utilizar una réplica asincrónica en lugar de una [base de datos recuperada manualmente](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption).
+Con la versión 1706 de Configuration Manager y posteriores, puede usar una réplica asincrónica para recuperar la base de datos de sitio. Para ello, debe detener el sitio primario activo para evitar que se realicen escrituras adicionales en la base de datos de sitio. Una vez detenido el sitio, puede utilizar una réplica asincrónica en lugar de una [base de datos recuperada manualmente](/sccm/core/servers/manage/recover-sites#use-a-site-database-that-has-been-manually-recovered).
 
 Para detener el sitio, puede usar la [herramienta de mantenimiento de jerarquía](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe) si desea detener servicios clave en el servidor del sitio. Use la línea de comandos: **Preinst.exe /stopsite**   
 

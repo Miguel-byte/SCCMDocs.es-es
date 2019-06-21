@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f14d245ef6bed5749ace29adae6e20d18574905
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: f524096334d50a3a01ebf79436c32fdf732ca088
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65497457"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67252058"
 ---
 # <a name="support-for-configuration-manager-current-branch-versions"></a>Compatibilidad con versiones de la rama actual de Configuration Manager
 
@@ -26,7 +26,7 @@ Microsoft tiene previsto publicar actualizaciones de la rama actual de Configura
 
 - Fase de servicio de **actualizaciones críticas y de seguridad**: cuando se ejecuta la versión más reciente de la rama actual de Configuration Manager, se reciben actualizaciones críticas y seguridad.  
 
-- Fase de servicio de **actualizaciones de seguridad (solo)**: después del lanzamiento de una versión nueva de la rama actual, Microsoft solo admite actualizaciones de seguridad a las versiones anteriores durante el resto del ciclo de vida de soporte técnico de esa versión (como se muestra en la Ilustración 1).  
+- Fase de servicio de **actualizaciones de seguridad (solo)** : después del lanzamiento de una versión nueva de la rama actual, Microsoft solo admite actualizaciones de seguridad a las versiones anteriores durante el resto del ciclo de vida de soporte técnico de esa versión (como se muestra en la Ilustración 1).  
 
 ([Ver gráfico a tamaño completo](media/CM_Servicing_support_timeline1.png))
 
@@ -43,4 +43,4 @@ Ilustración 1. Ejemplo de la superposición del ciclo de versiones del soporte 
 
 Para obtener una lista de las versiones de la rama actual, vea [Detalles de la versión](/sccm/core/servers/manage/updates#version-details).
 
-Para obtener más información sobre los números de versión y la disponibilidad como una actualización en la consola o una línea de base, vea [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions).
+Para obtener más información sobre los números de versión y la disponibilidad como una actualización en la consola o una línea de base, vea [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#bkmk_Baselines).

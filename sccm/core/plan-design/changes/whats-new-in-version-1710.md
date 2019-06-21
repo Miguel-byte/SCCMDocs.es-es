@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b966654712dbe670ea200fbb4c975df26ecac542
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 43fdf80a9876c6cfe4b07b3e3df2756fdf64f8d9
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65495580"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285789"
 ---
 # <a name="what39s-new-in-version-1710-of-system-center-configuration-manager"></a>Novedades de la versión 1710 de System Center Configuration Manager
 
@@ -35,7 +35,7 @@ Ahora también están disponibles las siguientes actualizaciones adicionales a e
 >  Más información acerca de:    
 >   - [Instalación de nuevos sitios](/sccm/core/servers/deploy/install/installing-sites)  
 >   - [Instalación de actualizaciones en los sitios](/sccm/core/servers/manage/updates)  
->   - [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
+>   - [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 En las secciones siguientes se proporcionan detalles sobre los cambios y las nuevas funciones introducidas en la versión 1710 de Configuration Manager.  
 
@@ -130,7 +130,7 @@ A partir de esta versión, la administración de actualizaciones de controladore
 ### <a name="limit-windows-10-enhanced-telemetry-to-only-send-data-relevant-to-windows-analytics-device-health"></a>Limitación de la telemetría mejorada de Windows 10 al envío únicamente de datos pertinentes para el Estado de dispositivos de Windows Analytics
 <!-- 1356148 -->
 
-Ahora puede establecer el nivel de recopilación de datos de telemetría de Windows 10 en **Mejorado (limitado)**. Esta configuración le permite obtener información práctica sobre los dispositivos de su entorno sin que los dispositivos informen de todos los datos del nivel de telemetría **Mejorado** con Windows 10, versión 1709 o una versión posterior.
+Ahora puede establecer el nivel de recopilación de datos de telemetría de Windows 10 en **Mejorado (limitado)** . Esta configuración le permite obtener información práctica sobre los dispositivos de su entorno sin que los dispositivos informen de todos los datos del nivel de telemetría **Mejorado** con Windows 10, versión 1709 o una versión posterior.
 
 Para obtener más información, vea [Cómo configurar el cliente en System Center Configuration Manager](/sccm/core/clients/deploy/configure-client-settings).
 

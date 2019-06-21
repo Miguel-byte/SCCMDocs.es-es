@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a513eb15f9a8c841aa5896ee5d416bd7863d0cb9
-ms.sourcegitcommit: ab9f2a7fb7ea3a0c65808fce2975ab25a670281f
+ms.openlocfilehash: 9d697427fe9cfa774cc7baca6563d6c1cc285c8b
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612796"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159387"
 ---
 # <a name="ports-used-in-configuration-manager"></a>Puertos usados en Configuration Manager
 
@@ -130,7 +130,7 @@ Además de los puertos que se enumeran en esta tabla, un proxy de reactivación 
 |Difusión de caché del mismo nivel de Windows PE|8004|--|  
 |Descarga de caché del mismo nivel de Windows PE|--|8003|  
 
-Para más información, consulte [Windows PE Peer Cache](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md#-requirements-for-a-client-to-use-a--windows-pe-peer-cache-source) (Caché del mismo nivel de Windows PE).
+Para más información, consulte [Windows PE Peer Cache](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic#BKMK_PeerCacheRequirements) (Caché del mismo nivel de Windows PE).
 
 
 ###  <a name="BKMK_PortsClient-PolicyModule"></a> Cliente -- > Módulo de directivas del servicio de inscripción de dispositivos de red de Configuration Manager (SCEP)   
@@ -749,7 +749,7 @@ Estos puertos usan una serie de números de puerto que está definidos por la ve
 
  Los clientes utilizan Bloque de mensajes del servidor (SMB) cada vez que se conectan a recursos compartidos UNC. Por ejemplo:  
 
--   Instalación manual de cliente que especifica la propiedad de la línea de comandos CCMSetup.exe **/source:**.  
+-   Instalación manual de cliente que especifica la propiedad de la línea de comandos CCMSetup.exe **/source:** .  
 
 -   Clientes de Endpoint Protection que descargan archivos de definición de una ruta de acceso UNC.
 

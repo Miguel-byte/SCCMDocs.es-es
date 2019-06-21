@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a41f144909ba946d3c3bc2f00a1573cad2c9b850
-ms.sourcegitcommit: f531d0a622f220739710b2fe6644ea58d024064a
+ms.openlocfilehash: c15b387ec9f2048a923eb220b6c8e3e1fdccded8
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65933332"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286295"
 ---
 # <a name="capabilities-in-technical-preview-1612-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1612 para System Center Configuration Manager
 
@@ -93,11 +93,11 @@ Página **General**: se necesita la siguiente información general:
 
 Página **Configuración de sincronización**:   
 - **Configuración de datos:**
-  - **Grupos de replicación que se van a sincronizar**: seleccione los grupos de datos que quiere sincronizar. Para obtener información sobre los diferentes tipos de grupos de datos, consulte [Replicación de base de datos](/sccm/core/servers/manage/data-transfers-between-sites#a-namebkmkdbrepa-database-replication) y **Vistas distribuidas** en [Transferencias de datos entre sitios en System Center Configuration Manager](/sccm/core/servers/manage/data-transfers-between-sites).
+  - **Grupos de replicación que se van a sincronizar**: seleccione los grupos de datos que quiere sincronizar. Para obtener información sobre los diferentes tipos de grupos de datos, consulte [Replicación de base de datos](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_dbrep) y **Vistas distribuidas** en [Transferencias de datos entre sitios en System Center Configuration Manager](/sccm/core/servers/manage/data-transfers-between-sites).
   - **Tablas incluidas que se van a sincronizar**: especifique el nombre de cada tabla adicional que quiera sincronizar. Separe varias tablas con una coma. Estas tablas se sincronizarán de la base de datos del sitio además de los grupos de replicación que seleccione.
   - **Tablas excluidas que se van a sincronizar**: especifique el nombre de tablas individuales de los grupos de replicación que sincroniza. Las tablas que especifique se excluirán. Separe varias tablas con una coma.
 - **Configuración de sincronización:**
-  - **Intervalo de sincronización (minutos)**: especifique un valor en minutos. Después de que se alcance el intervalo, se iniciará una nueva sincronización. Se admite un intervalo de 60 a 1440 minutos (24 horas).
+  - **Intervalo de sincronización (minutos)** : especifique un valor en minutos. Después de que se alcance el intervalo, se iniciará una nueva sincronización. Se admite un intervalo de 60 a 1440 minutos (24 horas).
   - **Programación**: especifique los días que quiere que se ejecute la sincronización.
 
 **Acceso de punto de Reporting**:   
@@ -221,7 +221,7 @@ Ahora puede configurar una lista de archivos ejecutables (con la extensión .exe
 
 ### <a name="try-it-out"></a>Haga la prueba
 Para configurar una lista de archivos ejecutables
-1.  En la página de propiedades de cualquier tipo de implementación, pulse la pestaña **Installer Handling (Control del instalador)**.
+1.  En la página de propiedades de cualquier tipo de implementación, pulse la pestaña **Installer Handling (Control del instalador)** .
 2.  Haga clic en **Agregar** para agregar uno de los archivos ejecutables a la lista (por ejemplo, **Edge.exe**).
 3.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo de las propiedades del tipo de implementación.
 
@@ -255,14 +255,14 @@ Hemos agregado compatibilidad con archivos de instalación rápida en Configurat
 Para iniciar la sincronización de los metadatos de los archivos de instalación rápida de Windows 10, debe habilitarlos en las propiedades de punto de actualización de software.
 1.  En la consola de Configuration Manager, vaya a **Administración** > **Configuración del sitio** > **Sitios**.
 2.  Seleccione el sitio de administración central o el sitio primario independiente.
-3.  En la pestaña **Inicio** , en el grupo **Configuración** , haga clic en **Configurar componentes de sitio**y, a continuación, haga clic en **Punto de actualización de software**. En la pestaña **Archivos de actualización**, seleccione **Download full files for all approved updates and express installation files for Windows 10 (Descargar archivos completos para todas las actualizaciones aprobadas y los archivos de instalación rápida de Windows 10)**.
+3.  En la pestaña **Inicio** , en el grupo **Configuración** , haga clic en **Configurar componentes de sitio**y, a continuación, haga clic en **Punto de actualización de software**. En la pestaña **Archivos de actualización**, seleccione **Download full files for all approved updates and express installation files for Windows 10 (Descargar archivos completos para todas las actualizaciones aprobadas y los archivos de instalación rápida de Windows 10)** .
 
 ### <a name="to-enable-support-for-clients-to-download-and-install-express-installation-files"></a>Para habilitar la compatibilidad para que los clientes descarguen e instalen archivos de instalación rápida
 Para habilitar la compatibilidad de los archivos de instalación rápida en los clientes, debe habilitar los archivos de instalación rápida en los clientes en la sección Actualizaciones de software de la configuración de cliente. Esto crea una nueva escucha HTTP que escucha las solicitudes para descargar los archivos de instalación rápida en el puerto que especifique. Una vez que implemente la configuración de cliente para habilitar esta característica en el cliente, intentará descargar la diferencia entre la actualización acumulativa de Windows 10 del mes actual y la actualización del mes anterior (los clientes deben ejecutar una versión de Windows 10 que admita los archivos de instalación rápida).
 1.  Habilite la compatibilidad para los archivos de instalación rápida en las propiedades de componente de punto de actualización de software (procedimiento anterior).
 2.  En la consola de Configuration Manager, vaya a **Administración** > **Configuración de cliente**.
 3.  Seleccione la configuración de cliente adecuada y, después, en la pestaña **Inicio**, haga clic en **Propiedades**.
-4.  Seleccione la página **Actualizaciones de software**, configure **Sí** para la opción **Enable installation of Express Updates on clients (Habilitar la instalación de actualizaciones rápidas en clientes)** y configure el puerto que ha usado la escucha HTTP en el cliente para la opción **Port used to download content for Express Updates (Puerto usado para descargar el contenido de las actualizaciones rápidas)**.
+4.  Seleccione la página **Actualizaciones de software**, configure **Sí** para la opción **Enable installation of Express Updates on clients (Habilitar la instalación de actualizaciones rápidas en clientes)** y configure el puerto que ha usado la escucha HTTP en el cliente para la opción **Port used to download content for Express Updates (Puerto usado para descargar el contenido de las actualizaciones rápidas)** .
 
 
 ## <a name="odata-endpoint-data-access"></a>Acceso a datos del punto de conexión de OData
@@ -310,7 +310,7 @@ Existen varios requisitos para habilitar la creación de directivas de usuario e
 
 - El proceso de incorporación de Azure AD debe estar completo, y el cliente tiene que estar conectado inicialmente a la red corporativa para obtener la información de conexión.
 - Los clientes deben estar unidos a dominio (registrados en Active Directory) y unidos a dominio en la nube (registrados en Azure AD).
-- Debe ejecutar [Detección de usuarios de Active Directory](/sccm/core/servers/deploy/configure/about-discovery-methods#active-directory-user-discovery#active-directory-user-discovery).
+- Debe ejecutar [Detección de usuarios de Active Directory](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser).
 - Debe modificar el cliente de Configuration Manager para permitir solicitudes de directivas de usuarios en Internet, e implementar el cambio en el cliente. Como este cambio en el cliente tiene lugar *en el dispositivo cliente*, puede implementarse mediante la puerta de enlace de administración en la nube aunque no haya completado los cambios de configuración necesarios en la directiva de usuario.
 - El punto de administración debe estar configurado para usar HTTPS para proteger el token en la red, y debe tener instalado .NET 4.5.
 

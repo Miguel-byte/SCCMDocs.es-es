@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52e3384f1922e1a8322f316fd99bdd967e34b131
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 88b192163ac7a947f73ff658f7bafbfc1bfd5e14
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65496225"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285873"
 ---
 # <a name="removed-and-deprecated-for-configuration-manager-site-servers"></a>Elementos eliminados y en desuso de los servidores de sitio de Configuration Manager
 
@@ -41,7 +41,7 @@ Windows Server 2008 R2 con Service Pack 1 no se admite en servidores de sitio ni
 > [!Important]  
 > La fecha de finalización del soporte técnico extendido para Windows Server 2008 R2 con SP1 es el 14 de enero de 2020. Después de esta fecha, Configuration Manager no será compatible con este SO en ningún rol de sistema de sitio. 
 
-Puede actualizar el sistema operativo del servidor de sitio de Windows Server 2008 R2 a Windows Server 2012 R2. Para más información, vea [Actualización inmediata del sistema operativo de los servidores de sitio que ejecutan Windows Server 2008 R2](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#bkmk_from2008r2).  
+Puede actualizar el sistema operativo del servidor de sitio de Windows Server 2008 R2 a Windows Server 2012 R2. Para más información, vea [Actualización inmediata del sistema operativo de los servidores de sitio que ejecutan Windows Server 2008 R2](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#BKMK_SupConfigUpgradeSiteSrv).  
 
 
 #### <a name="bkmk_note2"></a> Nota 2: Windows Server 2008 con SP2
@@ -62,9 +62,9 @@ Windows Server 2008 con Service Pack 2 no se admite en servidores de sitio ni en
 
 Si tiene que actualizar la versión de SQL Server, se recomienda seguir estos métodos, del más sencillo al más complicado:
 
-1. [Realice una actualización local de SQL Server](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server) (recomendado).  
+1. [Realice una actualización local de SQL Server](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#BKMK_SupConfigUpgradeDBSrv) (recomendado).  
 
-2. Instale una nueva versión de SQL Server en un equipo nuevo. Después, para que el servidor de sitio apunte a la nueva instancia de SQL Server, [use la opción de mover la base de datos](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration) del programa de instalación de Configuration Manager.  
+2. Instale una nueva versión de SQL Server en un equipo nuevo. Después, para que el servidor de sitio apunte a la nueva instancia de SQL Server, [use la opción de mover la base de datos](/sccm/core/servers/manage/modify-your-infrastructure#bkmk_dbconfig) del programa de instalación de Configuration Manager.  
 
 3. Use [Copia de seguridad y recuperación](/sccm/protect/understand/backup-and-recovery).  
 

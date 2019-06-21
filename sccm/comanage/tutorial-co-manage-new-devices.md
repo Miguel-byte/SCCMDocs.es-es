@@ -12,12 +12,12 @@ ms.prod: configuration-manager
 ms.service: ''
 ms.technology: ''
 ms.assetid: ''
-ms.openlocfilehash: 3c02a9c05e2c7d24654684f122edcd3eb5a84e06
-ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
+ms.openlocfilehash: 94513445c8d1849f0304b304b7dd8672c1e50978
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834864"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67158302"
 ---
 # <a name="tutorial-enable-co-management-for-new-internet-based-devices"></a>Tutorial: Habilitación de la administración conjunta para nuevos dispositivos basados en Internet
 Con la administración conjunta, puede mantener sus procesos estandarizados para el uso de Configuration Manager para administrar los equipos de su organización. Al mismo tiempo, está invirtiendo en la nube mediante el uso de Intune para la seguridad y el aprovisionamiento moderno. 
@@ -450,5 +450,5 @@ Después de completar los pasos de configuración de este tutorial, incluida la 
 
 ## <a name="next-steps"></a>Pasos siguientes
 - Revise el estado de los dispositivos administrados conjuntamente con el [panel de administración conjunta](https://docs.microsoft.com/sccm/core/clients/manage/co-management-dashboard).
-- Use [Windows Autopilot]() para aprovisionar nuevos dispositivos.
+- Use [Windows Autopilot](/sccm/comanage/quickstart-autopilot) para aprovisionar nuevos dispositivos.
 - Use el [acceso condicional](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access) y las reglas de cumplimiento de Intune para administrar el acceso de los usuarios a los recursos corporativos.

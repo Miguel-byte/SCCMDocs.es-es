@@ -11,14 +11,14 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 102890f9e4b96328f117779ba63e9c72bf8f5d15
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 9f49955fed92061fb856a5ff49203f1fa6c9d186
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67158955"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285632"
 ---
-# <a name="tutorial-deploy-windows-10-to-pilot"></a>Tutorial: Implementación piloto de Windows 10
+# <a name="tutorial-deploy-windows-10-to-pilot"></a>Tutorial: Implementación de Windows 10 en el piloto
 
 > [!Note]  
 > Esta información se relaciona con un servicio en versión preliminar que puede modificarse sustancialmente antes de su lanzamiento comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información aquí proporcionada.  
@@ -221,6 +221,9 @@ Instale el paquete de actualizaciones de Configuration Manager versión 1902 (45
 8. Complete el asistente.  
 
 Configuration Manager crea una directiva de configuración para configurar los dispositivos en la colección de destino. Esta directiva incluye la configuración de datos de diagnóstico para habilitar dispositivos para enviar datos a Microsoft. De forma predeterminada, los clientes actualizan la directiva cada hora. Después de recibir la nueva configuración, puede ser más varias horas antes de que los datos están disponibles en análisis de escritorio.
+
+> [!Note]  
+> Para obtener más información sobre estas opciones, consulte [configuración Windows](/sccm/desktop-analytics/enroll-devices#windows-settings).  
 
 Supervisar la configuración de los dispositivos para el análisis de escritorio. En la consola de Configuration Manager, vaya a la **biblioteca de Software** área de trabajo, expanda el **escritorio Analytics mantenimiento** nodo y seleccione el **estado de conexión** panel.  
 

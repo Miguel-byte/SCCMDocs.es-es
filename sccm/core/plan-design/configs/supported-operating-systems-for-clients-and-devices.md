@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af9d8c16033a22c828f014dfd4bad771851c08de
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: c6b47c99199458c902f1f56ccc3d5007dfd126eb
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499335"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251551"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Versiones de SO admitidas para clientes y dispositivos de Configuration Manager
 
@@ -94,7 +94,7 @@ Las versiones de canal semestrales de Windows Server son instalaciones Server Co
  Configuration Manager prueba y admite las ediciones de Windows Server Datacenter, pero está certificado oficialmente para Windows Server. No se ofrece soporte técnico de revisiones de Configuration Manager para problemas específicos de Windows Server Datacenter Edition. Para más información sobre el programa de certificación de Windows Server, vea [Windows Server Catalog](https://www.windowsservercatalog.com/). 
 
 #### <a name="bkmk_note2"></a> Nota 2
- Para admitir la [instalación de inserción de cliente](/sccm/core/clients/deploy/plan/client-installation-methods#client-push-installation), agregue el servicio del servidor de archivos del rol del servidor de Servicios de archivos y almacenamiento. Para más información sobre cómo instalar características de Windows en Server Core, vea [Install roles, role services, and features by using Windows PowerShell cmdlets](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#BKMK_installwps) (Instalar roles, servicios de roles y características mediante los cmdlets de Windows PowerShell).  
+ Para admitir la [instalación de inserción de cliente](/sccm/core/clients/deploy/plan/client-installation-methods#client-push-installation), agregue el servicio del servidor de archivos del rol del servidor de Servicios de archivos y almacenamiento. Para más información sobre cómo instalar características de Windows en Server Core, vea [Install roles, role services, and features by using Windows PowerShell cmdlets](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-windows-powershell-cmdlets) (Instalar roles, servicios de roles y características mediante los cmdlets de Windows PowerShell).  
 
 #### <a name="bkmk_note3"></a> Nota 3
  No se admite la nueva aplicación de Centro de Software en ninguna versión de Windows Server Core.<!--SCCMDocs issue 683-->
@@ -361,7 +361,7 @@ Configuration Manager admite la administración limitada de dispositivos que se 
 
 ### <a name="supported-versions-of-exchange-server"></a>Versiones admitidas de Exchange Server
 
-- **Exchange Online (Office 365)**: esta versión incluye Business Productivity Online Standard Suite.  
+- **Exchange Online (Office 365)** : esta versión incluye Business Productivity Online Standard Suite.  
 
 - **Exchange Server 2016** (a partir de la versión 1802)  
 

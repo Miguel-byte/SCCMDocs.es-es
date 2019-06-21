@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 305c31c2a40e51b84a0a5da671db1c3f6dad6f2e
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: c6a64a007462c8619e05b3002611bb72581b6f92
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159008"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285712"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>Solución de problemas de análisis de escritorio
 
@@ -82,7 +82,7 @@ Si necesita aprovisionar estas aplicaciones después de completar la instalació
 
 ### <a name="create-and-import-app-for-configuration-manager"></a>Crear e importar aplicación de Configuration Manager
 
-Si no se puede crear esta aplicación de Azure AD desde el asistente Configurar servicios de Azure en Configuration Manager, siga estos pasos manualmente, crear e importar la aplicación de Configuration Manager.
+Después de completar la [inicial incorporación](/sccm/desktop-analytics/set-up#initial-onboarding) en el portal de análisis de escritorio, siga estos pasos para crear manualmente e importar la aplicación de Configuration Manager si no se puede crear esta aplicación de Azure AD desde configurar servicios de Azure hechicero.
 
 #### <a name="create-app-in-azure-ad"></a>Crear la aplicación en Azure AD
 

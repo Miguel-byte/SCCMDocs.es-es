@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49edf86f855c934d29ae0ed1101bb319278ccc7c
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: f9ead2348e96856d006c8041705c4b4e30c145e9
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56141058"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286812"
 ---
 # <a name="prepare-to-deploy-client-software-to-macs"></a>Preparativos para la implementación de software cliente en Mac
 
@@ -44,9 +44,9 @@ Si los clientes Mac no encuentran la lista de revocación de certificados (CRL),
 
 Antes de instalar el cliente de Configuration Manager en un equipo Mac, decida cómo va a instalar el certificado de cliente:  
 
--   Usar la inscripción de Configuration Manager mediante la [herramienta CMEnroll](/sccm/core/clients/deploy/deploy-clients-to-macs#install-the-client-and-then-enroll-the-client-certificate-on-the-mac). El proceso de inscripción no admite la renovación automática de certificados. Vuelva a inscribir los equipos Mac antes de que expire el certificado.  
+-   Usar la inscripción de Configuration Manager mediante la [herramienta CMEnroll](/sccm/core/clients/deploy/deploy-clients-to-macs#client-and-certificate-automation-with-cmenroll). El proceso de inscripción no admite la renovación automática de certificados. Vuelva a inscribir los equipos Mac antes de que expire el certificado.  
 
--   [Usar una solicitud de certificado y un método de instalación independiente de Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-macs#use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager).  
+-   [Usar una solicitud de certificado y un método de instalación independiente de Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-macs#bkmk_external).  
 
 Para obtener más información sobre los requisitos del certificado de cliente Mac, vea [Requisitos de certificados PKI para Configuration Manager](/sccm/core/plan-design/network/pki-certificate-requirements).  
 
@@ -73,7 +73,7 @@ El certificado de servidor web debe incluir el FQDN de Internet que se especific
 
 Especifique el FQDN de Internet del sistema de sitio en el certificado de servidor web para el punto de administración, el punto de distribución y el punto de proxy de inscripción.
 
-Para obtener más información sobre una implementación de ejemplo, vea [Implementación del certificado de servidor web para sistemas de sitio que ejecutan IIS](/sccm/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).  
+Para obtener más información sobre una implementación de ejemplo, vea [Implementación del certificado de servidor web para sistemas de sitio que ejecutan IIS](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).  
 
 
 
@@ -85,9 +85,9 @@ Si estos sistemas de sitio no tienen un certificado de autenticación de cliente
 
 -   Punto de distribución  
 
-Para obtener una implementación de ejemplo en la que se crea y se instala el certificado de cliente para puntos de administración, vea [Implementación del certificado de cliente para equipos Windows](/sccm/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012).  
+Para obtener una implementación de ejemplo en la que se crea y se instala el certificado de cliente para puntos de administración, vea [Implementación del certificado de cliente para equipos Windows](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012).  
 
-Para obtener una implementación de ejemplo en la que se crea y se instala el certificado de cliente para puntos de distribución, vea [Implementación del certificado de cliente para puntos de distribución](/sccm/plan-design/network/example-deployment-of-pki-certificates#BKMK_clientdistributionpoint2008_cm2012).  
+Para obtener una implementación de ejemplo en la que se crea y se instala el certificado de cliente para puntos de distribución, vea [Implementación del certificado de cliente para puntos de distribución](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clientdistributionpoint2008_cm2012).  
 
 > [!IMPORTANT]  
 >  Para implementar el cliente en dispositivos que ejecutan macOS Sierra, el nombre de asunto del certificado de punto de administración se debe configurar correctamente mediante. Por ejemplo, use el FQDN del servidor de punto de administración.  
@@ -98,7 +98,7 @@ Para obtener una implementación de ejemplo en la que se crea y se instala el ce
 
 La plantilla de certificado debe tener permisos de **lectura** e **inscripción** para la cuenta de usuario que inscriba el certificado en el equipo Mac.  
 
-Para obtener más información, vea [Implementación del certificado de cliente para equipos Mac](/sccm/plan-design/network/example-deployment-of-pki-certificates#BKMK_MacClient_SP1).  
+Para obtener más información, vea [Implementación del certificado de cliente para equipos Mac](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_MacClient_SP1).  
 
 
 

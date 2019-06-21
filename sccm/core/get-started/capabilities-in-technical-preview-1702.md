@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d817bf27302b0a894eb834c747fb3bbcb0ad3fa
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 950e3d60d0737d9135eb5f47bbc02a07f2a5e65e
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56141194"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67158345"
 ---
 # <a name="capabilities-in-technical-preview-1702-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1702 para System Center Configuration Manager
 
@@ -77,7 +77,7 @@ Para usar Azure AD con Configuration Manager, necesitará lo siguiente:
 -   Un sitio de Configuration Manager que se ejecute en una máquina virtual de Azure que esté unida a Azure AD.
 -   Clientes de Configuration Manager que se ejecuten en el mismo entorno de Azure AD.
 
-Para configurar Azure AD Domain Services, consulte [Introducción a Azure AD Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started).
+Para configurar Azure AD Domain Services, consulte [Introducción a Azure AD Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance).
 
 ### <a name="discover-resources"></a>Detectar recursos
 Después de configurar Configuration Manager para que se ejecute en Azure AD, puede usar los siguientes métodos de detección de Active Directory para buscar recursos en Azure AD:  
@@ -202,8 +202,8 @@ Siga este procedimiento para configurar los detalles de la secuencia de tareas q
 2. Seleccione la secuencia de tareas que se va editar y haga clic en **Propiedades**.
 3. En la pestaña **General**, está disponible la siguiente configuración para el Centro de software:
    - **Es necesario reiniciar**: permite al usuario saber si es necesario reiniciar durante la instalación.
-   - **Tamaño de la descarga (MB)**: especifica cuántos megabytes se muestran en el Centro de software para la secuencia de tareas.  
-   - **Tiempo de ejecución estimado (minutos)**: especifica el tiempo de ejecución estimado en minutos que se muestra en el Centro de software para la secuencia de tareas.
+   - **Tamaño de la descarga (MB)** : especifica cuántos megabytes se muestran en el Centro de software para la secuencia de tareas.  
+   - **Tiempo de ejecución estimado (minutos)** : especifica el tiempo de ejecución estimado en minutos que se muestra en el Centro de software para la secuencia de tareas.
 
 
 ## <a name="check-for-running-executable-files-before-installing-an-application"></a>Comprobar los archivos ejecutables en ejecución antes de instalar una aplicación
@@ -266,7 +266,8 @@ Se han agregado nuevas opciones que se pueden usar en los elementos de configura
 - **Teclados predictivos** (solo en modo supervisado)
 - **Corrección automática** (solo en modo supervisado)
 - **Revisión ortográfica de teclado** (solo en modo supervisado)
-- **Métodos abreviados de teclado** (solo en modo supervisado) <!--- - **Enterprise app trust settings modification** --->
+- **Métodos abreviados de teclado** (solo en modo supervisado)
+  <!--- - **Enterprise app trust settings modification** --->
 - **Instalación de aplicaciones solo con Apple Configurator e iTunes** (solo en modo supervisado)
 - **Descargas de aplicaciones automáticas** (solo en modo supervisado)
 - **Realizar cambios en la configuración de la aplicación Buscar a mis amigos** (solo en modo supervisado)

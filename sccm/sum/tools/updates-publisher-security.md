@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 045a1daef8da0863ed7957ce4c9d3d48cfacca64
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 535feb67e700acd5b799c696aa366343581e70fd
+ms.sourcegitcommit: d47d2f03482e48d343e2139a341e61022331e6c2
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65496192"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67145730"
 ---
 # <a name="manage-certificates-and-security-for-updates-publisher"></a>Administrar certificados y seguridad de Updates Publisher
 
@@ -36,7 +36,7 @@ El procedimiento siguiente es uno de los distintos métodos posibles para agrega
 
 3.  Seleccione **Otro equipo** y escriba el nombre del servidor de actualización o haga clic en **Examinar** para encontrar el equipo servidor de actualización, haga clic en **Finalizar**, en **Cerrar** y luego, en **Aceptar**.
 
-4.  Expanda **Certificados (*nombre del servidor de actualización*)**, expanda **WSUS** y luego haga clic en **Certificados**.
+4.  Expanda **Certificados (*nombre del servidor de actualización*)** , expanda **WSUS** y luego haga clic en **Certificados**.
 
 5.  Haga clic con el botón derecho en el certificado que quiera, haga clic en **Todas las tareas** y luego, en **Exportar**.
 
@@ -46,7 +46,7 @@ El procedimiento siguiente es uno de los distintos métodos posibles para agrega
 
 8.  Si se usa un certificado autofirmado, como **WSUS Publishers Self-signed** (Editores WSUS autofirmados), haga lic en **Entidades de certificación raíz de confianza**, en **Todas las tareas** y luego, en **Importar**. Complete el Asistente para importar certificados con el archivo exportado del paso 6.
 
-9.  Haga clic con el botón derecho en **Certificados (*nombre del servidor de actualización*)**, haga clic en **Conectar a otro equipo**, especifique el nombre del equipo de Updates Publisher y haga clic en **Aceptar**.
+9.  Haga clic con el botón derecho en **Certificados (*nombre del servidor de actualización*)** , haga clic en **Conectar a otro equipo**, especifique el nombre del equipo de Updates Publisher y haga clic en **Aceptar**.
 
 10. Si Updates Publisher es remoto con respecto al servidor de actualización, repita los pasos del 7 al 9 para importar el certificado al almacén de certificados del equipo de Updates Publisher.
 
@@ -66,7 +66,7 @@ El siguiente ejemplo muestra cómo configurar el certificado de firma en equipos
 
 3. Seleccione **Otro equipo** y escriba el nombre del servidor de actualización o haga clic en **Examinar** para encontrar el equipo servidor de actualización, haga clic en **Finalizar**, en **Cerrar** y luego, en **Aceptar**.
 
-4. Expanda **Certificados (*nombre del servidor de actualización*)**, expanda **WSUS** y luego haga clic en **Certificados**.
+4. Expanda **Certificados (*nombre del servidor de actualización*)** , expanda **WSUS** y luego haga clic en **Certificados**.
 
 5. Haga clic con el botón derecho en el certificado en el panel de resultados, haga clic en **Todas las tareas** y luego, en **Exportar**. Complete el **Asistente para exportar certificados** con la configuración predeterminada para crear un archivo de exportación de certificado con el nombre y la ubicación especificados en el asistente.
 
@@ -77,7 +77,7 @@ El siguiente ejemplo muestra cómo configurar el certificado de firma en equipos
    -   Para los certificados emitidos por una entidad de certificación (CA): agregue el certificado al almacén de certificados **Editores de confianza**.
 
    > [!NOTE]
-   > El WUA también comprueba si la opción de directiva de grupo **Allow signed content from intranet Microsoft update service location** (Permitir contenido firmado procedente de la ubicación del servicio Microsoft Update de la intranet) está habilitada en el equipo local. Esta opción de directiva debe estar habilitada para que el Agente de Windows Update pueda examinar las actualizaciones que se crearon y publicaron con Updates Publisher. Para obtener más información sobre cómo habilitar esta opción de directiva de grupo, vea [Cómo configurar la directiva de grupo en los equipos cliente](<https://technet.microsoft.com/library/bb530967.aspx(d=robot>).
+   > El WUA también comprueba si la opción de directiva de grupo **Allow signed content from intranet Microsoft update service location** (Permitir contenido firmado procedente de la ubicación del servicio Microsoft Update de la intranet) está habilitada en el equipo local. Esta opción de directiva debe estar habilitada para que el Agente de Windows Update pueda examinar las actualizaciones que se crearon y publicaron con Updates Publisher. Para obtener más información sobre cómo habilitar esta opción de directiva de grupo, vea [Cómo configurar la directiva de grupo en los equipos cliente](https://docs.microsoft.com/en-us/previous-versions/bb530967(v=technet.10)).
 
 
 

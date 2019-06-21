@@ -10,12 +10,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb6071e576a12773c0aa5627dad80700db843f43
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 8cae90ec8a6120b2a9fcbdb25d7aecbf66bcaae8
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65496103"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285815"
 ---
 # <a name="whats-changed-in-system-center-configuration-manager-from-system-center-2012-configuration-manager"></a>Cambios en System Center Configuration Manager respecto a System Center 2012 Configuration Manager
 
@@ -45,7 +45,7 @@ Periódicamente, también se publica una versión de actualización como una nue
 
 
 Para más información sobre el uso de actualizaciones, consulte [Updates for Configuration Manager](/sccm/core/servers/manage/updates) (Actualizaciones para Configuration Manager).  
-Para más información sobre las versiones de línea base, consulte [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions).
+Para más información sobre las versiones de línea base, consulte [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#bkmk_Baselines).
 
 
 

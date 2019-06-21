@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04e4f24cee033f46ea69080a423b9ca6e2d4c9d5
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 75737d3f640a9ba0a27277f36791227fbdd08a5a
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65495137"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285824"
 ---
 # <a name="what39s-new-in-version-1610-of-system-center-configuration-manager"></a>Novedades de la versión 1610 de System Center Configuration Manager
 
@@ -31,13 +31,13 @@ La actualización 1610 para la rama actual de System Center Configuration Manage
 >  Más información acerca de:    
 >  -   [Instalación de nuevos sitios](https://technet.microsoft.com/library/mt590197.aspx)  
 >  -   [Instalación de actualizaciones en los sitios](https://technet.microsoft.com/library/mt607046.aspx)  
->  -   [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
+>  -   [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 En las secciones siguientes se proporcionan detalles sobre los cambios y las nuevas funciones introducidas en la versión 1610 de Configuration Manager.  
 
 
 ## <a name="in-console-monitoring-of-update-installation-status"></a>Supervisión en la consola del estado de la instalación de actualización  
-A partir de la versión 1610, cuando instale un paquete de actualizaciones y supervise la instalación en la consola, hay una fase nueva: **Postinstalación**. En esta fase se incluye el estado de las tareas como el reinicio de los servicios clave y la inicialización de la supervisión de replicación. (Esta fase no está disponible en la consola hasta que el sitio se actualice a la versión 1610). Para obtener más información sobre el estado de la instalación de actualización, consulte [Install in-console updates (Instalación de actualizaciones en la consola)](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates).
+A partir de la versión 1610, cuando instale un paquete de actualizaciones y supervise la instalación en la consola, hay una fase nueva: **Postinstalación**. En esta fase se incluye el estado de las tareas como el reinicio de los servicios clave y la inicialización de la supervisión de replicación. (Esta fase no está disponible en la consola hasta que el sitio se actualice a la versión 1610). Para obtener más información sobre el estado de la instalación de actualización, consulte [Install in-console updates (Instalación de actualizaciones en la consola)](/sccm/core/servers/manage/install-in-console-updates#bkmk_install).
 
 
 ## <a name="exclude-clients-from-automatic-upgrade"></a>Excluir a clientes de la actualización automática
@@ -50,7 +50,7 @@ Estas mejoras reemplazan conceptos y comportamientos con los que puede que esté
 
 Cuando actualiza a la versión 1610, la actualización convierte las configuraciones de los grupos de límites actuales para ajustarse al nuevo modelo, de modo que estos cambios no afecten a las configuraciones de distribución de contenido existentes.
 
-Para obtener más información, consulte [Boundary groups (Grupos de límites)](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#a-namebkmkboundarygroupsa-boundary-groups).
+Para obtener más información, consulte [Boundary groups (Grupos de límites)](/sccm/core/servers/deploy/configure/boundary-groups).
 
 
 ## <a name="peer-cache-for-content-distribution-to-clients"></a>Almacenamiento en caché del mismo nivel para la distribución de contenido en los clientes
@@ -98,7 +98,7 @@ Para obtener más información, consulte [Administración de aplicaciones desde 
 
 
 ## <a name="policy-sync-for-intune-enrolled-devices"></a>Sincronización de directivas para dispositivos inscritos en Intune
-Ahora puede solicitar la sincronización de directivas para un dispositivo inscrito en Intune desde la consola de Configuration Manager, en lugar de hacerlo desde la aplicación de portal de empresa en el propio dispositivo. La información del estado de la solicitud de sincronización está disponible como una columna nueva en las vistas del dispositivo, denominada **Remote Sync State (Estado de la sincronización remota)**. La información también está disponible en la sección de datos de detección del cuadro de diálogo **Propiedades** de cada dispositivo.
+Ahora puede solicitar la sincronización de directivas para un dispositivo inscrito en Intune desde la consola de Configuration Manager, en lugar de hacerlo desde la aplicación de portal de empresa en el propio dispositivo. La información del estado de la solicitud de sincronización está disponible como una columna nueva en las vistas del dispositivo, denominada **Remote Sync State (Estado de la sincronización remota)** . La información también está disponible en la sección de datos de detección del cuadro de diálogo **Propiedades** de cada dispositivo.
 Para obtener más información, consulte [Sincronizar directivas en dispositivos inscritos con Intune de manera remota desde la consola de Configuration Manager](/sccm/mdm/deploy-use/sync-intune-device).
 
 
@@ -123,9 +123,9 @@ La personalización de marca del Centro de software se aplica conforme a las sig
 
 - Si no está instalado el rol de servidor de sitio del punto de sitios web del catálogo de aplicaciones, el Centro de software mostrará el nombre de organización especificado en la configuración de cliente **Agente de equipo** **Nombre de organización mostrado en el Centro de software**. Para obtener instrucciones, vea [Cómo establecer la configuración del cliente](../../clients/deploy/configure-client-settings.md).
 
-- Si está instalado el rol de servidor de sitio del punto de sitios web del catálogo de aplicaciones, el Centro de software mostrará el nombre de la organización y el color especificados en las propiedades del rol de servidor de sitio del punto de sitios web del catálogo de aplicaciones. Para más información, vea [Configuration options for Application Catalog website point (Opciones de configuración del punto de sitios web del catálogo de aplicaciones)](/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#Application-Catalog-website-point).
+- Si está instalado el rol de servidor de sitio del punto de sitios web del catálogo de aplicaciones, el Centro de software mostrará el nombre de la organización y el color especificados en las propiedades del rol de servidor de sitio del punto de sitios web del catálogo de aplicaciones. Para más información, vea [Configuration options for Application Catalog website point (Opciones de configuración del punto de sitios web del catálogo de aplicaciones)](/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#BKMK_ApplicationCatalog_Website).
 
-- Si una suscripción de Microsoft Intune está configurada y conectada al entorno de Configuration Manager, el Centro de software mostrará el nombre de la organización, el color y el logotipo de la empresa especificados en las propiedades de la suscripción de Intune. Para más información, vea [Configuring the Microsoft Intune subscription (Configuración de la suscripción de Microsoft Intune)](/sccm/mdm/deploy-use/setup-hybrid-mdm#step-3-configure-intune-subscription).
+- Si una suscripción de Microsoft Intune está configurada y conectada al entorno de Configuration Manager, el Centro de software mostrará el nombre de la organización, el color y el logotipo de la empresa especificados en las propiedades de la suscripción de Intune. Para más información, vea [Configuring the Microsoft Intune subscription (Configuración de la suscripción de Microsoft Intune)](/sccm/mdm/deploy-use/configure-intune-subscription).
 
 
 ## <a name="enforcement-grace-period-for-required-application-and-software-update-deployments"></a>Período de gracia de cumplimiento para implementaciones de actualizaciones de software y aplicaciones requeridas
@@ -140,7 +140,7 @@ Si configura un período de gracia de cumplimiento y activa la casilla de verifi
 
 
 ## <a name="improved-functionality-in-dialog-boxes-about-required-software"></a>Funcionalidad mejorada en cuadros de diálogo sobre el software necesario
-Cuando un usuario recibe software obligatorio, desde el valor **Posponer y volver a recordármelo en:**, puede seleccionar las siguientes opciones en la lista desplegable: 
+Cuando un usuario recibe software obligatorio, desde el valor **Posponer y volver a recordármelo en:** , puede seleccionar las siguientes opciones en la lista desplegable: 
 - **Más adelante**. Especifica que las notificaciones se programan según la configuración de notificación establecida en la configuración de agente de cliente.
 - **Hora fija**. Especifica que la notificación se programará para mostrarse de nuevo después del tiempo seleccionado (por ejemplo, en 30 minutos).
 
@@ -158,7 +158,7 @@ Para obtener más información:
 - [Cómo configurar el cliente](../../clients/deploy/configure-client-settings.md)
 
 ## <a name="software-updates-dashboard"></a>Panel de actualizaciones de software
-Use el nuevo panel de actualizaciones de software para ver el estado de cumplimiento actual de los dispositivos de la organización y analizar rápidamente los datos para ver los dispositivos que están en riesgo. Para ver el panel, vaya a **Supervisión** > **Información general** > **Seguridad** > **Software Updates Dashboard (Panel de actualizaciones de software)**.
+Use el nuevo panel de actualizaciones de software para ver el estado de cumplimiento actual de los dispositivos de la organización y analizar rápidamente los datos para ver los dispositivos que están en riesgo. Para ver el panel, vaya a **Supervisión** > **Información general** > **Seguridad** > **Software Updates Dashboard (Panel de actualizaciones de software)** .
 
 Para obtener detalles, vea [Monitor software updates (Supervisar actualizaciones de software)](/sccm/sum/deploy-use/monitor-software-updates).
 
@@ -173,7 +173,7 @@ Ahora se puede filtrar por el tamaño del contenido de las actualizaciones de so
 - [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/) (Configuration Manager y mantenimiento simplificado de Windows en sistemas operativos de nivel inferior)
 - [Implementar actualizaciones de software automáticamente](/sccm/sum/deploy-use/automatically-deploy-software-updates)
 
-Para configurar el campo **Tamaño del contenido (KB)**, realice una de las siguientes acciones:
+Para configurar el campo **Tamaño del contenido (KB)** , realice una de las siguientes acciones:
 - Cuando cree una regla de implementación automática, en el Asistente para crear regla de implementación automática, vaya a la página **Actualizaciones de software**.
 - En las propiedades de una regla de implementación automática existente, vaya a la pestaña **Actualizaciones de software**.
 
@@ -202,7 +202,7 @@ Ahora puede obtener una vista rápida del cumplimiento general de los dispositiv
 
 
 ## <a name="lookout-integration-for-hybrid-implementations-to-protect-ios-and-android-devices"></a>Integración de Lookout en las implementaciones híbridas para proteger los dispositivos iOS y Android
-Microsoft se está integrando en la solución de protección de amenazas móviles de Lookout para proteger los dispositivos móviles iOS y Android mediante la detección de malware y aplicaciones de riesgo, entre otros, en los dispositivos. La solución de Lookout le ayuda a determinar el nivel de amenaza, que es configurable. Puede crear una regla de directivas de cumplimiento en System Center Configuration Manager para determinar el cumplimiento de dispositivo basándose en la evaluación de riesgos mediante Lookout. Con las directivas de acceso condicional, puede permitir o bloquear el acceso a los recursos empresariales basándose en el estado de cumplimiento del dispositivo. Para obtener más información sobre la integración y su funcionamiento, consulte [Manage access based on device, network, and application risk (Administrar el acceso a los recursos de la empresa según el dispositivo, la red y el riesgo de aplicación)](/sccm/protect/deploy-use/manage-access-based-on-device-network-app-risk).
+Microsoft se está integrando en la solución de protección de amenazas móviles de Lookout para proteger los dispositivos móviles iOS y Android mediante la detección de malware y aplicaciones de riesgo, entre otros, en los dispositivos. La solución de Lookout le ayuda a determinar el nivel de amenaza, que es configurable. Puede crear una regla de directivas de cumplimiento en System Center Configuration Manager para determinar el cumplimiento de dispositivo basándose en la evaluación de riesgos mediante Lookout. Con las directivas de acceso condicional, puede permitir o bloquear el acceso a los recursos empresariales basándose en el estado de cumplimiento del dispositivo. Para obtener más información sobre la integración y su funcionamiento, consulte [Manage access based on device, network, and application risk (Administrar el acceso a los recursos de la empresa según el dispositivo, la red y el riesgo de aplicación)](/sccm/mdm/deploy-use/mobile-threat-defense).
 
 Se solicitará a los usuarios de dispositivos iOS no compatibles que se inscriban. Necesitarán instalar la aplicación Lookout for Work en sus dispositivos, activar la aplicación y corregir las amenazas que se mencionan en la aplicación Lookout for Work para obtener acceso a los datos de la empresa. Obtenga información sobre cómo [Configure and deploy Lookout for Work apps (Configurar e implementar aplicaciones Lookout for Work)](/sccm/protect/deploy-use/configure-and-deploy-lookout-for-work-apps).
 

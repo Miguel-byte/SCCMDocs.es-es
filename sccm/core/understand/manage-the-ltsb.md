@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 34e0ae19fc7bb3680a148fd5e4ac52feb294963f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 08ab6cebbe44ecad8b8ce15691dd83217ada3ce9
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56121318"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194133"
 ---
 # <a name="manage-the-long-term-servicing-branch-of-configuration-manager"></a>Administrar la rama de mantenimiento a largo plazo de Configuration Manager
 
@@ -47,7 +47,7 @@ Cuando ejecute la LTSB y esté expandiendo un sitio primario independiente media
 
 Aunque no ejecute el programa de instalación para la expansión de sitios de la carpeta CD.Latest, siga usando la carpeta CD.Latest para la recuperación de sitios y para instalar un nuevo sitio principal secundario cuando su primer sitio de LTSB era un sitio de administración central.
 
-Para obtener más información sobre la expansión de sitios, vea [Use el Asistente para instalación si quiere instalar sitios de System Center Configuration Manager](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#expand-a-stand-alone-primary-site). Para obtener más información sobre la carpeta CD.Latest, consulte [La carpeta CD.Latest](/sccm/core/servers/manage/the-cd.latest-folder).
+Para obtener más información sobre la expansión de sitios, vea [Use el Asistente para instalación si quiere instalar sitios de System Center Configuration Manager](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#bkmk_expand). Para obtener más información sobre la carpeta CD.Latest, consulte [La carpeta CD.Latest](/sccm/core/servers/manage/the-cd.latest-folder).
 
 
 ## <a name="recovery"></a>Recuperación

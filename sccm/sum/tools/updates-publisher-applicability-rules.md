@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b4b289daa6f0f76c1d8e71879050bdfb6f5de679
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 649c0a134f7ebc77c214801d30720f75b80d34ee
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65496490"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159461"
 ---
 # <a name="manage-applicability-rules-in-updates-publisher"></a>Administrar reglas de aplicabilidad para Updates Publisher
 
@@ -48,7 +48,7 @@ Puede crear reglas de aplicabilidad en dos ubicaciones de Updates Publisher:
 -   También puede crear otras reglas en el momento que crea o edita una actualización. Las reglas que cree de esta manera no se guardan para su uso en el futuro.
 
 ## <a name="create-applicability-rule"></a>Crear reglas de aplicabilidad
-La información siguiente es similar a la correspondiente a cómo se crean reglas desde el asistente para [crear actualizaciones](/sccm/sum/tools/create-updates-with-updates-publisher#the-create-update-wizard). Pero, a diferencia del asistente, tiene la posibilidad de guardar los conjuntos de reglas para su uso en el futuro.
+La información siguiente es similar a la correspondiente a cómo se crean reglas desde el asistente para [crear actualizaciones](/sccm/sum/tools/create-updates-with-updates-publisher#use-the-create-update-wizard). Pero, a diferencia del asistente, tiene la posibilidad de guardar los conjuntos de reglas para su uso en el futuro.
 
 1. En el **área de trabajo Reglas**, elija **Crear** para abrir el **Asistente para crear reglas**.
 
@@ -82,7 +82,7 @@ Este asistente**editar reglas** muestra las reglas actuales del conjunto de regl
 
 Después de realizar cambios, elija **Aceptar** para guardar los cambios y cerrar el asistente.
 
-Para obtener información más detallada sobre cómo usar el asistente para reglas, vea el **paso 7**, la página de aplicabilidad o el asistente para [crear actualizaciones](/sccm/sum/tools/create-updates-with-updates-publisher#the-create-update-wizard).
+Para obtener información más detallada sobre cómo usar el asistente para reglas, vea el **paso 7**, la página de aplicabilidad o el asistente para [crear actualizaciones](/sccm/sum/tools/create-updates-with-updates-publisher#use-the-create-update-wizard).
 
 ## <a name="delete-applicability-rules"></a>Eliminar reglas de aplicabilidad
 Para eliminar una regla de aplicabilidad, seleccione la regla o el conjunto de reglas en la lista **My saved rules** (Mis reglas guardadas) del **área de trabajo Reglas** y elija **Eliminar** en la cinta de opciones. De este modo se quita la regla o el conjunto de reglas guardados de Updates Publisher.

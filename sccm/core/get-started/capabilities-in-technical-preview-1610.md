@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b164dfe1ea175f0f2141039c3a4a800de1404b9
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: f497272431d8587010ecd7dc0a8205162d9ae7fd
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56132360"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286358"
 ---
 # <a name="capabilities-in-technical-preview-1610-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1610 para System Center Configuration Manager
 
@@ -33,12 +33,12 @@ En este artículo se presentan las características disponibles en Technical Pre
 Ahora se puede filtrar por el tamaño del contenido de las actualizaciones de software en las reglas de implementación automática. Por ejemplo, puede establecer el filtro **Tamaño del contenido (KB)** en **< 2048** para descargar solo las actualizaciones de software que tengan menos de 2 MB. Con este filtro evita que las actualizaciones de software de gran tamaño se descarguen automáticamente con el fin de ofrecer un mantenimiento simplificado de nivel inferior de Windows cuando el ancho de banda de red es limitado. Para más información, vea [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems (Configuration Manager y mantenimiento simplificado de Windows en sistemas operativos de nivel inferior)](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/).
 
 #### <a name="to-configure-the-content-size-field"></a>Para configurar el campo Tamaño del contenido
-Para configurar el campo **Tamaño del contenido (KB)**, vaya a la página **Actualizaciones de software** del Asistente para crear regla de implementación automática cuando cree una ADR o vaya a la pestaña **Actualizaciones de software** en las propiedades de una ADR existente.
+Para configurar el campo **Tamaño del contenido (KB)** , vaya a la página **Actualizaciones de software** del Asistente para crear regla de implementación automática cuando cree una ADR o vaya a la pestaña **Actualizaciones de software** en las propiedades de una ADR existente.
 
 ![Campo Tamaño del contenido](media/contentsizefield.png)
 
 ## <a name="improved-functionality-for-required-software-dialogs"></a>Funcionalidad mejorada para los cuadros de diálogo de software obligatorios
-Cuando un usuario recibe software obligatorio, desde el valor **Posponer y volver a recordármelo en:**, puede seleccionar las siguientes opciones en la lista desplegable:
+Cuando un usuario recibe software obligatorio, desde el valor **Posponer y volver a recordármelo en:** , puede seleccionar las siguientes opciones en la lista desplegable:
 - Más adelante: especifica que las notificaciones se programan según la configuración de notificación establecida en Configuración de agente de cliente.
 - Hora fija: especifica que la notificación se programará para mostrarse de nuevo después de la hora seleccionada. Por ejemplo, si un usuario selecciona 30 minutos, la notificación se mostrará de nuevo en 30 minutos.
 
@@ -86,7 +86,7 @@ Siempre que una colección está configurada para ser excluida, sus miembros sol
 - **Instalación de inserción de cliente**: se puede usar la instalación de inserción de cliente para actualizar un cliente que está en una colección excluida. Se permite porque se considera la intención del administrador y permite actualizar los clientes sin quitar toda la colección de la exclusión.       
 - **Instalación de cliente manual**: puede actualizar manualmente los clientes que están en una colección excluida con el siguiente modificador de la línea de comandos con ccmsetup: ***/ignoreskipupgrade***
 
-  Si intenta actualizar manualmente un cliente que es miembro de la colección excluida y no usa este modificador, el cliente no instalará el nuevo software de cliente. Para más información, vea [How to install Configuration Manager Clients Manually (Instalación manual de clientes de Configuration Manager)](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#a-namebkmkmanuala-how-to-install-configuration-manager-clients-manually).
+  Si intenta actualizar manualmente un cliente que es miembro de la colección excluida y no usa este modificador, el cliente no instalará el nuevo software de cliente. Para más información, vea [How to install Configuration Manager Clients Manually (Instalación manual de clientes de Configuration Manager)](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual).
 
 Para más información sobre los métodos de instalación de clientes, vea [How to deploy clients to Windows computers in System Center Configuration Manager (Implementar clientes en equipos Windows con System Center Configuration Manager)](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).
 
@@ -140,12 +140,12 @@ Concretamente, puede configurar las siguientes opciones de Windows Defender:
 
 ## <a name="request-policy-sync-from-administrator-console"></a>Solicitar la sincronización de directivas desde la consola de administrador
 
-Ahora puede solicitar una sincronización de directivas para un dispositivo móvil desde la consola de Configuration Manager, en lugar de solicitar una sincronización desde el propio dispositivo. La información del estado de la solicitud de sincronización está disponible como una columna nueva en las vistas del dispositivo, denominada **Remote Sync State (Estado de la sincronización remota)**. El estado también aparece en la sección **Datos de detección** del cuadro de diálogo **Propiedades** de cada dispositivo móvil.
+Ahora puede solicitar una sincronización de directivas para un dispositivo móvil desde la consola de Configuration Manager, en lugar de solicitar una sincronización desde el propio dispositivo. La información del estado de la solicitud de sincronización está disponible como una columna nueva en las vistas del dispositivo, denominada **Remote Sync State (Estado de la sincronización remota)** . El estado también aparece en la sección **Datos de detección** del cuadro de diálogo **Propiedades** de cada dispositivo móvil.
 
 ### <a name="try-it-out"></a>Haga la prueba
 
 1.  En la consola de Configuration Manager, vaya a **Activos y compatibilidad** > **Información general** > Dispositivos.
-2.  En el menú **Acciones de dispositivo remoto**, seleccione **Send Sync Request (Enviar solicitud de sincronización)**.
+2.  En el menú **Acciones de dispositivo remoto**, seleccione **Send Sync Request (Enviar solicitud de sincronización)** .
 
 La sincronización puede tardar de cinco a diez minutos. Cualquier cambio en la directiva se sincroniza con el dispositivo. Puede realizar un seguimiento del estado de la solicitud de sincronización en la columna **Remote Sync State (Estado de la sincronización remota)** de la vista **Dispositivos** o en el cuadro de diálogo **Propiedades** del dispositivo.
 

@@ -4,18 +4,18 @@ description: Use este artículo para responder a las preguntas más frecuentes s
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 05/02/2019
+ms.date: 06/19/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 4c1a128d-22fb-49f1-8e0b-36513a8dc117
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 71c30e6770d667426a0aabbf03043d6fb44ecced
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.openlocfilehash: 6a7b4350cbd220393318eb6c8b5eae2a5bee05fc
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65083184"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286802"
 ---
 # <a name="frequently-asked-questions-about-the-cloud-management-gateway"></a>Preguntas más frecuentes sobre Cloud Management Gateway
 
@@ -33,10 +33,9 @@ Para obtener más información, vea [certificates for cloud management gateway](
 
 ### <a name="do-i-need-azure-expressroute"></a>¿Necesito Microsoft Azure ExpressRoute?
 
-[Azure ExpressRoute](/azure/expressroute/expressroute-introduction) permite ampliar la red local a la nube de Microsoft. No se necesita ExpressRoute, ni otras conexiones de red virtual de este tipo, para Cloud Management Gateway de Configuration Manager. El diseño de Cloud Management Gateway permite a los clientes basados en Internet comunicarse a través del servicio de Azure con sistemas de sitio locales sin ninguna configuración de red adicional. Para obtener más información, vea [Plan for cloud management gateway (Plan para Cloud Management Gateway)](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).
+No. [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) permite ampliar la red local a la nube de Microsoft. No se necesita ExpressRoute, ni otras conexiones de red virtual de este tipo, para Cloud Management Gateway de Configuration Manager. El diseño de Cloud Management Gateway permite a los clientes basados en Internet comunicarse a través del servicio de Azure con sistemas de sitio locales sin ninguna configuración de red adicional. Para obtener más información, vea [Plan for cloud management gateway (Plan para Cloud Management Gateway)](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).
 
-Si la organización usa ExpressRoute, un procedimiento recomendado de seguridad consiste en aislar la suscripción de Azure para la instancia de Cloud Management Gateway. Esta configuración garantiza que el servicio de Cloud Management Gateway no se conecte accidentalmente de esta manera. Para obtener más información, vea [Security and privacy for cloud management gateway](/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway) (Seguridad y privacidad para Cloud Management Gateway).
-
+<!-- SCCMDocs#1659 -->
 
 ### <a name="do-i-need-to-maintain-the-azure-virtual-machines"></a>¿Es necesario mantener las máquinas virtuales de Azure?
 

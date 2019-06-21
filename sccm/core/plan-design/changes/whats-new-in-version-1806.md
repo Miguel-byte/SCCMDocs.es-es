@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 03368d543b539b018ba581277cb0ba7e6e8cb251
-ms.sourcegitcommit: f531d0a622f220739710b2fe6644ea58d024064a
+ms.openlocfilehash: deb27df76bb3ed6fc9c6338f302fcc612443cee9
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65933500"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251921"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Novedades de la versión 1806 de la rama actual de Configuration Manager
 
@@ -217,7 +217,7 @@ Para obtener más información, vea [Modify a CMG](/sccm/core/clients/manage/cmg
 
 #### <a name="trusted-root-certificate-isnt-required-with-azure-ad"></a>El certificado raíz de confianza no es necesario con Azure AD
 <!--503899-->
-Para crear una CMG ya no es necesario proporcionar un [certificado raíz de confianza](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-trusted-root-certificate-to-clients) en la página de configuración. Este certificado no es necesario cuando se usa Azure Active Directory (Azure AD) para la autenticación de cliente, pero solía ser necesario en el asistente. Si usa certificados de autenticación de cliente PKI, entonces todavía debe agregar un certificado raíz de confianza a la CMG.
+Para crear una CMG ya no es necesario proporcionar un [certificado raíz de confianza](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_cmgroot) en la página de configuración. Este certificado no es necesario cuando se usa Azure Active Directory (Azure AD) para la autenticación de cliente, pero solía ser necesario en el asistente. Si usa certificados de autenticación de cliente PKI, entonces todavía debe agregar un certificado raíz de confianza a la CMG.
 
 
 
@@ -545,7 +545,7 @@ Las siguientes secciones del área de trabajo **Supervisión** ahora permiten co
 
 Haga clic con el botón derecho en el recurso y seleccione **Copiar**. Esta acción copia los recursos seleccionados como una lista delimitada por comas que incluye todos los detalles. El método abreviado de teclado **CTRL** + **C** también funciona en estas vistas. 
 
-Para obtener más información, vea [Console improvements in version 1806](/sccm/core/servers/manage/admin-console#console-improvements-in-version-1806) (Mejoras en la consola en la versión 1806).
+Para obtener más información, vea [Console improvements in version 1806](/sccm/core/servers/manage/admin-console#copy-details-in-monitoring-views) (Mejoras en la consola en la versión 1806).
 
 
 ### <a name="improvements-to-the-surface-dashboard"></a>Mejoras en el panel de Surface
@@ -567,7 +567,7 @@ Para obtener más información, vea [Panel de dispositivos Surface](/sccm/core/c
 <!--1358202-->
 Ahora, de forma predeterminada, el nodo **Dispositivos** del área de trabajo **Activos y compatibilidad** muestra una columna para el **Usuario que ha iniciado sesión actualmente**. También se muestra para cualquier lista de dispositivos específicos de una colección. Este valor es tan actual como el [estado de cliente](/sccm/core/clients/manage/monitor-clients#bkmk_indStatus). Cuando el usuario cierra la sesión, el cliente borra este valor. Si ningún usuario ha iniciado sesión, el valor está en blanco. 
 
-Para obtener más información, vea [Console improvements in version 1806](/sccm/core/servers/manage/admin-console#console-improvements-in-version-1806) (Mejoras en la consola en la versión 1806).
+Para obtener más información, vea [Console improvements in version 1806](/sccm/core/servers/manage/admin-console#view-users-for-a-device) (Mejoras en la consola en la versión 1806).
 
 
 ### <a name="submit-feedback-from-the-configuration-manager-console"></a>Envío de comentarios desde la consola de Configuration Manager  
@@ -575,7 +575,7 @@ Para obtener más información, vea [Console improvements in version 1806](/sccm
 
 Enviar una sonrisa Ahora puede contar directamente al equipo de Configuration Manager sus experiencias. Enviar comentarios es fácil desde la consola de Configuration Manager. Nos gustaría recibir todos sus comentarios: sugerencias, problemas y elogios. En la consola de Configuration Manager, haga clic en el botón de sonrisa en la esquina superior derecha encima de la cinta de opciones. Esta información va directamente al equipo de producto de Microsoft de Configuration Manager. Si bien aún se admite el uso del centro de opiniones de Windows 10, le recomendamos que use el mecanismo de comentarios incluido en la consola.  
 
-Para obtener más información, vea [Console improvements in version 1806](/sccm/core/servers/manage/admin-console#console-improvements-in-version-1806) (Mejoras en la consola en la versión 1806) y [Buscar ayuda para Configuration Manager](/sccm/core/understand/find-help#BKMK_1806Feedback).
+Para obtener más información, vea [Console improvements in version 1806](/sccm/core/servers/manage/admin-console#send-feedback) (Mejoras en la consola en la versión 1806) y [Buscar ayuda para Configuration Manager](/sccm/core/understand/find-help#BKMK_1806Feedback).
 
 
 
@@ -609,7 +609,7 @@ Cuando esté listo para instalar esta versión, vea [Instalación de actualizaci
 >
 >  Más información acerca de:    
 >   - [Instalación de nuevos sitios](/sccm/core/servers/deploy/install/installing-sites)  
->   - [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
+>   - [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 Para saber los problemas conocidos e importantes, vea las [Notas de la versión](/sccm/core/servers/deploy/install/release-notes).
 

@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc88e70360599391c84e54e41e73b53ef3b70678
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: 5b9dcd7465265021d52e44d72c77172d4323144e
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66177044"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285770"
 ---
 # <a name="what39s-new-in-version-1706-of-system-center-configuration-manager"></a>Novedades de la versión 1706 de System Center Configuration Manager
 
@@ -30,7 +30,7 @@ La actualización 1706 para la rama actual de System Center Configuration Manage
 >  Más información acerca de:    
 >   - [Instalación de nuevos sitios](https://technet.microsoft.com/library/mt590197.aspx)  
 >   - [Instalación de actualizaciones en los sitios](https://technet.microsoft.com/library/mt607046.aspx)  
->   - [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
+>   - [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#bkmk_Baselines)  
 
 En las secciones siguientes se proporcionan detalles sobre los cambios y las nuevas funciones introducidas en la versión 1706 de Configuration Manager.  
 
@@ -59,7 +59,7 @@ Hemos agregado mejoras adicionales de accesibilidad para la consola de Configura
 ### <a name="improvements--for-sql-server-always-on-availability-groups"></a>Mejoras de los grupos de disponibilidad AlwaysOn de SQL Server
 <!-- 1352094 -->
 Con esta versión, ahora puede usar réplicas de confirmación asincrónica en los grupos de disponibilidad AlwaysOn de SQL Server que usa con Configuration Manager. Esto significa que puede agregar réplicas adicionales a los grupos de disponibilidad con el fin de usarlas como copias de seguridad externas (remotas) y así utilizarlas en un escenario de recuperación ante desastres.  
-  -   Configuration Manager admite el uso de la réplica de confirmación asincrónica para recuperar una réplica sincrónica. Vea [las opciones de recuperación de la base de datos de sitio](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption) en el tema Copia de seguridad y recuperación para obtener información sobre cómo realizar esta tarea.
+  -   Configuration Manager admite el uso de la réplica de confirmación asincrónica para recuperar una réplica sincrónica. Vea [las opciones de recuperación de la base de datos de sitio](/sccm/core/servers/manage/recover-sites#site-database-recovery-options) en el tema Copia de seguridad y recuperación para obtener información sobre cómo realizar esta tarea.
   -   Esta versión no admite la conmutación por error para usar la réplica de confirmación asincrónica como la base de datos de sitio.
 Para obtener más información, consulte [Preparación para usar grupos de disponibilidad AlwaysOn](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).
 
@@ -92,7 +92,7 @@ La integración mejorada permite lo siguiente:
       - **Tienda Windows para empresas** Conéctese a la tienda en línea para la Tienda Windows para empresas y obtenga aplicaciones para su organización que puede implementar con Configuration Manager.
 
 
-  Esto se realiza mediante una [aplicación web de servidor de Azure](/azure/azure/app-service/app-service-authentication-overview#service-to-service-authentication) para proporcionar la información de suscripción y configuración que, de lo contrario, especificaría cada vez que configurase un nuevo componente o servicio de Configuration Manager con Azure. Para obtener más información, consulte [Azure Services Wizard](/sccm/core/servers/deploy/configure/azure-services-wizard) (Asistente para servicios de Azure).
+  Esto se realiza mediante una [aplicación web de servidor de Azure](/azure/app-service/app-service-authentication-overview) para proporcionar la información de suscripción y configuración que, de lo contrario, especificaría cada vez que configurase un nuevo componente o servicio de Configuration Manager con Azure. Para obtener más información, consulte [Azure Services Wizard](/sccm/core/servers/deploy/configure/azure-services-wizard) (Asistente para servicios de Azure).
 
 -   Use Azure AD para autenticar los clientes en Internet para acceder a los sitios de Configuration Manager. Azure AD reemplaza la necesidad de configurar y usar certificados de autenticación del cliente. Esto requiere el rol de sistema de sitio de Cloud Management Gateway. Para más información, vea [Instalación y asignación de clientes de Configuration Manager desde Internet mediante Azure AD con fines de autenticación](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
 
@@ -102,7 +102,7 @@ La integración mejorada permite lo siguiente:
 
 ### <a name="peer-cache-improvements"></a>Mejoras de almacenamiento en caché del mismo nivel
 <!-- 1252345 -->
-La memoria caché del mismo nivel ya no utiliza la cuenta de acceso a la red para autenticar las solicitudes de descarga de elementos del mismo nivel. Hay una limitación cuando los clientes siguen necesitando esta cuenta. Esto sigue siendo un requisito para los clientes que arrancan en WinPE y luego acceden a contenido desde un origen de caché del mismo nivel. Para obtener más información, consulte [Requisitos y consideraciones de la caché del mismo nivel](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements-and-considerations-for-peer-cache).
+La memoria caché del mismo nivel ya no utiliza la cuenta de acceso a la red para autenticar las solicitudes de descarga de elementos del mismo nivel. Hay una limitación cuando los clientes siguen necesitando esta cuenta. Esto sigue siendo un requisito para los clientes que arrancan en WinPE y luego acceden a contenido desde un origen de caché del mismo nivel. Para obtener más información, consulte [Requisitos y consideraciones de la caché del mismo nivel](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements).
 
 
 <!-- ## Migration  -->

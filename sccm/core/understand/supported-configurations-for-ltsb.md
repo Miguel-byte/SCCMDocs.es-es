@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e185244bda88c317e0157618f066056a817a1a82
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: ac26a9b161f869ec3f6410f9f6fb9e5edbc9f8f8
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56141898"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194022"
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>Configuraciones admitidas de la rama de mantenimiento a largo plazo de System Center Configuration Manager
 
@@ -163,13 +163,13 @@ La compatibilidad con sistemas operativos Linux y UNIX se limita a los que apare
 
 **Limitaciones y requisitos:**  
 
--   Para consultar las dependencias de archivo del sistema operativo para el cliente Linux y UNIX, consulte [Requisitos previos para la implementación del cliente en servidores UNIX y Linux](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers#bkmk_clientdeployprereqforlnu).  
+-   Para consultar las dependencias de archivo del sistema operativo para el cliente Linux y UNIX, consulte [Requisitos previos para la implementación del cliente en servidores UNIX y Linux](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers#BKMK_ClientDeployPrereqforLnU).  
 -   Para obtener información general de las capacidades de administración compatibles con equipos que ejecutan Linux o UNIX, consulte [Implementar clientes en servidores UNIX y Linux con System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-unix-and-linux-servers).  
 -   En versiones compatibles de Linux y UNIX, la versión enumerada incluye todas las posteriores versiones secundarias. Por ejemplo, cuando se indica compatibilidad con CentOS versión 6, también se incluyen las posteriores versiones secundarias de CentOS 6, como CentOS 6.3. De forma similar, cuando se indica compatibilidad con un sistema operativo que usa Service Packs, por ejemplo, SUSE Linux Enterprise Server 11 SP1, se incluyen los posteriores Service Packs para esa versión del sistema operativo.
 -   Para obtener información sobre los paquetes de instalación de cliente y el agente universal, consulte [Implementar clientes en servidores UNIX y Linux con System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-unix-and-linux-servers).
 
 
-**Versiones admitidas:**   
+**Versiones admitidas:**    
 Las siguientes versiones se admiten mediante el archivo .tar indicado.  
 ### <a name="aix"></a>AIX  
 

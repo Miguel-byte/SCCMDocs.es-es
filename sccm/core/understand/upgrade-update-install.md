@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 53803d154a871739c5dd8cf7eaff4eebf92fd651
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.openlocfilehash: bd6abbb6b4a11bb9b412b6a2ad1c2f8e5d648c59
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65083429"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67193977"
 ---
 # <a name="about-upgrade-update-and-install-for-site-and-hierarchy-infrastructure"></a>Acerca de la actualización e instalación para sitios y jerarquía de infraestructura
 
@@ -39,7 +39,7 @@ La *actualización* se usa para instalar actualizaciones en la consola para Syst
 Normalmente, las actualizaciones agregan revisiones de seguridad, mejoras de calidad y nuevas características a la implementación existente. Si usa la rama de versión preliminar técnica, una actualización puede instalar una versión más reciente de la versión preliminar técnica.
 -   Elija cuándo instalar la actualización en la consola, comenzando por el sitio del nivel superior de la jerarquía.
 - Puede instalar cualquier actualización disponible desde dentro de la consola. Por ejemplo, si su sitio ejecuta la versión 1802 y se ofrecen 1806 y 1810, considere instalar la versión 1810 porque cada versión incluye las características que estaban disponibles primero en las versiones publicadas anteriormente.
-- Después de que se complete una nueva actualización en el sitio de nivel superior, los sitios primarios principales inician automáticamente el proceso de actualización. Sin embargo, puede establecer [Ventanas de servicio](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkservicewindowa-service-windows-for-site-servers) para controlar la temporización de las actualizaciones.
+- Después de que se complete una nueva actualización en el sitio de nivel superior, los sitios primarios principales inician automáticamente el proceso de actualización. Sin embargo, puede establecer [Ventanas de servicio](/sccm/core/servers/manage/service-windows) para controlar la temporización de las actualizaciones.
 - Los sitios secundarios no instalan automáticamente las actualizaciones. En su lugar, inicie manualmente la actualización desde dentro de la consola de Configuration Manager.
 
 Para obtener información, consulte [Updates for System Center Configuration Manager](/sccm/core/servers/manage/updates) (Actualizaciones para System Center Configuration Manager) y [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview) (Technical Preview de System Center Configuration Manager).

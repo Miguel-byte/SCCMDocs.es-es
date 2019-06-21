@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c57042e6ea4db7b244b8617bbef99633d9026d1b
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 59cb31a0d57af21331f48c6a6ba415439fa97239
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65501124"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67252179"
 ---
 # <a name="checklist-for-installing-update-1810-for-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 1810 de Configuration Manager
 
@@ -34,7 +34,7 @@ Para obtener la actualización de la versión 1810, se debe usar un punto de con
 
     -   Otro problema común de descarga se produce cuando la configuración del servidor proxy impide descargas desde http://silverlight.dlservice.microsoft.com, http://download.microsoft.com o http://go.microsoft.com.
 
-Para obtener más información sobre la instalación de actualizaciones, consulte [Actualizaciones y servicio en la consola](/sccm/core/servers/manage/updates#a-namebkmkinconsolea-in-console-updates-and-servicing).
+Para obtener más información sobre la instalación de actualizaciones, consulte [Actualizaciones y servicio en la consola](/sccm/core/servers/manage/updates#bkmk_inconsole).
 
 Para más información sobre las versiones de la rama actual, vea [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#bkmk_Baselines).
 
@@ -92,7 +92,7 @@ La versión de Assessment and Deployment Kit (ADK) de Windows 10 debe ser compat
 Si actualiza el sitio antes que Windows ADK, vea [Actualización de puntos de distribución con la imagen](/sccm/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image).
 
 #### <a name="review-sql-server-native-client-version"></a>Revisión de la versión de SQL Server Native Client
-Debe instalarse una versión mínima de SQL Server 2012 Native Client que incluya compatibilidad con TLS 1.2. Para obtener más información, consulte [Lista de comprobaciones de requisitos previos](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-native-client).
+Debe instalarse una versión mínima de SQL Server 2012 Native Client que incluya compatibilidad con TLS 1.2. Para obtener más información, consulte [Lista de comprobaciones de requisitos previos](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
 
 #### <a name="review-the-site-and-hierarchy-status-for-unresolved-issues"></a>Revisar el estado del sitio y de la jerarquía en busca de problemas sin resolver 
 Una actualización del sitio puede generar errores debido a problemas de funcionamiento existentes. Antes de actualizar un sitio, resuelva todos los problemas de funcionamiento de los siguientes sistemas:  
@@ -160,7 +160,7 @@ Para obtener más información, consulte **Ejecutar el comprobador de requisitos
 > Cuando se ejecuta el comprobador de requisitos previos, el proceso actualiza algunos archivos de origen del producto que se utilizan para tareas de mantenimiento del sitio. Por tanto, después de ejecutar el comprobador de requisitos previos, pero antes de instalar la actualización, si necesita realizar una tarea de mantenimiento del sitio, ejecute  **Setupwpf.exe**  (programa de instalación de Configuration Manager) desde la carpeta CD.Latest en el servidor de sitio.
 
 #### <a name="update-sites"></a>Actualizar sitios   
-Ya tiene todo listo para iniciar la instalación de la actualización de la jerarquía. Para obtener más información sobre la instalación de la actualización, consulte [Instalación de actualizaciones en la consola](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates).
+Ya tiene todo listo para iniciar la instalación de la actualización de la jerarquía. Para obtener más información sobre la instalación de la actualización, consulte [Instalación de actualizaciones en la consola](/sccm/core/servers/manage/install-in-console-updates#bkmk_install).
 
 Es posible que planee instalar la actualización fuera de las horas comerciales normales. Determine cuándo tendrá menos efecto el proceso en sus operaciones empresariales. Si instala la actualización y sus acciones, se vuelven a instalar los componentes de sitio y los roles de sistema de sitio.
 

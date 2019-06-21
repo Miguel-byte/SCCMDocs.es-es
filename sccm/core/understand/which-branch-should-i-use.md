@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0bb478eb875e97d8e3088e50daab8538113b40c5
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: a0d2bc4c8ae366a5e60e9a7a3100b5a5059c341a
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56139592"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67193961"
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>¿Qué rama de Configuration Manager debo utilizar?
 
@@ -40,7 +40,7 @@ Para obtener más información sobre Software Assurance y las opciones de licenc
 
 Microsoft tiene previsto publicar actualizaciones de la rama actual de System Center Configuration Manager varias veces al año. Para las versiones de Configuration Manager anteriores a la 1710, se ofrece soporte técnico durante 12 meses. Desde la versión 1710, cada versión de actualización seguirá siendo compatible durante 18 meses a partir de la fecha de lanzamiento de disponibilidad general (GA). Durante todo el período, ofrecemos soporte técnico. Pero nuestra estructura de soporte técnico es dinámica, es decir, ha evolucionado a dos fases distintas de servicio que dependen de la disponibilidad de la última versión de la rama actual. Para más información, vea el tema titulado [Compatibilidad con versiones de la rama actual de System Center Configuration Manager](https://docs.microsoft.com/sccm/core/servers/manage/current-branch-versions-supported). Las actualizaciones a las versiones más recientes están disponibles como las actualizaciones en la consola.
 
-Para instalar la rama actual como un nuevo sitio, use [medios de línea base](/sccm/core/servers/manage/updates#baseline-and-update-versions). Además use medios de línea base para actualizar desde System Center 2012 Configuration Manager con Service Pack 2 o System Center 2012 R2 Configuration Manager con Service Pack 1. El acceso a este medio depende del tipo de licencia que tenga la organización para System Center Configuration Manager. 
+Para instalar la rama actual como un nuevo sitio, use [medios de línea base](/sccm/core/servers/manage/updates#bkmk_Baselines). Además use medios de línea base para actualizar desde System Center 2012 Configuration Manager con Service Pack 2 o System Center 2012 R2 Configuration Manager con Service Pack 1. El acceso a este medio depende del tipo de licencia que tenga la organización para System Center Configuration Manager. 
 
 También se pueden usar los medios de línea base para instalar un nuevo sitio que sea una edición de evaluación de la rama actual. La edición de evaluación no requiere una licencia. Puede usar la edición de evaluación de 180 días. Admite la actualización a una edición con licencia de la rama actual. Para instalar únicamente una versión de evaluación, obténgala desde [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection).
 
@@ -76,9 +76,9 @@ Para obtener más información, vea [Compatibilidad con versiones de la rama act
 ##  <a name="long-term-servicing-branch"></a>Rama de mantenimiento a largo plazo 
 Se trata de una rama con licencia para uso en producción para los clientes de Configuration Manager que usan la rama actual y que han permitido que su versión de Software Assurance (SA) de Configuration Manager o derechos de suscripción equivalentes expiren después del 1 de octubre de 2016. Para obtener más información sobre Software Assurance y las opciones de licencia, vea [Licencias y ramas para System Center Configuration Manager](learn-more-editions.md) y [Preguntas más frecuentes sobre las licencias y ramas de Configuration Manager](/sccm/core/understand/product-and-licensing-faq).
 
-LTSB se basa en la versión 1606. Esta rama no recibe las actualizaciones en la consola que ofrecen nuevas características o actualizan las funciones existentes. Sin embargo, se proporcionan las revisiones de seguridad importantes. Para instalar LTSB, debe usar la versión 1606 de [medios de línea base](/sccm/core/servers/manage/updates#baseline-and-update-versions), que se obtiene con System Center 2016. Las versiones de línea base posteriores no admiten la instalación de LTSB.
+LTSB se basa en la versión 1606. Esta rama no recibe las actualizaciones en la consola que ofrecen nuevas características o actualizan las funciones existentes. Sin embargo, se proporcionan las revisiones de seguridad importantes. Para instalar LTSB, debe usar la versión 1606 de [medios de línea base](/sccm/core/servers/manage/updates#bkmk_Baselines), que se obtiene con System Center 2016. Las versiones de línea base posteriores no admiten la instalación de LTSB.
 
-Para instalar LTSB como un sitio nuevo o una actualización de un sitio compatible de Configuration Manager 2012, use la versión 1606 del [medio de línea base](/sccm/core/servers/manage/updates#baseline-and-update-versions) que se obtiene con System Center 2016. Puede usar los medios de línea base para instalar un nuevo sitio que ejecuta la versión 1606 de la rama actual o un nuevo sitio que ejecuta la rama de mantenimiento a largo plazo.
+Para instalar LTSB como un sitio nuevo o una actualización de un sitio compatible de Configuration Manager 2012, use la versión 1606 del [medio de línea base](/sccm/core/servers/manage/updates#bkmk_Baselines) que se obtiene con System Center 2016. Puede usar los medios de línea base para instalar un nuevo sitio que ejecuta la versión 1606 de la rama actual o un nuevo sitio que ejecuta la rama de mantenimiento a largo plazo.
 
 > [!TIP]  
 > Para obtener información sobre System Center 2016, consulte la [documentación de System Center 2016](https://docs.microsoft.com/system-center/index). Esta documentación también especifica el proceso de obtención de System Center 2016, que requiere un contrato de licencia de Microsoft o derechos similares.  
@@ -117,7 +117,7 @@ La LTSB se basa en la versión 1606 de la rama actual y tiene las siguientes lim
   Para convertir, debe tener un contrato de Software Assurance activo con Microsoft. Para obtener más información, consulte los vínculos siguientes:
   - [Upgrade the Long-Term Servicing Branch to the Current Branch](convert-to-current-branch.md) (Actualización de la Rama de mantenimiento a largo plazo a la Rama actual)
   - [Licencias y ramas para System Center Configuration Manager](learn-more-editions.md)
-  - [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#baseline-and-update-versions) 
+  - [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#bkmk_Baselines) 
 - No hay ninguna opción para convertir la LTSB en una rama de Technical Preview. Las ramas de Technical Preview son instalaciones independientes que no requieren una licencia.
 -   No se puede actualizar una edición de evaluación de la rama actual a una instalación de LTSB.
 
@@ -126,7 +126,7 @@ La LTSB se basa en la versión 1606 de la rama actual y tiene las siguientes lim
 ## <a name="technical-preview-branch"></a>Rama de Technical Preview
 La rama de Technical Preview está pensada para uso en un entorno de laboratorio. Conozca y pruebe las características más recientes que se están desarrollando para Configuration Manager. No se admite en un entorno de producción y no requiere un contrato de licencia de Software Assurance.
 
-Para instalar un sitio nuevo que ejecute la rama de Technical Preview, use el [medio de línea base para la rama de Technical Preview](/sccm/core/get-started/technical-preview#install-and-update-the-technical-preview) más reciente. Después de instalar la rama de Technical Preview, las nuevas versiones están disponibles como actualizaciones en la consola cada mes.
+Para instalar un sitio nuevo que ejecute la rama de Technical Preview, use el [medio de línea base para la rama de Technical Preview](/sccm/core/get-started/technical-preview#bkmk_install) más reciente. Después de instalar la rama de Technical Preview, las nuevas versiones están disponibles como actualizaciones en la consola cada mes.
 
 
 ### <a name="features-of-the-technical-preview-branch"></a>Características de la rama de Technical Preview
@@ -137,7 +137,7 @@ Para instalar un sitio nuevo que ejecute la rama de Technical Preview, use el [m
 
 
 ### <a name="limitations"></a>Limitaciones
--  [El soporte es limitado](/sccm/core/get-started/technical-preview#requirements-and-limitatins-for-the-techincal-preview), por ejemplo un único sitio primario y hasta 10 clientes.  
+-  [El soporte es limitado](/sccm/core/get-started/technical-preview#bkmk_reqs), por ejemplo un único sitio primario y hasta 10 clientes.  
 -  No se puede actualizar a una rama actual o LTSB.
 -  No admite los siguientes comportamientos:
    - Uso de migración para importar o exportar datos a otra instalación de Configuration Manager

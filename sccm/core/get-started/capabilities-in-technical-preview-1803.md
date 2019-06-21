@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4735678e9a6a42dedc676a8a0223af0ac8d6b81b
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: ad04b54d3284abc210da273458077889f45735f3
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56135912"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286057"
 ---
 # <a name="capabilities-in-technical-preview-1803-for-system-center-configuration-manager"></a>Capacidades de la versión preliminar técnica 1803 para System Center Configuration Manager
 
@@ -43,19 +43,21 @@ Revise el artículo [Technical Preview para System Center Configuration Manager]
 
  
 ## <a name="pull-distribution-points-support-cloud-distribution-points-as-source"></a>Compatibilidad de puntos de distribución de extracción con puntos de distribución de nube como orígenes  
-<!--1321554--> Muchos clientes usan [puntos de distribución de extracción](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point) en sucursales u oficinas remotas que descargan contenido desde un punto de distribución de origen en la WAN. Si sus oficinas remotas tienen una mejor conexión a Internet o si quiere reducir la carga en los vínculos a WAN, ahora puede usar como origen un [punto de distribución de nube](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point) en Microsoft Azure. Cuando se agrega un origen en la pestaña **Punto de distribución de extracción** de las propiedades del punto de distribución, cualquier punto de distribución de nube en el sitio aparece como un punto de distribución disponible. El comportamiento de ambos roles de sistema de sitio sigue siendo el mismo en cualquier caso. 
+<!--1321554-->
+Muchos clientes usan [puntos de distribución de extracción](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point) en sucursales u oficinas remotas, que descargan contenido desde un punto de distribución de origen en la WAN. Si sus oficinas remotas tienen una mejor conexión a Internet o si quiere reducir la carga en los vínculos a WAN, ahora puede usar como origen un [punto de distribución de nube](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point) en Microsoft Azure. Cuando se agrega un origen en la pestaña **Punto de distribución de extracción** de las propiedades del punto de distribución, cualquier punto de distribución de nube en el sitio aparece como un punto de distribución disponible. El comportamiento de ambos roles de sistema de sitio sigue siendo el mismo en cualquier caso. 
 
 ### <a name="prerequisites"></a>Requisitos previos
 - El punto de distribución de extracción necesita acceso a Internet para comunicarse con Microsoft Azure.
 - El contenido debe distribuirse al punto de distribución de nube de origen.
 
 > [!Note]  
-> Esta característica no genera gastos por almacenamiento de datos y salida de red en la suscripción de Azure. Para más información, vea [Costo de la utilización de la distribución basada en la nube](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#BKMK_CloudDPCost).
+> Esta característica no genera gastos por almacenamiento de datos y salida de red en la suscripción de Azure. Para más información, vea [Costo de la utilización de la distribución basada en la nube](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_cost).
 
 
 
 ## <a name="partial-download-support-in-client-peer-cache-to-reduce-wan-utilization"></a>Compatibilidad de descarga parcial en la memoria caché del mismo nivel de cliente para reducir la utilización de la WAN
-<!--1357346--> Los orígenes de la caché del mismo nivel de cliente ahora pueden dividir el contenido en partes. Estas partes reducen al mínimo la transferencia de red para usar menos WAN. El punto de administración proporciona un seguimiento más detallado de las partes de contenido e intenta eliminar más de una descarga del mismo contenido por grupo de límites. 
+<!--1357346-->
+Los orígenes de la caché del mismo nivel de cliente ahora pueden dividir el contenido en partes. Estas partes reducen al mínimo la transferencia de red para usar menos WAN. El punto de administración proporciona un seguimiento más detallado de las partes de contenido e intenta eliminar más de una descarga del mismo contenido por grupo de límites. 
 
 ### <a name="example-scenario"></a>Escenario de ejemplo
 Contoso tiene un único sitio primario con dos grupos de límites: oficina central y sucursal. Hay una relación de reserva de 30 minutos entre los dos grupos de límites. El punto de administración y el punto de distribución del sitio solo están en el límite de oficina central. La ubicación de la sucursal no tiene ningún punto de distribución local. Dos de los cuatro clientes de la sucursal están configurados como orígenes de caché del mismo nivel. 
@@ -93,13 +95,15 @@ Contoso tiene un único sitio primario con dos grupos de límites: oficina centr
 
 
 ## <a name="maintenance-windows-in-software-center"></a>Ventanas de mantenimiento en el Centro de software
-<!--1358131--> El Centro de software ahora muestra la siguiente ventana de mantenimiento programado. En la pestaña Estado de la instalación, cambie la vista de Todas a Próximas. Muestra el intervalo de tiempo y la lista de implementaciones que están programadas. La lista está vacía si no hay ninguna ventana de mantenimiento futuro. 
+<!--1358131-->
+El Centro de software ahora muestra la siguiente ventana de mantenimiento programado. En la pestaña Estado de la instalación, cambie la vista de Todas a Próximas. Muestra el intervalo de tiempo y la lista de implementaciones que están programadas. La lista está vacía si no hay ninguna ventana de mantenimiento futuro. 
 
 ![El Centro de software mostrando la lista de las próximas implementaciones en la pestaña Estado de la instalación](media/1358131-software-center-maintenance-windows.png)
 
 
 ## <a name="custom-tab-for-webpage-in-software-center"></a>Pestaña personalizada de la página web en el Centro de software
-<!--1358132--> Ahora puede crear una pestaña personalizada para abrir una página web en el Centro de software. Esta característica permite mostrar contenido a los usuarios finales de una manera coherente y confiable. En esta lista se incluyen algunos ejemplos:
+<!--1358132-->
+Ahora puede crear una pestaña personalizada para abrir una página web en el Centro de software. Esta característica permite mostrar contenido a los usuarios finales de una manera coherente y confiable. En esta lista se incluyen algunos ejemplos:
 - Contactar con TI: información sobre cómo ponerse en contacto con el departamento de TI de la organización
 - Centro de soporte técnico: acciones de autoservicio de TI, como buscar una base de conocimientos o abrir una incidencia de soporte técnico.
 - Documentación de usuario final: artículos para los usuarios de la organización sobre diversos temas de TI como, por ejemplo, el uso de aplicaciones o la actualización a Windows 10.

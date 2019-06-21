@@ -12,12 +12,12 @@ manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 416f26f3e424eccdfa024d7a87c07fc5aa39c8fc
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: ac91fa1e9c4f4a8610ab3a0815ea6437eb29862c
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56141007"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67158222"
 ---
 # <a name="capabilities-in-technical-preview-1607-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1607 para System Center Configuration Manager
 
@@ -58,7 +58,7 @@ La personalización de marca del Centro de software se aplica conforme a las sig
 
 2. Si está instalado el rol de servidor de sitio del punto de sitios web del catálogo de aplicaciones, el Centro de software mostrará el nombre de la organización y el color especificados en las propiedades del rol de servidor de sitio del punto de sitios web del catálogo de aplicaciones. Para más información, vea [Configuration options for Application Catalog website point (Opciones de configuración del punto de sitios web del catálogo de aplicaciones)](../../core/servers/deploy/configure/configuration-options-for-site-system-roles.md#BKMK_ApplicationCatalog_Website).
 
-3. Si una suscripción de Microsoft Intune está configurada y conectada al entorno de Configuration Manager, el Centro de software mostrará el nombre de la organización, el color y el logotipo de la empresa especificados en las propiedades de la suscripción de Intune. Para más información, vea [Configurar la suscripción de Microsoft Intune](/mdm/deploy-use/configure-intune-subscription).
+3. Si una suscripción de Microsoft Intune está configurada y conectada al entorno de Configuration Manager, el Centro de software mostrará el nombre de la organización, el color y el logotipo de la empresa especificados en las propiedades de la suscripción de Intune. Para más información, vea [Configurar la suscripción de Microsoft Intune](/sccm/mdm/deploy-use/configure-intune-subscription).
 
 ## <a name="use-the-same-network-adapter-for-multiple-pxe-initiated-deployments"></a>Usar el mismo adaptador de red para varias implementaciones iniciadas por PXE
 En Technical Preview versión 1607, cuando se usa un adaptador Ethernet para crear una imagen de varios dispositivos (como un adaptador Ethernet USB que use en varios dispositivos), puede habilitar una nueva opción que permita especificar los identificadores de hardware para los adaptadores Ethernet. Configuration Manager omite los identificadores de hardware de la lista al realizar una instalación PXE y para el registro de cliente.

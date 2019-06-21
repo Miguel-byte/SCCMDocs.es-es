@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 367ab11340ef36b0caaf23e84f26bdda921ee158
-ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
+ms.openlocfilehash: 871fc8d32570aaa0af9984b48084965aabf6bc01
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834744"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251768"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Versiones de SQL Server compatibles con Configuration Manager
 
@@ -142,7 +142,7 @@ Puede usar esta versión de SQL Server sin una versión de actualización acumul
 -   Un sitio secundario  
 
 ### <a name="sql-server-2008-r2-sp3-standard-enterprise-datacenter"></a>SQL Server 2008 R2 SP3: Standard, Enterprise, Datacenter     
-  Esta versión de SQL Server no es compatible. Para obtener más información, consulte [Compatibilidad en desuso con versiones de SQL Server como base de datos de sitio](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-support-for-sql-server-versions-as-a-site-database).  
+  Esta versión de SQL Server no es compatible. Para obtener más información, consulte [Compatibilidad en desuso con versiones de SQL Server como base de datos de sitio](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#sql-server).  
 
 ### <a name="sql-server-2017-express"></a>SQL Server 2017 Express   
 Puede usar esta versión de SQL Server, con una [versión 2 de actualización acumulativa](https://support.microsoft.com/help/4052574) mínima, empezando por [Configuration Manager versión 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710) para los sitios siguientes:
@@ -285,8 +285,8 @@ Para obtener un ejemplo de cómo configurar SQL Server para usar un determinado 
 
 Si tiene que actualizar la versión de SQL Server, use uno de los métodos siguientes, del más sencillo al más complicado:  
 
-- [Realice una actualización local de SQL Server](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server) (recomendado)  
+- [Realice una actualización local de SQL Server](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#to-upgrade-sql-server-on-the-site-database-server) (recomendado)  
 
-- Instale una nueva versión de SQL Server en un equipo nuevo y después [use la opción para mover datos](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration) del programa de instalación de Configuration Manager para transfiera el servidor de sitio a la nueva instancia de SQL Server  
+- Instale una nueva versión de SQL Server en un equipo nuevo y después [use la opción para mover datos](/sccm/core/servers/manage/modify-your-infrastructure#bkmk_dbconfig) del programa de instalación de Configuration Manager para transfiera el servidor de sitio a la nueva instancia de SQL Server  
 
 - Use [Copia de seguridad y recuperación](/sccm/protect/understand/backup-and-recovery). Se admite el uso de copias de seguridad y recuperación para un escenario de actualización de SQL. Puede omitir el requisito de control de versiones SQL al revisar las [consideraciones antes de recuperar un sitio](/sccm/protect/understand/recover-sites#considerations-before-recovering-a-site). 

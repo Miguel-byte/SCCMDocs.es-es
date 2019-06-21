@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6d427571db52f19e9d1e45648bdf2cc66b6c6d9
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 9bdca6ded291ca6e32194c61ce24b33b690489cb
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56141279"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286244"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1703 para System Center Configuration Manager
 
@@ -63,7 +63,7 @@ Use el siguiente formato de dirección URL para abrir el centro de software desd
 3.  En la vista **Aplicaciones**, haga clic con el botón derecho en uno de los encabezados de columna y, después, en la lista seleccione **Id. único de CI**. Verá que el identificador único de cada aplicación se muestra ahora en la lista.
 4.  Tenga en cuenta el **identificador único de CI** de la aplicación a la que quiere proporcionar un vínculo, por ejemplo: **ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f/2**
 5.  Después, quite cualquier texto que aparezca tras el GUID de la aplicación, en este caso, **/2**. Esto le deja con el identificador de aplicación.
-6.  Por último, para terminar de crear el vínculo, anteponga **Softwarecenter:SoftwareID=**. Siguiendo con el ejemplo anterior, el vínculo final será: **Softwarecenter:SoftwareId= ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f**.
+6.  Por último, para terminar de crear el vínculo, anteponga **Softwarecenter:SoftwareID=** . Siguiendo con el ejemplo anterior, el vínculo final será: **Softwarecenter:SoftwareId= ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f**.
 
 Mediante este vínculo, los usuarios finales pueden abrir el centro de software directamente en la aplicación especificada.
 
@@ -83,13 +83,13 @@ Technical Preview 1703 presenta el asistente para la **configuración de Servici
 
 Con Technical Preview 1703, con este asistente solo se configura la Tienda Windows para empresas (WSfB).  Otros servicios en la nube se configuran mediante sus flujos de trabajo independientes.
 
--   Use la información de este tema de vista previa para reemplazar los pasos de configuración que se encuentran en la sección [Configuración de la sincronización de la Tienda Windows para empresas](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#set-up-windows-store-for-business-synchronization) del tema de la rama actual [Administración de aplicaciones desde la Tienda Windows para empresas con System Center Configuration Manager](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
+-   Use la información de este tema de vista previa para reemplazar los pasos de configuración que se encuentran en la sección [Configuración de la sincronización de la Tienda Windows para empresas](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#bkmk_setup) del tema de la rama actual [Administración de aplicaciones desde la Tienda Windows para empresas con System Center Configuration Manager](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
 
 -   Para obtener más información sobre las aplicaciones web, vea [Autenticación y autorización en el Servicio de aplicaciones de Azure](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview) e [Introducción a Aplicaciones web](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview).
 
 ### <a name="prerequisites-and-planning"></a>Requisitos previos y planeamiento
 Cuando establezca una conexión entre Configuration Manager y la Tienda Windows para empresas, deberá proporcionar una carpeta donde se conservará el contenido de la aplicación sincronizado desde la tienda. Para asegurarse de que esta carpeta sea segura y que su contenido se pueda implementar en dispositivos, compruebe que se hayan aplicado los permisos siguientes:
--   El equipo en el que instale el rol de sistema de sitio del punto de conexión de servicio (el sitio de nivel superior de la jerarquía) debe tener permisos de lectura y escritura en la carpeta que haya especificado al usar la cuenta **Computer$**.  
+-   El equipo en el que instale el rol de sistema de sitio del punto de conexión de servicio (el sitio de nivel superior de la jerarquía) debe tener permisos de lectura y escritura en la carpeta que haya especificado al usar la cuenta **Computer$** .  
 
 -   El autor de la aplicación debe tener permisos de lectura en la carpeta que haya especificado.  
 

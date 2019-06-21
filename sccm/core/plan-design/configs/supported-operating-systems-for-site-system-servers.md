@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 871f007bd1ee0e38635e03a6b17a9125758553af
-ms.sourcegitcommit: 65e9b30e2b53ab9db679a7b1d50634a73c0028db
+ms.openlocfilehash: 0a83b55726903369677d3daf04f7c879b3660c06
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66429813"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251666"
 ---
 # <a name="supported-operating-systems-for-configuration-manager-site-system-servers"></a>Sistemas operativos compatibles con servidores de sistema de sitio de Configuration Manager
 
@@ -181,7 +181,7 @@ Esta versión de sistema operativo se admite en los siguientes roles:
 
 *Se aplica a Windows Server 2008 R2 con Service Pack 1: Standard, Enterprise y Datacenter*
 
-Windows Server 2008 R2 tiene ahora soporte extendido y ya no está dentro del soporte estándar, tal y como se detalla en el [Ciclo de vida de soporte técnico de Microsoft](https://support.microsoft.com/lifecycle). Para obtener más información sobre la compatibilidad futura de estos sistemas operativos como servidores de sistema de sitio con Configuration Manager, consulte [Deprecated server operating systems](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems) (Sistemas operativos de servidor en desuso).  
+Windows Server 2008 R2 tiene ahora soporte extendido y ya no está dentro del soporte estándar, tal y como se detalla en el [Ciclo de vida de soporte técnico de Microsoft](https://support.microsoft.com/lifecycle). Para obtener más información sobre la compatibilidad futura de estos sistemas operativos como servidores de sistema de sitio con Configuration Manager, consulte [Deprecated server operating systems](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#server-os) (Sistemas operativos de servidor en desuso).  
 
 > [!Important]  
 > La fecha de finalización del soporte técnico extendido para Windows Server 2008 R2 es el 14 de enero de 2020. Después de esta fecha, Configuration Manager no será compatible con este SO en ningún rol de sistema de sitio. 
@@ -199,7 +199,7 @@ Este sistema operativo no es compatible con servidores de sitio o la mayoría de
 
 *Se aplica a Windows Server 2008 con Service Pack 2 (x86, x64): Standard, Enterprise y Datacenter*
 
-Windows Server 2008 con Service Pack 2 (SP2) tiene ahora soporte extendido y ya no está dentro del soporte estándar, tal y como se detalla en [Ciclo de vida de soporte técnico de Microsoft](https://support.microsoft.com/lifecycle). Para obtener más información sobre la compatibilidad futura de estos sistemas operativos como servidores de sistema de sitio con Configuration Manager, consulte [Deprecated server operating systems](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems) (Sistemas operativos de servidor en desuso).  
+Windows Server 2008 con Service Pack 2 (SP2) tiene ahora soporte extendido y ya no está dentro del soporte estándar, tal y como se detalla en [Ciclo de vida de soporte técnico de Microsoft](https://support.microsoft.com/lifecycle). Para obtener más información sobre la compatibilidad futura de estos sistemas operativos como servidores de sistema de sitio con Configuration Manager, consulte [Deprecated server operating systems](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#server-os) (Sistemas operativos de servidor en desuso).  
 
 > [!Important]  
 > La fecha de finalización del soporte técnico extendido para Windows Server 2008 R2 es el 14 de enero de 2020. Después de esta fecha, Configuration Manager no será compatible con este SO en ningún rol de sistema de sitio. 

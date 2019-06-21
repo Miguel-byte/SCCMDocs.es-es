@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 667dfda7f03c5c39f8a0a2e4ffc2ba38bddf5a0e
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 6d037baba858b3aacc3724e99a66819197b1dd89
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500141"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194515"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>Optimización de la distribución de actualizaciones de Windows 10 con Configuration Manager
 
@@ -52,12 +52,12 @@ En las secciones siguientes se proporciona información adicional sobre estas te
 
 ### <a name="windows-delivery-optimization"></a>Optimización de distribución de Windows
 
-La [Optimización de distribución](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) es la tecnología de descarga y el método de distribución punto a punto principales integrados en Windows 10. Los clientes de Windows 10 pueden obtener contenido de otros dispositivos de su red local que descargan las mismas actualizaciones. Con el uso de las [opciones de Windows disponibles para la Optimización de distribución](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#delivery-optimization-options), puede configurar los clientes en grupos. Esta agrupación permite a la organización identificar los dispositivos que posiblemente son los mejores candidatos para responder a las solicitudes punto a punto. La Optimización de distribución reduce significativamente el ancho de banda general utilizado para mantener los dispositivos actualizados, al mismo tiempo que acelera el tiempo de descarga.
+La [Optimización de distribución](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) es la tecnología de descarga y el método de distribución punto a punto principales integrados en Windows 10. Los clientes de Windows 10 pueden obtener contenido de otros dispositivos de su red local que descargan las mismas actualizaciones. Con el uso de las [opciones de Windows disponibles para la Optimización de distribución](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#delivery-optimization-options), puede configurar los clientes en grupos. Esta agrupación permite a la organización identificar los dispositivos que posiblemente son los mejores candidatos para responder a las solicitudes punto a punto. La Optimización de distribución reduce significativamente el ancho de banda general utilizado para mantener los dispositivos actualizados, al mismo tiempo que acelera el tiempo de descarga.
 
 > [!NOTE]  
 > La Optimización de distribución es una solución administrada en la nube. El acceso al servicio en la nube Optimización de distribución a través de Internet es un requisito para utilizar su funcionalidad punto a punto.  
 
-Para obtener los mejores resultados, puede que tenga que establecer el [modo de descarga](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#download-mode) de la Optimización de distribución en **Grupo (2)** y definir los *identificadores de grupo*. En el modo de grupo, el emparejamiento puede cruzar subredes internas entre los dispositivos que pertenecen al mismo grupo, incluidos los dispositivos de las oficinas remotas. Use la [opción Id. de grupo](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#select-the-source-of-group-ids) para crear su propio grupo personalizado con independencia de los dominios y los sitios de AD DS. El modo de descarga en grupo es la opción recomendada para la mayoría de las organizaciones que tratan de conseguir la máxima optimización del ancho de banda con la Optimización de distribución.
+Para obtener los mejores resultados, puede que tenga que establecer el [modo de descarga](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#download-mode) de la Optimización de distribución en **Grupo (2)** y definir los *identificadores de grupo*. En el modo de grupo, el emparejamiento puede cruzar subredes internas entre los dispositivos que pertenecen al mismo grupo, incluidos los dispositivos de las oficinas remotas. Use la [opción Id. de grupo](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#select-the-source-of-group-ids) para crear su propio grupo personalizado con independencia de los dominios y los sitios de AD DS. El modo de descarga en grupo es la opción recomendada para la mayoría de las organizaciones que tratan de conseguir la máxima optimización del ancho de banda con la Optimización de distribución.
 
 La configuración manual de estos identificadores de grupo resulta complicada cuando los clientes usan un perfil itinerante entre diferentes redes. Configuration Manager 1802 agregó una nueva característica para simplificar la administración de este proceso mediante la [integración de los grupos de límites con la Optimización de distribución](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#delivery-optimization). Cuando un cliente se activa, se comunica con su punto de administración para obtener directivas y ofrece su información de red y de grupo de límites. Configuration Manager crea un identificador único para cada grupo de límites. El sitio usa la información de ubicación del cliente para configurar automáticamente el identificador de grupo de la Optimización de distribución del cliente con el identificador de límites de Configuration Manager. Cuando el cliente usa un perfil itinerante en otro grupo de límites, se comunica con su punto de administración y se reconfigura automáticamente con un nuevo identificador de grupo de límites. Con esta integración, la Optimización de distribución puede utilizar la información del grupo de límites de Configuration Manager para encontrar un elemento del mismo nivel desde el que descargar las actualizaciones.
 
@@ -150,7 +150,7 @@ Los cambios solo surten efecto para las nuevas actualizaciones sincronizadas e i
 
 
 #### <a name="is-there-any-way-to-see-how-much-content-is-downloaded-from-peers-using-delivery-optimization"></a>¿Hay alguna forma de ver cuánto contenido se descarga de los elementos del mismo nivel con la Optimización de distribución?
-La versión 1703 y posteriores de Windows 10 incluyen dos nuevos cmdlets de PowerShell, **Get-DeliveryOptimizationPerfSnap** y **Get-DeliveryOptimizationStatus**. Estos cmdlets ofrecen más información de la Optimización de distribución y el uso de la caché. Para más información, vea [Cmdlets de Windows PowerShell para analizar el uso](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#windows-powershell-cmdlets-for-analyzing-usage).
+La versión 1703 y posteriores de Windows 10 incluyen dos nuevos cmdlets de PowerShell, **Get-DeliveryOptimizationPerfSnap** y **Get-DeliveryOptimizationStatus**. Estos cmdlets ofrecen más información de la Optimización de distribución y el uso de la caché. Para obtener más información, consulte [actualiza la optimización de entrega para Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#the-cloud-service-doesnt-see-other-peers-on-the-network)
 
 
 #### <a name="how-do-clients-communicate-with-delivery-optimization-over-the-network"></a>¿Cómo se comunican los clientes con la Optimización de distribución a través de la red?
