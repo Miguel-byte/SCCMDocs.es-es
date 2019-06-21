@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e6e603210342f5acc3e66328fca95e964dde2bf
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 9d35558da6b25bba16b84c931b0254436ac3dd1e
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65495514"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285530"
 ---
 # <a name="whats-new-in-version-1802-of-system-center-configuration-manager"></a>Novedades de la versión 1802 de System Center Configuration Manager
 
@@ -35,7 +35,7 @@ Ahora también están disponibles las siguientes actualizaciones adicionales a e
 >  Más información acerca de:    
 >   - [Instalación de nuevos sitios](/sccm/core/servers/deploy/install/installing-sites)  
 >   - [Instalación de actualizaciones en los sitios](/sccm/core/servers/manage/updates)  
->   - [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
+>   - [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 En las secciones siguientes se proporcionan detalles sobre los cambios y las nuevas funciones de la versión 1802 de Configuration Manager.  
 
@@ -135,7 +135,7 @@ Al crear una instancia de [Cloud Management Gateway](/sccm/core/clients/manage/p
 
 ### <a name="configure-hardware-inventory-to-collect-strings-larger-than-255-characters"></a>Configurar el inventario de hardware para recopilar cadenas de más de 255 caracteres
 <!-- 1357389 -->
-Puede configurar la longitud de las cadenas de modo que tengan más de 255 caracteres para las propiedades del inventario de hardware. Este cambio se aplica únicamente a las clases recién agregadas y a las propiedades de inventario del hardware que no son claves. Para obtener más información, vea el artículo [Cómo ampliar el inventario de hardware](/sccm/core/clients/manage/inventory/extend-hardware-inventory#BKMK_GreaterThan255). 
+Puede configurar la longitud de las cadenas de modo que tengan más de 255 caracteres para las propiedades del inventario de hardware. Este cambio se aplica únicamente a las clases recién agregadas y a las propiedades de inventario del hardware que no son claves. Para obtener más información, vea el artículo [Cómo ampliar el inventario de hardware](/sccm/core/clients/manage/inventory/extend-hardware-inventory#bkmk_GreaterThan255). 
 
  ### <a name="deprecation-announcement-for-linux-and-unix-client-support"></a>Anuncio de desuso de la compatibilidad con clientes de Linux y UNIX
  <!--510139-->
@@ -162,7 +162,7 @@ A partir de esta versión, Silverlight ya no se instala automáticamente en los 
  
 ### <a name="co-management-dashboard-in-system-center-configuration-manager"></a>Panel de administrar conjunta en System Center Configuration Manager
 <!--1356648-->
-A partir de esta versión, puede ver un panel con información sobre la administración conjunta. El panel le ayudará a revisar las máquinas que se administran conjuntamente en el entorno. Los gráficos ayudan a identificar los dispositivos que podrían requerir atención. Para obtener más información, vea el artículo [Co-management dashboard](/sccm/core/clients/manage/client-management-dashboard) (Panel de administración conjunta). 
+A partir de esta versión, puede ver un panel con información sobre la administración conjunta. El panel le ayudará a revisar las máquinas que se administran conjuntamente en el entorno. Los gráficos ayudan a identificar los dispositivos que podrían requerir atención. Para obtener más información, vea el artículo [Co-management dashboard](/sccm/comanage/how-to-monitor#co-management-dashboard) (Panel de administración conjunta). 
 
 
 ## <a name="compliance-settings"></a>Configuración de cumplimiento
@@ -177,15 +177,15 @@ Para los clientes que usan el explorador web [Microsoft Edge](https://technet.mi
 
 ### <a name="allow-user-interaction-when-installing-an-application"></a>Permitir la interacción del usuario al instalar una aplicación
 <!-- 1356976 -->
-Puede permitir que un usuario final interactúe con la instalación de una aplicación durante la ejecución de la secuencia de tareas. Por ejemplo, ejecute un proceso de instalación que solicite al usuario final diversas opciones. En algunos instaladores de aplicaciones no se pueden silenciar los mensajes, o bien el proceso de instalación puede requerir valores de configuración específicos que solo conoce el usuario. Esta característica permite controlar estos escenarios de instalación. Para obtener más información, vea [Especificar opciones de experiencia del usuario para el tipo de implementación](/sccm/apps/deploy-use/create-applications#specify-user-experience-options-for-the-deployment-type).
+Puede permitir que un usuario final interactúe con la instalación de una aplicación durante la ejecución de la secuencia de tareas. Por ejemplo, ejecute un proceso de instalación que solicite al usuario final diversas opciones. En algunos instaladores de aplicaciones no se pueden silenciar los mensajes, o bien el proceso de instalación puede requerir valores de configuración específicos que solo conoce el usuario. Esta característica permite controlar estos escenarios de instalación. Para obtener más información, vea [Especificar opciones de experiencia del usuario para el tipo de implementación](/sccm/apps/deploy-use/create-applications#bkmk_dt-ux).
 
 ### <a name="do-not-automatically-upgrade-superseded-applications"></a>No actualizar automáticamente las aplicaciones reemplazadas
 <!-- 1351266 -->
-Configure una implementación de aplicación de modo que no actualice automáticamente las versiones reemplazadas. Ahora, al crear la implementación, en la página **Configuración de implementación** del **Asistente para implementar software**, para cada propósito de instalación **Disponible**, puede habilitar o deshabilitar la opción **Actualizar automáticamente cualquier versión reemplazada de esta aplicación**. Para obtener más información, vea [Especificar la configuración de implementación](/sccm/apps/deploy-use/deploy-applications#specify-deployment-settings).
+Configure una implementación de aplicación de modo que no actualice automáticamente las versiones reemplazadas. Ahora, al crear la implementación, en la página **Configuración de implementación** del **Asistente para implementar software**, para cada propósito de instalación **Disponible**, puede habilitar o deshabilitar la opción **Actualizar automáticamente cualquier versión reemplazada de esta aplicación**. Para obtener más información, vea [Especificar la configuración de implementación](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy-settings).
 
 ### <a name="approve-application-requests-for-users-per-device"></a>Aprobación de solicitudes de aplicación para los usuarios por dispositivo
 <!-- 1357015 -->
-A partir de esta versión, cuando un usuario solicita una aplicación que requiere aprobación, el nombre de dispositivo específico ahora forma parte de la solicitud. Si el administrador aprueba la solicitud, el usuario solo tiene la posibilidad de instalar la aplicación en ese dispositivo. El usuario debe enviar otra solicitud para instalar la aplicación en otro dispositivo. Para obtener más información, vea [Especificar la configuración de implementación](/sccm/apps/deploy-use/deploy-applications#specify-deployment-settings).
+A partir de esta versión, cuando un usuario solicita una aplicación que requiere aprobación, el nombre de dispositivo específico ahora forma parte de la solicitud. Si el administrador aprueba la solicitud, el usuario solo tiene la posibilidad de instalar la aplicación en ese dispositivo. El usuario debe enviar otra solicitud para instalar la aplicación en otro dispositivo. Para obtener más información, vea [Especificar la configuración de implementación](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy-settings).
 
  > [!Note]  
  > Esta característica es opcional. Para obtener más información, consulte [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).  
@@ -200,7 +200,7 @@ A partir de esta versión, cuando un usuario solicita una aplicación que requie
 
 ### <a name="windows-10-in-place-upgrade-task-sequence-via-cloud-management-gateway"></a>Secuencia de tareas de actualización en contexto de Windows 10 a través de Cloud Management Gateway
 <!-- 1357149 -->
-La [secuencia de tareas de actualización en contexto](/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version) de Windows 10 ahora admite la implementación en los clientes basados en Internet que se administran a través de [Cloud Management Gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). Esta función permite a los usuarios remotos actualizar con mayor facilidad a Windows 10 sin necesidad de conectarse a la red corporativa. Para obtener más información, vea [Deploy a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#deploy-windows-10-in-place-upgrade-via-cmg).
+La [secuencia de tareas de actualización en contexto](/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version) de Windows 10 ahora admite la implementación en los clientes basados en Internet que se administran a través de [Cloud Management Gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). Esta función permite a los usuarios remotos actualizar con mayor facilidad a Windows 10 sin necesidad de conectarse a la red corporativa. Para obtener más información, vea [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence).
 
 ### <a name="improvements-to-windows-10-in-place-upgrade-task-sequence"></a>Mejoras en la secuencia de tareas de actualización en contexto de Windows 10
 <!-- 1357425 -->
@@ -240,11 +240,11 @@ Si implementa aplicaciones como disponibles para los usuarios, ahora puede exami
 
 ### <a name="hide-installed-applications-in-software-center"></a>Ocultar aplicaciones instaladas en el Centro de software
 <!--1357592-->
-Ahora, las aplicaciones instaladas se pueden ocultar en el Centro de software. Las aplicaciones que estén instaladas ya no aparecerán en la pestaña Aplicaciones cuando se habilite esta opción en la configuración del cliente. Esta opción se establece como valor predeterminado al instalar o actualizar a Configuration Manager 1802.  Las aplicaciones instaladas siguen estando disponibles para su revisión en la pestaña Estado de la instalación. Infórmese sobre cómo [ocultar aplicaciones instaladas en el Centro de software](/sccm/core/clients/deploy/about-client-settings#BKMK_HideInstalled).   
+Ahora, las aplicaciones instaladas se pueden ocultar en el Centro de software. Las aplicaciones que estén instaladas ya no aparecerán en la pestaña Aplicaciones cuando se habilite esta opción en la configuración del cliente. Esta opción se establece como valor predeterminado al instalar o actualizar a Configuration Manager 1802.  Las aplicaciones instaladas siguen estando disponibles para su revisión en la pestaña Estado de la instalación. Infórmese sobre cómo [ocultar aplicaciones instaladas en el Centro de software](/sccm/core/clients/deploy/about-client-settings#bkmk_HideInstalled).   
 
 ### <a name="hide-unapproved-applications-in-software-center"></a>Ocultar aplicaciones no aprobadas en el Centro de software
  <!--1355146-->
-Cuando esta opción de la configuración del cliente está habilitada, las aplicaciones disponibles para los usuarios que necesiten aprobación se ocultan en el Centro de software.  Infórmese sobre cómo [ocultar aplicaciones no aprobadas en el Centro de software](/sccm/core/clients/deploy/about-client-settings#BKMK_HideUnapproved).  
+Cuando esta opción de la configuración del cliente está habilitada, las aplicaciones disponibles para los usuarios que necesiten aprobación se ocultan en el Centro de software.  Infórmese sobre cómo [ocultar aplicaciones no aprobadas en el Centro de software](/sccm/core/clients/deploy/about-client-settings#bkmk_HideUnapproved).  
 
 ### <a name="software-center-shows-user-additional-compliance-information"></a>El Centro de software muestra información de cumplimiento adicional del usuario
 <!-- 1235616 -->
