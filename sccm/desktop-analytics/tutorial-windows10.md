@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9f49955fed92061fb856a5ff49203f1fa6c9d186
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 0700644f9548ea588821141a34abc6d249909cdf
+ms.sourcegitcommit: d8cfd0edf2579e2b08a0ca8a0a7b8f53d1e4196f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285632"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463734"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Tutorial: Implementación de Windows 10 en el piloto
 
@@ -101,24 +101,20 @@ Utilice este procedimiento para iniciar sesión el análisis de escritorio y con
 
 4. En el **dar acceso a los usuarios** página:
 
-    - **¿Desea que el análisis de escritorio para administrar roles de directorio para los usuarios**: Escritorio Analytics asigna automáticamente el **propietarios del área de trabajo** y **colaboradores del área de trabajo** grupos a la **Desktop Administrator de análisis** rol. Si esos grupos ya están un **administrador Global**, no hay ningún cambio.  
+    - **Permitir análisis de escritorio para administrar roles de directorio en su nombre**: Escritorio Analytics asigna automáticamente el **propietarios del área de trabajo** el **Desktop Analytics Administrator** rol. Si esos grupos ya están un **administrador Global**, no hay ningún cambio.  
 
-        Si no selecciona esta opción, análisis de escritorio seguirá agregando los usuarios como miembros de dos grupos de seguridad. Un **administrador Global** debe asignar manualmente el **Desktop Analytics Administrator** rol para los usuarios.  
+        Si no selecciona esta opción, análisis de escritorio seguirá agregando los usuarios como miembros del grupo de seguridad. Un **administrador Global** debe asignar manualmente el **Desktop Analytics Administrator** rol para los usuarios.  
 
         Para obtener más información acerca de cómo asignar permisos del rol de administrador en Azure Active Directory y los permisos asignados a **Desktop Analytics administradores**, consulte [permisos del rol de administrador en Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
 
-    - Análisis de escritorio preconfigura dos grupos de seguridad en Azure Active Directory:  
+    - Análisis escritorio preconfigura la **propietarios del área de trabajo** grupo de seguridad en Azure Active Directory para crear y administrar áreas de trabajo y los planes de implementación. 
 
-        - **Los propietarios del área de trabajo**: Un grupo de seguridad para crear y administrar áreas de trabajo. Estas cuentas necesitan acceso de propietario a la suscripción de Azure.  
-
-        - **Los colaboradores del área de trabajo**: Un grupo de seguridad para crear y administrar planes de implementación en esta área de trabajo. No necesitan ningún acceso de Azure adicionales.  
-
-        Para agregar un usuario a cualquier grupo, escriba su dirección de correo electrónico o de nombre en el **escriba la dirección de correo electrónico o nombre** sección del grupo adecuado. Cuando termine, seleccione **siguiente**.
+        Para agregar un usuario al grupo, escriba su dirección de correo electrónico o de nombre en el **escriba la dirección de correo electrónico o nombre** sección. Cuando termine, seleccione **siguiente**.
 
 5. En la página para **configurar el área de trabajo**:  
 
     > [!Note]  
-    > Completar este paso como una **propietario del área de trabajo** o **colaborador**. Para obtener más información, consulte [requisitos previos](/sccm/desktop-analytics/overview#prerequisites).  
+    > Para completar este paso, el usuario debe **propietario del área de trabajo** permisos y acceso adicional a la suscripción de Azure y el grupo de recursos. Para obtener más información, consulte [requisitos previos](/sccm/desktop-analytics/overview#prerequisites).  
 
     - Seleccione su suscripción de Azure.  
 
@@ -192,7 +188,7 @@ Instale el paquete de actualizaciones de Configuration Manager versión 1902 (45
     Seleccione **inicie sesión en**. Después de autenticarse correctamente en Azure, en la página se muestra el **Nombre de inquilino de Azure AD** como referencia.
 
     > [!Note]  
-    > Completar este paso como una **Administrador de la compañía**. Configuration Manager no guarda estas credenciales. Este rol no requiere permisos de Configuration Manager y no tiene que ser la misma cuenta que ejecuta al Asistente para servicios de Azure.  
+    > Completar este paso como una **administrador Global**. Configuration Manager no guarda estas credenciales. Este rol no requiere permisos de Configuration Manager y no tiene que ser la misma cuenta que ejecuta al Asistente para servicios de Azure.  
 
     Haga clic en **Aceptar** para crear la aplicación web en Azure AD y cerrar el cuadro de diálogo Crear aplicación de servidor. En el cuadro de diálogo de la aplicación de servidor, seleccione **Aceptar**. A continuación, seleccione **siguiente** en la página de aplicación del Asistente para servicios de Azure.  
 
