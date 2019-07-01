@@ -2,7 +2,7 @@
 title: Creación y ejecución de scripts
 titleSuffix: Configuration Manager
 description: Cree y ejecute scripts de Powershell en dispositivos cliente.
-ms.date: 03/13/2019
+ms.date: 06/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc22c66cfa4cf4e628dce7bf3cb268464610c933
-ms.sourcegitcommit: bfb8a17f60dcb9905e739045a5141ae45613fa2c
+ms.openlocfilehash: 7dc4351cf092437d81f0f30ed6b450ed1cb1efe2
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66198432"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286529"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Creación y ejecución de scripts de PowerShell desde la consola de Configuration Manager
 
@@ -76,7 +76,7 @@ La funcionalidad de ejecución de scripts utiliza el concepto de *autores de scr
 
 ### <a name="scripts-roles-control"></a>Control de los roles de scripts
 
-De forma predeterminada, los usuarios no pueden aprobar un script que hayan creado. Dado que los scripts son eficaces y versátiles, y se pueden implementar en varios dispositivos, podrá separar los roles de la persona que los crea y la persona que los aprueba. Esto proporciona un nivel adicional de seguridad frente a la ejecución de un script sin supervisión. Puede desactivar esta aprobación secundaria para facilitar las pruebas.
+De forma predeterminada, los usuarios no pueden aprobar un script que han creado. Dado que los scripts son eficaces y versátiles, y se pueden implementar en varios dispositivos, podrá separar los roles de la persona que los crea y la persona que los aprueba. Esto proporciona un nivel adicional de seguridad frente a la ejecución de un script sin supervisión. Puede desactivar esta aprobación secundaria para facilitar las pruebas.
 
 ### <a name="approve-or-deny-a-script"></a>Aprobación o denegación de un script
 
@@ -172,7 +172,7 @@ Los tres roles de seguridad usados para ejecutar scripts no se crean de forma pr
 5. Complete el asistente. El nuevo script se muestra en la lista **Script** con el estado **En espera de aprobación**. Para poder ejecutar este script en los dispositivos cliente, debe aprobarlo. 
 
 > [!IMPORTANT]
-> Evite la aplicación de scripts al reinicio de un dispositivo o de un agente de Configuration Manageral utilizar la característica Ejecutar scripts. Si lo hace, podría provocar un estado de reinicio continuo. Si es necesario, existen mejoras en la característica de notificación de clientes que permiten reiniciar dispositivos, a partir de la versión 1710 de Configuration Manager. La [columna Reinicio pendiente](/sccm/core/clients/manage/manage-clients#Restart-clients) puede ayudar a identificar los dispositivos que necesitan un reinicio. 
+> Evite la aplicación de scripts al reinicio de un dispositivo o de un agente de Configuration Manageral utilizar la característica Ejecutar scripts. Si lo hace, podría provocar un estado de reinicio continuo. Si es necesario, existen mejoras en la característica de notificación de clientes que permiten reiniciar dispositivos, a partir de la versión 1710 de Configuration Manager. La [columna Reinicio pendiente](/sccm/core/clients/manage/manage-clients#restart-clients) puede ayudar a identificar los dispositivos que necesitan un reinicio. 
 > <!--SMS503978  -->
 
 ## <a name="script-parameters"></a>Parámetros de script
@@ -241,6 +241,29 @@ Este script usa WMI para consultar a la máquina la versión que tiene de SO.
 Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 ```
 
+## <a name="bkmk_psedit"></a> Edición o copia de scripts de PowerShell
+<!--3705507-->
+*(Se introdujo con la versión 1902)*  
+Puede **editar** o **copiar** un script de PowerShell existente que se usa con la característica **Ejecutar scripts**. En lugar de volver a crear un script que necesita cambiar, ahora puede editarlo directamente. Ambas acciones utilizan la misma experiencia de asistente que cuando se crea un nuevo script. Cuando edita o copia un script, Configuration Manager no mantiene el estado de aprobación.
+
+> [!Tip]  
+> No edite un script que se esté ejecutando activamente en los clientes, porque no terminarán de ejecutar el script original y es posible que no obtenga los resultados deseados de estos clientes.  
+
+### <a name="edit-a-script"></a>Editar una secuencia de comandos
+
+1. Vaya a la **Scripts** nodo bajo el **biblioteca de Software** área de trabajo.
+1. Seleccione la secuencia de comandos para editar y, después, haga clic en **editar** en la cinta de opciones. 
+1. Cambiar o volver a importar el script en el **detalles del Script** página.
+1. Haga clic en **siguiente** para ver el **resumen** , a continuación, **cerrar** cuando haya terminado de edición.
+
+### <a name="copy-a-script"></a>Copiar una secuencia de comandos
+
+1. Vaya a la **Scripts** nodo bajo el **biblioteca de Software** área de trabajo.
+1. Seleccione la secuencia de comandos para copiar, a continuación, haga clic en **copia** en la cinta de opciones.
+1. Cambiar el nombre de la secuencia de comandos en el **nombre del Script** campo y realice las modificaciones adicionales que necesite.
+1. Haga clic en **siguiente** para ver el **resumen** , a continuación, **cerrar** cuando haya terminado de edición.
+
+
 ## <a name="run-a-script"></a>Ejecutar un script
 
 Una vez que se ha aprobado un script, podrá ejecutarse en un solo dispositivo o colección. Una vez que comienza la ejecución del script, se inicia rápidamente a través de un sistema de alta prioridad cuyo tiempo de espera es de una hora. Después, los resultados del script se devuelven utilizando un sistema de mensaje de estado.
@@ -305,8 +328,8 @@ Microsoft Windows 10 Enterprise
 
 - A partir de Configuration Manager versión 1802, la salida del script realiza la devolución con el formato JSON. Este formato devuelve de manera uniforme una salida de script legible. 
 - Los scripts que obtengan un resultado desconocido o en los que el cliente estaba sin conexión no se mostrarán en los gráficos ni en el conjunto de datos. <!--507179-->
-- Evite devolver una salida de script grande, ya que se trunca en 4 KB. <!--508488-->
-- Algunas funciones con el formato de salida de script no están disponibles cuando se ejecuta Configuration Manager versión 1802 o posterior con una versión de nivel inferior del cliente. <!--508487-->
+- Evite devolver una salida de script grande, ya que se trunca en 4 KB. <!--508488-->
+- Algunas funciones con el formato de salida de script no están disponibles cuando se ejecuta Configuration Manager versión 1802 o posterior con una versión de nivel inferior del cliente. <!--508487-->
     - Si tiene un cliente de Configuration Manager anterior a la versión 1802, obtendrá una cadena de salida.
     -  Para clientes de Configuration Manager con versión 1802 y versiones posteriores, se obtiene el formato JSON.
         - Por ejemplo, podría obtener resultados que indican TEXTO en una versión de cliente y "TEXTO" (incluido entre comillas dobles) en otra versión, y se colocarán en el gráfico como dos categorías diferentes.

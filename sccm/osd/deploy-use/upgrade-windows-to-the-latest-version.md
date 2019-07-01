@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c118c50eccf7fdb443a54f630d2d5698836d44f2
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 36304b836dbedcb411310d5f0dd8d0f0a8fd91f1
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56135507"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194466"
 ---
 # <a name="upgrade-windows-to-the-latest-version-with-system-center-configuration-manager"></a>Actualizar Windows a la versión más reciente con System Center Configuration Manager
 
@@ -37,7 +37,7 @@ En este artículo se proporcionan los pasos de Configuration Manager para actual
 
 
 > [!Note]  
-> A partir de la versión 1802, la secuencia de tareas de actualización local de Windows 10 admite la implementación en los clientes basados en Internet que se administran a través de [Cloud Management Gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). Esta función permite a los usuarios remotos actualizar con mayor facilidad a Windows 10 sin necesidad de conectarse a la intranet. Para obtener más información, vea [Implementar una actualización local de Windows 10 a través de CMG](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#deploy-windows-10-in-place-upgrade-via-cmg). <!-- 1357149 -->
+> A partir de la versión 1802, la secuencia de tareas de actualización local de Windows 10 admite la implementación en los clientes basados en Internet que se administran a través de [Cloud Management Gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). Esta función permite a los usuarios remotos actualizar con mayor facilidad a Windows 10 sin necesidad de conectarse a la intranet. Para obtener más información, vea [Implementar una actualización local de Windows 10 a través de CMG](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#deploy). <!-- 1357149 -->
 
 
 
