@@ -2,7 +2,7 @@
 title: Novedades de la MDM híbrida
 titleSuffix: Configuration Manager
 description: Obtenga información sobre las nuevas características de administración de dispositivos móviles disponibles para implementaciones híbridas con Configuration Manager e Intune.
-ms.date: 06/24/2019
+ms.date: 07/01/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c269e5f90588634e51f1d3f1e31767b11a038503
-ms.sourcegitcommit: d8cfd0edf2579e2b08a0ca8a0a7b8f53d1e4196f
+ms.openlocfilehash: 2dd14e7beaef6fe636ea220de557a866e547a602
+ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463775"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67516218"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Novedades de la administración híbrida de dispositivos móviles con Configuration Manager y Microsoft Intune
 
@@ -50,9 +50,23 @@ En cada sección de este artículo se enumeran las características híbridas or
 
 ### <a name="new-in-microsoft-intune"></a>Novedades de Microsoft Intune
 
-### <a name="view-all-installed-apps-from-new-company-portal-web-page"></a>Ver aplicaciones instaladas desde la nueva página web de Portal de empresa 
+#### <a name="new-view-lets-users-see-all-managed-apps-installed-on-device"></a>Nueva vista permite a los usuarios ver todas las aplicaciones administradas instaladas en el dispositivo
+
+<!-- 2352913 -->
+El Portal de empresa para Windows ahora se enumeran todas las aplicaciones administradas (requeridas y disponibles) que están instaladas en el dispositivo del usuario. Los usuarios también pueden ver intentada pendientes y en las instalaciones de aplicaciones y sus estados actuales. Si aún no ha realizado aplicaciones necesaria o está disponible para los usuarios, no verá un mensaje que explica que se han instalado las aplicaciones de empresa.
+
+Para ver la nueva vista, vaya al panel de navegación de Portal de empresa y seleccione **aplicaciones** > **aplicaciones instaladas**. A continuación, ordenar o filtrar la lista por uno de los siguientes atributos:
+
+- Nombre
+- Escriba
+- Publicador
+- Última actualización
+- Estado de instalación
+
+#### <a name="view-all-installed-apps-from-new-company-portal-web-page"></a>Ver aplicaciones instaladas desde la nueva página web de Portal de empresa
+
 <!-- 4224326-->
-El sitio Web de Portal de empresa de la nueva **aplicaciones instaladas** página enumera todas las aplicaciones administradas (requeridas y disponibles) que están instaladas en el dispositivo del usuario. Tipo de asignación, además de los usuarios pueden ver el publicador, fecha de publicación y estado actual de la instalación de la aplicación. Si aún no ha realizado ninguna aplicación necesaria o está disponible a los usuarios, no verá un mensaje que explica que se han instalado las aplicaciones de empresa. Para ver la nueva vista, vaya a la [sitio Web del Portal de empresa](https://portal.manage.microsoft.com) y haga clic en **aplicaciones instaladas**.  
+El sitio Web de Portal de empresa de la nueva **aplicaciones instaladas** página enumera todas las aplicaciones administradas (requeridas y disponibles) que están instaladas en el dispositivo del usuario. Tipo de asignación, además de los usuarios pueden ver el publicador, fecha de publicación y estado actual de la instalación de la aplicación. Si aún no ha realizado ninguna aplicación necesaria o está disponible a los usuarios, no verá un mensaje que explica que se han instalado las aplicaciones de empresa. Para ver la nueva vista, vaya a la [sitio Web del Portal de empresa](https://portal.manage.microsoft.com) y seleccione **aplicaciones instaladas**.  
 
 
 ## <a name="may-2019"></a>Mayo de 2019
@@ -119,9 +133,6 @@ Se ha rediseñado la página principal de la aplicación de Portal de empresa pa
 
 <!-- 2751523 -->
 Dispositivos Windows inscritos en Intune mediante [inscripción masiva de Windows](https://docs.microsoft.com/intune/windows-bulk-enroll) (paquetes de aprovisionamiento) podrán usar la aplicación de Portal de empresa para instalar aplicaciones disponibles. Para obtener más información acerca de la aplicación de Portal de empresa, consulte [agregar manualmente el Portal de empresa de Windows 10](https://docs.microsoft.com/intune/store-apps-company-portal-app) y [cómo configurar la aplicación de Portal de empresa de Microsoft Intune](https://docs.microsoft.com/intune/company-portal-app).
-
-> [!Note]  
-> Esta característica todavía no se implementa por completo a todos los clientes. Si no puede usar el Portal de empresa en dispositivos inscritos de forma masiva, tendrá que esperar hasta que este cambio implementa a su cuenta.
 
 #### <a name="app-icons-are-displayed-with-an-automatically-generated-background"></a>Se muestran iconos de aplicación con un fondo generado automáticamente
 

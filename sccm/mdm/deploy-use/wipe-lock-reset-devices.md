@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebc2b995c763aa54e1d47ee38ab2d250554f5a29
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 0a50dd4df66292837cd7a3667a0790c04ebddb9a
+ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56136031"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67516027"
 ---
 # <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-by-using-configuration-manager"></a>Protección de datos mediante borrado remoto, bloqueo o restablecimiento de código de acceso con Configuration Manager
 
@@ -33,7 +33,7 @@ Configuration Manager proporciona capacidades de eliminación selectiva, elimina
 - Un restablecimiento del código de acceso del dispositivo.  
 
 > [!Important]  
-> Desde el 14 de agosto de 2018, la administración híbrida de dispositivos móviles es una [característica en desuso](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Para más información, vea [¿Qué es la Administración híbrida de dispositivos móviles (MDM)?](/sccm/mdm/understand/hybrid-mobile-device-management). <!--Intune feature 2683117-->  
+> Desde el 14 de agosto de 2018, la administración híbrida de dispositivos móviles es una [característica en desuso](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Para más información, vea [¿Qué es la Administración híbrida de dispositivos móviles (MDM)?](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
 
 
 
@@ -152,7 +152,7 @@ La siguiente configuración también se quita de los dispositivos Windows 10 Mob
 
 Windows 8.1 y Windows RT 8.1 admiten el borrado selectivo de contenido cifrado con Sistema de cifrado de archivos (EFS). La información siguiente es aplicable a un borrado selectivo de contenido habilitado para EFS:  
 
-- Solo se borran de forma selectiva las aplicaciones y los datos protegidos con EFS que usen el mismo dominio de Internet que la cuenta de Intune. Para obtener más información, consulte [Borrado selectivo de Windows para la administración de datos del dispositivo](http://technet.microsoft.com/library/dn486874.aspx).  
+- Solo se borran de forma selectiva las aplicaciones y los datos protegidos con EFS que usen el mismo dominio de Internet que la cuenta de Intune. Para obtener más información, consulte [Borrado selectivo de Windows para la administración de datos del dispositivo](https://technet.microsoft.com/library/dn486874.aspx).  
 
 - Si se producen cambios en el dominio asociado con EFS, se pueden necesitar hasta 48 horas después de los cambios para que las aplicaciones y los datos que usen el nuevo dominio se puedan borrar de forma selectiva.  
 
@@ -252,4 +252,4 @@ Si un usuario pierde su dispositivo, es posible bloquearlo de forma remota. La t
 
 ## <a name="see-also"></a>Consulte también  
 
-[Borrado selectivo de Windows para la administración de datos del dispositivo](http://technet.microsoft.com/library/dn486874.aspx)   
+[Borrado selectivo de Windows para la administración de datos del dispositivo](https://technet.microsoft.com/library/dn486874.aspx)   
