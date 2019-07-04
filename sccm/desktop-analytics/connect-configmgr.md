@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fb16dd6e802c58f042b7eee8ae782e7118dabf1c
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 098c83678585984bbe3dbeddf167e24116afd86b
+ms.sourcegitcommit: 3a3f40f3d39cbecfb9219a64c0185ea4b2ef9671
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159192"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67562019"
 ---
 # <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>Cómo conectar Configuration Manager con análisis de escritorio
 
@@ -107,6 +107,16 @@ Utilice este procedimiento para conectar Configuration Manager para el análisis
     - **Los dispositivos de la recopilación de destino usa un proxy de usuario autenticado para la comunicación saliente**: De forma predeterminada, este valor es **No**. Si es necesario en su entorno, se establece en **Sí**.  
 
     - **Seleccione las recopilaciones específicas para sincronizar con análisis de escritorio**: Seleccione **agregar** para incluir las colecciones adicionales desde su **recopilación de destino** jerarquía. Estas colecciones están disponibles en el portal de análisis de escritorio para su agrupación con planes de implementación. No olvide incluir colecciones de exclusión de pruebas y pruebas.  <!-- 4097528 -->  
+
+        > [!Tip]  
+        > La ventana Seleccionar recopilaciones muestra solo las recopilaciones que están limitadas por la **recopilación de destino**.
+        >
+        > En el ejemplo siguiente, debe seleccionar la colección; una como la recopilación de destino. Al agregar más colecciones, verá la colección; una CollectionB y CollectionC. No se puede agregar CollectionD.
+        >
+        > - Colección: limitado por la **todos los sistemas** colección
+        >     - CollectionB: limitado por colección
+        >         - CollectionC: limitado por CollectionB
+        > - CollectionD: limitado por **todos los sistemas** colección
 
         > [!Important]  
         > Estas colecciones continuarán con la sincronización como sus cambios de pertenencia. Por ejemplo, el plan de implementación usa una colección con una regla de pertenencia a Windows 7. Como esos dispositivos se actualización a Windows 10 y Configuration Manager evalúa la pertenencia a recopilación, quitar esos dispositivos fuera de la recopilación y el plan de implementación.  

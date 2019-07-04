@@ -2,7 +2,7 @@
 title: Habilitación del uso compartido de datos
 titleSuffix: Configuration Manager
 description: Guía de referencia para uso compartido de datos de diagnóstico con análisis de escritorio.
-ms.date: 06/17/2019
+ms.date: 07/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 94e7456472c17d61ce42ffaf2109a3254bde1280
-ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
-ms.translationtype: HT
+ms.openlocfilehash: c5ba70b39330fd21077f5b7997e8aa92a1c57f42
+ms.sourcegitcommit: 3a3f40f3d39cbecfb9219a64c0185ea4b2ef9671
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67551273"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67561994"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Habilitar uso compartido para el escritorio de análisis de datos
 
@@ -33,6 +33,12 @@ Para inscribir dispositivos para el análisis de escritorio, que necesitan envia
 Al integrar Configuration Manager con análisis de escritorio, usa también para administrar el nivel de datos de diagnóstico en los dispositivos. Para obtener la mejor experiencia, use Configuration Manager.
 
 La funcionalidad básica de escritorio de análisis funciona en el **básica** nivel de datos de diagnóstico. No obtendrá los datos de uso o de mantenimiento para los dispositivos actualizados sin habilitar la **mejorado (limitado)** nivel. Microsoft recomienda que habilite el **mejorado (limitado)** nivel de datos de diagnóstico. Para obtener más información, consulte [mejorada de Windows 10 eventos de datos de diagnóstico y los campos que usa Windows Analytics](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)).
+
+> [!Important]   
+> Microsoft tiene un fuerte compromiso para proporcionar las herramientas y recursos que cederle el control de su privacidad. Como resultado, Microsoft no recopila los siguientes datos desde dispositivos que se encuentran en países europeos (EEE y Suiza):
+>
+> - Datos de diagnóstico de Windows desde dispositivos Windows 8.1
+> - Datos de uso de la aplicación para Windows 7
 
 Para obtener más información, consulte [privacidad escritorio Analytics](/sccm/desktop-analytics/privacy).
 
