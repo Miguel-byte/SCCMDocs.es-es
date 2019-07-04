@@ -2,7 +2,7 @@
 title: Administrar el acceso a servicios de Office 365
 titleSuffix: Configuration Manager
 description: Aprenda a configurar el acceso condicional a los servicios de Office 365 en equipos administrados por System Center Configuration Manager.
-ms.date: 03/21/2019
+ms.date: 07/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 434801b170ed5efcbbafa046a3ac1e94a615ed3d
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 2583a53a366b338a3ff0096fb4f9ca2f9bdde94b
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256028"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67551475"
 ---
 # <a name="manage-access-to-office-365-services-for-pcs-managed-by-system-center-configuration-manager"></a>Administrar el acceso a servicios de Office 365 para equipos administrados por System Center Configuration Manager
 
@@ -99,8 +99,8 @@ Para obtener información sobre cómo configurar el acceso condicional para disp
     - **Debe estar habilitada la integridad de código en el dispositivo**
     - **Debe estar habilitado el antimalware de inicio temprano en el dispositivo**  
 
-    >[!Tip]  
-    > Los criterios de acceso condicional de atestación de estado del dispositivo, que se introdujeron con la versión 1710, son una [característica de versión preliminar](/sccm/core/servers/manage/pre-release-features). A partir de la versión 1802, ya no es una característica de versión preliminar.<!--1235616-->  
+    > [!Important]  
+    > Los criterios de acceso condicional de atestación de estado del dispositivo está en desuso y se quitará en futuras versiones. Para obtener más información, consulte [eliminados y en desuso características](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).<!--1235616-->  
 
     > [!Note]  
     > Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para obtener más información, consulte [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  

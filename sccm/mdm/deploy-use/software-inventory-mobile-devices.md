@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91d298dae14c879e215b85483558898382c12055
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: ac2d841cc7b87baf209443310577cb4a9f90b372
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227886"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67551278"
 ---
 # <a name="software-inventory-for-mobile-devices-enrolled-with-microsoft-intune"></a>Inventario de software para dispositivos móviles inscritos con Microsoft Intune
 
@@ -38,4 +38,4 @@ ms.locfileid: "62227886"
 |iOS|Solo aplicaciones administradas|Todas las aplicaciones instaladas en el dispositivo|  
 |Android|Solo aplicaciones administradas|Todas las aplicaciones instaladas en el dispositivo|  
 
-Consulte [Introducción al inventario de software en System Center Configuration Manager](../../core/clients/manage/inventory/introduction-to-software-inventory.md) y [Cómo configurar el inventario de software en System Center Configuration Manager](../../core/clients/manage/inventory/configure-software-inventory.md) para obtener información detallada sobre el uso del inventario de software para recopilar información de archivos en dispositivos cliente.
+Consulte [Introducción al inventario de software](../../core/clients/manage/inventory/introduction-to-software-inventory.md) y [cómo configurar el inventario de software](../../core/clients/manage/inventory/configure-software-inventory.md) para obtener información detallada sobre el uso de inventario de software para recopilar información de archivo en los dispositivos cliente.

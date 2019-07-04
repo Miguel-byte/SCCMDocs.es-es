@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc5b38894155df35812d14397fb0d3aaea79c585
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 9b77fabc6ea4f5823777e932011313c5e2de1acf
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228412"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67551310"
 ---
 # <a name="monitor-mobile-threat-defense-compliance"></a>**Supervisión de cumplimiento de Mobile Threat Defense**
 
@@ -35,7 +35,7 @@ Puede ver un resumen del estado de cumplimiento con niveles diferentes de amenaz
 - El número de dispositivos que la plataforma identifica como no compatibles
 - Los errores relacionados con el estado de cumplimiento del dispositivo
 
-![](http://i.imgur.com/bmPsiWk.png)
+![Panel de protección contra amenazas de dispositivo](device-threat-protection-dashboard.png)
 
 ## <a name="to-monitor-the-individual-compliance-status"></a>Para supervisar el estado de cumplimiento individual
 
