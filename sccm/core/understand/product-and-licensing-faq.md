@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e9f43311ea3d36132d8cf77c0c576ad3f0e2cd93
-ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
+ms.openlocfilehash: 01fa13c907b451a3539ca8169c3a04ebbaa1b92c
+ms.sourcegitcommit: d47d2f03482e48d343e2139a341e61022331e6c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57558106"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67145774"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Preguntas más frecuentes sobre las licencias y ramas de Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual), System Center Configuration Manager (rama de mantenimiento a largo plazo)*
 
-Estas preguntas más frecuentes tratan las preguntas comunes sobre licencias de la rama actual de Configuration Manager y las versiones de la rama de mantenimiento a largo plazo (LSTB), disponibles a través de los programas de Licencias por Volumen de Microsoft. Este artículo solo tiene fines informativos. No reemplaza ni sustituye ninguna documentación que trate sobre las licencias de System Center Configuration Manager. Para más información, consulte las licencias de producto para [System Center 2016](https://www.microsoft.com/en-us/licensing/product-licensing/system-center-2016.aspx)<!-- this link doesn't work without some language code --> y los [términos del producto](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). En las condiciones del producto se describen los términos de uso de todos los productos de Microsoft en las licencias por volumen.
+Estas preguntas más frecuentes tratan las preguntas comunes sobre licencias de la rama actual de Configuration Manager y las versiones de la rama de mantenimiento a largo plazo (LSTB), disponibles a través de los programas de Licencias por Volumen de Microsoft. Este artículo solo tiene fines informativos. No reemplaza ni sustituye ninguna documentación que trate sobre las licencias de System Center Configuration Manager. Para más información, consulte las licencias de producto para [System Center 2016](https://www.microsoft.com/en-us/licensing/product-licensing/system-center-2016.aspx)<!-- this link doesn't work without some language code --> y los [términos del producto](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). En las condiciones del producto se describen los términos de uso de todos los productos de Microsoft en las licencias por volumen.
 
 Para obtener más información acerca de las características de Configuration Manager, vea la [página del producto](https://www.microsoft.com/cloud-platform/system-center-configuration-manager).
 
@@ -42,9 +42,9 @@ La LTSB es una compilación lista para producción de Configuration Manager. Se 
 
 Tanto **Software Assurance** (SA) como **Licencia y Software Assurance** (L&SA) son opciones de licencia que conceden derechos para usar Configuration Manager. SA es una opción para un cliente que está renovando la cobertura de SA de un contrato anterior. L&SA es una opción para un cliente que compra una licencia nueva y cobertura de SA.
 
-- **Software Assurance (SA)**: los clientes necesitan tener SA activo en las licencias de Configuration Manager, o derechos de suscripción equivalentes, para instalar y usar la opción de rama actual de Configuration Manager.    
+- **Software Assurance (SA)** : los clientes necesitan tener SA activo en las licencias de Configuration Manager, o derechos de suscripción equivalentes, para instalar y usar la opción de rama actual de Configuration Manager.    
 
-    - Aunque SA es opcional para algunos productos de Microsoft, la única manera de obtener derechos para usar la rama actual de Configuration Manager es con SA *(o derechos de suscripción equivalentes)*. Para obtener más información, vea [Preguntas más frecuentes sobre Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/FAQ-Software-Assurance.aspx).<!--this link doesn't work without some language code-->
+    - Aunque SA es opcional para algunos productos de Microsoft, la única manera de obtener derechos para usar la rama actual de Configuration Manager es con SA *(o derechos de suscripción equivalentes)* . Para más información, consulte [Preguntas más frecuentes sobre Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/FAQ-Software-Assurance.aspx).<!--this link doesn't work without some language code-->
 
 - **Licencia y Software Assurance (L&SA) de Microsoft:** Los clientes que compran licencias nuevas para Configuration Manager necesitan comprar L&SA (la licencia y la cobertura de SA).   
 
@@ -52,7 +52,7 @@ Tanto **Software Assurance** (SA) como **Licencia y Software Assurance** (L&SA) 
 
     - Si el SA expira y todavía tiene una licencia de Configuration Manager, ya no podrá usar la rama actual. Para obtener más información, vea la pregunta [Si mi SA expira y tenía L&SA, ¿qué obtengo?](#bkmk_sa-expires)
 
-Para obtener más información sobre las ofertas de licencias, vea [Formas comprar](https://www.microsoft.com/en-us/licensing/licensing-programs)<!--this link doesn't work without some language code--> y [Términos de licencia del producto](http://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=64).  
+Para más información sobre las ofertas de licencias, consulte [Opciones de compra](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs)<!--this link doesn't work without some language code--> y los [términos del programa de licencias](http://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=64).  
 
 
 ### <a name="bkmk_equiv-sub"></a> He leído el término "suscripción equivalente", ¿a qué programas hace referencia?   
@@ -76,7 +76,7 @@ Si usa System Center Endpoint Protection y su SA expira, debe desinstalarlo. Sys
 
 ### <a name="bkmk_owncb"></a> ¿La rama actual es de mi propiedad?   
 
-No. Tiene la licencia para usar la rama actual mientras tenga SA activo. Por ejemplo, mediante *L&SA*, cuando *SA* expira, entonces solo tiene derechos *L (Licencia)*, que no incluye derechos para usar la rama actual. Si su L proporciona derechos perpetuos, puede usar la LTSB de Configuration Manager en lugar de la rama actual. Si su SA expiró antes del 1 de octubre de 2016, también puede usar System Center 2012 R2 Configuration Manager.
+No. Tiene la licencia para usar la rama actual mientras tenga SA activo. Por ejemplo, mediante *L&SA*, cuando *SA* expira, entonces solo tiene derechos *L (Licencia)* , que no incluye derechos para usar la rama actual. Si su L proporciona derechos perpetuos, puede usar la LTSB de Configuration Manager en lugar de la rama actual. Si su SA expiró antes del 1 de octubre de 2016, también puede usar System Center 2012 R2 Configuration Manager.
 
 
 ### <a name="bkmk_standalone"></a> ¿Puedo comprar Configuration Manager independiente sin SA?      
@@ -119,5 +119,5 @@ La licencia de SQL Server que se incluye con Configuration Manager es compatible
 
 En las versiones 1806 y anteriores, para empezar a usar la administración local de dispositivos móviles, necesita una suscripción a Microsoft Intune. La suscripción solo es necesaria para realizar el seguimiento de las licencias de los dispositivos y no se usa para administrar ni almacenar la información de administración de los dispositivos. La totalidad de la administración se almacena en la organización a través de la infraestructura local de Configuration Manager.  
 
-A partir de la versión 1810, ya no se necesita una conexión a Intune para las nuevas implementaciones de MDM locales<!--3607730, fka 1359124-->. La organización sigue necesitando licencias de Intune para usar esta característica. Actualmente no se puede quitar la conexión de Intune de las implementaciones locales de MDM existentes. Para más información, vea la [entrada del blog de soporte técnico de Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).  
+A partir de la versión 1810, ya no se necesita una conexión a Intune para las nuevas implementaciones de MDM locales.<!--3607730, fka 1359124--> La organización sigue necesitando licencias de Intune para usar esta característica. Actualmente no se puede quitar la conexión de Intune de las implementaciones locales de MDM existentes. Para más información, vea la [entrada del blog de soporte técnico de Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).  
 

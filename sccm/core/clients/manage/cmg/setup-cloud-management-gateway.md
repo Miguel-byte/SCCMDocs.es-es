@@ -5,33 +5,32 @@ description: Use este proceso paso a paso para configurar una instancia de Cloud
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 11/27/2018
+ms.date: 06/17/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d74759846a1d74e62f2fdd9d157598d7a3412f3a
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: 69ad130dddaecf2a9247126802f9c14fb7176db9
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176766"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286600"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configurar puerta de enlace de administración en la nube para Configuration Manager
 
-*Se aplica a: System Center Configuration Manager (Rama actual)*  
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
-En este proceso se incluyen los pasos necesarios para configurar una instancia de Cloud Management Gateway (CMG). 
+En este proceso se incluyen los pasos necesarios para configurar una instancia de Cloud Management Gateway (CMG).
 
-> [!Tip]
-> Esta característica se introdujo por primera vez en la versión 1610 como un [característica de versión preliminar](/sccm/core/servers/manage/pre-release-features). A partir de la versión 1802, ya no es una característica de versión preliminar.
-
+> [!Note]  
+> Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para obtener más información, consulte [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).
 
 
 ## <a name="before-you-begin"></a>Antes de comenzar
 
-Empiece por leer el artículo [Plan for cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) (Plan para Cloud Management Gateway). Use ese artículo para determinar el diseño de CMG. 
+Empiece por leer el artículo [Plan for cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) (Plan para Cloud Management Gateway). Use ese artículo para determinar el diseño de CMG.
 
 Use la lista de comprobación siguiente para asegurarse de que tiene la información necesaria y los requisitos previos para crear una instancia de CMG:  
 
@@ -39,31 +38,32 @@ Use la lista de comprobación siguiente para asegurarse de que tiene la informac
 
 - Necesitará uno o varios certificados para CMG, en función del diseño. Para obtener más información, vea [Certificates for cloud management gateway](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway) (Certificados para Cloud Management Gateway).  
 
-- A partir de la versión 1802, seleccione la **implementación de Azure Resource Manager**. Para obtener más información, vea [Azure Resource Manager](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager). Necesitará los requisitos siguientes para una implementación de Azure Resource Manager de CMG:  
+- A partir de la versión 1802, se *recomienda* seleccionar la **implementación de Azure Resource Manager**. Para obtener más información, vea [Azure Resource Manager](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager). Necesitará los requisitos siguientes para una implementación de Azure Resource Manager de CMG:  
 
     - Integración con [Azure AD](/sccm/core/servers/deploy/configure/azure-services-wizard) para la **administración en la nube**. La detección de usuarios de Azure AD no es necesaria.  
-    
+
     - El proveedor de recursos **Microsoft.ClassicCompute** & **Microsoft.Storage** debe estar registrado en la suscripción de Azure. Para obtener más información, vea [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services).
 
     - Un administrador de suscripciones debe iniciar sesión.  
 
-- Necesitará los requisitos siguientes para una implementación de servicio clásico de CMG:  
+- Un nombre único global para el servicio. Este nombre procede del [certificado de autenticación de servidor de CMG](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_serverauth).  
 
-    > [!Important]  
-    > A partir de la versión 1810, las implementaciones de servicio clásico de Azure estarán en desuso en Configuration Manager. Empiece a usar implementaciones de Azure Resource Manager para Cloud Management Gateway. Para obtener más información, vea [Planear para Cloud Management Gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).  
-
-    - Identificador de suscripción de Azure  
-
-    - Certificado de administración de Azure  
-
-- Un nombre único global para el servicio. Este nombre procede del [certificado de autenticación de servidor de CMG](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-server-authentication-certificate).  
-
-- Para habilitar CMG como punto de distribución en la nube, es necesario elegir el mismo nombre de servicio de CMG único globalmente, de modo que esté disponible como nombre de cuenta de almacenamiento único globalmente. Este nombre procede del [certificado de autenticación de servidor de CMG](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-server-authentication-certificate).
+- Para habilitar CMG como punto de distribución en la nube, es necesario elegir el mismo nombre de servicio de CMG único globalmente, de modo que esté disponible como nombre de cuenta de almacenamiento único globalmente. Este nombre procede del [certificado de autenticación de servidor de CMG](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_serverauth).
 
 - La región de Azure para esta implementación de CMG.  
 
 - El número de instancias de máquina virtual necesarias para la escala y redundancia.  
 
+- Si todavía necesita usar la implementación del servicio clásico de Azure en la versión 1810 o anteriores de Configuration Manager, necesita estos requisitos:  
+
+    > [!Important]  
+    > A partir de la versión 1810, las implementaciones de servicio clásico de Azure estarán en desuso en Configuration Manager. Use las implementaciones de Azure Resource Manager para Cloud Management Gateway. Para obtener más información, vea [Planear para Cloud Management Gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).  
+    >
+    > A partir de la versión 1902 de Configuration Manager, Azure Resource Manager es el único mecanismo de implementación para instancias nuevas de Cloud Management Gateway.<!-- 3605704 -->
+
+    - Identificador de suscripción de Azure  
+
+    - Certificado de administración de Azure  
 
 
 ## <a name="set-up-a-cmg"></a>Configurar una instancia de CMG
@@ -79,9 +79,9 @@ Realice este procedimiento en el sitio de nivel superior. Ese sitio es un sitio 
     Haga clic en **Iniciar sesión** para autenticarse con una cuenta de administrador de suscripción de Azure. El asistente rellena automáticamente los campos restantes con la información almacenada durante el requisito previo de integración de Azure AD. Si tiene varias suscripciones, seleccione el **Id. de suscripción** de la suscripción deseada que se va a usar.
 
     > [!Note]  
-    > A partir de la versión 1810, las implementaciones de servicio clásico de Azure estarán en desuso en Configuration Manager. 
-    > 
-    > Si necesita usar una implementación de servicio clásico, seleccione esa opción en esta página. Primero escriba su **id. de suscripción** de Azure. Después, haga clic en **Examinar** y elija el archivo .PFX para el certificado de administración de Azure. 
+    > A partir de la versión 1810, las implementaciones de servicio clásico de Azure estarán en desuso en Configuration Manager.
+    >
+    > Si necesita usar una implementación de servicio clásico, seleccione esa opción en esta página. Primero escriba su **id. de suscripción** de Azure. Después, haga clic en **Examinar** y elija el archivo .PFX para el certificado de administración de Azure.
 
 4. Especifique el **entorno de Azure** para esta instancia de CMG. Las opciones de la lista desplegable pueden variar según el método de implementación.  
 
@@ -90,21 +90,20 @@ Realice este procedimiento en el sitio de nivel superior. Ese sitio es un sitio 
 6. En la página de configuración del asistente, seleccione primero **Examinar** y elija el archivo .PFX para el certificado de autenticación de servidor de CMG. El nombre de este certificado rellena los campos **FQDN de servicio** y **Nombre de servicio** necesarios.  
 
    > [!NOTE]  
-   > A partir de la versión 1802, el certificado de autenticación de servidor de CMG admite caracteres comodín. Si usa un certificado comodín, reemplace el asterisco (\*) en el campo **FQDN de servicio** por el nombre de host deseado para la instancia de CMG.  
-   <!--491233-->  
+   > A partir de la versión 1802, el certificado de autenticación de servidor de CMG admite caracteres comodín. Si usa un certificado comodín, reemplace el asterisco (`*`) en el campo **FQDN de servicio** por el nombre de host deseado para la instancia de CMG.<!--491233-->  
 
 7. Seleccione la lista desplegable **Región** para elegir la región de Azure para esta instancia de CMG.  
 
-8. En la versión 1802, y cuando se usa una implementación de Azure Resource Manager, seleccione una opción **Grupo de recursos**. 
+8. En la versión 1802, y cuando se usa una implementación de Azure Resource Manager, seleccione una opción **Grupo de recursos**.
    1. Si elige **Usar existente**, seleccione un grupo de recursos existente en la lista desplegable. El grupo de recursos seleccionado debe existir en ese momento en la región seleccionada en el paso 7. Si selecciona un grupo de recursos existente que se encuentre en una región distinta a la seleccionada previamente, se producirá un error de aprovisionamiento de CMG.
    2. Si elige **Crear nuevo**, escriba el nombre del nuevo grupo de recursos.
 
 9. En el campo **Instancia de VM**, escriba el número de máquinas virtuales para este servicio. El valor predeterminado es uno, pero se puede escalar hasta 16 máquinas virtuales por instancia de CMG.  
 
-10. Seleccione **Certificados** para agregar certificados raíz de confianza de cliente. Agregue hasta dos entidades de certificación raíz de confianza y cuatro entidades de certificación intermedias (subordinadas).  
+10. Seleccione **Certificados** para agregar certificados raíz de confianza de cliente. Agregue hasta dos entidades de certificación raíz de confianza y cuatro entidades de certificación intermedias (subordinadas). Asegúrese de agregar todos los certificados en la cadena de confianza.  
 
-     > [!Note]  
-     > A partir de la versión 1806, para crear una instancia de CMG ya no es necesario proporcionar un certificado raíz de confianza en la página Configuración. Este certificado no es necesario cuando se usa Azure Active Directory (Azure AD) para la autenticación de cliente, pero solía ser necesario en el asistente. Si usa certificados de autenticación de cliente PKI, entonces todavía debe agregar un certificado raíz de confianza a la CMG.<!--SCCMDocs-pr issue #2872-->  
+    > [!Note]  
+    > A partir de la versión 1806, para crear una instancia de CMG ya no es necesario proporcionar un certificado raíz de confianza en la página Configuración. Este certificado no es necesario cuando se usa Azure Active Directory (Azure AD) para la autenticación de cliente, pero solía ser necesario en el asistente. Si usa certificados de autenticación de cliente PKI, entonces todavía debe agregar un certificado raíz de confianza a la CMG.<!--SCCMDocs-pr issue #2872-->  
 
 11. De forma predeterminada, el asistente habilita la opción para **Comprobar revocación de certificado de cliente**. Para que esta verificación funcione, se debe publicar de manera pública una lista de revocación de certificados (CRL). Si no se publica una CRL, desactive esta opción.  
 
@@ -120,10 +119,9 @@ Realice este procedimiento en el sitio de nivel superior. Ese sitio es un sitio 
     > Para solucionar problemas con las implementaciones de CMG, use **CloudMgr.log** y **CMGSetup.log**. Para obtener más información, vea [Archivos de registro](/sccm/core/plan-design/hierarchy/log-files#cloud-management-gateway).
 
 
-
 ## <a name="configure-primary-site-for-client-certificate-authentication"></a>Configurar un sitio primario para la autenticación de certificados de cliente
 
-Si se usan [certificados de autenticación de cliente](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#client-authentication-certificate) para que los clientes se autentiquen con la instancia de CMG, siga estos pasos para configurar cada sitio primario.  
+Si se usan [certificados de autenticación de cliente](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_clientauth) para que los clientes se autentiquen con la instancia de CMG, siga estos pasos para configurar cada sitio primario.  
 
 1. En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda el nodo **Configuración del sitio** y haga clic en **Sitios**.  
 
@@ -134,17 +132,14 @@ Si se usan [certificados de autenticación de cliente](/sccm/core/clients/manage
 4. Si no se publica una CRL, desactive la opción **Los clientes comprueban la lista de revocación de certificados (CRL) para sistemas de sitio**.  
 
 
-
 ## <a name="add-the-cmg-connection-point"></a>Agregar el punto de conexión de CMG
 
-El punto de conexión de CMG es el rol de sistema de sitio para comunicarse con la instancia de CMG. Para agregar el punto de conexión de CMG, siga las instrucciones generales para [instalar roles de sistema de sitio](/sccm/core/servers/deploy/configure/install-site-system-roles). En la página Selección de rol del sistema del Asistente para agregar roles de sistema de sitio, seleccione **Punto de conexión de Cloud Management Gateway**. Después, seleccione el **Nombre inst. de Cloud Management Gateway** a la que se conecta este servidor. El asistente muestra la región para la instancia de CMG seleccionada. 
+El punto de conexión de CMG es el rol de sistema de sitio para comunicarse con la instancia de CMG. Para agregar el punto de conexión de CMG, siga las instrucciones generales para [instalar roles de sistema de sitio](/sccm/core/servers/deploy/configure/install-site-system-roles). En la página Selección de rol del sistema del Asistente para agregar roles de sistema de sitio, seleccione **Punto de conexión de Cloud Management Gateway**. Después, seleccione el **Nombre inst. de Cloud Management Gateway** a la que se conecta este servidor. El asistente muestra la región para la instancia de CMG seleccionada.
 
 > [!Important]
-> El punto de conexión de CMG debe tener un [certificado de autenticación de cliente](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#client-authentication-certificate) en algunos escenarios. 
+> El punto de conexión de CMG debe tener un [certificado de autenticación de cliente](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_clientauth) en algunos escenarios.
 
- > [!Note]  
- > Para solucionar problemas de estado de CMG, use **CMGService.log** y **SMS_Cloud_ProxyConnector.log**. Para obtener más información, vea [Archivos de registro](/sccm/core/plan-design/hierarchy/log-files#cloud-management-gateway).
-
+Para solucionar problemas de estado de CMG, use **CMGService.log** y **SMS_Cloud_ProxyConnector.log**. Para obtener más información, vea [Archivos de registro](/sccm/core/plan-design/hierarchy/log-files#cloud-management-gateway).
 
 
 ## <a name="configure-client-facing-roles-for-cmg-traffic"></a>Configurar roles para el cliente para el tráfico de CMG
@@ -155,13 +150,23 @@ Configure los sistemas de sitio de punto de administración y punto de actualiza
 
 2. Seleccione el servidor de sistema de sitio que quiera configurar para el tráfico de CMG. Seleccione el rol **Punto de administración** en el panel de detalles y, después, seleccione **Propiedades** en la cinta.  
 
-3. En la hoja Propiedades de punto de administración, en Conexiones de cliente, active la casilla situada junto a **Permitir tráfico de Cloud Management Gateway en Configuration Manager**. 
-    - En función del diseño de CMG y la versión de Configuration Manager, es posible que sea necesario habilitar la opción **HTTPS**. Para obtener más información, vea [Enable management point for HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#enable-management-point-for-https) (Habilitar el punto de administración para HTTPS).  
+3. En la hoja Propiedades de punto de administración, en Conexiones de cliente, active la casilla situada junto a **Permitir tráfico de Cloud Management Gateway en Configuration Manager**.
 
-4. Seleccione **Aceptar** para cerrar la ventana de propiedades del punto de administración.   
+    En función del diseño de CMG y la versión de Configuration Manager, es posible que sea necesario habilitar la opción **HTTPS**. Para obtener más información, vea [Enable management point for HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps) (Habilitar el punto de administración para HTTPS).  
 
-Repita estos pasos para otros puntos de administración según sea necesario y para cualquier punto de actualización de software. 
+4. Seleccione **Aceptar** para cerrar la ventana de propiedades del punto de administración.  
 
+Repita estos pasos para otros puntos de administración según sea necesario y para cualquier punto de actualización de software.
+
+
+## <a name="configure-boundary-groups"></a>Configurar grupos de límites
+
+<!--3640932-->
+A partir de la versión 1902, puede asociar una instancia de CMG con un grupo de límites. Esta configuración permite a los clientes predeterminar o recurrir a dicha puerta de enlace para la comunicación con el cliente de acuerdo con las relaciones de grupo de límites.
+
+Para más información sobre los grupos de límites, consulte [Configuración de grupos de límites](/sccm/core/servers/deploy/configure/boundary-groups).
+
+Cuando [cree o configure un grupo de límites](/sccm/core/servers/deploy/configure/boundary-group-procedures), en la pestaña **Referencias**, agregue una puerta de enlace de administración de la nube. Esta acción asocia la instancia de dicha puerta de enlace con este grupo de límites.
 
 
 ## <a name="configure-clients-for-cmg"></a>Configurar a clientes para CMG
@@ -184,9 +189,8 @@ Para comprobar que los clientes tienen la directiva que especifica la instancia 
 
 Este comando muestra los puntos de administración basados en Internet que el cliente conoce. Aunque la instancia de CMG no es técnicamente un punto de administración basado en Internet, los clientes la perciben como tal.
 
- > [!Note]  
- > Para solucionar problemas de tráfico de cliente de CMG, use **CMGHttpHandler.log**, **CMGService.log** y **SMS_Cloud_ProxyConnector.log**. Para obtener más información, vea [Archivos de registro](/sccm/core/plan-design/hierarchy/log-files#cloud-management-gateway).
-
+> [!Note]  
+> Para solucionar problemas de tráfico de cliente de CMG, use **CMGHttpHandler.log**, **CMGService.log** y **SMS_Cloud_ProxyConnector.log**. Para obtener más información, vea [Archivos de registro](/sccm/core/plan-design/hierarchy/log-files#cloud-management-gateway).
 
 
 ## <a name="modify-a-cmg"></a>Modificar una instancia de CMG
@@ -210,12 +214,14 @@ Después de crear una instancia de CMG, puede modificar algunas de sus configura
 - **Permitir a CMG funcionar como un punto de distribución de nube y servir contenido desde Azure Storage**: a partir de la versión 1806, esta nueva opción está habilitada de forma predeterminada. Ahora una instancia de CMG también puede servir contenido a los clientes. Esta funcionalidad reduce los certificados necesarios y el costo de máquinas virtuales de Azure.<!--1358651-->  
 
 #### <a name="alerts"></a>Alertas
-Vuelva a configurar las alertas en cualquier momento después de crear la instancia de CMG. 
+
+Vuelva a configurar las alertas en cualquier momento después de crear la instancia de CMG.
 
 
 ### <a name="redeploy-the-service"></a>Volver a implementar el servicio
 
 Los cambios más importantes, como las configuraciones siguientes, requieren volver a implementar el servicio:
+
 - Método de implementación clásica en Azure Resource Manager
 - Suscripción
 - Nombre del servicio
@@ -224,7 +230,7 @@ Los cambios más importantes, como las configuraciones siguientes, requieren vol
 
 Mantenga siempre al menos una instancia de CMG activa para que los clientes basados en Internet reciban la directiva actualizada. Los clientes basados en Internet no se pueden comunicar con una instancia de CMG que se ha quitado. Los clientes no saben que hay una nueva hasta que vuelven a la intranet. Al crear una segunda instancia de CMG para eliminar la primera, cree también otro punto de conexión de CMG.
 
-De forma predeterminada, los clientes actualizan la directiva cada 24 horas, por lo que después de crear una instancia de CMG, espere al menos un día antes de eliminar la antigua. Si los clientes están apagados o sin conexión a Internet, debe esperar más. 
+De forma predeterminada, los clientes actualizan la directiva cada 24 horas, por lo que después de crear una instancia de CMG, espere al menos un día antes de eliminar la antigua. Si los clientes están apagados o sin conexión a Internet, debe esperar más.
 
 A partir de la versión 1802, si tiene una instancia de CMG existente en el método de implementación clásico, debe implementar una instancia de CMG nueva para usar el método de implementación de Azure Resource Manager.<!--509753--> Hay dos opciones:  
 
@@ -248,22 +254,20 @@ A partir de la versión 1802, si tiene una instancia de CMG existente en el mé
 
 > [!Tip]  
 > Para determinar el modelo de implementación actual de una instancia de CMG:<!--SCCMDocs issue #611-->  
+>
 > 1. En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Cloud Services** y seleccione el nodo **Cloud Management Gateway**.  
 > 2. Seleccione la instancia de CMG.  
-> 3. En el panel de detalles de la parte inferior de la ventana, busque el atributo **Modelo de implementación**. Para implementar Resource Manager, este atributo es **Azure Resource Manager**. 
-> 
+> 3. En el panel de detalles de la parte inferior de la ventana, busque el atributo **Modelo de implementación**. Para implementar Resource Manager, este atributo es **Azure Resource Manager**. El modelo de implementación heredado con el certificado de administración de Azure se muestra como **Azure Service Manager**.
+>
 > También puede agregar el atributo **Modelo de implementación** como una columna a la vista de lista.  
-
 
 ### <a name="modifications-in-the-azure-portal"></a>Modificaciones en Azure Portal
 
 Modifique la instancia de CMG solo desde la consola de Configuration Manager. No se permite realizar modificaciones en el servicio ni en las máquinas virtuales subyacentes directamente en Azure. Todos los cambios podrían perderse sin previo aviso. Como sucede con cualquier PaaS, el servicio puede volver a generar las máquinas virtuales en cualquier momento. Estas recompilaciones pueden ocurrir para el mantenimiento de hardware de back-end, o bien para aplicar actualizaciones al sistema operativo de la máquina virtual.
 
-
 ### <a name="delete-the-service"></a>Eliminar el servicio
 
-Si tiene que eliminar la instancia de CMG, hágalo también desde la consola de Configuration Manager. Quitar manualmente cualquier componente en Azure hace que el sistema sea incoherente. Este estado deja información huérfana y se pueden producir comportamientos inesperados. 
-
+Si tiene que eliminar la instancia de CMG, hágalo también desde la consola de Configuration Manager. Quitar manualmente cualquier componente en Azure hace que el sistema sea incoherente. Este estado deja información huérfana y se pueden producir comportamientos inesperados.
 
 
 ## <a name="next-steps"></a>Pasos siguientes

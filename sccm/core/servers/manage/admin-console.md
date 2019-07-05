@@ -2,7 +2,7 @@
 title: Consola de Configuration Manager
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la navegación a través de la consola de Configuration Manager.
-ms.date: 04/03/2019
+ms.date: 06/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fb58662350caec9fd1a08295c93c3811893048a9
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: 3fc9e6fad0b7be3762b3d642c94c4cf17266e0b3
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802434"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285733"
 ---
 # <a name="using-the-configuration-manager-console"></a>Uso de la consola de Configuration Manager
 
@@ -147,6 +147,66 @@ A partir de la versión 1902, puede ver las conexiones más recientes de la con
 
 ![Consulta de las conexiones de la consola de Configuration Manager](media/console-connections.png) 
 
+
+## <a name="bkmk_notify"></a> Notificaciones de la consola de Configuration Manager
+<!--3556016, fka 1318035-->
+A partir de la versión 1902 de Configuration Manager, la consola lo notifica en caso de los siguientes eventos:
+
+- Cuando hay una actualización disponible para el propio Configuration Manager
+- Cuando se producen eventos de ciclo de vida y mantenimiento en el entorno
+
+Esta notificación es una barra en la parte superior de la ventana de la consola, debajo de la cinta. Reemplaza a la experiencia anterior cuando había disponibles actualizaciones de Configuration Manager. Estas notificaciones en consola aún muestran información crítica, pero no interfieren con el trabajo en la consola. No se pueden descartar las notificaciones críticas. La consola muestra todas las notificaciones en una nueva área de notificación de la barra de título.
+
+![Barra de notificación y marca en consola](./media/1318035-notify-eval-version-expired.png)
+
+### <a name="configure-a-site-to-show-non-critical-notifications"></a>Configuración de un sitio para que muestre notificaciones no críticas
+
+Puede configurar cada sitio para que muestre las notificaciones no críticas en las propiedades del sitio.
+
+1.  En el área de trabajo **Administración**, expanda **Configuración del sitio** y, a continuación, haga clic en el nodo **Sitios**.
+1. Seleccione el sitio que quiere configurar para las notificaciones no críticas.
+1. En la cinta, haga clic en **Propiedades**.
+1. En la pestaña **Alertas**, seleccione la opción de **habilitar las notificaciones de la consola para cambios de estado de sitio no críticos**.
+   - Si habilita esta opción, todos los usuarios de la consola ven notificaciones críticas, de advertencia e informativas. Esta opción está habilitada de forma predeterminada.  
+   - Si deshabilita esta opción, los usuarios de la consola solo ven las notificaciones críticas.  
+
+La mayoría de las notificaciones de consola son por sesión. La consola evalúa las consultas cuando un usuario la inicia. Para ver los cambios en las notificaciones, reinicie la consola. Si un usuario descarta una notificación no crítica, vuelve a notificar cuando se reinicia la consola, si sigue siendo aplicable.
+
+Las siguientes notificaciones se vuelven a evaluar cada cinco minutos:
+- El sitio está en modo de mantenimiento  
+- El sitio está en modo de recuperación  
+- El sitio está en modo de actualización  
+
+Las notificaciones siguen los permisos de la administración basada en roles. Por ejemplo, si un usuario no tiene permisos para ver las actualizaciones de Configuration Manager, no ve esas notificaciones.
+
+Algunas notificaciones tienen una acción relacionada. Por ejemplo, si la versión de la consola no coincide con la versión del sitio, seleccione **Instalar la nueva versión de la consola**. Esta acción inicia el instalador de la consola. 
+
+Las siguientes notificaciones son más aplicables a la rama de Technical Preview:  
+
+- La versión de evaluación expira en 30 días (advertencia): faltan 30 días desde la fecha actual para la fecha de expiración de la versión de evaluación  
+- La versión de evaluación ha expirado (crítico): la fecha actual es posterior a la fecha de expiración de la versión de evaluación  
+- Discrepancia de versiones de consola (crítico): la versión de la consola no coincide con la versión del sitio  
+- Actualización de sitio disponible (advertencia): hay un nuevo paquete de actualización disponible  
+
+Para obtener más información y ayuda para la solución de problemas, vea el archivo **SmsAdminUI.log** en el equipo de la consola. De forma predeterminada, este archivo de registro está en la ruta de acceso siguiente: `C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\AdminUILog\SmsAdminUI.log`.
+
+## <a name="bkmk_doc-dashboard"></a> Panel de documentación en consola
+<!--3556019 FKA 1357546-->
+
+A partir de la versión 1902 de Configuration Manager, hay un nodo de **Documentación** en la nueva área de trabajo **Comunidad**. Este nodo incluye información actualizada acerca de los artículos de soporte técnico y la documentación de Configuration Manager. Se incluyen las secciones siguientes:  
+
+### <a name="product-documentation-library"></a>Biblioteca de documentación del producto
+
+- **Recomendado**: lista mantenida manualmente de artículos importantes.
+- **Tendencias**: los artículos más populares del último mes.
+- **Actualizado recientemente**: artículos revisados en el último mes.
+
+### <a name="support-articles"></a>Artículos de soporte técnico
+
+- **Artículos de solución de problemas**: tutoriales guiados que le ayudarán a solucionar problemas de características y componentes de Configuration Manager.
+- **Artículos de soporte técnico nuevos y actualizados**: artículos que son nuevos o se han actualizado en los últimos dos meses.
+
+
 ## <a name="command-line-options"></a>Opciones de línea de comandos
 
 La consola de Configuration Manager tiene las opciones de línea de comandos siguientes:
@@ -160,8 +220,65 @@ La consola de Configuration Manager tiene las opciones de línea de comandos sig
 |`/sms:NoRestore`|La consola omite la anterior navegación por nodos persistente.|  
 
 
-
 ## <a name="tips"></a>Sugerencias
+
+### <a name="search-device-views-using-mac-address"></a>Vistas de búsqueda de dispositivos mediante dirección MAC
+<!--3600878-->
+*(Se introdujo en la versión 1902)*
+
+Puede buscar una dirección MAC en la vista de un dispositivo de la consola de Configuration Manager. Esta propiedad es útil para los administradores de implementaciones de sistema operativo durante la solución de problemas de implementaciones de PXE. Cuando vea una lista de dispositivos, agregue la columna **Dirección MAC** a la vista. Use el campo de búsqueda para agregar los criterios de búsqueda de **Dirección MAC**.
+
+### <a name="maximize-the-browse-registry-window"></a>Maximizar la ventana Examinar registro
+<!--3594151 includes all MMS 1902 console changes-->
+*(Se introdujo en la versión 1902)*
+1. En el área de trabajo **Biblioteca de software**, expanda **Administración de aplicaciones** y haga clic en el nodo **Aplicaciones**. 
+1. Seleccione una aplicación que tenga un tipo de implementación con un método de detección. Por ejemplo, un método de detección de Windows Installer. 
+1. En el panel de detalles, cambie a la pestaña **Tipos de implementación**. 
+1. Abra las propiedades de un tipo de implementación y cambie a la pestaña **Método de detección**. Haga clic en **Agregar cláusula**. 
+1. Cambiar **Tipo de configuración** a **Registro** y haga clic en **Examinar** para abrir la ventana **Examinar registro**. Ahora puede maximizar esta ventana.  
+
+### <a name="go-to-the-collection-from-an-application-deployment"></a>Ir a la colección desde una implementación de aplicación
+
+*(Se introdujo en la versión 1902)*
+1. En el área de trabajo **Biblioteca de software**, expanda **Administración de aplicaciones** y haga clic en el nodo **Aplicaciones**. 
+1. Seleccione una aplicación. En el panel de detalles, cambie a la pestaña **Implementaciones**.
+1. Seleccione una implementación y, después, haga clic en la nueva opción **Colección** en la cinta de la pestaña Implementación. Esta acción cambia la vista a la colección que es el destino de la implementación.
+   - Esta acción también está disponible en el menú contextual de la implementación de esta vista.
+
+### <a name="edit-a-task-sequence-by-default"></a>Editar una secuencia de tareas de forma predeterminada
+
+*(Se introdujo en la versión 1902)*
+
+En el área de trabajo **Biblioteca de software**, expanda **Sistemas operativos** y haga clic en el nodo **Secuencias de tareas**. **Editar** es ahora la acción predeterminada cuando se abre una secuencia de tareas. Anteriormente, la acción predeterminada era **Propiedades**.  
+
+### <a name="remove-content-from-monitoring-status"></a>Quitar contenido del estado de supervisión
+*(Se introdujo en la versión 1902)*
+
+1. En el área de trabajo **Supervisión**, expanda **Estado de distribución** y haga clic en **Estado de contenido**.
+1. Seleccione un elemento en la lista y haga clic en la nueva opción **Ver estado** de la cinta. 
+1. En el panel Detalles del activo, haga clic con el botón derecho en un punto de distribución y seleccione la nueva opción **Quitar**. Esta acción quita este contenido del punto de distribución seleccionado.
+
+### <a name="views-sort-by-integer-values"></a>Ordenar las vistas por valores enteros
+*(Se introdujo en la versión 1902)*
+
+Realizamos mejoras en la forma en que varias vistas orden los datos. Por ejemplo, en el nodo **Implementaciones** del área de trabajo **Supervisión**, ahora las columnas siguientes se ordenan como números en lugar de como valores de cadena:  
+
+- Enumerar errores
+- Enumerar en progreso
+- Enumerar otros
+- Enumerar correctos
+- Enumerar desconocidos  
+
+### <a name="move-the-warning-for-a-large-number-of-results"></a>Mover la advertencia de un número de resultados elevado
+*(Se introdujo en la versión 1902)*
+
+Cuando en la consola hace clic en un nodo que devuelve más de 1.000 resultados, Configuration Manager muestra la advertencia siguiente:
+
+> Configuration Manager devolvió un gran número de resultados. Puede restringir los resultados mediante las características de búsqueda. O hacer clic aquí para ver un número máximo de 100 000.
+ 
+Ahora hay un espacio en blanco adicional entre esta advertencia y el campo de búsqueda. Este cambio ayuda a evitar que se seleccione accidentalmente la advertencia para mostrar más resultados. 
+
+
 
 ### <a name="send-feedback"></a>Enviar comentarios
 <!--1357542-->

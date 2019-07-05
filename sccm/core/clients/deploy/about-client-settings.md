@@ -2,7 +2,7 @@
 title: Configuración de cliente
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la configuración predeterminada y personalizada para controlar los comportamientos del cliente.
-ms.date: 05/21/2019
+ms.date: 06/18/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a9610024219107e81c4440a1e96780aaf300e20f
-ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
+ms.openlocfilehash: 157cc09f08cf16056dc3424ddc377fbd95b0fe6e
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66715734"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286852"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Información sobre la configuración de cliente en Configuration Manager
 
@@ -59,7 +59,8 @@ Especifique la velocidad de transferencia máxima que los clientes pueden usar f
 
 ### <a name="configure-branchcache"></a>Configurar BranchCache
 
-Configure el equipo cliente para [Windows BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#branchcache). Para permitir el almacenamiento en caché de BranchCache en el cliente, establezca **Habilitar BranchCache** en **Sí**.
+Configure el equipo cliente para [Windows BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#bkmk_branchcache
+). Para permitir el almacenamiento en caché de BranchCache en el cliente, establezca **Habilitar BranchCache** en **Sí**.
 
 - **Habilitar BranchCache**: Habilita BranchCache en los equipos cliente.
 
@@ -78,11 +79,11 @@ Si elige **Sí**, especifique lo siguiente:
 
 Habilita la [caché del mismo nivel](/sccm/core/plan-design/hierarchy/client-peer-cache) para los clientes de Configuration Manager. Seleccione **Sí** y, después, especifique el puerto con el que el cliente se comunica con el equipo del mismo nivel.
 
-- **Puerto para difusión de red inicial** (8004 de forma predeterminada): Configuration Manager usa este puerto en Windows PE o en el sistema operativo Windows completo. El motor de secuencia de tareas de Windows PE envía la difusión para obtener las ubicaciones de contenido antes de iniciar la secuencia de tareas.<!--SCCMDocs issue 910-->
+- **Puerto para difusión de red inicial** (UDP 8004 de manera predeterminada): Configuration Manager usa este puerto en Windows PE o en el sistema operativo Windows completo. El motor de secuencia de tareas de Windows PE envía la difusión para obtener las ubicaciones de contenido antes de iniciar la secuencia de tareas.<!--SCCMDocs issue 910-->
 
-- **Puerto para descarga de contenido desde sistema del mismo nivel** (8003 de forma predeterminada): Configuration Manager configura automáticamente las reglas de Firewall de Windows para permitir este tráfico. Debe configurar los puertos manualmente si usa otro firewall.
+- **Puerto para descarga de contenido desde sistema del mismo nivel** (TCP 8003 de manera predeterminada): Configuration Manager configura automáticamente las reglas de Firewall de Windows para permitir este tráfico. Debe configurar los puertos manualmente si usa otro firewall.  
 
-
+    Para más información, consulte [Puertos usados para las conexiones](/sccm/core/plan-design/hierarchy/ports#BKMK_PortsClient-ClientWakeUp).  
 
 ## <a name="client-policy"></a>Directiva de cliente  
 
@@ -162,7 +163,7 @@ Seleccione **Sí** si quiere implementar elementos de configuración de [perfile
 
 ### <a name="user-notifications-for-required-deployments"></a>Notificaciones de usuario para las implementaciones requeridas
 
-Para obtener más información sobre las siguientes tres configuraciones, vea [Notificaciones de usuario para las implementaciones requeridas](/sccm/apps/deploy-use/deploy-applications#user-notifications-for-required-deployments):
+Para obtener más información sobre las siguientes tres configuraciones, vea [Notificaciones de usuario para las implementaciones requeridas](/sccm/apps/deploy-use/deploy-applications#bkmk_notify):
 
 - **La fecha límite de la implementación es de más de 24 horas. Recordar al usuario cada (horas)**
 - **La fecha límite de la implementación es antes de 24 horas. Recordar al usuario cada (horas)**
@@ -205,7 +206,7 @@ Para obtener más información sobre esta configuración, vea [Certificados de M
 
 ### <a name="organization-name-displayed-in-software-center"></a>Nombre de organización mostrado en el Centro de software
 
-Escriba el nombre que ven los usuarios en el Centro de software. Esta información de marca ayuda a los usuarios a identificar a esta aplicación como un origen de confianza. Para obtener más información acerca de la prioridad de esta configuración, consulte [Branding Software Center](/sccm/apps/plan-design/plan-for-and-configure-application-management#branding-software-center) (Centro de software de personalización de marca).  
+Escriba el nombre que ven los usuarios en el Centro de software. Esta información de marca ayuda a los usuarios a identificar a esta aplicación como un origen de confianza. Para obtener más información acerca de la prioridad de esta configuración, consulte [Branding Software Center](/sccm/apps/plan-design/plan-for-software-center#branding-software-center) (Centro de software de personalización de marca).  
 
 ### <a name="use-new-software-center"></a>Usar el nuevo Centro de software
 
@@ -384,7 +385,7 @@ Escriba el número de minutos que los dispositivos modernos sondean la directiva
 
 Para habilitar la inscripción basada en usuario de dispositivos heredados, establezca esta opción en **Sí** y, después, establezca la configuración siguiente:
 
-- **Perfil de inscripción**: Seleccione **Establecer perfil** para crear o seleccionar un perfil de inscripción. Para obtener más información, vea [Configurar las opciones del cliente para la inscripción](/sccm/core/clients/deploy/deploy-clients-to-macs#configure-client-settings-for-enrollment).
+- **Perfil de inscripción**: Seleccione **Establecer perfil** para crear o seleccionar un perfil de inscripción. Para obtener más información, vea [Configurar las opciones del cliente para la inscripción](/sccm/core/clients/deploy/deploy-clients-to-macs#configure-client-settings).
 
 ### <a name="allow-users-to-enroll-modern-devices"></a>Permitir a los usuarios inscribir dispositivos modernos
 
@@ -865,8 +866,8 @@ Especifique el número de días durante los que el cliente mide el umbral de afi
 Seleccione **Sí** para crear afinidad de dispositivo automático de usuarios en función de la información de uso que recopila Configuration Manager.  
 
 ### <a name="allow-user-to-define-their-primary-devices"></a>Permitir al usuario definir sus dispositivos primarios
-
-Si este valor es **Sí**, los usuarios pueden identificar sus propios dispositivos primarios en el Centro de software.
+<!--3485366-->
+Si este valor es **Sí**, los usuarios pueden identificar sus propios dispositivos primarios en el Centro de software. Para más información, consulte el [Manual del usuario del Centro de software](/sccm/core/understand/software-center#work-information).
 
 
 

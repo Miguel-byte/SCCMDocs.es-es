@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9671ccad42fc9135193cf41e058b472b52a412e1
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 70ad1d37b1194374110f0c48469b677f0615ead2
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56142313"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286834"
 ---
 # <a name="security-and-privacy-for-configuration-manager-clients"></a>Seguridad y privacidad para los clientes de Configuration Manager
 
@@ -80,7 +80,7 @@ Para obtener más información, vea [Determinar si bloquear clientes](/sccm/core
 
 De todos los métodos de instalación de cliente, la instalación de inserción de cliente es el menos seguro debido al gran número de dependencias que tiene. Entre estas dependencias, se incluyen los permisos administrativos locales, el recurso compartido Admin$ y las excepciones del firewall. El número y el tipo de estas dependencias hace que se incremente su superficie expuesta a ataques.  
 
-A partir de la versión 1806, al usar la instalación de inserción de cliente, el sitio puede exigir la autenticación mutua de Kerberos si no permite revertir a NTLM antes de establecer la conexión. Esta mejora ayuda a proteger la comunicación entre el servidor y el cliente. Para obtener más información, vea [Instalar clientes con la instalación de inserción de cliente](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).<!--1358204-->  
+A partir de la versión 1806, al usar la instalación de inserción de cliente, el sitio puede exigir la autenticación mutua de Kerberos si no permite revertir a NTLM antes de establecer la conexión. Esta mejora ayuda a proteger la comunicación entre el servidor y el cliente. Para obtener más información, vea [Cómo instalar clientes con inserción de cliente](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).<!--1358204-->  
 
 Para obtener más información sobre los distintos tipos de instalación de clientes, vea [Métodos de instalación de cliente](/sccm/core/clients/deploy/plan/client-installation-methods).  
 
@@ -275,7 +275,7 @@ Antes de instalar o inscribir el cliente en un equipo Mac, Configuration Manager
 
 Para garantizar la continuidad de la actividad, supervise el periodo de validez de los certificados que utiliza para los equipos Mac y realice un seguimiento del mismo. Configuration Manager no renueva automáticamente el certificado ni le advierte de que este va a expirar. El período de validez típico suele ser de un año.  
 
-Para obtener más información sobre cómo renovar el certificado, vea [Renovar de forma manual el certificado de cliente Mac](/sccm/core/clients/deploy/deploy-clients-to-macs#renewing-the-mac-client-certificate).  
+Para obtener más información sobre cómo renovar el certificado, vea [Renovar de forma manual el certificado de cliente Mac](/sccm/core/clients/deploy/deploy-clients-to-macs#renew-the-mac-client-certificate).  
 
 
 #### <a name="configure-the-trusted-root-certificate-for-ssl-only"></a>Configurar el certificado raíz de confianza solo para SSL  
@@ -296,7 +296,7 @@ Al inscribir equipos Mac, se instala automáticamente un certificado de usuario 
 
     1.  **Al usar este certificado**: cambie la opción **Confiar siempre** a **Usar valores predeterminados del sistema**.  
 
-    2.  **Capa de sockets seguros (SSL)**: cambie la opción **No se especificó ningún valor** a **Confiar siempre**.  
+    2.  **Capa de sockets seguros (SSL)** : cambie la opción **No se especificó ningún valor** a **Confiar siempre**.  
 
 6.  Cierre el cuadro de diálogo. Cuando se le pida, escriba la contraseña del administrador y, después, haga clic en **Actualizar configuración**.  
 

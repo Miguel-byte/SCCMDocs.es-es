@@ -4,18 +4,18 @@ description: Obtenga información sobre los diferentes certificados digitales qu
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 11/27/2018
+ms.date: 06/17/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9368bedd80171077767ead54763abede2381c909
-ms.sourcegitcommit: bfb8a17f60dcb9905e739045a5141ae45613fa2c
+ms.openlocfilehash: 9167ece07e751302fb221a7b0fe2757386346b5f
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66198451"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194482"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Certificados para Cloud Management Gateway
 
@@ -28,29 +28,27 @@ Según el escenario que use para administrar clientes en Internet con Cloud Mana
     - [Certificado de autenticación de servidor emitido por un proveedor público](#bkmk_serverauthpublic)  
     - [Certificado de autenticación de servidor emitido por una PKI de empresa](#bkmk_serverauthpki)  
 
-- [Certificado de administración de Azure](#bkmk_azuremgmt)  
-
 - [Certificado de autenticación del cliente](#bkmk_clientauth)  
     - [Certificado raíz de confianza de cliente para CMG](#bkmk_clientroot)  
 
 - [Habilitar un punto de administración para HTTPS](#bkmk_mphttps)  
 
+- [Certificado de administración de Azure](#bkmk_azuremgmt)  
 
 Para obtener más información sobre los diferentes escenarios, vea [Plan for cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) (Planificación para Cloud Management Gateway).
 
+## <a name="general-information"></a>Información general
 
-### <a name="general-information"></a>Información general
 <!--SCCMDocs issue #779-->
 Los certificados para Cloud Management Gateway admiten las siguientes configuraciones:  
 
 - Longitud de clave de 2048 o 4096 bits
 
-- A partir de la versión 1710, compatibilidad con proveedores de almacenamiento de claves para claves privadas de certificado. Para obtener más información, consulte [Introducción a los certificados CNG](/sccm/core/plan-design/network/cng-certificates-overview).  
+- Proveedores de almacenamiento de claves para claves privadas de certificado. Para obtener más información, consulte [Introducción a los certificados CNG](/sccm/core/plan-design/network/cng-certificates-overview).  
 
 - A partir de la versión 1802, al configurar Windows con la siguiente directiva: **Criptografía de sistema: use algoritmos que cumplan la norma FIPS para cifrado, aplicación de algoritmo hash y firma**.  
 
 - A partir de la versión 1802, es compatible con **TLS 1.2**. Para más información, vea [Referencia técnica de controles criptográficos](/sccm/core/plan-design/security/cryptographic-controls-technical-reference#about-ssl-vulnerabilities).  
-
 
 
 ## <a name="bkmk_serverauth"></a> Certificado de autenticación de servidor CMG
@@ -61,21 +59,30 @@ Este certificado se proporciona al crear la instancia de CMG en la consola de Co
 
 CMG crea un servicio HTTPS al que se conectan los clientes basados en Internet. El servidor requiere un certificado de autenticación de servidor para crear el canal seguro. Puede adquirir un certificado para este fin de un proveedor público o emitirlo desde su propia infraestructura de clave pública (PKI). Para obtener más información, vea [Certificado raíz de confianza de CMG para clientes](#bkmk_cmgroot).
 
- > [!TIP]
- > Este certificado requiere un nombre único global para identificar el servicio de Azure. Antes de solicitar un certificado, confirme que el nombre de dominio de Azure deseado sea único. Por ejemplo, *GraniteFalls.CloudApp.Net*. Inicie sesión en [Microsoft Azure Portal](https://portal.azure.com). Seleccione **Crear un recurso**, elija la categoría **Proceso** y seleccione **Servicio en la nube**. En el campo **Nombre DNS**, escriba el prefijo deseado, por ejemplo, *GraniteFalls*. La interfaz mostrará si el nombre de dominio está disponible o si ya está en uso por otro servicio. No cree el servicio en el portal, simplemente use este proceso para comprobar si el nombre está disponible. 
-  
- > [!TIP]
- > Si CMG también se va a habilitar como punto de distribución en la nube, confirme que el nombre del servicio CMG que ha elegido no exista tampoco como nombre de cuenta de Azure Storage. Por ejemplo, *GraniteFalls*. Inicie sesión en [Microsoft Azure Portal] (https://portal.azure.com). Seleccione **Crear un recurso**, elija la categoría **Almacenamiento** y, después, elija **Cuenta de almacenamiento: blob, archivo, tabla, cola**. Haga clic en **Crear** y, en **Detalles de instancia**, escriba el mismo nombre elegido para el servicio CMG, por ejemplo, *GraniteFalls*. La interfaz mostrará si el nombre de la cuenta de almacenamiento está disponible o si ya lo está usando otro servicio. No cree la cuenta de almacenamiento en el portal, simplemente use este proceso para comprobar si el nombre está disponible. Si el nombre del servicio CMG en la nube no existe, pero sí el de la cuenta de Storage, el aprovisionamiento no se realizará correctamente.
- 
- > [!NOTE]
- > A partir de la versión 1802, el certificado de autenticación de servidor de CMG admite caracteres comodín. Algunas entidades de certificación emiten certificados con un carácter comodín para el nombre de host. Por ejemplo, **\*.contoso.com**. Algunas organizaciones usan certificados con caracteres comodín para simplificar sus PKI y reducir los costos de mantenimiento.<!--491233-->  
- > 
- > Para más información sobre cómo usar un certificado comodín con una instancia de CMG, vea [Configurar una instancia de CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#set-up-a-cmg).<!--SCCMDocs issue #565-->  
+> [!NOTE]
+> A partir de la versión 1802, el certificado de autenticación de servidor de CMG admite caracteres comodín. Algunas entidades de certificación emiten certificados con un carácter comodín para el nombre de host. Por ejemplo, `*.contoso.com`. Algunas organizaciones usan certificados con caracteres comodín para simplificar sus PKI y reducir los costos de mantenimiento.<!--491233-->  
+>
+> Para más información sobre cómo usar un certificado comodín con una instancia de CMG, vea [Configurar una instancia de CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#set-up-a-cmg).<!--SCCMDocs issue #565-->  
+
+Este certificado requiere un nombre único global para identificar el servicio de Azure. Antes de solicitar un certificado, confirme que el nombre de dominio de Azure que quiere sea único. Por ejemplo, *GraniteFalls.CloudApp.Net*.
+
+1. Inicie sesión en [Azure Portal](https://portal.azure.com).
+1. Seleccione **Todos los recursos** y, luego, seleccione **Agregar**.
+1. Busque el **servicio en la nube**. Seleccione **Crear**.
+1. En el campo **Nombre DNS**, escriba el prefijo que quiere, por ejemplo, *GraniteFalls*. La interfaz mostrará si el nombre de dominio está disponible o si ya está en uso por otro servicio.
+
+    > [!Important]  
+    > No cree el servicio en el portal, simplemente use este proceso para comprobar si el nombre está disponible.
+
+Si también permitirá la instancia de CMG para el contenido, confirme que el nombre del servicio de CMG también sea un nombre único de cuenta de almacenamiento de Azure. Si el nombre del servicio en la nube de CMG es único, pero el nombre de la cuenta de almacenamiento no lo es, Configuration Manager no puede aprovisionar el servicio en Azure. Repita el proceso mencionado en Azure Portal con estos cambios:
+
+- Busque la **cuenta de almacenamiento**.
+- Puede su nombre en el campo **Storage account name** (Nombre de la cuenta de almacenamiento).
 
 
 ### <a name="bkmk_cmgroot"></a> Certificado raíz de confianza de CMG para clientes
 
-Los clientes deben confiar en el certificado de autenticación de servidor CMG. Hay dos métodos para conseguir esta relación de confianza: 
+Los clientes deben confiar en el certificado de autenticación de servidor CMG. Hay dos métodos para conseguir esta relación de confianza:
 
 - Usar un certificado de un proveedor de certificados público y de confianza global. Por ejemplo, DigiCert, VeriSign o Thawte, entre otros. Los clientes de Windows incluyen entidades de certificación raíz de confianza (CA) de estos proveedores. Al usar un certificado de autenticación de servidor emitido por uno de estos proveedores, los clientes confían automáticamente en él.  
 
@@ -86,7 +93,6 @@ Los clientes deben confiar en el certificado de autenticación de servidor CMG. 
 > [!Note]  
 > A partir de la versión 1806, para crear una instancia de CMG ya no es necesario proporcionar un certificado raíz de confianza en la página Configuración. Este certificado no es necesario cuando se usa Azure Active Directory (Azure AD) para la autenticación de cliente, pero solía ser necesario en el asistente. Si usa certificados de autenticación de cliente PKI, entonces todavía debe agregar un certificado raíz de confianza a la CMG.<!--SCCMDocs-pr issue #2872-->  
 
-
 ### <a name="bkmk_serverauthpublic"></a> Certificado de autenticación de servidor emitido por un proveedor público
 
 Un proveedor de certificados de terceros no puede crear un certificado para CloudApp.net, ya que el dominio es propiedad de Microsoft. Solo puede obtener un certificado emitido para un dominio que sea de su propiedad. La razón principal para adquirir un certificado de un proveedor de terceros es que los clientes ya confíen en el certificado raíz de dicho proveedor.
@@ -95,12 +101,12 @@ Siga este procedimiento para crear un alias DNS:
 
 1. Crear un registro de nombre canónico (CNAME) en el DNS público de su organización. Este registro crea un alias para CMG para el nombre descriptivo que se usa en el certificado público.
 
-    Por ejemplo, Contoso asigna a CMG el nombre **GraniteFalls**, que se convierte en **GraniteFalls.CloudApp.Net** en Azure. En el DNS espacio de nombres público de Contoso, contoso.com, el administrador de DNS crea un registro CNAME para **GraniteFalls.Contoso.com** con el nombre del host real, **GraniteFalls.CloudApp.net**.  
+    Por ejemplo, Contoso asigna el nombre **GraniteFalls** a su instancia de CMG. Este nombre se convierte en **GraniteFalls.CloudApp.Net** en Azure. En el DNS espacio de nombres público de Contoso, contoso.com, el administrador de DNS crea un registro CNAME para **GraniteFalls.Contoso.com** con el nombre del host real, **GraniteFalls.CloudApp.net**.  
 
 2. Con el nombre común (CN) del alias de CNAME, solicite un certificado de autenticación de servidor de un proveedor público.
 Por ejemplo, Contoso usa **GraniteFalls.Contoso.com** como CN del certificado.  
 
-3. Cree la instancia de CMG en la consola de Configuration Manager mediante este certificado. En la página **Configuración** del Asistente para crear una instancia de Cloud Management Gateway:   
+3. Cree la instancia de CMG en la consola de Configuration Manager mediante este certificado. En la página **Configuración** del Asistente para crear una instancia de Cloud Management Gateway:  
 
     - Al agregar el certificado de servidor para este servicio en la nube (desde el **archivo de certificado**), el asistente extrae el nombre de host del nombre común del certificado como nombre del servicio.  
 
@@ -109,7 +115,6 @@ Por ejemplo, Contoso usa **GraniteFalls.Contoso.com** como CN del certificado.
     - Por ejemplo, cuando Contoso crea la instancia de CMG, Configuration Manager extrae el nombre de host **GraniteFalls** desde el nombre común del certificado. Azure crea el servicio real como **GraniteFalls.CloudApp.net**.  
 
 Al crear la instancia de CMG en Configuration Manager, aunque el certificado contiene GraniteFalls.Contoso.com, Configuration Manager solo extrae el nombre de host, por ejemplo: GraniteFalls. Este nombre de host se anexa a CloudApp.net, que Azure necesita al crear un servicio en la nube. El alias CNAME del espacio de nombres DNS para el dominio, Contoso.com, asigna estos dos FQDN conjuntamente. Configuration Manager ofrece a los clientes una directiva para acceder a esta instancia de CMG y la asignación de DNS los une, para que puedan acceder de forma segura al servicio de Azure.<!--SCCMDocs issue #565-->  
-
 
 ### <a name="bkmk_serverauthpki"></a> Certificado de autenticación de servidor emitido por una PKI de empresa
 
@@ -124,6 +129,113 @@ Cree un certificado SSL personalizado para CMG tal como haría para un punto de 
     - Use un nombre que termine en **usgovcloudapp.net** para la nube del Gobierno de los EE. UU. de Azure.  
 
 
+## <a name="bkmk_clientauth"></a> Certificado de autenticación del cliente
+
+*Este certificado es necesario para los clientes basados en Internet que ejecutan Windows 7, Windows 8.1 y dispositivos de Windows 10 no unidos a Azure Active Directory (Azure AD). También es necesario en el punto de conexión de CMG. No hace falta para los clientes de Windows 10 que usen Azure AD.*
+
+Los clientes usan este certificado al autenticarse con CMG. Los dispositivos de Windows 10 híbridos o unidos a un dominio en la nube no necesitan este certificado porque usan Azure AD para autenticarse.
+
+Aprovisione este certificado fuera del contexto de Configuration Manager. Por ejemplo, use Servicios de certificados de Active Directory y una directiva de grupo para emitir certificados de autenticación de cliente. Para obtener más información, vea [Implementación del certificado de cliente para equipos Windows](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012).
+
+El punto de conexión de CMG requiere este certificado para reenviar las solicitudes de cliente a un punto de administración HTTPS de forma segura. Si usa Azure AD o HTTP mejorado, este certificado no es necesario. Para obtener más información, vea [Enable management point for HTTPS](#bkmk_mphttps) (Habilitar el punto de administración para HTTPS).
+
+### <a name="bkmk_clientroot"></a> Certificado raíz de confianza de cliente para CMG
+
+*Este certificado es necesario cuando se usan certificados de autenticación de cliente. Cuando todos los clientes usan Azure AD para la autenticación, este certificado no hace falta.*
+
+Este certificado se proporciona al crear la instancia de CMG en la consola de Configuration Manager.
+
+CMG debe confiar en los certificados de autenticación de cliente. Para conseguir esta relación de confianza, proporcione la cadena de certificados raíz de confianza. Puede especificar dos entidades de certificación raíz de confianza y cuatro entidades de certificación intermedias (subordinadas). Asegúrese de agregar todos los certificados en la cadena de confianza. Por ejemplo, si una entidad de certificación intermedia emite el certificado de autenticación del cliente, agregue tanto el certificado de la CA intermedia como el de la CA raíz.
+
+#### <a name="export-the-client-certificates-trusted-root"></a>Exportar la raíz de confianza del certificado de cliente
+
+Después de emitir un certificado de autenticación de cliente a un equipo, siga este proceso en ese equipo para exportar la raíz de confianza.
+
+1. Abra el menú Inicio. Escriba "ejecutar" para abrir la ventana de ejecución. Abra `mmc`.  
+
+2. En el menú Archivo, elija **Agregar o quitar complemento**.  
+
+3. En el cuadro de diálogo Agregar o quitar complementos, seleccione **Certificados** y **Agregar**.  
+
+    1. En el cuadro de diálogo Complemento de certificados, seleccione **Cuenta de equipo** y **Siguiente**.  
+
+    1. En el cuadro de diálogo Seleccionar equipo, seleccione **Equipo local** y **Finalizar**.  
+
+    1. En el cuadro de diálogo Agregar o quitar complementos, seleccione **Aceptar**.  
+
+4. Expanda **Certificados**, expanda **Personal** y seleccione **Certificados**.  
+
+5. Seleccione un certificado cuyo uso previsto sea **Autenticación de cliente**.  
+
+    1. En el menú Acción, seleccione **Abrir**.  
+
+    1. Vaya a la pestaña **Ruta de certificación**.  
+
+    1. Seleccione el certificado siguiente en la cadena y seleccione **Ver certificado**.  
+
+6. En este nuevo cuadro de diálogo de certificado, vaya a la pestaña **Detalles**. Seleccione **Copiar en archivo…** .  
+
+7. Complete el Asistente para exportar certificados con el formato de certificado predeterminado, **DER binario codificado X.509 (.CER)** . Anote el nombre y la ubicación del certificado exportado.  
+
+8. Exporte todos los certificados de la ruta de acceso de certificación del certificado de autenticación del cliente original. Tome nota de qué certificados exportados son entidades de certificación intermedias y cuáles son entidades de certificación raíz de confianza.  
+
+
+## <a name="bkmk_mphttps"></a> Habilitar un punto de administración para HTTPS
+
+Aprovisione este certificado fuera del contexto de Configuration Manager. Por ejemplo, use Servicios de certificados de Active Directory y una directiva de grupo para emitir un certificado de servidor web. Para obtener más información, vea [Requisitos de certificados PKI ](/sccm/core/plan-design/network/pki-certificate-requirements) e [Implementación del certificado de servidor web para sistemas de sitio que ejecutan IIS](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).
+
+- En la versión 1710, cuando se administran clientes tradicionales con una identidad local mediante un certificado de autenticación del cliente, este certificado es recomendable pero no obligatorio. Cuando se administran clientes de Windows 10 unidos a Azure AD, este certificado es necesario para los puntos de administración.
+
+- En la versión 1802, este certificado es necesario en todos los escenarios. Solo los puntos de administración que habilite para CMG deben ser HTTPS. Este cambio de comportamiento proporciona una mejor compatibilidad con la autenticación basada en tokens de Azure AD.  
+
+- A partir de la versión 1806, cuando se usa la opción del sitio **Usar los certificados generados por Configuration Manager para sistemas de sitios HTTP**, el punto de administración puede ser HTTP. Para obtener más información, vea [HTTP mejorado](/sccm/core/plan-design/hierarchy/enhanced-http).
+
+### <a name="management-point-client-connection-mode-summary"></a>Resumen del modo de conexión de cliente de punto de administración
+
+En estas tablas se resume si el punto de administración requiere HTTP o HTTPS, en función del tipo de cliente y versión del sitio.
+
+#### <a name="for-internet-based-clients-communicating-with-the-cloud-management-gateway"></a>Para la comunicación de clientes basada en Internet con Cloud Management Gateway
+
+Configure un punto de administración local para permitir conexiones desde la instancia de CMG con el modo de conexión de cliente siguiente:
+
+| Tipo de cliente   | 1710        | 1802        | 1806        | 1810        |
+|------------------|-------------|-------------|-------------|-------------|
+| Grupo de trabajo        | HTTP, HTTPS | HTTPS       | E-HTTP<sup>[Nota 1](#bkmk_note1)</sup>, HTTPS | E-HTTP<sup>[Nota 1](#bkmk_note1)</sup>, HTTPS |
+| Unido a dominio de AD | HTTP, HTTPS | HTTPS       | E-HTTP<sup>[Nota 1](#bkmk_note1)</sup>, HTTPS | E-HTTP<sup>[Nota 1](#bkmk_note1)</sup>, HTTPS |
+| Unidos a Azure AD  | HTTPS       | HTTPS       | E-HTTP, HTTPS | E-HTTP, HTTPS |
+| Unido a híbrido    | HTTP, HTTPS | HTTPS       | E-HTTP, HTTPS | E-HTTP, HTTPS |
+
+<a name="bkmk_note1"></a>
+
+> [!Note]  
+> **Nota 1**: Esta configuración requiere que el cliente tenga un [certificado de autenticación del cliente](#bkmk_clientauth) y solo es compatible con escenarios centrados en el dispositivo.  
+
+#### <a name="for-on-premises-clients-communicating-with-the-on-premises-management-point"></a>Para la comunicación de clientes locales con el punto de administración local
+
+Configure un punto de administración local con el modo de conexión de cliente siguiente:
+
+| Tipo de cliente   | 1710        | 1802        | 1806        | 1810        |
+|------------------|-------------|-------------|-------------|-------------|
+| Grupo de trabajo        | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS |
+| Unido a dominio de AD | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS |
+| Unidos a Azure AD  | HTTPS       | HTTPS       | HTTPS       | HTTPS       |
+| Unido a híbrido    | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS |
+
+> [!Note]  
+> En la versión 1806, los clientes unidos a un dominio de AD admiten los escenarios centrados en el dispositivo y el usuario para la comunicación con un punto de administración HTTP o HTTPS.  
+>
+> Los clientes unidos a Azure AD y a híbrido se pueden comunicar a través de HTTP para los escenarios centrados en el dispositivo, pero necesitan E-HTTP o HTTPS para habilitar los escenarios centrados en el usuario. En caso contrario, se comportan igual que los clientes del grupo de trabajo.  
+
+#### <a name="legend-of-terms"></a>Leyenda de términos
+
+- *Grupo de trabajo*: el dispositivo no está unido a un dominio ni a Azure AD, pero tiene un [certificado de autenticación del cliente](#bkmk_clientauth).  
+- *Unido a dominio de AD*: el dispositivo se une un dominio de Active Directory local.  
+- *Unido a Azure AD*: también conocido como "unido a un dominio en la nube", el dispositivo se une a un inquilino de Azure Active Directory.  
+- *Unido a híbrido*: el dispositivo se une a un dominio de Active Directory y un inquilino de Azure AD.  
+- *HTTP*: en las propiedades del punto de administración, las conexiones de cliente se establecen en **HTTP**.  
+- *HTTPS*: en las propiedades del punto de administración, las conexiones de cliente se establecen en **HTTPS**.  
+- *E-HTTP*: en las propiedades del sitio, en la pestaña Comunicación de equipo cliente, la configuración del sistema de sitio se establece en **HTTPS o HTTP**, y se habilita la opción para **usar los certificados generados por Configuration Manager para sistemas de sitios HTTP**. Configurará el punto de administración para HTTP; el punto de administración de HTTP está preparado para comunicaciones HTTP y HTTPS (escenarios de autenticación por tokens).  
+
 
 ## <a name="bkmk_azuremgmt"></a> Certificado de administración de Azure
 
@@ -131,6 +243,8 @@ Cree un certificado SSL personalizado para CMG tal como haría para un punto de 
 
 > [!Important]  
 > A partir de la versión 1810, las implementaciones de servicio clásico de Azure estarán en desuso en Configuration Manager. Empiece a usar implementaciones de Azure Resource Manager para Cloud Management Gateway. Para obtener más información, vea [Planear para Cloud Management Gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).
+>
+> A partir de la versión 1902 de Configuration Manager, Azure Resource Manager es el único mecanismo de implementación para instancias nuevas de Cloud Management Gateway. Este certificado no es necesario en la versión 1902 o posteriores de Configuration Manager.<!-- 3605704 -->
 
 Este certificado se proporciona en Azure Portal y al crear la instancia de CMG en la consola de Configuration Manager.
 
@@ -144,117 +258,6 @@ Para obtener más información e instrucciones sobre cómo cargar un certificado
 
 > [!IMPORTANT]
 > Asegúrese de copiar el identificador de suscripción asociado al certificado de administración, Lo usará para crear la instancia de CMG en la consola de Configuration Manager.
-
-
-
-## <a name="bkmk_clientauth"></a> Certificado de autenticación del cliente
-
-*Este certificado es necesario para los clientes basados en Internet que ejecutan Windows 7, Windows 8.1 y dispositivos de Windows 10 no unidos a Azure Active Directory (Azure AD). También es necesario en el punto de conexión de CMG. No hace falta para los clientes de Windows 10 que usen Azure AD.*
-
-Los clientes usan este certificado al autenticarse con CMG. Los dispositivos de Windows 10 híbridos o unidos a un dominio en la nube no necesitan este certificado porque usan Azure AD para autenticarse.
-
-Aprovisione este certificado fuera del contexto de Configuration Manager. Por ejemplo, use Servicios de certificados de Active Directory y una directiva de grupo para emitir certificados de autenticación de cliente. Para obtener más información, vea [Implementación del certificado de cliente para equipos Windows](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012).
-
-El punto de conexión de CMG requiere este certificado para reenviar las solicitudes de cliente a un punto de administración HTTPS de forma segura. Si usa Azure AD o HTTP mejorado, este certificado no es necesario. Para obtener más información, vea [Enable management point for HTTPS](#bkmk_mphttps) (Habilitar el punto de administración para HTTPS).
-
-
-### <a name="bkmk_clientroot"></a> Certificado raíz de confianza de cliente para CMG
-
-*Este certificado es necesario cuando se usan certificados de autenticación de cliente. Cuando todos los clientes usan Azure AD para la autenticación, este certificado no hace falta.* 
-
-Este certificado se proporciona al crear la instancia de CMG en la consola de Configuration Manager.
-
-CMG debe confiar en los certificados de autenticación de cliente. Para conseguir esta relación de confianza, proporcione la cadena de certificados raíz de confianza. Puede especificar dos entidades de certificación raíz de confianza y cuatro entidades de certificación intermedias (subordinadas). 
-
-
-#### <a name="export-the-client-certificates-trusted-root"></a>Exportar la raíz de confianza del certificado de cliente
-
-Después de emitir un certificado de autenticación de cliente a un equipo, siga este proceso en ese equipo para exportar la raíz de confianza.
-
-1.  Abra el menú Inicio. Escriba "ejecutar" para abrir la ventana de ejecución. Abra `mmc`.  
-
-2.  En el menú Archivo, elija **Agregar o quitar complemento**.  
-
-3.  En el cuadro de diálogo Agregar o quitar complementos, seleccione **Certificados** y **Agregar**.  
-
-    a. En el cuadro de diálogo Complemento de certificados, seleccione **Cuenta de equipo** y **Siguiente**.  
-
-    b. En el cuadro de diálogo Seleccionar equipo, seleccione **Equipo local** y **Finalizar**.  
-
-    c. En el cuadro de diálogo Agregar o quitar complementos, seleccione **Aceptar**.  
-
-4.  Expanda **Certificados**, expanda **Personal** y seleccione **Certificados**.  
-
-5.  Seleccione un certificado cuyo uso previsto sea **Autenticación de cliente**.  
-
-    a. En el menú Acción, seleccione **Abrir**.  
-
-    b. Vaya a la pestaña **Ruta de certificación**.  
-
-    c. Seleccione el certificado siguiente en la cadena y seleccione **Ver certificado**.  
-
-6.  En este nuevo cuadro de diálogo de certificado, vaya a la pestaña **Detalles**. Seleccione **Copiar en archivo…** .  
-
-7.  Complete el Asistente para exportar certificados con el formato de certificado predeterminado, **DER binario codificado X.509 (.CER)** . Anote el nombre y la ubicación del certificado exportado.  
-
-8. Exporte todos los certificados de la ruta de acceso de certificación del certificado de autenticación del cliente original. Tome nota de qué certificados exportados son entidades de certificación intermedias y cuáles son entidades de certificación raíz de confianza.  
-
-
-
-## <a name="bkmk_mphttps"></a> Habilitar un punto de administración para HTTPS
-
-Aprovisione este certificado fuera del contexto de Configuration Manager. Por ejemplo, use Servicios de certificados de Active Directory y una directiva de grupo para emitir un certificado de servidor web. Para obtener más información, vea [Requisitos de certificados PKI ](/sccm/core/plan-design/network/pki-certificate-requirements) e [Implementación del certificado de servidor web para sistemas de sitio que ejecutan IIS](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).
-
-
-- En la versión 1710, cuando se administran clientes tradicionales con una identidad local mediante un certificado de autenticación del cliente, este certificado es recomendable pero no obligatorio. Cuando se administran clientes de Windows 10 unidos a Azure AD, este certificado es necesario para los puntos de administración.
-
-- En la versión 1802, este certificado es necesario en todos los escenarios. Solo los puntos de administración que habilite para CMG deben ser HTTPS. Este cambio de comportamiento proporciona una mejor compatibilidad con la autenticación basada en tokens de Azure AD.  
-
-- A partir de la versión 1806, cuando se usa la opción del sitio **Usar los certificados generados por Configuration Manager para sistemas de sitios HTTP**, el punto de administración puede ser HTTP. Para obtener más información, vea [HTTP mejorado](/sccm/core/plan-design/hierarchy/enhanced-http).
-
-### <a name="management-point-client-connection-mode-summary"></a>Resumen del modo de conexión de cliente de punto de administración
-En estas tablas se resume si el punto de administración requiere HTTP o HTTPS, en función del tipo de cliente y versión del sitio.
-
-#### <a name="for-internet-based-clients-communicating-with-the-cloud-management-gateway"></a>Para la comunicación de clientes basada en Internet con Cloud Management Gateway
-Configure un punto de administración local para permitir conexiones desde la instancia de CMG con el modo de conexión de cliente siguiente:
-
-| Tipo de cliente   | 1710        | 1802        | 1806        | 1810        |
-|------------------|-------------|-------------|-------------|-------------|
-| Grupo de trabajo        | HTTP, HTTPS | HTTPS       | E-HTTP<sup>[Nota 1](#bkmk_note1)</sup>, HTTPS | E-HTTP<sup>[Nota 1](#bkmk_note1)</sup>, HTTPS |
-| Unido a dominio de AD | HTTP, HTTPS | HTTPS       | E-HTTP<sup>[Nota 1](#bkmk_note1)</sup>, HTTPS | E-HTTP<sup>[Nota 1](#bkmk_note1)</sup>, HTTPS |
-| Unidos a Azure AD  | HTTPS       | HTTPS       | E-HTTP, HTTPS | E-HTTP, HTTPS |
-| Unido a híbrido    | HTTP, HTTPS | HTTPS       | E-HTTP, HTTPS | E-HTTP, HTTPS |
-
-<a name="bkmk_note1"></a> 
-
-> [!Note]  
-> **Nota 1**: Esta configuración requiere que el cliente tenga un [certificado de autenticación del cliente](#bkmk_clientauth) y solo es compatible con escenarios centrados en el dispositivo.  
-
-#### <a name="for-on-premises-clients-communicating-with-the-on-premises-management-point"></a>Para la comunicación de clientes locales con el punto de administración local
-Configure un punto de administración local con el modo de conexión de cliente siguiente:
-
-| Tipo de cliente   | 1710        | 1802        | 1806        | 1810        |
-|------------------|-------------|-------------|-------------|-------------|
-| Grupo de trabajo        | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS |
-| Unido a dominio de AD | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS |
-| Unidos a Azure AD  | HTTPS       | HTTPS       | HTTPS       | HTTPS       |
-| Unido a híbrido    | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS |
-
-> [!Note]  
-> En la versión 1806, los clientes unidos a un dominio de AD admiten los escenarios centrados en el dispositivo y el usuario para la comunicación con un punto de administración HTTP o HTTPS.  
-> 
-> Los clientes unidos a Azure AD y a híbrido se pueden comunicar a través de HTTP para los escenarios centrados en el dispositivo, pero necesitan E-HTTP o HTTPS para habilitar los escenarios centrados en el usuario. En caso contrario, se comportan igual que los clientes del grupo de trabajo.  
-
-
-#### <a name="legend-of-terms"></a>Leyenda de términos
-- *Grupo de trabajo*: el dispositivo no está unido a un dominio ni a Azure AD, pero tiene un [certificado de autenticación del cliente](#bkmk_clientauth).  
-- *Unido a dominio de AD*: el dispositivo se une un dominio de Active Directory local.  
-- *Unido a Azure AD*: también conocido como "unido a un dominio en la nube", el dispositivo se une a un inquilino de Azure Active Directory.  
-- *Unido a híbrido*: el dispositivo se une a un dominio de Active Directory y un inquilino de Azure AD.  
-- *HTTP*: en las propiedades del punto de administración, las conexiones de cliente se establecen en **HTTP**.  
-- *HTTPS*: en las propiedades del punto de administración, las conexiones de cliente se establecen en **HTTPS**.  
-- *E-HTTP*: en las propiedades del sitio, en la pestaña Comunicación de equipo cliente, la configuración del sistema de sitio se establece en **HTTPS o HTTP**, y se habilita la opción para **usar los certificados generados por Configuration Manager para sistemas de sitios HTTP**. Configurará el punto de administración para HTTP; el punto de administración de HTTP está preparado para comunicaciones HTTP y HTTPS (escenarios de autenticación por tokens).   
-
 
 
 ## <a name="next-steps"></a>Pasos siguientes

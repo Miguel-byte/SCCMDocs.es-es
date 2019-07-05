@@ -5,18 +5,18 @@ description: Obtenga información sobre las características y funcionalidad del
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 02/20/2019
+ms.date: 06/18/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.assetid: 9e68de6e-2b33-442b-b674-a382728d9529
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eacd1d1be2564b718423b9d0db8d24b60aac1adb
-ms.sourcegitcommit: 369db96ee84299b5ab6d74b177e6366b3017fc54
+ms.openlocfilehash: c32f3f24f083537396c64c8f8426f8b6e6d6ee7a
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56589924"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67252022"
 ---
 # <a name="software-center-user-guide"></a>Manual del usuario del Centro de software
 
@@ -53,7 +53,8 @@ Haga clic en la pestaña **Aplicaciones** para buscar e instalar las aplicacione
 
 
 ### <a name="install-multiple-applications"></a>Instalar varias aplicaciones 
-<!-- 1357126 --> Instale más de una aplicación a la vez en lugar de esperar a que finalice una antes de iniciar la siguiente. No sirve para todas las aplicaciones:
+<!-- 1357126 -->
+Instale más de una aplicación a la vez en lugar de esperar a que finalice una antes de iniciar la siguiente. No sirve para todas las aplicaciones:
 - La aplicación es visible para usted.
 - La aplicación todavía no se descargado o instalado.
 - El administrador de TI no requiere la aprobación para instalar la aplicación.
@@ -118,9 +119,13 @@ Haga clic en la pestaña **Opciones** para ver opciones adicionales para este eq
 
 Indique el horario en el que suele trabajar. Es posible que el administrador de TI programe las instalaciones de software fuera de su horario laboral. Permita al menos cuatro horas al día para las tareas de mantenimiento del sistema. El administrador de TI puede seguir instalando aplicaciones críticas y actualizaciones de software durante el horario laboral.
 
-- Haga clic en las listas desplegables para seleccionar la primera y la última hora a la que usa este equipo. De forma predeterminada estos valores son de las **5 a.m.** a las **10 p.m.**
+   - Haga clic en las listas desplegables para seleccionar la primera y la última hora a la que usa este equipo. De forma predeterminada estos valores son de las **5 a.m.** a las **10 p.m.**
 
-- Active la casilla situada junto a los días de la semana en los que normalmente usa este equipo. De forma predeterminada, Centro de software solo selecciona los días laborables.  
+   - Active la casilla situada junto a los días de la semana en los que normalmente usa este equipo. De forma predeterminada, Centro de software solo selecciona los días laborables.  
+
+Especifique si usa este equipo periódicamente para realizar su trabajo. El administrador podría instalar aplicaciones de manera automática o hacer que otras aplicaciones estén disponibles para los equipos principales. <!--3485366-->
+
+   - Seleccione **Normalmente uso este equipo para realizar mi trabajo** si el equipo que usa es un equipo principal.
 
 
 ### <a name="power-management"></a>Administración de energía

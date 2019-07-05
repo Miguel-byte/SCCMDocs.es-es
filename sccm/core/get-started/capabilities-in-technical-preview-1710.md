@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 84e7b2692dae8b924cfa418508433755de4da328
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: e668baafac94dfc7da5008c37556c017c5e01c9d
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128371"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286104"
 ---
 # <a name="capabilities-in-technical-preview-1710-for-system-center-configuration-manager"></a>Funcionalidades de Technical Preview 1710 para System Center Configuration Manager
 
@@ -32,7 +32,7 @@ En este artículo se presentan las características disponibles en Technical Pre
     Workaround details.
 -->
 **Problemas conocidos de esta Technical Preview:**
-- **Compatibilidad con Windows 10, versión 1709 (también conocida como Fall Creators Update)**.  A partir de esta versión de Windows, Windows Media incluye varias ediciones. Al configurar una secuencia de tareas para usar un paquete de actualizaciones del sistema operativo o una imagen del sistema operativo, no olvide seleccionar una [edición que se pueda usar con Configuration Manager](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
+- **Compatibilidad con Windows 10, versión 1709 (también conocida como Fall Creators Update)** .  A partir de esta versión de Windows, Windows Media incluye varias ediciones. Al configurar una secuencia de tareas para usar un paquete de actualizaciones del sistema operativo o una imagen del sistema operativo, no olvide seleccionar una [edición que se pueda usar con Configuration Manager](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
 - **La actualización a una nueva versión preliminar no se puede realizar cuando hay un servidor de sitio en modo pasivo**. Si ejecuta una versión preliminar que tiene un [servidor de sitio primario en modo pasivo](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), debe desinstalarlo para poder actualizar correctamente el sitio en versión preliminar a esta nueva versión preliminar. Puede volver a instalar el servidor de sitio en modo pasivo después de que el sitio finalice la actualización.
 
   Para desinstalar el servidor de sitio en modo pasivo:
@@ -72,7 +72,7 @@ Para probar el uso de la funcionalidad de ejecución de scripts, consulte [Creac
 
 Con esta versión, ahora puede establecer el nivel de recopilación de datos de telemetría de Windows 10 en **Enhanced (Limited)** (Mejorado [limitado]). Esta configuración le permite obtener información práctica sobre los dispositivos de su entorno sin que los dispositivos informen de todos los datos del nivel de telemetría **Mejorado** con Windows 10, versión 1709 o una versión posterior.
 
-El nivel de telemetría Enhanced (Limited) (Mejorado [limitado]) incluye métricas del nivel básico, así como un subconjunto de datos recopilados del nivel **Mejorado** que resulta pertinente para Windows Analytics. Para más información sobre los niveles de telemetría, consulte [aquí](https://docs.microsoft.com/windows/configuration/configure-windows-telemetry-in-your-organization#telemetry-levels).
+El nivel de telemetría Enhanced (Limited) (Mejorado [limitado]) incluye métricas del nivel básico, así como un subconjunto de datos recopilados del nivel **Mejorado** que resulta pertinente para Windows Analytics. Para más información sobre los niveles de telemetría, consulte [aquí](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#use-group-policy-to-set-the-diagnostic-data-level).
 
 ### <a name="try-it-out"></a>Haga la prueba
 Para configurar la recopilación de telemetría de Windows 10 en los clientes, consulte [Cómo configurar el cliente](/sccm/core/clients/deploy/configure-client-settings). Abra la ventana de **Cloud Services** y establezca el nivel de telemetría de Windows 10 en **Mejorado**.
@@ -88,7 +88,8 @@ Agregue un icono para su aplicación en el Centro de software. Para probarlo, co
 
 
 ## <a name="check-compliance-from-software-center-for-co-managed-devices"></a>Comprobación del cumplimiento del Centro de software en dispositivos administrados conjuntamente
-<!-- 1356374 --> En esta versión, los usuarios pueden utilizar el Centro de software para comprobar el cumplimiento de sus dispositivos Windows 10 administrados conjuntamente, incluso cuando se administra el acceso condicional mediante Intune. Para más información, consulte [Administración conjunta para dispositivos de Windows 10](./capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices).
+<!-- 1356374 -->
+En esta versión, los usuarios pueden usar el Centro de software para comprobar el cumplimiento de sus dispositivos Windows 10 administrados conjuntamente, incluso cuando se administra el acceso condicional mediante Intune. Para más información, consulte [Administración conjunta para dispositivos de Windows 10](./capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices).
 
 
 ## <a name="support-for-exploit-guard"></a>Compatibilidad con la Protección contra vulnerabilidades de seguridad
@@ -112,7 +113,7 @@ Los dispositivos administrados deben ejecutar Windows 10 1709 Fall Creators Upda
 | Protección contra vulnerabilidades  | Ninguno  |
 | Protección de redes  |  Los dispositivos deben tener habilitada la [protección en tiempo real de Windows Defender AV]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard).  |
 
-### <a name="create-an-exploit-guard-policy----1355468---"></a>Creación de una directiva de Protección contra vulnerabilidades de seguridad<!--1355468 -->
+### <a name="create-an-exploit-guard-policy----1355468---"></a>Creación de una directiva de Protección contra vulnerabilidades de seguridad  <!--1355468 -->
 1. En la consola de Configuration Manager, vaya a **Activos y compatibilidad** > **Endpoint Protection** y, a continuación, haga clic en **Protección contra vulnerabilidades de seguridad de Windows Defender**.
 2. En la pestaña **Inicio**, en el grupo **Crear**, haga clic en **Create Exploit Policy** (Crear directiva para vulnerabilidades).
 3. En la página **General** del **Asistente para crear elemento de configuración**, escriba un nombre y, opcionalmente, una descripción para el elemento de configuración.
@@ -127,7 +128,8 @@ Los dispositivos administrados deben ejecutar Windows 10 1709 Fall Creators Upda
 Después de crear directivas de Protección contra vulnerabilidades de seguridad, use al asistente correspondiente para implementarlas. Para ello, abra la consola de Configuration Manager en **Activos y compatibilidad** > **Endpoint Protection** y, a continuación, haga clic en **Deploy Exploit Guard Policy** (Implementar directiva de Protección contra vulnerabilidades de seguridad).
 
 ## <a name="limited-support-for-cng-certificates"></a>Compatibilidad limitada con certificados CNG
-<!-- 1356191 --> A partir de esta versión, ahora se pueden usar plantillas de certificado [Cryptography API: Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) en los escenarios siguientes:
+<!-- 1356191 -->
+A partir de esta versión, ahora se pueden usar plantillas de certificado [Cryptography API: Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) en los escenarios siguientes:
 
 - Registro de cliente y comunicación con un punto de administración de HTTPS.   
 - Distribución de software e implementación de aplicaciones con un punto de distribución de HTTPS.   
@@ -150,7 +152,7 @@ Para usar certificados CNG, la entidad de certificación (CA) debe proporcionar 
 Para obtener mejores resultados, se recomienda crear el nombre del sujeto a partir de la información de Active Directory.  Use el nombre de DNS como **formato de nombre de sujeto** e inclúyalo en el nombre de sujeto alternativo.  De lo contrario, tendrá que proporcionar esta información cuando el dispositivo se inscriba en el perfil de certificado.
 
 
-## <a name="improved-descriptions-for-pending-computer-restarts-----1356283---"></a>Descripciones mejoradas para reinicios de equipo pendientes <!--1356283 -->
+## <a name="improved-descriptions-for-pending-computer-restarts-----1356283---"></a>Descripciones mejoradas para reinicios de equipo pendientes   <!--1356283 -->
 En [Technical Preview 1708](/sccm/core/get-started/capabilities-in-technical-preview-1708#restart-computers-from-the-configuration-manager-console), se ha agregado la posibilidad de identificar dispositivos que están pendientes de un reinicio en la consola de Configuration Manager.
 
 A partir de esta versión preliminar técnica, la consola muestra detalles adicionales que proporcionan información sobre el proceso o la acción que solicitan el reinicio.

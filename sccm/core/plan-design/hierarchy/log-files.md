@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5994eb6ab241e35bd0b4c4ecceb9fe6c4ef35a00
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: fc52acadacf8ea8e97d23820d521b831bcc31892
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176042"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67158791"
 ---
 # <a name="log-files-in-configuration-manager"></a>Archivos de registro en Configuration Manager
 
@@ -178,6 +178,7 @@ En la siguiente tabla se muestran los archivos de registro del cliente de Config
 |InventoryAgent.log|Registra actividades de acciones de inventario de hardware, inventario de software y detección de latido en el cliente.|  
 |LocationCache.log|Registra la actividad de uso y mantenimiento de la caché de ubicación del cliente.|  
 |LocationServices.log|Registra la actividad del cliente para la localización de puntos de administración, puntos de actualización de software y puntos de distribución.|  
+|M365AHandler.log|Información sobre la directiva de configuración del Análisis de escritorio|
 |MaintenanceCoordinator.log|Registra la actividad de tareas de mantenimiento generales del cliente.|  
 |Mifprovider.log|Registra la actividad del proveedor de WMI de archivos de formato de información (MIF) de administración.|  
 |mtrmgr.log|Supervisa todos los procesos de disponibilidad de software.|  
@@ -580,6 +581,23 @@ En la tabla siguiente se incluyen los archivos de registro que contienen informa
 |SMSdpmon.log|Registra detalles sobre tareas programadas de supervisión de estado de punto de distribución configuradas en un punto de distribución.|Rol de sistema de sitio|  
 |smsdpprov.log|Registra detalles acerca de la extracción de archivos comprimidos recibidos de un sitio primario. El proveedor de WMI del punto de distribución remoto genera este registro.|Equipo de punto de distribución que no comparte ubicación con el servidor de sitio|  
 |smsdpusage.log|Registra los detalles sobre el smsdpusage.exe que se ejecuta y recopila datos para el informe de resumen de uso de los puntos de distribución.|Rol de sistema de sitio|  
+
+
+### <a name="desktop-analytics"></a>Análisis de escritorio
+
+Use los archivos de registro siguientes para ayudar a solucionar problemas con el Análisis de escritorio integrado con Configuration Manager.
+
+Los archivos de registro en el punto de conexión de servicio están en este directorio: `%ProgramFiles%\Configuration Manager\Logs\M365A`.
+Los archivos de registro en el cliente de Configuration Manager están en este directorio: `%WinDir%\CCM\logs`.
+
+| Registro | Descripción |Equipo con el archivo de registro|
+|---------|---------|---------|
+| M365ADeploymentPlanWorker.log | Información sobre la sincronización del plan de implementación desde el servicio en la nube del Análisis de escritorio a Configuration Manager local |Punto de conexión de servicio|
+| M365ADeviceHealthWorker.log | Información sobre la carga del estado del dispositivo desde Configuration Manager a la nube de Microsoft |Punto de conexión de servicio|
+| M365AHandler.log | Información sobre la directiva de configuración del Análisis de escritorio |Cliente|
+| M365AUploadWorker.log | Información sobre la carga de la colección y el dispositivo desde Configuration Manager a la nube de Microsoft |Punto de conexión de servicio|
+| SmsAdminUI.log | Información sobre la actividad de la consola de Configuration Manager, como la configuración de los servicios en la nube de Azure  |Punto de conexión de servicio|
+
 
 ###  <a name="BKMK_DiscoveryLog"></a> Detección  
 En la tabla siguiente se incluyen los archivos de registro que contienen información relacionada con la detección.  

@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd80955f65b9c18ca0e2ed74e47caecb0e826049
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 61565ee1d6c98a5ab3a3391d6444aed3f082ae64
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56129177"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251733"
 ---
 # <a name="content-source-location-scenarios-in-system-center-configuration-manager"></a>Escenarios de ubicación de orígenes de contenido en System Center Configuration Manager
 
@@ -28,7 +28,7 @@ Antes de la versión 1610, System Center Configuration Manager admitía varias o
 > [!IMPORTANT]  
 > **Si los sitios ejecutan las versiones 1511, 1602 o 1606**, la información de este tema se aplica a la infraestructura. Vea también [Boundary groups for versions 1511,1602, and 1606](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606) (Grupos de límites para las versiones 1511, 1602 y 1606) para obtener información específica sobre los grupos de límites con estas versiones de Configuration Manager.
 >
-> **Si los sitios ejecutan la versión 1610 o posterior**, use la información incluida en [Definir los límites del sitio y los grupos de límites para System Center Configuration Manager](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups) para comprender la forma en que los clientes encuentran puntos de distribución con contenido disponible.
+> **Si los sitios ejecutan la versión 1610 o posterior**, use la información incluida en [Definir los límites del sitio y los grupos de límites para System Center Configuration Manager](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups) para comprender la forma en que los clientes encuentran puntos de distribución con contenido disponible.
 
 
 
@@ -62,9 +62,9 @@ Antes de la versión 1610, System Center Configuration Manager admitía varias o
 
 -   **El contenido está disponible en un punto de distribución preferido**  
 
--   **Permitir reserva**: No habilitado  
+-   **Permitir reserva**: no habilitado.  
 
--   **Comportamiento de implementación para red lenta**: Cualquier configuración  
+-   **Comportamiento de implementación para red lenta**: Cualquier configuración.  
 
 
 **Detalles:** (la configuración para distribución de paquetes a petición no es relevante en este escenario).  
@@ -82,7 +82,7 @@ Antes de la versión 1610, System Center Configuration Manager admitía varias o
 
 -   **Permitir reserva**: Habilitado  
 
--   **Comportamiento de implementación para red lenta**: No descargar contenido  
+-   **Comportamiento de implementación para red lenta**: no descargar contenido.  
 
 
 **Detalles:** (la configuración para distribución de paquetes a petición no es relevante en este escenario).  
@@ -100,7 +100,7 @@ Antes de la versión 1610, System Center Configuration Manager admitía varias o
 
 -   **Permitir reserva**: Habilitado  
 
--   **Comportamiento de implementación para red lenta**: Descargar e instalar contenido  
+-   **Comportamiento de implementación para red lenta**: descargar e instalar contenido.  
 
 
 **Detalles:** (la configuración para distribución de paquetes a petición no es relevante en este escenario).  
@@ -118,9 +118,9 @@ Antes de la versión 1610, System Center Configuration Manager admitía varias o
 
 -   **Distribuir el contenido de este paquete en puntos de distribución preferidos** no está habilitado  
 
--   **Permitir reserva**: No habilitado  
+-   **Permitir reserva**: no habilitado.  
 
--   **Comportamiento de implementación para red lenta**: Cualquier configuración  
+-   **Comportamiento de implementación para red lenta**: Cualquier configuración.  
 
 
 **Detalles:**  
@@ -140,7 +140,7 @@ Antes de la versión 1610, System Center Configuration Manager admitía varias o
 
 -   **Permitir reserva**: Habilitado  
 
--   **Comportamiento de implementación para red lenta**: No descargar contenido  
+-   **Comportamiento de implementación para red lenta**: no descargar contenido.  
 
 
 **Detalles:**  
@@ -160,7 +160,7 @@ Antes de la versión 1610, System Center Configuration Manager admitía varias o
 
 -   **Permitir reserva**: Habilitado  
 
--   **Comportamiento de implementación para red lenta**: Descargar e instalar contenido  
+-   **Comportamiento de implementación para red lenta**: descargar e instalar contenido.  
 
 
 **Detalles:**  
@@ -178,9 +178,9 @@ Antes de la versión 1610, System Center Configuration Manager admitía varias o
 
 -   **Distribuir el contenido de este paquete en puntos de distribución preferidos** está habilitado  
 
--   **Permitir reserva**: No habilitado  
+-   **Permitir reserva**: no habilitado.  
 
--   **Comportamiento de implementación para red lenta**: Cualquier configuración  
+-   **Comportamiento de implementación para red lenta**: Cualquier configuración.  
 
 
 **Detalles:**  
@@ -208,7 +208,7 @@ Antes de la versión 1610, System Center Configuration Manager admitía varias o
 
 -   **Permitir reserva**: Habilitado  
 
--   **Comportamiento de implementación para red lenta**: No descargar contenido  
+-   **Comportamiento de implementación para red lenta**: no descargar contenido.  
 
 
 **Detalles:**  
@@ -238,7 +238,7 @@ Antes de la versión 1610, System Center Configuration Manager admitía varias o
 
 -   **Permitir reserva**: Habilitado  
 
--   **Comportamiento de implementación para red lenta**: Descargar e instalar contenido  
+-   **Comportamiento de implementación para red lenta**: descargar e instalar contenido.  
 
 
 **Detalles:**  
