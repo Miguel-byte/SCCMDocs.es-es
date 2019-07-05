@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 975768c5bfaf239c1f8cd342c988e06dac5d1269
-ms.sourcegitcommit: abfc9e1b3945637fa93ca8d3a11519493a5d5391
+ms.openlocfilehash: 3626514d4cd7f2d26e3c198931eb6fad49123dd2
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66264561"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67551305"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>CMPivot para datos en tiempo real en Configuration Manager
 
@@ -124,7 +124,7 @@ La ventana CMPivot contiene los elementos siguientes:
     - CMPivot usa un subconjunto del [lenguaje de consulta de Kusto (KQL)](https://docs.microsoft.com/azure/kusto/query/).  
 
     - Corte, copie o pegue contenido en el panel de consulta.  
-
+    <!-- markdownlint-disable MD038 -->
     - De forma predeterminada, este panel usa IntelliSense. Por ejemplo, si comienza a escribir `D`, IntelliSense sugiere todas las entidades que comienzan con esa letra. Seleccione una opción y presione la tecla TAB para insertarla. Escriba un carácter de canalización y un espacio `| ` y después IntelliSense sugiere todos los operadores de la tabla. Inserte `summarize`, escriba un espacio e IntelliSense sugerirá todas las funciones de agregación. Para obtener más información sobre estos operadores y funciones, haga clic en la pestaña **Inicio** en CMPivot.  
 
     - El panel de consulta también proporciona las siguientes opciones:  

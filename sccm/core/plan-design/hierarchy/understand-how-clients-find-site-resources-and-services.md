@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c3058eed3cd7fe4430824d5a55f155694a2ed44
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: eddce66fe58ca44ece7e9c2f15a5f602ad7a78d7
+ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66177016"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67516093"
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-system-center-configuration-manager"></a>Más información sobre cómo los clientes buscan servicios y recursos de sitio para System Center Configuration Manager
 
@@ -132,12 +132,12 @@ Después de establecer la comunicación con un punto de administración, el clie
 Luego, el cliente selecciona aleatoriamente un nuevo punto de administración que usar.  
 
 ##  <a name="bkmk_ad"></a> Active Directory  
-Los clientes que están unidos a un dominio pueden usar AD DS para la ubicación del servicio. Para ello, es necesario que los sitios [publiquen datos en Active Directory](http://technet.microsoft.com/library/hh696543.aspx).  
+Los clientes que están unidos a un dominio pueden usar AD DS para la ubicación del servicio. Para ello, es necesario que los sitios [publiquen datos en Active Directory](https://technet.microsoft.com/library/hh696543.aspx).  
 
 Un cliente puede utilizar AD DS para la ubicación del servicio cuando se cumpla alguna de las siguientes condiciones:  
 
 -   El [esquema de Active Directory se ha extendido](https://technet.microsoft.com/library/mt345589.aspx) para System Center 2012 Configuration Manager.  
--   El [bosque de Active Directory está configurado para publicación](http://technet.microsoft.com/library/hh696542.aspx)y los sitios de Configuration Manager están configurados para publicar.  
+-   El [bosque de Active Directory está configurado para publicación](https://technet.microsoft.com/library/hh696542.aspx)y los sitios de Configuration Manager están configurados para publicar.  
 -   El equipo cliente forma parte de un dominio de Active Directory y puede tener acceso a un servidor de catálogo global.  
 
 Si un cliente no encuentra un punto de administración para la ubicación del servicio en AD DS, intenta usar DNS.  
@@ -149,7 +149,7 @@ Considere la posibilidad de usar DNS para la ubicación del servicio cuando se c
 -   El esquema de AD DS no se ha extendido para admitir Configuration Manager.
 -   Los clientes de la intranet se encuentran en un bosque que no está habilitado para la publicación de Configuration Manager.  
 -   Hay clientes en equipos de grupo de trabajo que no están configurados para la administración de clientes de solo Internet. (Un cliente de grupo de trabajo configurado para Internet se comunicará únicamente con puntos de administración con conexión a Internet y no usará DNS para la ubicación del servicio).  
--   Puede [configurar clientes para que busquen puntos de administración desde DNS](http://technet.microsoft.com/library/gg682055).  
+-   Puede [configurar clientes para que busquen puntos de administración desde DNS](https://technet.microsoft.com/library/gg682055).  
 
 Cuando un sitio publica registros de ubicación del servicio de los puntos de administración en DNS:  
 

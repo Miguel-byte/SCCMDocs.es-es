@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9bdca6ded291ca6e32194c61ce24b33b690489cb
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: bc5ebcbec87edf52d7ca7d3f9e6f4341ec60c191
+ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286244"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67515838"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1703 para System Center Configuration Manager
 
@@ -159,4 +159,4 @@ Para obtener información sobre lo que recopila cada nivel de telemetría de Win
 - Elija **participar en la recopilación de datos comerciales en dispositivos de Windows 7, 8 y 8.1**   
 Para obtener información sobre los datos recopilados de estos sistemas operativos cuando participa, considere descargar el archivo pdf [Windows 7, Windows 8, and Windows 8.1 appraiser telemetry events and fields](https://go.microsoft.com/fwlink/?LinkID=822965) (Campos y eventos de telemetría de valoración de Windows 7, Windows 8 y Windows 8.1) de Microsoft.
 
-- **Configurar la recopilación de datos de Internet Explorer** En dispositivos que ejecutan Windows 8.1 o versiones anteriores, la recopilación de datos de Internet Explorer puede permitir que Upgrade Readiness detecte incompatibilidades de aplicaciones web que podrían impedir una actualización sin problemas a Windows 10. La recopilación de datos de Internet Explorer se puede habilitar en función de cada zona de Internet. Para obtener más información acerca de las zonas de Internet, consulte la información sobre las [zonas de seguridad de las direcciones URL](https://msdn.microsoft.com/en-us/library/ms537183(v=vs.85).aspx).
+- **Configurar la recopilación de datos de Internet Explorer** En dispositivos que ejecutan Windows 8.1 o versiones anteriores, la recopilación de datos de Internet Explorer puede permitir que Upgrade Readiness detecte incompatibilidades de aplicaciones web que podrían impedir una actualización sin problemas a Windows 10. La recopilación de datos de Internet Explorer se puede habilitar en función de cada zona de Internet. Para obtener más información acerca de las zonas de Internet, consulte la información sobre las [zonas de seguridad de las direcciones URL](https://msdn.microsoft.com/library/ms537183(v=vs.85).aspx).

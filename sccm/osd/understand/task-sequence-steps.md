@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d510ab884e471a6fc4803826c9c19e21b614273
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: e862fe4907d5e480fd8a19c28d890987f73240fa
+ms.sourcegitcommit: d8cfd0edf2579e2b08a0ca8a0a7b8f53d1e4196f
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285594"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463786"
 ---
 # <a name="task-sequence-steps"></a>Pasos de la secuencia de tareas
 
@@ -1774,7 +1774,7 @@ La secuencia de tareas establece la variable en este valor. Establezca esta vari
 
 Use este paso para realizar la transición desde Windows PE al nuevo sistema operativo. Este paso de secuencia de tareas es una parte necesaria de cualquier implementación de sistema operativo. Se instala el cliente de Configuration Manager en el nuevo sistema operativo y se prepara para que la secuencia de tareas continúe con la ejecución en el sistema operativo.  
 
-Este paso solo se ejecuta en Windows PE, No se ejecuta en el sistema operativo completo.  
+Este paso es responsable de pasar la secuencia de tareas de Windows PE para el sistema operativo completo. El paso se ejecuta en Windows PE y el sistema operativo completo debido a esta transición. Sin embargo, puesto que la transición se inicia en Windows PE, solo puede agregarse durante la parte de Windows PE de la secuencia de tareas.  
 
 Utilice las siguientes variables de secuencia de tareas con este paso:  
 

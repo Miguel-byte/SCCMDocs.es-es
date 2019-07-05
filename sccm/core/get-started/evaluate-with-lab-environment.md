@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e9f851f6dcd21de261729215bad196233610272
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 78fdf0a07d1a299f7d10a0325b48f0c1fcfde2e3
+ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56127684"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67516003"
 ---
 # <a name="evaluate-system-center-configuration-manager-by-building-your-own-lab-environment"></a>Evalúe System Center Configuration Manager mediante la creación de su propio entorno de laboratorio
 
@@ -49,7 +49,7 @@ Las máquinas cliente se instalan en Hyper-V. El laboratorio en sí también pue
  Al compilar este laboratorio, tendrá un entorno funcional en el que trabajar. Pero este entorno no estará optimizado para factores como el rendimiento del sistema, la administración del espacio del disco duro y el almacenamiento de SQL Server.  
 
 ##  <a name="BKMK_EvalRec"></a> Lecturas recomendadas antes de compilar el laboratorio  
- Hay una gran cantidad de contenido disponible en la [documentación para System Center Configuration Manager](http://docs.microsoft.com/sccm/). Se recomienda que lea los siguientes temas de esta biblioteca antes de empezar a compilar el laboratorio:  
+ Hay una gran cantidad de contenido disponible en la [documentación para System Center Configuration Manager](https://docs.microsoft.com/sccm/). Se recomienda que lea los siguientes temas de esta biblioteca antes de empezar a compilar el laboratorio:  
 
 -   Obtenga información sobre los conceptos básicos de la consola de Configuration Manager, los portales de usuario final y los escenarios de ejemplo en [Introducción a System Center Configuration Manager](../../core/understand/introduction.md).  
 

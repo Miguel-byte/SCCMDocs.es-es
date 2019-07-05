@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f350f10db18c1de599337afac54596d2dfd988ea
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 1f5518346f0085293a2a9b5422c7aef375076d0c
+ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65494399"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67516159"
 ---
 # <a name="how-to-monitor-certificate-profiles-in-system-center-configuration-manager"></a>Cómo supervisar perfiles de certificado en System Center Configuration Manager
 
@@ -58,7 +58,7 @@ Para supervisar el cumplimiento del certificado SCEP, no use la consola. En su l
    |    0x00000004     |                                                                                                          La inscripción debe aplazarse.                                                                                                           |
    |    0x00000010     |                                                                                                               Error.                                                                                                                |
    |    0x00000020     |                                                                                                        Se desconoce el estado de la inscripción.                                                                                                        |
-   |    0x00000040     | Se ha omitido la información de estado. Esto puede ocurrir si una entidad de certificación HYPERLINK "<http://msdn.microsoft.com/windows/ms721572>" \l "_security_certification_authority_gly" no es válida o no se ha seleccionado para la supervisión. |
+   |    0x00000040     | Se ha omitido la información de estado. Esto puede ocurrir si una entidad de certificación HYPERLINK "<https://msdn.microsoft.com/windows/ms721572>" \l "_security_certification_authority_gly" no es válida o no se ha seleccionado para la supervisión. |
    |    0x00000100     |                                                                                                           Se ha denegado la inscripción.                                                                                                           |
 
 ##  <a name="view-compliance-results-by-using-reports"></a>Ver los resultados de compatibilidad mediante informes

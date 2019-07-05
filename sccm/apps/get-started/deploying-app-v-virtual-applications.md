@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8bd4b938690ebc3c370e3ae7a5e9152b9330430
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 4598b89429ec3a9bd3bed31f57a6b681f88063cf
+ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286506"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67515808"
 ---
 # <a name="deploy-app-v-virtual-applications-with-system-center-configuration-manager"></a>Implementar aplicaciones virtuales de App-V con System Center Configuration Manager
 
@@ -148,7 +148,7 @@ Para usar esta función con Configuration Manager, ambos paquetes se deben imple
 Para más información sobre Dynamic Suite Composition de App-V, consulte la documentación de App-V.  
 
 ##  <a name="converting-app-v-46-applications-to-app-v-5-applications"></a>Conversión de aplicaciones de App-V 4.6 a aplicaciones de App-V 5  
-El formato de paquete de aplicación ha cambiado entre App-V 4.6 y App-V 5. Ya no se admiten las aplicaciones secuenciadas mediante App-V 4.6. Sin embargo, App-V 5 tiene una herramienta de conversión de paquetes que se puede utilizar para convertir aplicaciones. Para más información, consulte su [documentación de App-V 5](http://technet.microsoft.com/library/jj713472.aspx).  
+El formato de paquete de aplicación ha cambiado entre App-V 4.6 y App-V 5. Ya no se admiten las aplicaciones secuenciadas mediante App-V 4.6. Sin embargo, App-V 5 tiene una herramienta de conversión de paquetes que se puede utilizar para convertir aplicaciones. Para más información, consulte su [documentación de App-V 5](https://technet.microsoft.com/library/jj713472.aspx).  
 
 Utilice los pasos siguientes para convertir aplicaciones de App-V 4.6 en aplicaciones de App-V 5:  
 
@@ -179,7 +179,7 @@ El archivo de configuración de implementación tiene valores que se aplican al 
 
 Si quiere implementar aplicaciones virtuales de App-V 5 con Configuration Manager, los tres archivos deben figurar en la misma carpeta cuando se crea el tipo de implementación de App-V 5. Si hay varios archivos en la carpeta, Configuration Manager usará el más reciente.  
 
-Para más información, consulte su [documentación de App-V 5](http://technet.microsoft.com/library/jj713466.aspx).  
+Para más información, consulte su [documentación de App-V 5](https://technet.microsoft.com/library/jj713466.aspx).  
 
 ##  <a name="app-v-local-interaction"></a>Interacción local de App-V  
 En algunos escenarios de implementación de aplicaciones, unas aplicaciones se instalan localmente en equipos cliente y otras se implementan como aplicaciones virtuales en el mismo equipo cliente. De forma predeterminada, las aplicaciones instaladas localmente no pueden ver o comunicarse directamente con aplicaciones virtualizadas. Este es el comportamiento previsto del aislamiento de aplicaciones de App-V. La interacción local es una característica del cliente de App-V que se puede habilitar en cada aplicación para permitir que las aplicaciones instaladas localmente que se ejecutan en un equipo cliente vean y se comuniquen con aplicaciones virtualizadas. Configuration Manager y App-V son totalmente compatibles con la interacción local.  
@@ -187,7 +187,7 @@ En algunos escenarios de implementación de aplicaciones, unas aplicaciones se i
 Para más información acerca de la función de interacción local de App-V, vea la documentación de App-V.  
 
 ##  <a name="app-v-5-shared-content-store"></a>Almacén de contenido compartido de App-V 5  
-Configuration Manager admite la función de almacén de contenido compartido en App-V 5. Para más información, consulte [Planeación para implementar el secuenciador y el cliente de App-V 5.0](http://technet.microsoft.com/library/jj713431.aspx).  
+Configuration Manager admite la función de almacén de contenido compartido en App-V 5. Para más información, consulte [Planeación para implementar el secuenciador y el cliente de App-V 5.0](https://technet.microsoft.com/library/jj713431.aspx).  
 
 ##  <a name="monitoring-virtual-applications"></a>Supervisión de aplicaciones virtuales  
 
