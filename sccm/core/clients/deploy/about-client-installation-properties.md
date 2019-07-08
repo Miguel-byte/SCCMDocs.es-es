@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f84b4b775c2baa59a5281a79f8154c0a6d0820f6
-ms.sourcegitcommit: 5feeb99605be5c4c39896bcee239cc274d89b3e8
+ms.openlocfilehash: feef839af1f51c4cbb291f4ed5bc6336da6409b3
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58508537"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286875"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-system-center-configuration-manager"></a>Acerca de los parámetros y propiedades de instalación de cliente en System Center Configuration Manager
 
@@ -114,10 +114,10 @@ Este parámetro puede especificar la dirección URL de una instancia de Cloud Ma
 - Ejecute el comando siguiente: `(Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}).MP`.
 - Anexe el prefijo "https://" para usarlo con el parámetro **/mp**.
 
-Ejemplo para cuando use la dirección URL de la instancia de Cloud Management Gateway: `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100`.
+Ejemplo para cuando use la dirección URL de la instancia de Cloud Management Gateway: `ccmsetup.exe /mp: https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100`.
 
  > [!Important]
- > Cuando especifique la dirección URL de una instancia de Cloud Management Gateway para el parámetro **/mp**, debe comenzar con **https://**.
+ > Cuando especifique la dirección URL de una instancia de Cloud Management Gateway para el parámetro **/mp**, debe comenzar con **https://** .
 
 
 ### <a name="retryltminutes"></a>/retry:&lt;Minutos\>
@@ -253,7 +253,7 @@ Ejemplo: `CCMSetup.exe /ExcludeFeatures:ClientUI` no instala el Centro de softwa
 
 Especifica los parámetros y propiedades de línea de comandos que se pasan a ccmsetup.exe después de instalarlo ccmsetup.msi. Incluye otras propiedades entre comillas. Use esta propiedad cuando arranque el cliente de Configuration Manager mediante el método de instalación de MDM de Intune. 
 
-Ejemplo: `ccmsetup.msi CCMSETUPCMD="/mp:https://mp.contoso.com CCMHOSTNAME=mp.contoso.com"`
+Ejemplo: `ccmsetup.msi CCMSETUPCMD="/mp: https://mp.contoso.com CCMHOSTNAME=mp.contoso.com"`
 
  > [!Tip]
  > Microsoft Intune limita la línea de comandos a 1024 caracteres. 
@@ -266,7 +266,7 @@ Ejemplo: `ccmsetup.msi CCMSETUPCMD="/mp:https://mp.contoso.com CCMHOSTNAME=mp.co
 
 ### <a name="aadclientappid"></a>AADCLIENTAPPID
 
-Especifica el identificador de aplicación cliente de Azure Active Directory (Azure AD). La aplicación cliente se crea o importa al [configurar servicios de Azure](/sccm/core/servers/deploy/configure/azure-services-wizard) para la administración en la nube. Un administrador de Azure puede obtener el valor de esta propiedad desde Azure Portal. Para obtener más información, vea [Obtención del id. y la clave de autenticación de la aplicación](/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-application-id-and-authentication-key). Para la propiedad **AADCLIENTAPPID**, este identificador de aplicación es para el tipo de aplicación "Native".
+Especifica el identificador de aplicación cliente de Azure Active Directory (Azure AD). La aplicación cliente se crea o importa al [configurar servicios de Azure](/sccm/core/servers/deploy/configure/azure-services-wizard) para la administración en la nube. Un administrador de Azure puede obtener el valor de esta propiedad desde Azure Portal. Para obtener más información, vea [Obtención del id. y la clave de autenticación de la aplicación](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in). Para la propiedad **AADCLIENTAPPID**, este identificador de aplicación es para el tipo de aplicación "Native".
 
 Ejemplo: `ccmsetup.exe AADCLIENTAPPID=aa28e7f1-b88a-43cd-a2e3-f88b257c863b`
 
@@ -288,7 +288,7 @@ Especifica el identificador de inquilino de Azure AD. Este inquilino se vincula 
 - En la sección Estado del dispositivo, busque el valor **TenantId**. Por ejemplo, `TenantId : 607b7853-6f6f-4d5d-b3d4-811c33fdd49a`.
 
   > [!Note]
-  > Un administrador de Azure también puede obtener este valor en Azure Portal. Para obtener más información, vea [Obtención del identificador de inquilino](/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-tenant-id).
+  > Un administrador de Azure también puede obtener este valor en Azure Portal. Para obtener más información, vea [Obtención del identificador de inquilino](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
 
 Ejemplo: `ccmsetup.exe AADTENANTID=607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
@@ -345,7 +345,7 @@ Ejemplo: **CCMSetup.exe  CCMALLOWSILENTREBOOT**
 
  Especifica los criterios de selección de certificado si el cliente tiene más de un certificado para la comunicación HTTPS. Este certificado es un certificado válido que incluye la capacidad de autenticación de cliente.  
 
- Puede buscar una coincidencia exacta (use **Subject:**) o una coincidencia parcial (use **SubjectStr:)** en el nombre del firmante o el nombre alternativo del firmante. Ejemplo:  
+ Puede buscar una coincidencia exacta (use **Subject:** ) o una coincidencia parcial (use **SubjectStr:)** en el nombre del firmante o el nombre alternativo del firmante. Ejemplo:  
 
  `CCMCERTSEL="Subject:computer1.contoso.com"` busca un certificado con una coincidencia exacta con el nombre de equipo "computer1.contoso.com" en el nombre del firmante o en el nombre alternativo del firmante.  
 
@@ -416,7 +416,7 @@ Esta propiedad puede especificar la dirección URL de una instancia de Cloud Man
 Por ejemplo: `ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100`
 
  > [!Important]
- > Al especificar la dirección de una instancia de Cloud Management Gateway para la propiedad **CCMHOSTNAME**, *no* anexe un prefijo como **https://**. Este prefijo se usa únicamente con la dirección URL **/mp** de una instancia de Cloud Management Gateway.
+ > Al especificar la dirección de una instancia de Cloud Management Gateway para la propiedad **CCMHOSTNAME**, *no* anexe un prefijo como **https://** . Este prefijo se usa únicamente con la dirección URL **/mp** de una instancia de Cloud Management Gateway.
 
 
 

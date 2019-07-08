@@ -11,21 +11,22 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b655b21b2d630d91d0e1a143e800d613882ca573
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 90c5c57d1717363d83fa921d68caced8cf9e8da1
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56135041"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251720"
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Caché del mismo nivel para clientes de Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-<!--1101436--> La caché del mismo nivel se usa para ayudar a administrar la implementación de contenido en clientes en ubicaciones remotas. El almacenamiento en caché del mismo nivel es una solución integrada de Configuration Manager que permite a los clientes compartir contenido con otros clientes directamente desde su caché local.   
+<!--1101436-->
+La caché del mismo nivel se usa para ayudar a administrar la implementación de contenido en clientes en ubicaciones remotas. El almacenamiento en caché del mismo nivel es una solución integrada de Configuration Manager que permite a los clientes compartir contenido con otros clientes directamente desde su caché local.   
 
 > [!Note]  
-> Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para más información, vea [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+> Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para obtener más información, consulte [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
 
 
 
@@ -39,14 +40,14 @@ Definiciones:
 
 Use la configuración de cliente para habilitar a los clientes para que sean orígenes de caché del mismo nivel. No es necesario habilitar los clientes de caché del mismo nivel. Cuando se habilitan los clientes para ser orígenes de caché del mismo nivel, el punto de administración los incluye en la lista de orígenes de ubicación de contenido.<!--510397--> Para obtener más información sobre este proceso, vea [Operaciones](#operations).  
 
-Un origen de caché del mismo nivel debe ser miembro del grupo de límites actual del cliente de caché del mismo nivel. El punto de administración no incluye los orígenes de caché del mismo nivel de un grupo de límites vecino en la lista de orígenes de contenido que proporciona al cliente. Solo incluye los puntos de distribución de un grupo de límites vecino. Para obtener más información sobre los grupos de límites actuales y vecinos, vea [Grupos de límites](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups##a-namebkmkboundarygroupsa-boundary-groups).<!--SCCMDocs issue 685-->  
+Un origen de caché del mismo nivel debe ser miembro del grupo de límites actual del cliente de caché del mismo nivel. El punto de administración no incluye los orígenes de caché del mismo nivel de un grupo de límites vecino en la lista de orígenes de contenido que proporciona al cliente. Solo incluye los puntos de distribución de un grupo de límites vecino. Para más información acerca de los grupos de límites actuales y vecinos, vea [Grupos de límites](/sccm/core/servers/deploy/configure/boundary-groups).<!--SCCMDocs issue 685-->  
 
-El cliente de Configuration Manager usa la caché del mismo nivel para proporcionar a otros clientes todos los tipos de contenido en la caché. Este contenido incluye archivos de Office 365 y de instalación rápida.<!--SMS.500850-->  
+El cliente de Configuration Manager usa la caché del mismo nivel para proporcionar a otros clientes todos los tipos de contenido en la caché. Este contenido incluye archivos de Office 365 y de instalación rápida.<!--SMS.500850-->  
 
 La caché del mismo nivel no reemplaza el uso de otras soluciones como Optimización de distribución o Windows BranchCache. La caché del mismo nivel funciona junto con otras soluciones. Estas tecnologías le proporcionan más opciones para extender las soluciones tradicionales de implementación de contenido, como los puntos de distribución. La caché del mismo nivel es una solución personalizada que no depende de BranchCache. Si no habilita o usa BranchCache, la caché del mismo nivel sigue funcionando.  
 
   > [!Note]  
-  > A partir de la versión 1802, Windows BranchCache siempre está habilitado en las implementaciones. Se ha quitado la opción **Permitir a los clientes compartir el contenido con otros clientes en la misma subred**.<!--SCCMDocs issue 539--> Si el punto de distribución lo admite, y está habilitado en la configuración del cliente, los clientes usan BranchCache. Para obtener más información, vea [Configurar BranchCache](/sccm/core/clients/deploy/about-client-settings#configure-branchcache).<!--SCCMDocs issue 735-->   
+  > A partir de la versión 1802, Windows BranchCache siempre está habilitado en las implementaciones. Se ha quitado la opción **Permitir a los clientes compartir el contenido con otros clientes en la misma subred**.<!--SCCMDocs issue 539--> Si el punto de distribución lo admite, y está habilitado en la configuración del cliente, los clientes usan BranchCache. Para más información, consulte [Configurar BranchCache](/sccm/core/clients/deploy/about-client-settings#configure-branchcache).<!--SCCMDocs issue 735-->   
 
 
 
@@ -124,7 +125,8 @@ En los clientes que admiten la caché del mismo nivel que usan el Firewall de Wi
 
 
 ## <a name="bkmk_parts"></a> Compatibilidad de descarga parcial
-<!--1357346--> A partir de la versión 1806, los orígenes de caché del mismo nivel de cliente ahora pueden dividir el contenido en partes. Estas partes reducen al mínimo la transferencia de red para usar menos WAN. El punto de administración proporciona un seguimiento más detallado de las partes de contenido e intenta eliminar más de una descarga del mismo contenido por grupo de límites. 
+<!--1357346-->
+A partir de la versión 1806, los orígenes de caché del mismo nivel de cliente ahora pueden dividir el contenido en partes. Estas partes reducen al mínimo la transferencia de red para usar menos WAN. El punto de administración proporciona un seguimiento más detallado de las partes de contenido e intenta eliminar más de una descarga del mismo contenido por grupo de límites. 
 
 
 ### <a name="example-scenario"></a>Escenario de ejemplo
@@ -173,7 +175,8 @@ Para ver cómo controlan la descarga de contenido en partes, vea el **ContentTra
 
 
 ## <a name="guidance-for-cache-management"></a>Instrucciones para la administración de la caché
-<!--510645--> La caché del mismo nivel se basa en la caché del cliente de Configuration Manager para compartir contenido. Tenga en cuenta los aspectos siguientes para administrar la caché de cliente en su entorno:  
+<!--510645-->
+La caché del mismo nivel se basa en la caché del cliente de Configuration Manager para compartir contenido. Tenga en cuenta los aspectos siguientes para administrar la caché de cliente en su entorno:  
 
 - La caché de cliente de Configuration Manager no es como la biblioteca de contenido de un punto de distribución. Aunque el contenido que se distribuye se administra en un punto de distribución, el cliente de Configuration Manager administra de forma automática el contenido en su caché. Hay configuraciones y métodos para ayudar a controlar el contenido que está en la caché de un origen de caché del mismo nivel. Para obtener más información, vea [Configurar la caché del cliente para clientes de Configuration Manager](/sccm/core/clients/manage/manage-clients#BKMK_ClientCache).  
 
