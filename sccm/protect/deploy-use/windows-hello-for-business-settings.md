@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 94cbbb7616588fa88bae9ae71f5b5f53dd4a4d63
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 9346e95e3fa66e9f24d1bfc3711917c3d2146e5e
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500365"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67551346"
 ---
 # <a name="windows-hello-for-business-settings-in-configuration-manager"></a>Configuración de Windows Hello para empresas en Configuration Manager
 
@@ -90,9 +90,9 @@ Algunas configuraciones pueden no requerir la configuración de permisos, o bien
 1.  Inicie sesión en un controlador de dominio o en estaciones de trabajo de administración con la credencial Administrador de dominio, o bien con credenciales equivalentes.
 2.  Abra **Usuarios y equipos de Active Directory**.
 3.  En el panel de navegación, haga clic con el botón derecho en el nombre de dominio y después haga clic en **Propiedades**.
-4.  En la pestaña **Seguridad** del cuadro de diálogo *<domain name>* **Propiedades**, haga clic en **Opciones avanzadas**. Si la pestaña **Seguridad** no aparece, active **Características avanzadas** en el menú **Ver** de **Usuarios y equipos de Active Directory**.
+4.  En la pestaña **Seguridad** del cuadro de diálogo **Propiedades** de *\<nombre de dominio>* , haga clic en **Avanzadas**. Si la pestaña **Seguridad** no aparece, active **Características avanzadas** en el menú **Ver** de **Usuarios y equipos de Active Directory**.
 5.  Haga clic en **Agregar**.
-6.  En el cuadro de diálogo **Entrada de permiso para** *<domain name>*, haga clic en **Seleccionar una entidad de seguridad**.
+6.  En el cuadro de diálogo **Entrada de permiso para** *\<nombre de dominio>* , haga clic en **Seleccionar una entidad de seguridad**.
 7.  En el cuadro de diálogo **Seleccionar usuario, equipo, cuenta de servicio o grupo**, escriba **Administradores clave** en el cuadro de texto **Escriba el nombre del objeto que desea seleccionar**. Haga clic en **Aceptar**.
 8.  En la lista **Se aplica a**, seleccione **Descendant User objects** (Objetos de usuario descendiente).
 9.  Desplácese hasta la parte inferior de la página y haga clic en **Clear all** (Borrar todo).

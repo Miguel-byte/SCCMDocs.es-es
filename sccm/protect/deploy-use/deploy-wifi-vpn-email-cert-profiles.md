@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db5c6d0d06328ae73921a80b090dffd1fb711d8b
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 4e876041d67263b0b5db2acdfdef0ffa1ff318ef
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500561"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67551414"
 ---
 # <a name="deploy-profiles-in-system-center-configuration-manager"></a>Implementar perfiles de VPN en System Center Configuration Manager
 
@@ -55,9 +55,9 @@ Para poder usar perfiles, deben estar implementados en una o varias recopilacion
 
     -   **Generar una alerta**: habilite esta opción para configurar una alerta que se genera si la compatibilidad del perfil es inferior a un determinado porcentaje en una hora y fecha especificadas. También puede especificar si desea que se envíe una alerta a System Center Operations Manager.  
 
-    -   -   **Retraso aleatorio (horas)**: (solo para perfiles de certificado que contienen la configuración del Protocolo de inscripción de certificados simple). Especifica una ventana de retraso para evitar un procesamiento excesivo en el Servicio de inscripción de dispositivos de red. El valor predeterminado es **64** horas.  
+    -   -   **Retraso aleatorio (horas)** : (solo para perfiles de certificado que contienen la configuración del Protocolo de inscripción de certificados simple). Especifica una ventana de retraso para evitar un procesamiento excesivo en el Servicio de inscripción de dispositivos de red. El valor predeterminado es **64** horas.  
 
-    -   **Especifique la programación de evaluación de compatibilidad para este perfil de <type>**: especifique la programación de evaluación del perfil implementado en equipos cliente. La programación puede ser simple o personalizada.  
+    -   **Especificar la programación de evaluación de compatibilidad de este perfil de \<** tipo>: especifique la programación por la que se evalúa el perfil implementado en los equipos cliente. La programación puede ser simple o personalizada.  
 
         > [!NOTE]  
         >  Los equipos cliente evalúan el perfil cuando el usuario inicia sesión.  
