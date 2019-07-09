@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 950e3d60d0737d9135eb5f47bbc02a07f2a5e65e
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 23fbb29ba4676f6c7282e5337f691f88209e15e6
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67158345"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67551230"
 ---
 # <a name="capabilities-in-technical-preview-1702-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1702 para System Center Configuration Manager
 
@@ -158,7 +158,7 @@ Después de crear la directiva de cumplimiento, puede supervisar los resultados 
 ## <a name="improvements-to-software-center-settings-and-notification-messages-for-high-impact-task-sequences"></a>Mejoras en la configuración del Centro de software y los mensajes de notificación para las secuencias de tareas de alto impacto
 Esta versión incluye las siguientes mejoras en la configuración del Centro de software y los mensajes de notificación para las secuencias de tareas de implementación de alto impacto:
 
-- En las propiedades de la secuencia de tareas, ahora se puede configurar cualquier secuencia de tareas, incluidas las que no son del sistema operativo, como una implementación de alto riesgo. Cualquier secuencia de tareas que cumpla determinadas condiciones se define automáticamente como de alto impacto. Para obtener información detallada, vea [Administrar implementaciones de alto riesgo](http://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments).
+- En las propiedades de la secuencia de tareas, ahora se puede configurar cualquier secuencia de tareas, incluidas las que no son del sistema operativo, como una implementación de alto riesgo. Cualquier secuencia de tareas que cumpla determinadas condiciones se define automáticamente como de alto impacto. Para obtener información detallada, vea [Administrar implementaciones de alto riesgo](https://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments).
 - En las propiedades de la secuencia de tareas, puede elegir usar el mensaje de notificación predeterminado o crear su propio mensaje de notificación personalizado para las implementaciones de alto impacto.
 - En las propiedades de la secuencia de tareas, puede configurar las propiedades del Centro de software, que incluyen realizar un reinicio obligatorio, el tamaño de descarga de la secuencia de tareas y el tiempo de ejecución estimado.
 - El mensaje de la implementación de alto impacto predeterminado para actualizaciones en contexto indica ahora que las aplicaciones, los datos y la configuración se migran automáticamente. Anteriormente, el mensaje predeterminado para cualquier instalación de sistema operativo indicaba que todas las aplicaciones, datos y configuraciones se perderían, lo que no era cierto para una actualización en contexto.
@@ -166,7 +166,7 @@ Esta versión incluye las siguientes mejoras en la configuración del Centro de 
 ### <a name="set-a-task-sequence-as-a-high-impact-task-sequence"></a>Establecer una secuencia de tareas como una secuencia de tareas de alto impacto
 Siga este procedimiento para establecer una secuencia de tareas como de alto impacto.
 > [!NOTE]
-> Cualquier secuencia de tareas que cumpla determinadas condiciones se define automáticamente como de alto impacto. Para obtener información detallada, vea [Administrar implementaciones de alto riesgo](http://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments).
+> Cualquier secuencia de tareas que cumpla determinadas condiciones se define automáticamente como de alto impacto. Para obtener información detallada, vea [Administrar implementaciones de alto riesgo](https://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments).
 
 1. En la consola de Configuration Manager, vaya a **Biblioteca de software** > **Sistemas operativos** > **Secuencias de tareas**.
 2. Seleccione la secuencia de tareas que se va editar y haga clic en **Propiedades**.
@@ -208,7 +208,7 @@ Siga este procedimiento para configurar los detalles de la secuencia de tareas q
 
 ## <a name="check-for-running-executable-files-before-installing-an-application"></a>Comprobar los archivos ejecutables en ejecución antes de instalar una aplicación
 
-En el cuadro de diálogo *<deployment type name>* **Propiedades** de un tipo de implementación, en la pestaña Comportamiento de instalación, ahora se puede especificar uno de varios archivos ejecutables que, si se está ejecutando, bloqueará la instalación del tipo de implementación. El usuario debe cerrar el archivo ejecutable en ejecución (o se puede cerrar automáticamente para las implementaciones con un propósito de requerido) antes de poder instalar el tipo de implementación.
+En el cuadro de diálogo **Propiedades** de *\<nombre del tipo de implementación>* de un tipo de implementación, en la pestaña Comportamiento de instalación, ahora se puede especificar uno de varios archivos ejecutables que, si se ejecuta, bloqueará la instalación del tipo de implementación. El usuario debe cerrar el archivo ejecutable en ejecución (o se puede cerrar automáticamente para las implementaciones con un propósito de requerido) antes de poder instalar el tipo de implementación.
 
 ### <a name="try-it-out"></a>Pruébelo.
 

@@ -2,7 +2,7 @@
 title: Características en desuso
 titleSuffix: Configuration Manager
 description: Obtenga información sobre las características que Configuration Manager ya no admite.
-ms.date: 05/21/2019
+ms.date: 07/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4cfa662a3743865317b6c2f469ca0a34cd71f327
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: 28ba232fa94ee100c20da31f2eddc5a7341f6ac6
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66177052"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67551150"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Características en desuso y eliminadas de Configuration Manager
 
@@ -32,6 +32,7 @@ Esta información está sujeta a cambios en futuras versiones. Podría no inclui
 
 |Característica|Primer anuncio del desuso|Soporte técnico eliminado|  
 |-----------|---|--------------|  
+| Evaluación de la atestación de estado de dispositivo para las directivas de cumplimiento de acceso condicional <!--1235616 aka 3608202--> Para más información, consulte [Administrar el acceso a servicios de Office 365 para equipos administrados por Configuration Manager](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm#step-1-configure-compliance-policy).| 3 de julio de 2019 | La primera versión se publicó después del 1 de noviembre de 2019 |
 | El catálogo de aplicaciones que incluye los dos roles de sistema de sitio: el punto de sitios web del catálogo de aplicaciones y el punto de servicios web. Para más información, vea [Eliminación del catálogo de aplicaciones](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat). | 21 de mayo de 2019 | La primera versión se publicó después del 1 de noviembre de 2019|
 |Ha cambiado la implementación para compartir contenido de Azure. Use una puerta de enlace de administración en la nube habilitada para contenido. No podrá crear un punto de distribución en la nube tradicional en el futuro.|Febrero de 2019|La primera versión se publicó después del 1 de noviembre de 2019|
 |Implementación del servicio clásico en Azure para la puerta de enlace de administración y el punto de distribución en la nube. Para obtener más información, vea [Planificación de Cloud Management Gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).|Noviembre de 2018|La primera versión se publicó después del 1 de julio de 2019|

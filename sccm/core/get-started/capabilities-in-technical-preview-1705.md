@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5396ec603cab4b16e0d0c7e538618d1e757ab62f
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 50a85f9639cb2f284a431081caea10e71f92b9f3
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286184"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67551126"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-system-center-configuration-manager"></a>Funcionalidades de Technical Preview 1705 para System Center Configuration Manager
 
@@ -247,7 +247,7 @@ En este momento, ya ha conectado el sitio de Configuration Manager con Azure AD.
 Antes de empezar, asegúrese de que los archivos de origen de la instalación del cliente están almacenados localmente en el dispositivo en el que desea instalar el cliente.
 A continuación, siga las instrucciones de [Implementar clientes en equipos Windows con System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual) mediante la siguiente línea de comandos de instalación (reemplace los valores del ejemplo por sus propios valores):
 
-**ccmsetup.exe /NoCrlCheck /Source:C:\CLIENT  CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAPP.NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode=HEC AADTENANTID=780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME=contoso  AADCLIENTAPPID=<GUID> AADRESOURCEURI=<https://contososerver>**
+**ccmsetup.exe /NoCrlCheck /Source:C:\CLIENT  CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAPP.NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode=HEC AADTENANTID=780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME=contoso  AADCLIENTAPPID=\<GUID> AADRESOURCEURI=<https://contososerver>**
 
 - **/NoCrlCheck**: si el punto de administración o la instancia de Cloud Management Gateway usa un certificado de servidor no público, es posible que el cliente no pueda llegar a la ubicación de CRL.
 - **/Source**: Carpeta local:   ubicación de los archivos de instalación del cliente.

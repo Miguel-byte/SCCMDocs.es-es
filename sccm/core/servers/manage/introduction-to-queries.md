@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a976b7beab3650ccad58ea41bca644dc24425ef0
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 28fe8d38b03efaa101cfe01d8a8a054f0b26f2ed
+ms.sourcegitcommit: 3a3f40f3d39cbecfb9219a64c0185ea4b2ef9671
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65497398"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67561956"
 ---
 # <a name="introduction-to-queries-in-system-center-configuration-manager"></a>Introducción a las consultas en System Center Configuration Manager
 
@@ -30,7 +30,7 @@ Puede crear y ejecutar consultas para buscar objetos en una jerarquía de System
 
  Después de crear una consulta inicial, puede especificar criterios adicionales de consulta. Por ejemplo, puede especificar que los resultados de la consulta solo incluyan los equipos que estén asignados a un sitio especificado. También puede modificar cómo se muestran los resultados para que pueda verlos en el orden que prefiera. Por ejemplo, puede especificar que los resultados se ordenen según la cantidad de espacio libre en disco en orden ascendente o descendente.  
 
- Cuando se crea una consulta, Configuration Manager la almacena y se muestra en el nodo **Consultas** del área de trabajo **Supervisión**. Desde esta ubicación, puede crear una nueva consulta y luego ejecutar, actualizar o administrar una consulta existente.  
+ Cuando se crea una consulta, Configuration Manager la almacena y se muestra en el nodo **Consultas** del área de trabajo **Supervisión**. Desde esta ubicación, puede crear consultas y ejecutar, actualizar y administrar las consultas existentes.  
 
  También puede importar una consulta en una regla de consulta de una recopilación de Configuration Manager. Para obtener más información, consulte [Cómo crear recopilaciones en System Center Configuration Manager](../../../core/clients/manage/collections/create-collections.md).  
 

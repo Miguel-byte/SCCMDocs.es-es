@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c15b387ec9f2048a923eb220b6c8e3e1fdccded8
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: b3560284733ccad6a9a3676a46f755106596ad03
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286295"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67551206"
 ---
 # <a name="capabilities-in-technical-preview-1612-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1612 para System Center Configuration Manager
 
@@ -186,7 +186,7 @@ Para ejecutar la herramienta:
 2. Después, escriba una línea de comandos que incluya los modificadores de línea de comandos necesarios y modificadores opcionales que quiera usar.
 
 **Problema conocido** Cuando se ejecuta la herramienta, se podría devolver un error similar al siguiente cuando se produce cualquier error en algún paquete o implementación, o bien cuando está en progreso:
--  *System.InvalidOperationException: esta biblioteca de contenido no puede limpiarse ahora porque el paquete <packageID> no está totalmente instalado.*
+-  *System.InvalidOperationException: esta biblioteca de contenido no puede limpiarse ahora porque el paquete \<packageID> no está completamente instalado.*
 
 **Solución alternativa:** Ninguna. La herramienta no puede identificar archivos huérfanos con confianza cuando la implementación del contenido está en curso o si se ha producido algún error en dicho proceso. Por lo tanto, la herramienta no le permitirá limpiar contenido hasta que se solucione el problema.
 
@@ -202,7 +202,7 @@ Los siguientes modificadores de línea de comandos se pueden usar en cualquier o
 | **/dp &lt;FQDN del punto de distribución>**  | **Requerido** </br> Especifique el nombre de dominio completo (FQDN) del punto de distribución que quiere limpiar. </br></br> Ejemplo:  ***ContentLibraryCleanup.exe /dp server1.contoso.com***|
 | **/ps &lt;FQDN del sitio primario>**       | **Opcional** al limpiar contenido de un punto de distribución en un sitio primario.</br>**Requerido** al limpiar contenido de un punto de distribución en un sitio secundario. </br></br> Especifique el FQDN del sitio primario al que pertenece el punto de distribución, o del primario principal cuando el punto de distribución se encuentra en un sitio secundario. </br></br> Ejemplo: ***ContentLibraryCleanup.exe /dp server1.contoso.com /ps siteserver1.contoso.com*** |
 | **/sc &lt;código del sitio primario>**  | **Opcional** al limpiar contenido de un punto de distribución en un sitio primario.</br>**Requerido** al limpiar contenido de un punto de distribución en un sitio secundario. </br></br> Especifique el código del sitio del sitio primario al que pertenece el punto de distribución, o del sitio primario principal cuando el punto de distribución se encuentra en un sitio secundario.</br></br> Ejemplo: ***ContentLibraryCleanup.exe /dp server1.contoso.com /sc ABC*** |
-| **/log <log file directory>**       |**Opcional** </br> Especifique un directorio en el que colocar los archivos de registro. Este puede ser una unidad local o un recurso compartido de red.</br></br> Cuando este modificador no se usa, los archivos de registro se colocan automáticamente en la carpeta temporal de los usuarios.</br></br> Ejemplo de unidad local: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop*** </br></br>Ejemplo de recurso compartido de red: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log \\&lt;recurso compartido>\&lt;carpeta>***|
+| **/log \<log file directory>**       |**Opcional** </br> Especifique un directorio en el que colocar los archivos de registro. Este puede ser una unidad local o un recurso compartido de red.</br></br> Cuando este modificador no se usa, los archivos de registro se colocan automáticamente en la carpeta temporal de los usuarios.</br></br> Ejemplo de unidad local: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop*** </br></br>Ejemplo de recurso compartido de red: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log \\&lt;recurso compartido>\&lt;carpeta>***|
 
 
 ## <a name="improvements-for-in-console-search"></a>Mejoras de búsqueda en consola

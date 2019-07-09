@@ -11,24 +11,24 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43dcbe3abc200ecf32a83888e7b9712efd21584e
-ms.sourcegitcommit: 99dfe4fb9e9cfd20c44380ae442b3a5b895a0d9b
+ms.openlocfilehash: 0315124b44af4359528b590bf0a6b325bfd14eb1
+ms.sourcegitcommit: 3a3f40f3d39cbecfb9219a64c0185ea4b2ef9671
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65214755"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67561988"
 ---
 # <a name="security-and-privacy-for-queries-in-system-center-configuration-manager"></a>Seguridad y privacidad para consultas en System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Las consultas de System Center Configuration Manager le permiten devolver información de la base de datos del sitio según los criterios que especifique. Configuration Manager recopila la información de la base de datos del sitio durante el funcionamiento normal. Por ejemplo, utilizando la información que se ha recopilado de descubrimiento o inventario, puede configurar una consulta para identificar los dispositivos que cumplen los criterios especificados.  
+Las consultas de System Center Configuration Manager le permiten recuperar información de la base de datos del sitio según los criterios que especifique. Configuration Manager recopila la información de la base de datos del sitio durante el funcionamiento normal. Por ejemplo, con la información que se ha recopilado durante la detección o el inventario, puede configurar una consulta para identificar los dispositivos que cumplen los criterios especificados.  
 
- Para obtener más información sobre las consultas, consulte [Introducción a las consultas en System Center Configuration Manager](../../../core/servers/manage/introduction-to-queries.md). Para obtener más información sobre los procedimientos recomendados de seguridad e información de privacidad para las operaciones de Configuration Manager que recopilan información que se puede recuperar usando consultas, consulte [Seguridad y privacidad en System Center Configuration Manager](../../../core/plan-design/security/security-and-privacy.md).  
+ Para obtener más información sobre las consultas, consulte [Introducción a las consultas en System Center Configuration Manager](../../../core/servers/manage/introduction-to-queries.md). Para conocer los procedimientos recomendados de seguridad y la información de privacidad de las operaciones de Configuration Manager que recopilan los datos que se pueden recuperar mediante consultas, consulte [Seguridad y privacidad en System Center Configuration Manager](../../../core/plan-design/security/security-and-privacy.md).  
 
 ## <a name="security-best-practices-for-queries"></a>Procedimientos recomendados de seguridad para las consultas
 
- Use el siguiente procedimiento recomendado de seguridad para consultas.  
+ Use este procedimiento recomendado para las consultas.  
 
 |Práctica recomendada de seguridad|Más información|  
 |----------------------------|----------------------|  

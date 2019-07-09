@@ -2,7 +2,7 @@
 title: Rutas hacia la administración conjunta
 titleSuffix: Configuration Manager
 description: Conozca los requisitos previos de las dos principales maneras de configurar la administración conjunta.
-ms.date: 01/14/2019
+ms.date: 06/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 803f05dd14da8d280f08f2bcf3608865f384d273
-ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.openlocfilehash: 4c34cf73133086f08cb390f39ab4fe715dfcefd2
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "56755538"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67550666"
 ---
 # <a name="paths-to-co-management"></a>Rutas hacia la administración conjunta
 
@@ -35,7 +35,10 @@ Si toma esta ruta, puede inscribir rápidamente sus dispositivos existentes admi
 
 Tendrá que configurar lo siguiente:
 - Azure AD híbrido
-    - Servicios de federación de Active Directory (AD FS) con la autenticación de paso a través (PTA)
+    - Una de las siguientes [opciones de identidad híbrida de Azure AD](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin):  
+       - [Sincronización de hash de contraseña](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin#password-hash-synchronization) con [ inicio de sesión único de conexión directa (SSO)](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso)
+       - [Autenticación de paso a través](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-pta) con [inicio de sesión único de conexión directa (SSO)](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso)
+       - [SSO federado (Servicios de federación de Active Directory [AD FS])](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin#federation-that-uses-a-new-or-existing-farm-with-ad-fs-in-windows-server-2012-r2)
     - Azure AD Connect
     - Licencia de Azure AD Premium
     - Configure la unión a Azure AD híbrido (elija una opción):
