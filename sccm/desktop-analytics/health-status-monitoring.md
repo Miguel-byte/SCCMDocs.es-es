@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5dc3123763430dc35d566b68e3c1c04762d26de5
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 4b32105304354e9b9d4473451a32f52162f80d02
+ms.sourcegitcommit: 20bbb870baf624c7809d3972f2d09a8d2df79cda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159052"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67623335"
 ---
 # <a name="health-status-monitoring-in-desktop-analytics"></a>Estado de mantenimiento de supervisión de análisis de escritorio
 
@@ -58,7 +58,7 @@ En la parte inferior de la página de detalles de la aplicación, las tres pesta
 
 - **Otras versiones**: Una lista de versiones alternativas de esta aplicación. Para cada versión, muestra los cambios relativos a los tipos de bloqueo dentro de su organización y el promedio comercial. Si encuentra una versión posterior de la aplicación con una tasa menor de bloqueo, la actualización de la aplicación puede ayudar.  
 
-    También muestra si la versión tiene un **listos para Windows** señal. Para obtener más información, consulte [Compatibility assessment de](/sccm/desktop-analytics/compat-assessment#risk-assessment-engine).  
+    También muestra si la versión tiene un **listos para Windows** señal. Para obtener más información, consulte [Compatibility assessment de](compat-assessment.md#driver-risk-assessment).  
 
 - **Problemas principales de**: Recuento de identificadores de instancia de una lista de los errores más frecuentes. Identifica el seguimiento de pila asociado con el bloqueo con un identificador de error. Puede usar este identificador cuando se llama el proveedor de la aplicación para obtener soporte técnico.  
 
@@ -67,7 +67,7 @@ En la parte inferior de la página de detalles de la aplicación, las tres pesta
 Si observa una regresión grave de mantenimiento que no puede corregir, cambiar la aplicación **decisión de actualización** a **no se puede**. Esta acción evita que la implementación futura de la actualización a los dispositivos con este recurso.
 
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Evaluación de compatibilidad de análisis de escritorio](/sccm/desktop-analytics/compat-assessment)  
 

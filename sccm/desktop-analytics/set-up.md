@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6658f0b7a65027715975e6075e5c18a430d38405
-ms.sourcegitcommit: d8cfd0edf2579e2b08a0ca8a0a7b8f53d1e4196f
+ms.openlocfilehash: 96cf6f4dcfa878bb1ecafb7187dc6e9b29755509
+ms.sourcegitcommit: 20bbb870baf624c7809d3972f2d09a8d2df79cda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463733"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67623380"
 ---
 # <a name="how-to-set-up-desktop-analytics"></a>Cómo configurar el análisis de escritorio
 
@@ -29,7 +29,7 @@ Utilice este procedimiento para iniciar sesión el análisis de escritorio y con
 
 ## <a name="initial-onboarding"></a>Incorporación inicial
 
-1. Abra el [portal de análisis de escritorio](https://aka.ms/desktopanalytics) en administración de dispositivos de Microsoft 365 como un usuario con el **administrador Global** rol. Seleccione **iniciar**.  
+1. Abra el [portal de análisis de escritorio](https://aka.ms/desktopanalytics) en administración de dispositivos de Microsoft 365 como un usuario con el **administrador Global** rol. Seleccione **iniciar**. Si se le solicitará un código de invitación, use: `DesktopAnalyticsRocks!`
 
     > [!Tip]  
     > Para acceder al portal Desktop Analytics desde la consola de Configuration Manager, vaya a la **biblioteca de Software** área de trabajo, seleccione el **Desktop Analytics mantenimiento** nodo y seleccione **Plan las implementaciones**.

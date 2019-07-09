@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0700644f9548ea588821141a34abc6d249909cdf
-ms.sourcegitcommit: d8cfd0edf2579e2b08a0ca8a0a7b8f53d1e4196f
+ms.openlocfilehash: d564a5161011a1af0a4ec70f9bf7b45d87dd9dcb
+ms.sourcegitcommit: 20bbb870baf624c7809d3972f2d09a8d2df79cda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463734"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67623163"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Tutorial: Implementación de Windows 10 en el piloto
 
@@ -93,7 +93,7 @@ Antes de empezar este tutorial, asegúrese de que tiene los siguientes requisito
 
 Utilice este procedimiento para iniciar sesión el análisis de escritorio y configurarlo en su suscripción. Este procedimiento es un proceso único para configurar los análisis de escritorio de su organización.  
 
-1. Abra el [portal de análisis de escritorio](https://aka.ms/desktopanalytics) en administración de dispositivos de Microsoft 365 como un usuario con **administrador Global** permisos. Seleccione **iniciar**.  
+1. Abra el [portal de análisis de escritorio](https://aka.ms/desktopanalytics) en administración de dispositivos de Microsoft 365 como un usuario con **administrador Global** permisos. Seleccione **iniciar**.  Si se le solicitará un código de invitación, use: `DesktopAnalyticsRocks!`
 
 2. En el **acepte el contrato de servicio** página, revise el contrato de servicio y seleccione **Accept**.  
 
@@ -254,7 +254,7 @@ Utilice este procedimiento para crear un plan de implementación en escritorio A
 
     - **Fecha de finalización**: Elija la fecha por el que se deberían implementar totalmente Windows en todos los dispositivos de destino.  
 
-5. Seleccione **crear**. El nuevo plan aparece en la lista de planes de implementación mientras se está procesando. Para acelerar el procesamiento, solicitar una actualización de datos y a petición. Para obtener más información, consulte [preguntas más frecuentes sobre análisis de escritorio](/sccm/desktop-analytics/faq#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).
+5. Seleccione **Crear**. El nuevo plan aparece en la lista de planes de implementación mientras se está procesando. Para acelerar el procesamiento, solicitar una actualización de datos y a petición. Para obtener más información, consulte [preguntas más frecuentes sobre análisis de escritorio](/sccm/desktop-analytics/faq#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).
 
 6. Abrir el plan de implementación, seleccione su nombre.  
 
@@ -302,7 +302,7 @@ Utilice este procedimiento para implementar Windows 10 en Configuration Manager 
 
 2. En la pestaña **Inicio** de la cinta de opciones, en el grupo **Crear**, haga clic en **Agregar paquete de actualización de sistema operativo**. Esta acción inicia el asistente para agregar una actualización del sistema operativo.  
 
-3. En el **origen de datos** , especifique la red **ruta** a la instalación de archivos de código fuente del sistema operativo actualizan el paquete. Por ejemplo, `\\server\share\path`.  
+3. En el **origen de datos** , especifique la red **ruta** a la instalación de archivos de código fuente del sistema operativo actualizan el paquete. Por ejemplo: `\\server\share\path`.  
 
     > [!NOTE]  
     > Los archivos de origen de instalación contienen setup.exe y otros archivos y carpetas para instalar el sistema operativo.  
