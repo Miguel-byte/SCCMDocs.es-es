@@ -10,12 +10,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9167ece07e751302fb221a7b0fe2757386346b5f
-ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.openlocfilehash: a64a9ee6808354caaee9eadca0ad18e851a3eb71
+ms.sourcegitcommit: 8e9e7c42a5572797e05936fab0cf84fc27c40862
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194482"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398862"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Certificados para Cloud Management Gateway
 
@@ -88,10 +88,8 @@ Los clientes deben confiar en el certificado de autenticación de servidor CMG. 
 
 - Usar un certificado emitido por una entidad de certificación de empresa de la infraestructura de clave pública (PKI). La mayoría de las implementaciones de PKI de empresa agregan las entidades de certificación raíz de confianza a clientes de Windows. Por ejemplo, mediante el uso de Servicios de certificados de Active Directory con una directiva de grupo. Si emite el certificado de autenticación de servidor CMG desde una entidad de certificación en la que los clientes no confían automáticamente, agregue el certificado raíz de confianza de la entidad de certificación a los clientes basados en Internet.  
 
-    - También puede usar perfiles de certificado de Configuration Manager para aprovisionar certificados en los clientes. Para obtener más información, vea [Introducción a los perfiles de certificado](/sccm/protect/deploy-use/introduction-to-certificate-profiles).  
-
-> [!Note]  
-> A partir de la versión 1806, para crear una instancia de CMG ya no es necesario proporcionar un certificado raíz de confianza en la página Configuración. Este certificado no es necesario cuando se usa Azure Active Directory (Azure AD) para la autenticación de cliente, pero solía ser necesario en el asistente. Si usa certificados de autenticación de cliente PKI, entonces todavía debe agregar un certificado raíz de confianza a la CMG.<!--SCCMDocs-pr issue #2872-->  
+    - También puede usar perfiles de certificado de Configuration Manager para aprovisionar certificados en los clientes. Para obtener más información, vea [Introducción a los perfiles de certificado](/sccm/protect/deploy-use/introduction-to-certificate-profiles).
+    - Si planea [instalar el cliente de Configuration Manager desde Intune](/sccm/comanage/how-to-prepare-win10#install-the-configuration-manager-client), también puede usar los perfiles de certificados de Intune para aprovisionar certificados en los clientes. Para más información, consulte [Configuración de un perfil de certificado](https://docs.microsoft.com/intune/certificates-configure).
 
 ### <a name="bkmk_serverauthpublic"></a> Certificado de autenticación de servidor emitido por un proveedor público
 
@@ -146,6 +144,9 @@ El punto de conexión de CMG requiere este certificado para reenviar las solicit
 Este certificado se proporciona al crear la instancia de CMG en la consola de Configuration Manager.
 
 CMG debe confiar en los certificados de autenticación de cliente. Para conseguir esta relación de confianza, proporcione la cadena de certificados raíz de confianza. Puede especificar dos entidades de certificación raíz de confianza y cuatro entidades de certificación intermedias (subordinadas). Asegúrese de agregar todos los certificados en la cadena de confianza. Por ejemplo, si una entidad de certificación intermedia emite el certificado de autenticación del cliente, agregue tanto el certificado de la CA intermedia como el de la CA raíz.
+
+> [!Note]  
+> A partir de la versión 1806, para crear una instancia de CMG ya no es necesario proporcionar un certificado raíz de confianza en la página Configuración. Este certificado no es necesario cuando se usa Azure Active Directory (Azure AD) para la autenticación de cliente, pero solía ser necesario en el asistente. Si usa certificados de autenticación de cliente PKI, entonces todavía debe agregar un certificado raíz de confianza a la CMG.<!--SCCMDocs-pr issue #2872 SCCMDocs issue #1319-->
 
 #### <a name="export-the-client-certificates-trusted-root"></a>Exportar la raíz de confianza del certificado de cliente
 

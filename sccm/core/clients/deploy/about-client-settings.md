@@ -2,7 +2,7 @@
 title: Configuración de cliente
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la configuración predeterminada y personalizada para controlar los comportamientos del cliente.
-ms.date: 06/18/2019
+ms.date: 06/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 157cc09f08cf16056dc3424ddc377fbd95b0fe6e
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 0c6bffc94abecb5f700fbb7236c923f26f3a0de0
+ms.sourcegitcommit: 949db4d2af7f605ee40610e45ae9d917b1045772
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286852"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67314420"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Información sobre la configuración de cliente en Configuration Manager
 
@@ -652,6 +652,17 @@ Establezca las opciones adicionales de este grupo en **Sí** para que las pesta�
 
 Por ejemplo, si la organización no usa las directivas de cumplimiento y quiere ocultar la pestaña Compatibilidad de dispositivos en el Centro de software, establezca la opción **Habilitar pestaña Cumplimiento del dispositivo** en **No**.
 
+### <a name="bkmk_swctr_defaults"></a> Configuración de vistas predeterminadas en el Centro de software
+<!--3612112-->
+*(Se introdujo en la versión 1902)*
+
+- Configure el **filtro de aplicación predeterminado**, ya sean **todas** las aplicaciones o solo las **requeridas**.  
+
+    - Centro de software siempre usa la configuración predeterminada. Los usuarios pueden cambiar este filtro, pero el Centro de software no conserva sus preferencias.  
+
+ - Establezca la **vista de aplicación predeterminada** como **vista de mosaico** o **vista de lista**. 
+
+    - Si un usuario cambia esta configuración, el Centro de software mantiene la preferencia del usuario en el futuro. 
 
 
 ## <a name="software-deployment"></a>Implementación de software  

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 03610ad219a8ae89de63b87499d4ee9c628a271d
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 66b89dd0f077e776cc0abe5f24062e017de5acc1
+ms.sourcegitcommit: 949db4d2af7f605ee40610e45ae9d917b1045772
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285652"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67314424"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Novedades de la versión 1902 de la rama actual de Configuration Manager
 
@@ -342,7 +342,7 @@ Para obtener más información, vea [Vincular usuarios y dispositivos con la afi
 
 ### <a name="configure-default-views-in-software-center"></a>Configuración de vistas predeterminadas en el Centro de software
 <!--3612112-->
-Esta versión de Configuration Manager contiene más información sobre cómo personalizar el Centro de software:
+***[Actualizado el 20 de junio]*** Esta versión de Configuration Manager contiene más información sobre cómo personalizar el Centro de software:
  
 - Establecimiento del diseño predeterminado de las aplicaciones, como iconos o una lista  
 
@@ -354,7 +354,7 @@ Esta versión de Configuration Manager contiene más información sobre cómo pe
 
 Especifique estos valores en el grupo de configuración de cliente **Centro de software**.
 
-<!-- For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-center). -->
+Para más información, vea [Acerca de la configuración de cliente](/sccm/core/clients/deploy/about-client-settings#bkmk_swctr_defaults).
 
 
 
