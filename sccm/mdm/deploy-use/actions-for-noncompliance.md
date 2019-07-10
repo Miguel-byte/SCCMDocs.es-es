@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cbd996629d3b312febd271757aff69faf5371c64
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 4d5814895ba2829a1d4238581d85f955816e4058
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234014"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678700"
 ---
 # <a name="set-up-actions-for-non-compliance"></a>Configuración de acciones de no cumplimiento
 
@@ -101,7 +101,7 @@ Configuration Manager proporciona plantillas de correo electrónico, pero tambi�
     b. **Destinatarios adicionales (a través de correo electrónico)**  
 
     c. **Seleccione la plantilla de mensaje:** Elija una plantilla de correo electrónico predeterminado o personalizado que ha creado.  
-    
+
     > [!TIP]   
     > También puede agregar una nueva plantilla de correo electrónico al agregar la acción **Enviar correo electrónico a usuario final** haciendo clic en la opción **Nuevo:** de la página **Agregar acción**.  
 

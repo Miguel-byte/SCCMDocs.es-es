@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d7da4767bd8ef26ebf3f56010e99bc1cbd0b0c10
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 231988b9c6b41a904e2ae8225bdb070f0b047618
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227869"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678905"
 ---
 # <a name="protect-apps-using-mobile-application-management-policies-in-system-center-configuration-manager"></a>Proteger aplicaciones mediante directivas de administración de aplicaciones móviles en System Center Configuration Manager
 
@@ -66,7 +66,7 @@ Para aplicar restricciones a una aplicación, esta debe incorporar el Kit de des
 
 3. En la página **General** , seleccione **Detectar automáticamente la información sobre esta aplicación a partir de archivos de instalación**.  
 
-4. En la lista desplegable **Tipo**, seleccione **Paquete de aplicación para iOS (\*archivo .ipa)**.  
+4. En la lista desplegable **Tipo**, seleccione **Paquete de aplicación para iOS (\*archivo .ipa)** .  
 
 5. Seleccione **Examinar** para elegir el paquete de aplicación que quiera importar y, después, seleccione **Siguiente**.  
 
@@ -129,9 +129,9 @@ Para aplicar restricciones a una aplicación, esta debe incorporar el Kit de des
 |**Requerir cumplimiento de dispositivos con la directiva corporativa en acceso**|Permite que la aplicación se use únicamente cuando el dispositivo no esté liberado ni modificado.|  
 |**Volver a comprobar los requisitos de acceso después de (minutos)**|Especifique el período de tiempo que debe transcurrir antes de que se vuelvan a comprobar los requisitos de acceso de la aplicación una vez iniciada la aplicación (en el campo **Tiempo de espera**).<br /><br /> En el campo **Período de gracia sin conexión**, si el dispositivo está desconectado, se especifica el período de tiempo que debe transcurrir antes de que se vuelvan a comprobar los requisitos de acceso de la aplicación.|  
 |**Cifrar datos de aplicación**|Especifica que se cifren todos los datos asociados a esta aplicación, incluidos los datos almacenados externamente, como los datos almacenados en tarjetas SD.<br /><br /> **Cifrado para iOS**<br /><br /> En el caso de aplicaciones que están asociadas a una directiva de administración de aplicaciones móviles de Configuration Manager, los datos se cifran en reposo con el cifrado de nivel de dispositivo proporcionado por el sistema operativo. Esta opción se habilita a través de la directiva de PIN del dispositivo que debe establecer el administrador de TI. Cuando se requiere un PIN, los datos se cifran según la configuración de la directiva de administración de aplicaciones móviles. Como se indica en la documentación de Apple, [los módulos usados por iOS 7 están certificados mediante FIPS 140-2](http://support.apple.com/en-us/HT202739).<br /><br /> **Cifrado para Android**<br /><br /> En el caso de las aplicaciones que están asociadas a una directiva de administración de aplicaciones móviles de Configuration Manager, Microsoft proporciona el cifrado. Los datos se cifran de forma sincrónica durante las operaciones de E/S de archivos según la configuración de la directiva de administración de aplicaciones móviles. Las aplicaciones administradas en Android usan el cifrado AES-128 en modo CBC mediante las bibliotecas de criptografía de la plataforma. El método de cifrado no está certificado mediante FIPS 140-2. El contenido del almacenamiento del dispositivo está siempre cifrado.|  
-    |**Bloquear captura de pantalla** (solo en dispositivos Android)|Especifica que las funciones de captura de pantalla del dispositivo se bloquean cuando se usa esta aplicación.|  
-    |**Deshabilitar sincronización de contactos**| A partir de la versión 1710, esta opción impide que la aplicación pueda guardar datos en la aplicación Contactos nativa del dispositivo. Si elige No, la aplicación podrá guardar los datos en la aplicación Contactos nativa del dispositivo.|  
-    |**Deshabilitar la impresión**| A partir de la versión 1710, esta opción impide que la aplicación pueda imprimir datos profesionales o educativos. |  
+|**Bloquear captura de pantalla** (solo en dispositivos Android)|Especifica que las funciones de captura de pantalla del dispositivo se bloquean cuando se usa esta aplicación.|  
+|**Deshabilitar sincronización de contactos**| A partir de la versión 1710, esta opción impide que la aplicación pueda guardar datos en la aplicación Contactos nativa del dispositivo. Si elige No, la aplicación podrá guardar los datos en la aplicación Contactos nativa del dispositivo.|  
+|**Deshabilitar la impresión**| A partir de la versión 1710, esta opción impide que la aplicación pueda imprimir datos profesionales o educativos. |  
 
 6)  En la página **Explorador administrado**, seleccione si se permite que el explorador administrado abra solo las direcciones URL de la lista o si se bloquea el explorador administrado para que no las abra y, después, seleccione **Siguiente**.  
 Para obtener más información, consulte [Administrar el acceso a Internet mediante directivas de explorador administrado con Configuration Manager](manage-internet-access-using-managed-browser-policies.md).  

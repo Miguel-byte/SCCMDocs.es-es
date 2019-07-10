@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6aef8f927a2c4d3cb3eb7fecc4970cb19cbb83ed
-ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
+ms.openlocfilehash: 6c6573ce4faf893e30eac070efd963dc7465e20e
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66748255"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678846"
 ---
 # <a name="set-up-ios-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Configuración de la administración de dispositivos híbrida de iOS con System Center Configuration Manager y Microsoft Intune
 
@@ -73,9 +73,9 @@ Puede limitar los dispositivos que se pueden inscribir bloqueando dispositivos d
 - Dispositivos inscritos con una [cuenta del administrador de inscripciones de dispositivos](enroll-devices-with-device-enrollment-manager.md)
 
 ### <a name="to-enable-enrollment-restrictions"></a>Para habilitar las restricciones de inscripción
-1.  En la consola de Configuration Manager, en el área de trabajo **Administración** , vaya a **Servicios en la nube** > **Suscripción a Microsoft Intune**.
-2.  En la pestaña **Inicio** en el grupo **Suscripción** , haga clic en **Configurar plataformas** > **IOS**.
-3.  Elija **Bloquear dispositivos de propiedad personal** para limitar la inscripción a dispositivos que son propiedad de la empresa.
+1. En la consola de Configuration Manager, en el área de trabajo **Administración** , vaya a **Servicios en la nube** > **Suscripción a Microsoft Intune**.
+2. En la pestaña **Inicio** en el grupo **Suscripción** , haga clic en **Configurar plataformas** > **IOS**.
+3. Elija **Bloquear dispositivos de propiedad personal** para limitar la inscripción a dispositivos que son propiedad de la empresa.
 
 > [!div class="button"]
 > [< Paso anterior](create-service-connection-point.md)  [Paso siguiente >](set-up-additional-management.md)

@@ -11,19 +11,19 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2980cef8a39f790dbb94ab85fa025eeb04f4f996
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 8214793cb724f029892de40bc1191cdc25ed0ec5
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286909"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678645"
 ---
 # <a name="hybrid-mdm-with-configuration-manager-and-microsoft-intune"></a>MDM híbrida con Configuration Manager e Intune
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
 > [!Important]  
-> Desde el 14 de agosto de 2018, la administración híbrida de dispositivos móviles es una [característica en desuso](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). A partir de la versión del servicio Intune 1902, que se esperaba el final de febrero de 2019, los clientes nuevos no pueden crear una nueva conexión híbrida. 
+> Desde el 14 de agosto de 2018, la administración híbrida de dispositivos móviles es una [característica en desuso](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). A partir de la versión de servicio 1902 de Intune, prevista para finales de febrero de 2019, los nuevos clientes no pueden crear una conexión híbrida. 
 > <!--Intune feature 2683117-->  
 > Desde que lo lanzamos en Azure hace más de un año, Intune ha agregado cientos de nuevas funcionalidades solicitadas por el cliente y que se encuentran a la vanguardia del sector. Ahora ofrece muchas más funciones que las que hay disponibles a través de la administración híbrida de dispositivos móviles (MDM). Intune en Azure proporciona una experiencia administrativa más integrada y simplificada para sus necesidades de movilidad empresarial.
 > 
@@ -88,16 +88,14 @@ MDM híbrida admite las siguientes capacidades de administración en los disposi
 
 -   Recopilar información de inventario de software mediante el uso de informes integrados  
 
-Para leer sobre las nuevas características que están disponibles para MDM híbrido, consulte [What's new in hybrid mobile device management (Novedades en la administración híbrida de dispositivos móviles)](/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management).
-
 
 
 ## <a name="hybrid-mdm-enrollment"></a>Inscripción híbrida de MDM
 
 Para integrar dispositivos en la administración híbrida, esos dispositivos deben inscribirse al servicio. La manera en que los dispositivos inscriben dispositivos depende del tipo de dispositivo, la propiedad y el nivel de administración necesario.
 
-- **"Bring your own device" (BYOD)**: Los usuarios inscribir sus teléfonos personales, tabletas o equipos  
+- **"Bring your own device" (BYOD)** : Los usuarios inscribir sus teléfonos personales, tabletas o equipos  
 
-- **Dispositivos corporativos (COD)**: Habilitar escenarios de administración como el borrado remoto, dispositivos compartidos o afinidad de usuario para un dispositivo  
+- **Dispositivos corporativos (COD)** : Habilitar escenarios de administración como el borrado remoto, dispositivos compartidos o afinidad de usuario para un dispositivo  
 
 - Si usa [Exchange ActiveSync](/sccm/mdm/plan-design/device-enrollment-methods#mobile-device-management-with-exchange-activesync-and-configuration-manager), de manera local u hospedado en la nube, puede habilitar la administración simple de Intune sin la inscripción. Los equipos con Windows también pueden administrarse mediante el [software cliente de Intune](/intune/deploy-use/manage-windows-pcs-with-microsoft-intune).

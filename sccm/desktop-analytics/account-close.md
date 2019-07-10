@@ -2,7 +2,7 @@
 title: Cómo cerrar su cuenta
 titleSuffix: Configuration Manager
 description: Cómo quitar el análisis de escritorio de su cuenta de Azure
-ms.date: 06/11/2019
+ms.date: 07/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 805cb79a1986457f04b11fa5f99b30ec098be99b
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: e2b1c893204366581eacd0f8e953cb2a6fd0d1a4
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159204"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676168"
 ---
 # <a name="how-to-close-your-account"></a>Cómo cerrar su cuenta
 
@@ -31,7 +31,7 @@ El primer paso es ponerse en contacto con Microsoft Support. Abra una incidencia
 
 ## <a name="delete-the-solution"></a>Eliminar la solución
 
-1. Inicie sesión en el [portal Azure](https://portal.azure.com) como un usuario con el **Administrador de la compañía** rol.
+1. Inicie sesión en el [portal Azure](https://portal.azure.com) como un usuario con el **administrador Global** rol.
 
 1. Buscar en **todos los recursos** para el nombre del área de trabajo de análisis de escritorio. Este nombre es lo que ha creado al registrarse para el servicio.
 
@@ -44,7 +44,7 @@ Los datos de análisis de escritorio anticuado según la directiva de retención
 
 ## <a name="remove-user-and-app-access"></a>Quitar el acceso de usuario y aplicación
 
-1. Inicie sesión en el [portal Azure](https://portal.azure.com) como un usuario con el **Administrador de la compañía** rol. Vaya a **Azure Active Directory**.
+1. Inicie sesión en el [portal Azure](https://portal.azure.com) como un usuario con el **administrador Global** rol. Vaya a **Azure Active Directory**.
 
 1. En **Roles y administradores**, busque el **administrador escritorio Analytics** rol. Quitar a sus miembros.
 

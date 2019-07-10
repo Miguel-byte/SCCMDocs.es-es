@@ -2,7 +2,7 @@
 title: Conexión de Configuration Manager
 titleSuffix: Configuration Manager
 description: Guía de procedimientos para conectar Configuration Manager con análisis de escritorio.
-ms.date: 06/13/2019
+ms.date: 07/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 098c83678585984bbe3dbeddf167e24116afd86b
-ms.sourcegitcommit: 3a3f40f3d39cbecfb9219a64c0185ea4b2ef9671
+ms.openlocfilehash: f24161b61c796f9c1605a61656af0eb91f225067
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/04/2019
-ms.locfileid: "67562019"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676060"
 ---
 # <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>Cómo conectar Configuration Manager con análisis de escritorio
 
@@ -61,7 +61,7 @@ Utilice este procedimiento para conectar Configuration Manager para el análisis
 
 4. Si tiene una aplicación existente que desea volver a usar para este servicio, elíjalo en la lista y seleccione **Aceptar**.  
 
-5. En la mayoría de los casos, puede crear una aplicación para la conexión de escritorio análisis con este asistente. Seleccione **crear**.<!-- 3572123 -->  
+5. En la mayoría de los casos, puede crear una aplicación para la conexión de escritorio análisis con este asistente. Seleccione **Crear**.<!-- 3572123 -->  
 
     > [!Tip]  
     > Si no se puede crear la aplicación de este asistente, puede crear manualmente la aplicación en Azure AD y, a continuación, importar a Configuration Manager. Para obtener más información, consulte [crear e importar aplicación de Configuration Manager](/sccm/desktop-analytics/troubleshooting#create-and-import-app-for-configuration-manager).  
@@ -79,7 +79,7 @@ Utilice este procedimiento para conectar Configuration Manager para el análisis
     Seleccione **inicie sesión en** . Después de autenticarse correctamente en Azure, en la página se muestra el **Nombre de inquilino de Azure AD** como referencia.
         
     > [!Note]  
-    > Completar este paso como una **Administrador de la compañía**. Configuration Manager no guarda estas credenciales. Este rol no requiere permisos de Configuration Manager y no tiene que ser la misma cuenta que ejecuta al Asistente para servicios de Azure.  
+    > Completar este paso como una **administrador Global**. Configuration Manager no guarda estas credenciales. Este rol no requiere permisos de Configuration Manager y no tiene que ser la misma cuenta que ejecuta al Asistente para servicios de Azure.  
 
     Haga clic en **Aceptar** para crear la aplicación web en Azure AD y cerrar el cuadro de diálogo Crear aplicación de servidor. En el cuadro de diálogo de la aplicación de servidor, seleccione **Aceptar**. A continuación, seleccione **siguiente** en la página de aplicación del Asistente para servicios de Azure.  
 

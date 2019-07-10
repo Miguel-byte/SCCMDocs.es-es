@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: b552391d-abc0-48a2-a429-93605a13a66a
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e7c9fde7298d4733c2f3abd9555edb989d7cb66
-ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
+ms.openlocfilehash: 18c8bab6b072a9df2dea9c9f67d844b8481d314e
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66716209"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678212"
 ---
 # <a name="import-configuration-manager-data-to-microsoft-intune"></a>Importación de datos de Configuration Manager en Microsoft Intune 
 
@@ -24,11 +24,11 @@ ms.locfileid: "66716209"
 
 El primer paso recomendado del proceso de [migrar dispositivos y usuarios de MDM híbrida a Intune independiente](migrate-hybridmdm-to-intunesa.md) en la configuración solo en la nube consiste en utilizar la herramienta Intune Data Importer. Si lo desea, puede omitir esta fase y pasar a la de [preparación de Intune para migrar usuarios](migrate-prepare-intune.md). Sin embargo, esta herramienta realiza las siguientes funciones que pueden ahorrarle mucho tiempo en la fase siguiente:  
 
-1.  Recopila datos sobre los objetos seleccionados de la jerarquía de Configuration Manager.  
+1. Recopila datos sobre los objetos seleccionados de la jerarquía de Configuration Manager.  
 
-2.  Proporciona detalles sobre los objetos que puede seleccionar para la importación, además de información sobre por qué no se pueden importar algunos objetos.  
+2. Proporciona detalles sobre los objetos que puede seleccionar para la importación, además de información sobre por qué no se pueden importar algunos objetos.  
 
-3.  Importa los objetos seleccionados en el inquilino de Microsoft Intune.  
+3. Importa los objetos seleccionados en el inquilino de Microsoft Intune.  
 
 La herramienta Data Importer no cambia el entorno de Configuration Manager en modo alguno. Puede importar objetos en Intune y validar que todo funciona según lo esperado sin riesgo de dejar los dispositivos MDM híbrida en un estado no administrado. 
 
@@ -114,7 +114,7 @@ Los pasos principales del Asistente para la herramienta Data Importer se pueden 
 
 Antes de poder ejecutar la herramienta Data Importer, debe utilizar una cuenta de administrador global para conceder permiso en Azure a la herramienta Data Importer con el fin de que pueda acceder a los recursos. A continuación, puede ejecutar la herramienta con una cuenta de administrador Global o administrador de Intune.   
 
-1.  Un administrador Global debe ejecutar la herramienta de la primera vez mediante el siguiente parámetro: `IntuneDataImporter.exe -GlobalConsent`  
+1. Un administrador Global debe ejecutar la herramienta de la primera vez mediante el siguiente parámetro: `IntuneDataImporter.exe -GlobalConsent`  
 
 2. Cuando se inicia la herramienta, inicie sesión con una cuenta con el rol de administrador Global en Azure.  
 
@@ -188,7 +188,7 @@ En la fase 1, seleccione los objetos para detectar e indique a la herramienta qu
 
         - **Para importar los tipos de objetos**: Elija los objetos que desea que la herramienta para recopilar. Puede elegir **Select all** (Seleccionar todo) para elegir todos los objetos o tipos de objeto concretos.  
 
-4.  Seleccione **siguiente** para iniciar la detección de los objetos en el sitio. La herramienta muestra el progreso de cada uno de los tipos de objeto.  
+4. Seleccione **siguiente** para iniciar la detección de los objetos en el sitio. La herramienta muestra el progreso de cada uno de los tipos de objeto.  
 
     - Cuando la herramienta no detecta ningún dato de un tipo de objeto seleccionado, la barra de progreso se muestra inmediatamente como completada en ese tipo de objeto.  
 

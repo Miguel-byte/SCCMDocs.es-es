@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a298bd0504ea719d6b60d2c86692942d6ba989b8
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 43a5e1a4bf3283c185d612cc31428a23a4e12061
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159038"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678111"
 ---
 # <a name="what-is-desktop-analytics"></a>¿Qué es el análisis de escritorio?
 
@@ -73,11 +73,11 @@ Para utilizar el análisis de escritorio, asegúrese de que su entorno cumple lo
 
     - **Propietario del área de trabajo** o **colaborador** permisos para **configurar el área de trabajo**y los roles siguientes:  
 
-       - [**Administrador de análisis de escritorio** ](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) rol.
+      - [**Administrador de análisis de escritorio** ](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) rol.
 
-       - [**Colaborador de análisis de registro** ](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#log-analytics-contributor) y [ **Administrador de acceso de usuario** ](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) en el grupo de recursos para usar un área de trabajo existente o crear una nueva área de trabajo en un grupo de recursos existente.
+      - [**Colaborador de análisis de registro** ](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#log-analytics-contributor) y [ **Administrador de acceso de usuario** ](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) en el grupo de recursos para usar un área de trabajo existente o crear una nueva área de trabajo en un grupo de recursos existente.
 
-        - [**Propietario**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner), o [ **colaborador** ](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) y [ **Administrador de acceso de usuario** ](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) permisos en el suscripción para crear un área de trabajo en un grupo de recursos.  
+      - [**Propietario**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner), o [ **colaborador** ](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) y [ **Administrador de acceso de usuario** ](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) permisos en el suscripción para crear un área de trabajo en un grupo de recursos.  
 
 - Configuration Manager, versión 1902 con paquete acumulativo de actualizaciones (4500571) o posterior. Para obtener más información, consulte [actualizar Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
 

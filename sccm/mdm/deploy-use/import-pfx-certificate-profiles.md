@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e694b81943dda937f1d95765f75f182e072bc7da
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: b999dddc048c1afe0dd4212ed9b99ebc9c991ff0
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224744"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678853"
 ---
 # <a name="how-to-create-pfx-certificate-profiles-by-importing-certificate-details"></a>Creación de perfiles de certificado PFX mediante la importación de detalles de certificado.
 
@@ -70,10 +70,10 @@ Para importar un certificado PFX, se utiliza el SDK de Configuration Manager par
 Más adelante, los certificados importados se implementan en los dispositivos inscritos.
 
 1. En la página **Certificado PFX** del **Asistente para crear perfil de certificado**, especifique dónde se instalará el proveedor de almacenamiento de claves de dispositivo:
-    -   **Instalar en Módulo de plataforma segura (TPM) si está presente**  
-    -   **Instalar en Módulo de plataforma segura (TPM) o se producirá un error** 
-    -   **Instalar en Windows Hello para empresas o generar un error** 
-    -   **Instalar en Proveedor de almacenamiento de claves de software** 
+    - **Instalar en Módulo de plataforma segura (TPM) si está presente**  
+    - **Instalar en Módulo de plataforma segura (TPM) o se producirá un error** 
+    - **Instalar en Windows Hello para empresas o generar un error** 
+    - **Instalar en Proveedor de almacenamiento de claves de software** 
 2. Haga clic en **Siguiente**. 
 3. En la página **Plataformas admitida** del asistente, seleccione las plataformas de dispositivo admitidas donde se instalará este certificado y, luego, haga clic en **Siguiente**.
 
@@ -89,9 +89,9 @@ Use el [SDK de Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=613
 
 El script de creación de PFX agregado en Configuration Manager 2012 SP2 agrega una clase SMS_ClientPfxCertificate al SDK. Esta clase incluye los métodos siguientes:  
 
-    -   `ImportForUser`  
+-   `ImportForUser`  
 
-    -   `DeleteForUser`  
+-   `DeleteForUser`  
 
 En el ejemplo siguiente se importan las credenciales en un perfil de certificado PFX.
 

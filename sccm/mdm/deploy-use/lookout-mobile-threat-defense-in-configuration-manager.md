@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 62db216d2047ee0272c6b3fa226493b5e8af5f84
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 50d79da3ab4e7ace9a682baaa5cfd8d2bdbdce10
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256483"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678867"
 ---
 # <a name="manage-access-to-company-resource-based-on-device-network-and-application-risk"></a>Administrar el acceso a los recursos de la empresa según el dispositivo, la red y el riesgo de aplicación
 
@@ -118,8 +118,8 @@ Detecte amenazas en la red como ataques de tipo "Man in the middle" e impida la 
 
 Para implementar esta solución, siga estos pasos:  
 
-1.  [Set up your subscription with Lookout mobile threat protection (Configurar su suscripción con Lookout Mobile Threat Protection)](set-up-your-subscription-with-lookout.md)
-2.  [Enable Lookout MTP connection in Intune (Habilitar la conexión de Lookout MTP en Intune)](enable-lookout-connection-in-intune.md)
+1. [Set up your subscription with Lookout mobile threat protection (Configurar su suscripción con Lookout Mobile Threat Protection)](set-up-your-subscription-with-lookout.md)
+2. [Enable Lookout MTP connection in Intune (Habilitar la conexión de Lookout MTP en Intune)](enable-lookout-connection-in-intune.md)
 3.  [Configure and deploy Lookout for work application (Configurar e implementar la aplicación Lookout for Work)](configure-and-deploy-lookout-for-work-apps.md)
-4.  [Configure compliance policy (Configurar directiva de cumplimiento)](enable-device-threat-protection-rule-compliance-policy.md)
-5.  [Solucionar problemas de integración de Lookout](troubleshoot-lookout-integration.md)
+4. [Configure compliance policy (Configurar directiva de cumplimiento)](enable-device-threat-protection-rule-compliance-policy.md)
+5. [Solucionar problemas de integración de Lookout](troubleshoot-lookout-integration.md)
