@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43a5e1a4bf3283c185d612cc31428a23a4e12061
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: b0daf2943b0859227d08069be9c9da69165d5d1a
+ms.sourcegitcommit: de3c86077bbf91b793e94e1f60814df18da11bab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67678111"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67726231"
 ---
 # <a name="what-is-desktop-analytics"></a>¿Qué es el análisis de escritorio?
 
@@ -94,7 +94,7 @@ Para utilizar el análisis de escritorio, asegúrese de que su entorno cumple lo
     >
     > Escritorio Analytics está diseñado para el mejor escenario de actualización de soporte técnico en el contexto. Si necesita realizar cambios importantes, como de la arquitectura de 32 bits a 64 bits, utilice un escenario de creación de imágenes. Escritorio insights Analytics todavía resultan valiosos en estos escenarios de implementación de sistema operativo clásicos, pero puede pasar por alto la orientación específica de actualización en contexto. Para obtener más información, consulte [escenarios para implementar sistemas operativos de empresa con Configuration Manager](/sccm/osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems).
 
-- Datos de diagnóstico de Windows. Vea los siguientes artículos para más información:  
+- Datos de diagnóstico de Windows. Para más información, consulte los siguientes artículos.  
 
     - [Niveles de datos de diagnóstico](/sccm/desktop-analytics/enable-data-sharing#diagnostic-data-levels)  
 
@@ -120,4 +120,4 @@ Escritorio Analytics requiere una de las suscripciones de licencias siguientes:
 
 El siguiente tutorial proporciona a una guía paso a paso para empezar a trabajar con análisis de escritorio y Configuration Manager:  
 
-- [Implementación de Windows 10 a una prueba piloto](/sccm/desktop-analytics/tutorial-windows10)  
+- [Implementación piloto de Windows 10](/sccm/desktop-analytics/tutorial-windows10)  
