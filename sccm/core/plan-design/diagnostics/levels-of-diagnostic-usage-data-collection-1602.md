@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 667a734eefab0e7634d13fd971c218a0803acc13
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: e4742e697737cdb71ad8d668566a289cef5b5f1d
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56136422"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677172"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1602-of-system-center-configuration-manager"></a>Niveles de recopilación de datos de uso para diagnóstico para la versión 1602 de System Center Configuration Manager
 
@@ -86,7 +86,7 @@ Los cambios respecto de versiones anteriores se indican mediante la nota ***[Nue
 - ***[Nuevo]*** Uso de la detección de redes (habilitada o deshabilitada)
 - ***[Nuevo]*** Consola de administración:
 
-    -  Estadísticas sobre las conexiones de consola (versión de sistema operativo, idioma, SKU y arquitectura; memoria del sistema, número de procesadores lógicos, identificador de sitio de conexión, versiones instaladas de .NET y paquetes de idioma de la consola)
+  -  Estadísticas sobre las conexiones de consola (versión de sistema operativo, idioma, SKU y arquitectura; memoria del sistema, número de procesadores lógicos, identificador de sitio de conexión, versiones instaladas de .NET y paquetes de idioma de la consola)
 
 ##  <a name="bkmk_level2"></a> Nivel 2: Mejorado
 El nivel Mejorado es el valor predeterminado después de que finalice la instalación. Este nivel incluye datos que se han recopilado en el nivel Básico, datos específicos de característica (frecuencia y duración de uso), configuración de cliente de Configuration Manager (nombre de componente, estado y determinadas opciones como intervalos de sondeo) e información básica sobre las actualizaciones de software.

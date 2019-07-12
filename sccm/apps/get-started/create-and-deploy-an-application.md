@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 838a1dffd5a84544259d26cc8d58eb843cc57d0f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 979409f34e4c32ce812f2a84ce062d2312a85d3c
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56141075"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676135"
 ---
 # <a name="create-and-deploy-an-application-with-system-center-configuration-manager"></a>Crear e implementar una aplicación con System Center Configuration Manager
 
@@ -55,7 +55,7 @@ Asegúrese de revisar la información del tema [Introducción a la administraci�
 
 3. En la página **General** del **Asistente para crear aplicaciones**, seleccione **Detectar automáticamente la información acerca de esta aplicación a partir de archivos de instalación**. Esto rellenará previamente parte de la información del asistente con la información extraída del archivo .msi de instalación. A continuación, especifique la siguiente información:  
 
-   -   **Tipo**: elija **Windows Installer (archivo \*.msi)**.  
+   -   **Tipo**: elija **Windows Installer (archivo \*.msi)** .  
 
    -   **Ubicación**: escriba la ubicación (o elija **Examinar** para seleccionar la ubicación) del archivo de instalación **Contoso.msi**. Tenga en cuenta que se debe especificar la ubicación con el formato *\\\Servidor\Recurso compartido\Archivo* para que Configuration Manager busque los archivos de instalación.  
 
@@ -88,7 +88,7 @@ Ahora que ha creado una aplicación, puede refinar la configuración de la aplic
 
  En el cuadro de diálogo **<Contoso\> Propiedades de la aplicación**, verá muchos de los elementos que se pueden configurar para restringir el comportamiento de la aplicación. Para obtener detalles de todas las opciones que puede configurar, vea [Crear aplicaciones](../../apps/deploy-use/create-applications.md). En este ejemplo, solo cambiará algunas propiedades del tipo de implementación de la aplicación.  
 
- Elija la pestaña **Tipos de implementación** > **Aplicación Contoso** Tipo de implementación > **Editar**.  
+ Elija la pestaña **Tipos de implementación** > **Aplicación Contoso** Tipo de implementación > **Editar**. 
 
 Verá un cuadro de diálogo como este:  
 
@@ -190,9 +190,9 @@ Use los datos de la sección **Supervisar la aplicación** siguiente para ver el
 
     -   **En curso**: la aplicación no ha terminado de instalarse.  
 
-    -   **Error**: se ha producido un error al instalar la aplicación en los equipos indicados. También se muestra información adicional sobre el error.  
+    -   **Error**: error al instalar la aplicación en los equipos indicados. También se muestra información adicional sobre el error.  
 
-    -   **Requisitos no cumplidos**: no se ha realizado un intento de instalación en los dispositivos indicados porque estos no cumplían con los requisitos que se han configurado (en este ejemplo, porque no ejecutan Windows 10).  
+    -   **Requisitos no cumplidos**: no se realizó un intento de instalación en los dispositivos indicados porque estos no cumplían con los requisitos que se han configurado (en este ejemplo, porque no ejecutan Windows 10).  
 
     -   **Desconocido**: Configuration Manager no pudo notificar el estado de la implementación. Consulte de nuevo más tarde.  
 

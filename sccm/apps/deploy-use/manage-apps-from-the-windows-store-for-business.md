@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5178a84443779384e3223998ab8336b46c2d4d0
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: 41fb296f45b54723c59c7d6fe803916af95752ad
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176896"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675849"
 ---
 # <a name="manage-apps-from-the-microsoft-store-for-business-with-configuration-manager"></a>Administración de aplicaciones desde Microsoft Store para Empresas con Configuration Manager
 
@@ -164,7 +164,7 @@ Para cada aplicación de la tienda que administre, puede ver la información sig
 
 Después de implementar aplicaciones en línea, las actualizaciones de esa aplicación provienen directamente de Microsoft Store. Además, Configuration Manager no comprueba la compatibilidad de versión de las aplicaciones en línea, al igual que Windows informa de la aplicación como instalada.  
 
-Al implementar aplicaciones sin conexión en dispositivos Windows 10 con el cliente de Configuration Manager, no permita a los usuarios actualizar aplicaciones externas en implementaciones de Configuration Manager. El control de las actualizaciones de las aplicaciones sin conexión es especialmente importante en entornos de varios usuarios como clases. Una opción para deshabilitar Microsoft Store es mediante la [directiva de grupo](https://docs.microsoft.com/windows/configuration/stop-employees-from-using-microsoft-store#a-href-idblock-store-group-policyablock-microsoft-store-using-group-policy). 
+Al implementar aplicaciones sin conexión en dispositivos Windows 10 con el cliente de Configuration Manager, no permita a los usuarios actualizar aplicaciones externas en implementaciones de Configuration Manager. El control de las actualizaciones de las aplicaciones sin conexión es especialmente importante en entornos de varios usuarios como clases. Una opción para deshabilitar Microsoft Store es mediante la [directiva de grupo](/windows/configuration/stop-employees-from-using-microsoft-store#block-microsoft-store-using-group-policy). 
 
 Después de que el administrador de Microsoft Store para Empresas compre una aplicación sin conexión, no publique la aplicación a los usuarios a través de la tienda. Esta configuración garantiza que los usuarios no puedan instalar o actualizar en línea. Los usuarios solo reciben las actualizaciones de aplicaciones sin conexión a través de Configuration Manager. 
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0982c2096d835bc46d92ef473f5e9878657b22b2
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: cb6b3c800a3083caa3e053e920afc1367a311f67
+ms.sourcegitcommit: 9670e11316c9ec6e5f78cd70c766bbfdf04ea3f9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176956"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67818130"
 ---
 # <a name="pki-certificate-requirements-for-system-center-configuration-manager"></a>Requisitos de certificados PKI para System Center Configuration Manager
 
@@ -43,12 +43,6 @@ Para obtener información sobre el uso de certificados Cryptography API: Next Ge
 > En la mayoría de los casos, el cambio a certificados SHA-2 no afecta a las operaciones. Para obtener más información, vea [Windows Enforcement of SHA1 certificates](http://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-sha1-certificates.aspx) (Cumplimiento de certificados SHA1 de Windows).
 
  A excepción de los certificados de cliente que System Center Configuration Manager inscribe en dispositivos móviles y equipos Mac, los certificados que Microsoft Intune crea automáticamente para administrar dispositivos móviles, y los certificados que System Center Configuration Manager instala en equipos basados en AMT, puede usar cualquier PKI para crear, implementar y administrar los certificados siguientes. Sin embargo, cuando utilice Servicios de certificados de Active Directory y plantillas de certificado, esta solución PKI de Microsoft puede facilitar la administración de los certificados. Use la columna **Plantilla de certificado de Microsoft para usar** en las tablas siguientes para identificar la plantilla de certificado que mejor satisfaga sus requisitos de certificado. Solo una entidad de certificación (CA) empresarial que se ejecute en las ediciones Enterprise o Datacenter del sistema operativo del servidor, como Windows Server 2008 Enterprise y Windows Server 2008 Datacenter, puede usar certificados basados en plantilla.  
-
-> [!IMPORTANT]
->  Cuando utilice una entidad de certificación empresarial y plantillas de certificados, no utilice las plantillas de la versión 3. Estas plantillas de certificado crean certificados que no son compatibles con System Center Configuration Manager. En su lugar, utilice las plantillas de versión 2 siguiendo las instrucciones siguientes:  
-> 
-> - Para una entidad de certificación en Windows Server 2012: En la pestaña **Compatibilidad** de las propiedades de la plantilla de certificados, especifique **Windows Server 2003** para la opción **Entidad de certificación** y **Windows XP / Server 2003** para la opción **Destinatario del certificado**.  
->   -   Para una entidad de certificación en Windows Server 2008: cuando duplique una plantilla de certificado, mantenga la selección predeterminada de **Windows Server 2003 Enterprise** cuando se le solicite en el cuadro de diálogo emergente **Plantilla duplicada**. No seleccione **Windows Server 2008, Enterprise Edition**.  
 
  Consulte las secciones siguientes para ver los requisitos de certificado.  
 

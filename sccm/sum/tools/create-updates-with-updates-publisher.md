@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec448f0d2752cda2509b6daa0302ff521044bef4
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: e60ce54c5f792f7ea9c7a6c6d05b32c79c1e9b8d
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65493754"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678785"
 ---
 # <a name="create--software-updates-and-update-bundles-with-updates-publisher"></a>Crear actualizaciones de software y actualizar agrupaciones con Updates Publisher
 
@@ -47,7 +47,7 @@ Dado que estos dos asistentes tienen un flujo de trabajo similar, el procedimien
 
    -   Especifique los argumentos de línea de comandos necesarios para instalar la actualización de software.
 
-       -   Los archivos y las revisiones (archivos .MSI y .MSP) de Windows Installer establecen automáticamente estos valores. Para estos tipos de archivos, los argumentos deben especificarse como **\[nombre\]=\[valor\]**. Además, todas las opciones que empiezan por un **/** (como **/qn**) no son compatibles con actualizaciones de software de .MSI o .MSP.
+       -   Los archivos y las revisiones (archivos .MSI y .MSP) de Windows Installer establecen automáticamente estos valores. Para estos tipos de archivos, los argumentos deben especificarse como **\[nombre\]=\[valor\]** . Además, todas las opciones que empiezan por un **/** (como **/qn**) no son compatibles con actualizaciones de software de .MSI o .MSP.
 
        -   Para actualizaciones de .EXE, son válidos todos los argumentos.
 
@@ -61,7 +61,7 @@ Dado que estos dos asistentes tienen un flujo de trabajo similar, el procedimien
 
    - **Descripción**: descripción detallada de la actualización. Puede incluir lo que instala la actualización, además de cómo y cuándo se debe usar.
 
-     **Clasificación**: estas son algunas descripciones frecuentes para las distintas clasificaciones.
+   **Clasificación**: estas son algunas descripciones frecuentes para las distintas clasificaciones.
 
    - **Actualización**: actualización de una aplicación o un archivo que está instalado actualmente.
 
@@ -77,30 +77,30 @@ Dado que estos dos asistentes tienen un flujo de trabajo similar, el procedimien
 
    - **Herramienta**: especifica una herramienta o característica que ayuda a realizar una o varias tareas.
 
-     -   **Controlador**: actualización del software de controlador.
+   - **Controlador**: actualización del software de controlador.
 
    **Proveedor**: especifica un proveedor para actualización. Puede usar la lista desplegable para usar valores de actualizaciones que se encuentran en el repositorio. Cuando especifique un proveedor, el asistente crea una carpeta con el nombre del proveedor en **Todas las actualizaciones de software** en el **área de trabajo Actualizaciones** si esa carpeta no existe ya. Los siguientes son nombres reservados de Windows Server Update Services (WSUS) que no se pueden especificar para actualizaciones creadas por el usuario:
-   >*   Microsoft Corporation
-   >*   Microsoft
-   >*   Actualizar
-   >*   Actualización de software
-   >*   Herramientas
-   >*   Herramienta
-   >*   Crítica
-   >*   Actualizaciones críticas
-   >*   Seguridad
-   >*   Actualizaciones de seguridad
-   >*   Feature Pack
-   >*   Paquete acumulativo de actualizaciones
-   >*   Service Pack
-   >*   Controlador
-   >*   Actualización de controlador
-   >*   Agrupación
-   >*   Actualización de agrupación
+   - Microsoft Corporation
+   - Microsoft
+   - Actualizar
+   - Actualización de software
+   - Herramientas
+   - Herramienta
+   - Crítica
+   - Actualizaciones críticas
+   - Seguridad
+   - Actualizaciones de seguridad
+   - Feature Pack
+   - Paquete acumulativo de actualizaciones
+   - Service Pack
+   - Controlador
+   - Actualización de controlador
+   - Agrupación
+   - Actualización de agrupación
 
-**Producto**: especifique el tipo de producto al que se destina la actualización. Puede usar la lista desplegable para usar valores de actualizaciones que se encuentran en el repositorio. La misma lista de nombres reservados de WSUS que no se pueden usar con **Proveedor**, tampoco se pueden usar con **Producto**.
+   **Producto**: especifique el tipo de producto al que se destina la actualización. Puede usar la lista desplegable para usar valores de actualizaciones que se encuentran en el repositorio. La misma lista de nombres reservados de WSUS que no se pueden usar con **Proveedor**, tampoco se pueden usar con **Producto**.
 
- **URL de información adicional**: especifique la dirección URL donde se encuentra más información sobre esta actualización. Debe usar letras minúsculas en **https** o **http** al escribir esta dirección URL.
+   **URL de información adicional**: especifique la dirección URL donde se encuentra más información sobre esta actualización. Debe usar letras minúsculas en **https** o **http** al escribir esta dirección URL.
 
 4. En la página **Información opcional**, puede configurar detalles que ofrezcan información adicional sobre la actualización.
 

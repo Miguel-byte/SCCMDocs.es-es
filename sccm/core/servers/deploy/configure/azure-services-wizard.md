@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6d7acf1d5c73c59f2ce1e6d2b7f3f7354e21979
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: 1e6ef01d38b9359bbb82449ad045312e58646475
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67251880"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676694"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>Configuración de servicios de Azure para utilizarlos con Configuration Manager
 
@@ -107,11 +107,11 @@ Al configurar Upgrade Readiness o el conector de Log Analytics, conceda permisos
 
 ## <a name="start-the-azure-services-wizard"></a>Inicio del Asistente para servicios de Azure
 
-1.  En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Cloud Services** y haga clic en el nodo **Servicios de Azure**.  
+1. En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Cloud Services** y haga clic en el nodo **Servicios de Azure**.  
 
-2.  En la pestaña **Inicio** de la cinta, en el grupo **Servicios de Azure**, haga clic en **Configurar servicios de Azure**.  
+2. En la pestaña **Inicio** de la cinta, en el grupo **Servicios de Azure**, haga clic en **Configurar servicios de Azure**.  
 
-3.  En la página **Servicios de Azure** del Asistente para servicios de Azure:  
+3. En la página **Servicios de Azure** del Asistente para servicios de Azure:  
 
     1. Especifique un **Nombre** para el objeto en Configuration Manager.  
 
@@ -180,7 +180,7 @@ Haga clic en **Aceptar** para crear la aplicación web en Azure AD y cerrar el c
 
 
 ### <a name="native-client-app"></a>Aplicación cliente nativa
-    
+
 Esta aplicación es el tipo *Nativa* de Azure AD, también denominada aplicación cliente en Configuration Manager.
 
 #### <a name="client-app-dialog"></a>Cuadro de diálogo Aplicación cliente
@@ -261,11 +261,11 @@ El diagrama siguiente es un flujo de datos conceptual para la interacción entre
 
 ![Diagrama de flujo de datos de Configuration Manager con Azure AD y Cloud Management](media/aad-auth.png)
 
-1.  El administrador de Configuration Manager importa o crea las aplicaciones cliente y de servidor en Azure AD.  
+1. El administrador de Configuration Manager importa o crea las aplicaciones cliente y de servidor en Azure AD.  
 
-2.  Configuration Manager ejecuta el método de detección de usuarios de Azure AD. El sitio usa el token de aplicación de servidor de Azure AD para realizar consultas de objetos de usuario en Microsoft Graph.  
+2. Configuration Manager ejecuta el método de detección de usuarios de Azure AD. El sitio usa el token de aplicación de servidor de Azure AD para realizar consultas de objetos de usuario en Microsoft Graph.  
 
-3.  El sitio almacena datos sobre los objetos de usuario. Para obtener más información, vea [Detección de usuarios de Azure AD](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc).  
+3. El sitio almacena datos sobre los objetos de usuario. Para obtener más información, vea [Detección de usuarios de Azure AD](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc).  
 
 4.  El cliente de Configuration Manager solicita el token de usuario de Azure AD. El cliente realiza la notificación con el id. de aplicación de la aplicación cliente de Azure AD y la aplicación de servidor como público. Para obtener más información, vea [Notificaciones de tokens de seguridad de Azure AD](/azure/active-directory/develop/authentication-scenarios#claims-in-microsoft-identity-platform-security-tokens).  
 

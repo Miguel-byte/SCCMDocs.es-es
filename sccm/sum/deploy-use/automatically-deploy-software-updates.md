@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1b77b4c35cfadd3e0e48ddec99344745f402d66
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 8a7cd2e499ac55f9a1210d4f3309b6e0b6cefe16
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500250"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678195"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Implementar actualizaciones de software automáticamente  
 
@@ -71,8 +71,8 @@ Las actualizaciones de software se pueden aprobar e implementar automáticamente
         > [!IMPORTANT]  
         >  Cuando implemente actualizaciones de definiciones, establezca el nivel de detalle en **Solo error** para que el cliente notifique un mensaje de estado solo cuando se produzca un error en la actualización de definiciones. De lo contrario, el número de mensajes de estado que notifique el cliente podría afectar al rendimiento en el servidor del sitio.  
         
-> [!NOTE]  
-> El nivel de detalle **Solo error** no envía los mensajes de estado de cumplimiento requeridos para el seguimiento de los reinicios pendientes.
+        > [!NOTE]  
+        > El nivel de detalle **Solo error** no envía los mensajes de estado de cumplimiento requeridos para el seguimiento de los reinicios pendientes.
 
     -   **Configuración de términos de licencia**: especifique si quiere implementar automáticamente las actualizaciones de software con los términos de licencia asociados. Algunas actualizaciones de software incluyen términos de licencia. Cuando se implementan automáticamente actualizaciones de software, no se muestran los términos de licencia, y no se da la opción de aceptarlos. Puede elegir implementar automáticamente todas las actualizaciones de software independientemente de si tienen términos de licencia asociados, o bien implementar solo las actualizaciones que no tengan términos de licencia asociados.  
 

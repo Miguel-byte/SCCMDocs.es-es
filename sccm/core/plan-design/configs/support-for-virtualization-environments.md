@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebf07aa7fba1a017821eb63a57f8c721b4a9860b
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 313f49804bb526d3a1e8d208b8efdc849d674e2e
+ms.sourcegitcommit: 20bbb870baf624c7809d3972f2d09a8d2df79cda
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499414"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67623361"
 ---
 # <a name="support-for-virtualization-environments-with-configuration-manager"></a>Compatibilidad con entornos de virtualización con Configuration Manager
 
@@ -39,7 +39,7 @@ Por ejemplo, puede usar Microsoft Hyper-V Server 2012 para hospedar una máquina
 - Windows Server 2008 R2  
 
 #### <a name="bkmk_note1"></a> Nota 1: Virtualización anidada
-Configuration Manager no admite la [virtualización anidada](https://docs.microsoft.com/windows-server/virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows#BKMK_nested), que es nueva en Windows Server 2016.
+Configuration Manager no admite la [virtualización anidada](/windows-server/virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows#nested-virtualization-new), que es nueva en Windows Server 2016.
 
 
 ### <a name="virtualization-environment-support"></a>Compatibilidad del entorno de virtualización

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf0b57ad1753d797b163b0016517cdad09459013
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: 5e4585d21b06bbfaa659fe09693af8cff109a1b6
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67251623"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676814"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Aspectos básicos de la administración de contenido en Configuration Manager
 
@@ -152,13 +152,13 @@ Para obtener más información, consulte [Almacenamiento en caché del mismo niv
 
 Cuando un cliente necesita contenido, realiza una solicitud de ubicación de contenido al punto de administración. El punto de administración devuelve una lista de ubicaciones de origen que son válidas para el contenido solicitado. Esta lista varía según el escenario específico, las tecnologías usadas, el diseño del sitio, los grupos de límites y la configuración de implementación. La lista siguiente contiene todas las posibles ubicaciones de orígenes de contenido que un cliente puede usar en el orden en que se prioricen:  
 
-1.  El punto de distribución en el mismo equipo que el cliente
-2.  Un origen del mismo nivel en la misma subred de red
-3.  Un punto de distribución en la misma subred de red
-4.  Un origen del mismo nivel en el mismo grupo de límites
-5.  Un punto de distribución en el grupo de límites actual
-6.  Un punto de distribución en un grupo de límites próximo configurado como reserva
-9.  Un punto de distribución en el grupo de límites del sitio predeterminado 
+1. El punto de distribución en el mismo equipo que el cliente
+2. Un origen del mismo nivel en la misma subred de red
+3. Un punto de distribución en la misma subred de red
+4. Un origen del mismo nivel en el mismo grupo de límites
+5. Un punto de distribución en el grupo de límites actual
+6. Un punto de distribución en un grupo de límites próximo configurado como reserva
+9. Un punto de distribución en el grupo de límites del sitio predeterminado 
 10. El servicio en la nube de Windows Update
 11. Un punto de distribución accesible desde Internet
 12. Un punto de distribución de nube en Azure

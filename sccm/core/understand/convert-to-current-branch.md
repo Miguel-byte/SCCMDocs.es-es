@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6efa58c2257730de0703d850b814f871684b72c6
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 20b50fcd54513ccd780a7da173766fb177bf5da7
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56129041"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676129"
 ---
 # <a name="upgrade-the-long-term-servicing-branch-to-the-current-branch"></a>Actualizar la rama de mantenimiento a largo plazo a la rama actual
 
@@ -28,7 +28,7 @@ Si cuenta con un acuerdo Software Assurance actual (o derechos de licencia simil
 
 Si tiene varios sitios, basta con convertir el sitio de nivel superior de la jerarquía. Una vez convertido el sitio de nivel superior:
 - Se convierten automáticamente los sitios primarios secundarios.
--   Debe actualizar manualmente los sitios secundarios desde la consola de Configuration Manager.
+- Debe actualizar manualmente los sitios secundarios desde la consola de Configuration Manager.
 
 ## <a name="run-setup-to-convert-the-long-term-servicing-branch"></a>Ejecutar el programa de instalación para convertir la Rama de mantenimiento a largo plazo
 En el sitio de nivel superior de la jerarquía puede ejecutar el programa de instalación de Configuration Manager desde el medio de línea base correspondiente y seleccionar **Mantenimiento del sitio**.  Después, cuando aparezca la página de licencias, seleccione la opción de la Rama actual y complete el asistente.

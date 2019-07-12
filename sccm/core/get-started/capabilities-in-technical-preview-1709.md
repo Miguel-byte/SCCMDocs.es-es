@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13db7793b0d5a5b4f0845af21f976089205fdc7d
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: a88052e0d799b324ddbed6acbdf0b25a97f4d80c
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286165"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677359"
 ---
 # <a name="capabilities-in-technical-preview-1709-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1709 para System Center Configuration Manager
 
@@ -63,8 +63,8 @@ Para minimizar el riesgo de compatibilidad, los perfiles VPN existentes no se mo
 
 Cree un perfil VPN siguiendo el proceso habitual. Tenga en cuenta que la primera página de las opciones del asistente de perfiles VPN ha cambiado.
 
-1.  Vaya a **Activos y compatibilidad** > **Introducción** > **Configuración de cumplimiento** > **Acceso a los recursos de la compañía** > **Perfiles de VPN** y elija **Crear perfil de VPN**.
-2.  Escriba un nombre en la página **General** y elija una de las opciones siguientes en **Especifique el tipo de perfil VPN que desea crear**:
+1. Vaya a **Activos y compatibilidad** > **Introducción** > **Configuración de cumplimiento** > **Acceso a los recursos de la compañía** > **Perfiles de VPN** y elija **Crear perfil de VPN**.
+2. Escriba un nombre en la página **General** y elija una de las opciones siguientes en **Especifique el tipo de perfil VPN que desea crear**:
 
     - Windows 10  
     - Windows 8.1  
@@ -73,8 +73,8 @@ Cree un perfil VPN siguiendo el proceso habitual. Tenga en cuenta que la primera
     - Android  
     - Android for Work  
 
-3.  Si elige **Windows 8.1**, también tiene la opción de **crear un perfil** o de **importar uno desde un archivo**.
-4.  Siga los pasos del asistente para acabar de crear el perfil.
+3. Si elige **Windows 8.1**, también tiene la opción de **crear un perfil** o de **importar uno desde un archivo**.
+4. Siga los pasos del asistente para acabar de crear el perfil.
 
 A medida que seleccione distintas plataformas, observe que solo se muestran las opciones relevantes para la plataforma seleccionada.
 

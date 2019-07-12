@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b3ac315806edd90e85fe654039d620ec0097d1b
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: d7c6fcdf0113dd9fa83d2d303661ad5690362715
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176668"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678729"
 ---
 # <a name="device-guard-management-with-configuration-manager"></a>Administración de Device Guard con Configuration Manager
 
@@ -38,8 +38,8 @@ Puede usar Configuration Manager para implementar una directiva de control de ap
 
 Configure uno de los siguientes modos:
 
-1.  **Cumplimiento habilitado**: solo se pueden ejecutar archivos ejecutables de confianza.
-2.  **Solo auditoría**: permite la ejecución de todos los archivos ejecutables, pero registra los archivos ejecutables que se ejecutan en el registro de eventos del cliente local.
+1. **Cumplimiento habilitado**: solo se pueden ejecutar archivos ejecutables de confianza.
+2. **Solo auditoría**: permite la ejecución de todos los archivos ejecutables, pero registra los archivos ejecutables que se ejecutan en el registro de eventos del cliente local.
 
 >[!TIP]
 >En esta versión de Configuration Manager, Device Guard es una característica de versión preliminar. Para habilitarla, vea [Características de versión preliminar en System Center Configuration Manager](/sccm/core/servers/manage/pre-release-features).
@@ -77,10 +77,10 @@ Antes de configurar o implementar directivas de Windows Defender Application Con
 - Independientemente del modo de cumplimiento que seleccione, al implementar una directiva de Windows Defender Application Control, los equipos cliente no pueden ejecutar aplicaciones de HTML con la extensión .hta.
 
 ## <a name="how-to-create-a-windows-defender-application-control-policy"></a>Creación de directivas de Windows Defender Application Control
-1.  En la consola de Configuration Manager, haga clic en **Activos y compatibilidad**.
-2.  En el área de trabajo **Activos y compatibilidad**, expanda **Endpoint Protection** y haga clic en **Control de aplicaciones de Windows Defender**.
-3.  En el grupo **Crear** de la pestaña **Inicio**, haga clic en **Crear directiva de control de aplicaciones**.
-4.  En la página **General** del **Asistente para crear directivas de Control de aplicaciones**, especifique la configuración siguiente:
+1. En la consola de Configuration Manager, haga clic en **Activos y compatibilidad**.
+2. En el área de trabajo **Activos y compatibilidad**, expanda **Endpoint Protection** y haga clic en **Control de aplicaciones de Windows Defender**.
+3. En el grupo **Crear** de la pestaña **Inicio**, haga clic en **Crear directiva de control de aplicaciones**.
+4. En la página **General** del **Asistente para crear directivas de Control de aplicaciones**, especifique la configuración siguiente:
     - **Nombre**: escriba un nombre único para esta directiva de Windows Defender Application Control. 
     - **Descripción**: si quiere, escriba una descripción de la directiva que lo ayude a identificarla en la consola de Configuration Manager.
     - **Fuerce un reinicio de dispositivos para que esta directiva se pueda aplicar a todos los procesos**: después de procesar la directiva en un equipo cliente, se programa un reinicio en el cliente según la opción **Configuración de cliente** para **Reinicio de equipo**.
@@ -89,22 +89,22 @@ Antes de configurar o implementar directivas de Windows Defender Application Con
     - **Modo de cumplimiento**: elija uno de los siguientes métodos de cumplimiento de Device Guard en el equipo cliente.
         - **Cumplimiento habilitado**: solo se permiten archivos ejecutables de confianza.
         - **Solo auditoría**: permite la ejecución de todos los archivos ejecutables, pero registra los archivos ejecutables que se ejecutan en el registro de eventos del cliente local.
-5.  En la pestaña **Inclusiones** del **Asistente para crear directivas de Control de aplicaciones**, elija si quiere **Autorizar el software de confianza para Intelligent Security Graph**.
+5. En la pestaña **Inclusiones** del **Asistente para crear directivas de Control de aplicaciones**, elija si quiere **Autorizar el software de confianza para Intelligent Security Graph**.
 6. Haga clic en **Agregar** si quiere agregar la relación de confianza a determinados archivos o carpetas en los equipos. En el cuadro de diálogo **Agregar archivo o carpeta de confianza**, puede especificar un archivo local o una ruta de acceso de carpeta de confianza. También puede especificar una ruta de acceso de archivo o carpeta en un dispositivo remoto en el que tenga permiso para conectarse. Cuando agregue confianza para determinados archivos y carpetas en una directiva de control de aplicaciones de Windows Defender, puede realizar lo siguiente:
     - Solucionar problemas con los comportamientos de instalador administrado
     - Confiar en aplicaciones de línea de negocio que no se pueden implementar con Configuration Manager
     - Confiar en aplicaciones que se incluyen en una imagen de implementación de sistema operativo 
-8.  Haga clic en **Siguiente** para completar el asistente.
+8. Haga clic en **Siguiente** para completar el asistente.
 
 >[!IMPORTANT]
 >La inclusión de carpetas o archivos de confianza solo se admite en los equipos cliente que ejecutan la versión 1706 o posterior del cliente de Configuration Manager. Si las reglas de inclusión están englobadas en una directiva de Windows Defender Application Control y esta última se implementa en un equipo cliente que ejecuta una versión anterior del cliente de Configuration Manager, no podrá aplicarse. Actualizar estos clientes anteriores resolverá este problema. Todavía se pueden aplicar directivas que no engloban ninguna regla de inclusión en las versiones anteriores del cliente de Configuration Manager.
 
 ## <a name="how-to-deploy-a-windows-defender-application-control-policy"></a>Implementación de directivas de Windows Defender Application Control
-1.  En la consola de Configuration Manager, haga clic en **Activos y compatibilidad**.
-2.  En el área de trabajo **Activos y compatibilidad**, expanda **Endpoint Protection** y haga clic en **Control de aplicaciones de Windows Defender**.
-3.  En la lista de directivas, seleccione la que quiera implementar y luego, en el grupo **Implementación** de la pestaña **Inicio**, haga clic en **Implementar la directiva de control de aplicaciones**.
-4.  En el cuadro de diálogo **Implementar la directiva de control de aplicaciones**, seleccione la colección en la que quiere implementar la directiva. A continuación, configure una programación para determinar cuándo los clientes evalúan la directiva. Por último, seleccione si el cliente puede evaluar la directiva fuera de las ventanas de mantenimiento configuradas.
-5.  Cuando haya terminado, haga clic en **Aceptar** para implementar la directiva. 
+1. En la consola de Configuration Manager, haga clic en **Activos y compatibilidad**.
+2. En el área de trabajo **Activos y compatibilidad**, expanda **Endpoint Protection** y haga clic en **Control de aplicaciones de Windows Defender**.
+3. En la lista de directivas, seleccione la que quiera implementar y luego, en el grupo **Implementación** de la pestaña **Inicio**, haga clic en **Implementar la directiva de control de aplicaciones**.
+4. En el cuadro de diálogo **Implementar la directiva de control de aplicaciones**, seleccione la colección en la que quiere implementar la directiva. A continuación, configure una programación para determinar cuándo los clientes evalúan la directiva. Por último, seleccione si el cliente puede evaluar la directiva fuera de las ventanas de mantenimiento configuradas.
+5. Cuando haya terminado, haga clic en **Aceptar** para implementar la directiva. 
 
 <!--Reworked article to put this inline while working on VSO 1355092
 ### Restarting the device after deploying the policy
@@ -126,8 +126,8 @@ Para supervisar el procesamiento de una directiva de Windows Defender Applicatio
 
 Para comprobar el software específico que se bloquea o audita, vea los siguientes registros de eventos de cliente local:
 
-1.  Para bloquear y auditar archivos ejecutables, utilice **Registros de aplicaciones y servicios** > **Microsoft** > **Windows** > **Integridad de código** > **Operativo**.
-2.  Para bloquear y auditar Windows Installer y archivos de script, utilice **Registros de aplicaciones y servicios** > **Microsoft** > **Windows** > **AppLocker** > **MSI y script**.
+1. Para bloquear y auditar archivos ejecutables, utilice **Registros de aplicaciones y servicios** > **Microsoft** > **Windows** > **Integridad de código** > **Operativo**.
+2. Para bloquear y auditar Windows Installer y archivos de script, utilice **Registros de aplicaciones y servicios** > **Microsoft** > **Windows** > **AppLocker** > **MSI y script**.
 
 <!--Reworked article to put this inline while working on VSO 1355092
 ## Automatically let software run if it is trusted by Intelligent Security Graph

@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89ba5d63b1a033db49da73cc0df3fa0a41f2b696
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 31f47fa04275f2be4efa1558e1d816f74b05d369
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285850"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677311"
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>Novedades de la versión 1702 de System Center Configuration Manager
 
@@ -50,14 +50,14 @@ La versión 1702 anula la compatibilidad de los siguientes productos:
 
 ### <a name="improvements-for-in-console-search"></a>Mejoras de búsqueda en consola
 A continuación se presentan mejoras en el uso de la búsqueda en la consola de Configuration Manager:
- - **Ruta del objeto:**  
+- **Ruta del objeto:**  
   Ahora muchos objetos admiten una columna denominada **Ruta del objeto**.  Cuando busca e incluye esta columna en los resultados mostrados, puede ver la ruta de cada objeto. Por ejemplo, si ejecuta una búsqueda de aplicaciones en el nodo Aplicaciones y también está buscando subnodos, la columna *Ruta del objeto* del panel de resultados le mostrará la ruta de acceso a cada objeto devuelto.   
 
 - **Conservación del texto de búsqueda:**  
   Ahora, cuando escribe texto en el cuadro de texto de búsqueda y luego cambia entre buscar en un subnodo y el nodo actual, el texto que escribió se conserva y permanece disponible para una nueva búsqueda sin tener que volver a escribirlo.
 
 - **Conservación de su decisión para buscar subnodos:**  
- La opción que elija para buscar el *nodo actual* o *todos los subnodos* ahora se mantiene cuando cambia el nodo en el que está trabajando. Este nuevo comportamiento significa que no necesita restablecer constantemente la decisión al desplazarse por la consola. De manera predeterminada, cuando abre la consola, la opción es la de buscar solo en el nodo actual.
+  La opción que elija para buscar el *nodo actual* o *todos los subnodos* ahora se mantiene cuando cambia el nodo en el que está trabajando. Este nuevo comportamiento significa que no necesita restablecer constantemente la decisión al desplazarse por la consola. De manera predeterminada, cuando abre la consola, la opción es la de buscar solo en el nodo actual.
 
 
 ### <a name="send-feedback-from-the-configuration-manager-console"></a>Enviar comentarios desde la consola de Configuration Manager

@@ -12,12 +12,12 @@ manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0bdc575819c68876093b452e1f5662cd94b3c28e
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 4527a67b7a08d7f5b9fd38d2edb223a9de823436
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56127905"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677630"
 ---
 # <a name="capabilities-in-technical-preview-1606-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1606 para System Center Configuration Manager
 
@@ -28,7 +28,9 @@ En este artículo se presentan las características disponibles en Technical Pre
 **Problemas conocidos de esta Technical Preview:**  
 *  Cuando se actualiza de Technical Preview 1604 a 1605 y luego a la versión 1606, podría producirse un error en la actualización y se registraría un error similar al siguiente en **cmupdate.log**:
 
-       ERROR: Failed to execute SQL Server command:  ~ ~-- Create site boundary group ~IF  dbo.fnIsCasOrStandalonePrimary() = 1 ~BEGIN ~   PRINT N'Create site boundary group during upgrade' ~   EXEC dbo.spBuildDefaultBoundaryGroups @UserName = N'SYSTEM' ~END          
+    ```
+    ERROR: Failed to execute SQL Server command:  ~ ~-- Create site boundary group ~IF  dbo.fnIsCasOrStandalonePrimary() = 1 ~BEGIN ~   PRINT N'Create site boundary group during upgrade' ~   EXEC dbo.spBuildDefaultBoundaryGroups @UserName = N'SYSTEM' ~END          
+    ```
 
     Si ocurre esto, en el nodo **Actualizaciones y mantenimiento**, haga clic en **Buscar actualizaciones** y luego **vuelva a intentar** la instalación de la actualización.
     ***
@@ -162,7 +164,7 @@ La manera más sencilla de exportar la raíz de los certificados de cliente usad
 
 1. En la ventana Ejecutar, escriba **mmc** y presione ENTRAR.
 2. En el menú Archivo de la consola de administración, haga clic en **Agregar o quitar complemento...**
-3. En el cuadro de diálogo Agregar o quitar complementos, haga clic en **Certificados**, **Agregar >**, **Cuenta de equipo**, **Siguiente**, **Equipo local** y, luego, en **Finalizar**. Haga clic en **Aceptar** para cerrar el cuadro de diálogo.
+3. En el cuadro de diálogo Agregar o quitar complementos, haga clic en **Certificados**, **Agregar >** , **Cuenta de equipo**, **Siguiente**, **Equipo local** y, luego, en **Finalizar**. Haga clic en **Aceptar** para cerrar el cuadro de diálogo.
 4. Vaya a **Certificados > Personal > Certificados**.
 5. Haga doble clic en el certificado para la autenticación de cliente en el equipo, haga clic en la pestaña Ruta de certificación y haga doble clic en la entidad de certificación raíz (al principio de la ruta de acceso).
 6.  Haga clic en la pestaña Detalles y luego en **Copiar en archivo...**

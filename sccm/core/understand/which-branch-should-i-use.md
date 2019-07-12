@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0d2bc4c8ae366a5e60e9a7a3100b5a5059c341a
-ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.openlocfilehash: eae027f2f21c8c69e538c5fdfc429f5215bd6436
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67193961"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676149"
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>¿Qué rama de Configuration Manager debo utilizar?
 
@@ -89,7 +89,7 @@ Para instalar LTSB como un sitio nuevo o una actualización de un sitio compatib
 
 
 ### <a name="features-of-the-ltsb"></a>Características de la LTSB
--   Recibe actualizaciones en la consola que ofrecen las revisiones de seguridad importantes.
+- Recibe actualizaciones en la consola que ofrecen las revisiones de seguridad importantes.
 - Proporciona una opción de instalación cuando expira el contrato de SA o los derechos equivalentes para Configuration Manager.
 - Admite la actualización (conversión) a la rama actual cuando tenga un contrato de SA o derechos equivalentes en vigor para Configuration Manager.
 
@@ -101,14 +101,14 @@ La LTSB se basa en la versión 1606 de la rama actual y tiene las siguientes lim
 - No recibe actualizaciones de nuevas características
 - No admite las siguientes funciones: 
    - Adición de una suscripción a Microsoft Intune, que evita el uso de:
-     -  Intune en una configuración de MDM híbrida
+     - Intune en una configuración de MDM híbrida
      - MDM local
-   -    El panel de mantenimiento de Windows 10, los planes de mantenimiento o el canal semianual de Windows 10
+   - El panel de mantenimiento de Windows 10, los planes de mantenimiento o el canal semianual de Windows 10
    - Versiones futuras de la LTSB de Windows 10 y Windows Server
-   -    Asset Intelligence
-   -    Puntos de distribución basados en la nube
-   -    Exchange Online como Exchange Connector
-   -    Ninguna característica de versión preliminar
+   - Asset Intelligence
+   - Puntos de distribución basados en la nube
+   - Exchange Online como Exchange Connector
+   - Ninguna característica de versión preliminar
 
 
 ### <a name="update-options"></a>Opciones de actualización
@@ -119,7 +119,7 @@ La LTSB se basa en la versión 1606 de la rama actual y tiene las siguientes lim
   - [Licencias y ramas para System Center Configuration Manager](learn-more-editions.md)
   - [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#bkmk_Baselines) 
 - No hay ninguna opción para convertir la LTSB en una rama de Technical Preview. Las ramas de Technical Preview son instalaciones independientes que no requieren una licencia.
--   No se puede actualizar una edición de evaluación de la rama actual a una instalación de LTSB.
+- No se puede actualizar una edición de evaluación de la rama actual a una instalación de LTSB.
 
 
 
@@ -150,8 +150,8 @@ Para obtener más información, vea [Technical Preview para System Center Config
 
 
 ### <a name="update-options"></a>Opciones de actualización
--   Puede instalar cualquier actualización en la consola para una nueva versión de rama de Technical Preview.
--   No hay ninguna opción para convertir una rama de Technical Preview a la rama actual o LTSB.
+- Puede instalar cualquier actualización en la consola para una nueva versión de rama de Technical Preview.
+- No hay ninguna opción para convertir una rama de Technical Preview a la rama actual o LTSB.
 
 
 

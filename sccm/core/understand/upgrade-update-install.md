@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bd6abbb6b4a11bb9b412b6a2ad1c2f8e5d648c59
-ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.openlocfilehash: 263ec638afa62cee4f8fce86a9f7b9e35b37f0bb
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67193977"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676045"
 ---
 # <a name="about-upgrade-update-and-install-for-site-and-hierarchy-infrastructure"></a>Acerca de la actualización e instalación para sitios y jerarquía de infraestructura
 
@@ -37,7 +37,7 @@ Para obtener más información, consulte [Upgrade to System Center Configuration
 La *actualización* se usa para instalar actualizaciones en la consola para System Center Configuration Manager, y para actualizaciones fuera de banda que son actualizaciones que no se pueden enviar desde dentro de la consola de Configuration Manager. Las actualizaciones en la consola pueden modificar la versión del sitio de la rama actual (o sitio de vista previa técnica), por lo ejecuta una versión superior. Por ejemplo, si el sitio ejecuta la versión 1806, puede instalar una actualización para la versión 1810. Las actualizaciones también pueden instalar revisiones para un problema conocido sin modificar la versión del sitio.      
 
 Normalmente, las actualizaciones agregan revisiones de seguridad, mejoras de calidad y nuevas características a la implementación existente. Si usa la rama de versión preliminar técnica, una actualización puede instalar una versión más reciente de la versión preliminar técnica.
--   Elija cuándo instalar la actualización en la consola, comenzando por el sitio del nivel superior de la jerarquía.
+- Elija cuándo instalar la actualización en la consola, comenzando por el sitio del nivel superior de la jerarquía.
 - Puede instalar cualquier actualización disponible desde dentro de la consola. Por ejemplo, si su sitio ejecuta la versión 1802 y se ofrecen 1806 y 1810, considere instalar la versión 1810 porque cada versión incluye las características que estaban disponibles primero en las versiones publicadas anteriormente.
 - Después de que se complete una nueva actualización en el sitio de nivel superior, los sitios primarios principales inician automáticamente el proceso de actualización. Sin embargo, puede establecer [Ventanas de servicio](/sccm/core/servers/manage/service-windows) para controlar la temporización de las actualizaciones.
 - Los sitios secundarios no instalan automáticamente las actualizaciones. En su lugar, inicie manualmente la actualización desde dentro de la consola de Configuration Manager.

@@ -12,17 +12,17 @@ ms.prod: configuration-manager
 ms.service: ''
 ms.technology: ''
 ms.assetid: ''
-ms.openlocfilehash: 94513445c8d1849f0304b304b7dd8672c1e50978
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 696c952484b53c186b6f1d4f8e5b711262ded5a8
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67158302"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678010"
 ---
 # <a name="tutorial-enable-co-management-for-new-internet-based-devices"></a>Tutorial: Habilitación de la administración conjunta para nuevos dispositivos basados en Internet
 Con la administración conjunta, puede mantener sus procesos estandarizados para el uso de Configuration Manager para administrar los equipos de su organización. Al mismo tiempo, está invirtiendo en la nube mediante el uso de Intune para la seguridad y el aprovisionamiento moderno. 
 
-En este tutorial, configura la administración conjunta de dispositivos Windows 10 en un entorno en el que utiliza tanto Azure Active Directory (AD) como un AD local, pero no tiene una instancia [híbrida de Azure Active Directory ](https://docs.microsoft.com/azure/active-directory/devices/overview#hybrid-azure-ad-joined-devices) (AD). El entorno de Configuration Manager incluye un único sitio principal con todos los roles de sistema de sitio ubicados en el mismo servidor: el servidor de sitio. Este tutorial comienza con la premisa de que sus dispositivos Windows 10 ya están inscritos en Intune. 
+En este tutorial, configura la administración conjunta de dispositivos Windows 10 en un entorno en el que utiliza tanto Azure Active Directory (AD) como un AD local, pero no tiene una instancia [híbrida de Azure Active Directory ](/azure/active-directory/devices/concept-azure-ad-join-hybrid) (AD). El entorno de Configuration Manager incluye un único sitio principal con todos los roles de sistema de sitio ubicados en el mismo servidor: el servidor de sitio. Este tutorial comienza con la premisa de que sus dispositivos Windows 10 ya están inscritos en Intune. 
 
 Si tiene una instancia híbrida de Azure AD que se une a su AD local con Azure AD, se recomienda seguir nuestro tutorial complementario [Habilitar la administración conjunta para los clientes existentes de Configuration Manager](/sccm/comanage/tutorial-co-manage-clients). 
  
@@ -154,7 +154,7 @@ Los proveedores de certificados públicos normalmente proporcionan instrucciones
 
 6. En la **página Almacén de certificados**, elija **Seleccionar automáticamente el almacén de certificados en base al tipo de certificado** y, a continuación, seleccione **Siguiente**.  
 
-7.  Seleccione **Finalizar**.
+7. Seleccione **Finalizar**.
 
 ### <a name="export-the-certificate"></a>Exportación del certificado
 Exporte el *certificado de autenticación de servidor de CMG* del servidor. La reexportación del certificado lo hace utilizable para su instancia de Cloud Management Gateway en Azure.  
@@ -399,8 +399,10 @@ Por ejemplo, *C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetup
    - **Argumentos de línea de comandos**:  *\<Especifique la línea de comandos **CCMSETUPCMD**. Puede usar la línea de comandos que guardó en la página*  Habilitación  *del Asistente para la configuración de administración conjunta. Esta línea de comandos incluye los nombres de su servicio en la nube y los valores adicionales que permiten a los dispositivos instalar el software de cliente de Configuration Manager. >*  
 
      La estructura de la línea de comandos debe ser similar a este ejemplo, usando solo los parámetros CCMSETUPCMD y SMSSiteCode:  
- 
-         CCMSETUPCMD="CCMHOSTNAME=<ServiceName.CLOUDAPP.NET/CCM_Proxy_MutualAuth/<GUID>" SMSSiteCode="<YourSiteCode>"  
+
+     ```
+     CCMSETUPCMD="CCMHOSTNAME=<ServiceName.CLOUDAPP.NET/CCM_Proxy_MutualAuth/<GUID>" SMSSiteCode="<YourSiteCode>"  
+     ```
 
      > [!TIP]  
      > Si no tiene la línea de comandos disponible, puede ver las propiedades de *CoMgmtSettingsProd* en la consola de Configuration Manager para obtener una copia de la línea de comandos.    

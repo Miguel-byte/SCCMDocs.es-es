@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c82784006e959dc960c0fa3bd80db3cf7705f295
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 4bc8df791ba24a112d8311246a2c3a82b0acd313
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65497417"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676428"
 ---
 # <a name="modify-your-system-center-configuration-manager-infrastructure"></a>Modificar la infraestructura de System Center Configuration Manager
 
@@ -216,7 +216,7 @@ Puede registrar un SPN para la cuenta de servicio SQL Server del servidor de bas
 
 1.  En el menú **Inicio** , haga clic en **Ejecutar**y, a continuación, escriba **cmd** en el cuadro de diálogo **Ejecutar** .  
 
-2.  En el símbolo del sistema, escriba el siguiente comando: **setspn –L &lt;dominio\cuenta de servicio de SQL>**.  
+2.  En el símbolo del sistema, escriba el siguiente comando: **setspn –L &lt;dominio\cuenta de servicio de SQL>** .  
 
 3.  Revise el **ServicePrincipalName** registrado para asegurarse de que se ha creado un SPN válido para el SQL Server.  
 
@@ -226,7 +226,7 @@ Puede registrar un SPN para la cuenta de servicio SQL Server del servidor de bas
 
 2.  Si es necesario, conéctese al dominio del servidor de sitio.  
 
-3.  En el panel de consola, expanda el dominio del servidor de sitio, expanda **DC=&lt;nombre distintivo del servidor\>**, expanda **CN=Users**, haga clic con el botón derecho en **CN=&lt;usuario de cuenta de servicio\>** y, a continuación, haga clic en **Propiedades**.  
+3.  En el panel de consola, expanda el dominio del servidor de sitio, expanda **DC=&lt;nombre distintivo del servidor\>** , expanda **CN=Users**, haga clic con el botón derecho en **CN=&lt;usuario de cuenta de servicio\>** y, a continuación, haga clic en **Propiedades**.  
 
 4.  En el cuadro de diálogo **CN=&lt;usuario de cuenta de servicio\> Propiedades**, revise el valor **servicePrincipalName** para asegurarse de que se ha creado un SPN válido y que se ha asociado con el equipo de SQL Server correcto.  
 
@@ -236,7 +236,7 @@ Puede registrar un SPN para la cuenta de servicio SQL Server del servidor de bas
 
 2.  Abra **Administrador de configuración de SQL Server**.  
 
-3.  Haga clic en **Servicios de SQL Server** y, a continuación, haga doble clic en **SQL Server&lt;NOMBRE DE INSTANCIA\>**.  
+3.  Haga clic en **Servicios de SQL Server** y, a continuación, haga doble clic en **SQL Server&lt;NOMBRE DE INSTANCIA\>** .  
 
 4.  En la pestaña **Iniciar sesión** , seleccione **Esta cuenta**y, a continuación, escriba el nombre de usuario y la contraseña de la cuenta de usuario de dominio creada en el paso 1, o haga clic en **Examinar** para buscar la cuenta de usuario en Servicios de dominio de Active Directory y, a continuación, haga clic en **Aplicar**.  
 

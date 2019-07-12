@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6526d0cb6b6b84afcaa5faeef93cc230a335196f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 784bc115ef61880e4fd30635c60a9dad8be52a6d
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56136786"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676963"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1710-of-system-center-configuration-manager"></a>Niveles de recopilación de datos de uso para diagnóstico de la versión 1710 de System Center Configuration Manager
 
@@ -86,7 +86,7 @@ Para la versión 1710 de System Center Configuration Manager, este nivel incluye
 
      - Fecha de expiración de Software Assurance      
 
-     - Estado y errores de la implementación del paquete de actualización, progreso de la descarga y errores de requisitos previos     
+     - Estado y errores de la implementación del paquete de actualización, progreso de la descarga y errores de requisitos previos 
 
      - Uso del anillo rápido de actualización
 

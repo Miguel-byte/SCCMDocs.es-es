@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3f6b445bb2e84cb7c3f35d81c66038686f2b9833
-ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
+ms.openlocfilehash: b7acec3488d016a309fe2f159d81087d28b795f7
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66715985"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677249"
 ---
 # <a name="plan-a-migration-job-strategy-in-system-center-configuration-manager"></a>Planear una estrategia de trabajo de migración en System Center Configuration Manager
 
@@ -241,7 +241,7 @@ Use trabajos de migración para configurar los datos específicos que quiera mig
 ### <a name="specify-conflict-resolution-for-migrated-data"></a>Especificar la resolución de conflictos para los datos migrados  
  De forma predeterminada, los trabajos de migración no sobrescriben datos en la base de datos de destino a menos que configure el trabajo de migración para omitir o sobrescribir los datos que se migraron anteriormente a la base de datos de destino.  
 
-##  <a name="About_Collection_Migration "></a> Planear trabajos de migración de recopilación  
+##  <a name="About_Collection_Migration"></a> Planear trabajos de migración de recopilación  
  Los trabajos de migración de recopilaciones solo están disponibles cuando se migran datos de una jerarquía de origen que ejecuta una versión admitida de Configuration Manager 2007. Debe especificar una o más recopilaciones para la migración al migrar por recopilación. Para cada recopilación que se especifica, el trabajo de migración selecciona automáticamente todos los objetos relacionados para la migración. Por ejemplo, si selecciona una recopilación específica de usuarios, se identifican los miembros de la recopilación y puede migrar las implementaciones asociadas a esa recopilación. Si lo desea, puede seleccionar otros objetos de implementación asociados a esos miembros para la migración. Todos estos elementos seleccionados se agregan a la lista de objetos que se pueden migrar.  
 
  Cuando se migra una recopilación, System Center Configuration Manager también migra las configuraciones de la recopilación, como ventanas de mantenimiento y variables de la recopilación, pero no puede migran las configuraciones de la recopilación para el aprovisionamiento del cliente de AMT.  

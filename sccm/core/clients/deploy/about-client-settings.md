@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c6bffc94abecb5f700fbb7236c923f26f3a0de0
-ms.sourcegitcommit: 949db4d2af7f605ee40610e45ae9d917b1045772
+ms.openlocfilehash: 2d329f2d0125a168d776b2855b6fd35e7a223111
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314420"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677900"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Información sobre la configuración de cliente en Configuration Manager
 
@@ -658,11 +658,11 @@ Por ejemplo, si la organización no usa las directivas de cumplimiento y quiere 
 
 - Configure el **filtro de aplicación predeterminado**, ya sean **todas** las aplicaciones o solo las **requeridas**.  
 
-    - Centro de software siempre usa la configuración predeterminada. Los usuarios pueden cambiar este filtro, pero el Centro de software no conserva sus preferencias.  
+  - Centro de software siempre usa la configuración predeterminada. Los usuarios pueden cambiar este filtro, pero el Centro de software no conserva sus preferencias.  
 
- - Establezca la **vista de aplicación predeterminada** como **vista de mosaico** o **vista de lista**. 
+- Establezca la **vista de aplicación predeterminada** como **vista de mosaico** o **vista de lista**. 
 
-    - Si un usuario cambia esta configuración, el Centro de software mantiene la preferencia del usuario en el futuro. 
+  - Si un usuario cambia esta configuración, el Centro de software mantiene la preferencia del usuario en el futuro. 
 
 
 ## <a name="software-deployment"></a>Implementación de software  

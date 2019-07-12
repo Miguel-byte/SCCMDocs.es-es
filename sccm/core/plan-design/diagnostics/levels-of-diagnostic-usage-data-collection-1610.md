@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 777237ae657a83da3ff22b540914271b798c1016
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 193ad88be6766c085373185145429d8535655e61
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56121080"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677126"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1610-of-system-center-configuration-manager"></a>Niveles de recopilación de datos de uso para diagnóstico para la versión 1610 de System Center Configuration Manager
 
@@ -43,13 +43,13 @@ A partir de la versión 1610, cambie el nivel de recopilación de datos desde la
 
 
 - Información sobre la instalación:
-    - Compilación, tipo de instalación, paquetes de idioma, características que ha habilitado  
+  - Compilación, tipo de instalación, paquetes de idioma, características que ha habilitado  
 
-    - Estado y errores de la implementación del paquete de actualización, progreso de la descarga y errores de requisitos previos    
+  - Estado y errores de la implementación del paquete de actualización, progreso de la descarga y errores de requisitos previos    
 
-    - Versión del script posterior a la actualización
+  - Versión del script posterior a la actualización
 
-    - Uso del anillo rápido de actualización
+  - Uso del anillo rápido de actualización
 
   - ***[Nuevo]*** Uso de versión preliminar, tipo de medio de instalación, tipo de rama
 
@@ -90,7 +90,7 @@ A partir de la versión 1610, cambie el nivel de recopilación de datos desde la
 - Uso de la detección de redes (habilitada o deshabilitada)
 - Consola de administración:
 
-     - Estadísticas sobre las conexiones de consola (versión de sistema operativo, idioma, SKU y arquitectura; memoria del sistema, número de procesadores lógicos, identificador de sitio de conexión, versiones instaladas de .NET y paquetes de idioma de la consola)    
+  - Estadísticas sobre las conexiones de consola (versión de sistema operativo, idioma, SKU y arquitectura; memoria del sistema, número de procesadores lógicos, identificador de sitio de conexión, versiones instaladas de .NET y paquetes de idioma de la consola)    
 
 - Versión de SQL, nivel de Service Pack, edición, identificador de intercalación y juego de caracteres
 

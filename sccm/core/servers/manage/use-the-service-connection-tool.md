@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 002ed233a679cdee928160490c8e1ee4425c7382
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 83838e2642d09c001b638900b6cc4fa23975745e
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65496255"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676362"
 ---
 # <a name="use-the-service-connection-tool-for-system-center-configuration-manager"></a>Uso de la herramienta de conexión de servicio para System Center Configuration Manager
 
@@ -101,7 +101,7 @@ Puede utilizar los siguientes parámetros opcionales para especificar un servido
 
 #### <a name="specify-the-type-of-updates-to-download"></a>Especificar el tipo de actualizaciones que quiere descargar
 A partir de la versión 1706, se ha modificado el comportamiento de descarga de herramientas predeterminado, así como las opciones de compatibilidad con herramientas para controlar los archivos descargados.
--   De forma predeterminada, la herramienta descarga únicamente la última actualización disponible que sea válida para la versión de su sitio. No descarga ninguna revisión.
+- De forma predeterminada, la herramienta descarga únicamente la última actualización disponible que sea válida para la versión de su sitio. No descarga ninguna revisión.
 
 Para modificar este comportamiento, use uno de los parámetros siguientes para cambiar qué archivos se descargarán. 
 
@@ -110,9 +110,9 @@ Para modificar este comportamiento, use uno de los parámetros siguientes para c
 >
 > Puede comprobar la versión buscando el archivo *SiteVersion*.txt dentro del archivo. cab.
 
--   **-downloadall**: esta opción descarga todo, incluidas las actualizaciones y las revisiones, independientemente de la versión de su sitio.
--   **-downloadhotfix**: esta opción descarga todas las revisiones independientemente de la versión de su sitio.
--   **-downloadsiteversion**: esta opción descarga todas las actualizaciones y revisiones con una versión posterior a la de su sitio.
+- **-downloadall**: esta opción descarga todo, incluidas las actualizaciones y las revisiones, independientemente de la versión de su sitio.
+- **-downloadhotfix**: esta opción descarga todas las revisiones independientemente de la versión de su sitio.
+- **-downloadsiteversion**: esta opción descarga todas las actualizaciones y revisiones con una versión posterior a la de su sitio.
 
 Ejemplo de una línea de comandos que usa *-downloadsiteversion*:
 - **serviceconnectiontool.exe -connect  *-downloadsiteversion* -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks**

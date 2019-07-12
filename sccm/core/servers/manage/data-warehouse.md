@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02990fa09e18a9e46914ff622ed20f4cbb958f33
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 7672af696844cfa8afbbe54b1260d8f4c78437a8
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65501131"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676521"
 ---
 #  <a name="the-data-warehouse-service-point-for-configuration-manager"></a>El punto de servicio de almacenamiento de datos para Configuration Manager
 
@@ -154,7 +154,7 @@ El rol de sistema de sitio de almacenamiento de datos incluye los siguientes inf
 
 - **Información general del mantenimiento de infraestructura - Histórico**: Muestra información general del mantenimiento de su infraestructura de Configuration Manager.  
 
-- **Lista de malware detectado - Histórico**:    Vea el malware que se ha detectado en la organización.  
+- **Lista de malware detectado - Histórico**: Vea el malware que se ha detectado en la organización.  
 
 - **Resumen de distribución de software - Histórico**: Un resumen de distribución de software para un equipo y anuncio específico.  
 
@@ -241,7 +241,7 @@ Siga los pasos que se indican a continuación para configurar certificados:
 
     3. En **Administrador de configuración de SQL Server**, en **Servicios de SQL Server**, reinicie el **Servicio SQL Server**. Si SQL Reporting Services también está instalado en el servidor que hospeda la base de datos de almacén de datos, reinicie también **Reporting Services**.  
 
-    4. Abra Microsoft Management Console (MMC) y agregue el complemento **Certificados**. Seleccione la **cuenta de equipo** del equipo local. Expanda la carpeta **Personal** y seleccione **Certificados**. Exporte el **Certificado de identificación de SQL Server de almacenamiento de datos** como un archivo **DER binario codificado X.509 (.CER)**.  
+    4. Abra Microsoft Management Console (MMC) y agregue el complemento **Certificados**. Seleccione la **cuenta de equipo** del equipo local. Expanda la carpeta **Personal** y seleccione **Certificados**. Exporte el **Certificado de identificación de SQL Server de almacenamiento de datos** como un archivo **DER binario codificado X.509 (.CER)** .  
 
 2. En el equipo que hospeda SQL Server Reporting Services, abra MMC y agregue el complemento **Certificados**. Seleccione **Cuenta de equipo**. En la carpeta **Entidades emisoras raíz de confianza**, importe el **Certificado de identificación de SQL Server de almacenamiento de datos**.  
 

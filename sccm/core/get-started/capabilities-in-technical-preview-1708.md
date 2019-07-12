@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 01253487d7fb90aaa24dae6a55b9110e516ab4ad
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: 7e3cb09f6220f7a0fd57960a9b46087a25ee81c5
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176011"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677346"
 ---
 # <a name="capabilities-in-technical-preview-1708-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1708 para System Center Configuration Manager
 
@@ -88,17 +88,17 @@ A partir de esta versión, puede usar la consola de Configuration Manager para i
 Para identificar los dispositivos que están pendiente un reinicio, vaya a **Activos y compatibilidad** > **Dispositivos** y seleccione una recopilación con dispositivos que pueden necesitar un reinicio. Después de seleccionar una recopilación, puede ver el estado de cada dispositivo en el panel de detalles en una nueva columna denominada **Reinicio pendiente**. Cada dispositivo tiene un valor de **Sí** o **No**.
 
 Para crear la notificación de cliente para reiniciar un dispositivo:
-1.  Busque el dispositivo que quiere reiniciar en el nodo Dispositivos de la consola.
-2.  Haga clic con el botón derecho en el dispositivo, seleccione **Notificación de cliente** y, después, seleccione **Reiniciar**. Se abre una ventana de información sobre el reinicio. Haga clic en **Aceptar** para confirmar la solicitud de reinicio.
+1. Busque el dispositivo que quiere reiniciar en el nodo Dispositivos de la consola.
+2. Haga clic con el botón derecho en el dispositivo, seleccione **Notificación de cliente** y, después, seleccione **Reiniciar**. Se abre una ventana de información sobre el reinicio. Haga clic en **Aceptar** para confirmar la solicitud de reinicio.
 
 Cuando el cliente recibe la notificación de un **Centro de software**, se abre la ventana de notificación para informar al usuario sobre el reinicio. De forma predeterminada, el reinicio se produce al cabo de 90 minutos. Puede modificar la hora de reinicio en la [configuración de cliente](/sccm/core/clients/deploy/configure-client-settings). La configuración para el comportamiento del reinicio se encuentra en la pestaña [Reinicio de equipo](/sccm/core/clients/deploy/about-client-settings#computer-restart) de la configuración predeterminada.
 
 
 ### <a name="try-it-out"></a>Haga la prueba
 Intente realizar las tareas siguientes y luego envíenos sus **comentarios** desde la pestaña **Inicio** de la cinta para comunicarnos si funcionó:
-1.  Implemente una aplicación o actualícela en un dispositivo que requiera el reinicio de dispositivo para completar la instalación.
-2.  Busque el dispositivo en el nodo **Activos y compatibilidad** > **Dispositivos** de la consola y compruebe que se muestra **Sí** en la columna **Reinicio pendiente**. Puede tardar hasta 20 minutos en que el estado Reinicio pendiente se refleje en la consola.
-3.  Supervise el dispositivo para confirmar que se abre la notificación de Centro de software y que el dispositivo se reinicia correctamente.
+1. Implemente una aplicación o actualícela en un dispositivo que requiera el reinicio de dispositivo para completar la instalación.
+2. Busque el dispositivo en el nodo **Activos y compatibilidad** > **Dispositivos** de la consola y compruebe que se muestra **Sí** en la columna **Reinicio pendiente**. Puede tardar hasta 20 minutos en que el estado Reinicio pendiente se refleje en la consola.
+3. Supervise el dispositivo para confirmar que se abre la notificación de Centro de software y que el dispositivo se reinicia correctamente.
 
 
 ## <a name="software-center-customization"></a>Personalización de Centro de software

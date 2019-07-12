@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7cc2e1783843f600f88b78e0db0cc6b8b8db0f55
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 24e76f9281158aa28e153efe9124ba2adf94a14d
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500981"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676375"
 ---
 # <a name="reference-for-maintenance-tasks-for-system-center-configuration-manager"></a>Referencia de tareas de mantenimiento para System Center Configuration Manager
 
@@ -50,7 +50,7 @@ En este tema se describen los detalles de las tareas de mantenimiento del sitio 
 
 **Eliminar historial de descargas de cliente antiguas**: use esta tarea para eliminar datos históricos sobre el origen de descarga que usan los clientes. La información del origen de descarga se utiliza para rellenar el [panel orígenes de datos de cliente](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard).  
 -  Sitio de administración central (no disponible)
--    **Sitio primario**: habilitado
+-  **Sitio primario**: habilitado
 -  Sitio secundario: no disponible
 
 **Eliminar operaciones cliente antiguas**: use esta tarea para eliminar de la base de datos del sitio los datos antiguos de las operaciones de cliente. Por ejemplo, esto incluye datos para las notificaciones de cliente antiguas o caducadas (como descargar solicitudes para directivas de equipo o usuario) y para Endpoint Protection (como las solicitudes realizadas por un usuario administrativo para que los clientes ejecuten un análisis o descarguen definiciones actualizadas).

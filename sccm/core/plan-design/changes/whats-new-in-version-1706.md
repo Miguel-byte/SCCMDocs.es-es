@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b9dcd7465265021d52e44d72c77172d4323144e
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 050122d6a1b799a30bd2c5a83ab261e92aaafabe
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285770"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677215"
 ---
 # <a name="what39s-new-in-version-1706-of-system-center-configuration-manager"></a>Novedades de la versión 1706 de System Center Configuration Manager
 
@@ -59,8 +59,8 @@ Hemos agregado mejoras adicionales de accesibilidad para la consola de Configura
 ### <a name="improvements--for-sql-server-always-on-availability-groups"></a>Mejoras de los grupos de disponibilidad AlwaysOn de SQL Server
 <!-- 1352094 -->
 Con esta versión, ahora puede usar réplicas de confirmación asincrónica en los grupos de disponibilidad AlwaysOn de SQL Server que usa con Configuration Manager. Esto significa que puede agregar réplicas adicionales a los grupos de disponibilidad con el fin de usarlas como copias de seguridad externas (remotas) y así utilizarlas en un escenario de recuperación ante desastres.  
-  -   Configuration Manager admite el uso de la réplica de confirmación asincrónica para recuperar una réplica sincrónica. Vea [las opciones de recuperación de la base de datos de sitio](/sccm/core/servers/manage/recover-sites#site-database-recovery-options) en el tema Copia de seguridad y recuperación para obtener información sobre cómo realizar esta tarea.
-  -   Esta versión no admite la conmutación por error para usar la réplica de confirmación asincrónica como la base de datos de sitio.
+  - Configuration Manager admite el uso de la réplica de confirmación asincrónica para recuperar una réplica sincrónica. Vea [las opciones de recuperación de la base de datos de sitio](/sccm/core/servers/manage/recover-sites#site-database-recovery-options) en el tema Copia de seguridad y recuperación para obtener información sobre cómo realizar esta tarea.
+  - Esta versión no admite la conmutación por error para usar la réplica de confirmación asincrónica como la base de datos de sitio.
 Para obtener más información, consulte [Preparación para usar grupos de disponibilidad AlwaysOn](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).
 
 ### <a name="update-reset-tool"></a>Herramienta de restablecimiento de actualizaciones
@@ -118,25 +118,25 @@ La memoria caché del mismo nivel ya no utiliza la cuenta de acceso a la red par
 En esta versión, hemos agregado nuevas opciones de configuración para dispositivos Windows 10 que están inscritos con Intune o administrados de forma local mediante Configuration Manager. Los parámetros son:
 
 - **Contraseña**
-    - Cifrado del dispositivo
+  - Cifrado del dispositivo
 - **Dispositivo**
-    - Modificación de la configuración regional (solo dispositivos de escritorio)
-    - Modificación de la configuración de inicio/apagado y suspensión
-    - Modificación de la configuración de idioma
-    - Modificación de la hora del sistema
-    - Modificación del nombre del dispositivo
+  - Modificación de la configuración regional (solo dispositivos de escritorio)
+  - Modificación de la configuración de inicio/apagado y suspensión
+  - Modificación de la configuración de idioma
+  - Modificación de la hora del sistema
+  - Modificación del nombre del dispositivo
 - **Tienda**
-    - Actualizar automáticamente las aplicaciones de la tienda
-    - Usar solo una tienda privada
-    - Inicio de aplicaciones de la Tienda
+  - Actualizar automáticamente las aplicaciones de la tienda
+  - Usar solo una tienda privada
+  - Inicio de aplicaciones de la Tienda
 - **Microsoft Edge**
-    - Bloquear acceso a about:flags
-    - Invalidación de avisos de SmartScreen
-    - Invalidación de avisos de SmartScreen para archivos
-    - Dirección IP de Localhost para WebRTC
-    - Motor de búsqueda predeterminado
-    - URL de archivo XML OpenSearch
-    - Páginas principales (solo dispositivos de escritorio)
+  - Bloquear acceso a about:flags
+  - Invalidación de avisos de SmartScreen
+  - Invalidación de avisos de SmartScreen para archivos
+  - Dirección IP de Localhost para WebRTC
+  - Motor de búsqueda predeterminado
+  - URL de archivo XML OpenSearch
+  - Páginas principales (solo dispositivos de escritorio)
 
 Para detalles de todas las configuraciones de Windows 10, consulte [Cómo crear elementos de configuración para dispositivos de Windows 8.1 y Windows 10 administrados sin el cliente de System Center Configuration Manager](/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client).
 

@@ -11,12 +11,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9ab7816e017d48b937a634b5031ba80e7dbfa093
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: f5ed06951fab313a4a1453864ffefb963cc4d8e9
+ms.sourcegitcommit: 20bbb870baf624c7809d3972f2d09a8d2df79cda
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286960"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67623264"
 ---
 # <a name="internet-access-requirements"></a>Requisitos de acceso a Internet
 
@@ -120,7 +120,7 @@ Para la detección del usuario de Azure AD, el **punto de conexión de servicio
 
 - Versión 1902 y posteriores: Punto de conexión de Microsoft Graph `https://graph.microsoft.com/`
 
-El sistema de sitio del punto de conexión de Cloud Management Gateway (CMG) admite el uso de un proxy web. Para obtener más información sobre cómo configurar este rol para un proxy, vea [Compatibilidad de servidor proxy](/sccm/core/plan-design/network/proxy-server-support#to-set-up-the-proxy-server-for-a-site-system-server). El punto de conexión de CMG solo necesita conectarse a los puntos de conexión de servicio de CMG. No necesita acceso a otros puntos de conexión de Azure.
+El sistema de sitio del punto de conexión de Cloud Management Gateway (CMG) admite el uso de un proxy web. Para obtener más información sobre cómo configurar este rol para un proxy, vea [Compatibilidad de servidor proxy](proxy-server-support.md#configure-the-proxy-for-a-site-system-server). El punto de conexión de CMG solo necesita conectarse a los puntos de conexión de servicio de CMG. No necesita acceso a otros puntos de conexión de Azure.
 
 Para más información sobre CMG, consulte [Planear para Cloud Management Gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).
 

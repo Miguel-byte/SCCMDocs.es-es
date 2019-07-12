@@ -10,12 +10,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7304730b-b517-4c76-aadd-4cbd157dc971
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 013d00fd7c207df45b0f6b7910283c3e8b60b44d
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 9ff03c20ccbb79a527f23b6c5cf0cd179751e980
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56137177"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677752"
 ---
 # <a name="security-and-privacy-for-the-cloud-management-gateway"></a>Seguridad y privacidad de Cloud Management Gateway
 
@@ -68,7 +68,8 @@ Publique la lista de revocación de certificados (CRL) de la PKI para que los cl
 <a name="bkmk_ctl"></a>
 
 ### <a name="review-entries-in-the-sites-certificate-trust-list"></a>Revisar las entradas en la lista de confianza de certificados del sitio
-<!--503739--> Cada sitio de Configuration Manager incluye una lista de entidades de certificación raíz de confianza, la lista de certificados de confianza (CTL). Para ver y modificar la lista, vaya al área de trabajo Administración, expanda Configuración del sitio y haga clic en Sitios. Seleccione un sitio y haga clic en Propiedades en la cinta. Cambie a la pestaña Comunicación de equipo cliente y, después, haga clic en **Establecer** en Entidades de certificación raíz de confianza.
+<!--503739-->
+Cada sitio de Configuration Manager incluye una lista de entidades de certificación raíz de confianza, la lista de confianza de certificados (CTL). Para ver y modificar la lista, vaya al área de trabajo Administración, expanda Configuración del sitio y haga clic en Sitios. Seleccione un sitio y haga clic en Propiedades en la cinta. Cambie a la pestaña Comunicación de equipo cliente y, después, haga clic en **Establecer** en Entidades de certificación raíz de confianza.
  
 Use una CTL más restrictiva para un sitio con una instancia de CMG mediante la autenticación de cliente de PKI. En caso contrario, los clientes con certificados de autenticación de cliente emitidos por cualquier raíz de confianza que ya existe en el punto de administración se aceptan automáticamente para el registro de cliente.
 

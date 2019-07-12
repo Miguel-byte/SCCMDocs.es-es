@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 23fbb29ba4676f6c7282e5337f691f88209e15e6
-ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
+ms.openlocfilehash: ee32d282bc04e6c1f97b12dedb8d69ccdcca8915
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67551230"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677552"
 ---
 # <a name="capabilities-in-technical-preview-1702-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1702 para System Center Configuration Manager
 
@@ -72,10 +72,10 @@ La infraestructura de sitio de vista previa técnica, los clientes y el dominio 
 
 ### <a name="set-up-configuration-manager-to-use-azure-ad"></a>Configurar Configuration Manager para usar Azure AD
 Para usar Azure AD con Configuration Manager, necesitará lo siguiente:
--   Suscripción de Azure.
--   Azure AD con Domain Services (DS).
--   Un sitio de Configuration Manager que se ejecute en una máquina virtual de Azure que esté unida a Azure AD.
--   Clientes de Configuration Manager que se ejecuten en el mismo entorno de Azure AD.
+- Suscripción de Azure.
+- Azure AD con Domain Services (DS).
+- Un sitio de Configuration Manager que se ejecute en una máquina virtual de Azure que esté unida a Azure AD.
+- Clientes de Configuration Manager que se ejecuten en el mismo entorno de Azure AD.
 
 Para configurar Azure AD Domain Services, consulte [Introducción a Azure AD Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance).
 
@@ -212,9 +212,9 @@ En el cuadro de diálogo **Propiedades** de *\<nombre del tipo de implementació
 
 ### <a name="try-it-out"></a>Pruébelo.
 
-1.  En las propiedades de un tipo de implementación de Configuration Manager, haga clic en la pestaña **Comportamiento de instalación**.
-2.  Pulse **Agregar** para agregar uno o más nombres de archivo ejecutable que quiere activar. También puede agregar un nombre para mostrar para facilitar a los usuarios la identificación de las aplicaciones de la lista.
-3.  Si la implementación va tener un propósito de requerido, en el Asistente para implementar software, se puede optar por **Cerrar automáticamente los ejecutables en ejecución especificados en la pestaña Comportamiento de instalación del cuadro de diálogo de propiedades del tipo de implementación**.
+1. En las propiedades de un tipo de implementación de Configuration Manager, haga clic en la pestaña **Comportamiento de instalación**.
+2. Pulse **Agregar** para agregar uno o más nombres de archivo ejecutable que quiere activar. También puede agregar un nombre para mostrar para facilitar a los usuarios la identificación de las aplicaciones de la lista.
+3. Si la implementación va tener un propósito de requerido, en el Asistente para implementar software, se puede optar por **Cerrar automáticamente los ejecutables en ejecución especificados en la pestaña Comportamiento de instalación del cuadro de diálogo de propiedades del tipo de implementación**.
 
 Si la aplicación se ha implementado como **Disponible** y un usuario final intenta instalar una aplicación, se le pedirá que cierre los ejecutables en ejecución especificados antes de poder continuar con la instalación.
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2fba1d6793b2b285cc9874de316bb2c435a526e8
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: f88334a9c330d3af298ec63b3d7baa56c9714647
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67252303"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676600"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Preparación para usar grupos de disponibilidad AlwaysOn de SQL Server con Configuration Manager
 
@@ -100,7 +100,7 @@ Cada miembro de la réplica debe tener las siguiente configuración:
 
 - La opción **Secundaria legible** está establecida en **Sí**  
 
-- Está habilitada para la **conmutación por error manual**     
+- Está habilitada para la **conmutación por error manual**   
 
   > [!TIP]
   >  Configuration Manager admite el uso de las réplicas sincrónicas del grupo de disponibilidad cuando se establece en **Conmutación automática por error**. Establezca la **conmutación por error manual** en estos casos:

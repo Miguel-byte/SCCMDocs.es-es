@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac26a9b161f869ec3f6410f9f6fb9e5edbc9f8f8
-ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.openlocfilehash: 5499fae986dcd266e0b2a31d2619aa79146f8981
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194022"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676020"
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>Configuraciones admitidas de la rama de mantenimiento a largo plazo de System Center Configuration Manager
 
@@ -35,7 +35,7 @@ Además, los productos y las versiones de los productos que no aparecen en los t
 **Windows:**
 - Solo se admiten actualizaciones de seguridad y calidad para Windows.
 - No hay compatibilidad con ramas actuales (CB), ramas actuales para empresas (CBB) ni LTSB de Windows 10.
--   Las nuevas versiones principales de Windows Server no son compatibles.
+- Las nuevas versiones principales de Windows Server no son compatibles.
 
 **SQL Server:**
 - Solo son compatibles con SQL Server las actualizaciones de seguridad y calidad o las actualizaciones secundarias, como los Service Pack.

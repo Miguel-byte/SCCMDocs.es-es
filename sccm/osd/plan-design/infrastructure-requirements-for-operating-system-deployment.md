@@ -2,7 +2,7 @@
 title: Requisitos de la infraestructura de OSD
 titleSuffix: Configuration Manager
 description: Obtenga información sobre las dependencias de producto externas y los requisitos para la implementación de SO en Configuration Manager
-ms.date: 10/02/2018
+ms.date: 07/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b7a484bc3e3491ac832ca7b3d6ed926627cbfaa
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 9115fb3e0d36e4664541c70b29929dfe3ef8b6d9
+ms.sourcegitcommit: 5e43c0c6b0b1f449e596f59ceaa92a9b6ca194cc
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133704"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572717"
 ---
 # <a name="infrastructure-requirements-for-os-deployment-in-configuration-manager"></a>Requisitos de infraestructura para la implementación de SO en Configuration Manager
 
@@ -187,17 +187,17 @@ Para usar informes de Configuration Manager para las implementaciones de SO, ins
 
 El rol de seguridad **Administrador de implementaciones de sistema operativo** es un rol integrado que no se puede cambiar. Sin embargo, puede copiar el rol, realizar cambios y, a continuación, guardar estos cambios como un nuevo rol de seguridad personalizado. Estos son algunos de los permisos que se aplican directamente a las implementaciones de SO:  
 
-- **Paquete de imágenes de arranque**: Crear, eliminar, modificar, modificar carpeta, mover objeto, leer, establecer ámbito de seguridad  
+- **Paquete de imagen de arranque**: crear, eliminar, modificar, modificar carpeta, mover objeto, leer, establecer ámbito de seguridad  
 
-- **Controladores de dispositivo**: Crear, eliminar, modificar, modificar carpeta, modificar informe, mover objeto, leer, ejecutar informe  
+- **Controladores de dispositivos**: crear, eliminar, modificar, modificar carpeta, modificar informe, mover objeto, leer, ejecutar informe  
 
-- **Paquete de controladores**: Crear, eliminar, modificar, modificar carpeta, mover objeto, leer, establecer ámbito de seguridad  
+- **Paquete de controladores**: crear, eliminar, modificar, modificar carpeta, mover objeto, leer, establecer ámbito de seguridad  
 
-- **Imagen del sistema operativo**: Crear, eliminar, modificar, modificar carpeta, mover objeto, leer, establecer ámbito de seguridad  
+- **Imagen de sistema operativo**: crear, eliminar, modificar, modificar carpeta, mover objeto, leer, establecer ámbito de seguridad  
 
-- **Paquete de actualización del sistema operativo**: Crear, eliminar, modificar, modificar carpeta, mover objeto, leer, establecer ámbito de seguridad  
+- **Paquete de actualización de sistema operativo**: crear, eliminar, modificar, modificar carpeta, mover objeto, leer, establecer ámbito de seguridad  
 
-- **Paquete de secuencia de tareas**: Crear, crear medio de secuencia de tareas, eliminar, modificar, modificar carpeta, modificar informe, mover objeto, leer, ejecutar informe, establecer ámbito de seguridad  
+- **Paquete de secuencia de tareas**: crear, crear medio de secuencia de tareas, eliminar, modificar, modificar carpeta, modificar informe, mover objeto, leer, ejecutar informe, establecer ámbito de seguridad  
 
 Para obtener más información, vea [Crear roles de seguridad personalizados](/sccm/core/servers/deploy/configure/configure-role-based-administration#BKMK_CreateSecRole).  
 
@@ -262,7 +262,9 @@ Si planea hospedar conjuntamente el punto de distribución en un servidor que ej
      `WDSUTIL /Set-Server /UseDHCPPorts:No /DHCPOption60:Yes`  
 
 > [!NOTE]
-> Al usar el respondedor del entorno PXE sin WDS en lugar de WDS, no se podrá ejecutar tampoco DHCP en el mismo servidor.
+> En la versión 1810 y anterior, no se permite usar el respondedor del entorno PXE sin WDS en servidores que también ejecutan un servidor DHCP.
+>
+> A partir de la versión 1902, cuando se habilita un respondedor del entorno PXE en un punto de distribución sin Servicio de implementación de Windows, ahora puede estar en el mismo servidor que el servicio DHCP. Para más información, consulte [Configurar al menos un punto de distribución para aceptar solicitudes del entorno PXE](/sccm/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network#BKMK_Configure).
 
 
 ##  <a name="BKMK_SupportedOS"></a> Sistemas operativos compatibles  

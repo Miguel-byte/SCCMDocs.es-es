@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 90c5c57d1717363d83fa921d68caced8cf9e8da1
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: aadb544180d7662f1b60c73db6a35b64f8b7efe7
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67251720"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676834"
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Caché del mismo nivel para clientes de Configuration Manager
 
@@ -55,11 +55,11 @@ La caché del mismo nivel no reemplaza el uso de otras soluciones como Optimizac
 
 Para habilitar la caché del mismo nivel, implemente la [configuración de cliente](#bkmk_settings) en una colección. Después, los miembros de esa colección actúan como un origen de la caché del mismo nivel para otros clientes en el mismo grupo de límites.  
 
- -  El cliente que actúa como origen de contenido del mismo nivel envía una lista de contenido almacenado en caché disponible a su punto de administración.  
+ - El cliente que actúa como origen de contenido del mismo nivel envía una lista de contenido almacenado en caché disponible a su punto de administración.  
 
- -  Otro cliente en el mismo grupo de límites solicita una ubicación de contenido al punto de administración. El servidor devuelve la lista de posibles orígenes de contenido. En esta lista se incluyen todos los orígenes de caché del mismo nivel que tienen contenido y están en línea. También se incluyen los puntos de distribución y otras ubicaciones de origen de contenido de ese grupo de límites. Para obtener más información, vea [Content source priority](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#content-source-priority) (Prioridad de los orígenes de contenido).  
+ - Otro cliente en el mismo grupo de límites solicita una ubicación de contenido al punto de administración. El servidor devuelve la lista de posibles orígenes de contenido. En esta lista se incluyen todos los orígenes de caché del mismo nivel que tienen contenido y están en línea. También se incluyen los puntos de distribución y otras ubicaciones de origen de contenido de ese grupo de límites. Para obtener más información, vea [Content source priority](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#content-source-priority) (Prioridad de los orígenes de contenido).  
 
- -  Como es habitual, el cliente que busca el contenido selecciona un origen de la lista proporcionada. Después, el cliente intenta obtener el contenido.  
+ - Como es habitual, el cliente que busca el contenido selecciona un origen de la lista proporcionada. Después, el cliente intenta obtener el contenido.  
 
 A partir de la versión 1806, los grupos de límites incluyen valores de configuración adicionales para ofrecerle mayor control sobre la distribución de contenido en su entorno. Para más información, vea [Opciones de grupo de límites para descargas del mismo nivel](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).<!--1356193-->
 

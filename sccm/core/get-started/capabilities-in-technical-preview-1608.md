@@ -12,12 +12,12 @@ manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 339ad109eae4d54ff5f8e04e18f29c9e47e8930d
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 246c690550711e15930987794a001ee870456d5a
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56121682"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677684"
 ---
 # <a name="capabilities-in-technical-preview-1608-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1608 para System Center Configuration Manager
 
@@ -48,7 +48,7 @@ Se ha agregado un campo a las propiedades del software inventariado que permite 
 
 ### <a name="filter-the-software-display"></a>Filtrar la visualización de software
 Después de haber definido las relaciones de elementos primarios y secundarios, puede filtrar la vista para mostrar solo el software primario o que no tiene ninguna relación definida. Con esto se oculta todo el software establecido como secundario de otro software inventariado. Para ello:
-   1.   En la barra de búsqueda, elija **Agregar criterios**
+   1. En la barra de búsqueda, elija **Agregar criterios**
    2. Seleccione **Software primario** y luego cambie el valor del criterio a **está vacío**; después, haga clic en **Buscar**.
 
 Ahora la vista solo muestra los elementos de software primarios o el software que no tiene ninguna relación definida. No se muestra el software que es solo un secundario de otro título.

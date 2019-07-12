@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e25d164680530b88670b2589d81231f8e649d1d1
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: f996aa1457fc8b49f914d0f0932836b5fcbd90b9
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122974"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676226"
 ---
 # <a name="install-and-upgrade-with-the-version-1606-baseline-media-for-system-center-configuration-manager"></a>Instalar y actualizar con el medio de línea base de la versión 1606 para System Center Configuration Manager
 
@@ -29,7 +29,7 @@ El medio de línea base está disponible en DVD como parte de Microsoft System C
 
 Cuando use el medio de línea base de la versión 1606, el sitio que instala o al que actualiza es:
 - *Un sitio de rama actual* que es equivalente a un sitio que se instaló primero mediante el medio de línea base 1511 y, después, se actualizó a la versión 1606 además del paquete acumulativo de revisiones 1606: KB3186654.
--   *Un sitio de LTSB* que es equivalente al sitio de rama actual que ejecuta la versión 1606 además del paquete acumulativo de revisiones 1606: KB3186654. El medio de línea base ya incluye el paquete acumulativo de revisiones.  En cambio, la LTSB no admite todas las características o capacidades que están disponibles en la rama actual, como se detalla en [Introducción a la rama de mantenimiento a largo plazo de System Center Configuration Manager](introduction-to-the-ltsb.md).
+- *Un sitio de LTSB* que es equivalente al sitio de rama actual que ejecuta la versión 1606 además del paquete acumulativo de revisiones 1606: KB3186654. El medio de línea base ya incluye el paquete acumulativo de revisiones.  En cambio, la LTSB no admite todas las características o capacidades que están disponibles en la rama actual, como se detalla en [Introducción a la rama de mantenimiento a largo plazo de System Center Configuration Manager](introduction-to-the-ltsb.md).
 
 Si no está familiarizado con las diferentes ramas de System Center Configuration Manager, consulte [Which branch of Configuration Manager should I use (Qué rama de Configuration Manager debo usar)](which-branch-should-i-use.md).
 
@@ -83,7 +83,7 @@ Al usar un script desatendido para instalar una rama con licencia, debe agregar 
 Por ejemplo, para instalar una edición de rama actual con licencia, usará:
 
   **Nombre de clave: SABranchOptions**
-   -    **SAActive = 1**
+   - **SAActive = 1**
    - **CurrentBranch = 1**
 
 
@@ -100,7 +100,7 @@ Cuando usa el medio de línea base 1606 para instalar un nuevo sitio de cualquie
 
 - Durante la instalación, debe elegir la rama de Configuration Manager que quiere instalar, y puede especificar la información de su contrato de Software Assurance.
 - Todos los sitios de una misma jerarquía deben ejecutar la misma rama. Tener una jerarquía con una mezcla de LTSB y rama actual en diferentes sitios no se admite.
--   Nueva instalación generada por script. Para más información, vea "Nuevas opciones de instalación generadas por script" anteriormente en este artículo.
+- Nueva instalación generada por script. Para más información, vea "Nuevas opciones de instalación generadas por script" anteriormente en este artículo.
 
 ## <a name="expand-a-stand-alone-primary-site"></a>Expandir un sitio primario independiente
 Puede expandir un sitio primario independiente que ejecuta la LTSB.  El proceso no es diferente del que se usó para un sitio de rama actual con una salvedad:
@@ -114,7 +114,7 @@ Cuando actualice desde System Center 2012 Configuration Manager, use los procedi
 
 **Actualizar a la rama actual:**
 - Durante el programa de instalación, debe elegir la rama actual, y puede especificar la información de su contrato de Software Assurance.
--   Nueva instalación generada por script. Para más información, vea "Nuevas opciones de instalación generadas por script" anteriormente en este artículo.
+- Nueva instalación generada por script. Para más información, vea "Nuevas opciones de instalación generadas por script" anteriormente en este artículo.
 
 **Actualizar a la LTSB:**  
 - Pasos adicionales para seguir en la lista de comprobación previa a la actualización.

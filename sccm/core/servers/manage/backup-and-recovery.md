@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 243e38273488f72e3e5e693270b10d6865c3a422
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: bf20d24b8a1322f1d74c42c66f49fd8026ac075e
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67252241"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676621"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>Hacer una copia de seguridad de un sitio de Configuration Manager
 
@@ -93,7 +93,7 @@ La información del estado de copia de seguridad del sitio se escribe en el arch
     -   **Unidades locales en el servidor de sitio y SQL Server**: la tarea almacena los archivos de copia de seguridad para la base de datos de sitio en la ruta especificada en la unidad local del servidor de sitio. La tarea almacena los archivos de copia de seguridad para la base de datos de sitio en la ruta de acceso especificada en la unidad local del servidor de base de datos de sitio. Cree las carpetas locales antes de que se ejecute la tarea de copia de seguridad. La cuenta de equipo del servidor de sitio debe tener permisos de NTFS de **escritura** en la carpeta que se crea en el servidor de sitio. La cuenta de equipo del servidor de SQL Server debe tener permisos de NTFS de **escritura** en la carpeta que se crea en el servidor de la base de datos del sitio. Esta opción solo está disponible cuando la base de datos de sitio no está instalada en el servidor de sitio.  
 
     > [!NOTE]  
-    >   La opción de desplazarse al destino de copia de seguridad solo está disponible si se especifica la ruta de acceso de red del destino de copia de seguridad.  
+    > La opción de desplazarse al destino de copia de seguridad solo está disponible si se especifica la ruta de acceso de red del destino de copia de seguridad.  
     >  
     > El nombre de la carpeta o el nombre del recurso compartido que se usan para el destino de copia de seguridad no admiten caracteres Unicode.  
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7858497f1ff49e5068da066cc481ca5fd38f825f
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 42c1fc69d237b6209b49e45e1b185483b1c55163
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500716"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676327"
 ---
 # <a name="support-center-user-interface-reference"></a>Referencia de la interfaz de usuario del Centro de soporte técnico
 
@@ -229,13 +229,13 @@ Los siguientes elementos de este menú solicitan una acción de cliente relacion
 
     - **Agotar tiempo de espera de solicitudes de contenido**: si alguna solicitud de ubicación de contenido se ha estado ejecutando durante demasiado tiempo, esta acción detiene la solicitud.  
 
-  - **Evaluación de implementación de aplicaciones**: inicia una tarea que evalúa las aplicaciones implementadas.  
+- **Evaluación de implementación de aplicaciones**: inicia una tarea que evalúa las aplicaciones implementadas.  
 
-  - **Evaluación de implementación de actualizaciones de software**: inicia una tarea que evalúa las actualizaciones de software implementadas.  
+- **Evaluación de implementación de actualizaciones de software**: inicia una tarea que evalúa las actualizaciones de software implementadas.  
 
-  - **Análisis de origen de actualizaciones de software**: inicia una tarea que analiza las ubicaciones de origen de las actualizaciones.  
+- **Análisis de origen de actualizaciones de software**: inicia una tarea que analiza las ubicaciones de origen de las actualizaciones.  
 
-  - **Actualización de lista de origen de Windows Installer**: inicia una tarea que actualiza la ubicación de origen de las instalaciones de Windows Installer (MSI).  
+- **Actualización de lista de origen de Windows Installer**: inicia una tarea que actualiza la ubicación de origen de las instalaciones de Windows Installer (MSI).  
 
 #### <a name="content-view"></a>Vista de contenido
 Vea las aplicaciones, los paquetes y las actualizaciones que se han cargado en el cliente. Si selecciona una aplicación, un paquete o una actualización, puede ver detalles sobre ese contenido. En algunas aplicaciones, también puede realizar las siguientes acciones:  
@@ -293,7 +293,7 @@ El Centro de soporte técnico carga o actualiza la lista de inventario del clien
 
 Los siguientes elementos de este menú solicitan una acción de cliente relacionada con el inventario:  
 
- - **Ciclo de recopilación de datos de detección (latido)**: desencadena la tarea de cliente que sirve para recopilar información de detección de dispositivos.  
+ - **Ciclo de recopilación de datos de detección (latido)** : desencadena la tarea de cliente que sirve para recopilar información de detección de dispositivos.  
 
  - **Ciclo de recopilación de archivos**: desencadena la tarea de cliente que sirve para recopilar archivos locales.  
 
@@ -469,8 +469,8 @@ Tras encontrar dos o más coincidencias de la cadena que está buscando, esta op
 
 #### <a name="error-lookup"></a>Búsqueda de errores
 Escriba un código de error para buscar ese código de error en los archivos de registro abiertos. Use los siguientes formatos de código de error:
- - **Entero de 32 bits (con signo)**: por ejemplo, `-2147024891`  
- - **Entero de 32 bits (sin signo)**: por ejemplo, `2147942405`  
+ - **Entero de 32 bits (con signo)** : por ejemplo, `-2147024891`  
+ - **Entero de 32 bits (sin signo)** : por ejemplo, `2147942405`  
  - **Hexadecimal de 32 bits**: por ejemplo, `0x80070005`  
 
 #### <a name="decode-certificate"></a>Descodificar certificado

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 709442083cd2d9c935aeb2c5fe6c2ad30a2dddf5
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.openlocfilehash: c82de88250a7faa44747fc897fcfee09bed45823
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65083045"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678812"
 ---
 # <a name="create-a-task-sequence-to-capture-and-restore-user-state-in-configuration-manager"></a>Creación de una secuencia de tareas para capturar y restaurar el estado de usuario en Configuration Manager
 
@@ -28,9 +28,9 @@ ms.locfileid: "65083045"
 
 ## <a name="task-sequence-steps"></a>Pasos de la secuencia de tareas  
 
- Para capturar y restaurar el estado del usuario, agregue los pasos siguientes a la secuencia de tareas:  
+Para capturar y restaurar el estado del usuario, agregue los pasos siguientes a la secuencia de tareas:  
 
- - [Solicitar almacén de estado](/sccm/osd/understand/task-sequence-steps#BKMK_RequestStateStore): si almacena el estado de usuario en el punto de migración de estado, necesita este paso.  
+- [Solicitar almacén de estado](/sccm/osd/understand/task-sequence-steps#BKMK_RequestStateStore): si almacena el estado de usuario en el punto de migración de estado, necesita este paso.  
 
 - [Capturar estado de usuario](/sccm/osd/understand/task-sequence-steps#BKMK_CaptureUserState): este paso captura los datos de estado de usuario. A continuación, almacena los datos en el punto de migración de estado o el disco local mediante vínculos físicos.  
 

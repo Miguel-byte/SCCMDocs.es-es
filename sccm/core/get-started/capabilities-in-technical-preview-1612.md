@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b3560284733ccad6a9a3676a46f755106596ad03
-ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
+ms.openlocfilehash: 34fca23c43b34d905e6ecea210c0ba7487feeea2
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67551206"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677533"
 ---
 # <a name="capabilities-in-technical-preview-1612-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1612 para System Center Configuration Manager
 
@@ -49,11 +49,11 @@ Además de instalar y configurar la base de datos de almacenamiento de datos, se
 
 | Paso         | Detalles  |
 |:------:|-----------|  
-| **1**  |  El servidor de sitio transfiere y almacena datos en la base de datos del sitio.  |  
-| **2** |   Basándose en su programación y configuración, el punto de servicio de almacenamiento de datos obtiene datos de la base de datos del sitio.  |  
-| **3** |  El punto de servicio de almacenamiento de datos transfiere y almacena una copia de los datos sincronizados en la base de datos de almacenamiento de datos. |  
-| **A** |  Con los informes integrados se realiza una solicitud de datos que se pasa al punto de servicios de informes mediante SQL Server Reporting Services. |  
-| **B** |   La mayoría de los informes se refieren a información actual y estas solicitudes se ejecutan en la base de datos del sitio. |  
+| **1** | El servidor de sitio transfiere y almacena datos en la base de datos del sitio.  |  
+| **2** | Basándose en su programación y configuración, el punto de servicio de almacenamiento de datos obtiene datos de la base de datos del sitio.  |  
+| **3** | El punto de servicio de almacenamiento de datos transfiere y almacena una copia de los datos sincronizados en la base de datos de almacenamiento de datos. |  
+| **A** | Con los informes integrados se realiza una solicitud de datos que se pasa al punto de servicios de informes mediante SQL Server Reporting Services. |  
+| **B** | La mayoría de los informes se refieren a información actual y estas solicitudes se ejecutan en la base de datos del sitio. |  
 | **C** | Cuando un informe solicita datos históricos, mediante uno de los informes con una *Categoría* de **Almacenamiento de datos**, la solicitud se ejecuta en la base de datos de almacenamiento de datos.   |  
 
 ### <a name="prerequisites-for-the-data-warehouse-service-point-and-database"></a>Requisitos previos de la base de datos y del punto de servicio de almacenamiento de datos
@@ -106,7 +106,7 @@ Después de instalar el rol de almacenamiento de datos, asegúrese de que la cue
 #### <a name="troubleshoot-installation-and-data-synchronization"></a>Solución de problemas de instalación y sincronización de datos
 Use los siguientes registros para investigar problemas con la instalación del punto de servicio de almacenamiento de datos o con la sincronización de datos:
 - **DWSSMSI.log** y **DWSSSetup.log**: use estos registros para investigar errores al instalar el punto de servicio de almacenamiento de datos.
--   **Microsoft.ConfigMgrDataWarehouse.log**: use este registro para investigar la sincronización de datos entre la base de datos del sitio y la base de datos de almacenamiento de datos.
+- **Microsoft.ConfigMgrDataWarehouse.log**: use este registro para investigar la sincronización de datos entre la base de datos del sitio y la base de datos de almacenamiento de datos.
 
 ### <a name="reporting"></a>Generación de informes
 Después de que instala un rol de sistema de sitio de almacenamiento de datos, los siguientes informes están disponibles en su punto de servicios de informes con una *Categoría* de **Almacenamiento de datos:**
@@ -142,7 +142,7 @@ Use los siguientes pasos para mover la base de datos de almacenamiento de datos 
 
 Puede revisar los siguientes registros de Configuration Manager para confirmar que el rol de sistema de sitio se ha reinstalado correctamente:  
 - **DWSSMSI.log** y **DWSSSetup.log**: use estos registros para investigar errores al instalar el punto de servicio de almacenamiento de datos.
--   **Microsoft.ConfigMgrDataWarehouse.log**: use este registro para investigar la sincronización de datos entre la base de datos del sitio y la base de datos de almacenamiento de datos.
+- **Microsoft.ConfigMgrDataWarehouse.log**: use este registro para investigar la sincronización de datos entre la base de datos del sitio y la base de datos de almacenamiento de datos.
 
 
 ## <a name="content-library-cleanup-tool"></a>Herramienta de limpieza de la biblioteca de contenido
@@ -207,23 +207,23 @@ Los siguientes modificadores de línea de comandos se pueden usar en cualquier o
 
 ## <a name="improvements-for-in-console-search"></a>Mejoras de búsqueda en consola
 En función de los comentarios de User Voice, hemos agregado las siguientes mejoras a la búsqueda en la consola:
- - **Ruta del objeto:**  
+- **Ruta del objeto:**  
   Ahora muchos objetos admiten una columna nueva denominada **Ruta del objeto**.  Cuando busca e incluye esta columna en los resultados mostrados, puede ver la ruta de cada objeto. Por ejemplo, si ejecuta una búsqueda de aplicaciones en el nodo Aplicaciones y también está buscando subnodos, la columna *Ruta del objeto* del panel de resultados le mostrará la ruta de cada objeto devuelto.   
 
 - **Conservación del texto de búsqueda:**  
   Ahora, cuando escribe texto en el cuadro de texto de búsqueda y luego cambia entre buscar en un subnodo y el nodo actual, el texto que escribió se conserva y permanece disponible para una nueva búsqueda sin tener que volver a escribirlo.
 
 - **Conservación de su decisión para buscar subnodos:**  
- La opción que seleccione para buscar el *nodo actual* o *todos los subnodos* ahora se mantiene cuando cambia el nodo en el que está trabajando.   Este nuevo comportamiento significa que no necesita restablecer constantemente la decisión al desplazarse por la consola.  De manera predeterminada, cuando abre la consola, la opción es la de buscar solo en el nodo actual.
+  La opción que seleccione para buscar el *nodo actual* o *todos los subnodos* ahora se mantiene cuando cambia el nodo en el que está trabajando.   Este nuevo comportamiento significa que no necesita restablecer constantemente la decisión al desplazarse por la consola.  De manera predeterminada, cuando abre la consola, la opción es la de buscar solo en el nodo actual.
 
 ## <a name="prevent-installation-of-an-application-if-a-specified-program-is-running"></a>Impedir la instalación de una aplicación si se está ejecutando un programa específico.
 Ahora puede configurar una lista de archivos ejecutables (con la extensión .exe) en las propiedades del tipo de implementación que, si se ejecutan, bloquearán la instalación de una aplicación. Después de que se intente la instalación, los usuarios verán un cuadro de diálogo solicitándoles cerrar los procesos que están bloqueando la instalación.
 
 ### <a name="try-it-out"></a>Haga la prueba
 Para configurar una lista de archivos ejecutables
-1.  En la página de propiedades de cualquier tipo de implementación, pulse la pestaña **Installer Handling (Control del instalador)** .
-2.  Haga clic en **Agregar** para agregar uno de los archivos ejecutables a la lista (por ejemplo, **Edge.exe**).
-3.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo de las propiedades del tipo de implementación.
+1. En la página de propiedades de cualquier tipo de implementación, pulse la pestaña **Installer Handling (Control del instalador)** .
+2. Haga clic en **Agregar** para agregar uno de los archivos ejecutables a la lista (por ejemplo, **Edge.exe**).
+3. Haga clic en **Aceptar** para cerrar el cuadro de diálogo de las propiedades del tipo de implementación.
 
 Ahora, cuando implemente esta aplicación en un usuario o dispositivo, y uno de los ejecutables que ha agregado se esté ejecutando, el usuario final verá un cuadro de diálogo del Centro de software indicándole que se ha producido un error en la instalación porque una aplicación se está ejecutando.
 
@@ -253,16 +253,16 @@ Hemos agregado compatibilidad con archivos de instalación rápida en Configurat
 
 ### <a name="to-enable-the-download-of-express-installation-files-for-windows-10-updates-on-the-server"></a>Para habilitar la descarga de archivos de instalación rápida para las actualizaciones de Windows 10 en el servidor
 Para iniciar la sincronización de los metadatos de los archivos de instalación rápida de Windows 10, debe habilitarlos en las propiedades de punto de actualización de software.
-1.  En la consola de Configuration Manager, vaya a **Administración** > **Configuración del sitio** > **Sitios**.
-2.  Seleccione el sitio de administración central o el sitio primario independiente.
-3.  En la pestaña **Inicio** , en el grupo **Configuración** , haga clic en **Configurar componentes de sitio**y, a continuación, haga clic en **Punto de actualización de software**. En la pestaña **Archivos de actualización**, seleccione **Download full files for all approved updates and express installation files for Windows 10 (Descargar archivos completos para todas las actualizaciones aprobadas y los archivos de instalación rápida de Windows 10)** .
+1. En la consola de Configuration Manager, vaya a **Administración** > **Configuración del sitio** > **Sitios**.
+2. Seleccione el sitio de administración central o el sitio primario independiente.
+3. En la pestaña **Inicio** , en el grupo **Configuración** , haga clic en **Configurar componentes de sitio**y, a continuación, haga clic en **Punto de actualización de software**. En la pestaña **Archivos de actualización**, seleccione **Download full files for all approved updates and express installation files for Windows 10 (Descargar archivos completos para todas las actualizaciones aprobadas y los archivos de instalación rápida de Windows 10)** .
 
 ### <a name="to-enable-support-for-clients-to-download-and-install-express-installation-files"></a>Para habilitar la compatibilidad para que los clientes descarguen e instalen archivos de instalación rápida
 Para habilitar la compatibilidad de los archivos de instalación rápida en los clientes, debe habilitar los archivos de instalación rápida en los clientes en la sección Actualizaciones de software de la configuración de cliente. Esto crea una nueva escucha HTTP que escucha las solicitudes para descargar los archivos de instalación rápida en el puerto que especifique. Una vez que implemente la configuración de cliente para habilitar esta característica en el cliente, intentará descargar la diferencia entre la actualización acumulativa de Windows 10 del mes actual y la actualización del mes anterior (los clientes deben ejecutar una versión de Windows 10 que admita los archivos de instalación rápida).
-1.  Habilite la compatibilidad para los archivos de instalación rápida en las propiedades de componente de punto de actualización de software (procedimiento anterior).
-2.  En la consola de Configuration Manager, vaya a **Administración** > **Configuración de cliente**.
-3.  Seleccione la configuración de cliente adecuada y, después, en la pestaña **Inicio**, haga clic en **Propiedades**.
-4.  Seleccione la página **Actualizaciones de software**, configure **Sí** para la opción **Enable installation of Express Updates on clients (Habilitar la instalación de actualizaciones rápidas en clientes)** y configure el puerto que ha usado la escucha HTTP en el cliente para la opción **Port used to download content for Express Updates (Puerto usado para descargar el contenido de las actualizaciones rápidas)** .
+1. Habilite la compatibilidad para los archivos de instalación rápida en las propiedades de componente de punto de actualización de software (procedimiento anterior).
+2. En la consola de Configuration Manager, vaya a **Administración** > **Configuración de cliente**.
+3. Seleccione la configuración de cliente adecuada y, después, en la pestaña **Inicio**, haga clic en **Propiedades**.
+4. Seleccione la página **Actualizaciones de software**, configure **Sí** para la opción **Enable installation of Express Updates on clients (Habilitar la instalación de actualizaciones rápidas en clientes)** y configure el puerto que ha usado la escucha HTTP en el cliente para la opción **Port used to download content for Express Updates (Puerto usado para descargar el contenido de las actualizaciones rápidas)** .
 
 
 ## <a name="odata-endpoint-data-access"></a>Acceso a datos del punto de conexión de OData
