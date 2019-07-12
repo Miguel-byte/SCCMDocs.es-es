@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: 6f0201d7-5714-4ba0-b2bf-d1acd0203e9a
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ccc38188729a05329cc240a9f424ccce9fd433b2
-ms.sourcegitcommit: d1df13fc95a1f1540177c294555d9be26161b9cb
+ms.openlocfilehash: 9ca39be68074213e4bb0a3f667ae69d5257f7a3c
+ms.sourcegitcommit: 9670e11316c9ec6e5f78cd70c766bbfdf04ea3f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974088"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67818066"
 ---
 # <a name="change-the-mdm-authority-for-specific-users-mixed-mdm-authority"></a>Cambio de la entidad de MDM para usuarios específicos (entidad de MDM mixta)
 
@@ -105,7 +105,7 @@ En el ejemplo siguiente, la recopilación de usuarios Híbrido contiene todos lo
 ![Recopilaciones excluidas](../media/migrate-excludecollections.png)
 
 > [!Note]  
-> Cuando tenga el **todos los usuarios** colección seleccionada para la suscripción a Intune, no se permiten para agregar una regla que excluya las recopilaciones. Crear una nueva colección basada en la **todos los usuarios** colección. Compruebe que la colección contiene los usuarios que se esperan. A continuación, edite la suscripción a Intune para usar la nueva colección. Puede excluir recopilaciones de usuarios de la nueva recopilación para migrar usuarios.  
+>   Cuando tenga el **todos los usuarios** colección seleccionada para la suscripción a Intune, no tiene permiso para agregar una regla que excluya las recopilaciones. En su lugar, cree una nueva colección basada en la **todos los usuarios** colección, compruebe que la colección contiene los usuarios que esperan y, a continuación, edite la suscripción a Intune para usar la nueva colección. Puede excluir recopilaciones de usuarios de la nueva recopilación para migrar usuarios. Si excluir un usuario de una colección, pero incluyen un grupo que el usuario es miembro de, el usuario no se excluirán de la colección.
 
 Para migrar un grupo de prueba de usuarios a Intune, cree una recopilación de usuarios que contenga los usuarios para migrar. A continuación, excluya la recopilación de usuario de la colección que se usa para la suscripción de Intune.  
 
@@ -179,7 +179,7 @@ Nivel de registro usado para determinar el tipo de registros que deben escribirs
 Estos son los valores posibles para LoggingLevel:
 
 - ActivityTracing
-- Todos
+- Todo
 - Crítica
 - Error
 - Información
