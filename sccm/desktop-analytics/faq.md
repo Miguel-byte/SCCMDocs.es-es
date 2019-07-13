@@ -2,7 +2,7 @@
 title: Preguntas más frecuentes sobre análisis de escritorio
 titleSuffix: Configuration Manager
 description: Preguntas frecuentes sobre el análisis de escritorio.
-ms.date: 06/10/2019
+ms.date: 07/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9daf94a21b66fa0137e0a6bf041f10c87c64c34e
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 663490349bcb61f243980c5e1a3fe1f5651d8573
+ms.sourcegitcommit: 448cc0d9094a3c9e23f011c4673cd1e8b956280a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159078"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860831"
 ---
 # <a name="desktop-analytics-faq"></a>Preguntas más frecuentes de análisis de escritorio
 
@@ -45,7 +45,6 @@ Hay dos tipos de datos en el portal de análisis de escritorio: Datos del admini
 
 Todos los datos se actualizan automáticamente una vez al día, incluso si no solicita una actualización de datos y a petición. No hay ninguna manera de desencadenar una actualización de la petición de datos de diagnóstico. Para obtener más información sobre los diferentes tipos de datos de análisis de escritorio, consulte [latencia de datos](/sccm/desktop-analytics/troubleshooting#data-latency).
 
-
 ## <a name="privacy"></a>Privacidad
 
 ### <a name="can-desktop-analytics-be-used-without-a-direct-client-connection-to-the-microsoft-data-management-service"></a>¿Análisis de escritorio se puede usar sin una conexión directa desde el cliente al servicio de administración de datos de Microsoft?
@@ -61,3 +60,9 @@ Para el servicio de administración de datos de Microsoft y análisis de almacen
 ### <a name="where-is-my-organizations-data-stored"></a>¿Dónde se almacenan los datos de mi organización?
 
 Datos de diagnóstico de Windows desde los equipos se cifran, enviados a y procesadas en centros de datos segura administrada por Microsoft ubicados en Estados Unidos. Nuestro análisis de los datos relacionados con el análisis de escritorio, a continuación, se proporciona a usted a través de la solución de análisis de escritorio en el portal de Azure. Análisis de escritorio se admiten en todas las regiones de Azure. Seleccionar una región de Azure internacional no impedirá datos de diagnóstico enviados a y procesarse en los centros de datos seguros de Microsoft en Estados Unidos.
+
+## <a name="other"></a>Otros
+
+### <a name="can-i-use-desktop-analytics-for-my-office-365-proplus-upgrades"></a>¿Puedo usar análisis de escritorio para Mis actualizaciones de Office 365 ProPlus?
+
+No, análisis de escritorio se centra en Windows. Microsoft desarrolló el análisis de escritorio en estrecha colaboración con muchos clientes. A través del programa de vista previa, los comentarios del cliente eran acerca de cómo mejorar el análisis de escritorio su capacidad para administrar las implementaciones de Windows de confianza. También nos dijeron que querían [preparación para Office 365 ProPlus ](/sccm/sum/deploy-use/office-365-dashboard#bkmk_o365_readiness) más estrechamente integrado con herramientas de administración de office en Configuration Manager e Intune. Microsoft seguirá al realizar inversiones en esas áreas, al centrarse en escenarios de Windows en el escritorio de análisis.

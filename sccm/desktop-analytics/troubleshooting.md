@@ -2,7 +2,7 @@
 title: Solución de problemas de análisis de escritorio
 titleSuffix: Configuration Manager
 description: Detalles técnicos para ayudarle a solucionar problemas relacionados con el análisis de escritorio.
-ms.date: 06/28/2019
+ms.date: 07/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 246ee2c314df3d942d40d16ac9953580fed32803
-ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
+ms.openlocfilehash: 9a1c170394e3db46572c424dcb04715713d4b24f
+ms.sourcegitcommit: 448cc0d9094a3c9e23f011c4673cd1e8b956280a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67551253"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860851"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>Solución de problemas de análisis de escritorio
 
@@ -74,7 +74,7 @@ Si necesita aprovisionar estas aplicaciones después de completar la instalació
 
 ### <a name="create-and-import-app-for-configuration-manager"></a>Crear e importar aplicación de Configuration Manager
 
-Después de completar la [inicial incorporación](/sccm/desktop-analytics/set-up#initial-onboarding) en el portal de análisis de escritorio, siga estos pasos para crear manualmente e importar la aplicación de Configuration Manager si no se puede crear esta aplicación de Azure AD desde configurar servicios de Azure hechicero.
+Si no se puede crear la aplicación de Azure AD para Configuration Manager desde el Asistente para configurar servicios de Azure, o si desea reutilizar una aplicación existente, deberá crear manualmente e impórtelo. Después de completar la [inicial incorporación](/sccm/desktop-analytics/set-up#initial-onboarding) en el portal de análisis de escritorio, siga estos pasos:
 
 #### <a name="create-app-in-azure-ad"></a>Crear la aplicación en Azure AD
 
@@ -90,7 +90,7 @@ Después de completar la [inicial incorporación](/sccm/desktop-analytics/set-up
 
     <!--     - **Sign-on URL**: this value isn't used by Configuration Manager, but required by Azure AD. Enter a unique and valid URL, for example: `https://configmgrapp`   -->
   
-    Seleccione **registrar**.  
+    Seleccione **Registrar**.  
 
 3. Seleccione la aplicación, tenga en cuenta la **Id. de aplicación (cliente)** y **Id. de directorio (inquilino)** . Los valores son GUID que se usan para configurar la conexión de Configuration Manager.  
 
@@ -128,7 +128,7 @@ Después de completar la [inicial incorporación](/sccm/desktop-analytics/set-up
 
     - Seleccione **Desktop Analytics** en la lista de servicios disponibles.  
   
-   Seleccione **Siguiente**.  
+   Seleccione **Next** (Siguiente).  
 
 3. En el **aplicación** , seleccione la adecuada **entorno Azure**. A continuación, seleccione **importación** para la aplicación web. Configure las siguientes opciones en el **importar aplicaciones** ventana:  
 

@@ -2,7 +2,7 @@
 title: Análisis de escritorio
 titleSuffix: Configuration Manager
 description: Información general sobre el servicio de análisis de escritorio integrado con Configuration Manager.
-ms.date: 06/07/2019
+ms.date: 07/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: overview
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b0daf2943b0859227d08069be9c9da69165d5d1a
-ms.sourcegitcommit: de3c86077bbf91b793e94e1f60814df18da11bab
+ms.openlocfilehash: 45a8e71a3a8777686547ef4e3e05ef868b459792
+ms.sourcegitcommit: 448cc0d9094a3c9e23f011c4673cd1e8b956280a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67726231"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860873"
 ---
 # <a name="what-is-desktop-analytics"></a>¿Qué es el análisis de escritorio?
 
@@ -70,6 +70,9 @@ Para utilizar el análisis de escritorio, asegúrese de que su entorno cumple lo
 ### <a name="technical"></a>Técnica
 
 - Una suscripción activa de Azure, con [administrador Global](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator) permisos  
+
+    > [!Important]  
+    > Escritorio Analytics actualmente se ofrece como un servicio de Office 365 y requiere una suscripción a Office 365 en su inquilino de Azure AD. Esto es posible que no sea un requisito en el futuro.
 
     - **Propietario del área de trabajo** o **colaborador** permisos para **configurar el área de trabajo**y los roles siguientes:  
 
