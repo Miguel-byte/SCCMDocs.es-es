@@ -2,7 +2,7 @@
 title: Optimización de la distribución de actualizaciones de Windows 10
 titleSuffix: Configuration Manager
 description: Obtenga información sobre cómo usar Configuration Manager para administrar el contenido de actualización para estar al día con Windows 10.
-ms.date: 06/15/2018
+ms.date: 07/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6d037baba858b3aacc3724e99a66819197b1dd89
-ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.openlocfilehash: 4f3f5eb1b25021adee5feecd3119776180250496
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194515"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678664"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>Optimización de la distribución de actualizaciones de Windows 10 con Configuration Manager
 
@@ -24,7 +24,7 @@ ms.locfileid: "67194515"
 
 Para muchos clientes, una buena forma de obtener las actualizaciones mensuales de Windows 10 y de estar al día con ellas empieza por disponer de una buena estrategia de distribución de contenido mediante Configuration Manager. El tamaño de las actualizaciones de calidad mensuales puede ser motivo de preocupación para las grandes organizaciones. Existen algunas tecnologías disponibles que están diseñadas para ayudar a reducir la carga de red y el ancho de banda para optimizar la distribución de actualizaciones. En este artículo se explican estas tecnologías, se comparan y se ofrecen recomendaciones para ayudarle a decidir cuál utilizar.  
  
-Windows 10 proporciona varios tipos de actualizaciones. Para obtener más información, consulte [Tipos de actualizaciones en Windows Update para empresas](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb#update-types). Este artículo se centra en las actualizaciones de *calidad* de Windows 10 con Configuration Manager. 
+Windows 10 proporciona varios tipos de actualizaciones. Para obtener más información, consulte [Tipos de actualizaciones en Windows Update para empresas](/windows/deployment/update/waas-manage-updates-wufb#types-of-updates-managed-by-windows-update-for-business). Este artículo se centra en las actualizaciones de *calidad* de Windows 10 con Configuration Manager. 
 
 
 ## <a name="express-update-delivery"></a>Distribución de actualizaciones rápidas
@@ -92,7 +92,7 @@ La selección de la tecnología correcta de almacenamiento en la memoria caché 
 | Detección de elemento del mismo nivel | Mediante el servicio en la nube Optimización de distribución (requiere acceso a Internet) | Mediante el punto de administración (basado en los grupos de límites del cliente) | Multidifusión |
 | Generación de informes | Sí (usar Windows Analytics) | Panel de orígenes de datos de cliente de ConfigMgr | Panel de orígenes de datos de cliente de ConfigMgr |
 | Control del uso de WAN | Sí (nativo, puede controlarse mediante la configuración de la directiva de grupo) | Grupos de límites | Solo compatibilidad de subred |
-| Tipos de contenido admitidos | - Actualizaciones rápidas (mediante ConfigMgr)</br> - Actualizaciones de Windows y de seguridad</br> - Controladores</br> - Aplicaciones de la Tienda Windows</br> - Aplicaciones empresariales de la Tienda Windows | Todos los tipos de contenido de ConfigMgr, incluidas las imágenes descargadas en [Windows PE](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic) | Todos los tipos de contenido de ConfigMgr, salvo las imágenes |
+| Tipos de contenido admitidos | **A través de Configuration Manager:** </br> Las actualizaciones rápidas </br> </br> **A través de la nube de Microsoft:**</br> Actualizaciones de Windows y de seguridad</br> Controladores</br> Aplicaciones de la Tienda Windows</br> Tienda Windows para aplicaciones empresariales | Todos los tipos de contenido de ConfigMgr, incluidas las imágenes descargadas en [Windows PE](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic) | Todos los tipos de contenido de ConfigMgr, salvo las imágenes |
 | Administración mediante ConfigMgr | Parcial (configuración de agente de cliente) | Sí (configuración de agente de cliente) | Sí (configuración de agente de cliente) |
 
 
