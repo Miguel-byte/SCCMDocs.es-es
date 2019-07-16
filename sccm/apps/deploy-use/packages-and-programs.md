@@ -158,7 +158,7 @@ Los paquetes pueden usar algunas características nuevas de Configuration Manage
 
        -   **Comentario** (opcional): especifique un comentario para este programa de dispositivo con un máximo de 127 caracteres.  
 
-       -   **Carpeta de descarga**: especifique el nombre de la carpeta del dispositivo de Windows CE en la que se almacenarán los archivos de origen del paquete. El valor predeterminado es **\Temp\\\** .  
+       -   **Carpeta de descarga**: especifique el nombre de la carpeta del dispositivo de Windows CE en la que se almacenarán los archivos de origen del paquete. El valor predeterminado es **\Temp\\** .  
 
        -   **Línea de comandos**: escriba la línea de comandos que se usará para iniciar este programa o seleccione **Examinar** para ir a la ubicación del archivo.  
 

@@ -103,6 +103,8 @@
           href: plan-design/configs/supported-configurations.md
         - name: Números de tamaño y escala
           href: plan-design/configs/size-and-scale-numbers.md
+        - name: Requisitos previos de sitio y sistema de sitio
+          href: plan-design/configs/site-and-site-system-prerequisites.md
         - name: Directrices de rendimiento y tamaño del sitio
           href: plan-design/configs/site-size-performance-guidelines.md
         - name: Sistemas operativos compatibles para los servidores de sistema de sitio
