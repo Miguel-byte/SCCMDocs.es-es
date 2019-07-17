@@ -2,7 +2,7 @@
 title: Fin de soporte técnico
 titleSuffix: Configuration Manager 2007
 description: El soporte técnico para System Center Configuration Manager 2007 y Forefront Endpoint Protection 2010 finaliza el 9 de julio de 2019.
-ms.date: 11/05/2018
+ms.date: 07/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,22 +12,25 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bb030e09e9c4b7050f52346e689ccc597e0f8e90
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: a26c03d14b13143e7529c0b9124d2b1e6c196b8a
+ms.sourcegitcommit: de3c86077bbf91b793e94e1f60814df18da11bab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133602"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67726180"
 ---
 # <a name="product-end-of-support"></a>Fin de soporte técnico del producto
 
-*Se aplica a: System Center Configuration Manager 2007*
+*Se aplica a: System Center Configuration Manager 2007 y Forefront Endpoint Protection 2010*
 
-El soporte técnico para **System Center Configuration Manager 2007** y **Forefront Endpoint Protection 2010** finaliza el 9 de julio de 2019. Tras esta fecha, Microsoft no proporciona los siguientes servicios para estos productos: 
+## <a name="system-center-configuration-manager-2007-and-forefront-endpoint-protection-2010-are-out-of-support"></a>Ya no se ofrece soporte técnico para **System Center Configuration Manager 2007** ni **Forefront Endpoint Protection 2010**.
+
+El soporte técnico para **System Center Configuration Manager 2007** y **Forefront Endpoint Protection 2010** finalizó el 9 de julio de 2019. Microsoft ya no proporciona los siguientes servicios para dichos productos:
+
 - Actualizaciones de seguridad
 - Actualizaciones que no son de seguridad
 - Opciones de soporte técnico asistido (gratuito o de pago)
-- Actualizaciones de contenido técnico en línea 
+- Actualizaciones de contenido técnico en línea
 
 Microsoft recomienda este plan de migración:
 
@@ -37,13 +40,12 @@ Microsoft recomienda este plan de migración:
 
 - Migrar Forefront Endpoint Protection 2010 independiente a System Center Endpoint Protection (rama actual) independiente.  
 
-
 Vea los siguientes artículos para más información:
 
 - [Compatibilidad con System Center Configuration Manager 2007 y Forefront Endpoint Protection 2010 finaliza el 9 de julio de 2019](https://support.microsoft.com/help/4096323)  
 - [Configuration Manager support blog post](https://blogs.technet.microsoft.com/configurationmgr/2018/03/30/configuration-manager-2007-approaching-end-of-support-what-you-need-to-know/) (Entrada de blog de soporte de Configuration Manager)  
 - [Introduction to Configuration Manager current branch](/sccm/core/understand/introduction) (Introducción a Configuration Manager, rama actual)  
 - [Documentation on how to migrate to Configuration Manager current branch](/sccm/core/migration/migrate-data-between-hierarchies) (Documentación sobre cómo migrar a Configuration Manager, rama actual)  
-    - En este artículo también se incluye un vídeo que analiza y muestra los escenarios de migración habituales.
+    En este artículo también se incluye un vídeo que analiza y muestra los escenarios de migración habituales.
 
-La biblioteca de documentación de Configuration Manager 2007 todavía está disponible en [Microsoft TechNet](https://technet.microsoft.com/library/bb735860.aspx).
+La [biblioteca de documentación de Configuration Manager 2007](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb735860\(v=technet.10\)) todavía está disponible en Microsoft TechNet.

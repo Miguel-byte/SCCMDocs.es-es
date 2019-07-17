@@ -2,7 +2,7 @@
 title: Datos de uso y diagnóstico para la versión 1802
 titleSuffix: Configuration Manager
 description: Obtenga información sobre los niveles de diagnóstico y datos de uso recopilados en la versión 1802.
-ms.date: 03/22/2018
+ms.date: 05/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0925a4cc4e4db0a178a4ccf1c7e959a76910f6e8
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 5c492a4fc90b1fba51c8db0031fa73bad2a1e2d2
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56142177"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676916"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1802-of-system-center-configuration-manager"></a>Niveles de recopilación de datos de uso para diagnóstico de la versión 1802 de System Center Configuration Manager
 
@@ -87,7 +87,7 @@ Para la versión 1802 de Configuration Manager, este nivel incluye los datos sig
 
      - Fecha de expiración de Software Assurance      
 
-     - Estado y errores de la implementación del paquete de actualización, progreso de la descarga y errores de requisitos previos     
+     - Estado y errores de la implementación del paquete de actualización, progreso de la descarga y errores de requisitos previos 
 
      - Uso del anillo rápido de actualización
 
@@ -296,7 +296,7 @@ Para la versión 1802 de Configuration Manager, este nivel incluye los datos sig
 
 ### <a name="endpoint-protection"></a>Endpoint Protection  
 
-   - Directivas de Protección contra amenazas avanzada (ATP) de Windows Defender: recuento de directivas y si se implementan.
+   - Directivas de Advanced Threat Protection (ATP) de Microsoft Defender, anteriormente conocido como ATP de Windows Defender: recuento de directivas y si estas están implementadas.
 
    - Recuento de alertas que se han configurado para la característica de Endpoint Protection  
 

@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d096681c044b794b849d05c48fa17171344b8a64
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 6b586fb4eded2143e42887236d1c52b0a8bae275
+ms.sourcegitcommit: de3c86077bbf91b793e94e1f60814df18da11bab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56129874"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67726250"
 ---
 # <a name="set-up-your-system-center-configuration-manager-lab"></a>Configurar el laboratorio de System Center Configuration Manager
 
@@ -272,7 +272,7 @@ Internet Information Services (IIS) es un servidor web flexible y escalable que 
 
         -   **Autorización de URL**  
 
-        -   **Autorización de Windows**  
+        -   **Autenticación de Windows**  
 
     -   **Desarrollo de aplicaciones**  
 

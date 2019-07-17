@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8506996f7b769003c937de69a9c7f659341c4294
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 48e0f2c1d04f0592cd794aa4315641fe6f9cd15b
+ms.sourcegitcommit: 9670e11316c9ec6e5f78cd70c766bbfdf04ea3f9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65501027"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67818123"
 ---
 #  <a name="recover-a-configuration-manager-site"></a>Recuperar un sitio de Configuration Manager
 
@@ -177,11 +177,11 @@ Use uno de los siguientes procedimientos para recuperar la base de datos de siti
 
 ### <a name="start-a-site-recovery-in-the-setup-wizard"></a>Iniciar una recuperación de sitio en el Asistente para instalación
 
-1.  Copie la carpeta [CD.Latest](/sccm/core/servers/manage/the-cd.latest-folder) en una ubicación fuera de la carpeta de instalación de Configuration Manager. Desde la copia de la carpeta CD.Latest, ejecute el Asistente para instalación de Configuration Manager.  
+1. Copie la carpeta [CD.Latest](/sccm/core/servers/manage/the-cd.latest-folder) en una ubicación fuera de la carpeta de instalación de Configuration Manager. Desde la copia de la carpeta CD.Latest, ejecute el Asistente para instalación de Configuration Manager.  
 
-2.  En la página **Primeros pasos** , seleccione **Recuperar un sitio**y, a continuación, haga clic en **Siguiente**.  
+2. En la página **Primeros pasos** , seleccione **Recuperar un sitio**y, a continuación, haga clic en **Siguiente**.  
 
-3.  Complete el asistente con las opciones apropiadas para la recuperación de sitio que desea completar.  
+3. Complete el asistente con las opciones apropiadas para la recuperación de sitio que desea completar.  
 
      - Durante la recuperación, el programa de instalación identifica el puerto de SQL Server Service Broker (SSB) que usa SQL Server. No cambie el valor de este puerto durante la recuperación; de lo contrario, la replicación de datos no funcionará correctamente una vez finalizada la recuperación.  
 
@@ -256,7 +256,7 @@ Al recuperar sistemas de sitio que ejecutan IIS y que se habían configurado par
 
 ### <a name="reinstall-hotfixes"></a>Reinstalar revisiones 
 
-Tras una recuperación del sitio, debe reinstalar las revisiones que se han aplicado al servidor del sitio. Tras la recuperación del sitio, vea la lista de las revisiones instaladas anteriormente en la página **Finalizado** del Asistente para instalación. Esta lista también se guarda en `C:\ConfigMgrPostRecoveryActions.html` en el servidor de sitio recuperado.
+Tras una recuperación del sitio, debe reinstalar las [revisiones extraordinarias](/sccm/core/servers/manage/updates#bkmk_outofband) que se han aplicado al servidor del sitio. Tras la recuperación del sitio, vea la lista de las revisiones instaladas anteriormente en la página **Finalizado** del Asistente para instalación. Esta lista también se guarda en `C:\ConfigMgrPostRecoveryActions.html` en el servidor de sitio recuperado.
 
 
 ### <a name="recover-custom-reports"></a>Recuperar informes personalizados 

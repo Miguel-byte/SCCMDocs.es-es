@@ -2,7 +2,7 @@
 title: Datos de diagnóstico y uso en la versión 1902
 titleSuffix: Configuration Manager
 description: Conozca los niveles de datos de diagnóstico y uso recopilados en la versión 1902.
-ms.date: 03/27/2019
+ms.date: 05/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae3ce80fea4988f6a7a6a6d70c4199090d197ac4
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: 726b5a0377791c4d56797cc86015656c7d8ae44d
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58525055"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676854"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1902"></a>Niveles de recopilación de datos de uso y diagnóstico en la versión 1902
 
@@ -87,7 +87,7 @@ En el caso de la versión 1902 de Configuration Manager, este nivel incluye los 
 
     - Fecha de expiración de Software Assurance  
 
-    - Estado y errores de la implementación del paquete de actualización, progreso de la descarga y errores de requisitos previos  
+    - Estado y errores de la implementación del paquete de actualización, progreso de la descarga y errores de requisitos previos 
 
     - Uso del anillo rápido de actualización  
 
@@ -129,7 +129,7 @@ En el caso de la versión 1902 de Configuration Manager, este nivel incluye los 
 
 - ***[Nuevo]*** Existencia de las extensiones del lado servidor de administración y supervisión de Microsoft BitLocker (MBAM)  
 
-- ***[Nuevo]***  Recuento de aplicaciones clasificadas y sin clasificar de Asset Intelligence
+- ***[Nuevo] *** Recuento de aplicaciones clasificadas y sin clasificar de Asset Intelligence
 
 
 
@@ -215,7 +215,7 @@ En el caso de la versión 1902 de Configuration Manager, este nivel incluye los 
 
 - Recuento de archivos, tamaño del contenido, recuento de servicios y recuento de acciones personalizadas de MSI del catálogo de aplicaciones  
 
-- ***[Nuevo]***  Recuento de dispositivos por estado de disponibilidad de Office ProPlus
+- ***[Nuevo] *** Recuento de dispositivos por estado de disponibilidad de Office ProPlus
 
 
 ### <a name="client"></a>Cliente  
@@ -264,7 +264,7 @@ En el caso de la versión 1902 de Configuration Manager, este nivel incluye los 
 
 - Recuento de dispositivos de Microsoft Surface por modelo  
 
-- ***[Nuevo]***  Recuento de errores de comprobación de mantenimiento de cliente por tipo de problema
+- ***[Nuevo] *** Recuento de errores de comprobación de mantenimiento de cliente por tipo de problema
 
 
 ### <a name="cloud-services"></a>Cloud Services  
@@ -361,7 +361,7 @@ En el caso de la versión 1902 de Configuration Manager, este nivel incluye los 
 
 ### <a name="endpoint-protection"></a>Endpoint Protection  
 
-- Directivas de Protección contra amenazas avanzada (ATP) de Windows Defender: recuento de directivas y si se implementan.  
+- Directivas de Advanced Threat Protection (ATP) de Microsoft Defender, anteriormente conocido como ATP de Windows Defender: recuento de directivas y si estas están implementadas.
 
 - Recuento de alertas que se han configurado para la característica de Endpoint Protection  
 

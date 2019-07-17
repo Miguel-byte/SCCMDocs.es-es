@@ -11,18 +11,22 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba556ffe98fbcf51dbc20975875ddb0c0b1370bb
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: bc1d82de7863f6aa82e43515c28392865388a79f
+ms.sourcegitcommit: 9670e11316c9ec6e5f78cd70c766bbfdf04ea3f9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56139932"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67818184"
 ---
 # <a name="how-to-exclude-upgrading-clients-for-windows-computers-in-system-center-configuration-manager"></a>Cómo excluir la actualización de clientes para equipos Windows con System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-A partir de la versión 1610, puede excluir una colección de clientes de la instalación automática de versiones de cliente actualizadas. Esto se aplica a la actualización automática y a otros métodos como la actualización basada en actualizaciones de software, los scripts de inicio de sesión y la directiva de grupo. Puede usar esto para una colección de equipos a la que haya que prestar una mayor atención a la hora de actualizar el cliente. Un cliente que esté en una colección excluida omite las solicitudes para instalar el software de cliente actualizado.
+Puede excluir una colección de clientes de la instalación automática de versiones de cliente actualizadas. Esto se aplica a la actualización automática y a otros métodos como la actualización basada en actualizaciones de software, los scripts de inicio de sesión y la directiva de grupo. Puede usar esto para una colección de equipos a la que haya que prestar una mayor atención a la hora de actualizar el cliente. Un cliente que esté en una colección excluida omite las solicitudes para instalar el software de cliente actualizado.
+
+>[!NOTE]
+>Los clientes excluidos podrán continuar descargando y ejecutando CCMSETUP, pero no se actualizarán.
+
 
 ## <a name="configure-exclusion-for-automatic-upgrades"></a>Configurar la exclusión de las actualizaciones automáticas
 
@@ -35,8 +39,6 @@ A partir de la versión 1610, puede excluir una colección de clientes de la ins
 4.  Haga clic en **Aceptar** para cerrar y guardar la configuración. Luego, después de que los clientes actualicen la directiva, los de la colección excluida ya no instalarán automáticamente las actualizaciones del software de cliente. Para obtener más información, consulte [How to upgrade clients for Windows computers (Cómo actualizar clientes para equipos Windows)](upgrade-clients-for-windows-computers.md).
 
 ![Configuración de exclusión de actualización automática](media/automatic_upgrade_exclusion.png)
-
-
 
 >[!NOTE]
 >Aunque la interfaz de usuario indica que no se actualizarán los clientes mediante ningún método, hay dos que se pueden usar para invalidar esta configuración. Se pueden usar la instalación de inserción de cliente y la instalación de cliente manual para invalidar esta configuración. Para obtener más detalles, vea la siguiente sección.

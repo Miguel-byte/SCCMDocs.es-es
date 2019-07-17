@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f497272431d8587010ecd7dc0a8205162d9ae7fd
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: ccd6efc583805022bab908a06d908e010b9ec9d9
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286358"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677562"
 ---
 # <a name="capabilities-in-technical-preview-1610-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1610 para System Center Configuration Manager
 
@@ -33,12 +33,12 @@ En este artículo se presentan las características disponibles en Technical Pre
 Ahora se puede filtrar por el tamaño del contenido de las actualizaciones de software en las reglas de implementación automática. Por ejemplo, puede establecer el filtro **Tamaño del contenido (KB)** en **< 2048** para descargar solo las actualizaciones de software que tengan menos de 2 MB. Con este filtro evita que las actualizaciones de software de gran tamaño se descarguen automáticamente con el fin de ofrecer un mantenimiento simplificado de nivel inferior de Windows cuando el ancho de banda de red es limitado. Para más información, vea [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems (Configuration Manager y mantenimiento simplificado de Windows en sistemas operativos de nivel inferior)](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/).
 
 #### <a name="to-configure-the-content-size-field"></a>Para configurar el campo Tamaño del contenido
-Para configurar el campo **Tamaño del contenido (KB)** , vaya a la página **Actualizaciones de software** del Asistente para crear regla de implementación automática cuando cree una ADR o vaya a la pestaña **Actualizaciones de software** en las propiedades de una ADR existente.
+Para configurar el campo **Tamaño del contenido (KB)**, vaya a la página **Actualizaciones de software** del Asistente para crear regla de implementación automática cuando cree una ADR o vaya a la pestaña **Actualizaciones de software** en las propiedades de una ADR existente.
 
 ![Campo Tamaño del contenido](media/contentsizefield.png)
 
 ## <a name="improved-functionality-for-required-software-dialogs"></a>Funcionalidad mejorada para los cuadros de diálogo de software obligatorios
-Cuando un usuario recibe software obligatorio, desde el valor **Posponer y volver a recordármelo en:** , puede seleccionar las siguientes opciones en la lista desplegable:
+Cuando un usuario recibe software obligatorio, desde el valor **Posponer y volver a recordármelo en:**, puede seleccionar las siguientes opciones en la lista desplegable:
 - Más adelante: especifica que las notificaciones se programan según la configuración de notificación establecida en Configuración de agente de cliente.
 - Hora fija: especifica que la notificación se programará para mostrarse de nuevo después de la hora seleccionada. Por ejemplo, si un usuario selecciona 30 minutos, la notificación se mostrará de nuevo en 30 minutos.
 
@@ -62,10 +62,10 @@ Como administrador, ahora puede rechazar una solicitud de aplicación aprobada p
 #### <a name="try-it-out"></a>Haga la prueba
 Para rechazar una solicitud de aplicación aprobada:
 
-1.  En la consola de Configuration Manager, [cree e implemente una aplicación](https://docs.microsoft.com/sccm/apps/deploy-use/create-applications) que necesite aprobación.
-2.  En un equipo cliente, abra el Centro de software y envíe una solicitud para la aplicación.
-3.  En la consola de Configuration Manager, apruebe la solicitud de aplicación.
-4.  Rechace la solicitud de aplicación aprobada: en la consola de Configuration Manager, vaya a **Biblioteca de software** > **Información general** > **Administración de aplicaciones** > **Solicitudes de aprobación** y seleccione la solicitud de aplicación que quiere rechazar.  En la cinta, haga clic en **Denegar**.
+1. En la consola de Configuration Manager, [cree e implemente una aplicación](https://docs.microsoft.com/sccm/apps/deploy-use/create-applications) que necesite aprobación.
+2. En un equipo cliente, abra el Centro de software y envíe una solicitud para la aplicación.
+3. En la consola de Configuration Manager, apruebe la solicitud de aplicación.
+4. Rechace la solicitud de aplicación aprobada: en la consola de Configuration Manager, vaya a **Biblioteca de software** > **Información general** > **Administración de aplicaciones** > **Solicitudes de aprobación** y seleccione la solicitud de aplicación que quiere rechazar.  En la cinta, haga clic en **Denegar**.
 
 ## <a name="exclude-clients-from-automatic-upgrade"></a>Excluir a clientes de la actualización automática
 Technical Preview 1610 presenta una nueva opción que se puede usar para excluir un grupo de clientes de la instalación automática de versiones de cliente actualizadas.  Esto se aplica a la actualización automática y a otros métodos como la actualización basada en actualizaciones de software, los scripts de inicio de sesión y la directiva de grupo. Se puede usar para una colección de equipos a la que haya que prestar una mayor atención a la hora de actualizar el cliente. Un cliente que esté en una colección excluida omite las solicitudes para instalar el software de cliente actualizado.
@@ -127,31 +127,33 @@ Concretamente, puede configurar las siguientes opciones de Windows Defender:
 
 ### <a name="try-it-out"></a>Haga la prueba
 
-1.  En la consola de Configuration Manager, vaya a **Activos y compatibilidad** > **Información general** > **Configuración de cumplimiento** > **Elementos de configuración** y cree un nuevo **Elemento de configuración**.
-2.  Escriba un nombre, seleccione **Windows 8.1 y Windows 10** en **Settings for devices managed without the Configuration Manager client (Configuración de dispositivos administrados sin el cliente de Configuration Manager)** y haga clic en **Siguiente**.
-3.  Asegúrese de que **Todo Windows 10 (64 bits)** y **Todo Windows 10 (32 bits)** están seleccionados en la página **Plataformas admitidas** y, después, haga clic en **Siguiente**.
-4.  Seleccione el grupo de configuración **Windows Defender** y, después, haga clic en **Siguiente**.
-5.  Configure la configuración deseada en esta página y, después, haga clic en **Siguiente**.
-6.  Complete el asistente.
-7.  Agregue este elemento de configuración a una línea base de configuración e implemente esta línea base en equipos que ejecutan la actualización de noviembre (1511) de Windows 10 o versiones anteriores.
+1. En la consola de Configuration Manager, vaya a **Activos y compatibilidad** > **Información general** > **Configuración de cumplimiento** > **Elementos de configuración** y cree un nuevo **Elemento de configuración**.
+2. Escriba un nombre, seleccione **Windows 8.1 y Windows 10** en **Settings for devices managed without the Configuration Manager client (Configuración de dispositivos administrados sin el cliente de Configuration Manager)** y haga clic en **Siguiente**.
+3. Asegúrese de que **Todo Windows 10 (64 bits)** y **Todo Windows 10 (32 bits)** están seleccionados en la página **Plataformas admitidas** y, después, haga clic en **Siguiente**.
+4. Seleccione el grupo de configuración **Windows Defender** y, después, haga clic en **Siguiente**.
+5. Configure la configuración deseada en esta página y, después, haga clic en **Siguiente**.
+6. Complete el asistente.
+7. Agregue este elemento de configuración a una línea base de configuración e implemente esta línea base en equipos que ejecutan la actualización de noviembre (1511) de Windows 10 o versiones anteriores.
 
 > [!NOTE]
 > Recuerde marcar la casilla **Corregir configuraciones no compatibles** al implementar la línea base de configuración.
 
 ## <a name="request-policy-sync-from-administrator-console"></a>Solicitar la sincronización de directivas desde la consola de administrador
 
-Ahora puede solicitar una sincronización de directivas para un dispositivo móvil desde la consola de Configuration Manager, en lugar de solicitar una sincronización desde el propio dispositivo. La información del estado de la solicitud de sincronización está disponible como una columna nueva en las vistas del dispositivo, denominada **Remote Sync State (Estado de la sincronización remota)** . El estado también aparece en la sección **Datos de detección** del cuadro de diálogo **Propiedades** de cada dispositivo móvil.
+Ahora puede solicitar una sincronización de directivas para un dispositivo móvil desde la consola de Configuration Manager, en lugar de solicitar una sincronización desde el propio dispositivo. La información del estado de la solicitud de sincronización está disponible como una columna nueva en las vistas del dispositivo, denominada **Remote Sync State (Estado de la sincronización remota)**. El estado también aparece en la sección **Datos de detección** del cuadro de diálogo **Propiedades** de cada dispositivo móvil.
 
 ### <a name="try-it-out"></a>Haga la prueba
 
-1.  En la consola de Configuration Manager, vaya a **Activos y compatibilidad** > **Información general** > Dispositivos.
-2.  En el menú **Acciones de dispositivo remoto**, seleccione **Send Sync Request (Enviar solicitud de sincronización)** .
+1. En la consola de Configuration Manager, vaya a **Activos y compatibilidad** > **Información general** > Dispositivos.
+2. En el menú **Acciones de dispositivo remoto**, seleccione **Send Sync Request (Enviar solicitud de sincronización)**.
 
 La sincronización puede tardar de cinco a diez minutos. Cualquier cambio en la directiva se sincroniza con el dispositivo. Puede realizar un seguimiento del estado de la solicitud de sincronización en la columna **Remote Sync State (Estado de la sincronización remota)** de la vista **Dispositivos** o en el cuadro de diálogo **Propiedades** del dispositivo.
 
 ## <a name="additional-security-role-support"></a>Compatibilidad adicional del rol de seguridad
 
-Además del rol de Administrador total, los siguientes roles de seguridad integrados ahora tienen acceso completo a los elementos en el nodo **Todos los dispositivos corporativos**, incluidos los **Dispositivos declarados con anterioridad**, los **Perfiles de inscripción de iOS** y los **Perfiles de inscripción de Windows**: •   **Administrador de activos** •   **Administrador de acceso de recursos de la compañía**
+Además del rol Administrador total, los siguientes roles de seguridad integrados ahora tienen acceso total a los elementos en el nodo de **todos los dispositivos corporativos**, incluidos los **dispositivos declarados con anterioridad**, los **perfiles de inscripción de iOS** y los **perfiles de inscripción de Windows**:
+- **Administrador de activos**
+- **Administrador de acceso a los recursos de la empresa**
 
 Aún se concede acceso de solo lectura a estas áreas de la consola de Configuration Manager para el rol **Analista de solo lectura**.
 

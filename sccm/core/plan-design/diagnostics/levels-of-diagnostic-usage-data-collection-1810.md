@@ -2,7 +2,7 @@
 title: Datos de diagnóstico y uso en la versión 1810
 titleSuffix: Configuration Manager
 description: Obtenga información sobre los niveles de datos de diagnóstico y uso recopilados en la versión 1810.
-ms.date: 11/27/2018
+ms.date: 05/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52c13109710fc35dcd2853f76188ac42269a8058
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 704cc50369e1df251b706690465a4135ed5b3cdb
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56120068"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676901"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1810"></a>Niveles de recopilación de datos de uso y diagnóstico en la versión 1810
 
@@ -69,7 +69,7 @@ En el caso de la versión 1810 de Configuration Manager, este nivel incluye los 
 
 - Recuento de sistemas operativos de los dispositivos administrados y las directivas establecidas por Exchange Connector
 
-- ***[Actualizado]***  Recuento de dispositivos de Windows 10 por rama, compilación y bosque único de Active Directory  
+- ***[Actualizado] *** Recuento de dispositivos de Windows 10 por rama, compilación y bosque único de Active Directory  
 
 - Recuento de clientes de Windows 10 que usan Windows Update for Business  
 
@@ -87,7 +87,7 @@ En el caso de la versión 1810 de Configuration Manager, este nivel incluye los 
 
     - Fecha de expiración de Software Assurance  
 
-    - Estado y errores de la implementación del paquete de actualización, progreso de la descarga y errores de requisitos previos  
+    - Estado y errores de la implementación del paquete de actualización, progreso de la descarga y errores de requisitos previos 
 
     - Uso del anillo rápido de actualización  
 
@@ -123,7 +123,7 @@ En el caso de la versión 1810 de Configuration Manager, este nivel incluye los 
 
 - Recuento de bloqueos de los procesos de servidor de sitio de Configuration Manager y, si está disponible, el identificador de firma digital de Watson  
 
-- ***[Nuevo]***  Lista con hash de principales consultas SQL por recuento de bloqueos y uso de memoria  
+- ***[Nuevo] *** Lista con hash de principales consultas SQL por recuento de bloqueos y uso de memoria  
 
 - ***[Movido, actualizado]*** Estadísticas acumuladas de uso de administración conjunta: número de clientes inscritos alguna vez, número de clientes inscritos, número de clientes con inscripción pendiente, clientes que reciben la directiva, estados de las cargas de trabajo, tamaños de las recopilaciones de piloto/exclusión y errores de inscripción  
 
@@ -351,7 +351,7 @@ En el caso de la versión 1810 de Configuration Manager, este nivel incluye los 
 
 ### <a name="endpoint-protection"></a>Endpoint Protection  
 
-- Directivas de Protección contra amenazas avanzada (ATP) de Windows Defender: recuento de directivas y si se implementan.  
+- Directivas de Advanced Threat Protection (ATP) de Microsoft Defender, anteriormente conocido como ATP de Windows Defender: recuento de directivas y si estas están implementadas. 
 
 - Recuento de alertas que se han configurado para la característica de Endpoint Protection  
 

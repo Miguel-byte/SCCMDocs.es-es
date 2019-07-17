@@ -10,12 +10,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0af894becf4aa74beb250cc4672e6ba2cb0108af
-ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
+ms.openlocfilehash: e77402bbaf5ce0f0f756418be38b6435d70e9e4d
+ms.sourcegitcommit: de3c86077bbf91b793e94e1f60814df18da11bab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834804"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67726186"
 ---
 <!-- 
 - Feature 1357546
@@ -100,10 +100,16 @@ Tutoriales guiados que le ayudarán a solucionar problemas de características y
 
 ## <a name="new-and-updated-support-articles"></a>Artículos de soporte técnico nuevos y actualizados
 
-Artículos de soporte técnico que son nuevos o se han actualizado entre el 14 de mayo y el 10 de junio de 2019.
+Artículos de soporte técnico nuevos o actualizados entre el 10 de junio y el 10 de julio de 2019.
 
-- [KB 4503442: Error 403 when Configuration Manager clients try to communicate with CMG](https://support.microsoft.com/help/4503442) (Error 403 cuando los clientes de Configuration Manager intentan comunicarse con CMG)
-- [KB 4503578: Reporting stops working after you move a reporting services point or enable TLS 1.2 in Configuration Manager](https://support.microsoft.com/help/4503578) (La creación de informes deja de funcionar después de mover un punto de servicios de informes o habilitar TLS 1.2 en Configuration Manager)
-- [KB 4505440: Solución de problemas de administración de actualizaciones de software de Configuration Manager](https://support.microsoft.com/help/4505440)
+- [KB 4505439: Solución de problemas de sincronización de actualizaciones de software en Configuration Manager](https://support.microsoft.com/help/4505439)
+- [KB 4508653: Error en la distribución del paquete a un punto de distribución remoto debido a un error de inicio de sesión](https://support.microsoft.com/help/4508653)
+- [KB 4508855: Las aplicaciones no se implementan para los usuarios que iniciaron sesión en controladores de dominio en Configuration Manager](https://support.microsoft.com/help/4508855)
+- [KB 4500571: Paquete acumulativo de actualizaciones de la rama actual de System Center Configuration Manager, versión 1902](https://support.microsoft.com/help/4500571)
+- [KB 4508760: "Error de secuencia de funciones" aparece repetidamente en el registro Smsdbmon.log en la versión 1902 de Configuration Manager](https://support.microsoft.com/help/4508760)
+- [KB 4509131: Error en la secuencia de tareas de Configuration Manager OSD con el código de error 80070005](https://support.microsoft.com/help/4509131)
+- [KB 4509132: "Error de IDispatch 3603" durante la distribución de contenido en Configuration Manager](https://support.microsoft.com/help/4509132)
+- [KB 4509681: Bloqueo de la actualización de Configuration Manager durante la actualización de la base de datos de Configuration Manager](https://support.microsoft.com/help/4509681)
+- [KB 4509484: Error 80070070 durante la distribución de contenido en un CMG o DP en la nube en Configuration Manager](https://support.microsoft.com/help/4509484)
 
 Para suscribirse a notificaciones de Atom o RSS de nuevos artículos de soporte técnico de Configuration Manager, vea [Support content updates](https://support.microsoft.com/help/4089498/) (Actualizaciones de contenido de soporte técnico) y seleccione **System Center Configuration Manager**.  

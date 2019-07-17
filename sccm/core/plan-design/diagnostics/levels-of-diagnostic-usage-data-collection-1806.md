@@ -2,7 +2,7 @@
 title: Datos de diagnóstico y utilización en la versión 1806
 titleSuffix: Configuration Manager
 description: Obtenga información sobre los niveles de datos de diagnóstico y utilización recopilados en la versión 1806.
-ms.date: 07/30/2018
+ms.date: 05/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4bfd2a4cef78b6674e6f288483190ca7c48542fe
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: fa64134d16ea981001364aaba0a63dacfaf643a1
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56131921"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676881"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1806"></a>Niveles de recopilación de datos de utilización para diagnóstico en la versión 1806
 
@@ -87,7 +87,7 @@ Para la versión 1806 de Configuration Manager, este nivel incluye los datos sig
 
      - Fecha de expiración de Software Assurance      
 
-     - Estado y errores de la implementación del paquete de actualización, progreso de la descarga y errores de requisitos previos     
+     - Estado y errores de la implementación del paquete de actualización, progreso de la descarga y errores de requisitos previos 
 
      - Uso del anillo rápido de actualización
 
@@ -333,7 +333,7 @@ Para la versión 1806 de Configuration Manager, este nivel incluye los datos sig
 
 ### <a name="endpoint-protection"></a>Endpoint Protection  
 
-   - Directivas de Protección contra amenazas avanzada (ATP) de Windows Defender: recuento de directivas y si se implementan.
+   - Directivas de Advanced Threat Protection (ATP) de Microsoft Defender, anteriormente conocido como ATP de Windows Defender: recuento de directivas y si estas están implementadas.
 
    - Recuento de alertas que se han configurado para la característica de Endpoint Protection  
 

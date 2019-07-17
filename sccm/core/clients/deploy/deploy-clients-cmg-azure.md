@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b45c5938e9c1980802055bd73d5fd7e71122fc2a
-ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
+ms.openlocfilehash: 6af2f179a540c4a532173eacf265ec11bf292209
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57558123"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677871"
 ---
 # <a name="install-and-assign-configuration-manager-windows-10-clients-using-azure-ad-for-authentication"></a>Instalación y asignación de clientes Windows 10 para Configuration Manager mediante la autenticación basada en Azure AD
 
@@ -42,7 +42,7 @@ La configuración de Azure AD puede ser más fácil para algunos clientes que la
 
     - El usuario que ha iniciado sesión debe ser una identidad de Azure AD.   
 
-    - Si el usuario es una identidad federada o sincronizada, debe usar la [detección de usuarios de Active Directory](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser) de Configuration Manager, así como la [detección de usuarios de Azure AD](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc). Para obtener más información sobre las identidades híbridas, vea [Definición de una estrategia de adopción de identidad híbrida](/azure/active-directory/active-directory-hybrid-identity-design-considerations-identity-adoption-strategy).<!--497750-->  
+    - Si el usuario es una identidad federada o sincronizada, debe usar la [detección de usuarios de Active Directory](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser) de Configuration Manager, así como la [detección de usuarios de Azure AD](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc). Para más información sobre las identidades híbridas, vea [Definición de una estrategia de adopción de identidad híbrida](/azure/active-directory/active-directory-hybrid-identity-design-considerations-identity-adoption-strategy).<!--497750-->  
 
 - Además de los [requisitos previos existentes](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012MPpreq) para el rol de sistema de sitio del punto de administración, habilite también **ASP.NET 4.5** en este servidor. Incluya las demás opciones que se seleccionen automáticamente al habilitar ASP.NET 4.5.  
 
@@ -65,15 +65,15 @@ Cuando termine estas acciones, el sitio de Configuration Manager estará conecta
 
 Estas opciones de cliente ayudan a unir dispositivos de Windows 10 con Azure AD. También permiten que los clientes basados en Internet usen CMG y el punto de distribución en la nube.
 
-1.  Establezca la siguiente configuración de cliente en la sección **Cloud Services** con la información de [Cómo configurar el cliente](/sccm/core/clients/deploy/configure-client-settings).  
+1. Establezca la siguiente configuración de cliente en la sección **Cloud Services** con la información de [Cómo configurar el cliente](/sccm/core/clients/deploy/configure-client-settings).  
 
-    - **Permitir acceso al punto de distribución de nube**: habilite esta opción para ayudar a los dispositivos basados en Internet a obtener el contenido requerido para instalar el cliente de Configuration Manager. Si el contenido no está disponible en el punto de distribución en la nube, los dispositivos pueden recuperar el contenido de CMG. El arranque de instalación de cliente reintenta el punto de distribución en la nube durante cuatro horas antes de recurrir a CMG.<!--495533-->  
+    - **Permitir acceso al punto de distribución de nube**: habilite esta opción para ayudar a los dispositivos basados en Internet a obtener el contenido requerido para instalar el cliente de Configuration Manager. Si el contenido no está disponible en el punto de distribución en la nube, los dispositivos pueden recuperar el contenido de CMG. El arranque de la instalación del cliente reintenta el punto de distribución en la nube durante cuatro horas antes de recurrir a CMG.<!--495533-->  
 
     - **Registrar automáticamente los nuevos dispositivos de Windows 10 unidos a un dominio con Azure Active Directory**: establézcalo en **Sí** o **No**. El valor predeterminado es **Sí**. Este comportamiento también es el valor predeterminado de Windows 10, versión 1709.
 
     - **Permite que los clientes usen una puerta de enlace de administración en la nube**: establézcalo en **Sí** (valor predeterminado) o **No**.  
 
-2.  Implemente la configuración del cliente en la recopilación de dispositivo requerida. No implemente esta configuración en las recopilaciones de usuarios.
+2. Implemente la configuración del cliente en la recopilación de dispositivo requerida. No implemente esta configuración en las recopilaciones de usuarios.
 
 Para confirmar que el dispositivo está unido a Azure AD, ejecute `dsregcmd.exe /status` en un símbolo del sistema. El campo **AzureAdjoined** de los resultados mostrará el valor **YES** si el dispositivo se ha unido a Azure AD.
 

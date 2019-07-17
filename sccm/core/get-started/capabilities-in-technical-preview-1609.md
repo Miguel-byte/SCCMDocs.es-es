@@ -12,12 +12,12 @@ manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31c25622a42586c044e2b9f515f5e89f9e82ba00
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: caa916afa1bb254223844e97d9f2299a91d1ec07
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133755"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677764"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1609 para System Center Configuration Manager
 
@@ -275,9 +275,9 @@ Estos son los principales cambios realizados en los grupos de límites y en la f
 
 ### <a name="how-the-new-model-works"></a>Funcionamiento del nuevo modelo
 Al configurar grupos de límites, se asocian límites (ubicaciones de red) y roles de sistema de sitio, como los puntos de distribución, al grupo de límites. Esto ayuda a vincular clientes a servidores de sistema de sitio como puntos de distribución ubicados cerca de los clientes en la red.   
--   Puede asignar el mismo límite a varios grupos de límites.
--   Los servidores de sistema de sitio, como los puntos de distribución, pueden asociarse a varios grupos de límites, lo que los pone a disposición de una gama más amplia de ubicaciones de red.
--   Si un punto de distribución no está asociado a un grupo de límites, los clientes no podrán usar ese punto de distribución como ubicación de origen de contenido.
+- Puede asignar el mismo límite a varios grupos de límites.
+- Los servidores de sistema de sitio, como los puntos de distribución, pueden asociarse a varios grupos de límites, lo que los pone a disposición de una gama más amplia de ubicaciones de red.
+- Si un punto de distribución no está asociado a un grupo de límites, los clientes no podrán usar ese punto de distribución como ubicación de origen de contenido.
 
 A partir de esta Technical Preview, se definen relaciones de grupos de límites para configurar el comportamiento de reserva de las ubicaciones de origen de contenido. Este nuevo comportamiento se configura en la pestaña **Relaciones** de las propiedades del grupo de límites y reemplaza a la configuración de los sistemas de sitio como lentos o rápidos y a la configuración de un grupo de límites para permitir la ubicación de origen de reserva para el contenido.
 
@@ -285,35 +285,34 @@ En la pestaña Relaciones se agregan otros grupos de límites para configurar un
 
 Cuando un cliente no encuentra el contenido y empieza a buscar en ubicaciones de grupos de límites vecinos, se incrementa el grupo de puntos de distribución disponibles para ese cliente de una manera controlada.  
 
--   Un grupo de límites puede tener más de una relación. Esto permite configurar la reserva de los distintos vecinos para que se produzca después de períodos de tiempo diferentes.
--   Los clientes solo usarán como reserva un grupo de límites que sea vecino directo de su actual grupo de límites.
--   Cuando un cliente es miembro de varios grupos de límites, el grupo de límites actual se define como una unión de todos los grupos de límites de ese cliente.  Ese cliente puede usar como reserva un vecino de cualquiera de esos grupos de límites originales.
+- Un grupo de límites puede tener más de una relación. Esto permite configurar la reserva de los distintos vecinos para que se produzca después de períodos de tiempo diferentes.
+- Los clientes solo usarán como reserva un grupo de límites que sea vecino directo de su actual grupo de límites.
+- Cuando un cliente es miembro de varios grupos de límites, el grupo de límites actual se define como una unión de todos los grupos de límites de ese cliente.  Ese cliente puede usar como reserva un vecino de cualquiera de esos grupos de límites originales.
 
 Además de los vínculos que se definen, hay un vínculo implícito que se crea automáticamente entre los grupos de límites que se crean y el grupo de límites predeterminado que se crea automáticamente para cada sitio. Este vínculo automático:
--   es usado por los clientes que no se encuentran en un límite asociado a algún grupo de límites de la jerarquía que use automáticamente el grupo de límites predeterminado de su sitio asignado para identificar ubicaciones de origen de contenido válidas;   
--   es una opción de reserva predeterminada del grupo de límites actual al grupo de límites de sitio predeterminado que se usa después de 120 minutos.
+- es usado por los clientes que no se encuentran en un límite asociado a algún grupo de límites de la jerarquía que use automáticamente el grupo de límites predeterminado de su sitio asignado para identificar ubicaciones de origen de contenido válidas;   
+-  es una opción de reserva predeterminada del grupo de límites actual al grupo de límites de sitio predeterminado que se usa después de 120 minutos.
 
-**Ejemplo de uso del nuevo modelo:**     
-Cree tres grupos de límites que no compartan los límites ni los servidores de sistema de sitio:
--   Grupo BG_A con puntos de distribución DP_A1 y DP_A2 asociados al grupo
--   Grupo BG_B con puntos de distribución DP_B1 y DP_B2 asociados al grupo
--   Grupo BG_C con puntos de distribución DP_C1 y DP_C2 asociados al grupo
+**Ejemplo de uso del nuevo modelo:** Cree tres grupos de límites que no compartan los límites ni los servidores de sistema de sitio:
+- Grupo BG_A con puntos de distribución DP_A1 y DP_A2 asociados al grupo
+- Grupo BG_B con puntos de distribución DP_B1 y DP_B2 asociados al grupo
+- Grupo BG_C con puntos de distribución DP_C1 y DP_C2 asociados al grupo
 
 Agregue las ubicaciones de red de los clientes como límites para el grupo de límites BG_A y luego configure relaciones desde ese grupo de límites con los otros dos grupos de límites:
--   Configure los puntos de distribución para usar el primer grupo *vecino* (BG_B) después de 10 minutos. Este grupo contiene los puntos de distribución DP_B1 y DP_B2. Ambos están bien conectados a las primeras ubicaciones de límite de grupos.
--   Configure el segundo grupo *vecino* (BG_C) para usarse después de 20 minutos. Este grupo contiene los puntos de distribución DP_C1 y DP_C2. Ambos están separados por WAN de los otros dos grupos de límites.
--   Agregue también un punto de distribución adicional que se encuentre en el servidor de sitio al grupo de límites de sitio predeterminado de los sitios. Se trata de la ubicación de origen de contenido menos preferida, pero tiene una ubicación central con respecto a todos los grupos de límites.
+- Configure los puntos de distribución para usar el primer grupo *vecino* (BG_B) después de 10 minutos. Este grupo contiene los puntos de distribución DP_B1 y DP_B2. Ambos están bien conectados a las primeras ubicaciones de límite de grupos.
+- Configure el segundo grupo *vecino* (BG_C) para usarse después de 20 minutos. Este grupo contiene los puntos de distribución DP_C1 y DP_C2. Ambos están separados por WAN de los otros dos grupos de límites.
+- Agregue también un punto de distribución adicional que se encuentre en el servidor de sitio al grupo de límites de sitio predeterminado de los sitios. Se trata de la ubicación de origen de contenido menos preferida, pero tiene una ubicación central con respecto a todos los grupos de límites.
 
-    Ejemplo de grupos de límites y tiempos de reserva:
+  Ejemplo de grupos de límites y tiempos de reserva:
 
-     ![BG_Fallack](media/BG_Fallback.png)
+  ![BG_Fallack](media/BG_Fallback.png)
 
 
 Con esta configuración:
--   El cliente empieza a buscar contenido en los puntos de distribución de su grupo de límites *actual* (BG_A), buscando en cada punto de distribución durante dos minutos antes de pasar al siguiente punto de distribución del grupo de límites. El grupo de clientes de ubicaciones de origen de contenido válidas incluye DP_A1 y DP_A2.
--   Si el cliente no puede encontrar contenido en su grupo de límites *actual* después de buscar durante 10 minutos, agrega los puntos de distribución del grupo de límites BG_B a su búsqueda. Luego continúa buscando contenido en un punto de distribución de su grupo combinado de puntos de distribución que ahora incluye los de los grupos de límites BG_A y BG_B. El cliente sigue poniéndose en contacto con cada punto de distribución durante dos minutos antes de pasar al siguiente punto de distribución de su grupo. El grupo de clientes de ubicaciones de origen de contenido válidas incluye DP_A1, DP_A2, DP_B1 y DP_B2.
--   Después de otros 10 minutos (un total de 20 minutos), si el cliente aún no ha encontrado un punto de distribución con contenido, amplía su grupo de puntos de distribución disponibles para incluir los del segundo grupo *vecino*, el grupo de límites BG_C. El cliente ahora tiene seis puntos de distribución para la búsqueda (DP_A1, DP_A2, DP_B2, DP_B2, DP_C1 y DP_C2) y sigue pasando a un nuevo punto de distribución cada dos minutos hasta que encuentra contenido.
--   Si el cliente no ha encontrado contenido después de un total de 120 minutos, usa la reserva para incluir el *grupo de límites de sitio predeterminado* como parte de su búsqueda continuada. Ahora el grupo de puntos de distribución incluye todos los puntos de distribución de los tres grupos de límites configurados y el punto de distribución final ubicado en el equipo de servidor de sitio.  El cliente sigue buscando contenido, cambiando de punto de distribución cada dos minutos hasta que encuentra contenido.
+- El cliente empieza a buscar contenido en los puntos de distribución de su grupo de límites *actual* (BG_A), buscando en cada punto de distribución durante dos minutos antes de pasar al siguiente punto de distribución del grupo de límites. El grupo de clientes de ubicaciones de origen de contenido válidas incluye DP_A1 y DP_A2.
+- Si el cliente no puede encontrar contenido en su grupo de límites *actual* después de buscar durante 10 minutos, agrega los puntos de distribución del grupo de límites BG_B a su búsqueda. Luego continúa buscando contenido en un punto de distribución de su grupo combinado de puntos de distribución que ahora incluye los de los grupos de límites BG_A y BG_B. El cliente sigue poniéndose en contacto con cada punto de distribución durante dos minutos antes de pasar al siguiente punto de distribución de su grupo. El grupo de clientes de ubicaciones de origen de contenido válidas incluye DP_A1, DP_A2, DP_B1 y DP_B2.
+- Después de otros 10 minutos (un total de 20 minutos), si el cliente aún no ha encontrado un punto de distribución con contenido, amplía su grupo de puntos de distribución disponibles para incluir los del segundo grupo *vecino*, el grupo de límites BG_C. El cliente ahora tiene seis puntos de distribución para la búsqueda (DP_A1, DP_A2, DP_B2, DP_B2, DP_C1 y DP_C2) y sigue pasando a un nuevo punto de distribución cada dos minutos hasta que encuentra contenido.
+- Si el cliente no ha encontrado contenido después de un total de 120 minutos, usa la reserva para incluir el *grupo de límites de sitio predeterminado* como parte de su búsqueda continuada. Ahora el grupo de puntos de distribución incluye todos los puntos de distribución de los tres grupos de límites configurados y el punto de distribución final ubicado en el equipo de servidor de sitio.  El cliente sigue buscando contenido, cambiando de punto de distribución cada dos minutos hasta que encuentra contenido.
 
 Mediante la configuración de los distintos grupos vecinos para que estén disponibles en momentos diferentes, se controla cuándo se agregan puntos de distribución concretos como ubicación de origen de contenido y cuándo, o si, el cliente usa la reserva del grupo de límites de sitio predeterminado como una red de seguridad para el contenido que no está disponible desde cualquier otra ubicación.
 
@@ -333,7 +332,7 @@ Configuración de implementación original “No ejecutar programa” de la red 
 Seleccionado     |  Seleccionado    |  **Sin reserva**: se usan solo los puntos de distribución del grupo de límites actual       
 Seleccionado     |  No seleccionado|  **Sin reserva**: se usan solo los puntos de distribución del grupo de límites actual       
 No seleccionado |  No seleccionado|  **Reserva a vecino**: se usan los puntos de distribución del grupo de límites actual y luego se agregan los puntos de distribución del grupo de límites vecino. A menos que se configure un vínculo explícito al grupo de límites de sitio predeterminado, los clientes no usarán la reserva a ese grupo.    
-No seleccionado | Seleccionado     |   **Reserva normal**: se usan los puntos de distribución del grupo de límites actual y luego los de los grupos de límites vecinos y predeterminados de sitios
+No seleccionado | Seleccionado |   **Reserva normal**: se usan los puntos de distribución del grupo de límites actual y luego los de los grupos de límites vecinos y predeterminados de sitios
 
  Todas las demás configuraciones de implementación darán lugar a una **reserva normal**.  
 
@@ -404,13 +403,13 @@ En una secuencia de tareas existente para instalar un sistema operativo, agregue
 
     ![Paso Reiniciar el equipo](media/Restart-in-Windows-PE.png)
 5. Agregue un paso para iniciar la herramienta de OEM que va a convertir el firmware de BIOS a UEFI. Normalmente será un paso de secuencia de tareas **Ejecutar línea de comandos** con una línea de comandos para iniciar la herramienta de OEM.
-5.  Agregue el paso de secuencia de tareas Formatear y crear particiones en el disco que va a crear particiones en la unidad de disco duro y a aplicarle formato. En el paso, haga lo siguiente:
-    1.  Cree la partición FAT32 que se convertirá en UEFI antes de instalar el sistema operativo. Elija **GPT** para **Tipo de disco**.
+5. Agregue el paso de secuencia de tareas Formatear y crear particiones en el disco que va a crear particiones en la unidad de disco duro y a aplicarle formato. En el paso, haga lo siguiente:
+    1. Cree la partición FAT32 que se convertirá en UEFI antes de instalar el sistema operativo. Elija **GPT** para **Tipo de disco**.
     ![Paso Formatear y crear particiones en el disco](media/Format-and-partition-disk.png)
-    2.  Vaya a las propiedades de la partición FAT32. Escriba **TSUEFIDrive** en el campo **Variable**. Cuando la secuencia de tareas detecte esta variable, se preparará para la transición a UEFI antes de reiniciar el equipo.
+    2. Vaya a las propiedades de la partición FAT32. Escriba **TSUEFIDrive** en el campo **Variable**. Cuando la secuencia de tareas detecte esta variable, se preparará para la transición a UEFI antes de reiniciar el equipo.
     ![Propiedades de la partición](media/Partition-properties.png)
     3. Cree una partición NTFS que el motor de secuencia de tareas use para guardar su estado y para almacenar archivos de registro.
-6.  Agregue el paso de secuencia de tareas **Reiniciar el equipo**. En **Especifique qué desea ejecutar después del reinicio**, seleccione **La imagen de arranque asignada a esta secuencia de tareas** para iniciar el equipo en Windows PE.  
+6. Agregue el paso de secuencia de tareas **Reiniciar el equipo**. En **Especifique qué desea ejecutar después del reinicio**, seleccione **La imagen de arranque asignada a esta secuencia de tareas** para iniciar el equipo en Windows PE.  
 
 
 

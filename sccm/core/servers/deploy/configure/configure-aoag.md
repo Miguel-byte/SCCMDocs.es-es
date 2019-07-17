@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e0ad2568c250cbaab0f52f76b98750153aa0b05
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: ac3967059b7cb8b8e4d4a3d32a9c88bfdfd1567b
+ms.sourcegitcommit: 9670e11316c9ec6e5f78cd70c766bbfdf04ea3f9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67252348"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67818087"
 ---
 # <a name="configure-sql-server-always-on-availability-groups-for-configuration-manager"></a>Configuración de grupos de disponibilidad AlwaysOn de SQL Server para Configuration Manager
 
@@ -48,10 +48,13 @@ Para completar este procedimiento, la cuenta que utilice debe cumplir los requis
    - **Será miembro del grupo de disponibilidad:**  
      Si utiliza este servidor como miembro de la réplica principal inicial del grupo de disponibilidad, no es necesario restaurar una copia de la base de datos de sitio en este u otro servidor del grupo. La base de datos ya estará disponible en la réplica principal, y SQL Server replicará la base de datos en las réplicas secundarias en un paso posterior.  
 
-     -    **No será miembro del grupo de disponibilidad:**    
+   - **No será miembro del grupo de disponibilidad:**   
      Restaure una copia de la base de datos de sitio en el servidor que hospedará la réplica principal del grupo.
 
    Para obtener información sobre cómo completar este paso, vea [Crear una copia de seguridad completa de base de datos (SQL Server)](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server) y [Restaurar una copia de seguridad de base de datos con SSMS](/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms) en la documentación de SQL Server.
+
+> [!NOTE]  
+> Si quiere pasar de un grupo de disponibilidad a una base de datos independiente en una réplica existente, primero será necesario quitar la base de datos del grupo de disponibilidad.
 
 4. En el servidor que hospedará la réplica principal inicial del grupo, use el [Asistente para nuevo grupo de disponibilidad](/sql/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio) para crear el grupo de disponibilidad. En el asistente:
    - En la página **Seleccionar base de datos**, elija la base de datos para el sitio de Configuration Manager.  
@@ -85,20 +88,20 @@ Para completar este procedimiento, la cuenta que utilice para ejecutar el progra
 > Al utilizar Microsoft Intune con Configuration Manager en una configuración híbrida, el traslado de la base de datos de sitio desde o hacia un grupo de disponibilidad activa una resincronización de los datos con la nube. No se puede evitar esta resincronización.
 
 ### <a name="to-configure-a-site-to-use-the-availability-group"></a>Para configurar un sitio para utilizar un grupo de disponibilidad
-1.  Ejecute el **programa de instalación de Configuration Manager** desde la **&lt;*carpeta de instalación del sitio de Configuration Manager*>\BIN\X64\setup.exe**.
+1. Ejecute el **programa de instalación de Configuration Manager** desde la **&lt;*carpeta de instalación del sitio de Configuration Manager*>\BIN\X64\setup.exe**.
 
-2.  En la página **Primeros pasos** , seleccione **Realizar mantenimiento de sitio o restablecer este sitio**y, a continuación, haga clic en **Siguiente**.
+2. En la página **Primeros pasos** , seleccione **Realizar mantenimiento de sitio o restablecer este sitio**y, a continuación, haga clic en **Siguiente**.
 
-3.  A continuación, seleccione la opción **Modificar configuración de SQL Server** y luego haga clic en **Siguiente**.
+3. A continuación, seleccione la opción **Modificar configuración de SQL Server** y luego haga clic en **Siguiente**.
 
-4.  Vuelva a configurar lo siguiente en la base de datos de sitio:
+4. Vuelva a configurar lo siguiente en la base de datos de sitio:
     -   **Nombre de SQL Server:** escriba el nombre virtual para el **agente de escucha** del grupo de disponibilidad que ha configurado al crear el grupo de disponibilidad. El nombre virtual debe ser un nombre DNS completo, como **&lt;*servidorPuntodeconexión*>.fabrikam.com**.  
 
     -   **Instancia:** este valor debe estar en blanco para especificar la instancia predeterminada para el *agente de escucha* del grupo de disponibilidad. Si la base de datos de sitio actual se ejecuta en una instancia con nombre, esta aparecerá y debe borrarse.
 
     -   **Base de datos:** deje el nombre tal y como aparece. Este es el nombre de la base de datos de sitio actual.
 
-5.  Después de proporcionar la información de la nueva ubicación de la base de datos, complete el programa de instalación con los procesos y las configuraciones habituales.
+5. Después de proporcionar la información de la nueva ubicación de la base de datos, complete el programa de instalación con los procesos y las configuraciones habituales.
 
 
 
@@ -144,29 +147,29 @@ Para completar este procedimiento, la cuenta que utilice debe cumplir los requis
 > Al utilizar Microsoft Intune con Configuration Manager en una configuración híbrida, el traslado de la base de datos de sitio desde o hacia un grupo de disponibilidad activa una resincronización de los datos con la nube. Esto no puede evitarse.
 
 ### <a name="to-move-the-site-database-from-an-availability-group-back-to-a-single-instance-sql-server"></a>Para mover la base de datos de sitio desde un grupo de disponibilidad de nuevo a una sola instancia de SQL Server
-1.  Para detener el sitio de Configuration Manager, use el siguiente comando: **Preinst.exe /stopsite**. Para obtener más información, consulte [Hierarchy Maintenance Tool](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe) (Herramienta de mantenimiento de jerarquía).
+1. Para detener el sitio de Configuration Manager, use el siguiente comando: **Preinst.exe /stopsite**. Para obtener más información, consulte [Hierarchy Maintenance Tool](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe) (Herramienta de mantenimiento de jerarquía).
 
-2.  Use SQL Server para crear una copia de seguridad completa de la base de datos de sitio desde la réplica principal. Para obtener información sobre cómo completar este paso, consulte [Crear una copia de seguridad completa de base de datos (SQL Server)](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server) en la documentación de SQL Server.
+2. Use SQL Server para crear una copia de seguridad completa de la base de datos de sitio desde la réplica principal. Para obtener información sobre cómo completar este paso, consulte [Crear una copia de seguridad completa de base de datos (SQL Server)](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server) en la documentación de SQL Server.
 
-3.  Si el servidor que es la réplica principal del grupo de disponibilidad hospedará la única instancia de la base de datos de sitio, puede omitir este paso:  
+3. Si el servidor que es la réplica principal del grupo de disponibilidad hospedará la única instancia de la base de datos de sitio, puede omitir este paso:  
 
     -   Utilice SQL Server para restaurar la copia de seguridad de la base de datos de sitio en el servidor que hospedará la base de datos de sitio. Consulte [Restaurar una copia de seguridad de base de datos con SSMS](/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms) en la documentación de SQL Server.   <br />  <br />
 
-4.  En el servidor que hospedará la base de datos de sitio (la réplica principal o el servidor donde haya restaurado la base de datos de sitio), cambie el modelo de copia de seguridad de la base de datos de sitio de **COMPLETA** a **SIMPLE**. Consulte [Ver o cambiar el modelo de recuperación de una base de datos (SQL Server)](/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server) en la documentación de SQL Server.  
+4. En el servidor que hospedará la base de datos de sitio (la réplica principal o el servidor donde haya restaurado la base de datos de sitio), cambie el modelo de copia de seguridad de la base de datos de sitio de **COMPLETA** a **SIMPLE**. Consulte [Ver o cambiar el modelo de recuperación de una base de datos (SQL Server)](/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server) en la documentación de SQL Server.  
 
-5.  Ejecute el **programa de instalación de Configuration Manager** desde la **&lt;*carpeta de instalación del sitio de Configuration Manager>* \BIN\X64\setup.exe**.
+5. Ejecute el **programa de instalación de Configuration Manager** desde la **&lt;*carpeta de instalación del sitio de Configuration Manager>* \BIN\X64\setup.exe**.
 
-6.  En la página **Primeros pasos** , seleccione **Realizar mantenimiento de sitio o restablecer este sitio**y, a continuación, haga clic en **Siguiente**.  
+6. En la página **Primeros pasos** , seleccione **Realizar mantenimiento de sitio o restablecer este sitio**y, a continuación, haga clic en **Siguiente**.  
 
-7.  A continuación, seleccione la opción **Modificar configuración de SQL Server** y luego haga clic en **Siguiente**.  
+7. A continuación, seleccione la opción **Modificar configuración de SQL Server** y luego haga clic en **Siguiente**.  
 
-8.  Vuelva a configurar lo siguiente en la base de datos de sitio:
+8. Vuelva a configurar lo siguiente en la base de datos de sitio:
     -   **Nombre de SQL Server:** escriba el nombre del servidor que hospeda ahora la base de datos de sitio.
 
     -   **Instancia:** especifique la instancia con nombre que hospeda la base de datos de sitio o deje este campo en blanco si la base de datos se encuentra en la instancia predeterminada.
 
     -   **Base de datos:** deje el nombre tal y como aparece. Este es el nombre de la base de datos de sitio actual.    
 
-9.  Después de proporcionar la información de la nueva ubicación de la base de datos, complete el programa de instalación con los procesos y las configuraciones habituales. Cuando finalice la instalación, el sitio se reinicia y comienza a utilizar la nueva ubicación de la base de datos.    
+9. Después de proporcionar la información de la nueva ubicación de la base de datos, complete el programa de instalación con los procesos y las configuraciones habituales. Cuando finalice la instalación, el sitio se reinicia y comienza a utilizar la nueva ubicación de la base de datos.    
 
 10. Para limpiar los servidores que eran miembros del grupo de disponibilidad, siga las instrucciones de [Quitar un grupo de disponibilidad (SQL Server)](/sql/database-engine/availability-groups/windows/remove-an-availability-group-sql-server) en la documentación de SQL Server.
