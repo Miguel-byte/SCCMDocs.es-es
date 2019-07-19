@@ -1,5 +1,6 @@
 ---
 title: Seguridad y privacidad de CMG
+titleSuffix: Configuration Manager
 description: Obtenga información sobre instrucciones y recomendaciones de seguridad y privacidad con Cloud Management Gateway.
 author: aczechowski
 ms.author: aaroncz
@@ -10,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7304730b-b517-4c76-aadd-4cbd157dc971
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9ff03c20ccbb79a527f23b6c5cf0cd179751e980
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 8c584169d56c11be29cd536bf408f20ee59dbf3c
+ms.sourcegitcommit: b62de6c9cb1bc3e4c9ea5ab5ed3355d83e3a59bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67677752"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894172"
 ---
 # <a name="security-and-privacy-for-the-cloud-management-gateway"></a>Seguridad y privacidad de Cloud Management Gateway
 
