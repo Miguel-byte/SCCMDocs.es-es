@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f38b991ef942ea3dae3cffc49d7fe498458f6108
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: da2c809c4aaf95de450570814a5b967ca563a2c2
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255943"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340279"
 ---
 # <a name="manage-access-to-services-in-system-center-configuration-manager"></a>Administrar el acceso a servicios en System Center Configuration Manager
 
@@ -25,12 +25,12 @@ ms.locfileid: "62255943"
 Use el acceso condicional para especificar condiciones para ayudar a proteger el correo electrónico y otros servicios en los dispositivos que están inscritos en Microsoft Intune.  
 
 > [!Important]  
-> Incluida de MDM híbrida local son de acceso condicional [características en desuso](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Para más información, vea [¿Qué es la Administración híbrida de dispositivos móviles (MDM)?](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
+> La MDM híbrida, incluido el acceso condicional local, son [características en desuso](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Para más información, vea [¿Qué es la Administración híbrida de dispositivos móviles (MDM)?](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
 > 
-> Si usa acceso condicional en los dispositivos administrados con el cliente de Configuration Manager, para asegurarse de que todavía están protegidos, habilitar el acceso condicional en Intune para los dispositivos antes de migrar. Habilitar la administración conjunta en Configuration Manager, mover la carga de trabajo de directiva de cumplimiento a Intune y, a continuación, complete la migración de Intune híbrido a Intune independiente. Para obtener más información, consulte [el acceso condicional con administración conjunta](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access). 
+> Si usa el acceso condicional en dispositivos administrados con el cliente de Configuration Manager, para asegurarse de que siguen estando protegidos, primero habilite el acceso condicional en Intune para esos dispositivos antes de migrar. Habilite la administración conjunta en Configuration Manager, mueva la carga de trabajo de la Directiva de cumplimiento a Intune y, a continuación, complete la migración desde Intune híbrido a Intune independiente. Para obtener más información, consulte [acceso condicional con administración conjunta](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access). 
 
 
- Para obtener información sobre el acceso condicional en los dispositivos administrados con el cliente de Configuration Manager, consulte [administrar el acceso a servicios de Office 365 para equipos administrados por System Center Configuration Manager](../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).  
+ Para obtener información sobre el acceso condicional en dispositivos administrados con el cliente de Configuration Manager, consulte [Administración del acceso a los servicios de Office 365 para equipos administrados por System Center Configuration Manager](../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).  
 
 
  A continuación se muestra un ejemplo de flujo típico de acceso condicional:  
@@ -102,19 +102,19 @@ El acceso condicional a Exchange Online Dedicated admite dispositivos que ejecut
 - Windows Phone 8 y versiones posteriores
 - Cualquier dispositivo iOS que utilice un cliente de correo electrónico de Exchange ActiveSync (EAS)
 - Android 4 y versiones más recientes.
-- Para los inquilinos en el entorno de Exchange Online dedicado heredado:    
+- Para los inquilinos en el entorno heredado de Exchange online dedicado:    
 
   Use el conector de Exchange Server, que conecta Configuration Manager con Microsoft Exchange local. El conector permite administrar dispositivos móviles y habilita el acceso condicional. Para más información, consulte [Administrar dispositivos móviles mediante System Center Configuration Manager y Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).
-- Para los inquilinos en el nuevo entorno de Exchange Online dedicado:     
+- Para los inquilinos en el nuevo entorno de Exchange online dedicado:     
   El conector de Exchange Server es opcional, conecta Configuration Manager con Microsoft Exchange Online y ayuda a administrar la información del dispositivo. Para más información, consulte [Administrar dispositivos móviles mediante System Center Configuration Manager y Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md). No es necesario el conector para usar directivas de cumplimiento ni directivas de acceso condicional. Para la ejecución de informes sobre el impacto del acceso condicional se requiere el conector.  
 
 ## <a name="requirements-for-exchange-on-premises"></a>Requisitos para Exchange local
 El acceso condicional a Exchange local admite lo siguiente:
--   Windows 8 y versiones posteriores (cuando están inscritos en Intune)
--   Windows Phone 8 y versiones posteriores
--   Aplicación de correo electrónico nativo de iOS
--   Aplicación de correo electrónico nativo de Android 4 o posterior
--   No se admite la aplicación Microsoft Outlook (iOS y Android)
+- Windows 8 y versiones posteriores (cuando están inscritos en Intune)
+- Windows Phone 8 y versiones posteriores
+- Aplicación de correo electrónico nativo de iOS
+- Aplicación de correo electrónico nativo de Android 4 o posterior
+- No se admite la aplicación Microsoft Outlook (iOS y Android)
 
 **Además**:
 
@@ -132,9 +132,9 @@ El acceso condicional a Exchange local admite lo siguiente:
 
 ## <a name="requirements-for-skype-for-business-online"></a>Requisitos de Skype Empresarial Online
 El acceso condicional a Skype Online admite dispositivos que ejecutan:
- -   iOS 7.1 y versiones posteriores
- -   Android 4.0 y versiones posteriores
- -   Samsung KNOX Standard 4.0 o versiones posteriores
+- iOS 7.1 y versiones posteriores
+- Android 4.0 y versiones posteriores
+- Samsung KNOX Standard 4.0 o versiones posteriores
 
 Habilite la [autenticación moderna](https://aka.ms/SkypeModernAuth) para Skype Empresarial Online. 
 
@@ -171,13 +171,13 @@ El acceso condicional a SharePoint Online admite dispositivos que ejecutan:
 ## <a name="next-steps"></a>Pasos siguientes  
  Lea los siguientes temas para obtener información sobre cómo configurar directivas de cumplimiento y las directivas de acceso condicional para su escenario requiere:  
 
--   [Manage access to services in System Center Configuration Manager](../../protect/deploy-use/device-compliance-policies.md) (Administración del acceso a servicios en System Center Configuration Manager)  
+- [Manage access to services in System Center Configuration Manager](../../protect/deploy-use/device-compliance-policies.md) (Administración del acceso a servicios en System Center Configuration Manager)  
 
--   [Manage email access in System Center Configuration Manager](../../protect/deploy-use/manage-email-access.md) (Administración del acceso a correo electrónico en System Center Configuration Manager)  
+- [Manage email access in System Center Configuration Manager](../../protect/deploy-use/manage-email-access.md) (Administración del acceso a correo electrónico en System Center Configuration Manager)  
 
--   [Manage SharePoint Online access in System Center Configuration Manager](../../protect/deploy-use/manage-sharepoint-online-access.md) (Administración del acceso a SharePointo Online en System Center Configuration Manager)  
+- [Manage SharePoint Online access in System Center Configuration Manager](../../protect/deploy-use/manage-sharepoint-online-access.md) (Administración del acceso a SharePointo Online en System Center Configuration Manager)  
 
--   [Manage Skype for Business Online access](../../protect/deploy-use/manage-skype-for-business-online-access.md) (Administración del acceso a Skype Empresarial Online)  
+- [Manage Skype for Business Online access](../../protect/deploy-use/manage-skype-for-business-online-access.md) (Administración del acceso a Skype Empresarial Online)  
 
 ### <a name="see-also"></a>Consulte también  
 

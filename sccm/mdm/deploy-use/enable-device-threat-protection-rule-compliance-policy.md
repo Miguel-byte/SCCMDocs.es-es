@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0bae054d3daa5aea8e343fef05aa4578221f17b6
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: c0d98ec11f7b9003c710b5150732a9137fc1c013
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226834"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68337924"
 ---
 # <a name="enable-device-threat-protection-rule-in-the-compliance-policy"></a>Habilitar la regla de protección contra amenazas de dispositivo en la directiva de cumplimiento
 
@@ -38,12 +38,12 @@ Para habilitar la regla de protección contra amenazas de dispositivo, puede usa
 Como parte de la configuración de Lookout Device Threat Protection, en la [consola de Lookout](https://aad.lookout.com), creó una directiva que clasifica las diversas amenazas en niveles alto, medio y bajo. En la directiva de cumplimiento de Intune usará el nivel de amenaza para establecer el nivel de amenaza máximo permitido.
 
 En la página **Reglas** del asistente para directivas de cumplimiento, defina una regla nueva con la información siguiente:
-  * Condición: Nivel de máximo de riesgo de protección de amenazas de dispositivo.
-  * Valor: El valor puede ser uno de los siguientes:
-    * **Ninguno (protegido)**: Esto es la más segura. Esto significa que el dispositivo no puede tener ninguna amenaza. Si no se encuentra ningún nivel de amenaza, el dispositivo se evalúa como no conforme.
-    * **Bajo**: El dispositivo se evalúa como conforme si solo hay amenazas de nivel bajo. Cualquier valor por encima coloca al dispositivo en un estado de no conformidad.
-    * **Medio**: El dispositivo se evalúa como conforme si las amenazas que se encuentran en él son de nivel bajo o medio. Si se detectan amenazas de nivel alto, el dispositivo se determina como no conforme.
-    * **Alta**: Este es el menos seguro. Básicamente, permite todos los niveles de amenaza y quizás solo sea útil si usa esta solución únicamente para fines informativos.
+* Cumple Nivel máximo de riesgo de protección contra amenazas de dispositivo.
+* Valor: El valor puede ser uno de los siguientes:
+  * **Ninguno (protegido)** : Esta es la más segura. Esto significa que el dispositivo no puede tener ninguna amenaza. Si no se encuentra ningún nivel de amenaza, el dispositivo se evalúa como no conforme.
+  * **Bajo**: El dispositivo se evalúa como conforme si solo hay amenazas de nivel bajo. Cualquier valor por encima coloca al dispositivo en un estado de no conformidad.
+  * **Medio**: El dispositivo se evalúa como conforme si las amenazas que se encuentran en el dispositivo son de nivel bajo o medio. Si se detectan amenazas de nivel alto, el dispositivo se determina como no conforme.
+  * **Alto**: Este es el menos seguro. Básicamente, permite todos los niveles de amenaza y quizás solo sea útil si usa esta solución únicamente para fines informativos.
 
 Si crea directivas de acceso condicional para Office 365 y otros servicios, se considera la evaluación de cumplimiento anterior y los dispositivos no conformes se bloquean y no pueden tener acceso a los recursos de la empresa hasta que se resuelva la amenaza.
 

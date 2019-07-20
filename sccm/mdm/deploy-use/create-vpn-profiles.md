@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3b653d8c60299f54a0e54cee0792066ccd8dba65
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: c7312346550860484dc99097963b5fd07783abbd
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67678151"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340321"
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>Perfiles de VPN en dispositivos móviles en System Center Configuration Manager
 
@@ -36,30 +36,30 @@ Para implementar perfiles en dispositivos iOS, Android, Windows Phone y Windows 
 
 En esta tabla se muestra qué tipo de conexión se admite para cada plataforma de dispositivo:  
 
- |Tipo de conexión|iOS y macOS X|Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1|Windows 10 Desktop y Mobile|  
- |---------------|---------------|-------|-----------|----------|--------------|-----------------|-----------------------------|  
- |Cisco AnyConnect|Sí<sup>1</sup>|Sí|No|No|No|No|No|
- |Cisco (IPsec)|Solo iOS|No|No|No|No|No|No|  
- |Pulse Secure|Sí|Sí|Sí|No|Sí|Sí|Sí|  
- |F5 Edge Client|Sí|Sí|Sí|No|Sí|Sí|Sí|  
- |Dell SonicWALL Mobile Connect|Sí|Sí|Sí|No|Sí|Sí|Sí|  
- |VPN móvil de punto de comprobación|Sí|Sí|Sí|No|Sí|Sí|Sí|  
- |Microsoft SSL (SSTP)|No|No|Sí|Sí|Sí|No|No|  
- |Microsoft Automatic|No|No|Sí|Sí|Sí|No|Sí|  
- |IKEv2|Sí (directiva personalizada, iOS 9 y versiones posteriores)|No|Sí|Sí|Sí|Sí|Sí|  
- |PPTP|Sí|No|Sí|Sí|Sí|No|Sí|  
- |L2TP|Sí|No|Sí|Sí|Sí|No|Sí (OMA-URI)|  
+|Tipo de conexión|iOS y macOS X|Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1|Windows 10 Desktop y Mobile|  
+|---------------|---------------|-------|-----------|----------|--------------|-----------------|-----------------------------|  
+|Cisco AnyConnect|Sí<sup>1</sup>|Sí|Sin|Sin|Sin|Sin|Sin|
+|Cisco (IPsec)|Solo iOS|Sin|Sin|Sin|Sin|Sin|Sin|  
+|Pulse Secure|Sí|Sí|Sí|Sin|Sí|Sí|Sí|  
+|F5 Edge Client|Sí|Sí|Sí|Sin|Sí|Sí|Sí|  
+|Dell SonicWALL Mobile Connect|Sí|Sí|Sí|Sin|Sí|Sí|Sí|  
+|VPN móvil de punto de comprobación|Sí|Sí|Sí|Sin|Sí|Sí|Sí|  
+|Microsoft SSL (SSTP)|Sin|Sin|Sí|Sí|Sí|Sin|Sin|  
+|Microsoft Automatic|Sin|Sin|Sí|Sí|Sí|Sin|Sí|  
+|IKEv2|Sí (directiva personalizada, iOS 9 y versiones posteriores)|Sin|Sí|Sí|Sí|Sí|Sí|  
+|PPTP|Sí|Sin|Sí|Sí|Sí|Sin|Sí|  
+|L2TP|Sí|Sin|Sí|Sí|Sí|Sin|Sí (OMA-URI)|  
 
-<sup>1</sup> a partir de la versión 1802, el uso del tipo de conexión de Cisco AnyConnect varía.<!--1357393-->  
-   - Use la opción **Cisco Legacy AnyConnect** para perfiles de VPN en las siguientes versiones:
-       - iOS con Cisco AnyConnect versión 4.0.5 o anteriores
-       - macOS con cualquier versión de Cisco AnyConnect
-   - Use la opción **Cisco AnyConnect** para perfiles de VPN en las siguientes versiones:
-       - iOS con Cisco AnyConnect versión 4.0.7 o posteriores
+<sup>1</sup> a partir de la versión 1802, el uso del tipo de conexión Cisco AnyConnect varía.<!--1357393-->  
+- Use la opción **Cisco Legacy AnyConnect** para perfiles de VPN en las siguientes versiones:
+  - iOS con Cisco AnyConnect versión 4.0.5 o anteriores
+  - macOS con cualquier versión de Cisco AnyConnect
+- Use la opción **Cisco AnyConnect** para perfiles de VPN en las siguientes versiones:
+  - iOS con Cisco AnyConnect versión 4.0.7 o posteriores
 
-     > [!Tip]  
-     > Cisco AnyConnect 4.0.07x y versiones posteriores para iOS se introdujeron primero en la versión 1802 como una [característica de versión preliminar](/sccm/core/servers/manage/pre-release-features). A partir de la [actualización 4163547](https://support.microsoft.com/help/4163547) de la versión 1802, ya no es una característica de versión preliminar.  
-  
+  > [!Tip]  
+  > Cisco AnyConnect 4.0.07x y versiones posteriores para iOS se introdujeron primero en la versión 1802 como una [característica de versión preliminar](/sccm/core/servers/manage/pre-release-features). A partir de la [actualización 4163547](https://support.microsoft.com/help/4163547) de la versión 1802, ya no es una característica de versión preliminar.  
+
   
 > [!Note]  
 > Las versiones 3.0 y posteriores de F5 Access para iOS no son compatibles para los perfiles de VPN en la administración híbrida de dispositivos móviles. A este producto también se le conoce como F5 Access 2018. Si necesita crear perfiles de VPN para este cliente VPN, use Intune independiente. Las futuras versiones de iOS, incluida la versión 12, no admiten las versiones 2.1 o anteriores de F5 Access. Para más información, vea el [blog del equipo de soporte técnico de Microsoft Intune](https://aka.ms/iOS12_and_VPN).
@@ -69,21 +69,21 @@ En esta tabla se muestra qué tipo de conexión se admite para cada plataforma d
 
 Las siguientes opciones están disponibles para todos los tipos de conexión en Windows 10:
 
-- **Omitir VPN al conectarse a la red Wi-Fi de empresa**: La conexión VPN no se usa cuando el dispositivo está conectado a la red Wi-Fi de empresa. Escriba el nombre de red de confianza que se ha usado para determinar si el dispositivo está conectado a la red de la empresa.  
+- **Omitir VPN al conectarse a la red Wi-Fi de empresa**: La conexión VPN no se utiliza cuando el dispositivo está conectado a la red Wi-Fi de la empresa. Escriba el nombre de red de confianza que se ha usado para determinar si el dispositivo está conectado a la red de la empresa.  
 
-- **Las reglas de tráfico de red**: Establecer los protocolos, puerto local, puerto remoto y los intervalos de direcciones para habilitar para la conexión VPN.  
+- **Reglas de tráfico de red**: Establezca los protocolos, el puerto local, el puerto remoto y los intervalos de direcciones que se van a habilitar para la conexión VPN.  
 
-     > [!Note]  
-     > Si no se crea ninguna regla de tráfico de red, se habilitan todos los protocolos, puertos e intervalos de direcciones. Una vez creada una regla, la conexión VPN solo usa los protocolos, puertos e intervalos de direcciones que especifique en esa regla o en reglas adicionales.  
-  
-- **Las rutas**: Rutas que usen la conexión VPN. La creación de más de 60 rutas puede producir un error en la directiva.  
+  > [!Note]  
+  > Si no se crea ninguna regla de tráfico de red, se habilitan todos los protocolos, puertos e intervalos de direcciones. Una vez creada una regla, la conexión VPN solo usa los protocolos, puertos e intervalos de direcciones que especifique en esa regla o en reglas adicionales.  
+
+- **Rutas**: Rutas que usan la conexión VPN. La creación de más de 60 rutas puede producir un error en la directiva.  
 
 - **Servidores DNS**: Servidores DNS que usa la conexión VPN una vez establecida la conexión.  
 
-- **Las aplicaciones que se conectan automáticamente a la VPN**: Puede agregar aplicaciones o importar una lista de aplicaciones que usarán automáticamente la conexión VPN. El tipo de aplicación determina el identificador de la aplicación. Para una aplicación de escritorio, proporcione la ruta del archivo de la aplicación. Para una aplicación universal, proporcione el nombre de familia de paquete (PFN). Para obtener información sobre cómo buscar el PFN de una aplicación, consulte [Find a package family name for per-app VPN](../../protect/deploy-use/find-a-pfn-for-per-app-vpn.md) (Buscar un nombre de familia de paquete para VPN por aplicación).  
+- **Aplicaciones que se conectan automáticamente a la VPN**: Puede agregar aplicaciones o importar listas de aplicaciones que usen automáticamente la conexión VPN. El tipo de aplicación determina el identificador de la aplicación. Para una aplicación de escritorio, proporcione la ruta del archivo de la aplicación. Para una aplicación universal, proporcione el nombre de familia de paquete (PFN). Para obtener información sobre cómo buscar el PFN de una aplicación, consulte [Find a package family name for per-app VPN](../../protect/deploy-use/find-a-pfn-for-per-app-vpn.md) (Buscar un nombre de familia de paquete para VPN por aplicación).  
 
-     > [!IMPORTANT]  
-     > Proteja todas las listas de aplicaciones asociadas que se compilan para su uso en la configuración de VPN por aplicación. Si un usuario no autorizado modifica la lista y usted la importa a la lista de aplicaciones de VPN por aplicación, podría autorizar el acceso a VPN a aplicaciones que no deberían tener acceso. Una forma de proteger las listas de aplicaciones consiste en usar una lista de control de acceso (ACL).  
+  > [!IMPORTANT]  
+  > Proteja todas las listas de aplicaciones asociadas que se compilan para su uso en la configuración de VPN por aplicación. Si un usuario no autorizado modifica la lista y usted la importa a la lista de aplicaciones de VPN por aplicación, podría autorizar el acceso a VPN a aplicaciones que no deberían tener acceso. Una forma de proteger las listas de aplicaciones consiste en usar una lista de control de acceso (ACL).  
 
 
 
@@ -95,8 +95,8 @@ Las siguientes opciones están disponibles para todos los tipos de conexión en 
 2. Haga clic en **Crear perfil de VPN** en la cinta de opciones.  
 
 3. En la página **General**, especifique un **Nombre** y luego seleccione el **Tipo de perfil de VPN**.   
-     > [!NOTE]  
-     > El nombre de un perfil de VPN que usa las características de VPN de Windows 10 no puede estar en formato Unicode ni incluir caracteres especiales.
+    > [!NOTE]  
+    > El nombre de un perfil de VPN que usa las características de VPN de Windows 10 no puede estar en formato Unicode ni incluir caracteres especiales.
 
 
 4. Si la página **Plataformas compatibles** está disponible, seleccione las versiones de sistema operativo para el tipo de perfil de VPN especificado anteriormente. Elija **Seleccionar todo** para instalar el perfil de VPN en todas las versiones de sistema operativo disponibles.  
@@ -105,7 +105,7 @@ Las siguientes opciones están disponibles para todos los tipos de conexión en 
 
 6. En la página **Método de autenticación**, especifique la configuración siguiente:  
 
-   - **Método de autenticación**: Seleccione el método de autenticación que usa la conexión VPN. Métodos disponibles dependiendo del tipo de conexión como se muestra en esta tabla.  
+   - **Método de autenticación**: Seleccione el método de autenticación que utiliza la conexión VPN. Métodos disponibles dependiendo del tipo de conexión como se muestra en esta tabla.  
 
      |Método de autenticación|Tipos de &nbsp;conexión&nbsp; admitidos|  
      |---------------------------|--------------------------------|  
@@ -121,16 +121,16 @@ Las siguientes opciones están disponibles para todos los tipos de conexión en 
 
       En función de las opciones que seleccione, se le podría solicitar que especifique más información, como la siguiente:  
 
-     - **Recordar las credenciales de usuario en cada inicio de sesión**: Se recuerdan las credenciales de usuario para que los usuarios no tengan que escribirlas cada vez que se conectan.  
+     - **Recuerde las credenciales de usuario en cada inicio de sesión**: Se recuerdan las credenciales de usuario para que los usuarios no tengan que escribirlas cada vez que se conecten.  
 
-     - **Seleccionar un certificado de cliente para autenticación de cliente**: Seleccione el cliente que ha creado anteriormente [certificado SCEP](create-pfx-certificate-profiles.md) que se usa para autenticar la conexión VPN.   
+     - **Seleccionar un certificado de cliente para autenticación de cliente**: Seleccione el [certificado SCEP](create-pfx-certificate-profiles.md) de cliente creado previamente que se usa para autenticar la conexión VPN.   
 
        > [!NOTE]  
-       >  Para dispositivos iOS, el perfil SCEP que seleccione se incrusta en el perfil de VPN. Para otras plataformas, se agrega una regla de aplicabilidad para garantizar que el perfil de VPN no se instala si el certificado no está presente o no es conforme.  
+       > Para dispositivos iOS, el perfil SCEP que seleccione se incrusta en el perfil de VPN. Para otras plataformas, se agrega una regla de aplicabilidad para garantizar que el perfil de VPN no se instala si el certificado no está presente o no es conforme.  
        >   
-       >  Si el certificado SCEP que especifique no es conforme o no se ha implementado, el perfil de VPN no se instala en el dispositivo.
+       > Si el certificado SCEP que especifique no es conforme o no se ha implementado, el perfil de VPN no se instala en el dispositivo.
        >  
-       >  Los dispositivos que ejecutan iOS solo admiten RSA SecurID y MSCHAP v2 como métodos de autenticación cuando el tipo de conexión es PPTP. Para evitar errores, implemente un perfil de VPN PPTP independiente en los dispositivos que ejecutan iOS.   
+       > Los dispositivos que ejecutan iOS solo admiten RSA SecurID y MSCHAP v2 como métodos de autenticación cuando el tipo de conexión es PPTP. Para evitar errores, implemente un perfil de VPN PPTP independiente en los dispositivos que ejecutan iOS.   
 
      - **Acceso condicional**  
        - Pulse **Habilitar acceso condicional para esta conexión VPN** para asegurarse de que los dispositivos que se conectan a la VPN se prueban para el cumplimiento del acceso condicional antes de la conexión. Para obtener más información, vea [Directivas de cumplimiento de dispositivos](/sccm/protect/deploy-use/device-compliance-policies).  
@@ -146,7 +146,7 @@ Las siguientes opciones están disponibles para todos los tipos de conexión en 
 7. En la página **Configuración de proxy** del **Asistente para crear perfil de VPN**, active la casilla **Configurar configuración de proxy para este perfil de VPN** si su conexión VPN usa un servidor proxy. Después, proporcione la información del servidor proxy. Para obtener más información, consulte la documentación de Windows Server.  
 
    > [!NOTE]  
-   >  En los equipos Windows 8.1, el perfil de VPN no mostrará la información de proxy hasta que se conecte a la VPN con ese equipo.  
+   > En los equipos Windows 8.1, el perfil de VPN no mostrará la información de proxy hasta que se conecte a la VPN con ese equipo.  
 
 
 8. Configure opciones de DNS adicionales si fuera necesario.  
@@ -160,6 +160,6 @@ Para obtener más información sobre cómo implementar perfiles de VPN, vea [Imp
 
  Use los artículos siguientes para planear, configurar, operar y mantener perfiles de VPN:  
 
--   [Requisitos previos de los perfiles de VPN](../../protect/plan-design/prerequisites-for-wifi-vpn-profiles.md)  
+- [Requisitos previos de los perfiles de VPN](../../protect/plan-design/prerequisites-for-wifi-vpn-profiles.md)  
 
--   [Seguridad y privacidad de los perfiles de VPN](../../protect/plan-design/security-and-privacy-for-wifi-vpn-profiles.md)
+- [Seguridad y privacidad de los perfiles de VPN](../../protect/plan-design/security-and-privacy-for-wifi-vpn-profiles.md)

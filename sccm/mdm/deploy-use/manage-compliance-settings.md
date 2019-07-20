@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c81e7198a01e2d5dfca7abc80f6a23714184a32c
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 78ff2181c3ae4bc7069998bf4a6db526da835037
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255977"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68337877"
 ---
 # <a name="managing-compliance-on-devices-managed-with-intune"></a>Administración del cumplimiento en dispositivos administrados con Intune
 
@@ -41,7 +41,7 @@ Estos escenarios ofrecen una introducción al uso de la configuración de cumpli
 
 ## <a name="scenarios-for-windows-81-and-windows-10-devices-managed-with-intune"></a>Escenarios para dispositivos Windows 8.1 y Windows 10 administrados con Intune  
 
-### <a name="scenario-restrict-access-to-the-app-store-on-all-windows-pcs"></a>Escenario: Restringir el acceso a la tienda de aplicaciones en todos los equipos de Windows  
+### <a name="scenario-restrict-access-to-the-app-store-on-all-windows-pcs"></a>Escenario: Restringir el acceso a la tienda de aplicaciones en todos los equipos Windows  
  En este escenario, usted es el administrador de TI de una compañía que se encarga de información sumamente confidencial. Debido a esto, restringe las aplicaciones que los usuarios pueden instalar. Quiere impedir que los usuarios de todos los equipos con Windows 10 descarguen aplicaciones de la Tienda Windows, por lo que toma las siguiente medidas.  
 
 1. En la página **General** del Asistente para crear elemento de configuración, seleccione el tipo de elemento de configuración **Windows 8.1 y Windows 10** y luego haga clic en **Siguiente**.  
@@ -79,7 +79,7 @@ Estos escenarios ofrecen una introducción al uso de la configuración de cumpli
 
 ## <a name="scenarios-for-ios-and-mac-os-x-devices-managed-with-intune"></a>Escenarios para dispositivos iOS y Mac OS X administrados con Intune  
 
-### <a name="scenario-disable-the-camera-on-ios-devices"></a>Escenario: Deshabilitar la cámara en dispositivos iOS  
+### <a name="scenario-disable-the-camera-on-ios-devices"></a>Escenario: Deshabilitación de la cámara en dispositivos iOS  
  En este escenario, la empresa produce planos de los nuevos diseños de producto. Estos planos contienen información confidencial que no debe divulgarse. Dado que la compañía ofrece dispositivos iPhone o iPad a todos los empleados, quiere deshabilitar el uso de la cámara en estos dispositivos para evitar que se tomen fotografías de los planos.  
 
 1. En la página **General** del Asistente para crear elemento de configuración, seleccione el tipo de elemento de configuración **iOS y Mac OS X** y luego haga clic en **Siguiente**.  
@@ -111,7 +111,7 @@ Estos escenarios ofrecen una introducción al uso de la configuración de cumpli
 
    -   **Requerir configuración de contraseña en dispositivos** > **Obligatorio**  
 
-   -   **Longitud de contraseña mínima (caracteres)** > **6**  
+   -   **Longitud de contraseña mínima (caracteres)**  > **6**  
 
    -   **Número de intentos de inicio de sesión incorrectos antes de que se borre el dispositivo** > **5**  
 
@@ -123,10 +123,10 @@ Estos escenarios ofrecen una introducción al uso de la configuración de cumpli
 
 Los siguientes tipos de elementos de configuración de System Center Configuration Manager están disponibles para dispositivos que no administrada el cliente de Configuration Manager, por ejemplo, los dispositivos que están inscritos en Microsoft Intune.  
 
- -   [Creación de elementos de configuración para dispositivos Windows 8.1 y Windows 10 administrados con Intune](create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)  
+-   [Creación de elementos de configuración para dispositivos Windows 8.1 y Windows 10 administrados con Intune](create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)  
 
- -   [Creación de elementos de configuración para dispositivos Windows Phone administrados con Intune](create-configuration-items-for-windows-phone-devices-managed-without-the-client.md)  
+-   [Creación de elementos de configuración para dispositivos Windows Phone administrados con Intune](create-configuration-items-for-windows-phone-devices-managed-without-the-client.md)  
 
- -   [Creación de elementos de configuración para dispositivos iOS y Mac OS X administrados con Intune](create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md)  
+-   [Creación de elementos de configuración para dispositivos iOS y Mac OS X administrados con Intune](create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md)  
 
- -   [Creación de elementos de configuración para dispositivos Android y Samsung KNOX Standard administrados con Intune](create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md)  
+-   [Creación de elementos de configuración para dispositivos Android y Samsung KNOX Standard administrados con Intune](create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md)  

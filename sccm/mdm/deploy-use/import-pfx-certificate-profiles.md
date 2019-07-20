@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b999dddc048c1afe0dd4212ed9b99ebc9c991ff0
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 18879c37bf51adda20dd1cf7bb7a52960312951d
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67678853"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68338036"
 ---
 # <a name="how-to-create-pfx-certificate-profiles-by-importing-certificate-details"></a>Creación de perfiles de certificado PFX mediante la importación de detalles de certificado.
 
@@ -27,11 +27,11 @@ A continuación, aprenderá a crear un perfil de certificado mediante la importa
 
 Los [perfiles de certificado](../../protect/deploy-use/introduction-to-certificate-profiles.md) proporcionan información general sobre la creación y configuración de perfiles de certificado. En este tema se destaca información específica sobre perfiles de certificado relacionados con certificados PFX.
 
-- Configuration Manager admite diversos almacenes de certificados adecuados para diferentes dispositivos y sistemas operativos.  Entre ellos, se incluye:
+- Configuration Manager admite diversos almacenes de certificados adecuados para diferentes dispositivos y sistemas operativos.  Entre ellas se incluyen las siguientes:
 
-  -   iOS y macOS/OSX
-  -   Android y Android for Work
-  -   Windows 10, incluidos Windows 10 Mobile
+  - iOS y macOS/OSX
+  - Android y Android for Work
+  - Windows 10, incluidos Windows 10 Mobile
 
 Para obtener más información, consulte [Requisitos previos de los perfiles de certificado](../../protect/plan-design/prerequisites-for-certificate-profiles.md).
 
@@ -39,7 +39,7 @@ Para obtener más información, consulte [Requisitos previos de los perfiles de 
 System Center Configuration Manager permite importar y, luego, aprovisionar archivos de intercambio de información personal (.pfx) en los dispositivos de usuario. Los archivos PFX pueden usarse para generar certificados específicos del usuario para admitir el intercambio de datos cifrados.
 
 > [!TIP]  
->  En [Cómo crear e implementar perfiles de certificado PFX en Configuration Manager](http://blogs.technet.com/b/karanrustagi/archive/2015/09/01/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager.aspx)también encontrará un tutorial detallado en el que se describe este proceso.  
+> En [Cómo crear e implementar perfiles de certificado PFX en Configuration Manager](http://blogs.technet.com/b/karanrustagi/archive/2015/09/01/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager.aspx)también encontrará un tutorial detallado en el que se describe este proceso.  
 
 ## <a name="create-import-and-deploy-a-personal-information-exchange-pfx-certificate-profile"></a>Creación, importación e implementación de un perfil de certificado de intercambio de información personal (PFX)  
 
@@ -52,15 +52,15 @@ System Center Configuration Manager permite importar y, luego, aprovisionar arch
 
 4.  En la página **General** del asistente para **Crear perfil de certificado** , especifique la información siguiente:  
 
-    -   **Nombre**: Escriba un nombre único para el perfil de certificado. Puede utilizar un máximo de 256 caracteres.  
+    - **Nombre**: Escriba un nombre único para el perfil de certificado. Puede utilizar un máximo de 256 caracteres.  
 
-    -   **Descripción**: facilite una descripción general del perfil de certificado y cualquier otra información adicional pertinente para identificarlo en la consola de System Center Configuration Manager. Puede utilizar un máximo de 256 caracteres.  
+    - **Descripción**: facilite una descripción general del perfil de certificado y cualquier otra información adicional pertinente para identificarlo en la consola de System Center Configuration Manager. Puede utilizar un máximo de 256 caracteres.  
 
-    -   **Especifique el tipo de perfil de certificado que desea crear**: Para los certificados PF, elija una de las siguientes opciones:  
+    - **Especifique el tipo de perfil de certificado que desea crear**: En el caso de los certificados PFX, elija una de las siguientes opciones:  
 
-        -   **Intercambio de información personal – configuración de PKCS #12 (PFX) – importar**: Crea un perfil de certificado importando mediante programación información de los certificados existentes.  
+      - **Intercambio de información personal – configuración de PKCS #12 (PFX) – importar**: Crea un perfil de certificado mediante programación al importar la información de los certificados existentes.  
 
-        -   **Intercambio de información personal: configuración de PKCS #12 (PFX): crear**: Crea un perfil de certificado PFX mediante credenciales proporcionadas por una entidad de certificación.  Para obtener más información, consulte [Creación de perfiles de certificado PFX mediante una entidad de certificación](../../mdm/deploy-use/create-pfx-certificate-profiles.md).
+      - **Intercambio de información personal: configuración de PKCS #12 (pfx): crear**: Crea un perfil de certificado PFX con las credenciales proporcionadas por una entidad de certificación.  Para obtener más información, consulte [Creación de perfiles de certificado PFX mediante una entidad de certificación](../../mdm/deploy-use/create-pfx-certificate-profiles.md).
 
 
 ### <a name="create-a-pfx-certificate-profile-for-the-imported-credentials"></a>Creación de un perfil de certificado PFX para las credenciales importadas
@@ -74,7 +74,7 @@ Más adelante, los certificados importados se implementan en los dispositivos in
     - **Instalar en Módulo de plataforma segura (TPM) o se producirá un error** 
     - **Instalar en Windows Hello para empresas o generar un error** 
     - **Instalar en Proveedor de almacenamiento de claves de software** 
-2. Haga clic en **Siguiente**. 
+2. Haga clic en **Next**. 
 3. En la página **Plataformas admitida** del asistente, seleccione las plataformas de dispositivo admitidas donde se instalará este certificado y, luego, haga clic en **Siguiente**.
 
 ### <a name="finish-the-profile"></a>Finalización del perfil
@@ -89,9 +89,9 @@ Use el [SDK de Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=613
 
 El script de creación de PFX agregado en Configuration Manager 2012 SP2 agrega una clase SMS_ClientPfxCertificate al SDK. Esta clase incluye los métodos siguientes:  
 
--   `ImportForUser`  
+- `ImportForUser`  
 
--   `DeleteForUser`  
+- `DeleteForUser`  
 
 En el ejemplo siguiente se importan las credenciales en un perfil de certificado PFX.
 
@@ -113,10 +113,10 @@ En el ejemplo siguiente se importan las credenciales en un perfil de certificado
 
 Para usar este ejemplo, actualice las siguientes variables de script:  
 
-   -   **blob**\: blob cifrado en base 64 de PFX  
-   -   **$Password**: contraseña del archivo PFX  
-   -   **$ProfileName** nombre del perfil PFX  
-   -   **ComputerName** nombre del equipo host   
+- **blob**\: blob cifrado en base 64 de PFX  
+- **$Password**: contraseña del archivo PFX  
+- **$ProfileName** nombre del perfil PFX  
+- **ComputerName** nombre del equipo host   
 
 ## <a name="see-also"></a>Consulte también
 [Crear un nuevo perfil de certificado](../../protect/deploy-use/create-certificate-profiles.md) le guiará a través del Asistente para crear perfil de certificado.
