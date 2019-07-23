@@ -2,7 +2,7 @@
 title: Preguntas más frecuentes sobre análisis de escritorio
 titleSuffix: Configuration Manager
 description: Preguntas más frecuentes sobre el análisis de escritorio.
-ms.date: 07/19/2019
+ms.date: 07/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a1760e0039280e686e716d8cf876813083d544c
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: 58230d373d7269c95937a108c021e7c73cdbf07a
+ms.sourcegitcommit: 315fbb9c44773b3b1796ae398568cb61bd07092e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340184"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68374431"
 ---
 # <a name="desktop-analytics-faq"></a>Preguntas más frecuentes sobre análisis de escritorio
 
@@ -28,6 +28,18 @@ ms.locfileid: "68340184"
 ### <a name="can-i-use-desktop-analytics-with-intune-managed-devices"></a>¿Puedo usar el análisis de escritorio con dispositivos administrados por Intune? 
 
 La gran mayoría de los clientes que pueden beneficiarse del flujo de trabajo de análisis de escritorio usan Configuration Manager para implementar Windows. Sabemos que los clientes de Intune adoran la información adicional de los datos de análisis y estamos trabajando en formas de compartir información con ellos también.
+
+### <a name="its-been-over-72-hours-and-the-portal-is-still-processing-data-what-next"></a>Ha transcurrido en más de 72 horas y el portal todavía está procesando datos, ¿qué es lo siguiente? 
+
+La primera vez que se configura el análisis de escritorio, es posible que los informes de Configuration Manager y el portal de análisis de escritorio no muestren los datos completos de inmediato. El servicio puede tardar 2-3 días en procesar los datos. Si ha transcurrido en más de 72 horas y el portal todavía está procesando datos, siga estos pasos:
+
+- Para confirmar que los dispositivos activos están configurados correctamente, use el [Panel de estado](/sccm/desktop-analytics/monitor-connection-health)de la conexión. Este panel no se actualiza en tiempo real.
+- Asegúrese de que los dispositivos envían datos de diagnóstico al servicio de análisis de escritorio. Para obtener más información, vea [Habilitar el uso compartido de datos](/sccm/desktop-analytics/enable-data-sharing).
+- Aprovisione [Azure ad aplicaciones](/sccm/desktop-analytics/troubleshooting#bkmk_AzureADApps) en el Azure ad.
+- Compruebe los dispositivos que ha asociado a su organización en los últimos siete días. En el [portal de análisis de escritorio](https://aka.ms/desktopanalytics), vaya al panel **servicios conectados** . Seleccionar **inscribir dispositivos**y **ver datos recientes**
+
+Si los dispositivos están configurados correctamente y aún no ve los datos en el área de trabajo, [póngase en contacto con el soporte técnico de Microsoft](https://support.microsoft.com/hub/4343728/support-for-business).
+
 
 ## <a name="windows-upgrade"></a>Actualización de Windows
 

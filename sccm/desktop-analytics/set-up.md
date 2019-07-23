@@ -1,7 +1,7 @@
 ---
 title: Configuración del análisis de escritorio
 titleSuffix: Configuration Manager
-description: Guía de procedimientos para configurar y la incorporación para análisis del escritorio.
+description: Guía de procedimientos para la configuración y la incorporación de análisis de escritorio.
 ms.date: 06/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,54 +11,50 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96cf6f4dcfa878bb1ecafb7187dc6e9b29755509
-ms.sourcegitcommit: 20bbb870baf624c7809d3972f2d09a8d2df79cda
+ms.openlocfilehash: d2a098c560305429e4bba65c95a65f3b0d2e8c45
+ms.sourcegitcommit: 315fbb9c44773b3b1796ae398568cb61bd07092e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67623380"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68374418"
 ---
 # <a name="how-to-set-up-desktop-analytics"></a>Cómo configurar el análisis de escritorio
 
 > [!Note]  
-> Esta información se relaciona con un servicio en versión preliminar que puede modificarse sustancialmente antes de su lanzamiento comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información aquí proporcionada.  
+> Esta información está relacionada con un servicio de vista previa que se puede modificar sustancialmente antes de que se publique comercialmente. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información aquí proporcionada.  
 
-Utilice este procedimiento para iniciar sesión el análisis de escritorio y configurarlo en su suscripción. Este procedimiento es un proceso único para configurar los análisis de escritorio de su organización.  
+Use este procedimiento para iniciar sesión en análisis de escritorio y configurarlo en su suscripción. Este procedimiento es un proceso único para configurar el análisis de escritorio de su organización.  
 
 
+> [!Important]  
+> Para obtener información sobre los requisitos previos generales para el análisis de escritorio con Configuration Manager, consulte [requisitos previos](/sccm/desktop-analytics/overview#prerequisites).  
 
 ## <a name="initial-onboarding"></a>Incorporación inicial
 
-1. Abra el [portal de análisis de escritorio](https://aka.ms/desktopanalytics) en administración de dispositivos de Microsoft 365 como un usuario con el **administrador Global** rol. Seleccione **iniciar**. Si se le solicitará un código de invitación, use: `DesktopAnalyticsRocks!`
+1. Abra el [portal de análisis de escritorio](https://aka.ms/desktopanalytics) en Microsoft 365 administración de dispositivos como usuario con el rol de **administrador global** . Seleccione **Iniciar**. Como alternativa, en la consola de Configuration Manager, vaya al área de trabajo **biblioteca de software** , seleccione el nodo servicio de **análisis de escritorio** y seleccione **planear implementaciones**.
 
-    > [!Tip]  
-    > Para acceder al portal Desktop Analytics desde la consola de Configuration Manager, vaya a la **biblioteca de Software** área de trabajo, seleccione el **Desktop Analytics mantenimiento** nodo y seleccione **Plan las implementaciones**.
+2. En la página **aceptar el contrato de servicio** , revise el contrato de servicio y seleccione **Aceptar**.  
 
-2. En el **acepte el contrato de servicio** página, revise el contrato de servicio y seleccione **Accept**.  
+3. En la página **confirmar la suscripción** , revise la lista de licencias aptas necesarias. Cambie la configuración a **sí** junto a **¿tiene una o más**suscripciones admitidas y, a continuación, seleccione **siguiente**.  
 
-3. En el **confirmar la suscripción** página, revise la lista de requiere licencias aplicables. Cambiar el valor a **Sí** junto a **¿tiene una de las suscripciones compatibles o superiores**y, a continuación, seleccione **siguiente**.  
+4. En la página **conceder acceso a los usuarios** :
 
-4. En el **dar acceso a los usuarios** página:
+    - **Permita que el análisis de escritorio administre los roles de directorio en su nombre**: El análisis de escritorio asigna automáticamente a los **propietarios del área de trabajo** el rol de **Administrador de análisis de escritorio** . Si esos grupos ya son **administradores globales**, no hay ningún cambio.
 
-    - **Permitir análisis de escritorio para administrar roles de directorio en su nombre**: Escritorio Analytics asigna automáticamente el **propietarios del área de trabajo** el **Desktop Analytics Administrator** rol. Si esos grupos ya están un **administrador Global**, no hay ningún cambio.
+        Si no selecciona esta opción, el análisis de escritorio todavía agrega usuarios como miembros del grupo de seguridad. Un **administrador global** debe asignar manualmente el rol de **Administrador de análisis de escritorio** para los usuarios.   
 
-        Si no selecciona esta opción, análisis de escritorio seguirá agregando los usuarios como miembros del grupo de seguridad. Un **administrador Global** debe asignar manualmente el **Desktop Analytics Administrator** rol para los usuarios.   
+        Para obtener más información sobre la asignación de permisos de rol de administrador en Azure Active Directory y los permisos asignados a **los administradores de análisis de escritorio**, consulte [permisos de rol de administrador en Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
 
-        Para obtener más información acerca de cómo asignar permisos del rol de administrador en Azure Active Directory y los permisos asignados a **Desktop Analytics administradores**, consulte [permisos del rol de administrador en Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
+    - Análisis de escritorio configura previamente el grupo de seguridad **propietarios del área de trabajo** en Azure Active Directory para crear y administrar áreas de trabajo y planes de implementación. 
 
-    - Análisis escritorio preconfigura la **propietarios del área de trabajo** grupo de seguridad en Azure Active Directory para crear y administrar áreas de trabajo y los planes de implementación. 
-
-        Para agregar un usuario al grupo, escriba su dirección de correo electrónico o de nombre en el **escriba la dirección de correo electrónico o nombre** sección. Cuando termine, seleccione **siguiente**.
+        Para agregar un usuario al grupo, escriba su nombre o dirección de correo electrónico en la sección **escribir el nombre o la dirección de correo electrónico** . Cuando termine, seleccione **siguiente**.
 
 5. En la página para **configurar el área de trabajo**:  
 
-    > [!Note]  
-    > Para completar este paso, el usuario debe **propietario del área de trabajo** permisos y acceso adicional a la suscripción de Azure y el grupo de recursos. Para obtener más información, consulte [requisitos previos](/sccm/desktop-analytics/overview#prerequisites).  
-
-    - Para usar un área de trabajo para el análisis de escritorio, selecciónela y continúe con el paso siguiente.  
+    - Para usar un área de trabajo existente para el análisis de escritorio, selecciónela y continúe con el siguiente paso.  
 
         > [!Note]  
-        > Si ya utiliza Windows Analytics, seleccione esa misma área de trabajo. Deberá volver a inscribir dispositivos para el análisis de escritorio que ya tiene inscritos en Windows Analytics.
+        > Si ya está usando Windows Analytics, seleccione la misma área de trabajo. Debe volver a inscribir dispositivos en el análisis de escritorio que se inscribió anteriormente en Windows Analytics.
         >
         > Solo puede tener un área de trabajo de análisis de escritorio por inquilino de Azure AD. Los dispositivos solo pueden enviar datos de diagnóstico a un área de trabajo.  
 
@@ -66,28 +62,28 @@ Utilice este procedimiento para iniciar sesión el análisis de escritorio y con
 
         1. Escriba un **nombre de área de trabajo**.<!--do we have any guidance for this name?-->  
 
-        2. Seleccione la lista desplegable para **seleccione el nombre de la suscripción de Azure para esta área de trabajo**y elija la suscripción de Azure para esta área de trabajo.  
+        2. Seleccione la lista desplegable para **seleccionar el nombre de la suscripción de Azure para esta área de trabajo**y elija la suscripción de Azure para esta área de trabajo.  
 
-        3. **Crear nuevo** grupo de recursos o **usar existente**.
+        3. **Crear nuevo** Grupo de recursos o **usar existente**.
 
-        4. Seleccione el **región** en la lista y, a continuación, seleccione **agregar**.  
+        4. Seleccione la **región** en la lista y, a continuación, seleccione **Agregar**.  
 
-6. Seleccione un área de trabajo nueva o existente y, a continuación, seleccione **establecer como área de trabajo de análisis de escritorio**.  A continuación, seleccione **continuar** en el **confirmar y concederle acceso** cuadro de diálogo.  
+6. Seleccione un área de trabajo nueva o existente y, a continuación, seleccione **establecer como área de trabajo de análisis de escritorio**.  Después, seleccione **continuar** en el cuadro de diálogo **confirmar y conceder acceso** .  
 
-7. En la nueva pestaña del explorador, elija una cuenta para que use para iniciar sesión. Seleccione la opción de **dar su consentimiento en nombre de su organización** y seleccione **Accept**.  
+7. En la pestaña nuevo explorador, seleccione una cuenta para iniciar sesión. Seleccione la opción para dar **su consentimiento en nombre de su organización** y seleccione **Aceptar**.  
 
     > [!Note]  
-    > Este consentimiento consiste en asignar el rol de lector de Log Analytics para el área de trabajo de la aplicación de MALogAnalyticsReader. Este rol de aplicación es necesario por el análisis de escritorio. Para obtener más información, consulte [rol de aplicación MALogAnalyticsReader](/sccm/desktop-analytics/troubleshooting#bkmk_MALogAnalyticsReader).  
+    > Este consentimiento es asignar a la aplicación MALogAnalyticsReader el rol lector Log Analytics para el área de trabajo. El análisis de escritorio requiere este rol de aplicación. Para obtener más información, vea [rol de aplicación MALogAnalyticsReader](/sccm/desktop-analytics/troubleshooting#bkmk_MALogAnalyticsReader).  
 
-8. En la página a **configurar el área de trabajo**, seleccione **siguiente**.  
+8. De nuevo en la página para **configurar el área de trabajo**, seleccione **siguiente**.  
 
-9. En el **últimos pasos** página, seleccione **vaya al escritorio Analytics**.
+9. En la página **últimos pasos** , seleccione **ir a análisis de escritorio**.
 
-El portal de Azure muestra el análisis de escritorio **inicio** página.
+En el Azure Portal se muestra la página **principal** de análisis de escritorio.
 
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Avance al siguiente artículo para conectar Configuration Manager con análisis de escritorio.
+Continúe con el siguiente artículo para conectarse Configuration Manager con análisis de escritorio.
 > [!div class="nextstepaction"]  
 > [Conectar Configuration Manager](/sccm/desktop-analytics/connect-configmgr)  
