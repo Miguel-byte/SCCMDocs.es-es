@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 53505aed5fcdcfcaf3603250a40f484cd49c762f
-ms.sourcegitcommit: 5e43c0c6b0b1f449e596f59ceaa92a9b6ca194cc
+ms.openlocfilehash: 254639f905ca52f922d84fd19366807c3be2c339
+ms.sourcegitcommit: d74415e49a6db28ee5198440c7f321529a9f7f33
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572755"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68312480"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Cuentas que se usan en Configuration Manager
 
@@ -601,16 +601,16 @@ Configuration Manager automáticamente crea y mantiene los siguientes objetos de
 >  Modificar o quitar estos objetos puede provocar problemas drásticos dentro de un entorno de Configuration Manager.  Se recomienda no realizar ningún cambio en estos objetos.
 
 
-### <a name="smsdbuserreadonly"></a>smsdbuser_ReadOnly
+### ### <a name="smsdbuser_readonly"></a>smsdbuser_ReadOnly
 
 Este objeto se usa para ejecutar consultas en el contexto de solo lectura.  Este objeto se usa con varios procedimientos almacenados.
 
 
-### <a name="smsdbuserreadwrite"></a>smsdbuser_ReadWrite
+### <a name="smsdbuser_readwrite"></a>smsdbuser_ReadWrite
 
 Este objeto se usa para proporcionar permisos para las instrucciones SQL dinámicas.
 
 
-### <a name="smsdbuserreportschema"></a>smsdbuser_ReportSchema
+### <a name="smsdbuser_reportschema"></a>smsdbuser_ReportSchema
 
 Este objeto se usa para realizar ejecuciones de SQL Reporting.  El siguiente procedimiento almacenado se usa con esta función: spSRExecQuery.

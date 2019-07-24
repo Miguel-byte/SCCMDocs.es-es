@@ -2,7 +2,7 @@
 title: Supervisar clientes
 titleSuffix: Configuration Manager
 description: Obtenga información detallada acerca de cómo supervisar clientes en Configuration Manager
-ms.date: 05/31/2019
+ms.date: 07/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55fd698ac5213a3b11b207d0625d953f687e319f
-ms.sourcegitcommit: 65753c51fbf596f233fc75a5462ea4a44005c70b
+ms.openlocfilehash: 9b3c3f52f15ba4d61a589833e43144ce5ecb6de0
+ms.sourcegitcommit: b62de6c9cb1bc3e4c9ea5ab5ed3355d83e3a59bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66463033"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894212"
 ---
 # <a name="how-to-monitor-clients-in-configuration-manager"></a>Supervisión de clientes en Configuration Manager
 
@@ -70,6 +70,96 @@ Configuration Manager proporciona los siguientes tipos de información como esta
     - **Última hora sin conexión** indica cuándo cambió el estado a sin conexión  
 
 3. Seleccione un cliente individual en el panel de lista para ver más estado en el panel de detalles. Esta información incluye la actividad y el estado de comprobación del cliente.  
+
+
+## <a name="bkmk_health"></a> Panel de mantenimiento del cliente
+
+<!--3599209-->
+Se implementan actualizaciones de software y se usan otras aplicaciones para proteger el entorno, pero estas implementaciones solo llegan a clientes correctos. Los clientes incorrectos de Configuration Manager afectan negativamente al cumplimiento general. ¿Considera que determinar el estado del cliente puede resultar complicado según el denominador "número total de dispositivos que deben estar en el ámbito de administración"? Por ejemplo, si detecta todos los sistemas de Active Directory, incluso si algunos de esos registros son para máquinas retiradas, este proceso aumenta el denominador.
+
+A partir de la versión 1902, puede ver un panel con información sobre el estado de los clientes de Configuration Manager en su entorno. Allí puede ver el estado del cliente, el estado de escenario y errores comunes. Filtre la vista por varios atributos distintos para ver los posibles problemas con las versiones del sistema operativo y de cliente.
+
+En la consola de Configuration Manager, vaya al área de trabajo **Supervisión**. Expanda **Estado del cliente** y seleccione el nodo **Panel de mantenimiento del cliente**.
+
+![Captura de pantalla del panel de mantenimiento del cliente](media/3599209-client-health-dashboard.png)
+
+> [!Tip]  
+> No hay cambios en ccmeval.  
+
+De forma predeterminada, el panel de mantenimiento del cliente muestra los clientes en línea y los clientes activos en los últimos tres días. Por lo tanto, puede ver números diferentes en este panel que en otros orígenes históricos del mantenimiento del cliente. Por ejemplo, otros nodos bajo **Estado del cliente**, o informes en la categoría del estado de cliente.
+
+### <a name="filters"></a>Filtros
+
+En la parte superior del panel, hay un conjunto de filtros para ajustar los datos mostrados en el panel.
+
+- **Colección**: de forma predeterminada, el panel muestra los dispositivos de la colección **Todos los sistemas**. Seleccione una recopilación de dispositivos en la lista para definir el ámbito de la vista a un subconjunto de dispositivos de una colección específica.  
+
+- **Con conexión/sin conexión**: de forma predeterminada, el panel muestra solo los clientes en línea. Este estado procede del canal de notificación de cliente que actualiza el estado de un cliente cada cinco minutos. Para más información, vea [Acerca del estado de cliente](/sccm/core/clients/manage/monitor-clients#bkmk_about).  
+
+- **Activo \# días**: de manera predeterminada, el panel muestra los clientes que están activos en los últimos tres días.  
+
+- **Solo error**: define el ámbito de la vista únicamente a los dispositivos que notifican un error de estado de cliente.  
+
+    > [!Tip]  
+    > Puede usar este filtro junto con los iconos de versión de cliente y versión de sistema operativo. Para más información, vea [Iconos de versión](#version-tiles).
+
+### <a name="client-health-percentage"></a>Porcentaje de estado de cliente
+
+Este icono muestra el estado general del cliente en la jerarquía.
+
+Un cliente correcto de Configuration Manager presenta estas propiedades:
+
+- Online  
+- Envía datos de forma activa  
+- Pasa todas las comprobaciones de evaluación de estado del cliente  
+
+Para más información, vea [Acerca del estado de cliente](/sccm/core/clients/manage/monitor-clients#bkmk_about).
+
+Un cliente correcto se comunica correctamente con el sitio. Informa de todos los datos según las programaciones definidas en la configuración del cliente.
+
+Seleccione un segmento de este gráfico para explorar desagrupando datos de una vista de lista de dispositivos.
+
+### <a name="version-tiles"></a>Iconos de versión
+
+Hay dos iconos que muestran el estado del cliente por la versión del cliente de Configuration Manager y la versión del sistema operativo. Estos iconos son útiles cuando se realizan cambios en los filtros, como **Solo error**. Pueden ser útiles para resaltar si los problemas son coherentes en una versión específica. Use esta información para tomar decisiones sobre la actualización de forma más sencilla.
+
+Seleccione un segmento de estos gráficos para explorar desagrupando datos de una vista de lista de dispositivos.
+
+### <a name="scenario-health"></a>Mantenimiento de escenarios
+
+Este gráfico de barras muestra el estado general de los siguientes escenarios principales:
+
+- Directiva de cliente
+- Detección de latidos
+- Inventario de hardware
+- Inventario de software
+- Mensajes de estado
+
+Use los selectores para ajustar el foco en escenarios concretos en el gráfico.
+
+Siempre se muestran las dos barras siguientes:
+
+- **Combinados (Todos)** : combinación de todos los escenarios (AND)  
+- **Combinados (Cualquiera)** : al menos uno de los escenarios (OR)
+
+> [!Tip]  
+> El mantenimiento de escenarios no se mide desde la configuración de las opciones del cliente. Estos valores pueden variar según el conjunto resultante de directivas por dispositivo. Siga estos pasos para ajustar los períodos de evaluación de mantenimiento de escenarios:
+>
+> - En la consola de Configuration Manager, vaya al área de trabajo **Supervisión** y seleccione el nodo **Estado del cliente**.  
+> - En la cinta de opciones, seleccione **Configuración de estado de cliente**.  
+>
+> De forma predeterminada, si un cliente no envía datos específicos del escenario en **7 días**, Configuration Manager lo considera incorrecto para ese escenario.
+
+### <a name="top-10-client-health-failures"></a>Principales 10 errores de estado de cliente
+
+En este gráfico se muestran los errores más comunes en su entorno. Estos errores proceden de Windows o Configuration Manager.
+
+<!-- The following list includes some of the more common failures overall:
+
+#### Failure 1 title
+Failure 1 description
+
+Solution for failure 1 -->
 
 
 ## <a name="bkmk_allStatus"></a> Supervisión del estado de todos los clientes

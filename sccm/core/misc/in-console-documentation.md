@@ -1,6 +1,6 @@
 ---
 title: Documentación en consola
-ms.date: 06/10/2019
+ms.date: 06/15/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -10,12 +10,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e77402bbaf5ce0f0f756418be38b6435d70e9e4d
-ms.sourcegitcommit: de3c86077bbf91b793e94e1f60814df18da11bab
+ms.openlocfilehash: 4cf8cd6d750549b307530dff17269e32356e7057
+ms.sourcegitcommit: b62de6c9cb1bc3e4c9ea5ab5ed3355d83e3a59bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67726186"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894154"
 ---
 <!-- 
 - Feature 1357546
@@ -26,7 +26,7 @@ ms.locfileid: "67726186"
 
 # <a name="configuration-manager-documentation"></a>Documentación de Configuration Manager
 
-*Última actualización: 10/06/2019*
+*Última actualización: 15/06/2019*
 
 Este contenido puede ayudarle a aprender a usar Configuration Manager.
 
@@ -54,20 +54,20 @@ Lista recopilada manualmente de artículos importantes.
 
 ## <a name="trending"></a>Tendencias
 
-Los artículos más populares entre el 1 y el 31 de mayo de 2019.
+Los artículos más populares entre el 1 de junio y el 30 de junio de 2019.
 
 | Vistas de página | Título |
 |------------|-------|
-| 21370 | [Archivos de registro para la solución de problemas](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) |
-| 17017 | [Novedades de la versión 1902](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1902) |
-| 12122 | [Puertos usados para las conexiones](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) |
-| 11906 | [Administrar las actualizaciones de Office 365 ProPlus](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates) |
-| 11463 | [Cómo implementar clientes en equipos Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
-| 10421 | [Compatibilidad con Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
-| 9138 | [Lista de comprobación de 1902](https://docs.microsoft.com/sccm/core/servers/manage/checklist-for-installing-update-1902) |
-| 8944 | [Instalación de la consola](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles) |
-| 8508 | [Acerca de los parámetros y propiedades de instalación de cliente](https://docs.microsoft.com/sccm/core/clients/deploy/about-client-installation-properties) |
-| 8399 | [Actualizaciones y mantenimiento](https://docs.microsoft.com/sccm/core/servers/manage/updates) |
+| 20786 | [Archivos de registro para la solución de problemas](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) |
+| 17237 | [Habilitación de TLS 1.2](https://docs.microsoft.com/sccm/core/plan-design/security/enable-tls-1-2) |
+| 12788 | [Novedades de la versión 1902](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1902) |
+| 12418 | [Puertos usados para las conexiones](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) |
+| 11553 | [Cómo implementar clientes en equipos Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
+| 9889 | [Administrar las actualizaciones de Office 365 ProPlus](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates) |
+| 8781 | [Compatibilidad con Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
+| 8464 | [Actualizaciones y mantenimiento](https://docs.microsoft.com/sccm/core/servers/manage/updates) |
+| 8349 | [Pasos de la secuencia de tareas](https://docs.microsoft.com/sccm/osd/understand/task-sequence-steps) |
+| 8021 | [Instalación de la consola](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles) |
 
 ## <a name="recently-updated"></a>Actualizado recientemente
 
@@ -75,16 +75,16 @@ Artículos con una actualización reciente y significativa.
 
 | Últimas revisiones | Título |
 |---------------|-------|
-| 31/5/2019 | [Habilitación de TLS 1.2](https://docs.microsoft.com/sccm/core/plan-design/security/enable-tls-1-2) |
-| 29/5/2019 | [Modo de aprovisionamiento](https://docs.microsoft.com/sccm/osd/understand/provisioning-mode) |
-| 29/5/2019 | [Solución de problemas de implementación de aplicaciones](https://docs.microsoft.com/sccm/apps/deploy-use/troubleshoot-application-deployment) |
-| 29/5/2019 | [Approve-CMApprovalRequest](https://docs.microsoft.com/powershell/module/configurationmanager/approve-cmapprovalrequest) |
-| 29/5/2019 | [Importación y exportación de aplicaciones](https://docs.microsoft.com/sccm/apps/deploy-use/import-export-applications) |
-| 28/5/2019 | [Novedades de la versión 1902](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1902) |
-| 28/5/2019 | [HTTP mejorado](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/enhanced-http) |
-| 24/5/2019 | [Flujo de trabajo de autenticación de Azure AD](https://docs.microsoft.com/sccm/core/clients/manage/azure-ccmsetup) |
-| 24/5/2019 | [Método SetDPMaintenanceMode](https://docs.microsoft.com/sccm/develop/reference/core/servers/configure/setdpmaintenancemode-method-in-class-sms-distributionpointinfo) |
-| 21/5/2019 | [Características en desuso](https://docs.microsoft.com/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures) |
+| 28/6/2019 | [Versiones de Technical Preview](https://docs.microsoft.com/sccm/core/get-started/technical-preview) |
+| 28/6/2019 | [Solución de problemas de Análisis de escritorio](https://docs.microsoft.com/sccm/desktop-analytics/troubleshooting) |
+| 27/6/2019 | [Rutas hacia la administración conjunta](https://docs.microsoft.com/sccm/comanage/quickstart-paths) |
+| 20/6/2019 | [Novedades de la versión 1902](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1902) |
+| 20/6/2019 | [Configuración de cliente](https://docs.microsoft.com/sccm/core/clients/deploy/about-client-settings) |
+| 20/6/2019 | [Creación y ejecución de scripts](https://docs.microsoft.com/sccm/apps/deploy-use/create-deploy-scripts) |
+| 20/6/2019 | [Consola de Configuration Manager](https://docs.microsoft.com/sccm/core/servers/manage/admin-console) |
+| 19/6/2019 | [PREGUNTAS MÁS FRECUENTES SOBRE CLOUD MANAGEMENT GATEWAY](https://docs.microsoft.com/sccm/core/clients/manage/cmg/cloud-management-gateway-faq) |
+| 19/6/2019 | [Requisitos de acceso a Internet](https://docs.microsoft.com/sccm/core/plan-design/network/internet-endpoints) |
+| 17/6/2019 | [Notas de la versión](https://docs.microsoft.com/sccm/core/servers/deploy/install/release-notes) |
 
 ## <a name="troubleshooting-articles"></a>Artículos de solución de problemas
 

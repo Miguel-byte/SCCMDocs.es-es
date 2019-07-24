@@ -2,7 +2,7 @@
 title: Información de administración
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la funcionalidad Información de administración disponible en la consola de Configuration Manager.
-ms.date: 11/27/2018
+ms.date: 07/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ea90ff0b9c163dac79a96494b03252fbd1935b43
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 17600d9fa04e678e488f36bb923a39e8c41647aa
+ms.sourcegitcommit: b62de6c9cb1bc3e4c9ea5ab5ed3355d83e3a59bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67676490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894099"
 ---
 # <a name="management-insights-in-configuration-manager"></a>Información de administración en Configuration Manager
 
@@ -143,6 +143,22 @@ Información que ayuda a simplificar la administración mediante la limpieza y r
 
 - **Colecciones vacías**: enumera las colecciones del entorno que no tienen miembros. Para obtener más información, vea [Cómo administrar colecciones](/sccm/core/clients/manage/collections/manage-collections).  
 
+A partir de la versión 1902, hay nuevas reglas con recomendaciones sobre la administración de colecciones.<!--3555752--> Use esta información para simplificar la administración y mejorar el rendimiento:
+
+- **Colecciones con ninguna regla de consulta y ningún miembro directo**: elimine estas colecciones para simplificar la lista de colecciones de la jerarquía.  
+
+- **Colecciones con la misma hora de inicio de reevaluación**: estas colecciones tienen la misma hora de reevaluación que otras colecciones. Modifique la hora de reevaluación para que no entren en conflicto.  
+
+- **Colecciones con tiempo de consulta superior a dos segundos**: revise las reglas de consulta de esta colección. Considere la posibilidad de modificar o eliminar la colección.
+
+- Estas reglas incluyen configuraciones que podrían ocasionar una carga innecesaria en el sitio. Revise estas colecciones y elimínelas o deshabilite la evaluación de regla:  
+
+    - **Colecciones sin reglas de consulta y actualizaciones incrementales habilitadas**  
+
+    - **Colecciones sin reglas de consulta y habilitadas para la evaluación incremental o programada**  
+
+    - **Colecciones sin reglas de consulta y con una evaluación completa programada seleccionada**  
+
 
 ### <a name="proactive-maintenance"></a>Mantenimiento proactivo
 <!--1352184-->
@@ -174,6 +190,8 @@ Conclusiones para mejorar la seguridad de su infraestructura y dispositivos.
 Conclusiones que le ayudarán a simplificar la administración diaria de su entorno. 
 
 - **Versiones de cliente diferentes de CB**: enumera todos los clientes cuyas versiones no son una compilación de la rama actual (CB). Para obtener más información, vea [Actualizar clientes](/sccm/core/clients/manage/upgrade/upgrade-clients).  
+
+- **Actualizar clientes a una versión de Windows 10 admitida**: a partir de la versión 1902, esta regla informa sobre los clientes que ejecutan una versión de Windows 10 que ya no se admite. También incluye a los clientes con una versión de Windows 10 que se acerca al final del servicio (tres meses).<!--3897268-->  
 
 
 ### <a name="software-center"></a>Centro de software
