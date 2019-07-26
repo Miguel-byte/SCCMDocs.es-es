@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 726df4e6ddbfc34194fd25951d6dbafd1e9008ad
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 375628c7d392a14c22a29cf75e081f6f86783889
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159542"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340451"
 ---
 # <a name="create-certificate-profiles"></a>Crear perfiles de certificado
 
@@ -68,17 +68,17 @@ En la página **General** del Asistente para crear perfil de certificado, especi
 > [!IMPORTANT]  
 >  También debe configurar al menos un perfil de certificado de CA de confianza antes de crear un perfil de certificado de SCEP.    
 >  
->  Si cambia cualquiera de estos valores después de implementar el certificado, se solicita un nuevo certificado:
->  -  Proveedor de almacenamiento de claves
->  -  Nombre de plantilla de certificado
->  -  Tipo de certificado
->  -  Formato de nombre del sujeto
->  -  Nombre alternativo del firmante
->  -  Período de validez del certificado
->  -  Uso de claves
->  -  Tamaño de la clave
->  -  Uso mejorado de clave
->  -  Certificado de CA raíz
+> Si cambia cualquiera de estos valores después de implementar el certificado, se solicita un nuevo certificado:
+> - Proveedor de almacenamiento de claves
+> - Nombre de plantilla de certificado
+> - Tipo de certificado
+> - Formato de nombre del sujeto
+> - Nombre alternativo del firmante
+> - Período de validez del certificado
+> - Uso de claves
+> - Tamaño de la clave
+> - Uso mejorado de clave
+> - Certificado de CA raíz
 
 1. En la página **Certificado de CA de confianza** del Asistente para crear perfil de certificado, especifique la información siguiente:  
 

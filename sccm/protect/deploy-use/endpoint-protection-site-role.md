@@ -11,22 +11,22 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f0b489d4241350dc7b0f5ee7f9a9a48fcf026cf
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 2c1cdbbd1c4ede5c5f2e58bd6c42c982ebaa86fe
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500486"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340331"
 ---
 # <a name="create-an-endpoint-protection-point-site-system-role"></a>Crear un rol de sistema de sitio de punto de Endpoint Protection
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
- El rol de sistema de sitio de punto de Endpoint Protection debe estar instalado para poder usar Endpoint Protection. Se debe instalar en un solo servidor de sistema de sitio y en la parte superior de la jerarquía en un sitio de administración central o un sitio primario independiente.
+El rol de sistema de sitio de punto de Endpoint Protection debe estar instalado para poder usar Endpoint Protection. Se debe instalar en un solo servidor de sistema de sitio y en la parte superior de la jerarquía en un sitio de administración central o un sitio primario independiente.
 
- Use uno de los procedimientos que se describen a continuación, según si quiere instalar un nuevo servidor de sistema de sitio para Endpoint Protection o usar un servidor de sistema de sitio existente:
- - [Instalar en un servidor de sistema de sitio nuevo](#new-site-system-server)
- - [Instalar en un servidor de sistema de sitio existente](#existing-site-system-server)
+Use uno de los procedimientos que se describen a continuación, según si quiere instalar un nuevo servidor de sistema de sitio para Endpoint Protection o usar un servidor de sistema de sitio existente:
+- [Instalar en un servidor de sistema de sitio nuevo](#new-site-system-server)
+- [Instalar en un servidor de sistema de sitio existente](#existing-site-system-server)
 
 > [!IMPORTANT]
 >  Cuando se instala un punto de Endpoint Protection, se instala un cliente de Endpoint Protection en el servidor que hospeda el punto de Endpoint Protection. Los servicios y los exámenes están deshabilitados en este cliente para que pueda coexistir con cualquier solución antimalware existente que esté instalada en el servidor. Si posteriormente habilita este servidor para la administración mediante Endpoint Protection y selecciona la opción para quitar cualquier solución antimalware de terceros, no se quitará el producto de terceros. Es necesario desinstalar este producto manualmente.

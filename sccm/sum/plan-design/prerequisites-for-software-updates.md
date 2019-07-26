@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 92e1d0e672d4fc5e6e98f87ba92cec2602f7d240
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: dcbbd799a87992fb34234f89a8660ed85c05dc3a
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65496208"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340497"
 ---
 # <a name="prerequisites-for-software-updates-in-system-center-configuration-manager"></a>Requisitos previos para las actualizaciones de software en System Center Configuration Manager
 
@@ -40,7 +40,8 @@ En este artículo se muestran los requisitos previos para las actualizaciones de
 >[!NOTE]
 >-   A partir de la versión 1702, Windows Server 2008 R2 no es compatible con el rol del punto de actualización de software. Para obtener más información, vea [Sistemas operativos compatibles con servidores de sistema de sitio](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers#bkmk_2008r2sp1).  
 
-Si hay varios puntos de actualización de software en un sitio, asegúrese de que todos ejecutan la misma versión de WSUS.  
+> [!WARNING]  
+> Si hay varios puntos de actualización de software en un sitio, asegúrese de que todos ejecutan la misma versión de WSUS.  
 
 > [!WARNING]  
 >  La clasificación de actualizaciones de software **Actualizaciones** solo se admite a partir de WSUS 4.0. Antes de sincronizar esta nueva clasificación y poder evaluar los equipos con Windows 10 en un plan de mantenimiento de Windows 10, es fundamental que instale la [revisión 3095113](https://support.microsoft.com/kb/3095113) para WSUS en sus servidores de sitio y puntos de actualización de software. Esta revisión permite a WSUS en un servidor basado en Windows Server 2012 o en Windows Server 2012 R2 sincronizar y distribuir actualizaciones de características para Windows 10. Para obtener más información, consulte [Manage Windows as a service](../../osd/deploy-use/manage-windows-as-a-service.md) (Administrar Windows como servicio).  

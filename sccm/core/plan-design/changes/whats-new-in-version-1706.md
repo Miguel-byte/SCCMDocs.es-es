@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 050122d6a1b799a30bd2c5a83ab261e92aaafabe
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: f4c0bc6710f6978eb4ed95b11de6be6845d72e8e
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67677215"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68338789"
 ---
 # <a name="what39s-new-in-version-1706-of-system-center-configuration-manager"></a>Novedades de la versión 1706 de System Center Configuration Manager
 
@@ -27,10 +27,11 @@ La actualización 1706 para la rama actual de System Center Configuration Manage
 
 > [!TIP]  
 > Para instalar un sitio nuevo, debe usar una versión de línea base de Configuration Manager.  
->  Más información acerca de:    
->   - [Instalación de nuevos sitios](https://technet.microsoft.com/library/mt590197.aspx)  
->   - [Instalación de actualizaciones en los sitios](https://technet.microsoft.com/library/mt607046.aspx)  
->   - [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#bkmk_Baselines)  
+>
+> Más información acerca de:    
+> - [Instalación de nuevos sitios](https://technet.microsoft.com/library/mt590197.aspx)  
+> - [Instalación de actualizaciones en los sitios](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#bkmk_Baselines)  
 
 En las secciones siguientes se proporcionan detalles sobre los cambios y las nuevas funciones introducidas en la versión 1706 de Configuration Manager.  
 
@@ -59,8 +60,8 @@ Hemos agregado mejoras adicionales de accesibilidad para la consola de Configura
 ### <a name="improvements--for-sql-server-always-on-availability-groups"></a>Mejoras de los grupos de disponibilidad AlwaysOn de SQL Server
 <!-- 1352094 -->
 Con esta versión, ahora puede usar réplicas de confirmación asincrónica en los grupos de disponibilidad AlwaysOn de SQL Server que usa con Configuration Manager. Esto significa que puede agregar réplicas adicionales a los grupos de disponibilidad con el fin de usarlas como copias de seguridad externas (remotas) y así utilizarlas en un escenario de recuperación ante desastres.  
-  - Configuration Manager admite el uso de la réplica de confirmación asincrónica para recuperar una réplica sincrónica. Vea [las opciones de recuperación de la base de datos de sitio](/sccm/core/servers/manage/recover-sites#site-database-recovery-options) en el tema Copia de seguridad y recuperación para obtener información sobre cómo realizar esta tarea.
-  - Esta versión no admite la conmutación por error para usar la réplica de confirmación asincrónica como la base de datos de sitio.
+- Configuration Manager admite el uso de la réplica de confirmación asincrónica para recuperar una réplica sincrónica. Vea [las opciones de recuperación de la base de datos de sitio](/sccm/core/servers/manage/recover-sites#site-database-recovery-options) en el tema Copia de seguridad y recuperación para obtener información sobre cómo realizar esta tarea.
+- Esta versión no admite la conmutación por error para usar la réplica de confirmación asincrónica como la base de datos de sitio.
 Para obtener más información, consulte [Preparación para usar grupos de disponibilidad AlwaysOn](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).
 
 ### <a name="update-reset-tool"></a>Herramienta de restablecimiento de actualizaciones
@@ -74,9 +75,9 @@ Con esta versión, los problemas relacionados con el modo en que la consola de C
 ### <a name="improved-boundary-groups-for-software-update-points"></a>Mejoras de los grupos de límites para puntos de actualización de software
 <!-- 1324591 -->
 Esta versión incluye mejoras para el modo en que los puntos de actualización de software funcionan con grupos de límites. A continuación se resume el nuevo comportamiento de la reserva:
--   La reserva para puntos de actualización de software usa ahora un tiempo configurable para aplicarse en los grupos de límites vecinos.
--   Independientemente de la configuración de la reserva, un cliente intenta alcanzar el último punto de actualización de software que utilizó durante 120 minutos. Tras no conseguir alcanzar ese servidor durante 120 minutos, el cliente consulta su grupo de puntos de actualización de software disponibles para encontrar otro nuevo.
--   Transcurridas dos horas sin conseguir alcanzar su servidor original, el cliente cambia a un ciclo más corto para establecer contacto con un nuevo punto de actualización de software. Esto significa que si un cliente no puede conectar con un nuevo servidor, selecciona rápidamente el siguiente servidor de su grupo de servidores disponibles e intenta ponerse en contacto con él.
+- La reserva para puntos de actualización de software usa ahora un tiempo configurable para aplicarse en los grupos de límites vecinos.
+- Independientemente de la configuración de la reserva, un cliente intenta alcanzar el último punto de actualización de software que utilizó durante 120 minutos. Tras no conseguir alcanzar ese servidor durante 120 minutos, el cliente consulta su grupo de puntos de actualización de software disponibles para encontrar otro nuevo.
+- Transcurridas dos horas sin conseguir alcanzar su servidor original, el cliente cambia a un ciclo más corto para establecer contacto con un nuevo punto de actualización de software. Esto significa que si un cliente no puede conectar con un nuevo servidor, selecciona rápidamente el siguiente servidor de su grupo de servidores disponibles e intenta ponerse en contacto con él.
 
 Para obtener más información, vea [Puntos de actualización de software](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points) en el tema de Configuración de grupos de límites para la Rama actual.
 
@@ -85,20 +86,20 @@ Para obtener más información, vea [Puntos de actualización de software](/sccm
 Con esta versión, hemos mejorado la integración de Configuration Manager y Azure Active Directory (Azure AD).  Estas mejoras simplifican cómo debe configurar los servicios de Azure que usa con Configuration Manager y lo ayudan a administrar clientes y los usuarios que se autentican a través de Azure AD.
 
 La integración mejorada permite lo siguiente:  
-  -   Asistente para servicios de Azure: Este asistente proporciona una experiencia de configuración común que reemplaza los flujos de trabajo individuales para configurar los siguientes servicios de Azure que usa con Configuration Manager.
-      - **Administración en la nube** Permita a los clientes autenticarse mediante Azure Active Directory (Azure AD). También puede configurar la detección de usuarios de Azure AD.
-      - **Conector de Log Analytics** Conecte con Azure Log Analytics y sincronice los datos de la recopilación.
-      - **Upgrade Readiness** Conéctese a Upgrade Readiness y vea los datos de compatibilidad de actualización de cliente.
-      - **Tienda Windows para empresas** Conéctese a la tienda en línea para la Tienda Windows para empresas y obtenga aplicaciones para su organización que puede implementar con Configuration Manager.
+- Asistente para servicios de Azure: Este asistente proporciona una experiencia de configuración común que reemplaza los flujos de trabajo individuales para configurar los siguientes servicios de Azure que usa con Configuration Manager.
+  - **Administración en la nube** Permita a los clientes autenticarse mediante Azure Active Directory (Azure AD). También puede configurar la detección de usuarios de Azure AD.
+  - **Conector de Log Analytics** Conecte con Azure Log Analytics y sincronice los datos de la recopilación.
+  - **Upgrade Readiness** Conéctese a Upgrade Readiness y vea los datos de compatibilidad de actualización de cliente.
+  - **Tienda Windows para empresas** Conéctese a la tienda en línea para la Tienda Windows para empresas y obtenga aplicaciones para su organización que puede implementar con Configuration Manager.
 
 
   Esto se realiza mediante una [aplicación web de servidor de Azure](/azure/app-service/app-service-authentication-overview) para proporcionar la información de suscripción y configuración que, de lo contrario, especificaría cada vez que configurase un nuevo componente o servicio de Configuration Manager con Azure. Para obtener más información, consulte [Azure Services Wizard](/sccm/core/servers/deploy/configure/azure-services-wizard) (Asistente para servicios de Azure).
 
--   Use Azure AD para autenticar los clientes en Internet para acceder a los sitios de Configuration Manager. Azure AD reemplaza la necesidad de configurar y usar certificados de autenticación del cliente. Esto requiere el rol de sistema de sitio de Cloud Management Gateway. Para más información, vea [Instalación y asignación de clientes de Configuration Manager desde Internet mediante Azure AD con fines de autenticación](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
+- Use Azure AD para autenticar los clientes en Internet para acceder a los sitios de Configuration Manager. Azure AD reemplaza la necesidad de configurar y usar certificados de autenticación del cliente. Esto requiere el rol de sistema de sitio de Cloud Management Gateway. Para más información, vea [Instalación y asignación de clientes de Configuration Manager desde Internet mediante Azure AD con fines de autenticación](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
 
--   Instale y administre al cliente de Configuration Manager en equipos que se encuentran en Internet. Esto requiere el uso del rol de sistema de Cloud Management Gateway. Para más información, vea [Instalación y asignación de clientes de Configuration Manager desde Internet mediante Azure AD con fines de autenticación](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
+- Instale y administre al cliente de Configuration Manager en equipos que se encuentran en Internet. Esto requiere el uso del rol de sistema de Cloud Management Gateway. Para más información, vea [Instalación y asignación de clientes de Configuration Manager desde Internet mediante Azure AD con fines de autenticación](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
 
--   Configure la detección de usuarios de Azure AD.  Use el Asistente para servicios de Azure para configurar este nuevo método de detección. Este nuevo método consulta a Azure AD los datos de usuario que luego puede usar junto con datos de detección tradicional.  Se admiten tanto la sincronización completa como la sincronización delta.  Para obtener más información, consulte [Detección de usuario de Active Directory](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc).
+- Configure la detección de usuarios de Azure AD.  Use el Asistente para servicios de Azure para configurar este nuevo método de detección. Este nuevo método consulta a Azure AD los datos de usuario que luego puede usar junto con datos de detección tradicional.  Se admiten tanto la sincronización completa como la sincronización delta.  Para obtener más información, consulte [Detección de usuario de Active Directory](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc).
 
 ### <a name="peer-cache-improvements"></a>Mejoras de almacenamiento en caché del mismo nivel
 <!-- 1252345 -->

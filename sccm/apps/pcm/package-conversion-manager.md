@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2abfa18bdf454850510c18551f2f64813a7891ea
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: a90dff8b187c28d925daeb9dae02849dd5027bab
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58523935"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339247"
 ---
 # <a name="package-conversion-manager"></a>Administrador de conversión de paquetes
 
@@ -43,7 +43,7 @@ Esta versión integrada del Administrador de conversión de paquetes funciona en
 
 <!-- SCCMDocs-pr issue #3357 -->
 Configuration Manager versión 1902 incluye las siguientes mejoras:
-- Análisis de paquete programado ejecuta cada 7 días de forma predeterminada
+- Análisis de paquetes programado que se ejecuta cada 7 días de forma predeterminada
 - Cmdlets de PowerShell para analizar y convertir paquetes
 - Mejoras y correcciones de errores generales
 
@@ -131,17 +131,17 @@ No todos los paquetes se pueden convertir en aplicaciones. Antes de comenzar a c
 
 Los mejores tipos de paquetes para conversión en aplicaciones son aquellos que contienen software a nivel de usuario, por ejemplo:  
 
- - Archivos de Windows Installer (.msi y .msu)  
+- Archivos de Windows Installer (.msi y .msu)  
 
- - Programas de Microsoft Application Virtualization (App-V)  
+- Programas de Microsoft Application Virtualization (App-V)  
 
- - Archivos ejecutables de Windows (.exe)  
+- Archivos ejecutables de Windows (.exe)  
 
 Entre los tipos de paquetes que se conservan mejor como paquetes y no se convierten en aplicaciones se incluyen:
 
- - Herramientas de mantenimiento del sistema. Por ejemplo, scripts o utilidades de copia de seguridad.  
+- Herramientas de mantenimiento del sistema. Por ejemplo, scripts o utilidades de copia de seguridad.  
 
- - Paquetes de software que están fuera de soporte técnico.
+- Paquetes de software que están fuera de soporte técnico.
 
 > [!Tip]  
 > Tras identificar los paquetes que no se pueden convertir en aplicaciones, muévalos a una carpeta independiente en la consola de Configuration Manager. Para crear una carpeta de paquete en la consola de Configuration Manager:  
@@ -154,26 +154,26 @@ Entre los tipos de paquetes que se conservan mejor como paquetes y no se convier
 
 Para cada paquete que desea convertir, asegúrese de que se ajustan a las condiciones siguientes:  
 
- - La ubicación de los archivos de origen es una ruta de acceso UNC completa, por ejemplo `\\Server\Share\File`.  
+- La ubicación de los archivos de origen es una ruta de acceso UNC completa, por ejemplo `\\Server\Share\File`.  
 
- - Los archivos de Windows Installer utilizan solo un código de producto único.  
+- Los archivos de Windows Installer utilizan solo un código de producto único.  
 
 
 ### <a name="bkmk_test"></a> Seleccionar los paquetes de prueba
 
 Si es posible, el grupo de paquetes de prueba debe incluir paquetes que cumplan los criterios siguientes:  
 
- - Al menos un paquete de prueba con el estado de disponibilidad **Automático**.  
+- Al menos un paquete de prueba con el estado de disponibilidad **Automático**.  
 
- - Al menos un paquete de prueba con el estado de disponibilidad **Manual**.  
+- Al menos un paquete de prueba con el estado de disponibilidad **Manual**.  
 
 Idealmente, los paquetes de prueba deberían ser paquetes principales, por ejemplo:  
 
- - Los paquetes que conoce bien.  
+- Los paquetes que conoce bien.  
 
- - Los paquetes que son los más importantes para su organización.  
+- Los paquetes que son los más importantes para su organización.  
 
- - Los paquetes que se pueden probar más fácilmente.  
+- Los paquetes que se pueden probar más fácilmente.  
 
 Identifique los paquetes que son adecuados para las pruebas. Muévalos después a una carpeta independiente en la consola de Configuration Manager.
 
@@ -191,13 +191,13 @@ Para analizar un paquete individual o un grupo pequeño, utilice el Administrado
 
 Tras analizar los paquetes de prueba, investigue los paquetes con un estado de preparación de **Manual** o **Error**. Determine los motivos por los que tienen dicho estado. Algunas de las razones comunes de un estado de preparación **Manual** o **Error** incluyen:
 
- - El paquete no contiene la información necesaria para crear un método de detección en un tipo de implementación de la aplicación.  
+- El paquete no contiene la información necesaria para crear un método de detección en un tipo de implementación de la aplicación.  
 
- - El paquete no contiene la información necesaria para convertir las colecciones en requisitos y condiciones globales.  
+- El paquete no contiene la información necesaria para convertir las colecciones en requisitos y condiciones globales.  
 
- - El paquete contiene más de un programa.  
+- El paquete contiene más de un programa.  
 
- - El paquete depende de otro paquete que no se ha convertido en una aplicación.  
+- El paquete depende de otro paquete que no se ha convertido en una aplicación.  
 
 Para más información, vea los siguientes recursos:  
 

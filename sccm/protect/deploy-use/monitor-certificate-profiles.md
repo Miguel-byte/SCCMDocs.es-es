@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1f5518346f0085293a2a9b5422c7aef375076d0c
-ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
+ms.openlocfilehash: 3a4ea6d12a41de37325cb64e0a702d6842f9508a
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67516159"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340506"
 ---
 # <a name="how-to-monitor-certificate-profiles-in-system-center-configuration-manager"></a>Cómo supervisar perfiles de certificado en System Center Configuration Manager
 
@@ -63,16 +63,16 @@ Para supervisar el cumplimiento del certificado SCEP, no use la consola. En su l
 
 ##  <a name="view-compliance-results-by-using-reports"></a>Ver los resultados de compatibilidad mediante informes
 
- La configuración de cumplimiento en System Center Configuration Manager incluye informes integrados que se pueden utilizar para supervisar la información de perfiles de certificado. Estos informes tienen la categoría de informe de **Administración de compatibilidad y configuración**.  
+La configuración de cumplimiento en System Center Configuration Manager incluye informes integrados que se pueden utilizar para supervisar la información de perfiles de certificado. Estos informes tienen la categoría de informe de **Administración de compatibilidad y configuración**.  
 
 > [!IMPORTANT]  
 >  Debe usar un carácter comodín (%) para utilizar los parámetros **Filtro del dispositivo** y **Filtro de usuarios** en los informes de configuración de cumplimiento.  
 
 Para supervisar el cumplimiento del certificado SCEP, use los informes de certificado que se encuentran en el nodo de informes **Acceso a los recursos de la compañía**:  
 
- -   Historial de certificados emitidos  
- -   Lista de activos con certificados a punto de expirar  
- -   Lista de activos por estado de emisión de certificado  
+-   Historial de certificados emitidos  
+-   Lista de activos con certificados a punto de expirar  
+-   Lista de activos por estado de emisión de certificado  
 
 
 

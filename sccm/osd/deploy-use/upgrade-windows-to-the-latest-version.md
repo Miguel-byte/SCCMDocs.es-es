@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36304b836dbedcb411310d5f0dd8d0f0a8fd91f1
-ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.openlocfilehash: 2a0ef3dc874e1a90042859fce745f44e8a1e0472
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194466"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340353"
 ---
 # <a name="upgrade-windows-to-the-latest-version-with-system-center-configuration-manager"></a>Actualizar Windows a la versión más reciente con System Center Configuration Manager
 
@@ -24,16 +24,16 @@ ms.locfileid: "67194466"
 
 En este artículo se proporcionan los pasos de Configuration Manager para actualizar el sistema operativo de un equipo. Puede elegir entre distintos métodos de implementación, como medios independientes o el Centro de software. El escenario de actualización local tiene las características siguientes:  
 
--   Actualiza el sistema operativo en los equipos en los que actualmente se ejecuta:
-    - Windows 7, Windows 8 o Windows 8.1. También puede realizar actualizaciones de compilación a compilación de Windows 10. Por ejemplo, se puede actualizar Windows 10 de la versión 1607 a la versión 1709.  
-    
-    - Windows Server 2012. También puede realizar actualizaciones de compilación a compilación de Windows Server 2016. Para obtener más información sobre las rutas de actualización compatibles, vea [Rutas de actualización compatibles](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016).    
+- Actualiza el sistema operativo en los equipos en los que actualmente se ejecuta:
+  - Windows 7, Windows 8 o Windows 8.1. También puede realizar actualizaciones de compilación a compilación de Windows 10. Por ejemplo, se puede actualizar Windows 10 de la versión 1607 a la versión 1709.  
+  
+  - Windows Server 2012. También puede realizar actualizaciones de compilación a compilación de Windows Server 2016. Para obtener más información sobre las rutas de actualización compatibles, vea [Rutas de actualización compatibles](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016).    
 
--   Conserva las aplicaciones, la configuración y los datos de usuario en el equipo.  
+- Conserva las aplicaciones, la configuración y los datos de usuario en el equipo.  
 
--   No tiene dependencias externas, como Windows ADK.  
+- No tiene dependencias externas, como Windows ADK.  
 
--   Es más rápido y resistente que las implementaciones de SO tradicionales.  
+- Es más rápido y resistente que las implementaciones de SO tradicionales.  
 
 
 > [!Note]  
@@ -89,12 +89,12 @@ El único requisito previo para el escenario de actualización es tener un punto
 
 Para implementar el sistema operativo, use uno de los métodos de implementación siguientes:  
 
-  -   [Usar Centro de software para implementar Windows a través de la red](use-software-center-to-deploy-windows-over-the-network.md)  
+- [Usar Centro de software para implementar Windows a través de la red](use-software-center-to-deploy-windows-over-the-network.md)  
 
-  -   [Use stand-alone media to deploy Windows without using the network](use-stand-alone-media-to-deploy-windows-without-using-the-network.md) (Uso de medios independientes para implementar Windows sin usar la red)  
+- [Use stand-alone media to deploy Windows without using the network](use-stand-alone-media-to-deploy-windows-without-using-the-network.md) (Uso de medios independientes para implementar Windows sin usar la red)  
 
-      > [!IMPORTANT]  
-      > Al usar un medio independiente, necesita incluir una imagen de arranque en la secuencia de tareas para que esté disponible en el Asistente para medios de secuencia de tareas.
+  > [!IMPORTANT]  
+  > Al usar un medio independiente, necesita incluir una imagen de arranque en la secuencia de tareas para que esté disponible en el Asistente para medios de secuencia de tareas.
 
 
 
