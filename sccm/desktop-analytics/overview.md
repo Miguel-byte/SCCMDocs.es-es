@@ -1,8 +1,8 @@
 ---
 title: Análisis de escritorio
 titleSuffix: Configuration Manager
-description: Información general sobre el servicio de análisis de escritorio integrado con Configuration Manager.
-ms.date: 07/12/2019
+description: Información general del servicio de análisis de escritorio integrado con Configuration Manager.
+ms.date: 07/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: overview
@@ -11,108 +11,111 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 45a8e71a3a8777686547ef4e3e05ef868b459792
-ms.sourcegitcommit: 448cc0d9094a3c9e23f011c4673cd1e8b956280a
+ms.openlocfilehash: 154c142b285c58da714193c964b353dc1e173481
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860873"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339261"
 ---
 # <a name="what-is-desktop-analytics"></a>¿Qué es el análisis de escritorio?
 
 > [!Note]  
-> Esta información se relaciona con un servicio en versión preliminar que puede modificarse sustancialmente antes de su lanzamiento comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información aquí proporcionada.  
+> Esta información está relacionada con un servicio de vista previa que se puede modificar sustancialmente antes de que se publique comercialmente. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información aquí proporcionada.  
 
-Análisis de escritorio es un servicio basado en la nube que se integra con Configuration Manager. El servicio proporciona información e inteligencia para tomar decisiones más informadas sobre la preparación de actualización de los clientes de Windows. Combina datos de su organización con datos agregados de millones de dispositivos conectados a los servicios de nube de Microsoft.
+Análisis de escritorio es un servicio basado en la nube que se integra con Configuration Manager. El servicio proporciona información e inteligencia para tomar decisiones más fundamentadas sobre la preparación de las actualizaciones de los clientes de Windows. Combina datos de su organización con datos agregados de millones de dispositivos conectados a servicios en la nube de Microsoft.
 
-Use escritorio Analytics con Configuration Manager para:  
+Use el análisis de escritorio con Configuration Manager para:  
 
-- Crear un inventario de aplicaciones que se ejecutan en su organización  
+- Crear un inventario de las aplicaciones que se ejecutan en su organización  
 
-- Evaluar la compatibilidad de aplicaciones con las últimas actualizaciones de características de Windows 10  
+- Evaluación de la compatibilidad de aplicaciones con las últimas actualizaciones de características de Windows 10  
 
-- Identificar problemas de compatibilidad y recibir sugerencias de mitigación según la información sobre los datos de nube habilitada  
+- Identificar problemas de compatibilidad y recibir sugerencias de mitigación basadas en información de datos habilitada para la nube  
 
-- Crear grupos pilotos que representan el estado de aplicación y controlador todo a través de un conjunto mínimo de dispositivos  
+- Crear grupos piloto que representen toda la aplicación y el controlador a través de un conjunto mínimo de dispositivos  
 
-- Implementar Windows 10 en dispositivos de pilotos y de producción administradas  
+- Implementación de Windows 10 en dispositivos piloto y administrados por producción  
 
-![Captura de pantalla de la página de inicio de análisis de escritorio en el portal de Azure](media/portal-home.png)
+![Captura de pantalla de la Página principal de análisis de escritorio en el Azure Portal](media/portal-home.png)
 
 > [!Note]  
-> Análisis de escritorio es un sucesor de Windows Analytics. El *Windows Analytics* service incluye Upgrade Readiness, cumplimiento de las actualizaciones y mantenimiento de dispositivos.
+> El análisis de escritorio es una sucesora de Windows Analytics. El servicio de *Windows Analytics* incluye Upgrade Readiness, Update Compliance y estado del dispositivo.
 >
-> Todas estas capacidades se combinan en el *Desktop Analytics* service. También escritorio Analytics se integra más estrechamente con Configuration Manager.
+> Todas estas funcionalidades se combinan en el servicio de *análisis de escritorio* . El análisis de escritorio también se integra de forma más estrecha con Configuration Manager.
 
 
 
 ## <a name="benefits"></a>Ventajas
 
-Muchos clientes tienen dificultades con cómo estar y mantenerse actualizados con Windows 10. El principal desafío es probar aplicaciones. Este proceso es normalmente manual. Es mucho tiempo para los administradores de TI y los propietarios de aplicaciones para analizar las aplicaciones existentes de forma continua. A continuación, corregir cualquier problema que surja.
+Muchos clientes tienen desafíos para obtener y mantenerse actualizados con Windows 10. El principal desafío es la prueba de las aplicaciones. Este proceso suele ser manual. Es lento para los administradores de ti y los propietarios de aplicaciones el análisis continuo de las aplicaciones existentes. Después, solucione los problemas que surjan.
 
-Escritorio Analytics proporciona las siguientes ventajas:
+El análisis de escritorio proporciona las siguientes ventajas:
 
-- **Inventario de software y dispositivos**: Inventario de los factores clave como aplicaciones y las versiones de Windows.  
+- **Inventario de dispositivos y software**: Inventario de factores clave como aplicaciones y versiones de Windows.  
 
-- **Identificación de la prueba piloto**: Identificación del conjunto más pequeño de los dispositivos que proporcionan la cobertura más amplia de factores. Se centra en los factores que son más importantes para una prueba piloto de actualizaciones de Windows. Asegurándose de que tiene más éxito del piloto le permite continuar más rápidamente y con confianza con amplia implementaciones en producción.  
+- **Identificación piloto**: Identificación del conjunto más pequeño de dispositivos que proporcionan la mayor cobertura de factores. Se centra en los factores que son más importantes para una prueba piloto de actualizaciones y actualizaciones de Windows. Asegurarse de que el piloto es más satisfactorio le permite realizar las implementaciones más rápidas y seguras en producción.  
 
-- **Emitir identificación**: Con los datos de mercado agregados junto con los datos de su entorno, el servicio predice potencial emite a cómo estar y mantenerse actualizados con Windows. A continuación, se sugiere posibles mitigaciones.  
+- **Identificación del problema**: Mediante el uso de datos de mercado agregados junto con datos de su entorno, el servicio predice posibles problemas para obtener y mantenerse actualizados con Windows. Después, sugiere posibles mitigaciones.  
 
-- **Integración de Configuration Manager**: El servicio en la nube habilita la infraestructura local existente. Use estos datos y análisis para implementar y administrar Windows en los dispositivos.  
+- **Integración de Configuration Manager**: La nube de servicio: habilita la infraestructura local existente. Use estos datos y análisis para implementar y administrar Windows en sus dispositivos.  
 
 
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Para utilizar el análisis de escritorio, asegúrese de que su entorno cumple los siguientes requisitos previos.
+Para usar el análisis de escritorio, asegúrese de que el entorno cumple los requisitos previos siguientes.
 
 
-### <a name="technical"></a>Técnica
+### <a name="technical"></a>T
 
-- Una suscripción activa de Azure, con [administrador Global](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator) permisos  
+- Una suscripción de Azure activa, con permisos de [administrador global](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator) . No se admiten [las cuentas de Microsoft](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts) .  
 
     > [!Important]  
-    > Escritorio Analytics actualmente se ofrece como un servicio de Office 365 y requiere una suscripción a Office 365 en su inquilino de Azure AD. Esto es posible que no sea un requisito en el futuro.
+    > El análisis de escritorio se ofrece actualmente como un servicio de Office 365 y requiere una suscripción de Office 365 en el inquilino de Azure AD. Esto puede no ser un requisito en el futuro.
 
-    - **Propietario del área de trabajo** o **colaborador** permisos para **configurar el área de trabajo**y los roles siguientes:  
+    - Permisos de propietario  o colaborador del **área de trabajo** para **configurar el área de trabajo**y los roles siguientes:  
 
-      - [**Administrador de análisis de escritorio** ](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) rol.
+      - Rol de [**Administrador de análisis de escritorio**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) .
 
-      - [**Colaborador de análisis de registro** ](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#log-analytics-contributor) y [ **Administrador de acceso de usuario** ](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) en el grupo de recursos para usar un área de trabajo existente o crear una nueva área de trabajo en un grupo de recursos existente.
+      - [**Log Analytics colaborador**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#log-analytics-contributor) y [**Administrador de acceso de usuario**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) en el grupo de recursos para usar un área de trabajo existente o crear una nueva área de trabajo en un grupo de recursos existente.
 
-      - [**Propietario**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner), o [ **colaborador** ](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) y [ **Administrador de acceso de usuario** ](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) permisos en el suscripción para crear un área de trabajo en un grupo de recursos.  
+      - Permisos de [**propietario**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner)o colaborador y [**Administrador de acceso de usuario**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) en la suscripción para crear un área de trabajo en un nuevo grupo de recursos. [](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor)  
 
-- Configuration Manager, versión 1902 con paquete acumulativo de actualizaciones (4500571) o posterior. Para obtener más información, consulte [actualizar Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
+- Configuration Manager, versión 1902 con el paquete acumulativo de actualizaciones (4500571) o posterior. Para obtener más información, vea [actualizar Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
 
-    - **Administrador total** rol en Configuration Manager  
+    - Rol de **Administrador total** en Configuration Manager  
+
+    > [!Note]  
+    > El análisis de escritorio admite un ID. comercial por cada inquilino de Azure Active Directory (Azure AD) y Configuration Manager jerarquía. Si tiene varias jerarquías en su entorno, use distintos identificadores comerciales y Azure AD inquilinos.<!-- 4958160 -->
 
 - Dispositivos que ejecutan Windows 7, Windows 8.1 o Windows 10  
 
     - Instale las actualizaciones más recientes. Para obtener más información, consulte [actualizar dispositivos](/sccm/desktop-analytics/enroll-devices#update-devices).  
 
-    - Los dispositivos también deben tener el cliente de Configuration Manager, versión 1902 con paquete acumulativo de actualizaciones (4500571) o posterior. Para obtener más información, consulte [actualizar Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
+    - Los dispositivos también deben tener el cliente de Configuration Manager, versión 1902 con el paquete acumulativo de actualizaciones (4500571) o posterior. Para obtener más información, vea [actualizar Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
 
     > [!Note]  
-    > Análisis de escritorio no es compatible con las actualizaciones de canal de mantenimiento a largo plazo (LTSC) de Windows 10. Para obtener más información, consulte [Windows como una información general del servicio](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).
+    > El análisis de escritorio no es compatible con las actualizaciones de canal de mantenimiento a largo plazo (LTSC) de Windows 10. Para obtener más información, vea [información general de Windows como servicio](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).
     >
-    > Escritorio Analytics está diseñado para el mejor escenario de actualización de soporte técnico en el contexto. Si necesita realizar cambios importantes, como de la arquitectura de 32 bits a 64 bits, utilice un escenario de creación de imágenes. Escritorio insights Analytics todavía resultan valiosos en estos escenarios de implementación de sistema operativo clásicos, pero puede pasar por alto la orientación específica de actualización en contexto. Para obtener más información, consulte [escenarios para implementar sistemas operativos de empresa con Configuration Manager](/sccm/osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems).
+    > El análisis de escritorio está diseñado para admitir mejor el escenario de actualización local. Si necesita realizar cambios importantes, como, por ejemplo, de la arquitectura de 32 bits a 64 bits, utilice un escenario de creación de imágenes. Desktop Analytics Insights sigue siendo valioso en estos escenarios de implementación de sistema operativo clásico, pero puede pasar por alto la guía específica de la actualización en contexto. Para obtener más información, consulte [escenarios para implementar sistemas operativos de empresa con Configuration Manager](/sccm/osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems).
 
-- Datos de diagnóstico de Windows. Para más información, consulte los siguientes artículos.  
+- Datos de diagnósticos de Windows. Para más información, consulte los siguientes artículos.  
 
     - [Niveles de datos de diagnóstico](/sccm/desktop-analytics/enable-data-sharing#diagnostic-data-levels)  
 
     - [Privacidad de análisis de escritorio](/sccm/desktop-analytics/privacy)  
 
-- Conectividad de red desde dispositivos a la nube pública de Microsoft. Para obtener más información, vea [cómo habilitar el uso compartido de datos](/sccm/desktop-analytics/enable-data-sharing)  
+- Conectividad de red desde dispositivos a la nube pública de Microsoft. Para obtener más información, consulte [Habilitar el uso compartido de datos](/sccm/desktop-analytics/enable-data-sharing) .  
 
 
 ### <a name="licensing"></a>Licencias
 
-Escritorio Analytics requiere una de las suscripciones de licencias siguientes:
+El análisis de escritorio requiere una de las siguientes suscripciones de licencia:
 
 - Windows 10 Enterprise E3 o E5; o Microsoft 365 F1, E3 o E5  
 
-- Windows 10 Education A3 o A5; o Microsoft 365 A3 o A5  
+- Windows 10 Education a3 o A5; o Microsoft 365 a3 o A5  
 
 - Windows VDA E3 o E5  
 
@@ -121,6 +124,6 @@ Escritorio Analytics requiere una de las suscripciones de licencias siguientes:
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-El siguiente tutorial proporciona a una guía paso a paso para empezar a trabajar con análisis de escritorio y Configuration Manager:  
+En el siguiente tutorial se proporciona una guía paso a paso para empezar a trabajar con análisis de escritorio y Configuration Manager:  
 
-- [Implementación piloto de Windows 10](/sccm/desktop-analytics/tutorial-windows10)  
+- [Implementación de Windows 10 en el piloto](/sccm/desktop-analytics/tutorial-windows10)  
