@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7304730b-b517-4c76-aadd-4cbd157dc971
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c584169d56c11be29cd536bf408f20ee59dbf3c
-ms.sourcegitcommit: b62de6c9cb1bc3e4c9ea5ab5ed3355d83e3a59bc
+ms.openlocfilehash: 10c47a9f0da6c61ded9b3ef7de5dc854ce931c37
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894172"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339163"
 ---
 # <a name="security-and-privacy-for-the-cloud-management-gateway"></a>Seguridad y privacidad de Cloud Management Gateway
 
@@ -43,8 +43,8 @@ En este artículo se incluye información de seguridad y privacidad para Cloud M
 
 ### <a name="configuration-manager-client-facing-roles"></a>Funciones para el cliente de Configuration Manager
 El punto de administración y el punto de actualización de software hospedan puntos de conexión en IIS para atender las solicitudes de cliente. La instancia de CMG no expone todos los puntos de conexión internos. Cada punto de conexión publicado en CMG tiene una asignación de dirección URL.
-  - La dirección URL externa es la que el cliente utiliza para comunicarse con CMG.
-  - La dirección URL interna es el punto de conexión de CMG utilizado para reenviar las solicitudes al servidor interno.
+- La dirección URL externa es la que el cliente utiliza para comunicarse con CMG.
+- La dirección URL interna es el punto de conexión de CMG utilizado para reenviar las solicitudes al servidor interno.
 
 #### <a name="url-mapping-example"></a>Ejemplo de asignación de dirección URL
 Al habilitar el tráfico de CMG en un punto de administración, Configuration Manager crea un conjunto interno de asignaciones de direcciones URL para cada servidor de punto de administración. Por ejemplo: ccm_system, ccm_incoming y sms_mp. La dirección URL externa para el punto de administración ccm_system del punto de administración tendría este aspecto:  

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 42c1fc69d237b6209b49e45e1b185483b1c55163
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 79d805677b6a2572cb659ad8923717922c82f5d2
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67676327"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340222"
 ---
 # <a name="support-center-user-interface-reference"></a>Referencia de la interfaz de usuario del Centro de soporte técnico
 
@@ -240,42 +240,42 @@ Los siguientes elementos de este menú solicitan una acción de cliente relacion
 #### <a name="content-view"></a>Vista de contenido
 Vea las aplicaciones, los paquetes y las actualizaciones que se han cargado en el cliente. Si selecciona una aplicación, un paquete o una actualización, puede ver detalles sobre ese contenido. En algunas aplicaciones, también puede realizar las siguientes acciones:  
 
- - **Actualizar**: actualiza la vista de detalles.  
+- **Actualizar**: actualiza la vista de detalles.  
 
- - **Comprobar o descargar**: comprueba que una aplicación está disponible para la descarga.  
+- **Comprobar o descargar**: comprueba que una aplicación está disponible para la descarga.  
 
- - **Instalar**: instala la aplicación.  
+- **Instalar**: instala la aplicación.  
 
- - **Desinstalar**: Desinstalar la aplicación  
+- **Desinstalar**: Desinstalar la aplicación  
 
 #### <a name="cache-view"></a>Vista Caché
 Vea la configuración de la memoria caché del cliente, así como detalles sobre el contenido de la memoria caché. Cuando se conecta el Centro de soporte técnico a un cliente local, también es posible realizar las siguientes acciones:  
 
- - Para cambiar la ubicación de la caché, haga clic en **Cambiar** junto al campo **Ubicación de caché**.  
+- Para cambiar la ubicación de la caché, haga clic en **Cambiar** junto al campo **Ubicación de caché**.  
 
- - Para ajustar el tamaño de la caché, seleccione **Cambiar** junto al campo **Tamaño de caché**.  
+- Para ajustar el tamaño de la caché, seleccione **Cambiar** junto al campo **Tamaño de caché**.  
 
- - Para borrar la caché del cliente, haga clic en **Borrar** junto al campo **Caché en uso**.  
+- Para borrar la caché del cliente, haga clic en **Borrar** junto al campo **Caché en uso**.  
 
 En esta vista se muestran las siguientes propiedades:  
 
- - **Ubicación**: ubicación de cada carpeta de la caché. Haga clic en el vínculo para abrir la carpeta en el Explorador de Windows.   
- - **Id. de contenido**  
- - **Id. de caché**  
- - **Size**  
- - **Última referencia**: esta propiedad es la fecha en la que el cliente ha leído o escrito en este elemento de la caché por última vez.  
+- **Ubicación**: ubicación de cada carpeta de la caché. Haga clic en el vínculo para abrir la carpeta en el Explorador de Windows.   
+- **Id. de contenido**  
+- **Id. de caché**  
+- **Size**  
+- **Última referencia**: esta propiedad es la fecha en la que el cliente ha leído o escrito en este elemento de la caché por última vez.  
 
 #### <a name="monitoring-view"></a>Vista de supervisión
 Seleccione **Supervisar** para ver el progreso activo de las implementaciones de aplicaciones y las actualizaciones de software. Esta vista muestra los mensajes de estado generados desde la aplicación y los mensajes de WMI de eventos de actualización de software.
 
 En esta vista se muestran las siguientes propiedades de cada evento:  
 
- - **Hora**: hora a la que el cliente ha generado el evento.  
- - **Tipo de tema**: tipo del mensaje de estado.  
- - **Id. del tema**: identificador del mensaje de estado; se usa para asignarse a eventos en los archivos de registro.  
- - **Tipo de id. del tema**: subtipo del mensaje de estado.  
- - **Id. de estado**: resultado de la acción que se está supervisando.  
- - **Detalles** y **Datos de evento**: más información sobre los mensajes de estado que se muestran en esta vista. Puede que Detalles del estado esté en blanco algunas veces.  
+- **Hora**: hora a la que el cliente ha generado el evento.  
+- **Tipo de tema**: tipo del mensaje de estado.  
+- **Id. del tema**: identificador del mensaje de estado; se usa para asignarse a eventos en los archivos de registro.  
+- **Tipo de id. del tema**: subtipo del mensaje de estado.  
+- **Id. de estado**: resultado de la acción que se está supervisando.  
+- **Detalles** y **Datos de evento**: más información sobre los mensajes de estado que se muestran en esta vista. Puede que Detalles del estado esté en blanco algunas veces.  
 
 
 
@@ -293,23 +293,23 @@ El Centro de soporte técnico carga o actualiza la lista de inventario del clien
 
 Los siguientes elementos de este menú solicitan una acción de cliente relacionada con el inventario:  
 
- - **Ciclo de recopilación de datos de detección (latido)** : desencadena la tarea de cliente que sirve para recopilar información de detección de dispositivos.  
+- **Ciclo de recopilación de datos de detección (latido)** : desencadena la tarea de cliente que sirve para recopilar información de detección de dispositivos.  
 
- - **Ciclo de recopilación de archivos**: desencadena la tarea de cliente que sirve para recopilar archivos locales.  
+- **Ciclo de recopilación de archivos**: desencadena la tarea de cliente que sirve para recopilar archivos locales.  
 
- - **Ciclo de inventario de hardware**: desencadena la tarea de cliente que sirve para recopilar datos de inventario de hardware.  
+- **Ciclo de inventario de hardware**: desencadena la tarea de cliente que sirve para recopilar datos de inventario de hardware.  
 
- - **Ciclo de recopilación de IDMIF**: desencadena la tarea de cliente que sirve para recopilar datos de IDMIF.  
+- **Ciclo de recopilación de IDMIF**: desencadena la tarea de cliente que sirve para recopilar datos de IDMIF.  
 
- - **Ciclo de inventario de software**: desencadena la tarea de cliente que sirve para recopilar datos de inventario de software.  
+- **Ciclo de inventario de software**: desencadena la tarea de cliente que sirve para recopilar datos de inventario de software.  
 
- - **Ciclo de informe de medición de software**: desencadena la tarea de cliente que sirve para elaborar un informe de medición de software y enviarlo al punto de administración. Siga el progreso de esta tarea en **SWMTRReportGen.log**.
+- **Ciclo de informe de medición de software**: desencadena la tarea de cliente que sirve para elaborar un informe de medición de software y enviarlo al punto de administración. Siga el progreso de esta tarea en **SWMTRReportGen.log**.
 
- - **Enviar mensajes de estado no enviados en cola**: desencadena la tarea de cliente para vaciar la cola de mensajes de estado.
+- **Enviar mensajes de estado no enviados en cola**: desencadena la tarea de cliente para vaciar la cola de mensajes de estado.
 
- - **Advanced**  
-     - **Ciclo de inventario de hardware (resincronización completa)**  
-     - **Ciclo de inventario de software (resincronización completa)**  
+- **Advanced**  
+    - **Ciclo de inventario de hardware (resincronización completa)**  
+    - **Ciclo de inventario de software (resincronización completa)**  
 
 
 #### <a name="views"></a>Vistas
@@ -469,9 +469,9 @@ Tras encontrar dos o más coincidencias de la cadena que está buscando, esta op
 
 #### <a name="error-lookup"></a>Búsqueda de errores
 Escriba un código de error para buscar ese código de error en los archivos de registro abiertos. Use los siguientes formatos de código de error:
- - **Entero de 32 bits (con signo)** : por ejemplo, `-2147024891`  
- - **Entero de 32 bits (sin signo)** : por ejemplo, `2147942405`  
- - **Hexadecimal de 32 bits**: por ejemplo, `0x80070005`  
+- **Entero de 32 bits (con signo)** : por ejemplo, `-2147024891`  
+- **Entero de 32 bits (sin signo)** : por ejemplo, `2147942405`  
+- **Hexadecimal de 32 bits**: por ejemplo, `0x80070005`  
 
 #### <a name="decode-certificate"></a>Descodificar certificado
 En el cuadro de diálogo **Descodificar certificado**, pegue el valor de certificado serializado de cualquier certificado del cliente. Busque este valor en el Registro, en archivos de registro o en WMI. Seleccione **Proceso** para ver información general y detalles sobre el certificado. Esta información incluye su ruta de certificación. Haga clic en **Exportar** para exportar el certificado como un archivo **.cer**.
@@ -517,15 +517,15 @@ En el cuadro de diálogo Filtros avanzados, puede crear conjuntos de filtros com
 
 ### <a name="manage-filter-sets"></a>Administrar conjuntos de filtros
 
-  - Para editar un filtro, selecciónelo y luego haga clic en **Editar**.  
+- Para editar un filtro, selecciónelo y luego haga clic en **Editar**.  
 
-  - Para eliminar un filtro, selecciónelo y luego haga clic en **Eliminar**.  
+- Para eliminar un filtro, selecciónelo y luego haga clic en **Eliminar**.  
 
-  - Para borrar todos los filtros, haga clic en **Borrar**.  
+- Para borrar todos los filtros, haga clic en **Borrar**.  
 
-  - Para guardar el conjunto de filtros actual, haga clic en **Guardar filtros**. Luego guarde el conjunto de filtros como un archivo **.filterset**.  
+- Para guardar el conjunto de filtros actual, haga clic en **Guardar filtros**. Luego guarde el conjunto de filtros como un archivo **.filterset**.  
 
-  - Para cargar un conjunto de filtros guardado, haga clic en **Cargar filtros**. Luego vaya a un archivo **.filterset** guardado previamente.  
+- Para cargar un conjunto de filtros guardado, haga clic en **Cargar filtros**. Luego vaya a un archivo **.filterset** guardado previamente.  
 
 
 

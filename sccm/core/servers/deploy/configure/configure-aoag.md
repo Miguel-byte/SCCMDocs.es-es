@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac3967059b7cb8b8e4d4a3d32a9c88bfdfd1567b
-ms.sourcegitcommit: 9670e11316c9ec6e5f78cd70c766bbfdf04ea3f9
+ms.openlocfilehash: 84d2c8581eb7ce93ef946a61b8b435815e802b04
+ms.sourcegitcommit: e0438c191df945305625ae91596c9417d16e8510
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67818087"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68491663"
 ---
 # <a name="configure-sql-server-always-on-availability-groups-for-configuration-manager"></a>Configuración de grupos de disponibilidad AlwaysOn de SQL Server para Configuration Manager
 
@@ -48,7 +48,7 @@ Para completar este procedimiento, la cuenta que utilice debe cumplir los requis
    - **Será miembro del grupo de disponibilidad:**  
      Si utiliza este servidor como miembro de la réplica principal inicial del grupo de disponibilidad, no es necesario restaurar una copia de la base de datos de sitio en este u otro servidor del grupo. La base de datos ya estará disponible en la réplica principal, y SQL Server replicará la base de datos en las réplicas secundarias en un paso posterior.  
 
-   - **No será miembro del grupo de disponibilidad:**   
+   - **No será miembro del grupo de disponibilidad:**    
      Restaure una copia de la base de datos de sitio en el servidor que hospedará la réplica principal del grupo.
 
    Para obtener información sobre cómo completar este paso, vea [Crear una copia de seguridad completa de base de datos (SQL Server)](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server) y [Restaurar una copia de seguridad de base de datos con SSMS](/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms) en la documentación de SQL Server.
@@ -157,7 +157,7 @@ Para completar este procedimiento, la cuenta que utilice debe cumplir los requis
 
 4. En el servidor que hospedará la base de datos de sitio (la réplica principal o el servidor donde haya restaurado la base de datos de sitio), cambie el modelo de copia de seguridad de la base de datos de sitio de **COMPLETA** a **SIMPLE**. Consulte [Ver o cambiar el modelo de recuperación de una base de datos (SQL Server)](/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server) en la documentación de SQL Server.  
 
-5. Ejecute el **programa de instalación de Configuration Manager** desde la **&lt;*carpeta de instalación del sitio de Configuration Manager>* \BIN\X64\setup.exe**.
+5. Ejecute el **programa de instalación de Configuration Manager** desde la **\<*carpeta de instalación del sitio de Configuration Manager>* \BIN\X64\setup.exe**.
 
 6. En la página **Primeros pasos** , seleccione **Realizar mantenimiento de sitio o restablecer este sitio**y, a continuación, haga clic en **Siguiente**.  
 

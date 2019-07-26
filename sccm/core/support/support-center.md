@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9246ea46787b1db466b8aca5d8a602617c80e26a
-ms.sourcegitcommit: ab9f2a7fb7ea3a0c65808fce2975ab25a670281f
+ms.openlocfilehash: 192206c7ffcb2d958935cbe66f79400ee422a774
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612517"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339497"
 ---
 # <a name="support-center-for-configuration-manager"></a>Centro de soporte técnico de Configuration Manager
 
@@ -33,11 +33,11 @@ El Centro de soporte técnico aspira a disminuir los retos y la frustración a l
 
 Use el Centro de soporte técnico para optimizar la experiencia de soporte. Le permite:
 
- - Crear un paquete de solución de problemas (archivo .zip) que contiene los archivos de registro del cliente de Configuration Manager. Así solo hay que enviar un archivo al personal de soporte técnico.  
+- Crear un paquete de solución de problemas (archivo .zip) que contiene los archivos de registro del cliente de Configuration Manager. Así solo hay que enviar un archivo al personal de soporte técnico.  
 
- - Ver archivos de registro, certificados, configuraciones del Registro, volcados de depuración y directivas del cliente de Configuration Manager.  
+- Ver archivos de registro, certificados, configuraciones del Registro, volcados de depuración y directivas del cliente de Configuration Manager.  
 
- - Diagnosticar en tiempo real el inventario (reemplaza a ContentSpy), la directiva (reemplaza a PolicySpy) y la caché del cliente.  
+- Diagnosticar en tiempo real el inventario (reemplaza a ContentSpy), la directiva (reemplaza a PolicySpy) y la caché del cliente.  
 
 
 ### <a name="support-center-viewer"></a>Visor del Centro de soporte técnico

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0f560c5bf4ca9a3b58652bc3c53b83d8cf0479cf
-ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
+ms.openlocfilehash: b468162ce19718b6c0f6f31b961cf61378834597
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67551037"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339776"
 ---
 # <a name="how-to-deploy-clients-to-windows-computers-in-configuration-manager"></a>Cómo implementar clientes en equipos Windows con Configuration Manager
 
@@ -482,13 +482,13 @@ Los clientes que se administran a través de Internet se deben comunicar con sis
 `CCMSetup.exe /source: D:\Clients /UsePKICert CCMHOSTNAME=server1.contoso.com SMSSIGNCERT=siteserver.cer SMSSITECODE=ABC FSP=server2.contoso.com CCMALWAYSINF=1 CCMFIRSTCERT=1`    
 
 En este ejemplo se instala el cliente con los comportamientos siguientes:
-  - Usar archivos de origen de una carpeta en la unidad D
-  - Usar un certificado PKI de cliente
-  - Seleccionar el certificado con el período de validez más largo
-  - Administración de clientes solo de Internet
-  - Asignar el cliente para usar el punto de administración basado en Internet denominado SERVER1
-  - Asignar el punto de estado de reserva basado en Internet en el dominio contoso.com
-  - Asignar el cliente al sitio ABC  
+- Usar archivos de origen de una carpeta en la unidad D
+- Usar un certificado PKI de cliente
+- Seleccionar el certificado con el período de validez más largo
+- Administración de clientes solo de Internet
+- Asignar el cliente para usar el punto de administración basado en Internet denominado SERVER1
+- Asignar el punto de estado de reserva basado en Internet en el dominio contoso.com
+- Asignar el cliente al sitio ABC  
 
 
 ###  <a name="BKMK_ConfigureIBCM_MP"></a> Para configurar clientes para la administración de cliente basada en Internet después de la instalación de cliente  

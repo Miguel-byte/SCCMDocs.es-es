@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43fdf80a9876c6cfe4b07b3e3df2756fdf64f8d9
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 89c977f0970a46c5f4b52628b35b2d565b15189b
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285789"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339807"
 ---
 # <a name="what39s-new-in-version-1710-of-system-center-configuration-manager"></a>Novedades de la versión 1710 de System Center Configuration Manager
 
@@ -32,10 +32,11 @@ Ahora también están disponibles las siguientes actualizaciones adicionales a e
 
 > [!TIP]  
 > Para instalar un sitio nuevo, debe usar una versión de línea base de Configuration Manager.  
->  Más información acerca de:    
->   - [Instalación de nuevos sitios](/sccm/core/servers/deploy/install/installing-sites)  
->   - [Instalación de actualizaciones en los sitios](/sccm/core/servers/manage/updates)  
->   - [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#bkmk_Baselines)
+>
+> Más información acerca de:    
+> - [Instalación de nuevos sitios](/sccm/core/servers/deploy/install/installing-sites)  
+> - [Instalación de actualizaciones en los sitios](/sccm/core/servers/manage/updates)  
+> - [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 En las secciones siguientes se proporcionan detalles sobre los cambios y las nuevas funciones introducidas en la versión 1710 de Configuration Manager.  
 

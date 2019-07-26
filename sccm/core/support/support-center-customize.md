@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8ae8d006555a79be1a27b327a3de78c75743bad
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: ac2290c630393a047c5bdd8677562df6e0f0410d
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500745"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340250"
 ---
 # <a name="customize-support-center"></a>Personalizar el Centro de soporte técnico
 
@@ -24,11 +24,11 @@ ms.locfileid: "65500745"
 
 La herramienta [Centro de soporte técnico](/sccm/core/support/support-center) incluye un archivo de configuración que se puede personalizar. De forma predeterminada, al instalar el Centro de soporte técnico, este archivo se encuentra en la siguiente ruta de acceso: `C:\Program Files (x86)\Configuration Manager Support Center\ConfigMgrSupportCenter.exe.config`. El archivo de configuración cambia el comportamiento del programa:
 
-  - [Personalizar la recopilación de datos](#bkmk_datacoll): edita los conjuntos de claves del Registro y espacios de nombres de WMI que incluye durante la recopilación de datos.  
+- [Personalizar la recopilación de datos](#bkmk_datacoll): edita los conjuntos de claves del Registro y espacios de nombres de WMI que incluye durante la recopilación de datos.  
 
-  - [Personalizar los grupos de registros](#bkmk_loggroups): permite definir nuevos grupos de archivos de registro mediante expresiones regulares. Además agrega otros archivos de registro a grupos de registro.  
+- [Personalizar los grupos de registros](#bkmk_loggroups): permite definir nuevos grupos de archivos de registro mediante expresiones regulares. Además agrega otros archivos de registro a grupos de registro.  
 
-  - [Recopilar más archivos de registro mediante caracteres comodín](#bkmk_wildcards): use búsquedas con caracteres comodín para recopilar más archivos de registro.  
+- [Recopilar más archivos de registro mediante caracteres comodín](#bkmk_wildcards): use búsquedas con caracteres comodín para recopilar más archivos de registro.  
 
 Para realizar estos cambios, necesita permisos administrativos locales en el cliente en el que ha instalado el Centro de soporte técnico. Realice estas personalizaciones mediante un editor de texto o XML, como el Bloc de notas o Visual Studio.
 
@@ -97,9 +97,9 @@ Para recopilar claves del Registro de los programas clásicos instalados en el d
 
 Para personalizar los archivos de registro que recopila el Centro de soporte técnico y cómo los presenta en la lista **Grupos de registro**, use elementos del elemento `<logGroups>`. Cuando se inicia el Centro de soporte técnico, analiza esta sección del archivo de configuración. Luego crea un grupo en la lista **Grupos de registro** para cada valor de atributo de clave único que se encuentre en los elementos `<add/>` incluidos en el elemento `<logGroups>`.
 
-  - **Grupo de registros de componente**: el elemento `<componentLogGroup>` usa un atributo clave para definir el nombre del grupo de registros que aparece en la lista. También usa un atributo de valor que contiene una expresión regular (regex). Usa esta expresión regular para recopilar un conjunto de archivos de registro relacionados.  
+- **Grupo de registros de componente**: el elemento `<componentLogGroup>` usa un atributo clave para definir el nombre del grupo de registros que aparece en la lista. También usa un atributo de valor que contiene una expresión regular (regex). Usa esta expresión regular para recopilar un conjunto de archivos de registro relacionados.  
 
-  - **Grupo de registros estático:** el elemento `<staticLogGroup>` usa un atributo clave para definir el nombre del grupo de registros que aparece en la lista. También usa un atributo de valor que define el nombre de un archivo de registro.  
+- **Grupo de registros estático:** el elemento `<staticLogGroup>` usa un atributo clave para definir el nombre del grupo de registros que aparece en la lista. También usa un atributo de valor que define el nombre de un archivo de registro.  
 
 Si se usa el mismo valor de atributo de clave en un elemento `<add/>` dentro del elemento `<componentLogGroup>` y el elemento `<staticLogGroup>`, el Centro de soporte técnico crea un único grupo. Este grupo incluye los archivos de registro definidos por ambos elementos que usan la misma clave.
 

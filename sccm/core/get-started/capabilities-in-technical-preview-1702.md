@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee32d282bc04e6c1f97b12dedb8d69ccdcca8915
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 0ed8434086a7f1515cc538c3b265cb4e8f54780e
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67677552"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340098"
 ---
 # <a name="capabilities-in-technical-preview-1702-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1702 para System Center Configuration Manager
 
@@ -54,10 +54,10 @@ Se ha agregado una función de limpieza automática que elimina las descargas in
 
 ## <a name="peer-cache-improvements"></a>Mejoras de almacenamiento en caché del mismo nivel
 A partir de esta versión, un equipo de origen de almacenamiento en caché del mismo nivel rechazará una solicitud de contenido cuando el equipo de origen de almacenamiento en caché del mismo nivel cumpla alguna de las condiciones siguientes:  
- -  Está en modo de batería baja.
- -  La carga de CPU supera el 80 % en el momento en que se solicita el contenido.
- -  E/S de disco tiene un valor *AvgDiskQueueLength* superior a 10.
- -  No hay más conexiones disponibles para el equipo.   
+-  Está en modo de batería baja.
+-  La carga de CPU supera el 80 % en el momento en que se solicita el contenido.
+-  E/S de disco tiene un valor *AvgDiskQueueLength* superior a 10.
+-  No hay más conexiones disponibles para el equipo.   
 
 Puede configurar estas opciones mediante la clase de configuración de agente cliente para la característica de origen del mismo nivel (*SMS_WinPEPeerCacheConfig*) cuando se usa el SDK de System Center Configuration Manager.
 
@@ -101,8 +101,8 @@ Los ejemplos siguientes usan el Azure AD *contoso.onmicrosoft.com*:
 Azure AD no tiene ninguna unidad organizativa que almacene los grupos. En su lugar, use la misma estructura general que las consultas de usuario o de sistema, y configure la consulta LDAP para que apunte a la unidad organizativa que contiene los grupos que quiere detectar.
 
 Para obtener más información sobre Azure AD, consulte lo siguiente:  
- - [Azure Active Directory Domain Services](https://azure.microsoft.com/services/active-directory-ds) en azure.microsoft.com.
- - [Documentación acerca de Active Directory Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services) en docs.microsoft.com.
+- [Azure Active Directory Domain Services](https://azure.microsoft.com/services/active-directory-ds) en azure.microsoft.com.
+- [Documentación acerca de Active Directory Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services) en docs.microsoft.com.
 
 ## <a name="conditional-access-device-compliance-policy-improvements"></a>Mejoras de la directiva de cumplimiento de dispositivos de acceso condicional
 

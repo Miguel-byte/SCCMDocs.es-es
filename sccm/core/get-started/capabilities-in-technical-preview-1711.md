@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 645f41a7bad4bd9365c9ec9d51e2567ae270385a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: c4194472965ea498626921a1277047783251649e
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123304"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340061"
 ---
 # <a name="capabilities-in-technical-preview-1711-for-system-center-configuration-manager"></a>Funcionalidades de Technical Preview 1711 para System Center Configuration Manager
 
@@ -32,7 +32,7 @@ En este artículo se presentan las características disponibles en Technical Pre
     Workaround details.
 -->
 **Problemas conocidos de esta Technical Preview:**
-- **Compatibilidad con Windows 10, versión 1709 (también conocida como Fall Creators Update)**.  A partir de esta versión de Windows, Windows Media incluye varias ediciones. Al configurar una secuencia de tareas para usar un paquete de actualizaciones del sistema operativo o una imagen del sistema operativo, no olvide seleccionar una [edición que se pueda usar con Configuration Manager](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
+- **Compatibilidad con Windows 10, versión 1709 (también conocida como Fall Creators Update)** .  A partir de esta versión de Windows, Windows Media incluye varias ediciones. Al configurar una secuencia de tareas para usar un paquete de actualizaciones del sistema operativo o una imagen del sistema operativo, no olvide seleccionar una [edición que se pueda usar con Configuration Manager](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
 - **La actualización a una nueva versión preliminar no se puede realizar cuando hay un servidor de sitio en modo pasivo**. Si ejecuta una versión preliminar que tiene un [servidor de sitio primario en modo pasivo](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), debe desinstalarlo para poder actualizar correctamente el sitio en versión preliminar a esta nueva versión preliminar. Puede volver a instalar el servidor de sitio en modo pasivo después de que el sitio finalice la actualización.
 
   Para desinstalar el servidor de sitio en modo pasivo:
@@ -57,11 +57,11 @@ En este artículo se presentan las características disponibles en Technical Pre
 
 Esta versión preliminar técnica mejorará el paso Ejecutar secuencia de tareas. Estos son algunos de los elementos que incluyen las mejoras:
 
- - Compatibilidad con todos los escenarios de implementación de sistemas operativos desde el Centro de Software, el entorno PXE y soportes físicos.
- - Mejoras en las acciones de la consola como copiar, importar, exportar y advertir durante la eliminación de objetos.
- - Compatibilidad con el Asistente para **crear contenido preconfigurado**.
- - Integración con Verificación de la implementación.
- - El paso Ejecutar secuencia de tareas ahora puede usarse en los distintos niveles de secuencias de tareas, no solo en una relación de elementos primarios y secundarios. Las relaciones de varios niveles aumentan la complejidad, así que úselas con precaución. Estas relaciones se siguen comprobando para las referencias circulares.
+- Compatibilidad con todos los escenarios de implementación de sistemas operativos desde el Centro de Software, el entorno PXE y soportes físicos.
+- Mejoras en las acciones de la consola como copiar, importar, exportar y advertir durante la eliminación de objetos.
+- Compatibilidad con el Asistente para **crear contenido preconfigurado**.
+- Integración con Verificación de la implementación.
+- El paso Ejecutar secuencia de tareas ahora puede usarse en los distintos niveles de secuencias de tareas, no solo en una relación de elementos primarios y secundarios. Las relaciones de varios niveles aumentan la complejidad, así que úselas con precaución. Estas relaciones se siguen comprobando para las referencias circulares.
 
 ### <a name="try-it-out"></a>Haga la prueba  
 
@@ -70,7 +70,7 @@ Intente realizar las tareas siguientes y luego envíenos sus **comentarios** des
 1. En el editor de secuencia de tareas, haga clic en **Agregar**, seleccione **General** y haga clic en **Ejecutar secuencia de tareas**.
 2. Haga clic en **Examinar** para seleccionar la secuencia de tareas secundaria.
 
-## <a name="allow-user-interaction-when-installing-an-application----1356976---"></a>Permitir la interacción del usuario al instalar aplicaciones como <!-- 1356976 -->
+## <a name="allow-user-interaction-when-installing-an-application----1356976---"></a>Permitir la interacción del usuario al instalar una aplicación <!-- 1356976 -->
 
 Con esta versión preliminar, puede permitir que un usuario final interactúe con la instalación de una aplicación durante la ejecución de la secuencia de tareas. Por ejemplo, ejecute un proceso de instalación que solicite al usuario final diversas opciones. En algunos instaladores de aplicaciones no se pueden silenciar los mensajes, o bien el proceso de instalación puede requerir valores de configuración específicos que solo conoce el usuario. Esta característica permite controlar estos escenarios de instalación.
 
@@ -80,7 +80,7 @@ Trate de realizar las tareas siguientes y, luego, envíenos sus **comentarios** 
 
 1.  Cree o edite una aplicación. Para obtener más información, consulte [Creación de aplicaciones con System Center Configuration Manager](/sccm/apps/deploy-use/create-applications).
 
-    a. Elija la pestaña **Experiencia del usuario** en las **propiedades de Windows Installer (archivo \*msi)**.
+    a. Elija la pestaña **Experiencia del usuario** en las **propiedades de Windows Installer (archivo \*msi)** .
 
     b. Seleccione **Instalar para el sistema** en **Comportamiento de instalación**.
 

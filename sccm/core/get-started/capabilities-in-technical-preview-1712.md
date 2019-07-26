@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3154f705afc48cebe075083666e7a5d2b7f726b
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: ce992a7d47d77d6542c4f6ede3fb37195714659a
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56130282"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339969"
 ---
 # <a name="capabilities-in-technical-preview-1712-for-system-center-configuration-manager"></a>Funcionalidades de Technical Preview 1712 para System Center Configuration Manager
 
@@ -58,17 +58,19 @@ Repase [Technical Preview para System Center Configuration Manager](/sccm/core/g
 -->
 
 ## <a name="do-not-automatically-upgrade-superseded-applications"></a>No actualizar automáticamente las aplicaciones reemplazadas
-<!-- 1351266 --> En función de sus [comentarios de User Voice](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/11532669-fix-supercedence-behavior), en esta versión tiene la opción de configurar una implementación de aplicación para no actualizar automáticamente ninguna versión reemplazada. Ahora, al crear la implementación, en la página **Configuración de implementación** del **Asistente para implementar software**, para cada propósito de instalación **Disponible** o **Requerido**, puede habilitar o deshabilitar la opción **Actualizar automáticamente cualquier versión reemplazada de esta aplicación**.
+<!-- 1351266 -->
+En función de sus [comentarios de User Voice](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/11532669-fix-supercedence-behavior), en esta versión tiene la opción de configurar una implementación de aplicación para no actualizar automáticamente ninguna versión reemplazada. Ahora, al crear la implementación, en la página **Configuración de implementación** del **Asistente para implementar software**, para cada propósito de instalación **Disponible** o **Requerido**, puede habilitar o deshabilitar la opción **Actualizar automáticamente cualquier versión reemplazada de esta aplicación**.
 
 
 ## <a name="install-multiple-applications-in-software-center"></a>Instalar varias aplicaciones en el Centro de software
-<!-- 1357126 --> Si un usuario final o técnico de escritorio necesita instalar varias aplicaciones en un dispositivo, ahora en el Centro de software se admite la instalación de varias aplicaciones seleccionadas. Esto permite que el usuario sea más eficaz, al no tener que esperar a que finalice una instalación antes de iniciar la siguiente.
+<!-- 1357126 -->
+Si un usuario final o técnico de escritorio necesita instalar varias aplicaciones en un dispositivo, ahora en el Centro de software se admite la instalación de varias aplicaciones seleccionadas. Esto permite que el usuario sea más eficaz, al no tener que esperar a que finalice una instalación antes de iniciar la siguiente.
 
 Al usar el modo de selección múltiple en la pestaña **Aplicaciones**, los criterios siguientes determinan qué aplicaciones del Centro de software permiten la selección múltiple:
- - La aplicación es visible para el usuario
- - La aplicación ya no está instalada
- - La aprobación del administrador no es necesaria o ya se ha concedido
- - El estado de la aplicación está disponible (por ejemplo, todavía no descarga contenido)
+- La aplicación es visible para el usuario
+- La aplicación ya no está instalada
+- La aprobación del administrador no es necesaria o ya se ha concedido
+- El estado de la aplicación está disponible (por ejemplo, todavía no descarga contenido)
 
 ### <a name="try-it-out"></a>Haga la prueba
 **En la consola de Configuration Manager:** implemente varias aplicaciones en un dispositivo o usuario para la instalación, como disponibles o requeridas (con la fecha límite en el futuro). No se requiere la aprobación del administrador. Para obtener más información, consulte [Deploy applications](/sccm/apps/deploy-use/deploy-applications) (Implementar aplicaciones).
@@ -83,7 +85,8 @@ Las aplicaciones se instalan como de costumbre, pero ahora de forma sucesiva.
 
 
 ## <a name="client-based-pxe-responder-service"></a>Servicio del respondedor PXE basado en cliente
-<!-- 1357148 --> Un reto común para los clientes es proporcionar servicios PXE en oficinas remotas o sucursales con poca o ninguna infraestructura de servidor. El rol de punto de distribución admite los sistemas operativos de cliente, pero no se puede habilitar para PXE debido a la dependencia de los Servicios de implementación de Windows.
+<!-- 1357148 -->
+Un reto común para los clientes es proporcionar servicios PXE en oficinas remotas o sucursales con poca o ninguna infraestructura de servidor. El rol de punto de distribución admite los sistemas operativos de cliente, pero no se puede habilitar para PXE debido a la dependencia de los Servicios de implementación de Windows.
 
 La configuración de cliente nueva ahora está disponible para habilitar un servicio del respondedor PXE en los clientes de Configuration Manager. Una imagen de arranque habilitada para PXE debe residir en la memoria caché del cliente del respondedor PXE.
 
@@ -105,8 +108,8 @@ En la consola de Configuration Manager:
 4. Inicie otro cliente en la misma subred para el arranque normal de PXE o de la red.
 
 ### <a name="known-issues"></a>Problemas conocidos
- - El editor de secuencia de tareas muestra un icono de error de color rojo para el paso **Descargar contenido de paquete** al agregar una imagen de arranque, pero la secuencia de tareas se guarda correctamente. Al volver a abrir esta secuencia de tareas en el editor también se muestra una advertencia inofensiva sobre objetos a los que se hace referencia que no se encuentran. <!-- sms427542 -->
- - La imagen de arranque del paso Descargar contenido de paquete no se muestra en la lista de referencias de la secuencia de tareas personalizada. Tampoco está disponible la acción **Distribuir contenido**. <!-- sms504017 -->
+- El editor de secuencia de tareas muestra un icono de error de color rojo para el paso **Descargar contenido de paquete** al agregar una imagen de arranque, pero la secuencia de tareas se guarda correctamente. Al volver a abrir esta secuencia de tareas en el editor también se muestra una advertencia inofensiva sobre objetos a los que se hace referencia que no se encuentran. <!-- sms427542 -->
+- La imagen de arranque del paso Descargar contenido de paquete no se muestra en la lista de referencias de la secuencia de tareas personalizada. Tampoco está disponible la acción **Distribuir contenido**. <!-- sms504017 -->
 
 
 ## <a name="change-in-the-configuration-manager-client-install"></a>Cambio en la instalación del cliente de Configuration Manager  
@@ -117,7 +120,8 @@ Como resultado de los comentarios de User Voice, [Silverlight ya no se instala a
 Ahora, en el panel de Surface se muestran las versiones de firmware para los dispositivos Surface en lugar de la versión del sistema operativo. En la consola, vaya a **Supervisión**  >  **Dispositivos Surface**. Puede ver los elementos siguientes:
 - El porcentaje de dispositivos Surface
 - El porcentaje de modelos Surface
-- Las primeras cinco versiones de firmware <!--1355788-->
+- Las primeras cinco versiones de firmware
+ <!--1355788-->
 
 
 ## <a name="improvements-to-office-365-client-management-dashboard"></a>Mejoras en el panel de administración de clientes de Office 365 
@@ -134,17 +138,17 @@ Se han realizado las siguientes mejoras en la consola de Configuration Manager, 
 
 ## <a name="improvements-to-operating-system-deployment"></a>Mejoras en la implementación de sistema operativo
 Se han realizado las siguientes mejoras en la implementación del sistema operativo, algunas de las cuales son el resultado de los comentarios de los usuarios.
- - [Visor de registros predeterminado en la imagen de arranque](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/19269823-stop-cmtrace-from-asking-us-if-we-want-to-use-it-a): En Windows PE, al iniciar cmtrace.exe, ya no se le solicita que elija si este programa se debe establecer como el visor predeterminado para los archivos de registro. <!-- SMS 500897 -->
- - Paso Descargar contenido de paquete: ahora se pueden agregar imágenes de arranque a este paso de secuencia de tareas.
+- [Visor de registros predeterminado en la imagen de arranque](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/19269823-stop-cmtrace-from-asking-us-if-we-want-to-use-it-a): En Windows PE, al iniciar cmtrace.exe, ya no se le solicita que elija si este programa se debe establecer como el visor predeterminado para los archivos de registro. <!-- SMS 500897 -->
+- Paso Descargar contenido de paquete: ahora se pueden agregar imágenes de arranque a este paso de secuencia de tareas.
 
 
 ## <a name="windows-10-feedback-hub-app-integration"></a>Integración de la aplicación Centro de opiniones de Windows 10
 
 Nos gusta tanto recibir comentarios que ahora se permiten a través de la [aplicación Centro de opiniones](https://support.microsoft.com/en-us/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app) integrada en Windows 10. Cuando **agregue nuevos comentarios**, no olvide seleccionar la categoría **Enterprise Management** y, después, elija una de las subcategorías siguientes:
- - Cliente de Configuration Manager
- - Consola de Configuration Manager
- - Implementación del sistema operativo de Configuration Manager
- - Servidor de Configuration Manager
+- Cliente de Configuration Manager
+- Consola de Configuration Manager
+- Implementación del sistema operativo de Configuration Manager
+- Servidor de Configuration Manager
 
 Siga usando nuestra [página User Voice](http://configurationmanager.uservoice.com/) para votar nuevas ideas de características en Configuration Manager.
 

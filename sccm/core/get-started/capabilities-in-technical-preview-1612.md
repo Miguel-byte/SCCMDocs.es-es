@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 34fca23c43b34d905e6ecea210c0ba7487feeea2
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 5b425103d4d7455a6453f6415f911e01defdc0d6
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67677533"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340109"
 ---
 # <a name="capabilities-in-technical-preview-1612-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1612 para System Center Configuration Manager
 
@@ -155,8 +155,8 @@ Después de instalar la versión 1612 de Technical Preview, puede buscar **Conte
 La herramienta que se incluye en esta versión de Technical Preview está diseñada para reemplazar las versiones anteriores de herramientas similares para los productos antiguos de Configuration Manager. Aunque esta versión de la herramienta dejará de funcionar después del 1 de marzo de 2017, se presentarán nuevas versiones con las futuras versiones de Technical Preview hasta que esta herramienta se presente como parte de la rama actual o como una versión extraordinaria lista para la producción.
 
 ### <a name="requirements"></a>requisitos  
- - La herramienta puede ejecutarse directamente en el equipo que hospeda el punto de distribución o de manera remota desde otro servidor. La herramienta solo puede ejecutarse en un único punto de distribución a la vez.
- - La cuenta de usuario que ejecuta la herramienta debe tener directamente los permisos de administración basada en roles que son iguales a los de Administrador total en la jerarquía de Configuration Manager.  La herramienta no funciona cuando a la cuenta de usuario se le conceden permisos como un miembro de un grupo de seguridad de Windows que tiene los permisos de Administrador total.
+- La herramienta puede ejecutarse directamente en el equipo que hospeda el punto de distribución o de manera remota desde otro servidor. La herramienta solo puede ejecutarse en un único punto de distribución a la vez.
+- La cuenta de usuario que ejecuta la herramienta debe tener directamente los permisos de administración basada en roles que son iguales a los de Administrador total en la jerarquía de Configuration Manager.  La herramienta no funciona cuando a la cuenta de usuario se le conceden permisos como un miembro de un grupo de seguridad de Windows que tiene los permisos de Administrador total.
 
 ### <a name="modes-of-operation"></a>Modos de operación
 La herramienta puede ejecutarse en dos modos:

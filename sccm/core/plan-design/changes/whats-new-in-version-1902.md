@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf8a9ff65ad90928f4f5679940891ff34b571616
-ms.sourcegitcommit: b62de6c9cb1bc3e4c9ea5ab5ed3355d83e3a59bc
+ms.openlocfilehash: 2f3100e9580566b072bed6c8813018876f720eb3
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894185"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68338803"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Novedades de la versión 1902 de la rama actual de Configuration Manager
 
@@ -510,8 +510,7 @@ Cuando esté listo para instalar esta versión, consulte [Instalación de actual
 > [!TIP]  
 > Para instalar un sitio nuevo, use una versión de línea de base de Configuration Manager.  
 >
-> Más información acerca de:
->
+> Más información acerca de:    
 > - [Instalación de nuevos sitios](/sccm/core/servers/deploy/install/installing-sites)  
 > - [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#bkmk_Baselines)  
 

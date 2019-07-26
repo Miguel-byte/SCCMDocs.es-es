@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.assetid: 9e68de6e-2b33-442b-b674-a382728d9529
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c32f3f24f083537396c64c8f8426f8b6e6d6ee7a
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: 1473db987fc28f9b5a4f487599ad03690b203d23
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67252022"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340148"
 ---
 # <a name="software-center-user-guide"></a>Manual del usuario del Centro de software
 
@@ -47,9 +47,9 @@ Haga clic en la pestaña **Aplicaciones** para buscar e instalar las aplicacione
 - **Filtros**: el administrador de TI puede crear categorías de aplicaciones. Si está disponible, haga clic en la lista desplegable para filtrar la vista solamente a las aplicaciones de una categoría específica. Haga clic en **Todas** para mostrar todas las aplicaciones.
 - **Ordenar por**: permite reorganizar la lista de aplicaciones. De forma predeterminada esta lista se ordena por **Más recientes**. Las aplicaciones recientemente disponibles se muestran con una etiqueta **New** que está visible durante 7 días.
 - **Buscar**: ¿todavía no encuentra lo que busca? Escriba palabras clave en el cuadro Buscar para encontrarlo.
--  **Cambiar la vista**: haga clic en los iconos para cambiar entre vista de lista y vista de mosaico. De forma predeterminada la lista de aplicaciones se muestra como mosaicos gráficos. 
-    - Vista de mosaico: el administrador de TI puede personalizar los iconos. Debajo de cada icono se muestra el nombre de la aplicación, el editor y la versión. 
-    - Vista de lista: en esta vista, se muestra el icono de la aplicación, el nombre, el editor, la versión y el estado. 
+- **Cambiar la vista**: haga clic en los iconos para cambiar entre vista de lista y vista de mosaico. De forma predeterminada la lista de aplicaciones se muestra como mosaicos gráficos. 
+  - Vista de mosaico: el administrador de TI puede personalizar los iconos. Debajo de cada icono se muestra el nombre de la aplicación, el editor y la versión. 
+  - Vista de lista: en esta vista, se muestra el icono de la aplicación, el nombre, el editor, la versión y el estado. 
 
 
 ### <a name="install-multiple-applications"></a>Instalar varias aplicaciones 
@@ -119,13 +119,13 @@ Haga clic en la pestaña **Opciones** para ver opciones adicionales para este eq
 
 Indique el horario en el que suele trabajar. Es posible que el administrador de TI programe las instalaciones de software fuera de su horario laboral. Permita al menos cuatro horas al día para las tareas de mantenimiento del sistema. El administrador de TI puede seguir instalando aplicaciones críticas y actualizaciones de software durante el horario laboral.
 
-   - Haga clic en las listas desplegables para seleccionar la primera y la última hora a la que usa este equipo. De forma predeterminada estos valores son de las **5 a.m.** a las **10 p.m.**
+- Haga clic en las listas desplegables para seleccionar la primera y la última hora a la que usa este equipo. De forma predeterminada estos valores son de las **5 a.m.** a las **10 p.m.**
 
-   - Active la casilla situada junto a los días de la semana en los que normalmente usa este equipo. De forma predeterminada, Centro de software solo selecciona los días laborables.  
+- Active la casilla situada junto a los días de la semana en los que normalmente usa este equipo. De forma predeterminada, Centro de software solo selecciona los días laborables.  
 
 Especifique si usa este equipo periódicamente para realizar su trabajo. El administrador podría instalar aplicaciones de manera automática o hacer que otras aplicaciones estén disponibles para los equipos principales. <!--3485366-->
 
-   - Seleccione **Normalmente uso este equipo para realizar mi trabajo** si el equipo que usa es un equipo principal.
+- Seleccione **Normalmente uso este equipo para realizar mi trabajo** si el equipo que usa es un equipo principal.
 
 
 ### <a name="power-management"></a>Administración de energía

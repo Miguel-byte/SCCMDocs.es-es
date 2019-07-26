@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f63193f9d4c9c754a56186f7a36cb9fabaf95725
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: f9124f412b7e22fadf08ddc87668481747d52152
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500731"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339526"
 ---
 # <a name="support-center-quickstart-guide"></a>Guía de inicio rápido del Centro de soporte técnico
 
@@ -76,15 +76,15 @@ Cree un completo archivo de *paquete de solución de problemas* (.zip) que captu
 
 Aparte de estas capacidades básicas, el Centro de soporte técnico también puede recabar otra información de estado de cliente de muy diversa índole. Abra **Support Center** y seleccione **Recopilar todos los datos**. Este proceso normalmente dura varios minutos, incluso en los equipos más modernos. El Centro de soporte técnico recopila los siguientes datos adicionales:
 
-  - **Directiva**: configuraciones de directiva de Configuration Manager, incluida la configuración de directiva solicitada y la configuración de directiva real.  
+- **Directiva**: configuraciones de directiva de Configuration Manager, incluida la configuración de directiva solicitada y la configuración de directiva real.  
 
-  - **Certificados**: información de clave pública de los certificados de cliente. El Centro de soporte técnico no recopila claves privadas de certificados.  
+- **Certificados**: información de clave pública de los certificados de cliente. El Centro de soporte técnico no recopila claves privadas de certificados.  
 
-  - **Registro del cliente**: recopila información de configuración del cliente del Registro. El Centro de soporte técnico solo recopila información del Registro de Configuration Manager.  
+- **Registro del cliente**: recopila información de configuración del cliente del Registro. El Centro de soporte técnico solo recopila información del Registro de Configuration Manager.  
 
-  - **WMI de cliente**: información de configuración del cliente de WMI. El Centro de soporte técnico no recopila la directiva del cliente.  
+- **WMI de cliente**: información de configuración del cliente de WMI. El Centro de soporte técnico no recopila la directiva del cliente.  
 
-  - **Solución de problemas**: datos de solución de problemas en tiempo real para ayudar a diagnosticar problemas comunes de cliente relativos a Active Directory, puntos de administración, redes, asignaciones de directivas y registro.  
+- **Solución de problemas**: datos de solución de problemas en tiempo real para ayudar a diagnosticar problemas comunes de cliente relativos a Active Directory, puntos de administración, redes, asignaciones de directivas y registro.  
 
-  - **Volcados de depuración**: realiza el volcado de depuración del cliente y procesos relacionados. Los volcados de depuración pueden ser de gran tamaño. Habilite esta opción solo cuando solucione problemas de rendimiento del cliente.  
+- **Volcados de depuración**: realiza el volcado de depuración del cliente y procesos relacionados. Los volcados de depuración pueden ser de gran tamaño. Habilite esta opción solo cuando solucione problemas de rendimiento del cliente.  
 

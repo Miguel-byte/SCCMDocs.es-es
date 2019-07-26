@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8bfcb73f359bd8d1b4438ac28b2395b01217e35d
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 0ae4074897359dcebb9b91392bd36893d0276012
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67677742"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68338999"
 ---
 # <a name="how-to-manage-clients-in-system-center-configuration-manager"></a>Cómo administrar clientes en System Center Configuration Manager
 
@@ -152,12 +152,12 @@ Dependiendo del tipo de dispositivo, es posible que algunas de estas opciones no
       Para obtener más información, consulte [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../mdm/understand/hybrid-mobile-device-management.md) (Administración híbrida de dispositivos móviles [MDM] con System Center Configuration Manager y Microsoft Intune)  
 
 ##  <a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> Administrar clientes desde el nodo Recopilaciones de dispositivos  
-  Muchas de las tareas que están disponibles para los dispositivos en el nodo **Dispositivos** también lo están en las colecciones. La consola aplica automáticamente la operación en todos los dispositivos aptos de la recopilación. Esta acción en una recopilación completa genera paquetes de red adicionales y aumenta el uso de la CPU en el servidor del sitio.  
+Muchas de las tareas que están disponibles para los dispositivos en el nodo **Dispositivos** también lo están en las colecciones. La consola aplica automáticamente la operación en todos los dispositivos aptos de la recopilación. Esta acción en una recopilación completa genera paquetes de red adicionales y aumenta el uso de la CPU en el servidor del sitio.  
 
-  Tenga en cuenta lo siguiente antes de realizar tareas de nivel de recopilación. Una vez que se haya iniciado, no puede detener la tarea de la consola. 
- - ¿Cuántos dispositivos hay en la recopilación?
- - ¿Los dispositivos están conectados mediante conexiones de red de ancho de banda reducido?
- - ¿Cuánto tiempo tarda esta tarea en completarse para todos los dispositivos?
+Tenga en cuenta lo siguiente antes de realizar tareas de nivel de recopilación. Una vez que se haya iniciado, no puede detener la tarea de la consola. 
+- ¿Cuántos dispositivos hay en la recopilación?
+- ¿Los dispositivos están conectados mediante conexiones de red de ancho de banda reducido?
+- ¿Cuánto tiempo tarda esta tarea en completarse para todos los dispositivos?
 
 #### <a name="to-manage-clients-from-the-device-collections-node"></a>Para administrar clientes desde el nodo Recopilaciones de dispositivos  
 
@@ -195,11 +195,11 @@ A partir de la versión 1710, se puede usar la consola de Configuration Manager 
 > También debe actualizar a los clientes a la versión 1710 para que esta característica funcione. Se recomienda habilitar la actualización automática del cliente para mantenerlo al día con la mínima sobrecarga administrativa. Para obtener más información, vea [Usar una actualización de cliente automática](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#use-automatic-client-upgrade).
 
 Para identificar los dispositivos pendientes de reinicio, vaya al área de trabajo **Activos y compatibilidad** de la consola de Configuration Manager y seleccione el nodo **Dispositivos**. Después, puede ver el estado de cada dispositivo en el panel de detalles en una nueva columna denominada **Reinicio pendiente**. Cada dispositivo tiene uno o varios de los valores siguientes: 
- - **No**: no hay ningún reinicio pendiente
- - **Configuration Manager**: este valor proviene del componente de coordinador de reinicio de cliente (RebootCoordinator.log)
- - **Cambiar nombre de archivo**: este valor proviene de una operación de cambio de nombre de archivo pendiente notificada por Windows (HKLM\SYSTEM\CurrentControlSet\Control\Session Manager, PendingFileRenameOperations)
- - **Windows Update**: este valor proviene de la notificación de Windows Update Agent de un reinicio pendiente necesario para una o varias actualizaciones (HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired)
- - **Agregar o quitar características**: este valor proviene del servicio basado en componentes de Windows que notifica que la adición o eliminación de una característica de Windows requiere un reinicio (HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Reboot Pending)
+- **No**: no hay ningún reinicio pendiente
+- **Configuration Manager**: este valor proviene del componente de coordinador de reinicio de cliente (RebootCoordinator.log)
+- **Cambiar nombre de archivo**: este valor proviene de una operación de cambio de nombre de archivo pendiente notificada por Windows (HKLM\SYSTEM\CurrentControlSet\Control\Session Manager, PendingFileRenameOperations)
+- **Windows Update**: este valor proviene de la notificación de Windows Update Agent de un reinicio pendiente necesario para una o varias actualizaciones (HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired)
+- **Agregar o quitar características**: este valor proviene del servicio basado en componentes de Windows que notifica que la adición o eliminación de una característica de Windows requiere un reinicio (HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Reboot Pending)
 
 **Para crear la notificación de cliente para reiniciar un dispositivo:**
 1. Busque el dispositivo que quiera reiniciar dentro de una recopilación en el nodo **Recopilaciones de dispositivos** de la consola.

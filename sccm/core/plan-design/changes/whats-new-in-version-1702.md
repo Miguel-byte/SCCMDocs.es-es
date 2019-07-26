@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31f47fa04275f2be4efa1558e1d816f74b05d369
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 1e41779d7901471e208c26b9050c4db82b678244
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67677311"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339824"
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>Novedades de la versión 1702 de System Center Configuration Manager
 
@@ -27,10 +27,11 @@ La actualización 1702 para la rama actual de System Center Configuration Manage
 
 > [!TIP]  
 > Para instalar un sitio nuevo, debe usar una versión de línea base de Configuration Manager.  
->  Más información acerca de:    
->   - [Instalación de nuevos sitios](https://technet.microsoft.com/library/mt590197.aspx)  
->   - [Instalación de actualizaciones en los sitios](https://technet.microsoft.com/library/mt607046.aspx)  
->   - [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#bkmk_Baselines)
+>
+> Más información acerca de:    
+> - [Instalación de nuevos sitios](https://technet.microsoft.com/library/mt590197.aspx)  
+> - [Instalación de actualizaciones en los sitios](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 En las secciones siguientes se proporcionan detalles sobre los cambios y las nuevas funciones introducidas en la versión 1702 de Configuration Manager.  
 
@@ -62,9 +63,9 @@ A continuación se presentan mejoras en el uso de la búsqueda en la consola de 
 
 ### <a name="send-feedback-from-the-configuration-manager-console"></a>Enviar comentarios desde la consola de Configuration Manager
 
- Puede utilizar las opciones de comentario en consola para enviar comentarios directamente al equipo de desarrollo.
+Puede utilizar las opciones de comentario en consola para enviar comentarios directamente al equipo de desarrollo.
 
- Puede encontrar la opción **Comentarios**:
+Puede encontrar la opción **Comentarios**:
 - En la cinta de opciones, en el extremo izquierdo de la pestaña Inicio de cada nodo.  
   ![Cinta de opciones](./media/feedback-home.png)
 
@@ -96,25 +97,25 @@ A continuación se indican los cambios en Actualizaciones y mantenimiento:
 
 
 ### <a name="data-warehouse-service-point"></a>Punto de servicio de almacenamiento de datos
- Use el punto de servicio de almacenamiento de datos para almacenar y generar informes de datos históricos a largo plazo para su implementación de Configuration Manager.
+Use el punto de servicio de almacenamiento de datos para almacenar y generar informes de datos históricos a largo plazo para su implementación de Configuration Manager.
 
- El almacenamiento de datos admite hasta 2 TB de datos, con marcas de tiempo para el seguimiento de cambios. El almacenamiento de datos se consigue mediante sincronizaciones automatizadas desde la base de datos del sitio de Configuration Manager a la base de datos de almacenamiento de datos. Puede acceder a esta información desde su punto de Reporting Services.
+El almacenamiento de datos admite hasta 2 TB de datos, con marcas de tiempo para el seguimiento de cambios. El almacenamiento de datos se consigue mediante sincronizaciones automatizadas desde la base de datos del sitio de Configuration Manager a la base de datos de almacenamiento de datos. Puede acceder a esta información desde su punto de Reporting Services.
 
- Para más información, consulte [Punto de servicio del almacenamiento de datos](/sccm/core/servers/manage/data-warehouse).
+Para más información, consulte [Punto de servicio del almacenamiento de datos](/sccm/core/servers/manage/data-warehouse).
 
 
 ### <a name="peer-cache-improvements"></a>Mejoras de almacenamiento en caché del mismo nivel
- A partir de la versión 1702, un equipo de origen de almacenamiento en caché del mismo nivel rechazará una solicitud de contenido cuando el equipo de origen de almacenamiento en caché del mismo nivel cumpla alguna de las condiciones siguientes:  
-  -  Está en modo de batería baja.
-  -  La carga de CPU supera el 80 % en el momento en que se solicita el contenido.
-  -  E/S de disco tiene un valor *AvgDiskQueueLength* superior a 10.
-  -  No hay más conexiones disponibles para el equipo.   
+A partir de la versión 1702, un equipo de origen de almacenamiento en caché del mismo nivel rechazará una solicitud de contenido cuando el equipo de origen de almacenamiento en caché del mismo nivel cumpla alguna de las condiciones siguientes:  
+-  Está en modo de batería baja.
+-  La carga de CPU supera el 80 % en el momento en que se solicita el contenido.
+-  E/S de disco tiene un valor *AvgDiskQueueLength* superior a 10.
+-  No hay más conexiones disponibles para el equipo.   
 Para más información, vea **Acceso limitado al origen de almacenamiento en caché del mismo nivel** en [Caché del mismo nivel para clientes de Configuration Manager](/sccm/core/plan-design/hierarchy/client-peer-cache).   
 
 Además, se han agregado tres nuevos informes al punto de notificación. Puede utilizar estos informes para conocer más detalles sobre las solicitudes rechazadas de contenido, incluidos qué grupo de límites, equipos y contenidos están afectados. Vea [Supervisión](/sccm/core/plan-design/hierarchy/client-peer-cache#monitoring) en el tema del almacenamiento en caché del mismo nivel.
 
 ### <a name="content-library-cleanup-tool"></a>Herramienta de limpieza de la biblioteca de contenido
- Utilice la herramienta [Content Library Cleanup Tool](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool) para quitar contenido de puntos de distribución cuando el contenido deja de estar asociado con una aplicación.
+Utilice la herramienta [Content Library Cleanup Tool](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool) para quitar contenido de puntos de distribución cuando el contenido deja de estar asociado con una aplicación.
 
 
 ### <a name="use-the-oms-connector-with-the-azure-government-cloud"></a>Uso del conector de OMS con la nube de Azure Government
@@ -201,14 +202,14 @@ Esta versión presenta las siguientes mejoras:
 
 ### <a name="improvements-to-the-auto-apply-driver-task-sequence"></a>Mejoras en la secuencia de tareas Aplicar controladores automáticamente
 Ahora hay disponibles nuevas variables de secuencia de tareas para configurar el valor del tiempo de espera en el paso de secuencia de tareas de aplicación automática de controladores cuando se realizan solicitudes del catálogo HTTP. Están disponibles las siguientes variables y valores predeterminados (en segundos):
-   - Valor predeterminado de SMSTSDriverRequestResolveTimeOut:  
-     Valor predeterminado: 60
-   - Valor predeterminado de SMSTSDriverRequestConnectTimeOut:  
-     Valor predeterminado: 60
-   - Valor predeterminado de SMSTSDriverRequestSendTimeOut:  
-     Valor predeterminado: 60
-   - Valor predeterminado de SMSTSDriverRequestReceiveTimeOut:  
-     Valor predeterminado: 480
+- Valor predeterminado de SMSTSDriverRequestResolveTimeOut:  
+  Valor predeterminado: 60
+- Valor predeterminado de SMSTSDriverRequestConnectTimeOut:  
+  Valor predeterminado: 60
+- Valor predeterminado de SMSTSDriverRequestSendTimeOut:  
+  Valor predeterminado: 60
+- Valor predeterminado de SMSTSDriverRequestReceiveTimeOut:  
+  Valor predeterminado: 480
 
 ### <a name="windows-10-adk-tracked-by-build-version"></a>Seguimiento de Windows 10 ADK según la versión de compilación
 Ahora, la versión de compilación realiza un seguimiento de Windows 10 ADK para garantizar una experiencia más compatible al personalizar las imágenes de arranque de Windows 10. Por ejemplo, si el sitio usa Windows ADK para Windows 10, versión 1607, solo se pueden personalizar en la consola las imágenes de arranque con la versión 10.0.14393. Para más información sobre cómo personalizar las versiones de WinPE, vea [Personalizar imágenes de arranque](/sccm/osd/get-started/customize-boot-images).

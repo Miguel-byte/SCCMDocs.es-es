@@ -11,29 +11,29 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c6a6e8a346c53d1f2bc8abdc2c2f2d0b9fafb64
-ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
+ms.openlocfilehash: 7218f467df72d9ea9d9ae7b3e4bb15be3c74bda2
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834879"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68338197"
 ---
 # <a name="define-network-locations-as-boundaries-for-system-center-configuration-manager"></a>Definición de las ubicaciones de red como límites para System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Los límites de Configuration Manager son ubicaciones de red que contienen dispositivos que desea administrar. El límite en el que se encuentra un dispositivo es equivalente al sitio de Active Directory, o bien la dirección IP de red identificada por el cliente de Configuration Manager que está instalado en el dispositivo.
- - Puede crear límites independientes manualmente. No obstante, Configuration Manager no es compatible con la entrada directa de una superred como un límite. En su lugar, utilice el tipo de límite de intervalo de direcciones IP.
- - Puede configurar el método de [detección de bosques de Active Directory](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutForest) para que detecte automáticamente y cree límites para las subredes IP y el sitio de Active Directory que detecta. Cuando la detección de bosques de Active Directory identifica una superred asignada a un sitio de Active Directory, Configuration Manager convierte la superred en un límite de intervalo de direcciones IP.  
+- Puede crear límites independientes manualmente. No obstante, Configuration Manager no es compatible con la entrada directa de una superred como un límite. En su lugar, utilice el tipo de límite de intervalo de direcciones IP.
+- Puede configurar el método de [detección de bosques de Active Directory](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutForest) para que detecte automáticamente y cree límites para las subredes IP y el sitio de Active Directory que detecta. Cuando la detección de bosques de Active Directory identifica una superred asignada a un sitio de Active Directory, Configuration Manager convierte la superred en un límite de intervalo de direcciones IP.  
 
 No es raro que un dispositivo use una dirección IP de la que el administrador de Configuration Manager no tiene constancia. Si tiene dudas sobre la ubicación de red de un dispositivo, confirme lo que el dispositivo notifica como su ubicación mediante el comando **IPCONFIG** en el dispositivo.  
 
 Al crear un límite, este recibe automáticamente un nombre basado en el tipo y ámbito del límite. No se puede modificar este nombre. En su lugar, puede especificar una descripción que ayude a identificar el límite en la consola de Configuration Manager.  
 
 Cada límite está disponible para que lo use cada sitio de la jerarquía. Después de haber creado un límite, puede modificar sus propiedades para hacer lo siguiente:  
--   Agregar el límite a uno o varios grupos de límites.  
--   Cambiar el tipo o el ámbito del límite.  
--   Ver la pestaña **Sistemas de sitio** del límite para ver qué servidores de sistema de sitio (puntos de distribución, puntos de migración de estado y puntos de administración) están asociados con el límite.  
+- Agregar el límite a uno o varios grupos de límites.  
+- Cambiar el tipo o el ámbito del límite.  
+- Ver la pestaña **Sistemas de sitio** del límite para ver qué servidores de sistema de sitio (puntos de distribución, puntos de migración de estado y puntos de administración) están asociados con el límite.  
 
 ## <a name="to-create-a-boundary"></a>Para crear un límite  
 
@@ -45,19 +45,19 @@ Cada límite está disponible para que lo use cada sitio de la jerarquía. Despu
 
 4.  Seleccione un **Tipo** para este límite:  
 
-    -   Si selecciona **Subred de IP**, debe especificar un **Id. de subred** para este límite.  
-        > [!TIP]  
-        >  Puede especificar la **Red** y la **Máscara de subred** para que el **Id. de subred** se especifique automáticamente. Cuando se guarda el límite, se guarda solo el valor de Id. de subred.  
+    - Si selecciona **Subred de IP**, debe especificar un **Id. de subred** para este límite.  
+      > [!TIP]  
+      > Puede especificar la **Red** y la **Máscara de subred** para que el **Id. de subred** se especifique automáticamente. Cuando se guarda el límite, se guarda solo el valor de Id. de subred.  
 
-    -   Si selecciona **Sitio de Active Directory**, debe especificarlo o **Examinar** para buscar un sitio de Active Directory en el bosque local del servidor de sitio.  
+    - Si selecciona **Sitio de Active Directory**, debe especificarlo o **Examinar** para buscar un sitio de Active Directory en el bosque local del servidor de sitio.  
         
-        - Cuando se especifica un sitio de Active Directory para un límite, el límite incluye cada subred de IP que sea miembro de ese sitio de Active Directory. Si cambia la configuración del sitio de Active Directory en Active Directory, también cambiarán las ubicaciones de red incluidas en este límite.  
+      - Cuando se especifica un sitio de Active Directory para un límite, el límite incluye cada subred de IP que sea miembro de ese sitio de Active Directory. Si cambia la configuración del sitio de Active Directory en Active Directory, también cambiarán las ubicaciones de red incluidas en este límite.  
 
-        - Los límites de sitio de Active Directory no funcionan para los clientes de Azure AD puros. Si se desplazan en el entorno local, no pertenecerán a ningún límite si solo se han definido mediante sitios de AD.
+      - Los límites de sitio de Active Directory no funcionan para los clientes de Azure AD puros. Si se desplazan en el entorno local, no pertenecerán a ningún límite si solo se han definido mediante sitios de AD.
 
-    -   Si selecciona **Prefijo IPv6**, debe especificar un **Prefijo** en el formato de prefijo IPv6.  
+    - Si selecciona **Prefijo IPv6**, debe especificar un **Prefijo** en el formato de prefijo IPv6.  
 
-    -   Si selecciona **Intervalo de direcciones IP**, debe especificar una **Dirección IP inicial** y una **Dirección IP final** que incluya parte de una subred de IP o que incluya múltiples subredes de IP.    
+    - Si selecciona **Intervalo de direcciones IP**, debe especificar una **Dirección IP inicial** y una **Dirección IP final** que incluya parte de una subred de IP o que incluya múltiples subredes de IP.    
 
 5.  Haga clic en **Aceptar** para guardar el nuevo límite.  
 
@@ -74,12 +74,12 @@ Cada límite está disponible para que lo use cada sitio de la jerarquía. Despu
 5.  Seleccione la pestaña **Sistemas de sitio** para ver los sistemas de sitio que están asociados con este límite. No puede cambiar esta configuración desde las propiedades de un límite.  
 
     > [!TIP]  
-    >  Para que un servidor de sistema de sitio se muestre como sistema de sitio para un límite, el servidor de sistema de sitio debe estar asociado como servidor de sistema de sitio para, al menos, un grupo de límites que incluya este límite. Esto se configura en la pestaña **Referencias** de un grupo de límites.  
+    > Para que un servidor de sistema de sitio se muestre como sistema de sitio para un límite, el servidor de sistema de sitio debe estar asociado como servidor de sistema de sitio para, al menos, un grupo de límites que incluya este límite. Esto se configura en la pestaña **Referencias** de un grupo de límites.  
 
 6.  Seleccione la pestaña **Grupos de límites** para modificar la pertenencia al grupo de límites de este límite:  
 
-    -   Para agregar este límite a uno o más grupos de límites, haga clic en **Agregar**, seleccione la casilla para uno o más grupos de límites y, a continuación, haga clic en **Aceptar**.  
+    - Para agregar este límite a uno o más grupos de límites, haga clic en **Agregar**, seleccione la casilla para uno o más grupos de límites y, a continuación, haga clic en **Aceptar**.  
 
-    -   Para quitar este límite de un grupo de límites, seleccione el grupo de límites y haga clic en **Quitar**.  
+    - Para quitar este límite de un grupo de límites, seleccione el grupo de límites y haga clic en **Quitar**.  
 
 7.  Haga clic en **Aceptar** para cerrar las propiedades de límite y guardar la configuración.  

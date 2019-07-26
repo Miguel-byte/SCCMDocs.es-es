@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9d35558da6b25bba16b84c931b0254436ac3dd1e
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 9fdf140b998b4d6d64ade232503b64b14a11416f
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285530"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68338672"
 ---
 # <a name="whats-new-in-version-1802-of-system-center-configuration-manager"></a>Novedades de la versión 1802 de System Center Configuration Manager
 
@@ -32,10 +32,10 @@ Ahora también están disponibles las siguientes actualizaciones adicionales a e
 > [!TIP]  
 > Para instalar un sitio nuevo, debe usar una versión de línea base de Configuration Manager.  
 >
->  Más información acerca de:    
->   - [Instalación de nuevos sitios](/sccm/core/servers/deploy/install/installing-sites)  
->   - [Instalación de actualizaciones en los sitios](/sccm/core/servers/manage/updates)  
->   - [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#bkmk_Baselines)
+> Más información acerca de:    
+> - [Instalación de nuevos sitios](/sccm/core/servers/deploy/install/installing-sites)  
+> - [Instalación de actualizaciones en los sitios](/sccm/core/servers/manage/updates)  
+> - [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 En las secciones siguientes se proporcionan detalles sobre los cambios y las nuevas funciones de la versión 1802 de Configuration Manager.  
 
@@ -208,15 +208,15 @@ La plantilla de secuencia de tareas predeterminada para la actualización en con
 
 ### <a name="improvements-to-operating-system-deployment"></a>Mejoras en la implementación de sistema operativo
 Esta versión incluye las siguientes mejoras para la implementación del sistema operativo:
- - En Windows PE, al iniciar cmtrace.exe, ya no se le solicita que elija si este programa se debe establecer como el visor predeterminado para los archivos de registro. <!-- SMS 500897 -->
- - Agregue imágenes de arranque al paso de secuencia de tareas [Descargar contenido de paquete](/sccm/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent).
- - Mejoras en el paso [Ejecutar secuencia de tareas](/sccm/osd/understand/task-sequence-steps#child-task-sequence): <!-- 1261338 -->   
-     - Compatibilidad con todos los escenarios de implementación de sistemas operativos desde el Centro de Software, el entorno PXE y soportes físicos.
-     - Mejoras en las acciones de la consola como copiar, importar, exportar y advertir durante la eliminación de objetos.
-     - Compatibilidad con el [Asistente para crear archivos de contenido preconfigurados](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent).
-     - Integración con Verificación de la implementación. Para obtener más información, vea [Implementaciones de secuencias de tareas de alto riesgo](/sccm/osd/deploy-use/deploy-a-task-sequence). 
-     - El paso Ejecutar secuencia de tareas ahora puede usarse en los distintos niveles de secuencias de tareas, no solo en una relación de elementos primarios y secundarios. Las relaciones de varios niveles aumentan la complejidad, así que úselas con precaución. Estas relaciones se siguen comprobando para las referencias circulares.
-    
+- En Windows PE, al iniciar cmtrace.exe, ya no se le solicita que elija si este programa se debe establecer como el visor predeterminado para los archivos de registro. <!-- SMS 500897 -->
+- Agregue imágenes de arranque al paso de secuencia de tareas [Descargar contenido de paquete](/sccm/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent).
+- Mejoras en el paso [Ejecutar secuencia de tareas](/sccm/osd/understand/task-sequence-steps#child-task-sequence): <!-- 1261338 -->   
+  - Compatibilidad con todos los escenarios de implementación de sistemas operativos desde el Centro de Software, el entorno PXE y soportes físicos.
+  - Mejoras en las acciones de la consola como copiar, importar, exportar y advertir durante la eliminación de objetos.
+  - Compatibilidad con el [Asistente para crear archivos de contenido preconfigurados](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent).
+  - Integración con Verificación de la implementación. Para obtener más información, vea [Implementaciones de secuencias de tareas de alto riesgo](/sccm/osd/deploy-use/deploy-a-task-sequence). 
+  - El paso Ejecutar secuencia de tareas ahora puede usarse en los distintos niveles de secuencias de tareas, no solo en una relación de elementos primarios y secundarios. Las relaciones de varios niveles aumentan la complejidad, así que úselas con precaución. Estas relaciones se siguen comprobando para las referencias circulares.
+
 ### <a name="deployment-templates-for-task-sequences"></a>Plantillas de implementación para secuencias de tareas
 <!-- 1357391 -->
 El [Asistente para la implementación de secuencias de tareas](/sccm/osd/deploy-use/deploy-a-task-sequence) ahora puede crear una plantilla de implementación. La plantilla de implementación puede guardarse y aplicarse a una secuencia de tareas nueva o existente para crear una implementación. 

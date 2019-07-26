@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81ab388784e5fba380eab36db5e6a023199d41e0
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: e131f8c76b03c36557f3f1161729d523e4e7f946
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56137007"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339860"
 ---
 # <a name="surface-device-dashboard-in-system-center-configuration-manager"></a>Panel de dispositivos Surface en System Center Configuration Manager
 
@@ -52,16 +52,17 @@ En el panel de dispositivos Surface se muestran tres gráficos para el entorno.
       ![Lista de dispositivos del modelo de Surface](media/Surface-Model-Device-List.PNG)
 
 - **Cinco versiones principales de firmware**: muestra un gráfico con los cinco modelos de firmware principales en el entorno. 
-  - Al mantener el puntero sobre una sección del gráfico se proporciona el porcentaje de los dispositivos Surface en la versión de firmware seleccionada. A partir de la versión 1806 de Configuration Manager, al hacer clic en una sección del gráfico muestra una lista de los dispositivos correspondientes. <!--1358654--> ![Lista de dispositivos del modelo de Surface](media/Surface-Firmware-Hover.PNG)
+  - Al mantener el puntero sobre una sección del gráfico se proporciona el porcentaje de los dispositivos Surface en la versión de firmware seleccionada. A partir de la versión 1806 de Configuration Manager, al hacer clic en una sección del gráfico muestra una lista de los dispositivos correspondientes. <!--1358654-->
+     ![Lista de dispositivos del modelo de Surface](media/Surface-Firmware-Hover.PNG)
 
 
 ## <a name="more-information"></a>Más información
 
 Para obtener más información sobre los dispositivos Surface, vea:
- - El sitio web de [Surface]( https://go.microsoft.com/fwlink/?linkid=861998).
-    
+- El sitio web de [Surface]( https://go.microsoft.com/fwlink/?linkid=861998).
+
 Para más información sobre cómo implementar actualizaciones de firmware de Surface en Configuration Manager, vea:
- - [Cómo administrar actualizaciones de controladores de Surface en Configuration Manager]( https://support.microsoft.com/help/4098906).
+- [Cómo administrar actualizaciones de controladores de Surface en Configuration Manager]( https://support.microsoft.com/help/4098906).
 
 
 

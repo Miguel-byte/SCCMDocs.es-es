@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aadb544180d7662f1b60c73db6a35b64f8b7efe7
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 4754077f1a91cd11ce16e17dd3d2ea2f1704ee08
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67676834"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68338880"
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Caché del mismo nivel para clientes de Configuration Manager
 
@@ -46,8 +46,8 @@ El cliente de Configuration Manager usa la caché del mismo nivel para proporcio
 
 La caché del mismo nivel no reemplaza el uso de otras soluciones como Optimización de distribución o Windows BranchCache. La caché del mismo nivel funciona junto con otras soluciones. Estas tecnologías le proporcionan más opciones para extender las soluciones tradicionales de implementación de contenido, como los puntos de distribución. La caché del mismo nivel es una solución personalizada que no depende de BranchCache. Si no habilita o usa BranchCache, la caché del mismo nivel sigue funcionando.  
 
-  > [!Note]  
-  > A partir de la versión 1802, Windows BranchCache siempre está habilitado en las implementaciones. Se ha quitado la opción **Permitir a los clientes compartir el contenido con otros clientes en la misma subred**.<!--SCCMDocs issue 539--> Si el punto de distribución lo admite, y está habilitado en la configuración del cliente, los clientes usan BranchCache. Para más información, consulte [Configurar BranchCache](/sccm/core/clients/deploy/about-client-settings#configure-branchcache).<!--SCCMDocs issue 735-->   
+> [!Note]  
+> A partir de la versión 1802, Windows BranchCache siempre está habilitado en las implementaciones. Se ha quitado la opción **Permitir a los clientes compartir el contenido con otros clientes en la misma subred**.<!--SCCMDocs issue 539--> Si el punto de distribución lo admite, y está habilitado en la configuración del cliente, los clientes usan BranchCache. Para más información, consulte [Configurar BranchCache](/sccm/core/clients/deploy/about-client-settings#configure-branchcache).<!--SCCMDocs issue 735-->   
 
 
 
@@ -55,11 +55,11 @@ La caché del mismo nivel no reemplaza el uso de otras soluciones como Optimizac
 
 Para habilitar la caché del mismo nivel, implemente la [configuración de cliente](#bkmk_settings) en una colección. Después, los miembros de esa colección actúan como un origen de la caché del mismo nivel para otros clientes en el mismo grupo de límites.  
 
- - El cliente que actúa como origen de contenido del mismo nivel envía una lista de contenido almacenado en caché disponible a su punto de administración.  
+- El cliente que actúa como origen de contenido del mismo nivel envía una lista de contenido almacenado en caché disponible a su punto de administración.  
 
- - Otro cliente en el mismo grupo de límites solicita una ubicación de contenido al punto de administración. El servidor devuelve la lista de posibles orígenes de contenido. En esta lista se incluyen todos los orígenes de caché del mismo nivel que tienen contenido y están en línea. También se incluyen los puntos de distribución y otras ubicaciones de origen de contenido de ese grupo de límites. Para obtener más información, vea [Content source priority](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#content-source-priority) (Prioridad de los orígenes de contenido).  
+- Otro cliente en el mismo grupo de límites solicita una ubicación de contenido al punto de administración. El servidor devuelve la lista de posibles orígenes de contenido. En esta lista se incluyen todos los orígenes de caché del mismo nivel que tienen contenido y están en línea. También se incluyen los puntos de distribución y otras ubicaciones de origen de contenido de ese grupo de límites. Para obtener más información, vea [Content source priority](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#content-source-priority) (Prioridad de los orígenes de contenido).  
 
- - Como es habitual, el cliente que busca el contenido selecciona un origen de la lista proporcionada. Después, el cliente intenta obtener el contenido.  
+- Como es habitual, el cliente que busca el contenido selecciona un origen de la lista proporcionada. Después, el cliente intenta obtener el contenido.  
 
 A partir de la versión 1806, los grupos de límites incluyen valores de configuración adicionales para ofrecerle mayor control sobre la distribución de contenido en su entorno. Para más información, vea [Opciones de grupo de límites para descargas del mismo nivel](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).<!--1356193-->
 
@@ -73,13 +73,13 @@ Solo se eligen los clientes más adecuados como orígenes de caché del mismo ni
 
 Un origen de caché del mismo nivel rechaza las solicitudes de contenido cuando cumple alguna de las condiciones siguientes en el momento en que un elemento del mismo nivel solicita contenido:  
 
-  -  Modo de batería baja  
+- Modo de batería baja  
 
-  -  La carga del procesador supera el 80 %  
+- La carga del procesador supera el 80 %  
 
-  -  E/S de disco tiene un valor *AvgDiskQueueLength* superior a 10  
+- E/S de disco tiene un valor *AvgDiskQueueLength* superior a 10  
 
-  -  No hay más conexiones disponibles para el equipo  
+- No hay más conexiones disponibles para el equipo  
 
 > [!Tip]  
 > Configure estas opciones mediante la clase WMI del servidor de configuración de cliente para la característica de origen del mismo nivel (*SMS_WinPEPeerCacheConfig*) en el SDK de Configuration Manager.  
@@ -98,14 +98,14 @@ Cuando el origen de caché del mismo nivel rechaza una solicitud del contenido, 
 
 - No se necesita una [cuenta de acceso a la red](/sccm/core/plan-design/hierarchy/accounts#network-access-account), con la siguiente excepción:  
 
-    - Una cuenta de acceso a la red se configura en el sitio cuando un cliente habilitado para la caché del mismo nivel ejecuta una secuencia de tareas desde el Centro de software, y se reinicia en una imagen de arranque. Cuando el dispositivo está en Windows PE, usa la cuenta de acceso a la red para obtener contenido del origen de caché del mismo nivel.  
+  - Una cuenta de acceso a la red se configura en el sitio cuando un cliente habilitado para la caché del mismo nivel ejecuta una secuencia de tareas desde el Centro de software, y se reinicia en una imagen de arranque. Cuando el dispositivo está en Windows PE, usa la cuenta de acceso a la red para obtener contenido del origen de caché del mismo nivel.  
 
-    - Cuando es necesario, el origen de caché del mismo nivel usa la cuenta de acceso a la red para autenticar las solicitudes de descarga de los elementos del mismo nivel. Esta cuenta solo requiere permisos de usuario de dominio para este propósito.  
+  - Cuando es necesario, el origen de caché del mismo nivel usa la cuenta de acceso a la red para autenticar las solicitudes de descarga de los elementos del mismo nivel. Esta cuenta solo requiere permisos de usuario de dominio para este propósito.  
 
 - Con la versión 1802 y anteriores, el último envío de detección de latidos del cliente determina el límite actual de un origen de contenido de caché del mismo nivel. Es posible que un cliente que se desplace a otro grupo de límites siga siendo miembro de su grupo de límites anterior a efectos de la caché del mismo nivel. Este comportamiento da lugar a que se le ofrezca al cliente un origen de caché del mismo nivel que no está en su ubicación de red inmediata. No habilite los clientes móviles como origen de caché del mismo nivel.<!--SCCMDocs issue 641-->  
 
-    > [!Important]  
-    > A partir de la versión 1806, Configuration Manager es más eficaz a la hora de determinar si un origen de caché del mismo nivel se ha movido a otra ubicación. Este comportamiento garantiza que el punto de administración lo ofrezca como un origen de contenido a los clientes en la nueva ubicación y no en la ubicación antigua. Si usa la característica de caché del mismo nivel con orígenes de caché del mismo nivel en itinerancia, después de actualizar el sitio a la versión 1806, actualice también todos los orígenes de caché del mismo nivel a la última versión de cliente. El punto de administración no incluye estos orígenes de caché del mismo nivel en la lista de ubicaciones de contenido hasta que se actualicen al menos a la versión 1806.<!--SCCMDocs issue 850-->  
+  > [!Important]  
+  > A partir de la versión 1806, Configuration Manager es más eficaz a la hora de determinar si un origen de caché del mismo nivel se ha movido a otra ubicación. Este comportamiento garantiza que el punto de administración lo ofrezca como un origen de contenido a los clientes en la nueva ubicación y no en la ubicación antigua. Si usa la característica de caché del mismo nivel con orígenes de caché del mismo nivel en itinerancia, después de actualizar el sitio a la versión 1806, actualice también todos los orígenes de caché del mismo nivel a la última versión de cliente. El punto de administración no incluye estos orígenes de caché del mismo nivel en la lista de ubicaciones de contenido hasta que se actualicen al menos a la versión 1806.<!--SCCMDocs issue 850-->  
 
 - Antes de intentar la descarga de contenido, el punto de administración valida en primer lugar si el origen de caché del mismo nivel está en línea.<!--sms.498675--> Esta validación se produce a través del "canal rápido" para la notificación de cliente, que usa el puerto TCP 10123.<!--511673-->  
 
@@ -187,11 +187,11 @@ La caché del mismo nivel se basa en la caché del cliente de Configuration Man
 - Si es necesario, durante una secuencia de tareas de implementación de sistema operativo, use la variable **SMSTSPreserveContent** para conservar el contenido en la caché del cliente. Para más información, vea [Task sequence variables](/sccm/osd/understand/task-sequence-variables#SMSTSPreserveContent) (Variables de secuencia de tareas).  
 
 - Si es necesario, al crear el software siguiente, use la opción **Conservar contenido en la memoria caché del cliente**:  
-    - Aplicaciones
-    - Paquetes
-    - Imágenes de SO
-    - Paquetes de actualización del sistema operativo
-    - Imágenes de arranque
+  - Aplicaciones
+  - Paquetes
+  - Imágenes de SO
+  - Paquetes de actualización del sistema operativo
+  - Imágenes de arranque
 
 
 

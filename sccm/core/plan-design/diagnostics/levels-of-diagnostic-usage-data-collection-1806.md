@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fa64134d16ea981001364aaba0a63dacfaf643a1
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 30f9143551bc5c8da971267f6b77801758e8d752
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67676881"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68338780"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1806"></a>Niveles de recopilación de datos de utilización para diagnóstico en la versión 1806
 
@@ -134,373 +134,373 @@ Para la versión 1806 de Configuration Manager, este nivel incluye los datos sig
 
 ### <a name="application-management"></a>Administración de aplicaciones  
 
-   - Requisitos de la aplicación: recuento de condiciones integradas a las que se hace referencia por la tecnología de implementación.
+- Requisitos de la aplicación: recuento de condiciones integradas a las que se hace referencia por la tecnología de implementación.
 
-   - Sustitución de aplicación, profundidad máxima de cadena
+- Sustitución de aplicación, profundidad máxima de cadena
 
-   - Estadísticas de aprobación de aplicaciones y frecuencia de uso
+- Estadísticas de aprobación de aplicaciones y frecuencia de uso
 
-   - Estadísticas de tamaño del contenido de la aplicación
+- Estadísticas de tamaño del contenido de la aplicación
 
-   - Información sobre la implementación de aplicaciones: uso de instalación o desinstalación, necesita aprobación, interacción del usuario habilitada o deshabilitada, dependencia, sustitución y recuento de uso de la característica de comportamiento de instalación.  
+- Información sobre la implementación de aplicaciones: uso de instalación o desinstalación, necesita aprobación, interacción del usuario habilitada o deshabilitada, dependencia, sustitución y recuento de uso de la característica de comportamiento de instalación.  
 
-   - Estadísticas de tamaño y la complejidad de directivas de aplicación
+- Estadísticas de tamaño y la complejidad de directivas de aplicación
 
-   - Estadísticas de solicitudes de aplicación disponibles
+- Estadísticas de solicitudes de aplicación disponibles
 
-   - Información de configuración básica para los paquetes y programas: opciones de implementación y marcas de programa.
+- Información de configuración básica para los paquetes y programas: opciones de implementación y marcas de programa.
 
-   - Información básica de uso o destino para tipos de implementación: usuario frente a dispositivo de destino, necesario frente a disponible y aplicaciones universales.
+- Información básica de uso o destino para tipos de implementación: usuario frente a dispositivo de destino, necesario frente a disponible y aplicaciones universales.
 
-   - Recuentos de entornos de App-V y propiedades de implementación
+- Recuentos de entornos de App-V y propiedades de implementación
 
-   - Recuento de aplicabilidad de aplicación por sistema operativo.  
+- Recuento de aplicabilidad de aplicación por sistema operativo.  
 
-   - Número de aplicaciones a las que la secuencia de tareas hace referencia
+- Número de aplicaciones a las que la secuencia de tareas hace referencia
 
-   - Recuento de personalizaciones de marca distintivas de catálogo de aplicaciones
+- Recuento de personalizaciones de marca distintivas de catálogo de aplicaciones
 
-   - Recuento de aplicaciones de Office 365 creadas con el panel
+- Recuento de aplicaciones de Office 365 creadas con el panel
 
-   - Número de paquetes por tipo  
+- Número de paquetes por tipo  
 
-   - Recuento de implementaciones de paquete o programa  
+- Recuento de implementaciones de paquete o programa  
 
-   - Recuento de licencias de aplicación con licencia de Windows 10  
+- Recuento de licencias de aplicación con licencia de Windows 10  
 
-   - Recuento de tipos de implementación de Windows Installer por configuración de contenido de desinstalación
+- Recuento de tipos de implementación de Windows Installer por configuración de contenido de desinstalación
 
-   - Recuento de las aplicaciones de Microsoft Store para Empresas y estadísticas de sincronización: tipos resumidos de aplicaciones, estado de la aplicación con licencia y número de aplicaciones con licencia en línea y sin conexión.  
+- Recuento de las aplicaciones de Microsoft Store para Empresas y estadísticas de sincronización: tipos resumidos de aplicaciones, estado de la aplicación con licencia y número de aplicaciones con licencia en línea y sin conexión.  
 
-   - Duración y el tipo de ventana de mantenimiento  
+- Duración y el tipo de ventana de mantenimiento  
 
-   - Número mínimo y máximo y promedio de implementaciones de aplicaciones por usuario o dispositivo por período de tiempo
+- Número mínimo y máximo y promedio de implementaciones de aplicaciones por usuario o dispositivo por período de tiempo
 
-   - Códigos de error de instalación de aplicación más comunes según la tecnología de implementación
+- Códigos de error de instalación de aplicación más comunes según la tecnología de implementación
 
-   - Recuentos y opciones de configuración de MSI
+- Recuentos y opciones de configuración de MSI
 
-   - Estadísticas sobre la interacción del usuario final con la notificación para las implementaciones de software necesario   
+- Estadísticas sobre la interacción del usuario final con la notificación para las implementaciones de software necesario   
 
-   - Uso del Acceso universal a datos, cómo se ha creado.
+- Uso del Acceso universal a datos, cómo se ha creado.
 
-   - Estadísticas acumuladas de afinidad entre usuario y dispositivo 
+- Estadísticas acumuladas de afinidad entre usuario y dispositivo 
 
-   - Número máximo y promedio de usuarios primarios por dispositivo  
+- Número máximo y promedio de usuarios primarios por dispositivo  
 
-   - ***[Nuevo]*** Utilización de la condición global de aplicación por tipo  
+- ***[Nuevo]*** Utilización de la condición global de aplicación por tipo  
 
-   - ***[Nuevo]*** Configuración de la personalización del Centro de software  
+- ***[Nuevo]*** Configuración de la personalización del Centro de software  
 
-   - ***[Nuevo]*** Preparación y recuentos del Administrador de conversión de paquetes  
+- ***[Nuevo]*** Preparación y recuentos del Administrador de conversión de paquetes  
 
-   - ***[Nuevo]*** Recuento de los métodos de detección de aplicación por tipo  
+- ***[Nuevo]*** Recuento de los métodos de detección de aplicación por tipo  
 
-   - ***[Nuevo]*** Recuento de errores de cumplimiento de la aplicación  
+- ***[Nuevo]*** Recuento de errores de cumplimiento de la aplicación  
 
-   - ***[Nuevo]*** Propiedades del instalador MSI 
+- ***[Nuevo]*** Propiedades del instalador MSI 
 
-   - ***[Nuevo]*** Estadísticas de solicitudes de instalación de usuarios
+- ***[Nuevo]*** Estadísticas de solicitudes de instalación de usuarios
 
 
 
 ### <a name="client"></a>Cliente  
 
-   - Versión de cliente de la Tecnología de administración activa (AMT)
+- Versión de cliente de la Tecnología de administración activa (AMT)
 
-   - Antigüedad del BIOS en años
+- Antigüedad del BIOS en años
 
-   - Recuento de dispositivos con Arranque seguro habilitado
+- Recuento de dispositivos con Arranque seguro habilitado
 
-   - Recuento de dispositivos por estado de TPM
+- Recuento de dispositivos por estado de TPM
 
-   - Actualización automática de cliente: la configuración de implementación incluido el piloto de cliente y el uso de exclusión (cliente de interoperabilidad extendida)
+- Actualización automática de cliente: la configuración de implementación incluido el piloto de cliente y el uso de exclusión (cliente de interoperabilidad extendida)
 
-   - Configuración del tamaño de la caché de cliente
+- Configuración del tamaño de la caché de cliente
 
-   - Errores de descarga de implementación de cliente
+- Errores de descarga de implementación de cliente
 
-   - ***[Actualizado]*** Resumen de problemas principales y estadísticas de estado de cliente por versión de cliente
+- ***[Actualizado]*** Resumen de problemas principales y estadísticas de estado de cliente por versión de cliente
 
-   - Estado de acción de operación de notificación de cliente: cantidad de ejecución de cada uno, número máximo de clientes de destino y tasa media de éxito.
+- Estado de acción de operación de notificación de cliente: cantidad de ejecución de cada uno, número máximo de clientes de destino y tasa media de éxito.
 
-   - Recuento de instalaciones de cliente de cada tipo de ubicación de origen  
+- Recuento de instalaciones de cliente de cada tipo de ubicación de origen  
 
-   - Recuento de errores de instalación de cliente  
+- Recuento de errores de instalación de cliente  
 
-   - Recuento de dispositivos virtualizados por Hyper-V o Azure  
+- Recuento de dispositivos virtualizados por Hyper-V o Azure  
 
-   - Acciones de recuento de Centro de Software   
+- Acciones de recuento de Centro de Software   
 
-   - Recuento de dispositivos habilitados para UEFI
+- Recuento de dispositivos habilitados para UEFI
 
-   - Métodos de implementación usados para el cliente y número de clientes por método de implementación
+- Métodos de implementación usados para el cliente y número de clientes por método de implementación
 
-   - Lista o recuento de agentes de cliente habilitados  
+- Lista o recuento de agentes de cliente habilitados  
 
-   - Antigüedad del SO en meses
+- Antigüedad del SO en meses
 
-   - Número de clases de inventario de hardware, reglas de inventario de software y reglas de recopilación de archivos
+- Número de clases de inventario de hardware, reglas de inventario de software y reglas de recopilación de archivos
 
-   - Estadísticas de atestación de estado de dispositivo: códigos de error más comunes, número de servidores locales y recuentos de dispositivos en varios estados.
+- Estadísticas de atestación de estado de dispositivo: códigos de error más comunes, número de servidores locales y recuentos de dispositivos en varios estados.
 
-   - Recuento de dispositivos por explorador predeterminado  
+- Recuento de dispositivos por explorador predeterminado  
 
-   - ***[Nuevo]*** Recuento de certificados de autenticación de servidor generados por Configuration Manager  
+- ***[Nuevo]*** Recuento de certificados de autenticación de servidor generados por Configuration Manager  
 
-   - ***[Nuevo]*** Recuento de dispositivos de Microsoft Surface por modelo  
+- ***[Nuevo]*** Recuento de dispositivos de Microsoft Surface por modelo  
 
 
 ### <a name="cloud-services"></a>Cloud Services  
 
-  - Estadísticas de detección de Azure Active Directory
+- Estadísticas de detección de Azure Active Directory
 
-  - Configuración y estadísticas de uso de Cloud Management Gateway: recuentos de regiones y entornos, y estadísticas de autenticación y autorización.
+- Configuración y estadísticas de uso de Cloud Management Gateway: recuentos de regiones y entornos, y estadísticas de autenticación y autorización.
 
-  - Recuento de servicios y aplicaciones de Azure Active Directory conectados a Configuration Manager
+- Recuento de servicios y aplicaciones de Azure Active Directory conectados a Configuration Manager
 
-  - Recuento de recopilaciones sincronizadas con Azure Log Analytics
+- Recuento de recopilaciones sincronizadas con Azure Log Analytics
 
-  - Recuento de conectores de Upgrade Analytics
+- Recuento de conectores de Upgrade Analytics
 
-  - Si el conector en la nube de Azure Log Analytics está habilitado  
+- Si el conector en la nube de Azure Log Analytics está habilitado  
 
-  - ***[Nuevo]*** Recuento de puntos de distribución de incorporación de cambios con un punto de distribución en la nube como ubicación de origen  
+- ***[Nuevo]*** Recuento de puntos de distribución de incorporación de cambios con un punto de distribución en la nube como ubicación de origen  
 
 
 ### <a name="co-management"></a>Administración conjunta  
-  - Estadísticas acumuladas de uso de la administración conjunta: número de clientes inscritos, clientes que reciben la directiva, estados de las cargas de trabajo, tamaños de las recopilaciones de piloto/exclusión y errores de inscripción.  
+- Estadísticas acumuladas de uso de la administración conjunta: número de clientes inscritos, clientes que reciben la directiva, estados de las cargas de trabajo, tamaños de las recopilaciones de piloto/exclusión y errores de inscripción.  
 
-  - Programación de inscripción y estadísticas históricas.  
+- Programación de inscripción y estadísticas históricas.  
 
-  - Recuento de clientes aptos para la administración conjunta.  
+- Recuento de clientes aptos para la administración conjunta.  
 
-  - Inquilino de Microsoft Intune asociado.
+- Inquilino de Microsoft Intune asociado.
 
 
 ### <a name="collections"></a>Recopilaciones  
 
-   - Uso de identificador de recopilación (que no se ejecuta sin los identificadores)
+- Uso de identificador de recopilación (que no se ejecuta sin los identificadores)
 
-   - Estadísticas de evaluación de la recopilación: tiempo de consulta, cantidades asignadas frente a cantidades sin asignar, recuentos por tipo, sustitución de identificador y uso de reglas.
+- Estadísticas de evaluación de la recopilación: tiempo de consulta, cantidades asignadas frente a cantidades sin asignar, recuentos por tipo, sustitución de identificador y uso de reglas.
 
-   - Recopilaciones sin una implementación
+- Recopilaciones sin una implementación
 
 
 ### <a name="compliance-settings"></a>Configuración de cumplimiento  
 
-  - Información básica de línea de base de configuración: recuento, número de implementaciones y número de referencias.
+- Información básica de línea de base de configuración: recuento, número de implementaciones y número de referencias.
 
-  - Estadísticas de error de directivas de cumplimiento
+- Estadísticas de error de directivas de cumplimiento
 
-  - Recuento de elementos de configuración por tipo o  
+- Recuento de elementos de configuración por tipo o  
 
-  - Recuento de implementaciones que hacen referencia a valores integrados, incluida la configuración de corrección.  
+- Recuento de implementaciones que hacen referencia a valores integrados, incluida la configuración de corrección.  
 
-  - Recuento de reglas e implementaciones creadas para la configuración personalizada, incluida la configuración de corrección.  
+- Recuento de reglas e implementaciones creadas para la configuración personalizada, incluida la configuración de corrección.  
 
-  - Recuento de plantillas de Protocolo de inscripción de certificados simple (SCEP), VPN, Wi-Fi, certificado (.pfx) y de directiva de cumplimiento implementadas.
+- Recuento de plantillas de Protocolo de inscripción de certificados simple (SCEP), VPN, Wi-Fi, certificado (.pfx) y de directiva de cumplimiento implementadas.
 
-  - Recuento de implementaciones de certificado SCEP, VPN, Wi-Fi, certificado (.pfx) y de directiva de cumplimiento por plataforma
+- Recuento de implementaciones de certificado SCEP, VPN, Wi-Fi, certificado (.pfx) y de directiva de cumplimiento por plataforma
 
-  - Directiva de Windows Hello para empresas (creada, implementada).  
+- Directiva de Windows Hello para empresas (creada, implementada).  
 
-  - ***[Nuevo]*** Recuento de directivas del explorador Microsoft Edge implementadas  
+- ***[Nuevo]*** Recuento de directivas del explorador Microsoft Edge implementadas  
 
 
 ### <a name="content"></a>Content  
 
-  - Estadísticas de grupo de límites: cuántas rápidas, cuántas lentas, recuento por grupo y relaciones de reserva
+- Estadísticas de grupo de límites: cuántas rápidas, cuántas lentas, recuento por grupo y relaciones de reserva
 
-  - Información de grupo de límites: recuento de límites y sistemas de sitio que se han asignado a cada grupo de límites.  
+- Información de grupo de límites: recuento de límites y sistemas de sitio que se han asignado a cada grupo de límites.  
 
-  - Relaciones de grupo de límites y configuración de reserva
+- Relaciones de grupo de límites y configuración de reserva
 
-  - Estadísticas de descarga del contenido de cliente
+- Estadísticas de descarga del contenido de cliente
 
-  - Recuento de límites por tipo  
+- Recuento de límites por tipo  
 
-  - Recuento de clientes de caché del mismo nivel, estadísticas de uso y estadísticas de descargas parciales
+- Recuento de clientes de caché del mismo nivel, estadísticas de uso y estadísticas de descargas parciales
 
-  - Información de configuración del administrador de distribuciones: subprocesos, intervalo de reintentos, número de reintentos y configuración del punto de distribución de extracción.  
+- Información de configuración del administrador de distribuciones: subprocesos, intervalo de reintentos, número de reintentos y configuración del punto de distribución de extracción.  
 
-  - Información de configuración del punto de distribución: uso de BranchCache y supervisión de punto de distribución.
+- Información de configuración del punto de distribución: uso de BranchCache y supervisión de punto de distribución.
 
-  - Información de grupo de puntos de distribución: recuento de paquetes y puntos de distribución que se han asignado a cada grupo de puntos de distribución.  
+- Información de grupo de puntos de distribución: recuento de paquetes y puntos de distribución que se han asignado a cada grupo de puntos de distribución.  
 
-  - ***[Nuevo]*** Tipo de biblioteca de contenido, ya sea local o remoto  
+- ***[Nuevo]*** Tipo de biblioteca de contenido, ya sea local o remoto  
 
 
 ### <a name="endpoint-protection"></a>Endpoint Protection  
 
-   - Directivas de Advanced Threat Protection (ATP) de Microsoft Defender, anteriormente conocido como ATP de Windows Defender: recuento de directivas y si estas están implementadas.
+- Directivas de Advanced Threat Protection (ATP) de Microsoft Defender, anteriormente conocido como ATP de Windows Defender: recuento de directivas y si estas están implementadas.
 
-   - Recuento de alertas que se han configurado para la característica de Endpoint Protection  
+- Recuento de alertas que se han configurado para la característica de Endpoint Protection  
 
-   - Recuento de recopilaciones que se han seleccionado para que aparezcan en el panel de Endpoint Protection  
+- Recuento de recopilaciones que se han seleccionado para que aparezcan en el panel de Endpoint Protection  
 
-   - Recuento de clientes de destino, implementaciones y directivas de Protección contra vulnerabilidades de seguridad de Windows Defender.
+- Recuento de clientes de destino, implementaciones y directivas de Protección contra vulnerabilidades de seguridad de Windows Defender.
 
-   - Errores de implementación de Endpoint Protection, recuento de códigos de error de implementación de directivas de Endpoint Protection.  
+- Errores de implementación de Endpoint Protection, recuento de códigos de error de implementación de directivas de Endpoint Protection.  
 
-   - Uso de la directiva de Firewall de Windows y de antimalware de Endpoint Protection (número de directivas únicas asignadas al grupo)<br /><br /> Estos datos no incluyen ninguna información sobre la configuración incluida en la directiva.  
+- Uso de la directiva de Firewall de Windows y de antimalware de Endpoint Protection (número de directivas únicas asignadas al grupo)<br /><br /> Estos datos no incluyen ninguna información sobre la configuración incluida en la directiva.  
 
 
 ### <a name="migration"></a>Migración  
 
-  - Recuento de objetos migrados (uso del Asistente para migración)
+- Recuento de objetos migrados (uso del Asistente para migración)
 
 
 ### <a name="mobile-device-management-mdm"></a>Administración de dispositivos móviles (MDM)  
 
-   - Recuento de acciones de dispositivo móvil: comandos bloquear, restablecer PIN, borrar, retirar y sincronizar ahora.
+- Recuento de acciones de dispositivo móvil: comandos bloquear, restablecer PIN, borrar, retirar y sincronizar ahora.
 
-   - Recuento de directivas de dispositivos móviles  
+- Recuento de directivas de dispositivos móviles  
 
-   - Recuento de dispositivos móviles que se administran por Configuration Manager y Microsoft Intune, así como la forma en que se inscribieron (masiva, basada en el usuario)  
+- Recuento de dispositivos móviles que se administran por Configuration Manager y Microsoft Intune, así como la forma en que se inscribieron (masiva, basada en el usuario)  
 
-   - Recuento de usuarios que tienen varios dispositivos móviles inscritos  
+- Recuento de usuarios que tienen varios dispositivos móviles inscritos  
 
-   - Duración de la comprobación de estadísticas y programación de sondeo de dispositivos móviles  
+- Duración de la comprobación de estadísticas y programación de sondeo de dispositivos móviles  
 
 
 ### <a name="microsoft-intune-troubleshooting"></a>Solución de problemas de Microsoft Intune  
 
-   - Recuento y tamaño de acciones de dispositivo (borrar, retirar, bloquear), datos de utilización y mensajes de datos que se replican en Microsoft Intune
+- Recuento y tamaño de acciones de dispositivo (borrar, retirar, bloquear), datos de utilización y mensajes de datos que se replican en Microsoft Intune
 
-   - Recuento y tamaño de los mensajes de estado, condición, inventario, RDR, DDR, UDX, estado de inquilino, POL, LOG, certificado, CRP, resincronización, CFD, RDO, BEX, ISM y de cumplimiento que se han descargado de Microsoft Intune
+- Recuento y tamaño de los mensajes de estado, condición, inventario, RDR, DDR, UDX, estado de inquilino, POL, LOG, certificado, CRP, resincronización, CFD, RDO, BEX, ISM y de cumplimiento que se han descargado de Microsoft Intune
 
-   - Estadísticas de sincronización de usuario completas y diferenciales para Microsoft Intune
+- Estadísticas de sincronización de usuario completas y diferenciales para Microsoft Intune
 
 
 ### <a name="on-premises-mobile-device-management-mdm"></a>Administración local de dispositivos móviles (MDM)  
 
-   - Recuento de perfiles y paquetes de inscripción masiva de Windows 10  
+- Recuento de perfiles y paquetes de inscripción masiva de Windows 10  
 
-   - Estadísticas de implementaciones correctas o con errores para las implementaciones locales de aplicaciones MDM  
+- Estadísticas de implementaciones correctas o con errores para las implementaciones locales de aplicaciones MDM  
 
 
 ### <a name="os-deployment"></a>Implementación del sistema operativo  
 
-   - Recuento de imágenes de arranque, controladores, paquetes de controladores, puntos de distribución habilitados para multidifusión, puntos de distribución habilitados para PXE y secuencias de tareas  
+- Recuento de imágenes de arranque, controladores, paquetes de controladores, puntos de distribución habilitados para multidifusión, puntos de distribución habilitados para PXE y secuencias de tareas  
 
-   - Recuento de clientes de Configuration Manager por versiones de cliente
+- Recuento de clientes de Configuration Manager por versiones de cliente
 
-   - Recuento de imágenes de arranque por versión de Windows PE
+- Recuento de imágenes de arranque por versión de Windows PE
 
-   - Recuento de directivas de actualización de edición
+- Recuento de directivas de actualización de edición
 
-   - Recuento de identificadores de hardware que se excluyen del entorno PXE
+- Recuento de identificadores de hardware que se excluyen del entorno PXE
 
-   - Recuento de implementación de sistema operativo por versión de SO
+- Recuento de implementación de sistema operativo por versión de SO
 
-   - Recuento de actualizaciones del sistema operativo en el tiempo
+- Recuento de actualizaciones del sistema operativo en el tiempo
 
-   - Recuento de implementaciones de secuencias de tareas que usan la opción para descargar contenido previamente
+- Recuento de implementaciones de secuencias de tareas que usan la opción para descargar contenido previamente
 
-   - Recuentos de uso de paso de secuencia de tareas
+- Recuentos de uso de paso de secuencia de tareas
 
-   - Versión de Windows ADK instalada  
+- Versión de Windows ADK instalada  
 
-   - ***[Nuevo]*** Recuento de tareas de mantenimiento de imágenes  
+- ***[Nuevo]*** Recuento de tareas de mantenimiento de imágenes  
 
 
 ### <a name="site-updates"></a>Actualizaciones de sitios  
 
-   - Versiones de revisiones instaladas de Configuration Manager
+- Versiones de revisiones instaladas de Configuration Manager
 
 
 ### <a name="software-updates"></a>Actualizaciones de software  
 
-   - Diferencias disponibles y de fecha límite que se han usado en reglas de implementación automática  
+- Diferencias disponibles y de fecha límite que se han usado en reglas de implementación automática  
 
-   - Número promedio y máximo de las asignaciones por actualización  
+- Número promedio y máximo de las asignaciones por actualización  
 
-   - Evaluación de actualizaciones de cliente y programaciones de búsquedas  
+- Evaluación de actualizaciones de cliente y programaciones de búsquedas  
 
-   - Clasificaciones que se sincronizan por punto de actualización de software
+- Clasificaciones que se sincronizan por punto de actualización de software
 
-   - Estadísticas de aplicación de revisiones de clúster  
+- Estadísticas de aplicación de revisiones de clúster  
 
-   - Configuración de las actualizaciones rápidas de Windows 10
+- Configuración de las actualizaciones rápidas de Windows 10
 
-   - Configuraciones que se usan para planes de mantenimiento activos de Windows 10  
+- Configuraciones que se usan para planes de mantenimiento activos de Windows 10  
 
-   - Recuento de actualizaciones implementadas de Office 365  
+- Recuento de actualizaciones implementadas de Office 365  
 
-   - Recuento de controladores de Microsoft Surface sincronizados
+- Recuento de controladores de Microsoft Surface sincronizados
 
-   - Recuento de grupos de actualizaciones y asignaciones  
+- Recuento de grupos de actualizaciones y asignaciones  
 
-   - Recuento de paquetes de actualización y el número mínimo, máximo y promedio de puntos de distribución de destino con paquetes  
+- Recuento de paquetes de actualización y el número mínimo, máximo y promedio de puntos de distribución de destino con paquetes  
 
-   - Recuento de actualizaciones que se crean e implementan con System Center Updates Publisher  
+- Recuento de actualizaciones que se crean e implementan con System Center Updates Publisher  
 
-   - Recuento de directivas de Windows Update para empresas creadas e implementadas
+- Recuento de directivas de Windows Update para empresas creadas e implementadas
 
-   - Estadísticas acumuladas de configuraciones de Windows Update para empresas
+- Estadísticas acumuladas de configuraciones de Windows Update para empresas
 
-   - Número de reglas de implementación automática que están asociadas a la sincronización  
+- Número de reglas de implementación automática que están asociadas a la sincronización  
 
-   - Número de reglas de implementación automática que crean actualizaciones nuevas o agregan otras a un grupo existente  
+- Número de reglas de implementación automática que crean actualizaciones nuevas o agregan otras a un grupo existente  
 
-   - Número de reglas de implementación automática que tienen varias implementaciones  
+- Número de reglas de implementación automática que tienen varias implementaciones  
 
-   - Número de grupos de actualizaciones y número mínimo, máximo y promedio de actualizaciones por grupo  
+- Número de grupos de actualizaciones y número mínimo, máximo y promedio de actualizaciones por grupo  
 
-   - Número de actualizaciones y porcentaje de las actualizaciones que se han implementado, caducado, sustituido, descargado y que contienen términos de licencia  
+- Número de actualizaciones y porcentaje de las actualizaciones que se han implementado, caducado, sustituido, descargado y que contienen términos de licencia  
 
-   - Estadísticas de equilibrio de carga de punto de actualización de software
+- Estadísticas de equilibrio de carga de punto de actualización de software
 
-   - Programación de la sincronización del punto de actualización de software  
+- Programación de la sincronización del punto de actualización de software  
 
-   - Número total o promedio de recopilaciones que tienen implementaciones de actualización de software y el número máximo o promedio de actualizaciones implementadas  
+- Número total o promedio de recopilaciones que tienen implementaciones de actualización de software y el número máximo o promedio de actualizaciones implementadas  
 
-   - Códigos de error de búsqueda de actualizaciones y recuento de máquinas  
+- Códigos de error de búsqueda de actualizaciones y recuento de máquinas  
 
-   - Versiones de contenido del panel de Windows 10  
+- Versiones de contenido del panel de Windows 10  
 
-   - ***[Nuevo]*** Recuento de suscripciones a catálogo de actualizaciones de software de terceros y utilización  
+- ***[Nuevo]*** Recuento de suscripciones a catálogo de actualizaciones de software de terceros y utilización  
 
-   - ***[Nuevo]*** Recuento de actualizaciones de software implementadas con y sin contenido  
+- ***[Nuevo]*** Recuento de actualizaciones de software implementadas con y sin contenido  
 
 
 ### <a name="sqlperformance-data"></a>Datos de SQL o de rendimiento  
 
-   - Configuración y duración del resumen de sitio
+- Configuración y duración del resumen de sitio
 
-   - Recuento de tablas de base de datos más grandes  
+- Recuento de tablas de base de datos más grandes  
 
-   - Estadísticas operativas de detección (recuento de objetos detectados)
+- Estadísticas operativas de detección (recuento de objetos detectados)
 
-   - Tipos de detección, habilitados y programación (completa, incremental)
+- Tipos de detección, habilitados y programación (completa, incremental)
 
-   - Estado de mantenimiento, uso e información de réplica de SQL AlwaysOn
+- Estado de mantenimiento, uso e información de réplica de SQL AlwaysOn
 
-   - Problemas de rendimiento del seguimiento de cambios de SQL, período de retención y estado de limpieza automática
+- Problemas de rendimiento del seguimiento de cambios de SQL, período de retención y estado de limpieza automática
 
-   - Período de retención de seguimiento de cambios de SQL
+- Período de retención de seguimiento de cambios de SQL
 
-   - Estado y estadísticas de rendimiento de mensajes de estado, incluidos los tipos de mensajes más caros y más comunes
+- Estado y estadísticas de rendimiento de mensajes de estado, incluidos los tipos de mensajes más caros y más comunes
 
 
 ### <a name="miscellaneous"></a>Varios  
 
-   - Configuración del punto de servicio de almacenamiento de datos, incluidos la programación de sincronización y el tiempo promedio
+- Configuración del punto de servicio de almacenamiento de datos, incluidos la programación de sincronización y el tiempo promedio
 
-   - Recuento de scripts y estadísticas de ejecución
+- Recuento de scripts y estadísticas de ejecución
 
-   - Recuento de sitios con Wake On Lan (WOL)
+- Recuento de sitios con Wake On Lan (WOL)
 
-   - Informes de uso y estadísticas de rendimiento
-  
-   - Estadísticas de utilización de implementaciones por fases  
+- Informes de uso y estadísticas de rendimiento
 
-   - ***[Nuevo]*** Estadísticas de utilización de CMPivot  
+- Estadísticas de utilización de implementaciones por fases  
 
-   - ***[Nuevo]*** Recuentos de elementos de conclusiones de administración y progreso  
+- ***[Nuevo]*** Estadísticas de utilización de CMPivot  
 
-   - ***[Nuevo]*** Recuento de bloqueos de los procesos únicos que no son de Configuration Manager en el servidor de sitio y, si está disponible, el identificador de firma digital de Watson
+- ***[Nuevo]*** Recuentos de elementos de conclusiones de administración y progreso  
+
+- ***[Nuevo]*** Recuento de bloqueos de los procesos únicos que no son de Configuration Manager en el servidor de sitio y, si está disponible, el identificador de firma digital de Watson
 
 
 

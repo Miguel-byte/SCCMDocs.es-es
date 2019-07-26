@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 424710431f9c17642b3a8c6190f8919665f3ac6c
-ms.sourcegitcommit: 20bbb870baf624c7809d3972f2d09a8d2df79cda
+ms.openlocfilehash: 7d27baa691c3adca6dd859b79fc92bdd4fe539ab
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67623281"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339913"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-system-center-configuration-manager"></a>Funcionalidades de Technical Preview 1806 para System Center Configuration Manager
 
@@ -258,15 +258,15 @@ Esta versión incluye las mejoras siguientes en Cloud Management Gateway (CMG):
 Al instalar el cliente de Configuration Manager en Internet a través de una CMG, ahora son necesarias menos propiedades de línea de comandos. Para obtener más información sobre un ejemplo de este escenario, vea el [Línea de comandos para instalar el cliente de Configuration Manager](/sccm/comanage/how-to-prepare-Win10#install-the-configuration-manager-client) cuando se prepare para la administración conjunta. 
 
 Las siguientes propiedades de línea de comandos son necesarias en todos los escenarios:
-  - CCMHOSTNAME  
-  - SMSSITECODE  
+- CCMHOSTNAME  
+- SMSSITECODE  
 
 Las propiedades siguientes son necesarias al usar Azure AD para la autenticación de cliente en lugar de certificados de autenticación de cliente basada en PKI:
-  - AADCLIENTAPPID  
-  - AADRESOURCEURI  
+- AADCLIENTAPPID  
+- AADRESOURCEURI  
 
 La siguiente propiedad es obligatoria si el cliente volverá a la intranet:
-  - SMSMP  
+- SMSMP  
 
 En el ejemplo siguiente se incluyen todas las propiedades anteriores:   
 `ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com`

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8560c34f1db76afcfe2e65eeaf8311b0a58cc926
-ms.sourcegitcommit: 20bbb870baf624c7809d3972f2d09a8d2df79cda
+ms.openlocfilehash: 4e260f26295a27c91a69cad563eaec2395b00a5c
+ms.sourcegitcommit: e0438c191df945305625ae91596c9417d16e8510
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67623455"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68491691"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Novedades de la versión 1806 de la rama actual de Configuration Manager
 
@@ -328,7 +328,8 @@ Para más información, vea [Administrador de conversión de paquetes](/sccm/app
 Esta versión incluye las siguientes mejoras en las implementaciones por fases:  
 
 #### <a name="create-a-phased-deployment-with-manually-configured-phases"></a>Creación de una implementación por fases con fases configuradas manualmente
-<!--1358148--> En una secuencia de tareas, ahora puede configurar las fases manualmente cuando cree una implementación por fases. Agregue un máximo de diez fases adicionales desde la pestaña **Fases** del asistente Crear una implementación por fases. Puede seguir creando automáticamente una implementación predeterminada de dos fases. 
+<!--1358148-->
+En una secuencia de tareas, ahora puede configurar las fases manualmente cuando cree una implementación por fases. Agregue un máximo de diez fases adicionales desde la pestaña **Fases** del asistente Crear una implementación por fases. Puede seguir creando automáticamente una implementación predeterminada de dos fases. 
 
 Para obtener más información, vea [Creación de implementaciones por fases para una secuencia de tareas](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence#bkmk_manual).
 
@@ -404,11 +405,11 @@ Para obtener más información, vea [Secuencias de tareas y la cuenta de acceso 
  Para obtener más información, consulte [Actualizar el sistema operativo](/sccm/osd/understand/task-sequence-steps#BKMK_UpgradeOS).
 
 #### <a name="revised-documentation-for-task-sequence-variables"></a>Documentación revisada sobre las variables de secuencia de tareas
- Ahora hay dos nuevos artículos disponibles para comprender las variables de secuencia de tareas:  
+Ahora hay dos nuevos artículos disponibles para comprender las variables de secuencia de tareas:  
 
- - [Uso de variables de secuencias de tareas](/sccm/osd/understand/using-task-sequence-variables) es un nuevo artículo que describe los diferentes tipos de variables, métodos para establecer las variables y cómo acceder a ellos.  
+- [Uso de variables de secuencias de tareas](/sccm/osd/understand/using-task-sequence-variables) es un nuevo artículo que describe los diferentes tipos de variables, métodos para establecer las variables y cómo acceder a ellos.  
 
- - [Variables de secuencia de tareas](/sccm/osd/understand/task-sequence-variables) es una referencia para todas las variables de secuencia de tareas disponibles. Este artículo se combina con los artículos anteriores, que separó las variables integradas de las variables de acción. 
+- [Variables de secuencia de tareas](/sccm/osd/understand/task-sequence-variables) es una referencia para todas las variables de secuencia de tareas disponibles. Este artículo se combina con los artículos anteriores, que separó las variables integradas de las variables de acción. 
 
 
 
@@ -607,9 +608,9 @@ Cuando esté listo para instalar esta versión, vea [Instalación de actualizaci
 > [!TIP]  
 > Para instalar un sitio nuevo, use una versión de línea de base de Configuration Manager.  
 >
->  Más información acerca de:    
->   - [Instalación de nuevos sitios](/sccm/core/servers/deploy/install/installing-sites)  
->   - [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#bkmk_Baselines)
+> Más información acerca de:    
+> - [Instalación de nuevos sitios](/sccm/core/servers/deploy/install/installing-sites)  
+> - [Versiones de línea de base y versiones de actualización](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 Para saber los problemas conocidos e importantes, vea las [Notas de la versión](/sccm/core/servers/deploy/install/release-notes).
 

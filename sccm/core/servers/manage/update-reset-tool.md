@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec78a903bd3fa897a240ea04ca7f14349f9a0acd
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: d6366e4a92be6aea0441adf6c81c8c8416b05f33
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500972"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68337982"
 ---
 # <a name="update-reset-tool"></a>Herramienta de restablecimiento de actualizaciones
 
@@ -33,9 +33,9 @@ Al ejecutar la herramienta, esta se ejecuta con la actualización que especifiqu
 
 ### <a name="prerequisites"></a>Requisitos previos
 La cuenta que utilice para ejecutar la herramienta requiere los permisos siguientes:
--   Permisos de **lectura** y **escritura** para la base de datos de sitio del sitio de administración central y para cada sitio primario de la jerarquía. Para establecer estos permisos, puede agregar la cuenta de usuario como miembro de los [roles fijos de base de datos](/sql/relational-databases/security/authentication-access/database-level-roles#fixed-database-roles) **db_datawriter** y **db_datareader** en la base de datos de Configuration Manager de cada sitio. La herramienta no interactúa con los sitios secundarios.
--   **Administrador local** en el sitio de primer nivel de la jerarquía.
--   **Administrador local** en el equipo que hospeda el punto de conexión de servicio.
+- Permisos de **lectura** y **escritura** para la base de datos de sitio del sitio de administración central y para cada sitio primario de la jerarquía. Para establecer estos permisos, puede agregar la cuenta de usuario como miembro de los [roles fijos de base de datos](/sql/relational-databases/security/authentication-access/database-level-roles#fixed-database-roles) **db_datawriter** y **db_datareader** en la base de datos de Configuration Manager de cada sitio. La herramienta no interactúa con los sitios secundarios.
+- **Administrador local** en el sitio de primer nivel de la jerarquía.
+- **Administrador local** en el equipo que hospeda el punto de conexión de servicio.
 
 Necesita el GUID del paquete de actualización que desea restablecer. Para obtenerlo:
   1.   En la consola, vaya a **Administración** > **Actualizaciones y mantenimiento**.
@@ -49,17 +49,17 @@ Necesita el GUID del paquete de actualización que desea restablecer. Para obten
 La herramienta se debe ejecutar en el sitio de primer nivel de la jerarquía.
 
 Al ejecutar la herramienta, utilice parámetros de línea de comandos para especificar:
-  -   El servidor SQL Server en el sitio de nivel superior de la jerarquía.
-  -   El nombre de la base de datos del sitio en el sitio de nivel superior.
-  -   El GUID del paquete de actualización que desea restablecer.
+- El servidor SQL Server en el sitio de nivel superior de la jerarquía.
+- El nombre de la base de datos del sitio en el sitio de nivel superior.
+- El GUID del paquete de actualización que desea restablecer.
 
 En función del estado de la actualización, la herramienta identifica servidores adicionales a los que necesita acceder.   
 
 Si el paquete de actualización está en un estado *posterior a la descarga*, la herramienta no limpiará el paquete. En ese caso, tiene la opción de exigir la eliminación de una actualización descargada correctamente mediante el parámetro correspondiente (vea los parámetros de la línea de comandos que se tratan más adelante en este mismo tema).
 
 Después de ejecutar la herramienta:
--   Si se eliminó un paquete, reinicie el servicio SMS_Executive en el sitio de nivel superior. A continuación, compruebe si hay actualizaciones, para poder descargar el paquete de nuevo.
--   Si no se eliminó un paquete, no es necesario realizar ninguna acción. La actualización se reinicia y luego reinicia la replicación o instalación.
+- Si se eliminó un paquete, reinicie el servicio SMS_Executive en el sitio de nivel superior. A continuación, compruebe si hay actualizaciones, para poder descargar el paquete de nuevo.
+- Si no se eliminó un paquete, no es necesario realizar ninguna acción. La actualización se reinicia y luego reinicia la replicación o instalación.
 
 **Parámetros de línea de comandos:**  
 
@@ -72,7 +72,7 @@ Después de ejecutar la herramienta:
 |           **-I &lt;nombre de instancia de SQL Server>**           |                    *Opcional* <br> Identifique la instancia de SQL Server que hospeda la base de datos de sitio.                     |
 |                       **-FDELETE**                       |                       *Opcional* <br> Exija la eliminación de un paquete de actualización descargado correctamente.                        |
 
- **Ejemplos:**  
- En un escenario habitual, querrá restablecer una actualización que tenga problemas de descarga. El nombre de dominio completo de los servidores de SQL Server es *server1.fabrikam.com*, la base de datos de sitio es *CM_XYZ* y el GUID del paquete es *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  Ejecute lo siguiente: ***CMUpdateReset.exe -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
+**Ejemplos:**  
+En un escenario habitual, querrá restablecer una actualización que tenga problemas de descarga. El nombre de dominio completo de los servidores de SQL Server es *server1.fabrikam.com*, la base de datos de sitio es *CM_XYZ* y el GUID del paquete es *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  Ejecute lo siguiente: ***CMUpdateReset.exe -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
 
- En un escenario más extremo, quizá desee forzar la eliminación del paquete de actualización problemático. El nombre de dominio completo de los servidores de SQL Server es *server1.fabrikam.com*, la base de datos de sitio es *CM_XYZ* y el GUID del paquete es *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  Ejecute lo siguiente: ***CMUpdateReset.exe  -FDELETE -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
+En un escenario más extremo, quizá desee forzar la eliminación del paquete de actualización problemático. El nombre de dominio completo de los servidores de SQL Server es *server1.fabrikam.com*, la base de datos de sitio es *CM_XYZ* y el GUID del paquete es *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  Ejecute lo siguiente: ***CMUpdateReset.exe  -FDELETE -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***

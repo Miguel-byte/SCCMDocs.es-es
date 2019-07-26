@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e767d46c81e3942efb44d9d94ba7f66ecd1f5281
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.openlocfilehash: be9fd76105685a283931bc298e534a6a8f6683d8
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65083118"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340266"
 ---
 # <a name="find-help-for-using-configuration-manager"></a>Buscar ayuda para usar Configuration Manager
 
@@ -52,11 +52,11 @@ Para obtener sugerencias sobre cómo buscar, proporcionar comentarios y obtener 
 
 A partir de la versión 1806 de Configuration Manager, puede enviar comentarios sobre el producto directamente desde la consola. Si tiene que adjuntar registros, use [Concentrador de comentarios](#BKMK_FeedbackHub). Puede hacer lo siguiente: <!--1357542-->
 
-  - **Enviar una sonrisa**: envíe comentarios sobre lo que le ha gustado.
-  - **Enviar una desaprobación**: envíe comentarios sobre lo que no le ha gustado.
-  - **Enviar una sugerencia**: se abre el [Sitio web de UserVoice](https://configurationmanager.uservoice.com/) para que pueda compartir su idea.
+- **Enviar una sonrisa**: envíe comentarios sobre lo que le ha gustado.
+- **Enviar una desaprobación**: envíe comentarios sobre lo que no le ha gustado.
+- **Enviar una sugerencia**: se abre el [Sitio web de UserVoice](https://configurationmanager.uservoice.com/) para que pueda compartir su idea.
 
-    ![Enviar comentarios en Configuration Manager 1806](media/1806-send-a-smile.png)
+  ![Enviar comentarios en Configuration Manager 1806](media/1806-send-a-smile.png)
 
 
 ### <a name="send-a-smile"></a>Enviar una sonrisa
@@ -98,13 +98,13 @@ Cuando **envía una sugerencia**, se le redirige a [UserVoice](https://configura
 ### <a name="information-sent-with-feedback"></a>Información enviada con comentarios
 
 Cuando **envíe una sonrisa** o **envíe una desaprobación**, se incluirá la información siguiente con los comentarios:
- 
-   - Información de compilación del sistema operativo
-   - Id. de jerarquía de Configuration Manager
-   - Información de compilación del producto
-   - Información de idioma
-   - Identificador de dispositivo 
-       - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQMClient:MachineId
+
+- Información de compilación del sistema operativo
+- Id. de jerarquía de Configuration Manager
+- Información de compilación del producto
+- Información de idioma
+- Identificador de dispositivo 
+    - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQMClient:MachineId
 
 
 
@@ -141,10 +141,10 @@ A partir de la versión 1902, al enviar comentarios a través de la consola de 
 ##  <a name="BKMK_FeedbackHub"></a> Comentarios sobre el producto para la versión 1802 y anteriores
 
 Notifique los posibles defectos del producto a través de la [aplicación Centro de opiniones](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app) integrada en Windows 10. Cuando **agregue nuevos comentarios**, no olvide seleccionar la categoría **Enterprise Management** y, después, elija una de las subcategorías siguientes:
- - Cliente de Configuration Manager
- - Consola de Configuration Manager
- - Implementación del sistema operativo de Configuration Manager
- - Servidor de Configuration Manager
+- Cliente de Configuration Manager
+- Consola de Configuration Manager
+- Implementación del sistema operativo de Configuration Manager
+- Servidor de Configuration Manager
 
 Siga usando la [página de UserVoice](https://configurationmanager.uservoice.com/) para votar por nuevas ideas de características en Configuration Manager. El equipo de producto de Configuration Manager usa los siguientes valores de estado en UserVoice:
 

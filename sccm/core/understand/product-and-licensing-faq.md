@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 01fa13c907b451a3539ca8169c3a04ebbaa1b92c
-ms.sourcegitcommit: d47d2f03482e48d343e2139a341e61022331e6c2
+ms.openlocfilehash: 7c0975c2b8dcf945464273930073ebf370bd4c32
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67145774"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340154"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Preguntas más frecuentes sobre las licencias y ramas de Configuration Manager
 
@@ -44,13 +44,13 @@ Tanto **Software Assurance** (SA) como **Licencia y Software Assurance** (L&SA) 
 
 - **Software Assurance (SA)** : los clientes necesitan tener SA activo en las licencias de Configuration Manager, o derechos de suscripción equivalentes, para instalar y usar la opción de rama actual de Configuration Manager.    
 
-    - Aunque SA es opcional para algunos productos de Microsoft, la única manera de obtener derechos para usar la rama actual de Configuration Manager es con SA *(o derechos de suscripción equivalentes)* . Para más información, consulte [Preguntas más frecuentes sobre Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/FAQ-Software-Assurance.aspx).<!--this link doesn't work without some language code-->
+  - Aunque SA es opcional para algunos productos de Microsoft, la única manera de obtener derechos para usar la rama actual de Configuration Manager es con SA *(o derechos de suscripción equivalentes)* . Para más información, consulte [Preguntas más frecuentes sobre Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/FAQ-Software-Assurance.aspx).<!--this link doesn't work without some language code-->
 
 - **Licencia y Software Assurance (L&SA) de Microsoft:** Los clientes que compran licencias nuevas para Configuration Manager necesitan comprar L&SA (la licencia y la cobertura de SA).   
 
-    - SA concede derechos para usar la rama actual.
+  - SA concede derechos para usar la rama actual.
 
-    - Si el SA expira y todavía tiene una licencia de Configuration Manager, ya no podrá usar la rama actual. Para obtener más información, vea la pregunta [Si mi SA expira y tenía L&SA, ¿qué obtengo?](#bkmk_sa-expires)
+  - Si el SA expira y todavía tiene una licencia de Configuration Manager, ya no podrá usar la rama actual. Para obtener más información, vea la pregunta [Si mi SA expira y tenía L&SA, ¿qué obtengo?](#bkmk_sa-expires)
 
 Para más información sobre las ofertas de licencias, consulte [Opciones de compra](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs)<!--this link doesn't work without some language code--> y los [términos del programa de licencias](http://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=64).  
 
@@ -104,12 +104,12 @@ Si *SA* o su suscripción está activa, tiene derechos de uso de la rama actual 
 Todos los productos de System Center incluyen la tecnología de SQL Server. Los términos de licencia de Microsoft para estos productos permiten al cliente utilizar la tecnología SQL Server solo para admitir componentes de System Center. No se requieren licencias de acceso de cliente SQL Server para ese uso. 
  
 Los derechos de uso aprobados para las funcionalidades de SQL con Configuration Manager incluyen:
- - Rol de base de datos de sitio
- - Windows Server Update Services (WSUS) para el rol de punto de actualización de software
- - SQL Server Reporting Services (SSRS) para el rol de punto de informes
- - Rol de punto de servicio de almacenamiento de datos
- - Réplicas de bases de datos para roles de puntos de administración
- - SQL Server Always On 
+- Rol de base de datos de sitio
+- Windows Server Update Services (WSUS) para el rol de punto de actualización de software
+- SQL Server Reporting Services (SSRS) para el rol de punto de informes
+- Rol de punto de servicio de almacenamiento de datos
+- Réplicas de bases de datos para roles de puntos de administración
+- SQL Server Always On 
 
 La licencia de SQL Server que se incluye con Configuration Manager es compatible con cada instancia de SQL Server que instale para hospedar una base de datos para Configuration Manager. Sin embargo, solo las bases de datos para Configuration Manager de la lista anterior pueden ejecutarse en ese servidor SQL Server cuando se utiliza esta licencia. Si una base de datos de cualquier producto adicional de Microsoft o de terceros comparte la instancia de SQL Server, debe tener una licencia independiente para esa instancia de SQL Server. 
  <!-- sms500967 -->

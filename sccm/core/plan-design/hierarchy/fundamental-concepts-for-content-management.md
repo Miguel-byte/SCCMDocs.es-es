@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e4585d21b06bbfaa659fe09693af8cff109a1b6
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 4aeaea590823cecfe3bec867bb53777e2770cb92
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67676814"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68338651"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Aspectos básicos de la administración de contenido en Configuration Manager
 
@@ -51,22 +51,22 @@ Para obtener más información, vea [Cuenta de acceso de paquetes](/sccm/core/pl
 
 
 ## <a name="bandwidth-throttling-and-scheduling"></a>Programación y límite de ancho de banda  
- La programación y el límite son opciones que le ayudan a controlar cuándo se distribuye el contenido de un servidor de sitio en puntos de distribución. Estas funciones son similares a los controles de ancho de banda para la replicación basada en archivos de sitio a sitio, aunque no están directamente relacionadas.  
+La programación y el límite son opciones que le ayudan a controlar cuándo se distribuye el contenido de un servidor de sitio en puntos de distribución. Estas funciones son similares a los controles de ancho de banda para la replicación basada en archivos de sitio a sitio, aunque no están directamente relacionadas.  
 
- Para obtener más información, consulte [Administración del ancho de banda de red](/sccm/core/plan-design/hierarchy/manage-network-bandwidth).
+Para obtener más información, consulte [Administración del ancho de banda de red](/sccm/core/plan-design/hierarchy/manage-network-bandwidth).
 
 
 
 ## <a name="binary-differential-replication"></a>Replicación diferencial binaria  
- La replicación diferencial binaria (BDR) a veces se conoce como replicación diferencial. Se usa para distribuir actualizaciones del contenido que se ha implementado previamente en otros sitios o en puntos de distribución remotos. Para admitir la reducción de uso de ancho de banda de BDR, instale la característica **Compresión diferencial remota** en los puntos de distribución. Para más información, vea [Requisitos previos de puntos de distribución](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012dppreq).
+La replicación diferencial binaria (BDR) a veces se conoce como replicación diferencial. Se usa para distribuir actualizaciones del contenido que se ha implementado previamente en otros sitios o en puntos de distribución remotos. Para admitir la reducción de uso de ancho de banda de BDR, instale la característica **Compresión diferencial remota** en los puntos de distribución. Para más información, vea [Requisitos previos de puntos de distribución](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012dppreq).
 
- La BDR minimiza el ancho de banda de red que se usa para enviar actualizaciones de contenido distribuido. Solo se vuelve a enviar el contenido nuevo o que ha cambiado en lugar del conjunto completo de archivos de origen de contenido cada vez que se cambian esos archivos.  
+La BDR minimiza el ancho de banda de red que se usa para enviar actualizaciones de contenido distribuido. Solo se vuelve a enviar el contenido nuevo o que ha cambiado en lugar del conjunto completo de archivos de origen de contenido cada vez que se cambian esos archivos.  
 
- Cuando se usa la BDR, Configuration Manager identifica los cambios que se producen en los archivos de origen de cada conjunto de contenido distribuido anteriormente.  
+Cuando se usa la BDR, Configuration Manager identifica los cambios que se producen en los archivos de origen de cada conjunto de contenido distribuido anteriormente.  
 
--   Cuando cambian los archivos del contenido de origen, el sitio crea una versión incremental del contenido. Después, solamente replica los archivos que han cambiado en los sitios de destino y puntos de distribución. Se considera que un archivo ha cambiado cuando se ha cambiado el nombre, se ha movido o se ha modificado su contenido. Por ejemplo, si se sustituye un solo archivo de controlador de un paquete de controladores distribuido anteriormente a varios sitios, solo se replica el archivo de controlador cambiado.  
+- Cuando cambian los archivos del contenido de origen, el sitio crea una versión incremental del contenido. Después, solamente replica los archivos que han cambiado en los sitios de destino y puntos de distribución. Se considera que un archivo ha cambiado cuando se ha cambiado el nombre, se ha movido o se ha modificado su contenido. Por ejemplo, si se sustituye un solo archivo de controlador de un paquete de controladores distribuido anteriormente a varios sitios, solo se replica el archivo de controlador cambiado.  
 
--   Configuration Manager admite hasta cinco versiones incrementales de un conjunto de contenido antes de volver a enviar todo el conjunto de contenido. Después de la quinta actualización, el siguiente cambio en el conjunto de contenido hace que el sitio cree una versión del conjunto de contenido. Configuration Manager distribuye la nueva versión del conjunto de contenido para reemplazar el conjunto anterior y cualquiera de sus versiones incrementales. Después de distribuir el nuevo conjunto de contenido, la BDR replicará de nuevo los cambios incrementales siguientes en los archivos de origen.  
+- Configuration Manager admite hasta cinco versiones incrementales de un conjunto de contenido antes de volver a enviar todo el conjunto de contenido. Después de la quinta actualización, el siguiente cambio en el conjunto de contenido hace que el sitio cree una versión del conjunto de contenido. Configuration Manager distribuye la nueva versión del conjunto de contenido para reemplazar el conjunto anterior y cualquiera de sus versiones incrementales. Después de distribuir el nuevo conjunto de contenido, la BDR replicará de nuevo los cambios incrementales siguientes en los archivos de origen.  
 
 La BDR es compatible entre cada sitio principal y secundario de una jerarquía. Dentro de un sitio, la BDR es compatible entre el servidor de sitio y sus puntos de distribución normales. Pero los puntos de distribución de extracción y los puntos de distribución de nube no son compatibles con BDR para la transferencia de contenido. Los puntos de distribución de extracción admiten deltas de nivel de archivo, transferir archivos nuevos, pero no los bloques dentro de un archivo.
 
@@ -75,9 +75,9 @@ Las aplicaciones siempre usan la replicación diferencial binaria. BDR es opcion
 
 
 ## <a name="branchcache"></a>BranchCache  
- [BranchCache](https://docs.microsoft.com/windows-server/networking/branchcache/branchcache) es una tecnología de Windows. Los clientes que admiten BranchCache y que han descargado una implementación configurada para BranchCache, después actúan como un origen de contenido para otros clientes habilitados para BranchCache.  
+[BranchCache](https://docs.microsoft.com/windows-server/networking/branchcache/branchcache) es una tecnología de Windows. Los clientes que admiten BranchCache y que han descargado una implementación configurada para BranchCache, después actúan como un origen de contenido para otros clientes habilitados para BranchCache.  
 
- Por ejemplo, tiene un punto de distribución en el que se ejecuta Windows Server 2012 o una versión posterior, y está configurado como un servidor de BranchCache. Cuando el primer cliente habilitado para BranchCache solicita contenido desde este servidor, el cliente descarga el contenido y lo almacena en caché.  
+Por ejemplo, tiene un punto de distribución en el que se ejecuta Windows Server 2012 o una versión posterior, y está configurado como un servidor de BranchCache. Cuando el primer cliente habilitado para BranchCache solicita contenido desde este servidor, el cliente descarga el contenido y lo almacena en caché.  
 
 - Después, ese cliente puede hacer que el contenido esté disponible para otros clientes habilitados para BranchCache en la misma subred, que también pueden almacenar en caché el contenido.  
 - Otros clientes en la misma subred no tendrán que descargar el contenido desde el punto de distribución.  
@@ -126,25 +126,25 @@ Para obtener más información, consulte [Almacenamiento en caché del mismo niv
 ## <a name="client-locations"></a>Ubicaciones del cliente  
  A continuación se indican las ubicaciones desde las que los clientes tienen acceso a contenido:  
 
--   **Intranet** (local):  
+- **Intranet** (local):  
 
-    -   Los puntos de distribución pueden usar HTTP o HTTPS.  
+  - Los puntos de distribución pueden usar HTTP o HTTPS.  
 
-    -   Use un punto de distribución de nube como reserva solo cuando los puntos de distribución locales no estén disponibles.  
+  - Use un punto de distribución de nube como reserva solo cuando los puntos de distribución locales no estén disponibles.  
 
--   **Internet**:  
+- **Internet**:  
 
-    -   Se necesitan puntos de distribución accesibles desde Internet para aceptar conexiones HTTPS.  
+  - Se necesitan puntos de distribución accesibles desde Internet para aceptar conexiones HTTPS.  
 
-    -   Puede usar un punto de distribución de nube o Cloud Management Gateway (CMG).  
-    
-        *   A partir de la versión 1806, una CMG también puede servir contenido a los clientes. Esta funcionalidad reduce los certificados necesarios y el costo de máquinas virtuales de Azure. Para obtener más información, vea [Modify a CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway) (Modificar una instancia de CMG).
+  - Puede usar un punto de distribución de nube o Cloud Management Gateway (CMG).  
+  
+    * A partir de la versión 1806, una CMG también puede servir contenido a los clientes. Esta funcionalidad reduce los certificados necesarios y el costo de máquinas virtuales de Azure. Para obtener más información, vea [Modify a CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway) (Modificar una instancia de CMG).
 
--   **Grupo de trabajo**:  
+- **Grupo de trabajo**:  
 
-    -   Requiere que los puntos de distribución acepten HTTPS.  
+  - Requiere que los puntos de distribución acepten HTTPS.  
 
-    -   Se puede usar un punto de distribución de nube o una instancia de CMG.  
+  - Se puede usar un punto de distribución de nube o una instancia de CMG.  
 
 
 
@@ -166,7 +166,7 @@ Cuando un cliente necesita contenido, realiza una solicitud de ubicación de con
 
 
 ## <a name="content-library"></a>Biblioteca de contenido  
- La biblioteca de contenido es el almacén de instancia única del contenido en Configuration Manager. Esta biblioteca reduce el tamaño total del contenido que se distribuye.  
+La biblioteca de contenido es el almacén de instancia única del contenido en Configuration Manager. Esta biblioteca reduce el tamaño total del contenido que se distribuye.  
 
 - Obtenga más información sobre la [biblioteca de contenido](/sccm/core/plan-design/hierarchy/the-content-library).
 - Utilice la herramienta [Content Library Cleanup Tool](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool) para quitar contenido cuando deja de estar asociado con una aplicación.  
@@ -174,13 +174,13 @@ Cuando un cliente necesita contenido, realiza una solicitud de ubicación de con
 
 
 ## <a name="distribution-points"></a>Puntos de distribución  
- Configuration Manager usa puntos de distribución para almacenar los archivos necesarios para la ejecución de software en los equipos cliente. Los clientes deben tener acceso al menos a un punto de distribución desde el cual puedan descargar los archivos del contenido que implemente.  
+Configuration Manager usa puntos de distribución para almacenar los archivos necesarios para la ejecución de software en los equipos cliente. Los clientes deben tener acceso al menos a un punto de distribución desde el cual puedan descargar los archivos del contenido que implemente.  
 
- El punto de distribución básico (no especializado) suele denominarse punto de distribución estándar. Hay dos variaciones en el punto de distribución estándar que reciben atención especial:  
+El punto de distribución básico (no especializado) suele denominarse punto de distribución estándar. Hay dos variaciones en el punto de distribución estándar que reciben atención especial:  
 
--   **Punto de distribución de extracción**: variación de un punto de distribución donde el punto de distribución obtiene contenido de otro punto de distribución (un punto de distribución de origen). Este proceso es similar a la manera en que los clientes descargan contenido desde los puntos de distribución. Los puntos de distribución de extracción pueden ayudarle a evitar los cuellos de botella en el ancho de banda de red que se producen cuando el servidor de sitio debe distribuir directamente el contenido a cada punto de distribución. [Usar un punto de distribución de extracción](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point).
+- **Punto de distribución de extracción**: variación de un punto de distribución donde el punto de distribución obtiene contenido de otro punto de distribución (un punto de distribución de origen). Este proceso es similar a la manera en que los clientes descargan contenido desde los puntos de distribución. Los puntos de distribución de extracción pueden ayudarle a evitar los cuellos de botella en el ancho de banda de red que se producen cuando el servidor de sitio debe distribuir directamente el contenido a cada punto de distribución. [Usar un punto de distribución de extracción](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point).
 
--   **Punto de distribución de nube**: variación de un punto de distribución que se instala en Microsoft Azure. [Obtenga información sobre cómo usar un punto de distribución de nube](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point).  
+- **Punto de distribución de nube**: variación de un punto de distribución que se instala en Microsoft Azure. [Obtenga información sobre cómo usar un punto de distribución de nube](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point).  
 
 
 Los puntos de distribución estándar admiten una variedad de configuraciones y características:  
@@ -200,35 +200,35 @@ Los puntos de distribución de extracción y de la nube admiten muchas de estas 
 
 
 ## <a name="distribution-point-groups"></a>Grupos de puntos de distribución  
- Los grupos de puntos de distribución son agrupaciones lógicas de puntos de distribución que pueden simplificar la distribución de contenido.  
+Los grupos de puntos de distribución son agrupaciones lógicas de puntos de distribución que pueden simplificar la distribución de contenido.  
 
- Para obtener más información, vea [Administrar grupos de puntos de distribución](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_manage).
+Para obtener más información, vea [Administrar grupos de puntos de distribución](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_manage).
 
 
 
 ## <a name="distribution-point-priority"></a>Prioridad de puntos de distribución  
- El valor de prioridad del punto de distribución se basa en cuánto tiempo se tardó en transferir las implementaciones anteriores en ese punto de distribución.  
+El valor de prioridad del punto de distribución se basa en cuánto tiempo se tardó en transferir las implementaciones anteriores en ese punto de distribución.  
 
--   Este valor es de ajuste automático. Se establece en cada punto de distribución para ayudar a Configuration Manager a transferir el contenido más rápidamente a más puntos de distribución.  
+- Este valor es de ajuste automático. Se establece en cada punto de distribución para ayudar a Configuration Manager a transferir el contenido más rápidamente a más puntos de distribución.  
 
--   Cuando se distribuye contenido a varios puntos de distribución al mismo tiempo, o bien a un grupo de puntos de distribución, el sitio envía primero el contenido al servidor con la prioridad más alta. Después, envía el mismo contenido a un punto de distribución con una prioridad inferior.  
+- Cuando se distribuye contenido a varios puntos de distribución al mismo tiempo, o bien a un grupo de puntos de distribución, el sitio envía primero el contenido al servidor con la prioridad más alta. Después, envía el mismo contenido a un punto de distribución con una prioridad inferior.  
 
--   La prioridad del punto de distribución no reemplaza a la prioridad de distribución de los paquetes. La prioridad del paquete sigue siendo el factor decisivo de cuándo envía el sitio otro contenido.  
+- La prioridad del punto de distribución no reemplaza a la prioridad de distribución de los paquetes. La prioridad del paquete sigue siendo el factor decisivo de cuándo envía el sitio otro contenido.  
 
 Por ejemplo, tiene un paquete con una prioridad de paquete alta. Lo distribuye a un servidor con una prioridad de punto de distribución baja. Este paquete de prioridad alta siempre se transferirá antes que un paquete con una prioridad más baja. La prioridad de paquete se aplica incluso si el sitio distribuye paquetes de prioridad más baja a servidores con prioridades de punto de distribución más altas.
 
 La prioridad alta del paquete garantiza que Configuration Manager distribuye el contenido a los puntos de distribución antes de que envíe paquetes con una prioridad de distribución inferior.  
 
 > [!NOTE]  
->  Los puntos de distribución de extracción también usan el concepto de prioridad para ordenar la secuencia de los puntos de distribución de origen.  
+> Los puntos de distribución de extracción también usan el concepto de prioridad para ordenar la secuencia de los puntos de distribución de origen.  
 >   
->  -   La prioridad de punto de distribución de las transferencias de contenido al servidor es distinta de la prioridad que usan los puntos de distribución de extracción. Los puntos de distribución de extracción usan su prioridad cuando buscan contenido de un punto de distribución de origen.  
->  -   Para más información, vea [Usar un punto de distribución de extracción con System Center Configuration Manager](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point).  
+> - La prioridad de punto de distribución de las transferencias de contenido al servidor es distinta de la prioridad que usan los puntos de distribución de extracción. Los puntos de distribución de extracción usan su prioridad cuando buscan contenido de un punto de distribución de origen.  
+> - Para más información, vea [Usar un punto de distribución de extracción con System Center Configuration Manager](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point).  
 
 
 
 ## <a name="fallback"></a>Reserva  
- Varios aspectos han cambiado con la Rama actual de Configuration Manager relacionados con la forma en que los clientes buscan un punto de distribución que tiene contenido, incluida la reserva. 
+Varios aspectos han cambiado con la Rama actual de Configuration Manager relacionados con la forma en que los clientes buscan un punto de distribución que tiene contenido, incluida la reserva. 
 
 Los clientes que no encuentran contenido en un punto de distribución asociado a su grupo de límites actual usan como reserva ubicaciones de origen de contenido asociadas a grupos de límites vecinos. Para que se use como reserva, un grupo de límites vecino debe tener una relación definida con el grupo de límites actual del cliente. Esta relación incluye un tiempo configurado que debe transcurrir para que un cliente que no encuentra contenido localmente incluya los orígenes de contenido del grupo de límites vecino como parte de su búsqueda.
 
@@ -239,18 +239,18 @@ Para obtener más información, consulte [Boundary groups (Grupos de límites)](
 
 
 ## <a name="network-bandwidth"></a>Ancho de banda de red  
- Para administrar la cantidad de ancho de banda de red usada al distribuir contenido, puede usar las opciones siguientes:  
+Para administrar la cantidad de ancho de banda de red usada al distribuir contenido, puede usar las opciones siguientes:  
 
--   **Contenido preconfigurado**: transferencia de contenido a un punto de distribución sin distribuir el contenido a través de la red.  
+- **Contenido preconfigurado**: transferencia de contenido a un punto de distribución sin distribuir el contenido a través de la red.  
 
--   **Programación y limitación**: configuraciones con las que podrá controlar cuándo y cómo se distribuye el contenido en puntos de distribución.  
+- **Programación y limitación**: configuraciones con las que podrá controlar cuándo y cómo se distribuye el contenido en puntos de distribución.  
 
 Para obtener más información, consulte [Administración del ancho de banda de red](/sccm/core/plan-design/hierarchy/manage-network-bandwidth).
 
 
 
 ## <a name="network-connection-speed-to-content-source"></a>Velocidad de conexión de red con el origen de contenido  
- Varios aspectos han cambiado con la Rama actual de Configuration Manager relacionados con la forma en que los clientes buscan un punto de distribución que tiene contenido. Estos cambios incluyen la velocidad de red a un origen de contenido. 
+Varios aspectos han cambiado con la Rama actual de Configuration Manager relacionados con la forma en que los clientes buscan un punto de distribución que tiene contenido. Estos cambios incluyen la velocidad de red a un origen de contenido. 
 
 Ya no se usan las velocidades de conexión de red que definen un punto de distribución como **rápido** o **lento**. En su lugar, cada sistema de sitio asociado a un grupo de límites se trata de la misma manera.
 
@@ -259,26 +259,26 @@ Para obtener más información, consulte [Boundary groups (Grupos de límites)](
 
 
 ## <a name="on-demand-content-distribution"></a>Distribución de contenido a petición  
- La distribución de contenido a petición es una opción para las implementaciones de aplicaciones y paquetes individuales. Esta opción permite la distribución de contenido a petición en los servidores preferidos.  
+La distribución de contenido a petición es una opción para las implementaciones de aplicaciones y paquetes individuales. Esta opción permite la distribución de contenido a petición en los servidores preferidos.  
 
--   Para habilitar esta opción para una implementación, habilite: **Distribuir el contenido de este paquete en puntos de distribución preferidos**.  
+- Para habilitar esta opción para una implementación, habilite: **Distribuir el contenido de este paquete en puntos de distribución preferidos**.  
 
--   Cuando se habilita esta opción para una implementación y un cliente pide ese contenido, pero el contenido no está disponible en ninguno de los puntos de distribución preferidos del cliente, Configuration Manager distribuye automáticamente ese contenido en los puntos de distribución preferidos del cliente.  
+- Cuando se habilita esta opción para una implementación y un cliente pide ese contenido, pero el contenido no está disponible en ninguno de los puntos de distribución preferidos del cliente, Configuration Manager distribuye automáticamente ese contenido en los puntos de distribución preferidos del cliente.  
 
--   Aunque esto hace que Configuration Manager distribuya automáticamente el contenido a los puntos de distribución preferidos del cliente, este puede obtener el contenido desde otros puntos de distribución antes de que los puntos de distribución preferidos del cliente reciban la implementación. Cuando se produce este comportamiento, el contenido estará presente en ese punto de distribución para que lo use el próximo cliente que busque esa implementación.  
+- Aunque esto hace que Configuration Manager distribuya automáticamente el contenido a los puntos de distribución preferidos del cliente, este puede obtener el contenido desde otros puntos de distribución antes de que los puntos de distribución preferidos del cliente reciban la implementación. Cuando se produce este comportamiento, el contenido estará presente en ese punto de distribución para que lo use el próximo cliente que busque esa implementación.  
 
 Para obtener más información, consulte [Boundary groups (Grupos de límites)](/sccm/core/servers/deploy/configure/boundary-groups).
 
 
 
 ## <a name="package-transfer-manager"></a>Administrador de transferencia de paquetes  
- El administrador de transferencia de paquetes es el componente de servidor de sitio que transfiere contenido a puntos de distribución de otros equipos.  
+El administrador de transferencia de paquetes es el componente de servidor de sitio que transfiere contenido a puntos de distribución de otros equipos.  
 
- Para obtener más información, vea [Administrador de transferencia de paquetes](/sccm/core/plan-design/hierarchy/package-transfer-manager).  
+Para obtener más información, vea [Administrador de transferencia de paquetes](/sccm/core/plan-design/hierarchy/package-transfer-manager).  
 
 
 
 ## <a name="prestage-content"></a>Preconfigurar el contenido  
- Preconfigurar el contenido es un proceso de transferencia de contenido a un punto de distribución sin distribuirlo a través de la red.  
+Preconfigurar el contenido es un proceso de transferencia de contenido a un punto de distribución sin distribuirlo a través de la red.  
 
- Para obtener más información, consulte [Administración del ancho de banda de red](/sccm/core/plan-design/hierarchy/manage-network-bandwidth).
+Para obtener más información, consulte [Administración del ancho de banda de red](/sccm/core/plan-design/hierarchy/manage-network-bandwidth).

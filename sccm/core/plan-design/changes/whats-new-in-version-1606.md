@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 401565308ac78e1d6db047eca7cda63715474764
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 64cb1be506f958363b1ebfeef66bff1ad865c113
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67158878"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339840"
 ---
 # <a name="what39s-new-in-version-1606-of-system-center-configuration-manager"></a>Novedades de la versión 1606 de System Center Configuration Manager
 
@@ -25,10 +25,10 @@ ms.locfileid: "67158878"
 
 La actualización 1606 para System Center Configuration Manager está disponible como una actualización en consola para sitios instalados previamente que ejecutan la versión 1511 o 1602. La versión 1511 es la versión de línea base inicial que se usa para instalar sitios nuevos de Configuration Manager.
 > [!TIP]  
->  Más información acerca de:  
+> Más información acerca de:  
 >   
->  -   [Instalación de nuevos sitios](/sccm/core/servers/deploy/install/prepare-to-install-sites) (con una versión de línea base como 1511)  
->  -   [Instalación de actualizaciones en los sitios](/sccm/core/servers/manage/updates) (como la actualización 1602 o 1606)  
+> - [Instalación de nuevos sitios](/sccm/core/servers/deploy/install/prepare-to-install-sites) (con una versión de línea base como 1511)  
+> - [Instalación de actualizaciones en los sitios](/sccm/core/servers/manage/updates) (como la actualización 1602 o 1606)  
 
  En las secciones siguientes se proporcionan detalles sobre los cambios y las nuevas funciones introducidas en la versión 1606 de Configuration Manager.  
 

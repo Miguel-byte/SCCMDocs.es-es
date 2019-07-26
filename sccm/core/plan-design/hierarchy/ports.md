@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9d697427fe9cfa774cc7baca6563d6c1cc285c8b
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: b8818f858900db76192df1503d9043e6435a4999
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159387"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68338708"
 ---
 # <a name="ports-used-in-configuration-manager"></a>Puertos usados en Configuration Manager
 
@@ -25,31 +25,31 @@ ms.locfileid: "67159387"
 En este artículo se enumeran los puertos de red que usa Configuration Manager. Algunas conexiones usan puertos que no se pueden configurar, mientras que otras admiten puertos personalizados. Si usa tecnología de filtrado de puertos, compruebe que los puertos necesarios estén disponibles. Estas tecnologías de filtrado de puertos incluyen firewalls, enrutadores, servidores proxy o IPsec.   
 
 > [!NOTE]  
->  Si tiene compatibilidad con clientes basados en Internet mediante el protocolo de puente SSL, además de requisitos de puerto, es posible que también tenga que permitir que algunos verbos y encabezados HTTP atraviesen el firewall.   
+> Si tiene compatibilidad con clientes basados en Internet mediante el protocolo de puente SSL, además de requisitos de puerto, es posible que también tenga que permitir que algunos verbos y encabezados HTTP atraviesen el firewall.   
 
 
 
 ##  <a name="BKMK_ConfigurablePorts"></a> Puertos configurables  
- Configuration Manager le permite configurar los puertos para los siguientes tipos de comunicación:  
+Configuration Manager le permite configurar los puertos para los siguientes tipos de comunicación:  
 
--   Punto de sitios web del catálogo de aplicaciones a punto de servicio web del catálogo de aplicaciones  
+- Punto de sitios web del catálogo de aplicaciones a punto de servicio web del catálogo de aplicaciones  
 
--   Punto de proxy de inscripción a punto de inscripción  
+- Punto de proxy de inscripción a punto de inscripción  
 
--   Cliente a sistema de sitio que ejecuta IIS  
+- Cliente a sistema de sitio que ejecuta IIS  
 
--   Cliente a Internet (como configuración de servidor proxy)  
+- Cliente a Internet (como configuración de servidor proxy)  
 
--   Punto de actualización de software a Internet (como configuración de servidor proxy)  
+- Punto de actualización de software a Internet (como configuración de servidor proxy)  
 
--   Punto de actualización de software a servidor WSUS  
+- Punto de actualización de software a servidor WSUS  
 
--   Servidor de sitio a servidor de base de datos del sitio  
+- Servidor de sitio a servidor de base de datos del sitio  
 
--   Puntos de servicios de informes  
+- Puntos de servicios de informes  
 
-    > [!NOTE]  
-    >  Los puertos que se usan para el rol de sistema de sitio de punto de servicios de informes se configuran en SQL Server Reporting Services. Configuration Manager usa estos puertos durante las comunicaciones con el punto de servicios de informes. Asegúrese de revisar estos puertos que definen la información de filtro IP para directivas IPsec o para configurar firewalls.  
+  > [!NOTE]  
+  > Los puertos que se usan para el rol de sistema de sitio de punto de servicios de informes se configuran en SQL Server Reporting Services. Configuration Manager usa estos puertos durante las comunicaciones con el punto de servicios de informes. Asegúrese de revisar estos puertos que definen la información de filtro IP para directivas IPsec o para configurar firewalls.  
 
 De forma predeterminada, el puerto HTTP que se usa para la comunicación entre cliente y sistema de sitio es el puerto 80, y el puerto HTTPS predeterminado es el 443. Los puertos para la comunicación entre cliente y sistema de sitio a través de HTTP o HTTPS se pueden cambiar durante la instalación o en las propiedades del sitio en su sitio de Configuration Manager.  
 
@@ -61,15 +61,15 @@ Los puertos que se usan para el rol de sistema de sitio de punto de servicios de
 
 Configuration Manager no permite configurar puertos para los siguientes tipos de comunicación:  
 
--   Sitio a sitio  
+- Sitio a sitio  
 
--   Servidor de sitio a sistema de sitio  
+- Servidor de sitio a sistema de sitio  
 
--   Consola de Configuration Manager con el proveedor de SMS  
+- Consola de Configuration Manager con el proveedor de SMS  
 
--   Consola de Configuration Manager a Internet  
+- Consola de Configuration Manager a Internet  
 
--   Conexiones a servicios de nube, como Microsoft Intune y puntos de distribución en la nube  
+- Conexiones a servicios de nube, como Microsoft Intune y puntos de distribución en la nube  
 
 
 
@@ -77,9 +77,9 @@ Configuration Manager no permite configurar puertos para los siguientes tipos de
 
 En las secciones siguientes se detallan los puertos que se usan para la comunicación en Configuration Manager. En el título de la sección, las flechas representan la dirección de la comunicación:  
 
--   -- > indica que un equipo inicia la comunicación y el otro equipo siempre responde  
+- -- > indica que un equipo inicia la comunicación y el otro equipo siempre responde  
 
--   &lt; -- > indica que cualquier equipo puede iniciar la comunicación  
+- &lt; -- > indica que cualquier equipo puede iniciar la comunicación  
 
 
 ###  <a name="BKMK_PortsAI"></a> Punto de sincronización de Asset Intelligence -- > Microsoft  
@@ -194,7 +194,7 @@ Para más información, vea [Puertos y flujo de datos de CMG](/sccm/core/clients
 
 
 ###  <a name="BKMK_PortsClient-GCDC"></a> Cliente -- > Controlador de dominio del catálogo global  
- Los clientes de Configuration Manager no contactan con un servidor de catálogo global si son equipos de grupo de trabajo o están configurados para comunicarse solo a través de Internet.  
+Los clientes de Configuration Manager no contactan con un servidor de catálogo global si son equipos de grupo de trabajo o están configurados para comunicarse solo a través de Internet.  
 
 |Descripción|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -330,15 +330,15 @@ La consola de Configuration Manager usa el acceso a Internet para las acciones s
 
 
 ###  <a name="BKMK_PortsDist_MP"></a> Punto de distribución -- > Punto de administración  
- Un punto de distribución se comunica con el punto de administración en los siguientes escenarios:  
+Un punto de distribución se comunica con el punto de administración en los siguientes escenarios:  
 
--   Para informar del estado de contenido preconfigurado  
+- Para informar del estado de contenido preconfigurado  
 
--   Para informar de los datos de resumen de uso  
+- Para informar de los datos de resumen de uso  
 
--   Para informar de la validación de contenido  
+- Para informar de la validación de contenido  
 
--   Para informar del estado de las descargas de paquetes (punto de distribución de extracción)
+- Para informar del estado de las descargas de paquetes (punto de distribución de extracción)
 
 |Descripción|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -406,7 +406,7 @@ La consola de Configuration Manager usa el acceso a Internet para las acciones s
 
 
 ###  <a name="BKMK_PortsMP-Site"></a> Punto de administración &lt; -- > Servidor de sitio  
- <sup>[Nota 5](#bkmk_note5)</sup>   
+<sup>[Nota 5](#bkmk_note5)</sup>   
 
 |Descripción|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -587,7 +587,7 @@ Para más información, vea [Puertos y flujo de datos](/sccm/core/plan-design/hi
 
 
 ###  <a name="BKMK_PortsSite-RCL"></a> Servidor de sitio -- > Servidor que hospeda el recurso compartido de biblioteca de contenido remoto  
- A partir de la versión 1806, puede reubicar la biblioteca de contenido en otra ubicación de almacenamiento para liberar espacio de disco duro en los servidores de sitio primario o de administración central. Para obtener más información, consulte [Configuración de una biblioteca de contenido remoto para el servidor de sitio](/sccm/core/plan-design/hierarchy/the-content-library#bkmk_remote).  
+A partir de la versión 1806, puede reubicar la biblioteca de contenido en otra ubicación de almacenamiento para liberar espacio de disco duro en los servidores de sitio primario o de administración central. Para obtener más información, consulte [Configuración de una biblioteca de contenido remoto para el servidor de sitio](/sccm/core/plan-design/hierarchy/the-content-library#bkmk_remote).  
 
 |Descripción|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -749,9 +749,9 @@ Estos puertos usan una serie de números de puerto que está definidos por la ve
 
  Los clientes utilizan Bloque de mensajes del servidor (SMB) cada vez que se conectan a recursos compartidos UNC. Por ejemplo:  
 
--   Instalación manual de cliente que especifica la propiedad de la línea de comandos CCMSetup.exe **/source:** .  
+- Instalación manual de cliente que especifica la propiedad de la línea de comandos CCMSetup.exe **/source:** .  
 
--   Clientes de Endpoint Protection que descargan archivos de definición de una ruta de acceso UNC.
+- Clientes de Endpoint Protection que descargan archivos de definición de una ruta de acceso UNC.
 
 |Descripción|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -762,13 +762,13 @@ Estos puertos usan una serie de números de puerto que está definidos por la ve
 
  Para la comunicación con el motor de base de datos de SQL Server y para la replicación entre sitios, puede utilizar el puerto de SQL Server predeterminado o especificar puertos personalizados:  
 
--   Uso de las comunicaciones entre sitios:  
+- Uso de las comunicaciones entre sitios:  
 
-    -   SQL Server Service Broker, que usa de forma predeterminada el puerto TCP 4022.  
+  - SQL Server Service Broker, que usa de forma predeterminada el puerto TCP 4022.  
 
-    -   Servicio SQL Server, que usa de forma predeterminada el puerto TCP 1433.  
+  - Servicio SQL Server, que usa de forma predeterminada el puerto TCP 1433.  
 
--   La comunicación entre sitios entre el motor de base de datos de SQL Server y varios roles de sistema de sitio de Configuration Manager tienen el puerto TCP 1433 como predeterminado.  
+- La comunicación entre sitios entre el motor de base de datos de SQL Server y varios roles de sistema de sitio de Configuration Manager tienen el puerto TCP 1433 como predeterminado.  
 
 - Configuration Manager usa los mismos puertos y protocolos para comunicarse con cada réplica de grupo de disponibilidad de SQL que hospeda la base de datos del sitio que si la réplica fuera una instancia independiente de SQL Server.
 
@@ -777,31 +777,31 @@ Cuando use Azure y la base de datos del sitio esté detrás de un equilibrador d
 - Reglas del equilibrio de carga 
 
 Configure los puertos siguientes:
- - SQL a través de TCP: TCP 1433
- - SQL Server Service Broker: TCP 4022
- - Bloque de mensajes del servidor (SMB): TCP 445
- - Asignador de extremos de RPC: TCP 135
+- SQL a través de TCP: TCP 1433
+- SQL Server Service Broker: TCP 4022
+- Bloque de mensajes del servidor (SMB): TCP 445
+- Asignador de extremos de RPC: TCP 135
 
 > [!WARNING]  
->  Configuration Manager no admite los puertos dinámicos. De forma predeterminada, las instancias con nombre de SQL Server usan puertos dinámicos para las conexiones al motor de base de datos. Cuando use una instancia con nombre, configure manualmente el puerto estático para la comunicación entre sitios.  
+> Configuration Manager no admite los puertos dinámicos. De forma predeterminada, las instancias con nombre de SQL Server usan puertos dinámicos para las conexiones al motor de base de datos. Cuando use una instancia con nombre, configure manualmente el puerto estático para la comunicación entre sitios.  
 
- Los siguientes roles de sistema de sitio se comunican directamente con la base de datos de SQL Server:  
+Los siguientes roles de sistema de sitio se comunican directamente con la base de datos de SQL Server:  
 
--   Punto de servicio web del catálogo de aplicaciones  
+- Punto de servicio web del catálogo de aplicaciones  
 
--   Rol de punto de registro de certificado  
+- Rol de punto de registro de certificado  
 
--   Rol de punto de inscripción  
+- Rol de punto de inscripción  
 
--   Punto de administración  
+- Punto de administración  
 
--   Servidor de sitio  
+- Servidor de sitio  
 
--   Puede configurar otras fuentes de actualización opcionales si crea una directiva antimalware.  
+- Puede configurar otras fuentes de actualización opcionales si crea una directiva antimalware.  
 
--   Proveedor de SMS  
+- Proveedor de SMS  
 
--   SQL Server --> SQL Server  
+- SQL Server --> SQL Server  
 
 Si un SQL Server hospeda una base de datos de más de un sitio, cada base de datos debe usar una instancia independiente de SQL Server. Configure cada instancia con un conjunto de puertos único.  
 
@@ -813,37 +813,37 @@ Para obtener un ejemplo de cómo configurar SQL Server para usar un determinado 
 ### <a name="bkmk_discovery"> </a> Detección y publicación
 
 Configuration Manager usa los siguientes puertos para la detección y la publicación de información de sitios:
- - Protocolo ligero de acceso a directorios (LDAP): 389
- - LDAP de catálogo global: 3268
- - Asignador de extremos de RPC: 135
- - RPC: puertos TCP altos asignados dinámicamente
- - TCP: 1024: 5000
- - TCP:  49152: 65535
+- Protocolo ligero de acceso a directorios (LDAP): 389
+- LDAP de catálogo global: 3268
+- Asignador de extremos de RPC: 135
+- RPC: puertos TCP altos asignados dinámicamente
+- TCP: 1024: 5000
+- TCP:  49152: 65535
 
 
 ###  <a name="BKMK_External"></a> Conexiones externas establecidas por Configuration Manager  
 
 Los clientes o sistemas de sitio de Configuration Manager en el entorno local pueden establecer las siguientes conexiones externas:  
 
--   [Punto de sincronización de Asset Intelligence -- &gt; Microsoft](#BKMK_PortsAI)  
+- [Punto de sincronización de Asset Intelligence -- &gt; Microsoft](#BKMK_PortsAI)  
 
--   [Punto de Endpoint Protection -- &gt; Internet](#BKMK_PortsEndpointProtection_Internet)  
+- [Punto de Endpoint Protection -- &gt; Internet](#BKMK_PortsEndpointProtection_Internet)  
 
--   [Cliente -- &gt; Controlador de dominio del catálogo global](#BKMK_PortsClient-GCDC)  
+- [Cliente -- &gt; Controlador de dominio del catálogo global](#BKMK_PortsClient-GCDC)  
 
--   [Consola de Configuration Manager -- &gt; Internet](#BKMK_PortsConsole-Internet)  
+- [Consola de Configuration Manager -- &gt; Internet](#BKMK_PortsConsole-Internet)  
 
--   [Punto de administración -- &gt; Controlador de dominio](#BKMK_PortsMP-DC)  
+- [Punto de administración -- &gt; Controlador de dominio](#BKMK_PortsMP-DC)  
 
--   [Servidor de sitio -- &gt; Controlador de dominio](#BKMK_PortsSite-DC)  
+- [Servidor de sitio -- &gt; Controlador de dominio](#BKMK_PortsSite-DC)  
 
--   [Servidor de sitio &lt; -- &gt; Entidad de certificación emisora (CA)](#BKMK_PortsIssuingCA_SiteServer)  
+- [Servidor de sitio &lt; -- &gt; Entidad de certificación emisora (CA)](#BKMK_PortsIssuingCA_SiteServer)  
 
--   [Punto de actualización de software -- &gt; Internet](#BKMK_PortsSUP-Internet)  
+- [Punto de actualización de software -- &gt; Internet](#BKMK_PortsSUP-Internet)  
 
--   [Punto de actualización de software -- &gt; Servidor WSUS ascendente](#BKMK_PortsSUP-WSUS)  
+- [Punto de actualización de software -- &gt; Servidor WSUS ascendente](#BKMK_PortsSUP-WSUS)  
 
--   [Punto de conexión de servicio -- &gt; Microsoft Intune](#BKMK_PortsIntuneConnector-WindowsIntune)  
+- [Punto de conexión de servicio -- &gt; Microsoft Intune](#BKMK_PortsIntuneConnector-WindowsIntune)  
 
 - [Punto de conexión del servicio -- > Azure](#bkmk_scp-cmg)  
 
@@ -852,22 +852,22 @@ Los clientes o sistemas de sitio de Configuration Manager en el entorno local pu
 
 ###  <a name="BKMK_IBCMports"></a> Requisitos de instalación de sistemas de sitio que admiten clientes basados en Internet  
 
- > [!Note]  
- > Esta sección solo se aplica a la administración de clientes basados en Internet (IBCM), pero no a la puerta de enlace de administración en la nube. Para más información, vea [Administrar clientes en Internet](/sccm/core/clients/manage/manage-clients-internet).  
+> [!Note]  
+> Esta sección solo se aplica a la administración de clientes basados en Internet (IBCM), pero no a la puerta de enlace de administración en la nube. Para más información, vea [Administrar clientes en Internet](/sccm/core/clients/manage/manage-clients-internet).  
 
- Los puntos de administración y de distribución basados en Internet que admiten clientes basados en Internet, el punto de actualización de software y el punto de estado de reserva usan los puertos siguientes para la instalación y la reparación:  
+Los puntos de administración y de distribución basados en Internet que admiten clientes basados en Internet, el punto de actualización de software y el punto de estado de reserva usan los puertos siguientes para la instalación y la reparación:  
 
--   Servidor de sitio --> sistema de sitio: Asignador de extremos RPC con los puertos UDP y TCP 135.  
+- Servidor de sitio --> sistema de sitio: Asignador de extremos RPC con los puertos UDP y TCP 135.  
 
--   Servidor de sitio --> sistema de sitio: Puertos TCP dinámicos de RPC  
+- Servidor de sitio --> sistema de sitio: Puertos TCP dinámicos de RPC  
 
--   Servidor de sitio &lt; --> sistema de sitio: Bloques de mensajes de servidor (SMB) mediante el puerto TCP 445
+- Servidor de sitio &lt; --> sistema de sitio: Bloques de mensajes de servidor (SMB) mediante el puerto TCP 445
 
 Las instalaciones de aplicación y paquete en puntos de distribución requieren los siguientes puertos RPC:  
 
--   Servidor de sitio --> Punto de distribución: Asignador de extremos RPC con los puertos UDP y TCP 135
+- Servidor de sitio --> Punto de distribución: Asignador de extremos RPC con los puertos UDP y TCP 135
 
--   Servidor de sitio --> Punto de distribución: Puertos TCP dinámicos de RPC  
+- Servidor de sitio --> Punto de distribución: Puertos TCP dinámicos de RPC  
 
 Utilice IPsec para proteger el tráfico entre el servidor de sitio y los sistemas de sitio. Si debe restringir los puertos dinámicos que usa con RPC, puede usar la herramienta de configuración de RPC de Microsoft (rpccfg.exe) para configurar un conjunto limitado de puertos para estos paquetes RPC. Para obtener más información sobre la herramienta de configuración de RPC, vea [Cómo configurar RPC para usar determinados puertos y cómo asegurar esos puertos con IPsec](https://support.microsoft.com/help/908472/how-to-configure-rpc-to-use-certain-ports-and-how-to-help-secure-those).  
 
@@ -891,7 +891,7 @@ El servidor de sitio que ejecuta la migración usa varios puertos para conectars
 
 ###  <a name="BKMK_ServerPorts"></a> Puertos usados por Windows Server  
 
- En la tabla siguiente se incluyen algunos de los puertos clave que usa Windows Server. 
+En la tabla siguiente se incluyen algunos de los puertos clave que usa Windows Server. 
 
 |Descripción|UDP|TCP|  
 |-----------------|---------|---------|  
