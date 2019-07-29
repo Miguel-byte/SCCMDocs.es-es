@@ -69,7 +69,7 @@ En el caso de la versión 1810 de Configuration Manager, este nivel incluye los 
 
 - Recuento de sistemas operativos de los dispositivos administrados y las directivas establecidas por Exchange Connector
 
-- ***[Actualizado] *** Recuento de dispositivos de Windows 10 por rama, compilación y bosque único de Active Directory  
+- ***[Actualizado]*** Recuento de dispositivos de Windows 10 por rama, compilación y bosque único de Active Directory  
 
 - Recuento de clientes de Windows 10 que usan Windows Update for Business  
 
@@ -123,7 +123,7 @@ En el caso de la versión 1810 de Configuration Manager, este nivel incluye los 
 
 - Recuento de bloqueos de los procesos de servidor de sitio de Configuration Manager y, si está disponible, el identificador de firma digital de Watson  
 
-- ***[Nuevo] *** Lista con hash de principales consultas SQL por recuento de bloqueos y uso de memoria  
+- ***[Nuevo]*** Lista con hash de principales consultas SQL por recuento de bloqueos y uso de memoria  
 
 - ***[Movido, actualizado]*** Estadísticas acumuladas de uso de administración conjunta: número de clientes inscritos alguna vez, número de clientes inscritos, número de clientes con inscripción pendiente, clientes que reciben la directiva, estados de las cargas de trabajo, tamaños de las recopilaciones de piloto/exclusión y errores de inscripción  
 

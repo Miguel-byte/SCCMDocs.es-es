@@ -129,7 +129,7 @@ En el caso de la versión 1902 de Configuration Manager, este nivel incluye los 
 
 - ***[Nuevo]*** Existencia de las extensiones del lado servidor de administración y supervisión de Microsoft BitLocker (MBAM)  
 
-- ***[Nuevo] *** Recuento de aplicaciones clasificadas y sin clasificar de Asset Intelligence
+- ***[Nuevo]*** Recuento de aplicaciones clasificadas y sin clasificar de Asset Intelligence
 
 
 
@@ -215,7 +215,7 @@ En el caso de la versión 1902 de Configuration Manager, este nivel incluye los 
 
 - Recuento de archivos, tamaño del contenido, recuento de servicios y recuento de acciones personalizadas de MSI del catálogo de aplicaciones  
 
-- ***[Nuevo] *** Recuento de dispositivos por estado de disponibilidad de Office ProPlus
+- ***[Nuevo]*** Recuento de dispositivos por estado de disponibilidad de Office ProPlus
 
 
 ### <a name="client"></a>Cliente  
@@ -264,7 +264,7 @@ En el caso de la versión 1902 de Configuration Manager, este nivel incluye los 
 
 - Recuento de dispositivos de Microsoft Surface por modelo  
 
-- ***[Nuevo] *** Recuento de errores de comprobación de mantenimiento de cliente por tipo de problema
+- ***[Nuevo]*** Recuento de errores de comprobación de mantenimiento de cliente por tipo de problema
 
 
 ### <a name="cloud-services"></a>Cloud Services  

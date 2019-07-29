@@ -2,7 +2,7 @@
 title: Notas de la versión
 titleSuffix: Configuration Manager
 description: Obtenga información sobre problemas urgentes que todavía no se han corregido en el producto o no se han tratado en un artículo de Knowledge Base del soporte técnico de Microsoft.
-ms.date: 06/17/2019
+ms.date: 07/18/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46e84180aca830be6a4b8b5c7110679d857e95be
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 49600557e304edb86ec9a87bb02ef0ddb82ea037
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159330"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339439"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Notas de la versión de Configuration Manager
 
@@ -159,6 +159,14 @@ Después de conectar el sitio a [Análisis de escritorio](/sccm/desktop-analytic
 
 Cuando quite una colección, seleccione **Aceptar** para cerrar la ventana de propiedades. Luego, vuelva a abrir las propiedades para agregar una colección nueva en la pestaña **Desktop Analytics Connection** (Conexión de Análisis de escritorio).
 
+### <a name="pilot-status-tile-shows-some-devices-as-undefined"></a>El icono Estado piloto muestra algunos dispositivos como "no definidos"
+
+<!-- 4547783 -->
+*Se aplica a: Versión 1902 de Configuration Manager con el paquete acumulativo de actualizaciones*
+
+Al usar la consola de Configuration Manager para supervisar el estado de la implementación piloto, los dispositivos piloto actualizados en la versión de destino de Windows de ese plan de implementación se muestran como **no definidos** en el icono Estado piloto.  
+
+Estos dispositivos **no definidos** están **actualizados** con la versión de destino del sistema operativo de ese plan de implementación. No es necesario realizar ninguna acción.
 
 
 ## <a name="mobile-device-management"></a>Administración de dispositivos móviles  

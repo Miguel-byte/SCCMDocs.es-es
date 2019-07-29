@@ -2,7 +2,7 @@
 title: Plan para el proveedor de SMS
 titleSuffix: Configuration Manager
 description: Obtenga información sobre el rol de sistema de sitio del proveedor de SMS en Configuration Manager.
-ms.date: 06/12/2019
+ms.date: 07/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30ac544aca07ef9d08753b2a93c361194894c91a
-ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
+ms.openlocfilehash: 392789eef28dd959af7ffc65af50cb720b7f617b
+ms.sourcegitcommit: cdad3ca82018f1755e5186f8949a898cd201b565
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67516116"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68411480"
 ---
 # <a name="plan-for-the-sms-provider"></a>Plan para el proveedor de SMS 
 
@@ -287,6 +287,8 @@ El **proveedor de SMS** aparece como un rol con una opción para permitir la com
 
 #### <a name="prerequisites"></a>Requisitos previos
 - El servidor que hospeda el proveedor de SMS requiere .NET 4.5.2 o posterior.  
+
+    - A partir de la versión 1902, el requisito previo es tener la versión .NET 4.5 o una posterior.  
 
 - Habilitar el proveedor de SMS para usar un certificado. Use una de las opciones siguientes:  
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e27dd4479b4bb575cfc5c4a5e03c4252535f835b
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 5ce4d2f54163ba4dd891b5b70092de59cac38bcf
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56136973"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68338136"
 ---
 # <a name="deploy-and-manage-content-for-system-center-configuration-manager"></a>Implementar y administrar contenido para System Center Configuration Manager
 
@@ -25,23 +25,23 @@ ms.locfileid: "56136973"
 Después de instalar puntos de distribución para System Center Configuration Manager, puede empezar a implementar contenido en ellos. Normalmente, el contenido se transfiere a los puntos de distribución a través de la red, pero existen otras opciones para llevar el contenido a los puntos de distribución. Después de que se haya transferido el contenido a un punto de distribución, puede actualizar, redistribuir, quitar y validar ese contenido en los puntos de distribución.  
 
 ##  <a name="bkmk_distribute"></a> Distribuir contenido  
- Normalmente, se distribuye contenido en puntos de distribución para que esté disponible en los equipos cliente. (La excepción es el uso de la distribución de contenido a petición para una implementación específica).  Al distribuir contenido, Configuration Manager almacena archivos de contenido en un paquete y, después, distribuye el paquete al punto de distribución. Entre los diversos tipos de contenido que se pueden distribuir se incluyen los siguientes:  
+Normalmente, se distribuye contenido en puntos de distribución para que esté disponible en los equipos cliente. (La excepción es el uso de la distribución de contenido a petición para una implementación específica).  Al distribuir contenido, Configuration Manager almacena archivos de contenido en un paquete y, después, distribuye el paquete al punto de distribución. Entre los diversos tipos de contenido que se pueden distribuir se incluyen los siguientes:  
 
--   Tipos de implementación de aplicaciones  
+- Tipos de implementación de aplicaciones  
 
--   Paquetes  
+- Paquetes  
 
--   Paquetes de implementación  
+- Paquetes de implementación  
 
--   Paquetes de controladores  
+- Paquetes de controladores  
 
--   Imágenes de sistema operativo  
+- Imágenes de sistema operativo  
 
--   Instaladores de sistema operativo  
+- Instaladores de sistema operativo  
 
--   Imágenes de arranque  
+- Imágenes de arranque  
 
--   Secuencias de tareas  
+- Secuencias de tareas  
 
 Cuando crea un paquete que contiene archivos de origen como, por ejemplo, tipos de implementación de aplicaciones o paquetes de implementación, el sitio en el que se crea el paquete se convierte en el propietario del sitio del origen de contenido del paquete. Configuration Manager copia los archivos de origen desde la ruta de acceso del archivo de origen especificada para el objeto a la biblioteca de contenido en el servidor de sitio al que pertenece el origen de contenido del paquete.  Después, Configuration Manager replica la información en los sitios adicionales. (Consulte [The content library](../../../../core/plan-design/hierarchy/the-content-library.md) (La biblioteca de contenido) para obtener más información sobre este tema).  
 
@@ -53,47 +53,47 @@ Utilice el siguiente procedimiento para distribuir contenido en puntos de distri
 
 2.  En el área de trabajo **Biblioteca de software** , seleccione uno de los siguientes pasos para el tipo de contenido que desea distribuir:  
 
-    -   **Aplicaciones**: expanda **Administración de aplicaciones** > **Aplicaciones** y, después, seleccione las aplicaciones que quiera distribuir.  
+    - **Aplicaciones**: expanda **Administración de aplicaciones** > **Aplicaciones** y, después, seleccione las aplicaciones que quiera distribuir.  
 
-    -   **Paquetes**: expanda **Administración de aplicaciones** >  **Paquetes** y, después, seleccione los paquetes que quiera distribuir.  
+    - **Paquetes**: expanda **Administración de aplicaciones** >  **Paquetes** y, después, seleccione los paquetes que quiera distribuir.  
 
-    -   **Paquetes de implementación**: expanda **Actualizaciones de software** >  **Paquetes de implementación** y, después, seleccione los paquetes de implementación que quiera distribuir.  
+    - **Paquetes de implementación**: expanda **Actualizaciones de software** >  **Paquetes de implementación** y, después, seleccione los paquetes de implementación que quiera distribuir.  
 
-    -   **Paquetes de controladores**: expanda **Sistemas operativos** >  **Paquetes de controladores** y, después, seleccione los paquetes de controladores que quiera distribuir.  
+    - **Paquetes de controladores**: expanda **Sistemas operativos** >  **Paquetes de controladores** y, después, seleccione los paquetes de controladores que quiera distribuir.  
 
-    -   **Imágenes de sistema operativo**: expanda **Sistemas operativos** >   **Imágenes de sistema operativo** y, después, seleccione las imágenes de sistema operativo que quiera distribuir.  
+    - **Imágenes de sistema operativo**: expanda **Sistemas operativos** >   **Imágenes de sistema operativo** y, después, seleccione las imágenes de sistema operativo que quiera distribuir.  
 
-    -   **Instaladores de sistema operativo**: expanda **Sistemas operativos** > **Instaladores de sistema operativo** y, después, seleccione los instaladores de sistema operativo que quiera distribuir.  
+    - **Instaladores de sistema operativo**: expanda **Sistemas operativos** > **Instaladores de sistema operativo** y, después, seleccione los instaladores de sistema operativo que quiera distribuir.  
 
-    -   **Imágenes de arranque**: expanda **Sistemas operativos** >  **Imágenes de arranque** y, después, seleccione las imágenes de arranque que quiera distribuir.  
+    - **Imágenes de arranque**: expanda **Sistemas operativos** >  **Imágenes de arranque** y, después, seleccione las imágenes de arranque que quiera distribuir.  
 
-    -   **Secuencias de tareas**: expanda **Sistemas operativos** >  **Secuencias de tareas** y, después, seleccione la secuencia de tareas que quiera distribuir. Aunque las secuencias de tareas no incluyen contenido, tienen las dependencias de contenido asociadas que se distribuyen.  
+    - **Secuencias de tareas**: expanda **Sistemas operativos** >  **Secuencias de tareas** y, después, seleccione la secuencia de tareas que quiera distribuir. Aunque las secuencias de tareas no incluyen contenido, tienen las dependencias de contenido asociadas que se distribuyen.  
 
-        > [!NOTE]  
-        >  Si modifica la secuencia de tareas, deberá redistribuir el contenido.  
+      > [!NOTE]  
+      > Si modifica la secuencia de tareas, deberá redistribuir el contenido.  
 
 3.  En la pestaña **Inicio** , en el grupo **Implementación** , haga clic en **Distribuir contenido**. Se abre el Asistente para distribuir contenido.  
 
 4.  En la página **General**, compruebe que el contenido que aparece es el contenido que quiere distribuir, elija si quiere que Configuration Manager detecte las dependencias de contenido asociadas al contenido seleccionado y agregue las dependencias a la distribución. Después, haga clic en **Siguiente**.  
 
     > [!NOTE]  
-    >  Puede configurar la opción **Detectar dependencias de contenido asociadas y agregarlas a esta distribución** solo para el tipo de contenido de aplicación. Configuration Manager configura automáticamente esta opción para las secuencias de tareas, y no se puede modificar.  
+    > Puede configurar la opción **Detectar dependencias de contenido asociadas y agregarlas a esta distribución** solo para el tipo de contenido de aplicación. Configuration Manager configura automáticamente esta opción para las secuencias de tareas, y no se puede modificar.  
 
 5.  En la pestaña **Contenido** , si se muestra, compruebe que el contenido que aparece es el contenido que desea distribuir y, a continuación, haga clic en **Siguiente**.  
 
     > [!NOTE]  
-    >  La página **Contenido** se muestra solo cuando la opción **Detectar dependencias de contenido asociadas y agregarlas a esta distribución** está seleccionada en la página **General** del asistente.  
+    > La página **Contenido** se muestra solo cuando la opción **Detectar dependencias de contenido asociadas y agregarlas a esta distribución** está seleccionada en la página **General** del asistente.  
 
 6.  En la página **Destino del contenido** , haga clic en **Agregar**, elija una de las siguientes opciones y, a continuación, siga el paso asociado:  
 
-    -   **Recopilaciones**: seleccione **Recopilaciones de usuarios** o **Recopilaciones de dispositivos**, haga clic en la recopilación asociada a uno o más grupos de puntos de distribución y, después, haga clic en **Aceptar**.  
+    - **Recopilaciones**: seleccione **Recopilaciones de usuarios** o **Recopilaciones de dispositivos**, haga clic en la recopilación asociada a uno o más grupos de puntos de distribución y, después, haga clic en **Aceptar**.  
 
         > [!NOTE]  
-        >  Se muestran solo las recopilaciones que están asociadas a un grupo de puntos de distribución. Para obtener más información sobre cómo asociar recopilaciones a grupos de puntos de distribución, consulte la sección [Manage distribution point groups](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_manage) (Administrar grupos de puntos de distribución) en el tema [Install and configure distribution points for System Center Configuration Manager](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md) (Instalación y configuración de puntos de distribución de System Center Configuration Manager).  
+        > Se muestran solo las recopilaciones que están asociadas a un grupo de puntos de distribución. Para obtener más información sobre cómo asociar recopilaciones a grupos de puntos de distribución, consulte la sección [Manage distribution point groups](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_manage) (Administrar grupos de puntos de distribución) en el tema [Install and configure distribution points for System Center Configuration Manager](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md) (Instalación y configuración de puntos de distribución de System Center Configuration Manager).  
 
-    -   **Punto de distribución**: seleccione un punto de distribución existente y, después, haga clic en **Aceptar**. No se muestran los puntos de distribución que recibieron previamente el contenido.  
+    - **Punto de distribución**: seleccione un punto de distribución existente y, después, haga clic en **Aceptar**. No se muestran los puntos de distribución que recibieron previamente el contenido.  
 
-    -   **Grupo de puntos de distribución**: seleccione un grupo de puntos de distribución existente y, después, haga clic en **Aceptar**. No se muestran los grupos de puntos de distribución que recibieron previamente el contenido.  
+    - **Grupo de puntos de distribución**: seleccione un grupo de puntos de distribución existente y, después, haga clic en **Aceptar**. No se muestran los grupos de puntos de distribución que recibieron previamente el contenido.  
 
     Cuando termine de agregar los destinos del contenido, haga clic en **Siguiente**.  
 
@@ -104,32 +104,32 @@ Utilice el siguiente procedimiento para distribuir contenido en puntos de distri
 9. La página **Confirmación** muestra si el contenido se asignó correctamente a los puntos. Para supervisar la distribución de contenido, consulte [Monitor content you have distributed with System Center Configuration Manager](../../../../core/servers/deploy/configure/monitor-content-you-have-distributed.md) (Supervisar el contenido distribuido con System Center Configuration Manager).  
 
 ##  <a name="bkmk_prestage"></a> Usar contenido preconfigurado  
- Se pueden preconfigurar los archivos de contenido para aplicaciones y tipos de paquetes:  
+Se pueden preconfigurar los archivos de contenido para aplicaciones y tipos de paquetes:  
 
--   En la consola de Configuration Manager, seleccione el contenido que necesite y, después, use el **Asistente para crear archivos de contenido preconfigurados** para crear un archivo de contenido preconfigurado comprimido que contenga los archivos y los metadatos asociados del contenido seleccionado.  
+- En la consola de Configuration Manager, seleccione el contenido que necesite y, después, use el **Asistente para crear archivos de contenido preconfigurados** para crear un archivo de contenido preconfigurado comprimido que contenga los archivos y los metadatos asociados del contenido seleccionado.  
 
--   A continuación puede importar manualmente el contenido en un servidor de sitio, un sitio secundario o un punto de distribución.  
+- A continuación puede importar manualmente el contenido en un servidor de sitio, un sitio secundario o un punto de distribución.  
 
--   Cuando se importa el archivo de contenido preconfigurado en un servidor de sitio, los archivos de contenido se agregan a la biblioteca de contenido del servidor de sitio y, a continuación, se registran en la base de datos del servidor de sitio.  
+- Cuando se importa el archivo de contenido preconfigurado en un servidor de sitio, los archivos de contenido se agregan a la biblioteca de contenido del servidor de sitio y, a continuación, se registran en la base de datos del servidor de sitio.  
 
--   Cuando se importa el archivo de contenido preconfigurado en un punto de distribución, los archivos de contenido se agregan a la biblioteca de contenido del punto de distribución y se envía un mensaje de estado al servidor de sitio para notificar al sitio que el contenido está disponible en el punto de distribución.  
+- Cuando se importa el archivo de contenido preconfigurado en un punto de distribución, los archivos de contenido se agregan a la biblioteca de contenido del punto de distribución y se envía un mensaje de estado al servidor de sitio para notificar al sitio que el contenido está disponible en el punto de distribución.  
 
 **Limitaciones y consideraciones para el contenido preconfigurado:**  
 
--   **Cuando el punto de distribución se encuentra en el servidor de sitio**, no habilite el punto de distribución para contenido preconfigurado. En su lugar, use el procedimiento descrito en [How to prestage content on a distribution point on a site server](#bkmk_dpsiteserver) (Cómo preconfigurar el contenido en un punto de distribución de un servidor de sitio).  
+- **Cuando el punto de distribución se encuentra en el servidor de sitio**, no habilite el punto de distribución para contenido preconfigurado. En su lugar, use el procedimiento descrito en [How to prestage content on a distribution point on a site server](#bkmk_dpsiteserver) (Cómo preconfigurar el contenido en un punto de distribución de un servidor de sitio).  
 
--   **Cuando el punto de distribución está configurado como un punto de distribución de extracción**, no habilite el punto de distribución para contenido preconfigurado. La configuración del contenido preconfigurado para un punto de distribución reemplaza la configuración de punto de distribución de extracción. Un punto de distribución de extracción que está configurado para contenido preconfigurado no extrae contenido del punto de distribución de origen y no recibe contenido del servidor de sitio.  
+- **Cuando el punto de distribución está configurado como un punto de distribución de extracción**, no habilite el punto de distribución para contenido preconfigurado. La configuración del contenido preconfigurado para un punto de distribución reemplaza la configuración de punto de distribución de extracción. Un punto de distribución de extracción que está configurado para contenido preconfigurado no extrae contenido del punto de distribución de origen y no recibe contenido del servidor de sitio.  
 
--   **La biblioteca de contenido se debe crear en el punto de distribución para poder preconfigurar contenido para el punto de distribución**. Distribuya el contenido a través de la red al menos una vez antes de preconfigurar el contenido para el punto de distribución.  
+- **La biblioteca de contenido se debe crear en el punto de distribución para poder preconfigurar contenido para el punto de distribución**. Distribuya el contenido a través de la red al menos una vez antes de preconfigurar el contenido para el punto de distribución.  
 
--   **Cuando se preconfigura contenido para un paquete con una ruta de origen de paquete larga** (por ejemplo, de más de 140 caracteres), es posible que la herramienta de línea de comandos de extracción de contenido no extraiga correctamente el contenido de ese paquete en la biblioteca de contenido.  
+- **Cuando se preconfigura contenido para un paquete con una ruta de origen de paquete larga** (por ejemplo, de más de 140 caracteres), es posible que la herramienta de línea de comandos de extracción de contenido no extraiga correctamente el contenido de ese paquete en la biblioteca de contenido.  
 
 Para obtener información sobre cuándo se deben preconfigurar los archivos de contenido, consulte *Prestaged content* (Contenido preconfigurado) en el tema [Manage network bandwidth for content management](/sccm/core/plan-design/hierarchy/manage-network-bandwidth) (Administración del ancho de banda de red para la administración de contenido).  
 
 Consulte las siguientes secciones para preconfigurar el contenido.  
 
 ###  <a name="BKMK_CreatePrestagedContentFile"></a> Paso 1: Crear un archivo de contenido preconfigurado  
- Se puede crear un archivo de contenido preconfigurado comprimido que contenga los archivos y los metadatos asociados del contenido que se selecciona en la consola de Configuration Manager. Utilice el procedimiento siguiente para crear un archivo de contenido preconfigurado.  
+Se puede crear un archivo de contenido preconfigurado comprimido que contenga los archivos y los metadatos asociados del contenido que se selecciona en la consola de Configuration Manager. Utilice el procedimiento siguiente para crear un archivo de contenido preconfigurado.  
 
 ##### <a name="to-create-a-prestaged-content-file"></a>Para crear un archivo de contenido preconfigurado  
 
@@ -137,26 +137,26 @@ Consulte las siguientes secciones para preconfigurar el contenido.
 
 2.  En el área de trabajo **Biblioteca de software** , seleccione uno de los pasos siguientes para el tipo de contenido que desea preconfigurar:  
 
-    -   **Aplicaciones**: expanda **Administración de aplicaciones**, haga clic en **Aplicaciones** y, después, seleccione las aplicaciones que quiera preconfigurar.  
+    - **Aplicaciones**: expanda **Administración de aplicaciones**, haga clic en **Aplicaciones** y, después, seleccione las aplicaciones que quiera preconfigurar.  
 
-    -   **Paquetes**: expanda **Administración de aplicaciones**, haga clic en **Paquetes** y, después, seleccione los paquetes que quiera preconfigurar.  
+    - **Paquetes**: expanda **Administración de aplicaciones**, haga clic en **Paquetes** y, después, seleccione los paquetes que quiera preconfigurar.  
 
-    -   **Paquetes de controladores**: expanda **Sistemas operativos**, haga clic en **Paquetes de controladores** y, después, seleccione los paquetes de controladores que quiera preconfigurar.  
+    - **Paquetes de controladores**: expanda **Sistemas operativos**, haga clic en **Paquetes de controladores** y, después, seleccione los paquetes de controladores que quiera preconfigurar.  
 
-    -   **Imágenes de sistema operativo**: expanda **Sistemas operativos**, haga clic en **Imágenes de sistema operativo** y, después, seleccione las imágenes de sistema operativo que quiera preconfigurar.  
+    - **Imágenes de sistema operativo**: expanda **Sistemas operativos**, haga clic en **Imágenes de sistema operativo** y, después, seleccione las imágenes de sistema operativo que quiera preconfigurar.  
 
-    -   **Instaladores de sistema operativo**: expanda **Sistemas operativos**, haga clic en **Instaladores de sistema operativo** y, después, seleccione los instaladores de sistema operativo que quiera preconfigurar.  
+    - **Instaladores de sistema operativo**: expanda **Sistemas operativos**, haga clic en **Instaladores de sistema operativo** y, después, seleccione los instaladores de sistema operativo que quiera preconfigurar.  
 
-    -   **Imágenes de arranque**: expanda **Sistemas operativos**, haga clic en **Imágenes de arranque** y, después, seleccione las imágenes de arranque que quiera preconfigurar.  
+    - **Imágenes de arranque**: expanda **Sistemas operativos**, haga clic en **Imágenes de arranque** y, después, seleccione las imágenes de arranque que quiera preconfigurar.  
 
-    -   **Secuencias de tareas**: expanda **Sistemas operativos**, haga clic en **Secuencias de tareas** y, después, seleccione la secuencia de tareas que quiera preconfigurar.  
+    - **Secuencias de tareas**: expanda **Sistemas operativos**, haga clic en **Secuencias de tareas** y, después, seleccione la secuencia de tareas que quiera preconfigurar.  
 
 3.  En la pestaña **Inicio** , en el grupo **Implementación** , haga clic en **Crear archivo de contenido preconfigurado**. Se abre el Asistente para crear archivos de contenido preconfigurados.  
 
     > [!NOTE]  
-    >  **Para aplicaciones**: en la pestaña **Inicio**, en el grupo **Aplicación**, haga clic en **Crear archivo de contenido preconfigurado**.  
+    > **Para aplicaciones**: en la pestaña **Inicio**, en el grupo **Aplicación**, haga clic en **Crear archivo de contenido preconfigurado**.  
     >   
-    >  **Para los paquetes:** en la pestaña **Inicio**, en el grupo &lt;*Nombre del paquete*>, haga clic en **Crear archivo de contenido preconfigurado**.  
+    > **Para los paquetes:** en la pestaña **Inicio**, en el grupo &lt;*Nombre del paquete*>, haga clic en **Crear archivo de contenido preconfigurado**.  
 
 4.  En la página **General** , haga clic en **Examinar**, elija la ubicación del archivo de contenido preconfigurado, especifique el nombre del archivo y, a continuación, haga clic en **Guardar**. Utilice este archivo de contenido preconfigurado en servidores de sitio primario, servidores de sitio secundario o puntos de distribución para importar el contenido y los metadatos.  
 
@@ -178,12 +178,12 @@ Consulte las siguientes secciones para preconfigurar el contenido.
  Una vez preconfigurado el archivo de contenido, asigne el contenido a los puntos de distribución.  
 
 > [!NOTE]  
->  Si utiliza un archivo de contenido preconfigurado para recuperar la biblioteca de contenido de un servidor de sitio y no necesita preconfigurar los archivos de contenido de un punto de distribución, puede omitir este procedimiento.  
+> Si utiliza un archivo de contenido preconfigurado para recuperar la biblioteca de contenido de un servidor de sitio y no necesita preconfigurar los archivos de contenido de un punto de distribución, puede omitir este procedimiento.  
 
  Utilice el siguiente procedimiento para asignar el contenido del archivo de contenido preconfigurado a los puntos de distribución.  
 
 > [!IMPORTANT]  
->  Compruebe que los puntos de distribución que desea preconfigurar están configurados como puntos de distribución preconfigurados o que el contenido se distribuye a los puntos de distribución mediante la red.  
+> Compruebe que los puntos de distribución que desea preconfigurar están configurados como puntos de distribución preconfigurados o que el contenido se distribuye a los puntos de distribución mediante la red.  
 
 ##### <a name="to-assign-the-content-to-distribution-points"></a>Para asignar el contenido a los puntos de distribución  
 
@@ -191,42 +191,42 @@ Consulte las siguientes secciones para preconfigurar el contenido.
 
 2.  En el área de trabajo **Biblioteca de software** , seleccione uno de los pasos siguientes para el tipo de contenido seleccionado cuando creó el archivo de contenido preconfigurado:  
 
-    -   **Aplicaciones**: expanda **Administración de aplicaciones**, haga clic en **Aplicaciones** y, después, seleccione las aplicaciones preconfiguradas.  
+    - **Aplicaciones**: expanda **Administración de aplicaciones**, haga clic en **Aplicaciones** y, después, seleccione las aplicaciones preconfiguradas.  
 
-    -   **Paquetes**: expanda **Administración de aplicaciones**, haga clic en **Paquetes** y, después, seleccione los paquetes preconfigurados.  
+    - **Paquetes**: expanda **Administración de aplicaciones**, haga clic en **Paquetes** y, después, seleccione los paquetes preconfigurados.  
 
-    -   **Paquetes de implementación**: expanda **Actualizaciones de software**, haga clic en **Paquetes de implementación** y, después, seleccione los paquetes de implementación preconfigurados.  
+    - **Paquetes de implementación**: expanda **Actualizaciones de software**, haga clic en **Paquetes de implementación** y, después, seleccione los paquetes de implementación preconfigurados.  
 
-    -   **Paquetes de controladores**: expanda **Sistemas operativos**, haga clic en **Paquetes de controladores** y, después, seleccione los paquetes de controladores preconfigurados.  
+    - **Paquetes de controladores**: expanda **Sistemas operativos**, haga clic en **Paquetes de controladores** y, después, seleccione los paquetes de controladores preconfigurados.  
 
-    -   **Imágenes de sistema operativo**: expanda **Sistemas operativos**, haga clic en **Imágenes de sistema operativo** y, después, seleccione las imágenes de sistema operativo preconfiguradas.  
+    - **Imágenes de sistema operativo**: expanda **Sistemas operativos**, haga clic en **Imágenes de sistema operativo** y, después, seleccione las imágenes de sistema operativo preconfiguradas.  
 
-    -   **Instaladores de sistema operativo**: expanda **Sistemas operativos**, haga clic en **Instaladores de sistema operativo** y, después, seleccione los instaladores de sistema operativo preconfigurados.  
+    - **Instaladores de sistema operativo**: expanda **Sistemas operativos**, haga clic en **Instaladores de sistema operativo** y, después, seleccione los instaladores de sistema operativo preconfigurados.  
 
-    -   **Imágenes de arranque**: expanda **Sistemas operativos**, haga clic en **Imágenes de arranque** y, después, seleccione las imágenes de arranque preconfiguradas.  
+    - **Imágenes de arranque**: expanda **Sistemas operativos**, haga clic en **Imágenes de arranque** y, después, seleccione las imágenes de arranque preconfiguradas.  
 
 3.  En la pestaña **Inicio** , en el grupo **Implementación** , haga clic en **Distribuir contenido**. Se abre el Asistente para distribuir contenido.  
 
 4.  En la página **General**, compruebe que el contenido que aparece es el contenido preconfigurado, elija si quiere que Configuration Manager detecte las dependencias de contenido asociadas al contenido seleccionado y agregue las dependencias a la distribución. Después, haga clic en **Siguiente**.  
 
     > [!NOTE]  
-    >  Puede configurar la opción **Detectar dependencias de contenido asociadas y agregarlas a esta distribución** solo para el tipo de contenido de aplicación. Configuration Manager configura automáticamente esta opción para las secuencias de tareas, y no se puede modificar.  
+    > Puede configurar la opción **Detectar dependencias de contenido asociadas y agregarlas a esta distribución** solo para el tipo de contenido de aplicación. Configuration Manager configura automáticamente esta opción para las secuencias de tareas, y no se puede modificar.  
 
 5.  En la página **Contenido** , si se muestra, compruebe que el contenido que aparece es el contenido que desea distribuir y, a continuación, haga clic en **Siguiente**.  
 
     > [!NOTE]  
-    >  La página **Contenido** se muestra solo cuando la opción **Detectar dependencias de contenido asociadas y agregarlas a esta distribución** está seleccionada en la página **General** del asistente.  
+    > La página **Contenido** se muestra solo cuando la opción **Detectar dependencias de contenido asociadas y agregarlas a esta distribución** está seleccionada en la página **General** del asistente.  
 
 6.  En la página **Destino del contenido** , haga clic en **Agregar**, elija una de las siguientes opciones que incluya los puntos de distribución a preconfigurar y, a continuación, siga el paso asociado:  
 
-    -   **Recopilaciones**: seleccione **Recopilaciones de usuarios** o **Recopilaciones de dispositivos**, haga clic en la recopilación asociada a uno o más grupos de puntos de distribución y, después, haga clic en **Aceptar**.  
+    - **Recopilaciones**: seleccione **Recopilaciones de usuarios** o **Recopilaciones de dispositivos**, haga clic en la recopilación asociada a uno o más grupos de puntos de distribución y, después, haga clic en **Aceptar**.  
 
-        > [!NOTE]  
-        >  Se muestran solo las recopilaciones que están asociadas a un grupo de puntos de distribución.  Para obtener más información, consulte [Manage distribution point groups](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_manage) (Administrar grupos de puntos de distribución) en el tema [Install and configure distribution points for System Center Configuration Manager](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md) (Instalación y configuración de puntos de distribución de System Center Configuration Manager).  
+      > [!NOTE]  
+      > Se muestran solo las recopilaciones que están asociadas a un grupo de puntos de distribución.  Para obtener más información, consulte [Manage distribution point groups](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_manage) (Administrar grupos de puntos de distribución) en el tema [Install and configure distribution points for System Center Configuration Manager](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md) (Instalación y configuración de puntos de distribución de System Center Configuration Manager).  
 
-    -   **Punto de distribución**: seleccione un punto de distribución existente y, después, haga clic en **Aceptar**. No se muestran los puntos de distribución que recibieron previamente el contenido.  
+    - **Punto de distribución**: seleccione un punto de distribución existente y, después, haga clic en **Aceptar**. No se muestran los puntos de distribución que recibieron previamente el contenido.  
 
-    -   **Grupo de puntos de distribución**: seleccione un grupo de puntos de distribución existente y, después, haga clic en **Aceptar**. No se muestran los grupos de puntos de distribución que recibieron previamente el contenido.  
+    - **Grupo de puntos de distribución**: seleccione un grupo de puntos de distribución existente y, después, haga clic en **Aceptar**. No se muestran los grupos de puntos de distribución que recibieron previamente el contenido.  
 
     Cuando termine de agregar los destinos del contenido, haga clic en **Siguiente**.  
 
@@ -237,17 +237,17 @@ Consulte las siguientes secciones para preconfigurar el contenido.
 9. La página **Confirmación** muestra si el contenido se asignó correctamente o no a los puntos de distribución. Para supervisar la distribución de contenido, consulte [Monitor content you have distributed with System Center Configuration Manager](../../../../core/servers/deploy/configure/monitor-content-you-have-distributed.md) (Supervisar el contenido distribuido con System Center Configuration Manager).  
 
 ###  <a name="BKMK_ExportContentFromPrestagedContentFile"></a> Paso 3: Extraer el contenido del archivo de contenido preconfigurado  
- Después de crear el archivo de contenido preconfigurado y asignar el contenido a puntos de distribución, puede extraer los archivos de contenido en la biblioteca de contenido de un servidor de sitio o punto de distribución. Normalmente, se copió el archivo de contenido preconfigurado en una unidad portátil, como una unidad USB, o se grabó el contenido en un medio, como un DVD, y está disponible en la ubicación del servidor de sitio o punto de distribución que necesita el contenido.  
+Después de crear el archivo de contenido preconfigurado y asignar el contenido a puntos de distribución, puede extraer los archivos de contenido en la biblioteca de contenido de un servidor de sitio o punto de distribución. Normalmente, se copió el archivo de contenido preconfigurado en una unidad portátil, como una unidad USB, o se grabó el contenido en un medio, como un DVD, y está disponible en la ubicación del servidor de sitio o punto de distribución que necesita el contenido.  
 
- Utilice el siguiente procedimiento para exportar manualmente los archivos de contenido desde el archivo de contenido preconfigurado mediante la herramienta de línea de comandos de extraer contenido.  
+Utilice el siguiente procedimiento para exportar manualmente los archivos de contenido desde el archivo de contenido preconfigurado mediante la herramienta de línea de comandos de extraer contenido.  
 
 > [!IMPORTANT]  
->  Al ejecutar la herramienta de línea de comandos de extraer contenido, la herramienta crea un archivo temporal mientras crea el archivo de contenido preconfigurado. A continuación, el archivo se copia en la carpeta de destino y se elimina el archivo temporal. Debe tener suficiente espacio en disco para este archivo temporal o se producirá un error en el proceso. El archivo temporal se crea en la siguiente ubicación:  
+> Al ejecutar la herramienta de línea de comandos de extraer contenido, la herramienta crea un archivo temporal mientras crea el archivo de contenido preconfigurado. A continuación, el archivo se copia en la carpeta de destino y se elimina el archivo temporal. Debe tener suficiente espacio en disco para este archivo temporal o se producirá un error en el proceso. El archivo temporal se crea en la siguiente ubicación:  
 >   
->  -   El archivo temporal se crea en la misma carpeta que especificó como carpeta de destino para el archivo de contenido preconfigurado.  
+> - El archivo temporal se crea en la misma carpeta que especificó como carpeta de destino para el archivo de contenido preconfigurado.  
 
 > [!IMPORTANT]  
->  El usuario que ejecuta la herramienta de línea de comandos de extracción de contenido debe tener derechos de **Administrador** en el equipo desde el que va a extraer el contenido preconfigurado.  
+> El usuario que ejecuta la herramienta de línea de comandos de extracción de contenido debe tener derechos de **Administrador** en el equipo desde el que va a extraer el contenido preconfigurado.  
 
 ##### <a name="to-extract-the-content-files-from-the-prestaged-content-file"></a>Para extraer los archivos de contenido del archivo de contenido preconfigurado  
 
@@ -258,18 +258,18 @@ Consulte las siguientes secciones para preconfigurar el contenido.
 3.  Abra el símbolo del sistema y desplácese hasta la ubicación de la carpeta de la herramienta de extraer contenido y el archivo de contenido preconfigurado.  
 
     > [!NOTE]  
-    >  Puede extraer uno o varios archivos de contenido preconfigurado en un servidor de sitio, un servidor de sitio secundario o un punto de distribución.  
+    > Puede extraer uno o varios archivos de contenido preconfigurado en un servidor de sitio, un servidor de sitio secundario o un punto de distribución.  
 
-4.  Escriba **extractcontent /P:**&lt;*PrestagedFileLocation*>**\\**&lt;*PrestagedFileName*> **/S** para importar un solo archivo.  
+4.  Escriba **extractcontent /P:** &lt;*PrestagedFileLocation*> **\\** &lt;*PrestagedFileName*>  **/S** para importar un solo archivo.  
 
-     Escriba **extractcontent /P:**&lt;*PrestagedFileLocation*> **/S** para importar todos los archivos preconfigurados en la carpeta especificada.  
+    Escriba **extractcontent /P:** &lt;*PrestagedFileLocation*>  **/S** para importar todos los archivos preconfigurados en la carpeta especificada.  
 
-     Por ejemplo, escriba **extractcontent /P:D:\PrestagedFiles\MyPrestagedFile.pkgx /S**, donde `D:\PrestagedFiles\` es la ubicación de archivo preconfigurado, `MyPrestagedFile.pkgx` es el nombre de archivo preconfigurado y `/S` indica a Configuration Manager que extraiga solamente los archivos de contenido posteriores a los que ya existen en el punto de distribución.  
+    Por ejemplo, escriba **extractcontent /P:D:\PrestagedFiles\MyPrestagedFile.pkgx /S**, donde `D:\PrestagedFiles\` es la ubicación de archivo preconfigurado, `MyPrestagedFile.pkgx` es el nombre de archivo preconfigurado y `/S` indica a Configuration Manager que extraiga solamente los archivos de contenido posteriores a los que ya existen en el punto de distribución.  
 
-     Cuando se extrae el archivo de contenido preconfigurado en un servidor de sitio, los archivos de contenido se agregan a la biblioteca de contenido del servidor de sitio y, a continuación, el contenido disponible se registra en la base de datos del servidor de sitio. Cuando se exporta el archivo de contenido preconfigurado en un punto de distribución, los archivos de contenido se agregan a la biblioteca de contenido del punto de distribución, el punto de distribución envía un mensaje de estado al servidor de sitio primario principal y, a continuación, el contenido disponible se registra en la base de datos del sitio.  
+    Cuando se extrae el archivo de contenido preconfigurado en un servidor de sitio, los archivos de contenido se agregan a la biblioteca de contenido del servidor de sitio y, a continuación, el contenido disponible se registra en la base de datos del servidor de sitio. Cuando se exporta el archivo de contenido preconfigurado en un punto de distribución, los archivos de contenido se agregan a la biblioteca de contenido del punto de distribución, el punto de distribución envía un mensaje de estado al servidor de sitio primario principal y, a continuación, el contenido disponible se registra en la base de datos del sitio.  
 
     > [!IMPORTANT]  
-    >  En el siguiente escenario, debe actualizar el contenido que extrajo de un archivo de contenido preconfigurado cuando el contenido se actualice a una nueva versión:  
+    > En el siguiente escenario, debe actualizar el contenido que extrajo de un archivo de contenido preconfigurado cuando el contenido se actualice a una nueva versión:  
     >   
     >  1.  Se crea un archivo de contenido preconfigurado para la versión 1 de un paquete.  
     >  2.  Se actualizan los archivos de origen para el paquete con la versión 2.  
@@ -278,9 +278,9 @@ Consulte las siguientes secciones para preconfigurar el contenido.
     > Configuration Manager no distribuye automáticamente la versión 2 del paquete en el punto de distribución. Debe crear un nuevo archivo de contenido preconfigurado que contenga la versión del nuevo archivo y, a continuación, extraer el contenido, actualizar el punto de distribución para distribuir los archivos cambiados o redistribuir todos los archivos en el paquete.  
 
 ###  <a name="bkmk_dpsiteserver"></a> Preconfiguración del contenido en un punto de distribución de un servidor de sitio  
- Al instalar un punto de distribución en un servidor de sitio, debe usar el procedimiento siguiente para preconfigurar correctamente el contenido. Esto se debe a que los archivos de contenido ya están en la biblioteca de contenido.  
+Al instalar un punto de distribución en un servidor de sitio, debe usar el procedimiento siguiente para preconfigurar correctamente el contenido. Esto se debe a que los archivos de contenido ya están en la biblioteca de contenido.  
 
- Si el punto de distribución no está habilitado para contenido preconfigurado o no está ubicado en un servidor de sitio, consulte la sección [Usar contenido preconfigurado](#bkmk_prestage) de este tema.  
+Si el punto de distribución no está habilitado para contenido preconfigurado o no está ubicado en un servidor de sitio, consulte la sección [Usar contenido preconfigurado](#bkmk_prestage) de este tema.  
 
 ##### <a name="to-prestage-content-on-distribution-points-located-on-a-site-server"></a>Para preconfigurar el contenido en puntos de distribución ubicados en un servidor de sitio  
 
@@ -301,23 +301,23 @@ Consulte las siguientes secciones para preconfigurar el contenido.
 4.  En el servidor de sitio, extraiga el contenido del archivo de contenido preconfigurado mediante el [Paso 3: extraer el contenido del archivo de contenido preconfigurado](#BKMK_ExportContentFromPrestagedContentFile) de este tema.  
 
     > [!NOTE]  
-    >  Si el punto de distribución se encuentra en un sitio secundario, espere como mínimo 10 minutos y, después, use una consola de Configuration Manager conectada al sitio primario principal para asignar el contenido al punto de distribución en el sitio secundario.  
+    > Si el punto de distribución se encuentra en un sitio secundario, espere como mínimo 10 minutos y, después, use una consola de Configuration Manager conectada al sitio primario principal para asignar el contenido al punto de distribución en el sitio secundario.  
 
 ##  <a name="bkmk_manage"></a> Administrar el contenido distribuido  
- Dispone de las opciones siguientes para administrar el contenido:  
- - [Actualizar contenido](#update-content)
- - [Redistribuir contenido](#redistribute-content)
- - [Quitar contenido](#remove-content)
- - [Validar contenido](#validate-content)
+Dispone de las opciones siguientes para administrar el contenido:  
+- [Actualizar contenido](#update-content)
+- [Redistribuir contenido](#redistribute-content)
+- [Quitar contenido](#remove-content)
+- [Validar contenido](#validate-content)
 
 ### <a name="update-content"></a>Actualizar contenido
 Cuando la ubicación del archivo de origen de una implementación se actualiza agregando archivos nuevos o reemplaza archivos existentes con una versión nueva, puede actualizar los archivos de contenido en los puntos de distribución mediante la acción **Actualizar puntos de distribución** o **Actualizar contenido**:  
--   Los archivos de contenido se copian de la ruta de acceso del archivo de origen a la biblioteca de contenido en el sitio al que pertenece el origen de contenido del paquete.  
--   La versión del paquete se incrementa.  
--   Cada instancia de la biblioteca de contenido en los servidores de sitio y en los puntos de distribución se actualiza únicamente con los archivos que se cambiaron.  
+- Los archivos de contenido se copian de la ruta de acceso del archivo de origen a la biblioteca de contenido en el sitio al que pertenece el origen de contenido del paquete.  
+- La versión del paquete se incrementa.  
+- Cada instancia de la biblioteca de contenido en los servidores de sitio y en los puntos de distribución se actualiza únicamente con los archivos que se cambiaron.  
 
 > [!WARNING]  
->  La versión del paquete para las aplicaciones siempre es 1. Cuando se actualiza el contenido para un tipo de implementación de aplicaciones, Configuration Manager crea un nuevo identificador de contenido para el tipo de implementación y el paquete hace referencia al nuevo identificador de contenido.  
+> La versión del paquete para las aplicaciones siempre es 1. Cuando se actualiza el contenido para un tipo de implementación de aplicaciones, Configuration Manager crea un nuevo identificador de contenido para el tipo de implementación y el paquete hace referencia al nuevo identificador de contenido.  
 
 #### <a name="to-update-content-on-distribution-points"></a>Para actualizar contenido en puntos de distribución  
 
@@ -325,36 +325,36 @@ Cuando la ubicación del archivo de origen de una implementación se actualiza a
 
 2.  En el área de trabajo **Biblioteca de software** , seleccione uno de los siguientes pasos para el tipo de contenido que desea distribuir:  
 
-    -   **Aplicaciones**: expanda **Administración de aplicaciones** > **Aplicaciones** y, después, seleccione las aplicaciones que quiera distribuir. Haga clic en la pestaña **Tipos de implementación** y, a continuación, seleccione el tipo de implementación que desea actualizar.  
+    - **Aplicaciones**: expanda **Administración de aplicaciones** > **Aplicaciones** y, después, seleccione las aplicaciones que quiera distribuir. Haga clic en la pestaña **Tipos de implementación** y, a continuación, seleccione el tipo de implementación que desea actualizar.  
 
-    -   **Paquetes**: expanda **Administración de aplicaciones** > **Paquetes** y, después, seleccione los paquetes que quiera actualizar.  
+    - **Paquetes**: expanda **Administración de aplicaciones** > **Paquetes** y, después, seleccione los paquetes que quiera actualizar.  
 
-    -   **Paquetes de implementación**: expanda **Actualizaciones de software** > **Paquetes de implementación** y, después, seleccione los paquetes de implementación que quiera actualizar.  
+    - **Paquetes de implementación**: expanda **Actualizaciones de software** > **Paquetes de implementación** y, después, seleccione los paquetes de implementación que quiera actualizar.  
 
-    -   **Paquetes de controladores**: expanda **Sistemas operativos** > **Paquetes de controladores** y, después, seleccione los paquetes de controladores que quiera actualizar.  
+    - **Paquetes de controladores**: expanda **Sistemas operativos** > **Paquetes de controladores** y, después, seleccione los paquetes de controladores que quiera actualizar.  
 
-    -   **Imágenes de sistema operativo**: expanda **Sistemas operativos** > **Imágenes de sistema operativo** y, después, seleccione las imágenes de sistema operativo que quiera actualizar.  
+    - **Imágenes de sistema operativo**: expanda **Sistemas operativos** > **Imágenes de sistema operativo** y, después, seleccione las imágenes de sistema operativo que quiera actualizar.  
 
-    -   **Instaladores de sistema operativo**: expanda **Sistemas operativos** > **Instaladores de sistema operativo** y, después, seleccione los instaladores de sistema operativo que quiera actualizar.  
+    - **Instaladores de sistema operativo**: expanda **Sistemas operativos** > **Instaladores de sistema operativo** y, después, seleccione los instaladores de sistema operativo que quiera actualizar.  
 
-    -   **Imágenes de arranque**: expanda **Sistemas operativos** >  **Imágenes de arranque** y, después, seleccione las imágenes de arranque que quiera actualizar.  
+    - **Imágenes de arranque**: expanda **Sistemas operativos** >  **Imágenes de arranque** y, después, seleccione las imágenes de arranque que quiera actualizar.  
 
 3.  En la pestaña **Inicio** , en el grupo **Implementación** , haga clic en **Actualizar puntos de distribución**y, a continuación, haga clic en **Aceptar** para confirmar que desea actualizar el contenido.  
 
     > [!NOTE]  
-    >  Para actualizar el contenido para las aplicaciones, haga clic en la pestaña **Tipos de implementación** , haga clic con el botón secundario en el tipo de implementación, haga clic en **Actualizar contenido**y, a continuación, haga clic en **Aceptar** para confirmar que desea actualizar el contenido.  
+    > Para actualizar el contenido para las aplicaciones, haga clic en la pestaña **Tipos de implementación** , haga clic con el botón secundario en el tipo de implementación, haga clic en **Actualizar contenido**y, a continuación, haga clic en **Aceptar** para confirmar que desea actualizar el contenido.  
 
     > [!NOTE]  
-    >  Cuando se actualiza contenido para imágenes de arranque, se abre el Asistente para administrar puntos de distribución. Revise la información de la página **Resumen** y, a continuación, complete el asistente para actualizar el contenido.  
+    > Cuando se actualiza contenido para imágenes de arranque, se abre el Asistente para administrar puntos de distribución. Revise la información de la página **Resumen** y, a continuación, complete el asistente para actualizar el contenido.  
 
 ### <a name="redistribute-content"></a>Redistribuir contenido
 Puede redistribuir un paquete para copiar todos los archivos de contenido del paquete en puntos de distribución o grupos de puntos de distribución y así sobrescribir los archivos existentes.  
 
- Use esta operación para reparar archivos de contenido del paquete o volver a enviar el contenido cuando se produce un error en la distribución inicial. Puede redistribuir un paquete desde:  
+Use esta operación para reparar archivos de contenido del paquete o volver a enviar el contenido cuando se produce un error en la distribución inicial. Puede redistribuir un paquete desde:  
 
--   Las propiedades del paquete  
--   Las propiedades del punto de distribución  
--   Las propiedades del grupo de puntos de distribución  
+- Las propiedades del paquete  
+- Las propiedades del punto de distribución  
+- Las propiedades del grupo de puntos de distribución  
 
 
 #### <a name="to-redistribute-content-from-package-properties"></a>Para redistribuir contenido de las propiedades del paquete  
@@ -363,19 +363,19 @@ Puede redistribuir un paquete para copiar todos los archivos de contenido del pa
 
 2.  En el área de trabajo **Biblioteca de software** , seleccione uno de los siguientes pasos para el tipo de contenido que desea distribuir:  
 
-    -   **Aplicaciones**: expanda **Administración de aplicaciones** >  **Aplicaciones** y, después, seleccione la aplicación que quiera redistribuir.  
+    - **Aplicaciones**: expanda **Administración de aplicaciones** >  **Aplicaciones** y, después, seleccione la aplicación que quiera redistribuir.  
 
-    -   **Paquetes**: expanda **Administración de aplicaciones** > **Paquetes** y, después, seleccione el paquete que quiera redistribuir.  
+    - **Paquetes**: expanda **Administración de aplicaciones** > **Paquetes** y, después, seleccione el paquete que quiera redistribuir.  
 
-    -   **Paquetes de implementación**: expanda **Actualizaciones de software** >  **Paquetes de implementación** y, después, seleccione el paquete de implementación que quiera redistribuir.  
+    - **Paquetes de implementación**: expanda **Actualizaciones de software** >  **Paquetes de implementación** y, después, seleccione el paquete de implementación que quiera redistribuir.  
 
-    -   **Paquetes de controladores**: expanda **Sistemas operativos** > **Paquetes de controladores** y, después, seleccione el paquete de controladores que quiera redistribuir.  
+    - **Paquetes de controladores**: expanda **Sistemas operativos** > **Paquetes de controladores** y, después, seleccione el paquete de controladores que quiera redistribuir.  
 
-    -   **Imágenes de sistema operativo**: expanda **Sistemas operativos** > **Imágenes de sistema operativo** y, después, seleccione la imagen de sistema operativo que quiera redistribuir.  
+    - **Imágenes de sistema operativo**: expanda **Sistemas operativos** > **Imágenes de sistema operativo** y, después, seleccione la imagen de sistema operativo que quiera redistribuir.  
 
-    -   **Instaladores de sistema operativo**: expanda **Sistemas operativos** > **Instaladores de sistema operativo** y, después, seleccione el instalador de sistema operativo que quiera redistribuir.  
+    - **Instaladores de sistema operativo**: expanda **Sistemas operativos** > **Instaladores de sistema operativo** y, después, seleccione el instalador de sistema operativo que quiera redistribuir.  
 
-    -   **Imágenes de arranque**: expanda **Sistemas operativos** >  **Imágenes de arranque** y, después, seleccione la imagen de arranque que quiera redistribuir.  
+    - **Imágenes de arranque**: expanda **Sistemas operativos** >  **Imágenes de arranque** y, después, seleccione la imagen de arranque que quiera redistribuir.  
 
 3.  En la pestaña **Inicio** , en el grupo **Propiedades** , haga clic en **Propiedades**.  
 
@@ -402,7 +402,7 @@ Puede redistribuir un paquete para copiar todos los archivos de contenido del pa
 4.  Haga clic en la pestaña **Contenido** , seleccione el contenido que desea redistribuir, haga clic en **Redistribuir**y, a continuación, haga clic en **Aceptar**.  
 
     > [!IMPORTANT]  
-    >  El contenido del paquete se redistribuye a todos los puntos de distribución del grupo de puntos de distribución.  
+    > El contenido del paquete se redistribuye a todos los puntos de distribución del grupo de puntos de distribución.  
 
 
 #### <a name="use-the-sdk-to-force-replication-of-content"></a>Usar el SDK para forzar la replicación de contenido
@@ -415,9 +415,9 @@ Para obtener más información sobre esta opción del SDK, consulte [RetryConten
 ### <a name="remove-content"></a>Quitar contenido
 Cuando ya no necesite el contenido en los puntos de distribución, puede quitar los archivos de contenido del punto de distribución.  
 
--   Las propiedades del paquete  
--   Las propiedades del punto de distribución  
--   Las propiedades del grupo de puntos de distribución  
+- Las propiedades del paquete  
+- Las propiedades del punto de distribución  
+- Las propiedades del grupo de puntos de distribución  
 
 Sin embargo, cuando el contenido está asociado a otro paquete que se distribuyó al mismo punto de distribución, no se puede quitar el contenido.  
 
@@ -427,19 +427,19 @@ Sin embargo, cuando el contenido está asociado a otro paquete que se distribuy�
 
 2.  En el área de trabajo **Biblioteca de software** , seleccione uno de los pasos siguientes para el tipo de contenido que desea eliminar:  
 
-    -   **Aplicaciones**: expanda **Administración de aplicaciones** > **Aplicaciones** y, después, seleccione la aplicación que quiera quitar.  
+    - **Aplicaciones**: expanda **Administración de aplicaciones** > **Aplicaciones** y, después, seleccione la aplicación que quiera quitar.  
 
-    -   **Paquetes**: expanda **Administración de aplicaciones** > **Paquetes** y, después, seleccione el paquete que quiera quitar.  
+    - **Paquetes**: expanda **Administración de aplicaciones** > **Paquetes** y, después, seleccione el paquete que quiera quitar.  
 
-    -   **Paquetes de implementación**: expanda **Actualizaciones de software** > **Paquetes de implementación** y, después, seleccione el paquete de implementación que quiera quitar.  
+    - **Paquetes de implementación**: expanda **Actualizaciones de software** > **Paquetes de implementación** y, después, seleccione el paquete de implementación que quiera quitar.  
 
-    -   **Paquetes de controladores**: expanda **Sistemas operativos** > **Paquetes de controladores** y, después, seleccione el paquete de controladores que quiera quitar.  
+    - **Paquetes de controladores**: expanda **Sistemas operativos** > **Paquetes de controladores** y, después, seleccione el paquete de controladores que quiera quitar.  
 
-    -   **Imágenes de sistema operativo**: expanda **Sistemas operativos** > **Imágenes de sistema operativo** y, después, seleccione la imagen de sistema operativo que quiera quitar.  
+    - **Imágenes de sistema operativo**: expanda **Sistemas operativos** > **Imágenes de sistema operativo** y, después, seleccione la imagen de sistema operativo que quiera quitar.  
 
-    -   **Instaladores de sistema operativo**: expanda **Sistemas operativos** > **Instaladores de sistema operativo** y, después, seleccione el instalador de sistema operativo que quiera quitar.  
+    - **Instaladores de sistema operativo**: expanda **Sistemas operativos** > **Instaladores de sistema operativo** y, después, seleccione el instalador de sistema operativo que quiera quitar.  
 
-    -   **Imágenes de arranque**: expanda **Sistemas operativos** > **Imágenes de arranque** y, después, seleccione la imagen de arranque que quiera quitar.  
+    - **Imágenes de arranque**: expanda **Sistemas operativos** > **Imágenes de arranque** y, después, seleccione la imagen de arranque que quiera quitar.  
 
 3.  En la pestaña **Inicio** , en el grupo **Propiedades** , haga clic en **Propiedades**.  
 
@@ -469,9 +469,9 @@ Sin embargo, cuando el contenido está asociado a otro paquete que se distribuy�
 ### <a name="validate-content"></a>Validar contenido
 El proceso de validación de contenido comprueba la integridad de los archivos de contenido en puntos de distribución. Habilite la validación de contenido según una programación, o bien inicie manualmente la validación de contenido desde las propiedades de los paquetes y puntos de distribución.  
 
- Cuando se inicia el proceso de validación del contenido, Configuration Manager comprueba los archivos de contenido en puntos de distribución y, si el hash de archivo es inesperado para los archivos del punto de distribución, Configuration Manager crea un mensaje de estado que puede revisar en el área de trabajo **Supervisión**.  
+Cuando se inicia el proceso de validación del contenido, Configuration Manager comprueba los archivos de contenido en puntos de distribución y, si el hash de archivo es inesperado para los archivos del punto de distribución, Configuration Manager crea un mensaje de estado que puede revisar en el área de trabajo **Supervisión**.  
 
- Para obtener más información sobre la configuración de la programación de la validación de contenido, consulte la sección [Distribution point configurations](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_configs) (Configuraciones de punto de distribución) del tema [Install and configure distribution points for System Center Configuration Manager](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md) (Instalación y configuración de puntos de distribución de System Center Configuration Manager).  
+Para obtener más información sobre la configuración de la programación de la validación de contenido, consulte la sección [Distribution point configurations](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_configs) (Configuraciones de punto de distribución) del tema [Install and configure distribution points for System Center Configuration Manager](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md) (Instalación y configuración de puntos de distribución de System Center Configuration Manager).  
 
 
 #### <a name="to-initiate-content-validation-for-all-content-on-a-distribution-point"></a>Para iniciar la validación de todo el contenido en un punto de distribución  
@@ -492,19 +492,19 @@ El proceso de validación de contenido comprueba la integridad de los archivos d
 
 2.  En el área de trabajo **Biblioteca de software** , seleccione uno de los pasos siguientes para el tipo de contenido que desea validar:  
 
-    -   **Aplicaciones**: expanda **Administración de aplicaciones** > **Aplicaciones** y, después, seleccione la aplicación que quiera validar.  
+    - **Aplicaciones**: expanda **Administración de aplicaciones** > **Aplicaciones** y, después, seleccione la aplicación que quiera validar.  
 
-    -   **Paquetes**: expanda **Administración de aplicaciones** > **Paquetes** y, después, seleccione el paquete que quiera validar.  
+    - **Paquetes**: expanda **Administración de aplicaciones** > **Paquetes** y, después, seleccione el paquete que quiera validar.  
 
-    -   **Paquetes de implementación**: expanda **Actualizaciones de software** > **Paquetes de implementación** y, después, seleccione el paquete de implementación que quiera validar.  
+    - **Paquetes de implementación**: expanda **Actualizaciones de software** > **Paquetes de implementación** y, después, seleccione el paquete de implementación que quiera validar.  
 
-    -   **Paquetes de controladores**: expanda **Sistemas operativos** > **Paquetes de controladores** y, después, seleccione el paquete de controladores que quiera validar.  
+    - **Paquetes de controladores**: expanda **Sistemas operativos** > **Paquetes de controladores** y, después, seleccione el paquete de controladores que quiera validar.  
 
-    -   **Imágenes de sistema operativo**: expanda **Sistemas operativos** > **Imágenes de sistema operativo** y, después, seleccione la imagen de sistema operativo que quiera validar.  
+    - **Imágenes de sistema operativo**: expanda **Sistemas operativos** > **Imágenes de sistema operativo** y, después, seleccione la imagen de sistema operativo que quiera validar.  
 
-    -   **Instaladores de sistema operativo**: expanda **Sistemas operativos** >  **Instaladores de sistema operativo** y, después, seleccione el instalador de sistema operativo que quiera validar.  
+    - **Instaladores de sistema operativo**: expanda **Sistemas operativos** >  **Instaladores de sistema operativo** y, después, seleccione el instalador de sistema operativo que quiera validar.  
 
-    -   **Imágenes de arranque**: expanda **Sistemas operativos** > **Imágenes de arranque** y, después, seleccione la imagen de arranque que quiera preconfigurar.  
+    - **Imágenes de arranque**: expanda **Sistemas operativos** > **Imágenes de arranque** y, después, seleccione la imagen de arranque que quiera preconfigurar.  
 
 3.  En la pestaña **Inicio** , en el grupo **Propiedades** , haga clic en **Propiedades**.  
 

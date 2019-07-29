@@ -1,8 +1,8 @@
 ---
 title: Creación de un laboratorio en Azure
 titleSuffix: Configuration Manager
-description: Automatización de la creación de un laboratorio de Configuration Manager Technical Preview con plantillas de Azure
-ms.date: 03/18/2019
+description: Automatización de la creación de un laboratorio de Configuration Manager Technical Preview o de un laboratorio de evaluación de la rama actual con plantillas de Azure
+ms.date: 07/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,22 +11,25 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aeef8e447d646df183f7f2075954e381b08d8c93
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 0c4c565d3c1754ce60ec8f9b7d5dcd2d487f8db1
+ms.sourcegitcommit: cdad3ca82018f1755e5186f8949a898cd201b565
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499734"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68411485"
 ---
-# <a name="create-a-configuration-manager-technical-preview-lab-in-azure"></a>Creación de un laboratorio de Configuration Manager Technical Preview en Azure
+# <a name="create-a-configuration-manager-lab-in-azure"></a>Creación de un laboratorio de Configuration Manager en Azure
 
 *Se aplica a: System Center Configuration Manager (Technical Preview)*
 
 <!--3556017-->
 
-En esta guía se describe cómo crear un entorno de laboratorio de Configuration Manager en Microsoft Azure. Usa plantillas de Azure para simplificar y automatizar la creación de un laboratorio con recursos de Azure. Mediante este proceso se instala la versión más reciente de la rama Technical Preview de Configuration Manager. 
+En esta guía se describe cómo crear un entorno de laboratorio de Configuration Manager en Microsoft Azure. Usa plantillas de Azure para simplificar y automatizar la creación de un laboratorio con recursos de Azure. Se proporcionan dos plantillas de Azure: 
 
-Para más información sobre la rama actual de Configuration Manager, vea [Configuration Manager en Azure - Preguntas más frecuentes](/sccm/core/understand/configuration-manager-on-azure).
+- La plantilla de Azure de la rama Technical Preview de Configuration Manager instala la versión más reciente de la rama Technical Preview de Configuration Manager.
+- La plantilla de Azure de la rama actual de Configuration Manager instala la evaluación de la versión más reciente de la rama actual de Configuration Manager. 
+
+Para más información, consulte [Configuration Manager en Azure](/sccm/core/understand/configuration-manager-on-azure).
 
 
 
@@ -44,7 +47,7 @@ Para este proceso se necesita una suscripción de Azure en la que poder crear es
 
 ## <a name="process"></a>Proceso
 
-1. Vaya a la [plantilla de Configuration Manager](https://azure.microsoft.com/resources/templates/sccm-technicalpreview/).  
+1. Vaya a [la plantilla de la rama Technical Preview de Configuration Manager](https://azure.microsoft.com/resources/templates/sccm-technicalpreview/) o [la plantilla de la rama actual de Configuration Manager](https://azure.microsoft.com/resources/templates/sccm-currentbranch/).  
 
 2. Seleccione **Implementar en Azure** y se abrirá Azure Portal.  
 
@@ -88,17 +91,17 @@ Para conectarse a las máquinas virtuales, consiga primero de Azure Portal las d
 ## <a name="azure-vm-info"></a>Información de máquina virtual de Azure
 
 Las tres máquinas virtuales tienen estas especificaciones:
-- Standard_D2s_v3, con CPU de doble núcleo y 8 GB de memoria  
-- Windows Server 2016, Datacenter Edition
 - 150 GB de espacio en disco
 - Una dirección IP pública y una privada. Las direcciones IP públicas se encuentran en un grupo de seguridad de red que solo permite conexiones a Escritorio remoto en el puerto TCP 3389. 
 
 El prefijo que especificó en la plantilla de implementación es el prefijo de nombre de la máquina virtual. Por ejemplo, si establece el prefijo "contoso", el nombre de la máquina de controlador de dominio es `contosoDC`.
 
 
-### `<prefix>DC`
+### `<prefix>DC01`
 
-Controlador de dominio de Active Directory
+- Controlador de dominio de Active Directory
+- Standard_B2s, con dos CPU y 4 GB de memoria
+- Windows Server 2019, Datacenter Edition
 
 #### <a name="windows-features-and-roles"></a>Roles y características de Windows
 - Active Directory Domain Services (ADDS)
@@ -106,8 +109,10 @@ Controlador de dominio de Active Directory
 - Compresión diferencial remota (RDC)
 
 
-### `<prefix>PS1`
+### `<prefix>PS01`
 
+- Standard_B2ms, con dos CPU y 8 GB de memoria
+- Windows Server 2016, Datacenter Edition
 - SQL Server
 - Windows 10 ADK con Windows PE 
 - Sitio primario de Configuration Manager
@@ -118,8 +123,10 @@ Controlador de dominio de Active Directory
 - Internet Information Service (IIS)
 
 
-### `<prefix>DPMP`
+### `<prefix>DPMP01`
 
+- Standard_B2s, con dos CPU y 4 GB de memoria
+- Windows Server 2019, Datacenter Edition
 - Punto de distribución
 - Punto de administración
 
@@ -129,3 +136,8 @@ Controlador de dominio de Active Directory
 - Internet Information Service (IIS)
 - Servicio de transferencia inteligente en segundo plano (BITS)
 
+### `<prefix>CL01`
+
+- Solo para la plantilla de evaluación de la rama actual de Configuration Manager
+- Windows 10
+- Cliente de Configuration Manager

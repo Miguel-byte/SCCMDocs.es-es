@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a6d93fcc35a6d038b03a0829c6fe66ecc50a5446
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: d350c99c1f09f79850f1bc532a5a75c2db454d3d
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56140286"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339084"
 ---
 # <a name="prerequisites-for-deploying-clients-to-windows-computers-in-configuration-manager"></a>Requisitos previos para la implementación de clientes en equipos Windows con Configuration Manager
 
@@ -99,26 +99,26 @@ Los siguientes requisitos previos son específicos para los distintos métodos d
 
 #### <a name="client-push-installation"></a>Instalación de inserción de cliente  
 
-   -   El sitio usa cuentas de instalación de inserción de cliente para conectarse a los equipos para instalar al cliente. Especifique estas cuentas en la pestaña **Cuentas** de las propiedades de instalación de inserción de cliente. La cuenta debe ser miembro del grupo de administradores locales del equipo de destino.  
+-   El sitio usa cuentas de instalación de inserción de cliente para conectarse a los equipos para instalar al cliente. Especifique estas cuentas en la pestaña **Cuentas** de las propiedades de instalación de inserción de cliente. La cuenta debe ser miembro del grupo de administradores locales del equipo de destino.  
 
-         Si no se especifica una cuenta de instalación de inserción de cliente, se usa la cuenta de equipo del servidor de sitio.  
+      Si no se especifica una cuenta de instalación de inserción de cliente, se usa la cuenta de equipo del servidor de sitio.  
 
-   -   El sitio debe detectar el equipo en el que se va a instalar al cliente. Se necesita al menos un método de detección de Configuration Manager.  
+-   El sitio debe detectar el equipo en el que se va a instalar al cliente. Se necesita al menos un método de detección de Configuration Manager.  
 
-   -   El equipo tiene un recurso compartido ADMIN$.  
+-   El equipo tiene un recurso compartido ADMIN$.  
 
-   -   Para insertar de forma automática el cliente de Configuration Manager en los recursos detectados, seleccione la opción **Habilitar la instalación de inserción de cliente en recursos asignados** en las propiedades de instalación de inserción de cliente.  
+-   Para insertar de forma automática el cliente de Configuration Manager en los recursos detectados, seleccione la opción **Habilitar la instalación de inserción de cliente en recursos asignados** en las propiedades de instalación de inserción de cliente.  
 
-   -   El equipo cliente debe comunicarse con un punto de distribución o un punto de administración para descargar los archivos de código fuente.  
+-   El equipo cliente debe comunicarse con un punto de distribución o un punto de administración para descargar los archivos de código fuente.  
 
-   -   A partir de la versión 1806, cuando se requiere autenticación mutua de Kerberos, los clientes deben estar en un bosque de Active Directory de confianza. Kerberos en Windows se basa en Active Directory para la autenticación mutua.<!--1358204-->  
+-   A partir de la versión 1806, cuando se requiere autenticación mutua de Kerberos, los clientes deben estar en un bosque de Active Directory de confianza. Kerberos en Windows se basa en Active Directory para la autenticación mutua.<!--1358204-->  
 
 
 Para usar la inserción de cliente, necesita los permisos de seguridad siguientes:  
 
-   -   Para configurar la cuenta de instalación de inserción de cliente: Permiso **Modificar** y **Leer** para el objeto **Sitio**.  
+-   Para configurar la cuenta de instalación de inserción de cliente: Permiso **Modificar** y **Leer** para el objeto **Sitio**.  
 
-   -   Para utilizar Inserción del cliente para instalar el cliente en colecciones, dispositivos y consultas: Permiso **Modificar recurso** y **Leer** para el objeto **Recopilación**.  
+-   Para utilizar Inserción del cliente para instalar el cliente en colecciones, dispositivos y consultas: Permiso **Modificar recurso** y **Leer** para el objeto **Recopilación**.  
 
 
 El rol de seguridad predeterminado **Administrador de infraestructura** incluye los permisos necesarios para administrar la instalación de inserción de cliente.  
@@ -126,11 +126,11 @@ El rol de seguridad predeterminado **Administrador de infraestructura** incluye 
 
 #### <a name="software-update-point-based-installation"></a>Instalación basada en el punto de actualización de software  
 
-   -   Si no se ha ampliado el esquema de Active Directory, o bien se están instalando los clientes desde otro bosque, use la directiva de grupo para aprovisionar los parámetros de instalación para CCMSetup.exe. Para obtener más información, vea [Cómo aprovisionar propiedades de instalación de cliente](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision).  
+-   Si no se ha ampliado el esquema de Active Directory, o bien se están instalando los clientes desde otro bosque, use la directiva de grupo para aprovisionar los parámetros de instalación para CCMSetup.exe. Para obtener más información, vea [Cómo aprovisionar propiedades de instalación de cliente](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision).  
 
-   -   Publique el cliente de Configuration Manager en el punto de actualización de software.  
+-   Publique el cliente de Configuration Manager en el punto de actualización de software.  
 
-   -   Para descargar los archivos de código fuente, el equipo cliente debe comunicarse con un punto de distribución o un punto de administración.  
+-   Para descargar los archivos de código fuente, el equipo cliente debe comunicarse con un punto de distribución o un punto de administración.  
 
 
 Para los permisos de seguridad necesarios para administrar actualizaciones de software de Configuration Manager, vea [Requisitos previos para las actualizaciones de software](/sccm/sum/plan-design/prerequisites-for-software-updates).  
@@ -138,9 +138,9 @@ Para los permisos de seguridad necesarios para administrar actualizaciones de so
 
 #### <a name="group-policy-based-installation"></a>Instalación basada en directivas de grupo  
 
-   -   Si no se ha ampliado el esquema de Active Directory, o bien se están instalando los clientes desde otro bosque, use la directiva de grupo para aprovisionar los parámetros de instalación para CCMSetup.exe. Para obtener más información, vea [Cómo aprovisionar propiedades de instalación de cliente](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision).  
+-   Si no se ha ampliado el esquema de Active Directory, o bien se están instalando los clientes desde otro bosque, use la directiva de grupo para aprovisionar los parámetros de instalación para CCMSetup.exe. Para obtener más información, vea [Cómo aprovisionar propiedades de instalación de cliente](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision).  
 
-   -   Para descargar los archivos de código fuente, el equipo cliente debe comunicarse con un punto de distribución o un punto de administración.  
+-   Para descargar los archivos de código fuente, el equipo cliente debe comunicarse con un punto de distribución o un punto de administración.  
 
 
 #### <a name="logon-script-based-installation"></a>Instalación de inicio de sesión basado en scripts  
@@ -155,15 +155,15 @@ Para descargar los archivos de código fuente, el equipo cliente debe comunicars
 
 #### <a name="microsoft-intune-mdm-installation"></a>Instalación de MDM de Microsoft Intune
 
- - Requiere una suscripción a Microsoft Intune y las licencias adecuadas.  
+- Requiere una suscripción a Microsoft Intune y las licencias adecuadas.  
 
- - Requiere que el dispositivo tenga acceso a Internet, incluso si no está basado en Internet.  
+- Requiere que el dispositivo tenga acceso a Internet, incluso si no está basado en Internet.  
 
- - Según el caso de uso, también se pueden requerir una o las dos tecnologías siguientes:  
+- Según el caso de uso, también se pueden requerir una o las dos tecnologías siguientes:  
 
-     - Azure Active Directory  
+    - Azure Active Directory  
 
-     - Puerta de enlace de administración en la nube  
+    - Puerta de enlace de administración en la nube  
 
 
 #### <a name="workgroup-computer-installation"></a>Instalación de equipo de grupo de trabajo  
@@ -175,9 +175,9 @@ Para obtener más información sobre cómo configurar la cuenta de acceso a la r
 
 #### <a name="software-distribution-based-installation-for-upgrades-only"></a>Instalación de software basada en distribución (para actualizaciones únicamente)  
 
-   -   Si no se ha ampliado el esquema de Active Directory, o bien se están instalando los clientes desde otro bosque, use la directiva de grupo para aprovisionar los parámetros de instalación para CCMSetup.exe. Para obtener más información, vea [Cómo aprovisionar propiedades de instalación de cliente](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision).   
+-   Si no se ha ampliado el esquema de Active Directory, o bien se están instalando los clientes desde otro bosque, use la directiva de grupo para aprovisionar los parámetros de instalación para CCMSetup.exe. Para obtener más información, vea [Cómo aprovisionar propiedades de instalación de cliente](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision).   
 
-   -   Para descargar los archivos de código fuente, el equipo cliente debe comunicarse con un punto de distribución o un punto de administración.  
+-   Para descargar los archivos de código fuente, el equipo cliente debe comunicarse con un punto de distribución o un punto de administración.  
 
 
 Para consultar los permisos de seguridad necesarios para actualizar el cliente de Configuration Manager mediante la administración de aplicaciones, consulte [Seguridad y privacidad de la administración de aplicaciones](/sccm/apps/plan-design/security-and-privacy-for-application-management).  
