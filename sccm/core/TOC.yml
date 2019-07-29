@@ -77,6 +77,8 @@
           href: plan-design/changes/what-has-changed-from-configuration-manager-2012.md
         - name: Novedades de versiones incrementales
           href: plan-design/changes/whats-new-incremental-versions.md
+        - name: Novedades de la versión 1906
+          href: plan-design/changes/whats-new-in-version-1906.md
         - name: Novedades de la versión 1902
           href: plan-design/changes/whats-new-in-version-1902.md
         - name: Novedades de la versión 1810
@@ -85,8 +87,6 @@
           href: plan-design/changes/whats-new-in-version-1806.md
         - name: Novedades de la versión 1802
           href: plan-design/changes/whats-new-in-version-1802.md
-        - name: Novedades de la versión 1710
-          href: plan-design/changes/whats-new-in-version-1710.md
         - name: Elementos eliminados y en desuso
           items:
             - name: Información general de elementos eliminados y en desuso
@@ -151,6 +151,8 @@
               href: plan-design/hierarchy/manage-content-library-flowchart.md
             - name: Herramienta de limpieza de la biblioteca de contenido
               href: plan-design/hierarchy/content-library-cleanup-tool.md
+            - name: Servidor de caché en la red de optimización de distribución
+              href: plan-design/hierarchy/delivery-optimization-in-network-cache.md
             - name: Caché del mismo nivel para clientes de Configuration Manager
               href: plan-design/hierarchy/client-peer-cache.md
             - name: Administrador de transferencia de paquetes
@@ -193,6 +195,8 @@
           href: plan-design/diagnostics/diagnostics-and-usage-data.md
         - name: Cómo se usan los datos de uso y diagnóstico
           href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md
+        - name: Datos de diagnóstico de la versión 1906
+          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1906.md
         - name: Datos de diagnóstico de la versión 1902
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1902.md
         - name: Datos de diagnóstico de la versión 1810
@@ -201,8 +205,6 @@
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1806.md
         - name: Datos de diagnóstico de la versión 1802
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1802.md
-        - name: Datos de diagnóstico de la versión 1710
-          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1710.md
         - name: Cómo se recopilan los datos de uso y diagnóstico
           href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md
         - name: Visualización de datos de diagnóstico y uso
@@ -421,7 +423,9 @@
           href: plan-design/hierarchy/interoperability-between-different-versions.md
         - name: Paquetes de idioma
           href: servers/deploy/install/language-packs.md
-        - name: Archivos de registro
+        - name: Acerca de los archivo de registro
+          href: plan-design/hierarchy/about-log-files.md
+        - name: Referencia del archivo de registro
           href: plan-design/hierarchy/log-files.md
         - name: Notas de la versión
           href: servers/deploy/install/release-notes.md
@@ -479,6 +483,8 @@
           href: servers/manage/use-the-update-registration-tool-to-import-hotfixes.md
         - name: Uso del instalador de revisiones
           href: servers/manage/use-the-hotfix-installer-to-install-updates.md
+        - name: Lista de comprobación para la instalación de la actualización 1906
+          href: servers/manage/checklist-for-installing-update-1906.md
         - name: Lista de comprobación para la instalación de la actualización 1902
           href: servers/manage/checklist-for-installing-update-1902.md
         - name: Lista de comprobación para la instalación de la actualización 1810
@@ -487,8 +493,6 @@
           href: servers/manage/checklist-for-installing-update-1806.md
         - name: Lista de comprobación para la instalación de la actualización 1802
           href: servers/manage/checklist-for-installing-update-1802.md
-        - name: Lista de comprobación para la instalación de la actualización 1710
-          href: servers/manage/checklist-for-installing-update-1710.md
         - name: Compatibilidad con las versiones de la rama actual
           href: servers/manage/current-branch-versions-supported.md
     - name: Copia de seguridad y recuperación
@@ -560,6 +564,8 @@
           href: support/support-center-ui-reference.md
         - name: Personalizaciones
           href: support/support-center-customize.md
+        - name: Centro de soporte técnico OneTrace (versión preliminar)
+          href: support/support-center-onetrace.md
     - name: Herramientas de Configuration Manager
       items:
         - name: Información general de las herramientas
@@ -638,6 +644,8 @@
               href: clients/deploy/configure-client-settings.md
             - name: Acerca de la configuración de cliente
               href: clients/deploy/about-client-settings.md
+        - name: Notificaciones de reinicio del dispositivo
+          href: clients/deploy/device-restart-notifications.md
         - name: Configurar Wake on LAN
           href: clients/deploy/configure-wake-on-lan.md
         - name: Implementar clientes en equipos Windows

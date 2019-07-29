@@ -40,6 +40,8 @@
           href: privacy.md
         - name: Solución de problemas
           href: troubleshooting.md
+        - name: Recopilador de registros
+          href: log-collector.md
         - name: Supervisión del estado de conexión
           href: monitor-connection-health.md
         - name: Preguntas más frecuentes
