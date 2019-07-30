@@ -18,7 +18,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 07/09/2019
 ms.locfileid: "67677819"
 ---
-# <a name="how-to-deploy-clients-to-macs"></a>How to deploy clients to Macs
+# <a name="how-to-deploy-clients-to-macs"></a>Cómo implementar clientes en equipos Mac
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
@@ -240,7 +240,7 @@ Este procedimiento quita el SMSID. El cliente de Configuration Manager para Mac 
 
 8. Haga clic en **Aceptar** para cerrar la ventana **Editar script de detección**.  
 
-9. En la ventana **Crear configuración**, para **Script de corrección (opcional)**, seleccione **Agregar script**. Esta acción especifica un script para quitar el SMSID cuando se encuentra en los equipos Mac.  
+9. En la ventana **Crear configuración**, para **Script de corrección (opcional)** , seleccione **Agregar script**. Esta acción especifica un script para quitar el SMSID cuando se encuentra en los equipos Mac.  
 
 10. En la ventana **Crear script de corrección**, escriba el siguiente script de shell:  
 
