@@ -11,20 +11,20 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93fdbc2097c0607be42c712e3e3aba309829da4e
-ms.sourcegitcommit: de3c86077bbf91b793e94e1f60814df18da11bab
+ms.openlocfilehash: 9cfb8209343581f8d6b9dc7949032d6399669f95
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67726143"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68339147"
 ---
 # <a name="create-configuration-items-for-windows-10-devices"></a>Crear elementos de configuración para dispositivos Windows 10
 Use el elemento de configuración de **Windows 10** de System Center Configuration Manager para administrar la configuración de los equipos con Windows 10 que administra el cliente de Configuration Manager.  
   
 > [!IMPORTANT]  
->  En esta versión, si ha creado un **contraseña** como parte de un elemento de configuración del tipo **Windows 10** (para un dispositivo administrado con el cliente de Configuration Manager), tener en cuenta el siguiente problema. Si la configuración ya no existe o no se ha configurado en el dispositivo Windows 10, se evaluará incorrectamente como conforme.  
+>  En esta versión, si ha creado una configuración de **contraseña** como parte de un elemento de configuración del tipo **Windows 10** (para un dispositivo administrado con el cliente Configuration Manager), tenga en cuenta el problema siguiente. Si la configuración aún no existe o no se ha configurado en el dispositivo Windows 10, se evaluará incorrectamente como compatible.  
 >   
->  Como alternativa, cuando cree una configuración para estos dispositivos, asegúrese de que **Corregir configuraciones no compatibles** se ha seleccionado en las páginas del Asistente para crear elemento de configuración. Además, al implementar una línea base de configuración que incluye un elemento de configuración de Windows 10 que contiene la configuración de contraseña, seleccione **Corregir las reglas no compatibles cuando se admita**. Realice esta selección en el cuadro de diálogo implementar líneas de base de configuración. Con esta solución alternativa, la configuración se supervisará y corregirá si se detecta que no es conforme. Después de la corrección, se informa correctamente de que la configuración es **Conforme** (a menos que se encuentre un problema, en cuyo caso informará de un **Error**).  
+>  Como alternativa, cuando cree una configuración para estos dispositivos, asegúrese de que **Corregir configuraciones no compatibles** se ha seleccionado en las páginas del Asistente para crear elemento de configuración. Además, al implementar una línea base de configuración que incluye un elemento de configuración de Windows 10 que contiene la configuración de contraseña, seleccione **Corregir las reglas no compatibles cuando se admita**. Esta selección se realiza en el cuadro de diálogo implementar líneas de base de configuración. Con esta solución alternativa, la configuración se supervisará y corregirá si se detecta que no es conforme. Después de la corrección, se informa correctamente de que la configuración es **Conforme** (a menos que se encuentre un problema, en cuyo caso informará de un **Error**).  
   
 ### <a name="to-create-a-windows-10-configuration-item"></a>Para crear un elemento de configuración de Windows 10  
   
@@ -42,7 +42,7 @@ Use el elemento de configuración de **Windows 10** de System Center Configurati
   
 7. En la página **Plataformas admitidas** del asistente, seleccione las plataformas de Windows 10 específicas que evaluarán el elemento de configuración.  
   
-8. En la página **Configuración del dispositivo** del asistente, seleccione el grupo de configuración que quiere configurar. (Para obtener más información, consulte [referencia de configuración de elemento de configuración de Windows 10](#BKMK_Ref) en este artículo.) A continuación, seleccione **Siguiente**.  
+8. En la página **Configuración del dispositivo** del asistente, seleccione el grupo de configuración que quiere configurar. (Para obtener más información, consulte [referencia de configuración de elementos de configuración de Windows 10](#BKMK_Ref) en este artículo). A continuación, seleccione **Siguiente**.  
   
    > [!TIP]  
    >  Si el valor que quiere no aparece, seleccione la casilla **Configurar opciones adicionales que no se encuentran en los grupos de configuración predeterminados**.  
@@ -123,23 +123,23 @@ Use el elemento de configuración de **Windows 10** de System Center Configurati
   
 ### <a name="windows-information-protection"></a>Windows Information Protection
 
-Con el aumento de los dispositivos propiedad de los empleados en la empresa, también aumenta el riesgo de pérdidas de datos accidentales a través de aplicaciones y servicios, como el correo electrónico, las redes sociales y la nube pública. Estos son fuera del control de la organización. Algunos ejemplos son cuando un empleado:
+Con el aumento de los dispositivos propiedad de los empleados en la empresa, también aumenta el riesgo de pérdidas de datos accidentales a través de aplicaciones y servicios, como el correo electrónico, las redes sociales y la nube pública. Están fuera del control de la organización. Entre los ejemplos se incluye cuando un empleado:
 
 - Envía las imágenes de ingeniería más recientes desde su cuenta de correo electrónico personal.
-- Copia y pega la información de producto en un tweet.
-- Guarda un informe de ventas en curso para su almacenamiento en la nube pública.
+- Copia y pega la información del producto en un tweet.
+- Guarda un informe de ventas en curso en su almacenamiento en la nube pública.
 
-Windows Information Protection (WIP; anteriormente, Protección de datos de empresa) ayuda a protegerse contra esta pérdida potencial de datos sin interferir en la experiencia de empleado. WIP también ayuda a proteger las aplicaciones empresariales y las pérdidas de datos con datos accidentales en dispositivos propiedad de la empresa y personales que empleados llevan al trabajo. WIP no requiere cambios en su entorno u otras aplicaciones.
+Windows Information Protection (WIP; anteriormente, Protección de datos de empresa) ayuda a protegerse contra esta pérdida potencial de datos sin interferir en la experiencia de empleado. WIP también ayuda a proteger las aplicaciones y los datos empresariales frente a pérdidas de datos accidentales en dispositivos de propiedad de la empresa y en dispositivos personales que los empleados llevan al trabajo. WIP no requiere cambios en el entorno ni en otras aplicaciones.
 
- Elementos de configuración de Configuration Manager Windows Information Protection administran lo siguiente:
- 
- - La lista de aplicaciones protegidas por WIP
- - Ubicaciones de red de empresa
- - Nivel de protección
- - Configuración de cifrado
+Configuration Manager elementos de configuración de Windows Information Protection administrar lo siguiente:
+
+- La lista de aplicaciones protegidas por WIP
+- Ubicaciones de red de la empresa
+- Nivel de protección
+- Configuración de cifrado
   
 
 Para obtener información sobre cómo configurar WIP con Configuration Manager, consulte [Protege los datos de tu empresa con Windows Information Protection (WIP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
   
 ## <a name="see-also"></a>Consulte también  
- [Elementos de configuración para dispositivos administrados con el cliente de System Center Configuration Manager](../../compliance/deploy-use/create-configuration-items.md)
+[Elementos de configuración para dispositivos administrados con el cliente de System Center Configuration Manager](../../compliance/deploy-use/create-configuration-items.md)

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4ed731b9b931e76e6d6b6d1399bf5a273bf561b
-ms.sourcegitcommit: 56ec6933cf7bfc93842f55835ad336ee3a1c6ab5
+ms.openlocfilehash: ddc856b3c1615045aadba60c4616223349a7b61d
+ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211659"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340423"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Administración de imágenes de arranque con Configuration Manager
 
@@ -28,7 +28,7 @@ Una imagen de arranque de Configuration Manager es una imagen de [Windows PE](ht
 
 ## <a name="BKMK_BootImageDefault"></a> Imágenes de arranque predeterminadas
 
-Configuration Manager proporciona dos imágenes de arranque predeterminadas: Una para plataformas x86 y otra para plataformas x64. Estas imágenes se almacenan en las carpetas *x64* o *i386* del siguiente recurso compartido de archivos en el servidor de sitio: `\\<SiteServerName>\SMS_<sitecode>\osd\boot\`. Las imágenes de arranque predeterminadas se actualizan o se vuelven a generar según la acción que realice.
+Configuration Manager proporciona dos imágenes de arranque predeterminadas: una compatible con las plataformas x86 y otra compatible con las plataformas x64. Estas imágenes se almacenan en las carpetas *x64* o *i386* del siguiente recurso compartido de archivos en el servidor de sitio: `\\<SiteServerName>\SMS_<sitecode>\osd\boot\`. Las imágenes de arranque predeterminadas se actualizan o se vuelven a generar según la acción que realice.
 
 Tenga en cuenta los comportamientos siguientes de cualquiera de las acciones descritas para las imágenes de arranque predeterminadas:
 
@@ -63,10 +63,10 @@ Al actualizar Configuration Manager 2012 a la rama actual, el sitio regenera las
 Cuando se usa la acción **Actualizar puntos de distribución** del nodo **Imágenes de arranque** en la consola, el sitio actualiza la imagen de arranque de destino con los componentes de cliente, los controladores y las personalizaciones.    
 
 Puede volver a cargar la imagen de arranque con la versión más reciente de WinPE desde el directorio de instalación de Windows ADK. En la página **General** del Asistente para actualizar puntos de distribución se proporciona la información siguiente: 
- - La versión actual de Windows ADK instalada en el servidor de sitio
- - La versión actual del cliente de producción
- - La versión de Windows ADK de WinPE en la imagen de arranque.
- - La versión del cliente de Configuration Manager en la imagen de arranque
+- La versión actual de Windows ADK instalada en el servidor de sitio
+- La versión actual del cliente de producción
+- La versión de Windows ADK de WinPE en la imagen de arranque.
+- La versión del cliente de Configuration Manager en la imagen de arranque
 
 Si las versiones de la imagen de arranque no están actualizadas, use la opción de **Volver a cargar esta imagen de arranque con la versión de Windows PE actual desde Windows ADK**. 
 
@@ -101,7 +101,7 @@ Por ejemplo, use la consola de Configuration Manager para personalizar las imág
 - [Compatibilidad con Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk)
 - [Plataformas compatibles de DISM](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms)
 
-#### <a name="bkmk_note1"></a> Nota 1: Compatibilidad con Windows PE 3.1
+#### <a name="bkmk_note1"></a> Nota 1: Compatibilidad con Windows PE 3.1
 
 Solo se puede agregar una imagen de arranque a Configuration Manager si se basa en Windows PE *versión 3.1*. Actualice el AIK de Windows para Windows 7 (basado en Windows PE 3.0) con el complemento de AIK de Windows para Windows 7 SP1 (basado en Windows PE 3.1). Descargue el complemento de AIK de Windows para Windows 7 SP1 en el [Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=5188).  
 
@@ -131,7 +131,7 @@ Solo se puede agregar una imagen de arranque a Configuration Manager si se basa 
 La imagen de arranque aparece ahora en el nodo **Imagen de arranque**. Antes de usar la imagen de arranque para implementar un sistema operativo, distribúyala a los puntos de distribución. 
 
 > [!Tip]  
-> En el nodo **Imagen de arranque** de la consola, en la columna **Tamaño (KB)** se muestra el tamaño descomprimido de cada imagen de arranque. Cuando el sitio envía una imagen de arranque a través de la red, envía una copia comprimida. Esta copia normalmente es más pequeña que el tamaño que se muestra en la columna **Tamaño (KB)**.  
+> En el nodo **Imagen de arranque** de la consola, en la columna **Tamaño (KB)** se muestra el tamaño descomprimido de cada imagen de arranque. Cuando el sitio envía una imagen de arranque a través de la red, envía una copia comprimida. Esta copia normalmente es más pequeña que el tamaño que se muestra en la columna **Tamaño (KB)** .  
 
 
 
@@ -185,7 +185,7 @@ En la ficha **Controladores** , agregue los controladores de dispositivo de Wind
 
 - Agregue solo controladores de red y almacenamiento a la imagen de arranque, a menos que existan requisitos para otros controladores en WinPE.  
 
-- Para mostrar solo los controladores de almacenamiento y de red, seleccione **Ocultar los controladores que no sean de almacenamiento o red (para imágenes de arranque)**. Esta opción también oculta otros controladores que no suelen ser necesarios para las imágenes de arranque, como un controlador de vídeo o de módem.  
+- Para mostrar solo los controladores de almacenamiento y de red, seleccione **Ocultar los controladores que no sean de almacenamiento o red (para imágenes de arranque)** . Esta opción también oculta otros controladores que no suelen ser necesarios para las imágenes de arranque, como un controlador de vídeo o de módem.  
 
 - Para ocultar los controladores que no tengan una firma digital válida, seleccione **Ocultar los controladores que no estén firmados digitalmente**.  
 
@@ -210,7 +210,7 @@ En la pestaña **Personalización** , seleccione cualquiera de las siguientes op
 - Configure el espacio de desecho de Windows PE, que es el almacenamiento temporal (unidad RAM) usado por WinPE. Por ejemplo, cuando se ejecuta una aplicación en WinPE y necesita escribir archivos temporales, WinPE redirige los archivos al espacio de desecho en la memoria para simular la presencia de un disco duro. De forma predeterminada, esta cantidad es de 512 MB para los dispositivos con más de 1 GB de RAM, en caso contrario, el valor predeterminado es 32 MB.  
 
 #### <a name="optional-components"></a>Componentes opcionales
-En la pestaña **Componentes opcionales**, especifique los componentes agregados a Windows PE para su uso con Configuration Manager. Para obtener más información sobre los componentes opcionales, vea [WinPE: agregar paquetes (referencia de los componentes opcionales)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).  
+En la pestaña **Componentes opcionales**, especifique los componentes agregados a Windows PE para su uso con Configuration Manager. Para más información acerca de los componentes opcionales disponibles, consulte [WinPE: agregar paquetes (referencia de los componentes opcionales)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).  
 
 Los siguientes componentes son necesarios para Configuration Manager y siempre se agregan a las imágenes de arranque:
 - Scripting (WinPE-Scripting)
@@ -221,9 +221,9 @@ Los siguientes componentes son necesarios para Configuration Manager y siempre s
 La lista **Componentes** muestra los elementos adicionales que se agregan a esta imagen de arranque. Para agregar más componentes, seleccione el asterisco dorado. Para quitar un componente, selecciónelo en la lista y, a continuación, seleccione la X roja. 
 
 Los clientes usan habitualmente los siguientes componentes:
-- Microsoft .NET (WinPE-NetFX): Este componente es un requisito previo para PowerShell. Es uno de los componentes opcionales de mayor tamaño.  
-- Windows PowerShell (WinPE-PowerShell): Este componente requiere .NET y agrega compatibilidad limitada con PowerShell. Si ejecuta scripts de PowerShell personalizados durante la fase de WinPE de la secuencia de tareas, agregue este componente. Hay otros componentes que pueden ser necesarios para otros cmdlets de PowerShell.   
-- HTML (WinPE-HTA): Si ejecuta aplicaciones HTML personalizadas durante la fase de WinPE de la secuencia de tareas, agregue este componente. 
+- Microsoft .NET (WinPE-NetFX): este componente es un requisito previo para PowerShell. Es uno de los componentes opcionales de mayor tamaño.  
+- Windows PowerShell (WinPE-PowerShell): este componente requiere .NET y agrega compatibilidad limitada con PowerShell. Si ejecuta scripts de PowerShell personalizados durante la fase de WinPE de la secuencia de tareas, agregue este componente. Hay otros componentes que pueden ser necesarios para otros cmdlets de PowerShell.   
+- HTML (WinPE-HTA): si ejecuta aplicaciones HTML personalizadas durante la fase de WinPE de la secuencia de tareas, agregue este componente. 
 
 Para obtener más información acerca de cómo agregar idiomas, consulte [Configurar varios idiomas ](#BKMK_BootImageLanguage). 
 
@@ -255,11 +255,11 @@ En la pestaña **Configuración de distribución** , seleccione cualquiera de la
 #### <a name="content-locations"></a>Ubicaciones de contenido
 En la pestaña **Ubicaciones de contenido**, seleccione el punto de distribución o el grupo de puntos de distribución y use las siguientes acciones:  
 
-- **Validar**: Compruebe la integridad del paquete de imagen de arranque en el punto de distribución o el grupo de puntos de distribución seleccionado.  
+- **Validar**: compruebe la integridad del paquete de imagen de arranque en el punto de distribución o el grupo de puntos de distribución seleccionado.  
 
-- **Redistribuir**: Distribuya de nuevo la imagen de arranque en el punto de distribución o el grupo de puntos de distribución seleccionado.  
+- **Redistribuir**: distribuya de nuevo la imagen de arranque en el punto de distribución o el grupo de puntos de distribución seleccionado.  
 
-- **Quitar**: Elimine la imagen de arranque del punto de distribución o el grupo de puntos de distribución seleccionado.  
+- **Eliminar**: elimine la imagen de arranque del punto de distribución o el grupo de puntos de distribución seleccionado.  
 
 #### <a name="security"></a>Seguridad
 En la pestaña **Seguridad**, vea los usuarios administrativos que tienen permisos para este objeto.
