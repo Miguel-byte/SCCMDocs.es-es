@@ -2,7 +2,7 @@
 title: Administrar secuencias de tareas
 titleSuffix: Configuration Manager
 description: Cree, edite, implemente, importe y exporte secuencias de tareas para administrarlas y automatizar las tareas en su entorno.
-ms.date: 05/03/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cbc76a4f2ada16edfbdc139aca77e6a43d3c4a8b
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.openlocfilehash: 041654b3ba1a25c832232fb26fa09f7ea12e8f97
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65082935"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68537065"
 ---
 # <a name="manage-task-sequences-to-automate-tasks"></a>Administrar secuencias de tareas para automatizar tareas
 
@@ -67,6 +67,12 @@ Modifique una secuencia de tareas, agregue o quite pasos, agregue o quite grupos
 
 Para obtener una lista de las etapas de secuencia de tareas disponibles, consulte [Pasos de la secuencia de tareas](/sccm/osd/understand/task-sequence-steps).  
 
+### <a name="bkmk_sedo"></a> Reclamación de bloqueo para editar secuencias de tareas
+
+<!--3699337-->
+Si la consola de Configuration Manager deja de responder, podría quedarse bloqueado y no poder realizar más cambios hasta que expire el bloqueo al cabo de 30 minutos. Este bloqueo forma parte del sistema SEDO (edición serializada de objetos distribuidos) de Configuration Manager. Para obtener más información, vea [Configuration Manager SEDO](/sccm/develop/core/understand/sedo) (SEDO de Configuration Manager).
+
+A partir de la versión 1906, puede borrar el bloqueo en una secuencia de tareas. Esta acción solo se aplica a la cuenta de usuario que tiene el bloqueo, en el mismo dispositivo desde el que el sitio concedió el bloqueo. Cuando intente obtener acceso a una secuencia de tareas bloqueada, ahora podrá **descartar los cambios** y seguir editando el objeto. Estos cambios se perderían de todos modos al expirar el bloqueo.
 
 
 ## <a name="bkmk_prop-general"></a> Configuración de las propiedades del Centro de software
@@ -81,9 +87,9 @@ Siga este procedimiento para configurar los detalles de la secuencia de tareas q
 
     - **Es necesario reiniciar**: permite al usuario saber si es necesario reiniciar durante la instalación.  
 
-    - **Tamaño de descarga (MB)**: especifica cuántos megabytes se muestran en el Centro de software para la secuencia de tareas.  
+    - **Tamaño de descarga (MB)** : especifica cuántos megabytes se muestran en el Centro de software para la secuencia de tareas.  
 
-    - **Tiempo de ejecución estimado (minutos)**: especifica el tiempo de ejecución estimado en minutos que se muestra en el Centro de software para la secuencia de tareas.  
+    - **Tiempo de ejecución estimado (minutos)** : especifica el tiempo de ejecución estimado en minutos que se muestra en el Centro de software para la secuencia de tareas.  
 
 
 

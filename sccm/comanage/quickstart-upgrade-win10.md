@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bbc042975840e5b4e840928f01257785f4859dd4
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: fe3f5e35fcec9bfc9bf0746ecfd118e10487f78c
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176832"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68533839"
 ---
 # <a name="upgrade-windows-10-for-co-management"></a>Actualización de Windows 10 para la administración conjunta
 
@@ -41,7 +41,7 @@ Estas son algunas sugerencias que aprendimos después de ayudar a miles de clien
 
 - Use implementaciones en fases para implementar esta actualización a las personas adecuadas en los momentos indicados. Para más información, vea [Crear implementaciones por fases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence).  
 
-- Use almacenamiento en caché previa para disminuir los tiempos de espera del usuario. Para obtener más información, vea [Configuración del contenido de la caché previa](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content).  
+- Use almacenamiento en caché previa para disminuir los tiempos de espera del usuario. Para obtener más información, vea [Configuración del contenido de la caché previa](/sccm/osd/deploy-use/configure-precache-content).  
 
 - Use la plantilla para la secuencia de tareas de actualización local predeterminada. Luego, configure los pasos para antes y después de la actualización y cualquier acción en caso de error. Para más información, consulte [Pasos de la secuencia de tareas recomendados para posprocesamiento](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#recommended-task-sequence-steps-for-post-processing).  
 

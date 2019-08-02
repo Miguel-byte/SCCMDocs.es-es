@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 77a296c20d75603c432282ea84e2b453702f5e86
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 796412b0b2f147c73a13b2f0a363a53177e8c9bc
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133027"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68537026"
 ---
 # <a name="manage-os-upgrade-packages-with-configuration-manager"></a>Administrar paquetes de actualización del sistema operativo con Configuration Manager
 
@@ -46,15 +46,15 @@ Para poder usar un paquete de actualización del sistema operativo, primero debe
         > [!IMPORTANT]  
         >  Limite el acceso a los archivos de origen de instalación para evitar la manipulación no deseada.  
 
-    - Si quiere almacenar previamente en caché contenido en un cliente, especifique la **Arquitectura** y el **Lenguaje** de la imagen. Para obtener más información, vea [Configuración del contenido de la caché previa](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content).  
+    - Si quiere almacenar previamente en caché contenido en un cliente, especifique la **Arquitectura** y el **Lenguaje** de la imagen. Para obtener más información, vea [Configuración del contenido de la caché previa](/sccm/osd/deploy-use/configure-precache-content).  
 
 4.  En la página **General**, especifique la siguiente información. Esta información es útil para identificar el paquete de actualización del sistema operativo cuando se tiene más de uno.  
 
-    -   **Nombre**: nombre único del paquete de actualización del sistema operativo.  
+    -   **Nombre**: nombre único para el paquete de actualización del sistema operativo.  
 
     -   **Versión**: identificador de versión opcional. Esta propiedad no tiene que ser la versión del sistema operativo del paquete de actualización. A menudo es la versión de la organización para el paquete.  
 
-    -   **Comentario**: breve descripción opcional.  
+    -   **Comentario**: una breve descripción opcional.  
 
 5.  Complete el asistente.  
 

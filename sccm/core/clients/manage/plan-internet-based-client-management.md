@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: afcc3c2d70e1f6d94e7239a0be78c00294108c76
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: a4ecf757a35556d4b810df47ca50a6c7bac59467
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176706"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68535651"
 ---
 # <a name="plan-for-internet-based-client-management-in-system-center-configuration-manager"></a>Planificación de la administración de cliente basada en Internet en System Center Configuration Manager
 
@@ -56,6 +56,9 @@ La administración de cliente basada en Internet (a veces denominada IBCM) le pe
  Los roles de sistema de sitio siguientes instalados en sitios primarios admiten conexiones provenientes de clientes que se encuentran en ubicaciones que no son de confianza, como Internet o un bosque que no es de confianza (los sitios secundarios no admiten conexiones de cliente desde ubicaciones que no son de confianza):  
 
 - Punto de sitios web del catálogo de aplicaciones  
+
+    > [!Important]  
+    > El catálogo de aplicaciones está en desuso. Para más información, consulte [Eliminación del catálogo de aplicaciones](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat).  
 
 - Módulo de directivas de Configuration Manager  
 

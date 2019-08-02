@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cbad2440f9309e712fb00da2739ed5302866ff63
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: af69076b4a1f1e8d18cced225ff2373d8172051d
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68339467"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68536861"
 ---
 # <a name="recommended-hardware-for-system-center-configuration-manager"></a>Hardware recomendado para System Center Configuration Manager
 
@@ -63,7 +63,6 @@ Las instrucciones siguientes están destinadas para equipos que tienen un solo r
 |----------------------|---------------|---------------|--------------------|  
 |Punto de administración|4|8|50|  
 |Punto de distribución|2|8|Según sea necesario para el sistema operativo y para almacenar el contenido que implemente|  
-|Catálogo de aplicaciones, con el servicio web y el sitio web en el equipo del sistema de sitio|4|16|50|  
 |Punto de actualización de software<sup>1</sup>|8|16|Según sea necesario para el sistema operativo y para almacenar las actualizaciones que implemente|  
 |Resto de roles del sistema de sitio|4|8|50|  
 
@@ -116,18 +115,14 @@ A continuación se describen los requisitos mínimos para equipos basados en Win
 
 - **Espacio en disco:** 500 MB de espacio en disco disponible, con 5 GB recomendados para la memoria caché del cliente de Configuration Manager. Se requiere menos espacio en disco si se usa la configuración personalizada para instalar el cliente de Configuration Manager:  
 
-  - Use la propiedad de línea de comandos de CCMSetup /skippprereq para evitar la instalación de archivos que el cliente no requiere. Por ejemplo, ejecute `CCMSetup.exe /skipprereq:silverlight.exe` si el cliente no usa el catálogo de aplicaciones. A partir de Configuration Manager 1802, Silverlight ya no se instala de manera automática.  
+    - Use la propiedad Client.msi SMSCACHESIZE para establecer un archivo de caché más pequeño que el valor predeterminado de 5120 MB. El tamaño mínimo es 1 MB. Por ejemplo, `CCMSetup.exe SMSCachesize=2` crea una memoria caché de 2 MB de tamaño.  
 
-  - Use la propiedad Client.msi SMSCACHESIZE para establecer un archivo de caché más pequeño que el valor predeterminado de 5120 MB. El tamaño mínimo es 1 MB. Por ejemplo, `CCMSetup.exe SMSCachesize=2` crea una memoria caché de 2 MB de tamaño.  
+    Para más información sobre esta configuración de instalación de clientes, consulte [Acerca de las propiedades de instalación de clientes en System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
 
-  Para más información sobre esta configuración de instalación de clientes, consulte [Acerca de las propiedades de instalación de clientes en System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
+    > [!TIP]  
+    > La instalación del cliente con espacio en disco mínimo es útil para dispositivos de Windows Embedded que suelen tener tamaños de disco más pequeños que los equipos de Windows estándar.  
 
-  > [!TIP]  
-  >  La instalación del cliente con espacio en disco mínimo es útil para dispositivos de Windows Embedded que suelen tener tamaños de disco más pequeños que los equipos de Windows estándar.  
-
-
-
- Los siguientes son los requisitos de hardware mínimos adicionales para la funcionalidad opcional en Configuration Manager.  
+Los siguientes son los requisitos de hardware mínimos adicionales para la funcionalidad opcional en Configuration Manager.  
 
 - **Implementación de sistema operativo:** 384 MB de RAM  
 

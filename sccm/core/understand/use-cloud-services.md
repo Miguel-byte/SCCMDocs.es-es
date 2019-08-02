@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe4e1c83f4079e0df959563ac8209a98983b8d90
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: e58f5cffa201224516e03dd6a1e919f352c297d0
+ms.sourcegitcommit: b59e57ab4cf9f03e8beeb70588f3b9f1a6021e36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56132462"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68662623"
 ---
 # <a name="use-cloud-services-with-system-center-configuration-manager"></a>Usar servicios en la nube con System Center Configuration Manager.
 
@@ -66,17 +66,6 @@ Además, los sitios y clientes de Configuration Manager que se ejecutan en máqu
 -   Admiten clientes en Internet y la intranet.  
 
 Se necesita una suscripción a Azure para poder usar Azure para hospedar puntos de distribución. Se producen gastos en función de la cantidad de datos que se transfieren hacia y desde el servicio.  
-
-### <a name="microsoft-intune-for-mobile-device-management"></a>Microsoft Intune (para la administración de dispositivos móviles)  
- Puede integrar su suscripción a Microsoft Intune con Configuration Manager para habilitar la administración de dispositivos con el servicio de Intune. Esta integración:  
-
--   Se llama configuración híbrida y extiende Configuration Manager (o Intune, según su perspectiva) para admitir una gran variedad de dispositivos.  
-
--   Requiere el rol de sistema de sitio del conector de Microsoft Intune.  
-
--   Requiere una suscripción a Intune diferente con licencias suficientes para los dispositivos que administrará con Intune.  
-
-Aunque Intune usa Azure, no requiere configurar Azure de forma independiente, ni conlleva costos adicionales más allá de la suscripción a Intune.  
 
 ### <a name="additional-configuration-manager-capabilities"></a>Funcionalidades adicionales de Configuration Manager  
  Algunas funcionalidades de Configuration Manager pueden conectarse a servicios en la nube, como:  

@@ -11,12 +11,12 @@ ms.assetid: b2abcdb0-72e0-4c70-a4b8-7827480ba5b2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 18179301fc6edcc9148e8bff353a5e14c1b0f210
-ms.sourcegitcommit: ab9f2a7fb7ea3a0c65808fce2975ab25a670281f
+ms.openlocfilehash: e21a1eb9f6d97571c47906e04f030294b875ae17
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65613037"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68537091"
 ---
 # <a name="deploy-a-task-sequence"></a>Implementar una secuencia de tareas
 
@@ -56,7 +56,7 @@ Utilice el siguiente procedimiento para implementar una secuencia de tareas en l
 
     - **Distribuir contenido automáticamente para las dependencias**: si alguno de los contenidos a los que se hace referencia tiene dependencias, el sitio también enviará contenido dependiente a los puntos de distribución.  
 
-    - **Descargar contenido previamente para esta secuencia de tareas**: para obtener más información, consulte [Configuración del contenido de la caché previa](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content).  
+    - **Descargar contenido previamente para esta secuencia de tareas**: para obtener más información, consulte [Configuración del contenido de la caché previa](/sccm/osd/deploy-use/configure-precache-content).  
 
     - **Seleccionar plantilla de implementación**: a partir de la versión 1802 de Configuration Manager,<!--1357391--> puede guardar y especificar una plantilla de implementación para una secuencia de tareas.  
 
@@ -67,7 +67,7 @@ Utilice el siguiente procedimiento para implementar una secuencia de tareas en l
         > - Programación
         > - Descarga previa de contenido
 
-    - **Comentarios (opcional)**: especifique información adicional que describa esta implementación de la secuencia de tareas.  
+    - **Comentarios (opcional)** : especifique información adicional que describa esta implementación de la secuencia de tareas.  
 
 5. En la página **Configuración de implementación**, especifique la siguiente información:  
 
@@ -142,7 +142,7 @@ Utilice el siguiente procedimiento para implementar una secuencia de tareas en l
 
     - **Instalación de software**: especifique si el usuario puede instalar software fuera de la ventana de mantenimiento configurada después del tiempo programado.  
 
-    - **Reinicio del sistema (si es necesario para completar la instalación)**: especifique si se permite al usuario reiniciar el equipo tras una instalación de software fuera de una ventana de mantenimiento configurada tras la hora de asignación.  
+    - **Reinicio del sistema (si es necesario para completar la instalación)** : especifique si se permite al usuario reiniciar el equipo tras una instalación de software fuera de una ventana de mantenimiento configurada tras la hora de asignación.  
 
     - **Tratamiento de filtros de escritura para dispositivos de Windows Embedded**: esta configuración controla el comportamiento de instalación en dispositivos Windows Embedded habilitados con un filtro de escritura. Elija esta opción para que los cambios se confirmen en la fecha límite de instalación o durante una ventana de mantenimiento. Al seleccionar esta opción, se necesita un reinicio y los cambios persisten en el dispositivo. De lo contrario, la aplicación se instala en la superposición temporal y se confirma más tarde. Cuando implemente una secuencia de tareas en un dispositivo de Windows Embedded, asegúrese de que el dispositivo es miembro de una recopilación que tenga una ventana de mantenimiento configurada.  
 
@@ -193,7 +193,7 @@ Cuando se implementa una secuencia de tareas de actualización, utilice la sigui
 
 - **Descargar todo el contenido localmente antes de iniciar la secuencia de tareas** en la página Puntos de distribución de la implementación. Otras opciones como **Descargar el contenido localmente cuando sea necesario mediante la ejecución de una secuencia de tareas** no funcionan en este escenario. El motor de la secuencia de tareas no puede obtener contenido actualmente desde un punto de distribución de nube. El cliente de Configuration Manager debe descargar el contenido desde el punto de distribución de nube antes de iniciar la secuencia de tareas.  
 
-- (*Opcional*) **Descargar contenido previamente para esta secuencia de tareas** en la pestaña General de la implementación. Para obtener más información, vea [Configuración del contenido de la caché previa](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content).  
+- (*Opcional*) **Descargar contenido previamente para esta secuencia de tareas** en la pestaña General de la implementación. Para obtener más información, vea [Configuración del contenido de la caché previa](/sccm/osd/deploy-use/configure-precache-content).  
 
 
 ## <a name="bkmk_high-risk"></a> Administración de implementaciones de alto riesgo

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9e13911ef7337ca4f1f9fb2291aa026c90cfee8
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 1ecb1657903fd3d1dfe43f2ad46258b4643c2f55
+ms.sourcegitcommit: ef7800a294e5db5d751921c34f60296c1642fc1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68536014"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68712600"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>Solución de problemas de análisis de escritorio
 
@@ -80,7 +80,7 @@ Si no puede crear la aplicación de Azure AD para Configuration Manager desde el
 
 #### <a name="create-app-in-azure-ad"></a>Creación de una aplicación en Azure AD
 
-1. Abra el [Azure portal](http://portal.azure.com) como usuario con permisos de *administrador global* , vaya a **Azure Active Directory**y seleccione **registros de aplicaciones**. Después, seleccione **nuevo registro**.  
+1. Abra el [Azure portal](https://portal.azure.com) como usuario con permisos de *administrador global* , vaya a **Azure Active Directory**y seleccione **registros de aplicaciones**. Después, seleccione **nuevo registro**.  
 
 2. En el panel **crear** , configure las siguientes opciones:  
 
@@ -171,7 +171,7 @@ Al configurar el análisis de escritorio, da su consentimiento en nombre de su o
 
 Si hay un problema con este proceso durante la instalación, utilice el siguiente proceso para agregar manualmente este permiso:
 
-1. Vaya al [Azure portal](http://portal.azure.com)y seleccione todos los **recursos**. Seleccione el área de trabajo de tipo **log Analytics**.  
+1. Vaya al [Azure portal](https://portal.azure.com)y seleccione todos los **recursos**. Seleccione el área de trabajo de tipo **log Analytics**.  
 
 2. En el menú del área de trabajo, seleccione **control de acceso (IAM)** y, a continuación, seleccione **Agregar**.  
 
@@ -191,13 +191,16 @@ El portal muestra una notificación de que agregó la asignación de roles.
 ## <a name="data-latency"></a>Latencia de datos
 
 <!-- 3846531 -->
-La primera vez que se configura el análisis de escritorio, es posible que los informes de Configuration Manager y el portal de análisis de escritorio no muestren los datos completos de inmediato. Pueden transcurrir 2-3 días para que se produzcan los siguientes pasos:
+La primera vez que se configura el análisis de escritorio, se inscriben nuevos clientes o se configuran nuevos planes de implementación, es posible que los informes de Configuration Manager y el portal de análisis de escritorio no muestren los datos completos de inmediato. Pueden transcurrir 2-3 días para que se produzcan los siguientes pasos:
 
 - Los dispositivos activos envían datos de diagnóstico al servicio de análisis de escritorio
 - El servicio procesa los datos
 - El servicio se sincroniza con el sitio de Configuration Manager
 
-Al sincronizar las recopilaciones de dispositivos de la jerarquía de Configuration Manager con el análisis de escritorio, las colecciones pueden tardar hasta 10 minutos en aparecer en el portal de análisis de escritorio. Del mismo modo, cuando se crea un plan de implementación en análisis de escritorio, las nuevas colecciones asociadas al plan de implementación pueden tardar hasta 10 minutos en aparecer en la jerarquía de Configuration Manager. Los sitios primarios crean las colecciones y el sitio de administración central se sincroniza con el análisis de escritorio.
+Al sincronizar las recopilaciones de dispositivos de la jerarquía de Configuration Manager con el análisis de escritorio, las colecciones pueden tardar hasta una hora en aparecer en el portal de análisis de escritorio. Del mismo modo, cuando se crea un plan de implementación en análisis de escritorio, las nuevas colecciones asociadas al plan de implementación pueden tardar hasta una hora en aparecer en la jerarquía de Configuration Manager. Los sitios primarios crean las colecciones y el sitio de administración central se sincroniza con el análisis de escritorio. Configuration Manager pueden tardar hasta 24 horas en evaluar y actualizar la pertenencia a la recopilación. Para acelerar este proceso, actualice manualmente la pertenencia a la colección.<!-- 4984639 -->
+
+> [!Note]
+> Para que las actualizaciones de recopilación manuales reflejen los cambios, el componente SMS_SERVICE_CONNECTOR_M365ADeploymentPlanWorker primero debe sincronizarse. Este proceso puede tardar hasta una hora en ejecutarse. Para obtener más información, consulte **M365ADeploymentPlanWorker. log**.
 
 En el portal de análisis de escritorio, hay dos tipos de datos: Datos de **Administrador** y **datos de diagnóstico**:
 
