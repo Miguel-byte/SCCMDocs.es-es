@@ -1,5 +1,7 @@
 - name: Proteger los datos y la infraestructura
+  href: understand\protect-data-and-site-infrastructure.md
 - name: Conocer y explorar
+  expanded: true
   items:
     - name: Información general
       href: understand\protect-data-and-site-infrastructure.md
@@ -83,7 +85,7 @@
               href: deploy-use/endpoint-protection-configure-client.md
         - name: Directivas de Firewall de Windows
           href: deploy-use/create-windows-firewall-policies.md
-        - name: Protección contra amenazas avanzada de Windows Defender
+        - name: "Protección contra amenazas avanzada de Microsoft\_Defender"
           href: deploy-use/windows-defender-advanced-threat-protection.md
         - name: Crear e implementar una directiva de Protección contra vulnerabilidades de seguridad
           href: deploy-use/create-deploy-exploit-guard-policy.md

@@ -1,6 +1,6 @@
 - name: Análisis de escritorio
   items:
-    - name: Información general
+    - name: ¿Qué es Análisis de escritorio?
       href: overview.md
     - name: Tutoriales
       items:

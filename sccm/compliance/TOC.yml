@@ -1,5 +1,7 @@
 - name: Cumplimiento de dispositivos
+  href: understand/ensure-device-compliance.md
 - name: Conocer y explorar
+  expanded: true
   items:
     - name: Asegurar el cumplimiento de dispositivos
       href: understand/ensure-device-compliance.md

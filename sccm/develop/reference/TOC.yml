@@ -1,21 +1,20 @@
-- name: Introducción
+- name: Referencia de la API Configuration Manager
   href: configuration-manager-reference.md
 - name: Calificadores de propiedad y clase
   href: misc/class-and-property-qualifiers.md
 - name: Clase WMI de servidor SMS_WhatsNewFeature
   href: misc/sms_whatsnewfeature-server-wmi-class.md
   items:
-    - name: Método GetFeatures de la clase SMS_WhatsNewFeature
+    - name: Método GetFeatures
       href: misc/getfeatures-method-in-class-sms_whatsnewfeature.md
 - name: Clase WMI de servidor SMS_WhatsNewScenario
   href: misc/sms_whatsnewscenario-server-wmi-class.md
-- name: Clases WMI del servidor de sistema de alerta
-  href: core/servers/manage/alert-system-server-wmi-classes.md
+- name: Clases WMI de servidor de sistema de alerta
   items:
     - name: Clase WMI de servidor SMS_Alert
       href: core/servers/manage/sms_alert-server-wmi-class.md
       items:
-        - name: Método Close de la clase SMS_Alert
+        - name: Método Close
           href: core/servers/manage/close-method-in-class-sms_alert.md
     - name: Clase WMI de servidor SMS_AlertBase
       href: core/servers/manage/sms_alertbase-server-wmi-class.md
@@ -26,24 +25,23 @@
     - name: Clase WMI de servidor SMS_CHAlert
       href: core/servers/manage/sms_chalert-server-wmi-class.md
       items:
-        - name: Método Close de la clase SMS_CHAlert
+        - name: Método Close
           href: core/servers/manage/close-method-in-class-sms_chalert.md
     - name: Clase WMI de servidor SMS_EPAlert
       href: core/servers/manage/sms_epalert-server-wmi-class.md
       items:
-        - name: Método Close de la clase SMS_EPAlert
+        - name: Método Close
           href: core/servers/manage/close-method-in-class-sms_epalert.md
-    - name: Clase WMI de servidor SMS_Subscription Server
+    - name: Clase WMI de servidor SMS_Subscription
       href: core/servers/manage/sms_subscription-server-wmi-class.md
       items:
-        - name: Método GetAvailableLanguages Method en la clase SMS_Subscription
+        - name: Método GetAvailableLanguages
           href: core/servers/manage/getavailablelanguages-method-in-class-sms_subscription.md
-        - name: Método GetTestSmtpConnectionResult Method en la clase SMS_Subscription
+        - name: Método GetTestSmtpConnectionResult
           href: core/servers/manage/gettestsmtpconnectionresult-method-in-class-sms_subscription.md
-        - name: Método TestSmtpConnection Method en la clase SMS_Subscription
+        - name: Método TestSmtpConnection
           href: core/servers/manage/testsmtpconnection-method-in-class-sms_subscription.md
-- name: Clases del proveedor de contenido alternativo
-  href: core/servers/configure/alternate-content-provider-classes.md
+- name: Clases de proveedor de contenido alternativo (ACP)
   items:
     - name: Enumeración CCM_CONTENTFLAG
       href: core/servers/configure/ccm_contentflag-enumeration.md
@@ -55,7 +53,7 @@
       href: core/servers/configure/progress-types.md
     - name: Clase CCM_CTM_JobStateEx4
       href: core/servers/configure/ccm_ctm_jobstateex4-class.md
-    - name: Clase WMI de CCM_Download_Provider
+    - name: Clase WMI CCM_Download_Provider
       href: core/servers/configure/ccm_download_provider-wmi-class.md
     - name: Método SendNotifyErrorToCTM
       href: core/servers/configure/sendnotifyerrortoctm-method.md
@@ -66,24 +64,23 @@
     - name: Interfaz ICcmAlternateDowloadProvider
       href: core/servers/configure/iccmalternatedowloadprovider-interface.md
       items:
-        - name: Método ICcmAlternatedownloadProvider CancelJob
+        - name: Método CancelJob
           href: core/servers/configure/iccmalternatedownloadprovider---canceljob-method.md
-        - name: Método ICcmAlternatedownloadProvider DownloadContent
+        - name: Método DownloadContent
           href: core/servers/configure/iccmalternatedownloadprovider---downloadcontent-method.md
-        - name: Método ICcmAlternatedownloadProvider ModifyJobPriority
+        - name: Método ModifyJobPriority
           href: core/servers/configure/iccmalternatedownloadprovider---modifyjobpriority-method.md
-        - name: Método ICcmAlternatedownloadProvider ModifyJobSource
+        - name: Método ModifyJobSource
           href: core/servers/configure/iccmalternatedownloadprovider---modifyjobsource-method.md
-        - name: Método ICcmAlternatedownloadProvider ModifyJobTimeout
+        - name: Método ModifyJobTimeout
           href: core/servers/configure/iccmalternatedownloadprovider---modifyjobtimeout-method.md
-        - name: Método ICcmAlternatedownloadProvider Resume
+        - name: Método Resume
           href: core/servers/configure/iccmalternatedownloadprovider---resume-method.md
-        - name: Método ICcmAlternatedownloadProvider Suspend
+        - name: Método Suspend
           href: core/servers/configure/iccmalternatedownloadprovider---suspend-method.md
     - name: Interfaz ICcmContentTransferManager4
       href: core/servers/configure/iccmcontenttransfermanager4-interface.md
-- name: Clases de WMI del servidor de administración de aplicaciones
-  href: apps/application-management-server-wmi-classes.md
+- name: Clases WMI del servidor de administración de aplicaciones
   items:
     - name: Clase WMI de servidor SMS_AppConflictsData
       href: apps/sms_appconflictsdata-server-wmi-class.md
@@ -108,19 +105,19 @@
     - name: Clase WMI de servidor SMS_Application
       href: apps/sms_application-server-wmi-class.md
       items:
-        - name: Método GetCIDocumentBody de la clase SMS_Application
+        - name: Método GetCIDocumentBody
           href: apps/getcidocumentbody-method-in-class-sms_application.md
-        - name: Método GetCIDocuments de la clase SMS_Application
+        - name: Método GetCIDocuments
           href: apps/getcidocuments-method-in-class-sms_application.md
-        - name: Método InitiateUserInstall de la clase SMS_Application
+        - name: Método InitiateUserInstall
           href: apps/initiateuserinstall-method-in-class-sms_application.md
-        - name: Método ManageDeploymentForDevice de la clase SMS_Application
+        - name: Método ManageDeploymentForDevice
           href: apps/managedeploymentfordevice-method-in-class-sms_application.md
-        - name: Método Restore de la clase SMS_Application
+        - name: Método Restore
           href: apps/restore-method-in-class-sms_application.md
-        - name: Método SetIsExpired de la clase SMS_Application
+        - name: Método SetIsExpired
           href: apps/setisexpired-method-in-class-sms_application.md
-        - name: Método UpdateStats de la clase SMS_Application
+        - name: Método UpdateStats
           href: apps/updatestats-method-in-class-sms_application.md
     - name: Clase WMI de servidor SMS_ApplicationAssignment
       href: apps/sms_applicationassignment-server-wmi-class.md
@@ -129,9 +126,9 @@
     - name: Clase WMI de servidor SMS_ApplicationLatest
       href: apps/sms_applicationlatest-server-wmi-class.md
       items:
-        - name: Método SetIsExpired de la clase SMS_ApplicationLatest
+        - name: SetIsExpired methodLatest
           href: apps/setisexpired-method-in-class-sms_applicationlatest.md
-        - name: Método UpdateStats de la clase SMS_ApplicationLatest
+        - name: UpdateStats methodLatest
           href: apps/updatestats-method-in-class-sms_applicationlatest.md
     - name: Clase WMI de servidor SMS_ApplicationPublishingItem
       href: apps/sms_applicationpublishingitem-server-wmi-class.md
@@ -148,26 +145,26 @@
     - name: Clase WMI de servidor SMS_DeploymentInfo
       href: apps/sms_deploymentinfo-server-wmi-class.md
       items:
-        - name: Método GetDeployments de la clase SMS_DeploymentInfo
+        - name: Método GetDeployments
           href: apps/getdeployments-method-in-class-sms_deployment_info.md
     - name: Clase WMI de servidor SMS_DeploymentInfoFlat
       href: apps/sms_deploymentinfoflat-server-wmi-class.md
     - name: Clase WMI de servidor SMS_DeploymentSummary
       href: apps/sms_deploymentsummary-server-wmi-class.md
       items:
-        - name: Método UpdateClassicDeployment de la clase SMS_DeploymentSummary
+        - name: Método UpdateClassicDeployment
           href: apps/updateclassicdeployment-method-in-class-sms_deploymentsummary.md
-        - name: Método UpdateDeployment de la clase SMS_DeploymentSummary
+        - name: Método UpdateDeployment
           href: apps/updatedeployment-method-in-class-sms_deploymentsummary.md
     - name: Clase WMI de servidor SMS_DeploymentType
       href: apps/sms_deploymenttype-server-wmi-class.md
       items:
-        - name: Método DistributeDeploymentTypeExtension de la clase SMS_DeploymentType
+        - name: Método DistributeDeploymentTypeExtension
           href: apps/distributedeploymenttypeextension-method-in-class-sms_deploymenttype.md
     - name: Clase WMI de servidor SMS_DeploymentTypeLicenseAssociation
       href: apps/sms_deploymenttypelicenseassociation-server-wmi-class.md
       items:
-        - name: Método AddLicense de la clase SMS_DeploymentTypeLicenseAssociation
+        - name: Método AddLicense
           href: apps/addlicense-method-in-class-sms_deploymenttypelicenseassociation.md
     - name: Clase WMI de servidor SMS_G_System_AppClientState
       href: apps/sms_g_system_appclientstate-server-wmi-class.md
@@ -194,56 +191,54 @@
     - name: Clase WMI de servidor SMS_UserApplicationRequest
       href: apps/sms_userapplicationrequest-server-wmi-class.md
       items:
-        - name: Método Approve de la clase SMS_UserApplicationRequest
+        - name: Método Approve
           href: apps/approve-method-in-class-sms_userapplicationrequest.md
-        - name: Método Deny de la clase SMS_UserApplicationRequest
+        - name: Método Deny
           href: apps/deny-method-in-class-sms_userapplicationrequest.md
     - name: Clase WMI de servidor SMS_UserApplicationRequestHistoryItem
       href: apps/sms_userapplicationrequesthistoryitem-server-wmi-class.md
     - name: Clases WMI de servidor SMS_VirtualEnvironment
       href: apps/sms_virtualenvironment-server-wmi-classes.md
 - name: Clases WMI de servidor Asset Intelligence
-  href: core/clients/asset-intelligence/asset-intelligence-server-wmi-classes.md
   items:
     - name: Clase WMI de servidor SMS_AICategory
       href: core/clients/asset-intelligence/sms_aicategory-server-wmi-class.md
       items:
-        - name: Método GetSummary de la clase SMS_AICategory
+        - name: Método GetSummary
           href: core/clients/asset-intelligence/getsummary-method-in-class-sms_aicategory.md
     - name: Clase WMI de servidor SMS_AIHardwareRequirements
       href: core/clients/asset-intelligence/sms_aihardwarerequirements-server-wmi-class.md
       items:
-        - name: Método GetSummary de la clase SMS_AIHardwareRequirements
+        - name: Método GetSummary
           href: core/clients/asset-intelligence/getsummary-method-in-class-sms_aihardwarerequirements.md
     - name: Clase WMI de servidor SMS_AIMLSParser
       href: core/clients/asset-intelligence/sms_aimlsparser-server-wmi-class.md
       items:
-        - name: Método GetStatus de la clase SMS_AIMLSParser
+        - name: Método GetStatus
           href: core/clients/asset-intelligence/getstatus-method-in-class-sms_aimlsparser.md
-        - name: Método GetSummary de la clase SMS_AIMLSParser
+        - name: Método GetSummary
           href: core/clients/asset-intelligence/getsummary-method-in-class-sms_aimlsparser.md
-        - name: Método Import de la clase SMS_AIMLSParser
+        - name: Método Import
           href: core/clients/asset-intelligence/import-method-in-class-sms_aimlsparser.md
     - name: Clase WMI de servidor SMS_AIProxy
       href: core/clients/asset-intelligence/sms_aiproxy-server-wmi-class.md
       items:
-        - name: Método RequestCatalogUpdate de la clase SMS_AIProxy
+        - name: Método RequestCatalogUpdate
           href: core/clients/asset-intelligence/requestcatalogupdate-method-in-class-sms_aiproxy.md
     - name: Clase WMI de servidor SMS_AISoftwareList
       href: core/clients/asset-intelligence/sms_aisoftwarelist-server-wmi-class.md
       items:
-        - name: Método AddSoftwareHashData de la clase SMS_AISoftwareList
+        - name: Método AddSoftwareHashData
           href: core/clients/asset-intelligence/addsoftwarehashdata-method-in-class-sms_aisoftwarelist.md
-        - name: Método GetCategorizationRequestText de la clase SMS_AISoftwareList
+        - name: Método GetCategorizationRequestText
           href: core/clients/asset-intelligence/getcategorizationrequesttext-method-in-class-sms_aisoftwarelist.md
-        - name: Método GetSummary de la clase SMS_AISoftwareList
+        - name: Método GetSummary
           href: core/clients/asset-intelligence/getsummary-method-in-class-sms_aisoftwarelist.md
-        - name: Método ResolveConflict de la clase SMS_AISoftwareList
+        - name: Método ResolveConflict
           href: core/clients/asset-intelligence/resolveconflict-method-in-class-sms_aisoftwarelist.md
-        - name: Método SetCategorizationRequest de la clase SMS_AISoftwareList
+        - name: Método SetCategorizationRequest
           href: core/clients/asset-intelligence/setcategorizationrequest-method-in-class-sms_aisoftwarelist.md
 - name: Clases de cliente
-  href: core/clients/client-classes/client-classes.md
   items:
     - name: Interfaces de cliente de administración de aplicaciones
       href: core/clients/client-classes/application-management-client-interfaces.md
@@ -326,19 +321,19 @@
         - name: Clase WMI de cliente SMS_Client
           href: core/clients/client-classes/sms_client-client-wmi-class.md
           items:
-            - name: Método EvaluateMachinePolicy de la clase SMS_Client
+            - name: Método EvaluateMachinePolicy
               href: core/clients/client-classes/evaluatemachinepolicy-method-in-class-sms_client.md
-            - name: Método GetAssignedSite de la clase SMS_Client
+            - name: Método GetAssignedSite
               href: core/clients/client-classes/getassignedsite-method-in-class-sms_client.md
-            - name: Método RequestMachinePolicy de la clase SMS_Client
+            - name: Método RequestMachinePolicy
               href: core/clients/client-classes/requestmachinepolicy-method-in-class-sms_client.md
-            - name: Método ResetPolicy de la clase SMS_Client
+            - name: Método ResetPolicy
               href: core/clients/client-classes/resetpolicy-method-in-class-sms_client.md
-            - name: Método SetAssignedSite de la clase SMS_Client
+            - name: Método SetAssignedSite
               href: core/clients/client-classes/setassignedsite-method-in-class-sms_client.md
-            - name: Método SetGlobalLoggingConfiguration de la clase SMS_Client
+            - name: Método SetGlobalLoggingConfiguration
               href: core/clients/client-classes/setgloballoggingconfiguration-method-in-class-sms_client.md
-            - name: Método TriggerSchedule de la clase SMS_Client
+            - name: Método TriggerSchedule
               href: core/clients/client-classes/triggerschedule-method-in-class-sms_client.md
         - name: Clase WMI de cliente SMS_LocalMP
           href: core/clients/client-classes/sms_localmp-client-wmi-class.md
@@ -376,7 +371,7 @@
           href: core/clients/client-classes/ccm_policy_rule-client-wmi-class.md
         - name: Clase WMI de cliente CCM_PolicyAgent_Configuration
           href: core/clients/client-classes/ccm_policyagent_configuration-client-wmi-class.md
-    - name: Interfaces de cliente de configuración de cumplimiento (DCM)
+    - name: Interfaces de cliente de configuración de cumplimiento
       href: core/clients/client-classes/compliance-settings--dcm--client-interfaces.md
       items:
         - name: Interfaz ICIINFO
@@ -516,11 +511,6 @@
               href: core/clients/client-classes/itsenvclass--getvariables-method.md
             - name: Propiedad ITSEnvClass Value
               href: core/clients/client-classes/itsenvclass--value-property.md
-    - name: Clases WMI de cliente de administración fuera de banda
-      href: core/clients/client-classes/out-of-band-management-client-wmi-classes.md
-      items:
-        - name: Clase WMI de cliente SMS_AMTObject
-          href: core/clients/client-classes/sms_amtobject-client-wmi-class.md
     - name: Clases WMI de cliente de programación
       href: core/clients/client-classes/scheduling-client-wmi-classes.md
       items:
@@ -529,13 +519,12 @@
         - name: Clase WMI de cliente CCM_Scheduler_ScheduledMessage
           href: core/clients/client-classes/ccm_scheduler_scheduledmessage-client-wmi-class.md
 - name: Clases WMI de servidor de configuración del cliente
-  href: core/clients/config/client-configuration-server-wmi-classes.md
   items:
     - name: Clase WMI de servidor SMS_AdvancedAntimalwareSettings
       href: core/clients/config/sms_advancedantimalwaresettings-server-wmi-class.md
     - name: Clase WMI de servidor SMS_AntimalwareAdvancedSettingsConfig
       href: core/clients/config/sms_antimalwareadvancedsettingsconfig-server-wmi-class.md
-    - name: Clase de WMI de servidor SMS_AntimalwareConfig
+    - name: Clase WMI de servidor SMS_AntimalwareConfig
       href: core/clients/config/sms_antimalwareconfig-server-wmi-class.md
     - name: Clase WMI de servidor SMS_AntimalwareExcludedSettingsConfig
       href: core/clients/config/sms_antimalwareexcludedsettingsconfig-server-wmi-class.md
@@ -572,7 +561,7 @@
     - name: Clase WMI de servidor SMS_ClientSettings
       href: core/clients/config/sms_clientsettings-server-wmi-class.md
       items:
-        - name: Método CheckPortalUrl para la clase SMS_ClientSettings
+        - name: Método CheckPortalUrl
           href: core/clients/config/checkportalurl-method-for-class-sms_clientsettings.md
     - name: Clase WMI de servidor SMS_ClientSettingsAssignment
       href: core/clients/config/sms_clientsettingsassignment-server-wmi-class.md
@@ -612,8 +601,7 @@
       href: core/clients/config/sms_statesystemconfig-server-wmi-class.md
     - name: Clase WMI de servidor SMS_TargetingAgentConfig
       href: core/clients/config/sms_targetingagentconfig-server-wmi-class.md
-- name: Clases WMI de servidor de implementación del cliente
-  href: core/clients/deploy/client-deployment-server-wmi-classes.md
+- name: Clases WMI de servidor de implementación de cliente
   items:
     - name: Clase WMI de servidor SMS_ClientBaseline
       href: core/clients/deploy/sms_clientbaseline-server-wmi-class.md
@@ -622,7 +610,7 @@
     - name: Clase WMI de servidor SMS_ClientBaselineStatus
       href: core/clients/deploy/sms_clientbaselinestatus-server-wmi-class.md
       items:
-        - name: Método GetClientBaselineStatusSummary de la clase SMS_ClientBaselineStatus
+        - name: Método GetClientBaselineStatusSummary
           href: core/clients/deploy/getclientbaselinestatussummary-method-in-class-sms_clientbaselinestatus.md
     - name: Clase WMI de servidor SMS_ClientDataSourcesContent
       href: core/clients/deploy/sms_clientdatasourcescontent-server-wmi-class.md
@@ -641,47 +629,46 @@
     - name: Clase WMI de servidor SMS_ClientPfxCertificate
       href: core/clients/deploy/sms_clientpfxcertificate-server-wmi-class.md
       items:
-        - name: Método ImportForUser de la clase SMS_ClientPfxCertificate
+        - name: Método ImportForUser
           href: core/clients/deploy/importforuser-method-in-class-sms_clientpfxcertificate.md
-        - name: Método DeleteForUser de la clase SMS_ClientPfxCertificate
+        - name: Método DeleteForUser
           href: core/clients/deploy/deleteforuser-method-in-class-sms_clientpfxcertificate.md
 - name: Clases WMI del SDK de cliente
-  href: core/clients/sdk/client-sdk-wmi-classes.md
   items:
     - name: Clase WMI de cliente CCM_AppDeploymentType
       href: core/clients/sdk/ccm_appdeploymenttype-client-wmi-class.md
       items:
-        - name: Método GetDeploymentTypeForUser de la clase CCM_AppDeploymentType
+        - name: Método GetDeploymentTypeForUser
           href: core/clients/sdk/getdeploymenttypeforuser-method-in-class-ccm_appdeploymenttype.md
-        - name: Método GetProperty de la clase CCM_AppDeploymentType
+        - name: Método GetProperty
           href: core/clients/sdk/getproperty-method-in-class-ccm_appdeploymenttype.md
-        - name: Método GetTargetedUsers de la clase CCM_AppDeploymentType
+        - name: Método GetTargetedUsers
           href: core/clients/sdk/gettargetedusers-method-in-class-ccm_appdeploymenttype.md
     - name: Clase WMI de cliente CCM_Application
       href: core/clients/sdk/ccm_application-client-wmi-class.md
       items:
-        - name: Método Cancel de la clase CCM_Application
+        - name: Método Cancel
           href: core/clients/sdk/cancel-method-in-class-ccm_application.md
-        - name: Método DownloadContents de la clase CCM_Application
+        - name: Método DownloadContents
           href: core/clients/sdk/downloadcontents-method-in-class-ccm_application.md
-        - name: Método GetPendingComponentList de la clase CCM_Application
+        - name: Método GetPendingComponentList
           href: core/clients/sdk/getpendingcomponentlist-method-in-class-ccm_application.md
-        - name: Método GetProperty de la clase CCM_Application
+        - name: Método GetProperty
           href: core/clients/sdk/getproperty-method-in-class-ccm_application.md
-        - name: Método Install de la clase CCM_Application
+        - name: Método Install
           href: core/clients/sdk/install-method-in-class-ccm_application.md
-        - name: Método Uninstall de la clase CCM_Application
+        - name: Método Uninstall
           href: core/clients/sdk/uninstall-method-in-class-ccm_application.md
     - name: Clase WMI de cliente CCM_ApplicationActions
       href: core/clients/sdk/ccm_applicationactions-client-wmi-class.md
     - name: Clase WMI de cliente CCM_ApplicationPolicy
       href: core/clients/sdk/ccm_applicationpolicy-client-wmi-class.md
       items:
-        - name: Método EvaluateAllPolicies de la clase CCM_ApplicationPolicy
+        - name: Método EvaluateAllPolicies
           href: core/clients/sdk/evaluateallpolicies-method-in-class-ccm_applicationpolicy.md
-        - name: Método EvaluateAppPolicy de la clase CCM_ApplicationPolicy
+        - name: Método EvaluateAppPolicy
           href: core/clients/sdk/evaluateapppolicy-method-in-class-ccm_applicationpolicy.md
-        - name: Método GetEvaluationState de la clase CCM_ApplicationPolicy
+        - name: Método GetEvaluationState
           href: core/clients/sdk/getevaluationstate-method-in-class-ccm_applicationpolicy.md
     - name: Clase WMI de cliente CCM_CIEvaluationJob
       href: core/clients/sdk/ccm_cievaluationjob-client-wmi-class.md
@@ -690,37 +677,37 @@
     - name: Clase WMI de cliente CCM_ClientEvents
       href: core/clients/sdk/ccm_clientevents-client-wmi-class.md
       items:
-        - name: Método StoreEvent de la clase CCM_ClientEvents
+        - name: Método StoreEvent
           href: core/clients/sdk/storeevent-method-in-class-ccm_clientevents.md
     - name: Clase WMI de cliente CCM_ClientUtilities
       href: core/clients/sdk/ccm_clientutilities-client-wmi-class.md
       items:
-        - name: Método DetermineIfRebootPending de la clase CCM_ClientUtilities
+        - name: Método DetermineIfRebootPending
           href: core/clients/sdk/determineifrebootpending-method-in-class-ccm_clientutilities.md
-        - name: Método GetMachinePolicy de la clase CCM_ClientUtilities
+        - name: Método GetMachinePolicy
           href: core/clients/sdk/getmachinepolicy-method-in-class-ccm_clientutilities.md
-        - name: Método GetNetworkCost de la clase CCM_ClientUtilities
+        - name: Método GetNetworkCost
           href: core/clients/sdk/getnetworkcost-method-in-class-ccm_clientutilities.md
-        - name: Método GetUserCapability de la clase CCM_ClientUtilities
+        - name: Método GetUserCapability
           href: core/clients/sdk/getusercapability-method-in-class-ccm_clientutilities.md
-        - name: Método GetUserPolicy de la clase CCM_ClientUtilities
+        - name: Método GetUserPolicy
           href: core/clients/sdk/getuserpolicy-method-in-class-ccm_clientutilities.md
-        - name: Método RestartComputer de la clase CCM_ClientUtilities
+        - name: Método RestartComputer
           href: core/clients/sdk/restartcomputer-method-in-class-ccm_clientutilities.md
     - name: Clase WMI de cliente CCM_ClientUXSettings
       href: core/clients/sdk/ccm_clientuxsettings-client-wmi-class.md
       items:
-        - name: Método GetAutoInstallRequiredSoftwaretoNonBusinessHours de la clase CCM_ClientUXSettings
+        - name: Método GetAutoInstallRequiredSoftwaretoNonBusinessHours
           href: core/clients/sdk/getautoinstallrequiredsoftwaretononbusinesshours-method.md
-        - name: Método GetBusinessHours de la clase CCM_ClientUXSettings
+        - name: Método GetBusinessHours
           href: core/clients/sdk/getbusinesshours-method-in-class-ccm_clientuxsettings.md
-        - name: Método GetSuppressComputerActivityInPresentationMode de la clase CCM_ClientUXSettings
+        - name: Método GetSuppressComputerActivityInPresentationMode
           href: core/clients/sdk/getsuppresscomputeractivityinpresentationmode-method.md
-        - name: Método SetAutoInstallRequiredSoftwaretoNonBusinessHours de la clase CCM_ClientUXSettings
+        - name: Método SetAutoInstallRequiredSoftwaretoNonBusinessHours
           href: core/clients/sdk/setautoinstallrequiredsoftwaretononbusinesshours-method.md
-        - name: Método SetBusinessHours de la clase CCM_ClientUXSettings
+        - name: Método SetBusinessHours
           href: core/clients/sdk/setbusinesshours-method-in-class-ccm_clientuxsettings.md
-        - name: Método SetSuppressComputerActivityInPresentationMode de la clase CCM_ClientUXSettings
+        - name: Método SetSuppressComputerActivityInPresentationMode
           href: core/clients/sdk/setsuppresscomputeractivityinpresentationmode-method.md
     - name: Clase WMI de cliente CCM_EvaluationState
       href: core/clients/sdk/ccm_evaluationstate-client-wmi-class.md
@@ -735,87 +722,86 @@
     - name: Clase WMI de cliente CCM_PowerManagementSettings
       href: core/clients/sdk/ccm_powermanagementsettings-client-wmi-class.md
       items:
-        - name: Método SetPowerManagementSettings de la clase CCM_PowerManagementSettings
+        - name: Método SetPowerManagementSettings
           href: core/clients/sdk/setpowermanagementsettings-method-in-class-ccm_powermanagementsettings.md
     - name: Clase WMI de cliente CCM_Program
       href: core/clients/sdk/ccm_program-client-wmi-class.md
     - name: Clase WMI de cliente CCM_ProgramsManager
       href: core/clients/sdk/ccm_programsmanager-client-wmi-class.md
       items:
-        - name: Método CancelDownload de la clase CCM_ProgramsManager
+        - name: Método CancelDownload
           href: core/clients/sdk/canceldownload-method-in-class-ccm_programsmanager.md
-        - name: Método ExecuteProgram de la clase CCM_ProgramsManager
+        - name: Método ExecuteProgram
           href: core/clients/sdk/executeprogram-method-in-class-ccm_programsmanager.md
-        - name: Método ExecutePrograms de la clase CCM_ProgramsManager
+        - name: Método ExecutePrograms
           href: core/clients/sdk/executeprograms-method-in-class-ccm_programsmanager.md
-        - name: Método PostponeProgramsToNonBusinessHours de la clase CCM_ProgramsManager
+        - name: Método PostponeProgramsToNonBusinessHours
           href: core/clients/sdk/postponeprogramstononbusinesshours-method-in-class-ccm_programsmanager.md
     - name: Clase WMI de cliente CCM_RemoteControlManager
       href: core/clients/sdk/ccm_remotecontrolmanager-client-wmi-class.md
       items:
-        - name: Método GetRemCtrlSettings de la clase CCM_RemoteControlManager
+        - name: Método GetRemCtrlSettings
           href: core/clients/sdk/getremctrlsettings-method-in-class-ccm_remotecontrolmanager.md
-        - name: Método SetRemCtrlSettings de la clase CCM_RemoteControlManager
+        - name: Método SetRemCtrlSettings
           href: core/clients/sdk/setremctrlsettings-method-in-class-ccm_remotecontrolmanager.md
     - name: Clase WMI de cliente CCM_RequestedAppPolicy
       href: core/clients/sdk/ccm_requested-apppolicy-client-wmi-class.md
       items:
-        - name: Método QueueRequestedAppPolicy de la clase CCM_RequestedAppPolicy
+        - name: Método QueueRequestedAppPolicy
           href: core/clients/sdk/queuerequestedapppolicy-method-in-class-ccm_requestedapppolicy.md
     - name: Clase WMI de cliente CCM_RequestedAppPolicyActivation
       href: core/clients/sdk/ccm_requestedapppolicyactivation-client-wmi-class.md
       items:
-        - name: Método QueueAppPolicyActivationAction de la clase CCM_RequestedAppPolicyActivation
+        - name: Método QueueAppPolicyActivationAction
           href: core/clients/sdk/queueapppolicyactivationaction-method-in-class-ccm_requestedapppolicyactivation.md
     - name: Clase WMI de cliente CCM_ServiceWindow
       href: core/clients/sdk/ccm_servicewindow-client-wmi-class.md
     - name: Clase WMI de cliente CCM_ServiceWindowManager
       href: core/clients/sdk/ccm_servicewindowmanager-client-wmi-class.md
       items:
-        - name: Método GetCurrentWindowAvailableTime de la clase CCM_ServiceWindowManager
+        - name: Método GetCurrentWindowAvailableTime
           href: core/clients/sdk/getcurrentwindowavailabletime-method-in-class-ccm_servicewindowmanager.md
-        - name: Método GetNextServiceWindowID de la clase CCM_ServiceWindowManager
+        - name: Método GetNextServiceWindowID
           href: core/clients/sdk/getnextservicewindowid-method-in-class-ccm_servicewindowmanager.md
-        - name: Método IsFutureWindowAvailable de la clase CCM_ServiceWindowManager
+        - name: Método IsFutureWindowAvailable
           href: core/clients/sdk/isfuturewindowavailable-method-in-class-ccm_servicewindowmanager.md
-        - name: Método IsWindowAvailableNow de la clase CCM_ServiceWindowManager
+        - name: Método IsWindowAvailableNow
           href: core/clients/sdk/iswindowavailablenow-method-in-class-ccm_servicewindowmanager.md
     - name: Clase WMI de cliente CCM_SoftwareBase
       href: core/clients/sdk/ccm_softwarebase-client-wmi-class.md
     - name: Clase WMI de cliente CCM_SoftwareCatalogUtilities
       href: core/clients/sdk/ccm_softwarecatalogutilities-client-wmi-class.md
       items:
-        - name: Método ApplyPolicyEx de la clase CCM_SoftwareCatalogUtilities
+        - name: Método ApplyPolicyEx
           href: core/clients/sdk/applypolicyex-method-in-class-ccm_softwarecatalogutilities.md
-        - name: Método GetClientVersion de la clase CCM_SoftwareCatalogUtilities
+        - name: Método GetClientVersion
           href: core/clients/sdk/getclientversion-method-in-class-ccm_softwarecatalogutilities.md
-        - name: Método GetDeviceId de la clase CCM_SoftwareCatalogUtilities
+        - name: Método GetDeviceId
           href: core/clients/sdk/getdeviceid-method-in-class-ccm_softwarecatalogutilities.md
-        - name: Método GetPolicyState de la clase CCM_SoftwareCatalogUtilities
+        - name: Método GetPolicyState
           href: core/clients/sdk/getpolicystate-method-in-class-ccm_softwarecatalogutilities.md
-        - name: Método GetPortalUrlValue de la clase CCM_SoftwareCatalogUtilities
+        - name: Método GetPortalUrlValue
           href: core/clients/sdk/getportalurlvalue-method-in-class-ccm_softwarecatalogutilities.md
-        - name: Método VerifySignature de la clase CCM_SoftwareCatalogUtilities
+        - name: Método VerifySignature
           href: core/clients/sdk/verifysignature-method-in-class-ccm_softwarecatalogutilities.md
     - name: Clase WMI de cliente CCM_SoftwareUpdate
       href: core/clients/sdk/ccm_softwareupdate-client-wmi-class.md
     - name: Clase WMI de cliente CCM_SoftwareUpdatesManager
       href: core/clients/sdk/ccm_softwareupdatesmanager-client-wmi-class.md
       items:
-        - name: Método CancelDownload de la clase CCM_SoftwareUpdatesManager
+        - name: Método CancelDownload
           href: core/clients/sdk/canceldownload-method-in-class-ccm_softwareupdatesmanager.md
-        - name: Método GetAllUpdatesUserExperience de la clase CCM_SoftwareUpdatesManager
+        - name: Método GetAllUpdatesUserExperience
           href: core/clients/sdk/getallupdatesuserexperience-method-in-class-ccm_softwareupdatesmanager.md
-        - name: Método InstallUpdates de la clase CCM_SoftwareUpdatesManager
+        - name: Método InstallUpdates
           href: core/clients/sdk/installupdates-method-in-class-ccm_softwareupdatesmanager.md
-        - name: Método PostponeUpdatesToNonBusinessHours de la clase CCM_SoftwareUpdatesManager
+        - name: Método PostponeUpdatesToNonBusinessHours
           href: core/clients/sdk/postponeupdatestononbusinesshours-method-in-class-ccm_softwareupdatesmanager.md
-        - name: Método SetAllUpdatesUserExperience de la clase CCM_SoftwareUpdatesManager
+        - name: Método SetAllUpdatesUserExperience
           href: core/clients/sdk/setallupdatesuserexperience-method-in-class-ccm_softwareupdatesmanager.md
     - name: Clase WMI de cliente CCM_UserLogonEvents
       href: core/clients/sdk/ccm_userlogonevents-client-wmi-class.md
 - name: Clases WMI de servidor de estado de cliente
-  href: core/clients/status/client-status-server-wmi-classes.md
   items:
     - name: Clase WMI de servidor SMS_CH_CheckSummary
       href: core/clients/status/sms_ch_checksummary-server-wmi-class.md
@@ -830,71 +816,66 @@
     - name: Clase WMI de servidor SMS_CN_ClientStatus
       href: core/clients/status/sms_cn_clientstatus-server-wmi-class.md
       items:
-        - name: Método GetOnlineCount de la clase SMS_CN_ClientStatus
+        - name: Método GetOnlineCount
           href: core/clients/status/getonlinecount-method-in-class-sms_cn_clientstatus.md
 - name: Clases WMI de servidor de colecciones
-  href: core/clients/collections/collections-server-wmi-classes.md
   items:
     - name: Clase WMI de servidor SMS_CM_RES_COLL_CollectionID
       href: core/clients/collections/sms_cm_res_coll_collectionid-server-wmi-class.md
     - name: Clase WMI de servidor SMS_Collection
       href: core/clients/collections/sms_collection-server-wmi-class.md
       items:
-        - name: Método AddMembershipRule de la clase SMS_Collection
+        - name: Método AddMembershipRule
           href: core/clients/collections/addmembershiprule-method-in-class-sms_collection.md
-        - name: Método AddMembershipRules de la clase SMS_Collection
+        - name: Método AddMembershipRules
           href: core/clients/collections/addmembershiprules-method-in-class-sms_collection.md
-        - name: Método AMTOperateForCollection de la clase SMS_Collection
-          href: core/clients/collections/amtoperateforcollection-method-in-class-sms_collection.md
-        - name: Método AMTOperateForMachines de la clase SMS_Collection
-          href: core/clients/collections/amtoperateformachines-method-in-class-sms_collection.md
-        - name: Método ApproveClients de la clase SMS_Collection
+        - name: Método ApproveClients
           href: core/clients/collections/approveclients-method-in-class-sms_collection.md
-        - name: Método BlockClients de la clase SMS_Collection
+        - name: Método BlockClients
           href: core/clients/collections/blockclients-method-in-class-sms_collection.md
-        - name: Método ChangeOwnership de la clase SMS_Collection
+        - name: Método ChangeOwnership
           href: core/clients/collections/changeownership-method-in-class-sms_collection.md
-        - name: Método ClearDeploymentLocksForCollection de la clase SMS_Collection
+        - name: Método ClearDeploymentLocksForCollection
           href: core/clients/collections/cleardeploymentlocksforcollection-method-in-class-sms_collection.md
-        - name: Método ClearDeviceCategory de la clase SMS_Collection
+        - name: Método ClearDeviceCategory
           href: core/clients/collections/cleardevicecategory-method-in-class-sms_collection.md
-        - name: Método ClearLastNBSAdvForCollection de la clase SMS_Collection
+        - name: Método ClearLastNBSAdvForCollection
           href: core/clients/collections/clearlastnbsadvforcollection-method-in-class-sms_collection.md
-        - name: Método ClearLastNBSAdvForMachines de la clase SMS_Collection
+        - name: Método ClearLastNBSAdvForMachines
           href: core/clients/collections/clearlastnbsadvformachines-method-in-class-sms_collection.md
-        - name: Método ClientEditions de la clase SMS_Collection
+        - name: Método ClientEditions
           href: core/clients/collections/clienteditions-method-in-class-sms_collection.md
-        - name: Método CreateCCR de la clase SMS_Collection
+        - name: Método CreateCCR
           href: core/clients/collections/createccr-method-in-class-sms_collection.md
-        - name: Método CreateCCRs de la clase SMS_Collection
+        - name: Método CreateCCRs
           href: core/clients/collections/createccrs-method-in-class-sms_collection.md
-        - name: Método DeleteAllMembers de la clase SMS_Collection
+        - name: Método DeleteAllMembers
           href: core/clients/collections/deleteallmembers-method-in-class-sms_collection.md
-        - name: Método DeleteMembershipRule de la clase SMS_Collection
+        - name: Método DeleteMembershipRule
           href: core/clients/collections/deletemembershiprule-method-in-class-sms_collection.md
-        - name: Método DeleteMembershipRules de la clase SMS_Collection
+        - name: Método DeleteMembershipRules
           href: core/clients/collections/deletemembershiprules-method-in-class-sms_collection.md
-        - name: Método FindResourceSite de la clase SMS_Collection
+        - name: Método FindResourceSite
           href: core/clients/collections/findresourcesite-method-in-class-sms_collection.md
-        - name: Método FindMachineSite de la clase SMS_Collection
+        - name: Método FindMachineSite
           href: core/clients/collections/findmachinesite-method-in-class-sms_collection.md
-        - name: Método GetNumResults de la clase SMS_Collection
+        - name: Método GetNumResults
           href: core/clients/collections/getnumresults-method-in-class-sms_collection.md
-        - name: Método GenerateCCRByName de la clase SMS_Collection
+        - name: Método GenerateCCRByName
           href: core/clients/collections/generateccrbyname-method-in-class-sms_collecton.md
-        - name: Método GetTotalNumResults de la clase SMS_Collection
+        - name: Método GetTotalNumResults
           href: core/clients/collections/gettotalnumresults-method-in-class-sms_collection.md
-        - name: Método ReassignClientsToSite de la clase SMS_Collection
+        - name: Método ReassignClientsToSite
           href: core/clients/collections/reassignclientstosite-method-in-class-sms_collection.md
-        - name: Método RequestRefresh de la clase SMS_Collection
+        - name: Método RequestRefresh
           href: core/clients/collections/requestrefresh-method-in-class-sms_collection.md
-        - name: Método SetDeviceCategory de la clase SMS_Collection
+        - name: Método SetDeviceCategory
           href: core/clients/collections/setdevicecategory-method-in-class-sms_collection.md
-        - name: Método SetMemberOrder de la clase SMS_Collection
+        - name: Método SetMemberOrder
           href: core/clients/collections/setmemberorder-method-in-class-sms_collection.md
-        - name: UpdateVisibilityInEPDashBoard de la clase SMS_Collection
+        - name: UpdateVisibilityInEPDashBoard
           href: core/clients/collections/updatevisibilityinepdashboard-in-class-sms_collection.md
-        - name: Método VerifyNoCircularDependencies de la clase SMS_Collection
+        - name: Método VerifyNoCircularDependencies
           href: core/clients/collections/verifynocirculardependencies-method-in-class-sms_collection.md
     - name: Clase WMI de servidor SMS_CollectionBucket
       href: core/clients/collections/sms_collectionbucket-server-wmi-class.md
@@ -917,7 +898,7 @@
     - name: Clase WMI de servidor SMS_CollectionRuleQuery
       href: core/clients/collections/sms_collectionrulequery-server-wmi-class.md
       items:
-        - name: Método ValidateQuery de la clase SMS_CollectionRuleQuery
+        - name: Método ValidateQuery
           href: core/clients/collections/validatequery-method-in-class-sms_collectionrulequery.md
     - name: Clase WMI de servidor SMS_CollectionSettings
       href: core/clients/collections/sms_collectionsettings-server-wmi-class.md
@@ -933,9 +914,10 @@
       href: core/clients/collections/sms_dirfullcollmem-server-wmi-class.md
     - name: Clase WMI de servidor SMS_FullCollectionMembership
       href: core/clients/collections/sms_fullcollectionmembership-server-wmi-class.md
-- name: Clases WMI de servidor de configuración de cumplimiento (DCM)
-  href: compliance/compliance-settings-dcm-server-wmi-classes.md
+- name: Clases WMI de servidor de configuración de cumplimiento
   items:
+    - name: Acerca de las clases WMI de servidor de configuración de cumplimiento
+      href: compliance/compliance-settings-dcm-server-wmi-classes.md
     - name: Clase WMI de servidor SMS_AdvancedThreatProtectionSettings
       href: compliance/sms_advancedthreatprotectionsettings-server-wmi-class.md
     - name: Clase WMI de servidor SMS_BaselineAssignment
@@ -973,13 +955,13 @@
     - name: Clase WMI de servidor SMS_ConfigurationItem
       href: compliance/sms_configurationitem-server-wmi-class.md
       items:
-        - name: Método AcceptEULA de la clase SMS_ConfigurationItem
+        - name: Método AcceptEULA
           href: compliance/accepteula-method-in-class-sms_configurationitem.md
-        - name: Método GetEULA de la clase SMS_ConfigurationItem
+        - name: Método GetEULA
           href: compliance/geteula-method-in-class-sms_configurationitem.md
-        - name: Método GetSDMDefinition de la clase SMS_ConfigurationItem
+        - name: Método GetSDMDefinition
           href: compliance/getsdmdefinition-method-in-class-sms_configurationitem.md
-        - name: Método SetEnforcement de la clase SMS_ConfigurationItem
+        - name: Método SetEnforcement
           href: compliance/setenforcement-method-in-class-sms_configurationitem.md
     - name: Clase WMI de servidor SMS_ConfigurationItemBaseClass
       href: compliance/sms_configurationitembaseclass-server-wmi-class.md
@@ -996,18 +978,18 @@
     - name: Clase WMI de servidor SMS_ConfigurationPolicy
       href: compliance/sms_configurationpolicy-server-wmi-class.md
       items:
-        - name: Método AcceptEULA de la clase SMS_ConfigurationPolicy
+        - name: Método AcceptEULA
           href: compliance/accepteula-method-in-class-sms_configurationpolicy.md
-        - name: Método GetEULA de la clase SMS_ConfigurationPolicy
+        - name: Método GetEULA
           href: compliance/geteula-method-in-class-sms_configurationpolicy.md
     - name: Clase WMI de servidor SMS_ConfigurationPolicyAssignment
       href: compliance/sms_configurationpolicyassignment-server-wmi-class.md
     - name: Clase WMI de servidor SMS_ConfigurationPolicyBase
       href: compliance/sms_configurationpolicybase-server-wmi-class.md
       items:
-        - name: Método AcceptEULA de la clase SMS_ConfigurationPolicyBase
+        - name: Método AcceptEULA
           href: compliance/accepteula-method-in-class-sms_configurationpolicybase.md
-        - name: Método GetEULA de la clase SMS_ConfigurationPolicyBase
+        - name: Método GetEULA
           href: compliance/geteula-method-in-class-sms_configurationpolicybase.md
     - name: Clase WMI de servidor SMS_DCMDeploymentCompliantAssetDetails
       href: compliance/sms_dcmdeploymentcompliantassetdetails-server-wmi-class.md
@@ -1040,42 +1022,38 @@
     - name: Clase WMI de servidor SMS_SettingsDefinitionBase
       href: compliance/sms_settingsdefinitionbase-server-wmi-class.md
       items:
-        - name: Método AcceptEULA de la clase SMS_SettingsDefinitionBase
+        - name: Método AcceptEULA
           href: compliance/accepteula-method-in-class-sms_settingsdefinitionbase.md
-        - name: Método GetEULA de la clase SMS_SettingsDefinitionBase
+        - name: Método GetEULA
           href: compliance/geteula-method-in-class-sms_settingsdefinitionbase.md
     - name: Clase WMI de servidor SMS_TermsAndConditionsSettings
       href: compliance/sms_termsandconditionssettings-server-wmi-class.md
     - name: Clase WMI de servidor SMS_UserStateManagementSettings
       href: compliance/sms_userstatemanagementsettings-server-wmi-class.md
       items:
-        - name: Método AcceptEULA de la clase SMS_UserStateManagementSettings
+        - name: Método AcceptEULA
           href: compliance/accepteula-method-in-class-sms_userstatemanagementsettings.md
-        - name: Método GetEULA de la clase SMS_UserStateManagementSettings
+        - name: Método GetEULA
           href: compliance/geteula-method-in-class-sms_userstatemanagementsettings.md
     - name: Clase WMI de servidor SMS_WSfBConfigurationData
       href: compliance/sms_wsfbconfigurationdata-server-wmi-class.md
 - name: Clases WMI de servidor de extensión de consola
-  href: core/servers/console/console-extension-server-wmi-classes.md
   items:
-    - name: Opciones de línea de comandos de la consola de Configuration Manager
-      href: core/servers/console/console-command-line-options.md
-    - name: Clases de WMI de servidor de la carpeta de la consola de Configuration Manager
-      href: core/servers/console/console-folder-server-wmi-classes.md
+    - name: Clases WMI de servidor de la carpeta de la consola de Configuration Manager
       items:
-        - name: Clase de WMI de servidor SMS_InstanceChangeNotification
+        - name: Clase WMI de servidor SMS_InstanceChangeNotification
           href: core/servers/console/sms_instancechangenotification-server-wmi-class.md
         - name: Clase WMI de servidor SMS_ObjectContainerItem
           href: core/servers/console/sms_objectcontaineritem-server-wmi-class.md
           items:
-            - name: Método MoveMembers de la clase SMS_ObjectContainerItem
+            - name: Método MoveMembers
               href: core/servers/console/movemembers-method-in-class-sms_objectcontaineritem.md
-            - name: Método MoveMembersEx de la clase SMS_ObjectContainerItem
+            - name: Método MoveMembersEx
               href: core/servers/console/movemembersex-method-in-class-sms_objectcontaineritem.md
         - name: Clase WMI de servidor SMS_ObjectContainerNode
           href: core/servers/console/sms_objectcontainernode-server-wmi-class.md
           items:
-            - name: Método MoveFolders de la clase SMS_ObjectContainerNode
+            - name: Método MoveFolders
               href: core/servers/console/movefolders-method-in-class-sms_objectcontainernode.md
         - name: Clase WMI de servidor SMS_ObjectContentExtraInfo
           href: core/servers/console/sms_objectcontentextrainfo-server-wmi-class.md
@@ -1086,33 +1064,32 @@
         - name: Clase WMI de servidor SMS_SearchFolder
           href: core/servers/console/sms_searchfolder-server-wmi-class.md
 - name: Clases WMI de servidor de contenido
-  href: core/servers/configure/content-server-wmi-classes.md
   items:
     - name: Clase WMI de servidor SMS_Content
       href: core/servers/configure/sms_content-server-wmi-class.md
       items:
-        - name: Método IsOfficeContent de la clase SMS_Content
+        - name: Método IsOfficeContent
           href: core/servers/configure/isofficecontent-method-in-class-sms_content.md
     - name: Clase WMI de servidor SMS_ContentPackage
       href: core/servers/configure/sms_contentpackage-server-wmi-class.md
       items:
-        - name: Método AddChangeNotification de la clase SMS_ContentPackage
+        - name: Método AddChangeNotification
           href: core/servers/configure/addchangenotification-method-in-class-sms_contentpackage.md
-        - name: Método AddContent de la clase SMS_ContentPackage
+        - name: Método AddContent
           href: core/servers/configure/addcontent-method-in-class-sms_contentpackage.md
-        - name: Método AddDistributionPointGroup de la clase SMS_ContentPackage
+        - name: Método AddDistributionPointGroup
           href: core/servers/configure/adddistributionpointgroup-method-in-class-sms_contentpackage.md
-        - name: Método AddDistributionPoints de la clase SMS_ContentPackage
+        - name: Método AddDistributionPoints
           href: core/servers/configure/adddistributionpoints-method-in-class-sms_contentpackage.md
-        - name: Método Commit de la clase SMS_ContentPackage
+        - name: Método Commit
           href: core/servers/configure/commit-method-in-class-sms_contentpackage.md
-        - name: Método RefreshPkgSource de la clase SMS_ContentPackage
+        - name: Método RefreshPkgSource
           href: core/servers/configure/refreshpkgsource-method-in-class-sms_contentpackage.md
-        - name: Método RemoveContent de la clase SMS_ContentPackage
+        - name: Método RemoveContent
           href: core/servers/configure/removecontent-method-in-class-sms_contentpackage.md
-        - name: Método SetSourceSite de la clase SMS_ContentPackage
+        - name: Método SetSourceSite
           href: core/servers/configure/setsourcesite-method-in-class-sms_contentpackage.md
-        - name: Método Unlock de la clase SMS_ContentPackage
+        - name: Método Unlock
           href: core/servers/configure/unlock-method-in-class-sms_contentpackage.md
     - name: Clase WMI de servidor SMS_DPContentInfo
       href: core/servers/configure/sms_dpcontentinfo-server-wmi-class.md
@@ -1138,21 +1115,6 @@
       href: core/servers/configure/sms_packagecontentserverinfo-server-wmi-class.md
 - name: Funciones en desuso
   href: misc/deprecated-functions.md
-  items:
-    - name: SmsCreateAccount
-      href: misc/smscreateaccount.md
-    - name: SmsGrantActAsOSRight
-      href: misc/smsgrantactasosright.md
-    - name: SmsGrantAdminRight
-      href: misc/smsgrantadminright.md
-    - name: SmsGrantDomainAdminRight
-      href: misc/smsgrantdomainadminright.md
-    - name: SmsGrantServiceLogonRight
-      href: misc/smsgrantservicelogonright.md
-    - name: SmsLsaAccount
-      href: misc/smslsaaccount.md
-    - name: SmsLsaGetTrustedDomains
-      href: misc/smslsagettrusteddomains.md
 - name: Clases WMI de servidor de administración de dispositivos
   href: mdm/device-management-server-wmi-classes.md
   items:
@@ -1161,47 +1123,45 @@
     - name: Clase WMI de servidor SMS_DeviceMethods
       href: mdm/sms_devicemethods-server-wmi-class.md
       items:
-        - name: Método AllowAccess de la clase SMS_DeviceMethods
+        - name: Método AllowAccess
           href: mdm/allowaccess-method-in-class-sms_devicemethods.md
-        - name: Método BlockAccess de la clase SMS_DeviceMethods
+        - name: Método BlockAccess
           href: mdm/blockaccess-method-in-class-sms_devicemethods.md
-        - name: Método CancelRetire de la clase SMS_DeviceMethods
+        - name: Método CancelRetire
           href: mdm/cancelretire-method-in-class-sms_devicemethods.md
-        - name: Método CancelWipe de la clase SMS_DeviceMethods
+        - name: Método CancelWipe
           href: mdm/cancelwipe-method-in-class-sms_devicemethods.md
-        - name: Método RequestRetire de la clase SMS_DeviceMethods
+        - name: Método RequestRetire
           href: mdm/requestretire-method-in-class-sms_devicemethods.md
-        - name: Método RequestWipe de la clase SMS_DeviceMethods
+        - name: Método RequestWipe
           href: mdm/requestwipe-method-in-class-sms_devicemethods.md
     - name: Clase WMI de servidor SMS_DeviceSettingItem
       href: mdm/sms_devicesettingitem-server-wmi-class.md
     - name: Clase WMI de servidor SMS_DeviceSettingPackage
       href: mdm/sms_devicesettingpackage-server-wmi-class.md
       items:
-        - name: Método AddChangeNotification de la clase SMS_DeviceSettingPackage
+        - name: Método AddChangeNotification
           href: mdm/addchangenotification-method-in-class-sms_devicesettingpackage.md
-        - name: Método AddDistributionPoints de la clase SMS_DeviceSettingPackage
+        - name: Método AddDistributionPoints
           href: mdm/adddistributionpoints-method-in-class-sms_devicesettingpackage.md
-        - name: Método RefreshPkgSource de la clase SMS_DeviceSettingPackage
+        - name: Método RefreshPkgSource
           href: mdm/refreshpkgsource-method-in-class-sms_devicesettingpackage.md
-        - name: Método SetSourceSite de la clase SMS_DeviceSettingPackage
+        - name: Método SetSourceSite
           href: mdm/setsourcesite-method-in-class-sms_devicesettingpackage.md
-        - name: Método Unlock de la clase SMS_DeviceSettingPackage
+        - name: Método Unlock
           href: mdm/unlock-method-in-class-sms_devicesettingpackage.md
     - name: Clase WMI de servidor SMS_DeviceSettingPackageItem
       href: mdm/sms_devicesettingpackageitem-server-wmi-class.md
 - name: Clases de detección
-  href: core/servers/configure/discovery-classes.md
   items:
     - name: Clases WMI de servidor de detección
-      href: core/servers/configure/discovery-server-wmi-classes.md
       items:
         - name: Clase WMI de servidor SMS_ADDomain
           href: core/servers/configure/sms_addomain-server-wmi-class.md
         - name: Clase WMI de servidor SMS_ADForest
           href: core/servers/configure/sms_adforest-server-wmi-class.md
           items:
-            - name: Método DeleteDiscoveryData de la clase SMS_ADForest
+            - name: Método DeleteDiscoveryData
               href: core/servers/configure/deletediscoverydata-method-in-class-sms_adforest.md
         - name: Clase WMI de servidor SMS_ADForestDiscoveryStatus
           href: core/servers/configure/sms_adforestdiscoverystatus-server-wmi-class.md
@@ -1209,7 +1169,7 @@
           href: core/servers/configure/sms_adsite-server-wmi-class.md
         - name: Clase WMI de servidor SMS_ADSubnet
           href: core/servers/configure/sms_adsubnet-server-wmi-class.md
-    - name: Clase de automatización COM de SMSResGen
+    - name: Clase de automatización COM SMSResGen
       href: core/servers/configure/smsresgen-com-automation-class.md
       items:
         - name: Interfaz ISMSResGen
@@ -1230,7 +1190,6 @@
             - name: Enumeración DDRPropertyFlagsEnum
               href: core/servers/configure/ddrpropertyflagsenum-enumeration.md
 - name: Clases WMI de servidor de Endpoint Protection
-  href: protect/endpoint-protection-server-wmi-classes.md
   items:
     - name: Clase WMI de servidor SMS_AmPolicySummary
       href: protect/sms_ampolicysummary-server-wmi-class.md
@@ -1241,21 +1200,21 @@
     - name: Clase WMI de servidor SMS_ClientOperation
       href: protect/sms_clientoperation-server-wmi-class.md
       items:
-        - name: Método AllowThreat de la clase SMS_ClientOperation
+        - name: Método AllowThreat
           href: protect/allowthreat-method-in-class-sms_clientoperation.md
-        - name: Método CancelClientOperation de la clase SMS_ClientOperation
+        - name: Método CancelClientOperation
           href: protect/cancelclientoperation-method-in-class-sms_clientoperation.md
-        - name: Método DeleteClientOperation de la clase SMS_ClientOperation
+        - name: Método DeleteClientOperation
           href: protect/deleteclientoperation-method-in-class-sms_clientoperation.md
-        - name: Método ExcludeScanPaths de la clase SMS_ClientOperation
+        - name: Método ExcludeScanPaths
           href: protect/excludescanpaths-method-in-class-sms_clientoperation.md
-        - name: Método IsClientOperationAllowed de la clase SMS_ClientOperation
+        - name: Método IsClientOperationAllowed
           href: protect/isclientoperationallowed-method-in-class-sms_clientoperation.md
-        - name: Método IsClientOperationUpdateAllowed de la clase SMS_ClientOperation
+        - name: Método IsClientOperationUpdateAllowed
           href: protect/isclientoperationupdateallowed-method-in-class-sms_clientoperation.md
-        - name: Método InitiateClientOperation de la clase SMS_ClientOperation
+        - name: Método InitiateClientOperation
           href: protect/initiateclientoperation-method-in-class-sms_clientoperation.md
-        - name: Método RestoreQuarantinedItem de la clase SMS_ClientOperation
+        - name: Método RestoreQuarantinedItem
           href: protect/restorequarantineditem-method-in-class-sms_clientoperation.md
     - name: Clase WMI de servidor SMS_ClientOperationStatus
       href: protect/sms_clientoperationstatus-server-wmi-class.md
@@ -1280,17 +1239,15 @@
     - name: Clase WMI de servidor SMS_TopThreatSummary
       href: protect/sms_topthreatsummary-server-wmi-class.md
 - name: Clases WMI de servidor híbrido
-  href: mdm/hybrid-server-wmi-classes.md
   items:
     - name: Clases WMI de servidor de administración de dispositivos móviles
-      href: mdm/mobile-device-management-server-wmi-classes.md
       items:
         - name: Clase WMI de servidor MDM_GenericAppConfiguration
           href: mdm/mdm_genericappconfiguration-server-wmi-class.md
         - name: Clase WMI de servidor SMS_BulkEnrollmentProfiles
           href: mdm/sms_bulkenrollmentprofiles-server-wmi-class.md
           items:
-            - name: Método GenerateProvisioningXML de la clase SMS_BulkEnrollmentProfiles
+            - name: Método GenerateProvisioningXML
               href: mdm/generateprovisioningxml-method-in-class-sms_bulkenrollmentprofiles.md
         - name: Clase WMI de servidor SMS_IntuneAccountInfo
           href: mdm/sms_intuneaccountinfo-server-wmi-class.md
@@ -1299,14 +1256,14 @@
         - name: Clase WMI de servidor SMS_MDMAppleVppToken
           href: mdm/sms_mdmapplevpptoken-server-wmi-class.md
           items:
-            - name: Método SyncToken de la clase SMS_MDMAppleVppToken
+            - name: Método SyncToken
               href: mdm/synctoken-method-in-class-sms_mdmapplevpptoken.md
-            - name: Método UploadToken de la clase SMS_MDMAppleVppToken
+            - name: Método UploadToken
               href: mdm/uploadtoken-method-in-class-sms_mdmapplevpptoken.md
         - name: Clase WMI de servidor SMS_MDMBulkEnrollmentPackages
           href: mdm/sms_mdmbulkenrollmentpackages-server-wmi-class.md
           items:
-            - name: Método ImportForProfile de la clase SMS_MDMBulkEnrollmentPackages
+            - name: Método ImportForProfile
               href: mdm/importforprofile-method-in-class-sms_mdmbulkenrollmentpackages.md
         - name: Clase WMI de servidor SMS_MDMBulkEnrollmentProfiles
           href: mdm/sms_mdmbulkenrollmentprofiles-server-wmi-class.md
@@ -1315,26 +1272,25 @@
         - name: Clase WMI de servidor SMS_MDMCorpOwnedDevices
           href: mdm/sms_mdmcorpowneddevices-server-wmi-class.md
           items:
-            - name: Método UpdateProfileIDForDevices de la clase SMS_MDMCorpOwnedDevices
+            - name: Método UpdateProfileIDForDevices
               href: mdm/updateprofileidfordevices-method-in-class-sms_mdmcorpowneddevices.md
         - name: Clase WMI de servidor SMS_MDMDeviceCategory
           href: mdm/sms_mdmdevicecategory-server-wmi-class.md
         - name: Clase WMI de servidor SMS_MDMDeviceEnrollmentManagers
           href: mdm/sms_mdmdeviceenrollmentmanagers-server-wmi-class.md
           items:
-            - name: Método InsertMultipleResourceIds de la clase SMS_MDMDeviceEnrollmentManagers
+            - name: Método InsertMultipleResourceIds
               href: mdm/insertmultipleresourceids-method-in-class-sms_mdmdeviceenrollmentmanagers.md
-            - name: Método RemoveMultipleResourceIds de la clase SMS_MDMDeviceEnrollmentManagers
+            - name: Método RemoveMultipleResourceIds
               href: mdm/removemultipleresourceids-method-in-class-sms_mdmdeviceenrollmentmanagers.md
     - name: Clase WMI de servidor SMS_WinRTSideLoadingKey
       href: mdm/sms_winrtsideloadingkey-server-wmi-class.md
 - name: Clases WMI de servidor de migración
-  href: core/migration/migration-server-wmi-classes.md
   items:
     - name: Clase WMI de servidor SMS_MigrationCollectionInfo
       href: core/migration/sms_migrationcollectioninfo-server-wmi-class.md
       items:
-        - name: Método Clase GetClientsCountByCollections de la clase SMS_MigrationCollectionInfo
+        - name: Método GetClientsCountByCollections
           href: core/migration/getclientscountbycollections-method-in-class-sms_migrationcollectioninfo.md
     - name: Clase WMI de servidor SMS_MigrationDashboard
       href: core/migration/sms_migrationdashboard-server-wmi-class.md
@@ -1343,9 +1299,9 @@
     - name: Clase WMI de servidor SMS_MigrationEntity
       href: core/migration/sms_migrationentity-server-wmi-class.md
       items:
-        - name: Método ExcludeAndInclude de la clase SMS_MigrationEntity
+        - name: Método ExcludeAndInclude
           href: core/migration/excludeandinclude-method-in-class-sms_migrationentity.md
-        - name: Método GetEntityReferences de la clase SMS_MigrationEntity
+        - name: Método GetEntityReferences
           href: core/migration/getentityreferences-method-in-class-sms_migrationentity.md
     - name: Clase WMI de servidor SMS_MigrationEntityDependency
       href: core/migration/sms_migrationentitydependency-server-wmi-class.md
@@ -1354,173 +1310,32 @@
     - name: Clase WMI de servidor SMS_MigrationJob
       href: core/migration/sms_migrationjob-server-wmi-class.md
       items:
-        - name: Método Start de la clase SMS_MigrationJob
+        - name: Método Start
           href: core/migration/start-method-in-class-sms_migrationjob.md
-        - name: Método Stop de la clase SMS_MigrationJob
+        - name: Método Stop
           href: core/migration/stop-method-in-class-sms_migrationjob.md
     - name: Clase WMI de servidor SMS_MigrationJobEntityRelation
       href: core/migration/sms_migrationjobentityrelation-server-wmi-class.md
     - name: Clase WMI de servidor SMS_MigrationSiteMapping
       href: core/migration/sms_migrationsitemapping-server-wmi-class.md
       items:
-        - name: Método ActivateHierarchy de la clase SMS_MigrationSiteMapping
+        - name: Método ActivateHierarchy
           href: core/migration/activatehierarchy-method-in-class-sms_migrationsitemapping.md
-        - name: Método CheckDecommissionState de la clase SMS_MigrationSiteMapping
+        - name: Método CheckDecommissionState
           href: core/migration/checkdecommissionstate-method-in-class-sms_migrationsitemapping.md
-        - name: Método CleanupHierarchyData de la clase SMS_MigrationSiteMapping
+        - name: Método CleanupHierarchyData
           href: core/migration/cleanuphierarchydata-method-in-class-sms_migrationsitemapping.md
-        - name: Método Decommission de la clase SMS_MigrationSiteMapping
+        - name: Método Decommission
           href: core/migration/decommission-method-in-class-sms_migrationsitemapping.md
-        - name: Método Resuscitate de la clase SMS_MigrationSiteMapping
+        - name: Método Resuscitate
           href: core/migration/resuscitate-method-in-class-sms_migrationsitemapping.md
-        - name: Método Sync de la clase SMS_MigrationSiteMapping
+        - name: Método Sync
           href: core/migration/sync-method-in-class-sms_migrationsitemapping.md
     - name: Clase WMI de servidor SMS_MigrationSourceSite
       href: core/migration/sms_migrationsourcesite-server-wmi-class.md
-- name: Clases WMI de servidor NAP
-  href: misc/nap-server-wmi-classes.md
-  items:
-    - name: Clase WMI de servidor SMS_NAPRestrictionErrorSummary
-      href: misc/sms_naprestrictionerrorsummary-server-wmi-class.md
-    - name: Clase WMI de servidor SMS_NAPRestrictionSummary
-      href: misc/sms_naprestrictionsummary-server-wmi-class.md
-    - name: Clase WMI de servidor SMS_NAPSystemInfo
-      href: misc/sms_napsysteminfo-server-wmi-class.md
 - name: Clases obsoletas
   href: misc/obsolete-classes.md
-  items:
-    - name: Clase WMI de servidor SMS_AdvertisementStatusRootSummarizer
-      href: misc/sms_advertisementstatusrootsummarizer-server-wmi-class.md
-    - name: Clase WMI de servidor SMS_AdvertisementStatusSummarizer
-      href: misc/sms_advertisementstatussummarizer-server-wmi-class.md
-    - name: Clase WMI de servidor SMS_AppStatePerClientDT
-      href: misc/sms_appstateperclientdt-server-wmi-class.md
-    - name: Clase WMI de servidor SMS_AppStatePerCollectionDT
-      href: misc/sms_appstatepercollectiondt-server-wmi-class.md
-    - name: Clase WMI de servidor SMS_AppUnknownStatePerClient
-      href: misc/sms_appunknownstateperclient-server-wmi-class.md
-    - name: Clase WMI de servidor SMS_AppUnknownStatePerCollection
-      href: misc/sms_appunknownstatepercollection-server-wmi-class.md
-    - name: Clase WMI de servidor SMS_DeviceHinvTranslation
-      href: misc/sms_devicehinvtranslation-server-wmi-class.md
-    - name: Clase WMI de servidor SMS_DPStatus
-      href: misc/sms_dpstatus-server-wmi-class.md
-    - name: Clase WMI de servidor SMS_DPStatusPerDP
-      href: misc/sms_dpstatusperdp-server-wmi-class.md
-    - name: Clase WMI de servidor SMS_DPStatusSummary
-      href: misc/sms_dpstatussummary-server-wmi-class.md
-      items:
-        - name: Método UpdateSummaryData de la clase SMS_DPStatusSummary
-          href: misc/updatesummarydata-method-in-class-sms_dpstatussummary.md
-    - name: Clase WMI de servidor SMS_LocalizedNameLookup
-      href: misc/sms_localizednamelookup-server-wmi-class.md
-    - name: Clase WMI de servidor SMS_ObjectToClassPermissions_a
-      href: misc/sms_objecttoclasspermissions_a-server-wmi-class.md
-    - name: Clase WMI de servidor SMS_ObjectToInstancePermissions_a
-      href: misc/sms_objecttoinstancepermissions_a-server-wmi-class.md
-    - name: Clase WMI de servidor SMS_PropertyDisplayNode
-      href: misc/sms_propertydisplaynode-server-wmi-class.md
-    - name: Clase WMI de servidor SMS_Report
-      href: misc/sms_report-server-wmi-class.md
-      items:
-        - name: Método GetReportPointInfo de la clase SMS_Report
-          href: misc/getreportpointinfo-method-in-class-sms_report.md
-        - name: Método ValidateQuery de la clase SMS_Report
-          href: misc/validatequery-method-in-class-sms_report.md
-    - name: Clase WMI de servidor SMS_ReportDashboard
-      href: misc/sms_reportdashboard-server-wmi-class.md
-    - name: Clase WMI de servidor SMS_ReportParameter
-      href: misc/sms_reportparameter-server-wmi-class.md
-    - name: Clase WMI de servidor SMS_SCI_SQLCmd
-      href: misc/sms_sci_sqlcmd-server-wmi-class.md
-    - name: Clase WMI de servidor SMS_SCI_RoamingBoundary
-      href: misc/sms_sci_roamingboundary-server-wmi-class.md
-    - name: Clase WMI de servidor SMS_SecuredObject
-      href: misc/sms_securedobject-server-wmi-class.md
-      items:
-        - name: Método GetCollectionsWithResourcePermissions de la clase SMS_SecuredObject
-          href: misc/getcollectionswithresourcepermissions-method-in-class-sms_securedobject.md
-        - name: Método RefreshNTGroupMembership de la clase SMS_SecuredObject
-          href: misc/refreshntgroupmembership-method-in-class-sms_securedobject.md
-        - name: Método UserHasPermissions de la clase SMS_SecuredObject
-          href: misc/userhaspermissions-method-in-class-sms_securedobject.md
-    - name: Clase WMI de servidor SMS_SIIB_NALProvider
-      href: misc/sms_siib_nalprovider-server-wmi-class.md
-    - name: Clase WMI de servidor SMS_SIIB_UINALProvider
-      href: misc/sms_siib_uinalprovider-server-wmi-class.md
-    - name: Clase WMI de servidor SMS_SiteToROOTColl_a
-      href: misc/sms_sitetorootcoll_a-server-wmi-class.md
-    - name: Clase WMI de servidor SMS_SoftwareProductCompliance
-      href: misc/sms_softwareproductcompliance-server-wmi-class.md
-      items:
-        - name: Método DeleteByQuery de la clase SMS_SoftwareProductCompliance
-          href: misc/deletebyquery-method-in-class-sms_softwareproductcompliance.md
-        - name: Método Export de la clase SMS_SoftwareProductCompliance
-          href: misc/export-method-in-class-sms_softwareproductcompliance.md
-        - name: Método Import de la clase SMS_SoftwareProductCompliance
-          href: misc/import-method-in-class-sms_softwareproductcompliance.md
-        - name: Método ProcessInBox de la clase SMS_SoftwareProductCompliance
-          href: misc/processinbox-method-in-class-sms_softwareproductcompliance.md
-    - name: Clase WMI de servidor SMS_UINAL_ResourceInfo
-      href: misc/sms_uinal_resourceinfo-server-wmi-class.md
-    - name: Clase WMI de servidor SMS_UpdatePrograms
-      href: misc/sms_updateprograms-server-wmi-class.md
-    - name: Clase WMI de servidor SMS_UpdateRelations
-      href: misc/sms_updaterelations-server-wmi-class.md
-    - name: Clase WMI de servidor SMS_UserClassPermissionNames
-      href: misc/sms_userclasspermissionnames-server-wmi-class.md
-    - name: Clase WMI de servidor SMS_UserClassPermissions
-      href: misc/sms_userclasspermissions-server-wmi-class.md
-    - name: Clase WMI de servidor SMS_UserInstancePermissionInfo
-      href: misc/sms_userinstancepermissioninfo-server-wmi-class.md
-    - name: Clase WMI de servidor SMS_UserInstancePermissionNames
-      href: misc/sms_userinstancepermissionnames-server-wmi-class.md
-    - name: Clase WMI de servidor SMS_UserInstancePermissions
-      href: misc/sms_userinstancepermissions-server-wmi-class.md
-    - name: SoftDistDownloadCompletedEvent
-      href: misc/softdistdownloadcompletedevent.md
-    - name: SoftDistDownloadStartedEvent
-      href: misc/softdistdownloadstartedevent.md
-    - name: Clase de automatización COM de cliente TsMediaClass
-      href: misc/tsmediaclass-client-com-automation-class.md
-      items:
-        - name: Interfaz ITsMediaClass
-          href: misc/itsmediaclass-interface.md
-          items:
-            - name: Método ITsMediaClass Cancel
-              href: misc/itsmediaclass--cancel-method.md
-            - name: Propiedad ITsMediaClass ConnectionOptions
-              href: misc/itsmediaclass--connectionoptions-property.md
-            - name: Método ITsMediaClass CreateBootMedia
-              href: misc/itsmediaclass--createbootmedia-method.md
-            - name: Método ITsMediaClass CreateCaptureMedia
-              href: misc/itsmediaclass--createcapturemedia-method.md
-            - name: Método ITsMediaClass CreateStandaloneMedia
-              href: misc/itsmediaclass--createstandalonemedia-method.md
-            - name: Propiedad ITsMediaClass CurrentStep
-              href: misc/itsmediaclass--currentstep-property.md
-            - name: Propiedad ITsMediaClass DistributionPoints
-              href: misc/itsmediaclass--distributionpoints-property.md
-            - name: Propiedad ITsMediaClass ErrorDetail
-              href: misc/itsmediaclass--errordetail-property.md
-            - name: Propiedad ITsMediaClass ExitCode
-              href: misc/itsmediaclass--exitcode-property.md
-            - name: Propiedad ITsMediaClass MediaLabel
-              href: misc/itsmediaclass--medialabel-property.md
-            - name: Propiedad ITsMediaClass NumSteps
-              href: misc/itsmediaclass--numsteps-property.md
-            - name: Propiedad ITsMediaClass ProviderName
-              href: misc/itsmediaclass--providername-property.md
-            - name: Propiedad ITsMediaClass SiteCode
-              href: misc/itsmediaclass--sitecode-property.md
-            - name: Propiedad ITsMediaClass Status
-              href: misc/itsmediaclass--status-property.md
-            - name: Propiedad ITsMediaClass StepInfo
-              href: misc/itsmediaclass--stepinfo-property.md
-            - name: Propiedad ITsMediaClass StepProgress
-              href: misc/itsmediaclass--stepprogress-property.md
 - name: Clases de implementación de sistema operativo
-  href: osd/operating-system-deployment-classes.md
   items:
     - name: Esquema de plataformas admitidas por el controlador de implementación del sistema operativo
       href: osd/operating-system-deployment-driver-supported-platforms-schema.md
@@ -1533,37 +1348,36 @@
           href: osd/query1.md
         - name: Query2
           href: osd/query2.md
-    - name: Clases de WMI del servidor de implementación del sistema operativo
-      href: osd/operating-system-deployment-server-wmi-classes.md
+    - name: Clases WMI de servidor de implementación de sistema operativo
       items:
         - name: Clase WMI de servidor SMS_BootImagePackage
           href: osd/sms_bootimagepackage-server-wmi-class.md
           items:
-            - name: Método AddChangeNotification de la clase SMS_BootImagePackage
+            - name: Método AddChangeNotification
               href: osd/addchangenotification-method-in-class-sms_bootimagepackage.md
-            - name: Método AddDistributionPoints de la clase SMS_BootImagePackage
+            - name: Método AddDistributionPoints
               href: osd/adddistributionpoints-method-in-class-sms_bootimagepackage.md
-            - name: Método DeleteContextID de la clase SMS_BootImagePackage
+            - name: Método DeleteContextID
               href: osd/deletecontextid-method-in-class-sms_bootimagepackage.md
-            - name: Método ExportDefaultBootImage de la clase SMS_BootImagePackage
+            - name: Método ExportDefaultBootImage
               href: osd/exportdefaultbootimage-method-in-class-sms_bootimagepackage.md
-            - name: Método GetImageProperties de la clase SMS_BootImagePackage
+            - name: Método GetImageProperties
               href: osd/getimageproperties-method-in-class-sms_bootimagepackage.md
-            - name: Método QueryOSDBinaryInjectionStatus de la clase SMS_BootImagePackage
+            - name: Método QueryOSDBinaryInjectionStatus
               href: osd/queryosdbinaryinjectionstatus-method-in-class-sms_bootimagepackage.md
-            - name: Método RefreshPkgSource de la clase SMS_BootImagePackage
+            - name: Método RefreshPkgSource
               href: osd/refreshpkgsource-method-in-class-sms_bootimagepackage.md
-            - name: Método ReloadImageProperties de la clase SMS_BootImagePackage
+            - name: Método ReloadImageProperties
               href: osd/reloadimageproperties-method-in-class-sms_bootimagepackage.md
-            - name: Método SetSourceSite de la clase SMS_BootImagePackage
+            - name: Método SetSourceSite
               href: osd/setsourcesite-method-in-class-sms_bootimagepackage.md
-            - name: Método Unlock de la clase SMS_BootImagePackage
+            - name: Método Unlock
               href: osd/unlock-method-in-class-sms_bootimagepackage.md
-            - name: Método UpdateDefaultImage de la clase SMS_BootImagePackage
+            - name: Método UpdateDefaultImage
               href: osd/updatedefaultimage-method-in-class-sms_bootimagepackage.md
-            - name: Método UpdateImage de la clase SMS_BootImagePackage
+            - name: Método UpdateImage
               href: osd/updateimage-method-in-class-sms_bootimagepackage.md
-            - name: Método UpdateOptionalComponents de la clase SMS_BootImagePackage
+            - name: Método UpdateOptionalComponents
               href: osd/updateoptionalcomponents-method-in-class-sms_bootimagepackage.md
         - name: Clase WMI de servidor SMS_BootImagePackage_DriverRef
           href: osd/sms_bootimagepackage_driverref-server-wmi-class.md
@@ -1572,25 +1386,25 @@
         - name: Clase WMI de servidor SMS_CertificateData
           href: osd/sms_certificatedata-server-wmi-class.md
           items:
-            - name: Método SubmitCertificate de la clase SMS_CertificateData
+            - name: Método SubmitCertificate
               href: osd/submitcertificate-method-in-class-sms_certificatedata.md
-            - name: Método DeleteCertificate de la clase SMS_CertificateData
+            - name: Método DeleteCertificate
               href: osd/deletecertificate-method-in-class-sms_certificatedata.md
         - name: Clase WMI de servidor SMS_CertificateInfo
           href: osd/sms_certificateinfo-server-wmi-class.md
           items:
-            - name: Método BlockCertificate de la clase SMS_CertificateInfo
+            - name: Método BlockCertificate
               href: osd/blockcertificate-method-in-class-sms_certificateinfo.md
         - name: Clase WMI de servidor SMS_CollectionVariable
           href: osd/sms_collectionvariable-server-wmi-class.md
         - name: Clase WMI de servidor SMS_Driver
           href: osd/sms_driver-server-wmi-class.md
           items:
-            - name: Método CreateFromINF de la clase SMS_Driver
+            - name: Método CreateFromINF
               href: osd/createfrominf-method-in-class-sms_driver.md
-            - name: Método CreateFromINFs de la clase SMS_Driver
+            - name: Método CreateFromINFs
               href: osd/createfrominfs-method-in-class-sms_driver.md
-            - name: Método CreateFromOEM de la clase SMS_Driver
+            - name: Método CreateFromOEM
               href: osd/createfromoem-method-in-class-sms_driver.md
         - name: Clase WMI de servidor SMS_DriverContainer
           href: osd/sms_drivercontainer-server-wmi-class.md
@@ -1599,25 +1413,25 @@
         - name: Clase WMI de servidor SMS_DriverPackage
           href: osd/sms_driverpackage-server-wmi-class.md
           items:
-            - name: Método AddChangeNotification de la clase SMS_DriverPackage
+            - name: Método AddChangeNotification
               href: osd/addchangenotification-method-in-class-sms_driverpackage.md
-            - name: Método AddDistributionPoints de la clase SMS_DriverPackage
+            - name: Método AddDistributionPoints
               href: osd/adddistributionpoints-method-in-class-sms_driverpackage.md
-            - name: Método AddDriverContent de la clase SMS_DriverPackage
+            - name: Método AddDriverContent
               href: osd/adddrivercontent-method-in-class-sms_driverpackage.md
-            - name: Método CheckSourceFolder de la clase SMS_DriverPackage
+            - name: Método CheckSourceFolder
               href: osd/checksourcefolder-method-in-class-sms_driverpackage.md
-            - name: Método RebuildPackage de la clase SMS_DriverPackage
+            - name: Método RebuildPackage
               href: osd/rebuildpackage-method-in-class-sms_driverpackage.md
-            - name: Método RefreshPkgSource de la clase SMS_DriverPackage
+            - name: Método RefreshPkgSource
               href: osd/refreshpkgsource-method-in-class-sms_driverpackage.md
-            - name: Método RemoveDriverContent de la clase SMS_DriverPackage
+            - name: Método RemoveDriverContent
               href: osd/removedrivercontent-method-in-class-sms_driverpackage.md
-            - name: Método SetSourceSite de la clase SMS_DriverPackage
+            - name: Método SetSourceSite
               href: osd/setsourcesite-method-in-class-sms_driverpackage.md
-            - name: Método Unlock de la clase SMS_DriverPackage
+            - name: Método Unlock
               href: osd/unlock-method-in-class-sms_driverpackage.md
-            - name: Método ValidateNewPackageSource de la clase SMS_DriverPackage
+            - name: Método ValidateNewPackageSource
               href: osd/validatenewpackagesource-method-in-class-sms_driverpackage.md
         - name: Clase WMI de servidor SMS_DriverModel
           href: osd/sms_drivermodel-server-wmi-class.md
@@ -1630,21 +1444,21 @@
         - name: Clase WMI de servidor SMS_ImagePackage
           href: osd/sms_imagepackage-server-wmi-class.md
           items:
-            - name: Método AddChangeNotification de la clase SMS_ImagePackage
+            - name: Método AddChangeNotification
               href: osd/addchangenotification-method-in-class-sms_imagepackage.md
-            - name: Método AddDistributionPoints de la clase SMS_ImagePackage
+            - name: Método AddDistributionPoints
               href: osd/adddistributionpoints-method-in-class-sms_imagepackage.md
-            - name: Método GetImageProperties de la clase SMS_ImagePackage
+            - name: Método GetImageProperties
               href: osd/getimageproperties-method-in-class-sms_imagepackage.md
-            - name: Método RefreshPkgSource de la clase SMS_ImagePackage
+            - name: Método RefreshPkgSource
               href: osd/refreshpkgsource-method-in-class-sms_imagepackage.md
-            - name: Método ReloadImageProperties de la clase SMS_ImagePackage
+            - name: Método ReloadImageProperties
               href: osd/reloadimageproperties-method-in-class-sms_imagepackage.md
-            - name: Método RunOfflineServicingManager de la clase SMS_ImagePackage
+            - name: Método RunOfflineServicingManager
               href: osd/runofflineservicingmanager-method-in-class-sms_imagepackage.md
-            - name: Método SetSourceSite de la clase SMS_ImagePackage
+            - name: Método SetSourceSite
               href: osd/setsourcesite-method-in-class-sms_imagepackage.md
-            - name: Método Unlock de la clase SMS_ImagePackage
+            - name: Método Unlock
               href: osd/unlock-method-in-class-sms_imagepackage.md
         - name: Clase WMI de servidor SMS_ImageServicingProgress
           href: osd/sms_imageservicingprogress-server-wmi-class.md
@@ -1669,19 +1483,19 @@
         - name: Clase WMI de servidor SMS_OperatingSystemInstallPackage
           href: osd/sms_operatingsysteminstallpackage-server-wmi-class.md
           items:
-            - name: Método AddChangeNotification de la clase SMS_OperatingSystemInstallPackage
+            - name: Método AddChangeNotification
               href: osd/addchangenotification-method-in-class-sms_operatingsysteminstallpackage.md
-            - name: Método AddDistributionPoints de la clase SMS_OperatingSystemInstallPackage
+            - name: Método AddDistributionPoints
               href: osd/adddistributionpoints-method-in-class-sms_operatingsysteminstallpackage.md
-            - name: Método GetImageProperties de la clase SMS_OperatingSystemInstallPackage
+            - name: Método GetImageProperties
               href: osd/getimageproperties-method-in-class-sms_operatingsysteminstallpackage.md
-            - name: Método RefreshPkgSource de la clase SMS_OperatingSystemInstallPackage
+            - name: Método RefreshPkgSource
               href: osd/refreshpkgsource-method-in-class-sms_operatingsysteminstallpackage.md
-            - name: Método ReloadImageProperties de la clase SMS_OperatingSystemInstallPackage
+            - name: Método ReloadImageProperties
               href: osd/reloadimageproperties-method-in-class-sms_operatingsysteminstallpackage.md
-            - name: Método SetSourceSite de la clase SMS_OperatingSystemInstallPackage
+            - name: Método SetSourceSite
               href: osd/setsourcesite-method-in-class-sms_operatingsysteminstallpackage.md
-            - name: Método Unlock de la clase SMS_OperatingSystemInstallPackage
+            - name: Método Unlock
               href: osd/unlock-method-in-class-sms_operatingsysteminstallpackage.md
         - name: Clase WMI de servidor SMS_OSDeploymentConfig
           href: osd/sms_osdeploymentconfig-server-wmi-class.md
@@ -1698,24 +1512,24 @@
         - name: Clase WMI de servidor SMS_StateMigration
           href: osd/sms_statemigration-server-wmi-class.md
           items:
-            - name: Método AddAssociation de la clase SMS_StateMigration
+            - name: Método AddAssociation
               href: osd/addassociation-method-in-class-sms_statemigration.md
-            - name: Método AddAssociationEx de la clase SMS_StateMigration
+            - name: Método AddAssociationEx
               href: osd/addassociationex-method-in-class-sms_statemigration.md
-            - name: Método DeleteAssociation de la clase SMS_StateMigration
+            - name: Método DeleteAssociation
               href: osd/deleteassociation-method-in-class-sms_statemigration.md
-            - name: Método GetEncryptDecryptKey de la clase SMS_StateMigration
+            - name: Método GetEncryptDecryptKey
               href: osd/getencryptdecryptkey-method-in-class-sms_statemigration.md
         - name: Clase WMI de servidor SMS_StateMigrationUserNames
           href: osd/sms_statemigrationusernames-server-wmi-class.md
         - name: Clase WMI de servidor SMS_TaskSequence
           href: osd/sms_tasksequence-server-wmi-class.md
           items:
-            - name: Método ExportXml de la clase SMS_TaskSequence
+            - name: Método ExportXml
               href: osd/exportxml-method-in-class-sms_tasksequence.md
-            - name: Método LoadFromXml de la clase SMS_TaskSequence
+            - name: Método LoadFromXml
               href: osd/loadfromxml-method-in-class-sms_tasksequence.md
-            - name: Método SaveToXml de la clase SMS_TaskSequence
+            - name: Método SaveToXml
               href: osd/savetoxml-method-in-class-sms_tasksequence.md
         - name: Clase WMI de servidor SMS_TaskSequence_Action
           href: osd/sms_tasksequence_action-server-wmi-class.md
@@ -1817,7 +1631,7 @@
           href: osd/sms_tasksequence_softwareconditionexpression-server-wmi-class.md
         - name: Clase WMI de servidor SMS_TaskSequence_Step
           href: osd/sms_tasksequence_step-server-wmi-class.md
-        - name: Clase de WMI de servidor SMS_TaskSequence_UpgradeOperatingSystemAction
+        - name: Clase WMI de servidor SMS_TaskSequence_UpgradeOperatingSystemAction
           href: osd/sms_tasksequence_upgradeoperatingsystemaction-server-wmi-class.md
         - name: Clase WMI de servidor SMS_TaskSequence_VariableConditionExpression
           href: osd/sms_tasksequence_variableconditionexpression-server-wmi-class.md
@@ -1830,37 +1644,37 @@
         - name: Clase WMI de servidor SMS_TaskSequencePackage
           href: osd/sms_tasksequencepackage-server-wmi-class.md
           items:
-            - name: Método AddChangeNotification de la clase SMS_TaskSequencePackage
+            - name: Método AddChangeNotification
               href: osd/addchangenotification-method-in-class-sms_tasksequencepackage.md
-            - name: Método AddDistributionPoints de la clase SMS_TaskSequencePackage
+            - name: Método AddDistributionPoints
               href: osd/adddistributionpoints-method-in-class-sms_tasksequencepackage.md
-            - name: Método CheckReferencesShareType de la clase SMS_TaskSequencePackage
+            - name: Método CheckReferencesShareType
               href: osd/checkreferencessharetype-method-in-class-sms_tasksequencepackage.md
-            - name: Método GetClientConfigPolicies de la clase SMS_TaskSequencePackage
+            - name: Método GetClientConfigPolicies
               href: osd/getclientconfigpolicies-method-in-class-sms_tasksequencepackage.md
-            - name: Método GetContentHash de la clase SMS_TaskSequencePackage
+            - name: Método GetContentHash
               href: osd/getcontenthash-method-in-class-sms_tasksequencepackage.md
-            - name: Método GetPackageDefaultHash de la clase SMS_TaskSequencePackage
+            - name: Método GetPackageDefaultHash
               href: osd/getpackagedefaulthash-method-in-class-sms_tasksequencepackage.md
-            - name: Método GetPackageHash de la clase SMS_TaskSequencePackage
+            - name: Método GetPackageHash
               href: osd/getpackagehash-method-in-class-sms_tasksequencepackage.md
-            - name: Método GetSequence de la clase SMS_TaskSequencePackage
+            - name: Método GetSequence
               href: osd/getsequence-method-in-class-sms_tasksequencepackage.md
-            - name: Método GetTsPolicies de la clase SMS_TaskSequencePackage
+            - name: Método GetTsPolicies
               href: osd/gettspolicies-method-in-class-sms_tasksequencepackage.md
-            - name: Método GetTsPoliciesSaMedia de la clase SMS_TaskSequencePackage
+            - name: Método GetTsPoliciesSaMedia
               href: osd/gettspoliciessamedia-method-in-class-sms_tasksequencepackage.md
-            - name: Método GetTSRelatedToDriverCategory de la clase SMS_TaskSequencePackage
+            - name: Método GetTSRelatedToDriverCategory
               href: osd/gettsrelatedtodrivercategory-method-in-class-sms_tasksequencepackage.md
-            - name: Método ImportSequence de la clase SMS_TaskSequencePackage
+            - name: Método ImportSequence
               href: osd/importsequence-method-in-class-sms_tasksequencepackage.md
-            - name: Método RefreshPkgSource de la clase SMS_TaskSequencePackage
+            - name: Método RefreshPkgSource
               href: osd/refreshpkgsource-method-in-class-sms_tasksequencepackage.md
-            - name: Método SetSequence de la clase SMS_TaskSequencePackage
+            - name: Método SetSequence
               href: osd/setsequence-method-in-class-sms_tasksequencepackage.md
-            - name: Método SetSourceSite de la clase SMS_TaskSequencePackage
+            - name: Método SetSourceSite
               href: osd/setsourcesite-method-in-class-sms_tasksequencepackage.md
-            - name: Método Unlock de la clase SMS_TaskSequencePackage
+            - name: Método Unlock
               href: osd/unlock-method-in-class-sms_tasksequencepackage.md
         - name: Clase WMI de servidor SMS_TaskSequencePackageReference
           href: osd/sms_tasksequencepackagereference-server-wmi-class.md
@@ -1878,48 +1692,20 @@
           href: osd/sms_usersettings-server-wmi-class.md
         - name: Clase WMI de servidor SMS_UserVariable
           href: osd/sms_uservariable-server-wmi-class.md
-        - name: Clase WMI de servidor SMS_VhdPackage
-          href: osd/sms_vhdpackage-server-wmi-class.md
-          items:
-            - name: Método AddChangeNotification de la clase SMS_VhdPackage
-              href: osd/addchangenotification-method-in-class-sms_vhdpackage.md
-            - name: Método AddDistributionPoints de la clase SMS_VhdPackage
-              href: osd/adddistributionpoints-method-in-class-sms_vhdpackage.md
-            - name: Método GetImageProperties de la clase SMS_VhdPackage
-              href: osd/getimageproperties-method-in-class-sms_vhdpackage.md
-            - name: Método RefreshPkgSource de la clase SMS_VhdPackage
-              href: osd/refreshpkgsource-method-in-class-sms_vhdpackage.md
-            - name: Método ReloadImageProperties de la clase SMS_VhdPackage
-              href: osd/reloadimageproperties-method-in-class-sms_vhdpackage.md
-            - name: Método RunOfflineServicingManager de la clase SMS_VhdPackage
-              href: osd/runofflineservicingmanager-method-in-class-sms_vhdpackage.md
-            - name: Método SetSourceSite de la clase SMS_VhdPackage
-              href: osd/setsourcesite-method-in-class-sms_vhdpackage.md
-            - name: Método Unlock de la clase SMS_VhdPackage
-              href: osd/unlock-method-in-class-sms_vhdpackage.md
         - name: Clase WMI de servidor SMS_WinPEOptionalComponentInBootImage
           href: osd/sms_winpeoptionalcomponentinbootimage-server-wmi-class.md
         - name: Clase WMI de servidor SMS_WinPEOptionalComponentInfo
           href: osd/sms_winpeoptionalcomponentinfo-server-wmi-class.md
         - name: CreateMedia.exe de implementación de sistema operativo
           href: osd/operating-system-deployment-createmedia.exe.md
-- name: Clases WMI de servidor de administración fuera de banda
-  href: misc/out-of-band-management-server-wmi-classes.md
-  items:
-    - name: Clase WMI de servidor SMS_AMTCertificate
-      href: misc/sms_amtcertificate-server-wmi-class.md
-    - name: Clase WMI de servidor SMS_AMTMachineInfo
-      href: misc/sms_amtmachineinfo-server-wmi-class.md
 - name: Clases WMI de servidor de informes
-  href: core/servers/reporting/configuration-manager-reporting-server-wmi-classes.md
   items:
     - name: Clase WMI de servidor SMS_ReportViewSchema
       href: core/servers/reporting/sms_reportviewschema-server-wmi-class.md
       items:
-        - name: Método GetSampleValues de la clase SMS_ReportViewSchema
+        - name: Método GetSampleValues
           href: core/servers/reporting/getsamplevalues-method-in-class-sms_reportviewschema.md
 - name: Clases WMI de servidor de administración de recursos
-  href: core/clients/manage/configuration-manager-resource-management-server-wmi-classes.md
   items:
     - name: Clases WMI de servidor de inventario de hardware
       href: core/clients/manage/hardware-inventory-server-wmi-classes.md
@@ -1935,7 +1721,7 @@
         - name: Clase WMI de servidor SMS_InventoryReport
           href: core/clients/manage/sms_inventoryreport-server-wmi-class.md
           items:
-            - name: Método ImportInventoryReport de la clase SMS_InventoryReport
+            - name: Método ImportInventoryReport
               href: core/clients/manage/importinventoryreport-method-in-class-sms_inventoryreport.md
         - name: Clase WMI de servidor SMSInventoryReportClass
           href: core/clients/manage/sms_inventoryreportclass-server-wmi-class.md
@@ -1966,14 +1752,14 @@
     - name: Clase WMI de servidor SMS_PendingRegistrationRecord
       href: core/clients/manage/sms_pendingregistrationrecord-server-wmi-class.md
       items:
-        - name: Método ResolvePendingRegistrationRecord de la clase SMS_PendingRegistrationRecord
+        - name: Método ResolvePendingRegistrationRecord
           href: core/clients/manage/resolvependingregistrationrecord-method-in-class-sms_pendingregistrationrecord.md
     - name: Clase WMI de servidor SMS_Query
       href: core/clients/manage/sms_query-server-wmi-class.md
       items:
-        - name: Método CreateCCRs de la clase SMS_Query
+        - name: Método CreateCCRs
           href: core/clients/manage/createccrs-method-in-class-sms_query.md
-        - name: Método FindResourceSite de la clase SMS_Query
+        - name: Método FindResourceSite
           href: core/clients/manage/findresourcesite-method-in-class-sms_query.md
     - name: Clase WMI de servidor SMS_R_IPNetwork
       href: core/clients/manage/sms_r_ipnetwork-server-wmi-class.md
@@ -1990,32 +1776,31 @@
     - name: Clase WMI de servidor SMS_ResourceMap
       href: core/clients/manage/sms_resourcemap-server-wmi-class.md
       items:
-        - name: Método GetClassesWithData de la clase SMS_ResourceMap
+        - name: Método GetClassesWithData
           href: core/clients/manage/getclasseswithdata-method-in-class-sms_resourcemap.md
-        - name: Método Refresh de la clase SMS_ResourceMap
+        - name: Método Refresh
           href: core/clients/manage/refresh-method-in-class-sms_resourcemap.md
     - name: Clase WMI de servidor SMS_SoftwareConversionRules
       href: core/clients/manage/sms_softwareconversionrules-server-wmi-class.md
     - name: Clase WMI de servidor SMS_UserMachineRelationship
       href: core/clients/manage/sms_usermachinerelationship-server-wmi-class.md
       items:
-        - name: Método AddSource de la clase SMS_UserMachineRelationship
+        - name: Método AddSource
           href: core/clients/manage/addsource-method-in-class-sms_usermachinerelationship.md
-        - name: Método AddType de la clase SMS_UserMachineRelationship
+        - name: Método AddType
           href: core/clients/manage/addtype-method-in-class-sms_usermachinerelationship.md
-        - name: Método CreateRelationship de la clase SMS_UserMachineRelationship
+        - name: Método CreateRelationship
           href: core/clients/manage/createrelationship-method-in-class-sms_usermachinerelationship.md
-        - name: Método RemoveSource de la clase SMS_UserMachineRelationship
+        - name: Método RemoveSource
           href: core/clients/manage/removesource-method-in-class-sms_usermachinerelationship.md
-        - name: Método RemoveType de la clase SMS_UserMachineRelationship
+        - name: Método RemoveType
           href: core/clients/manage/removetype-method-in-class-sms_usermachinerelationship.md
 - name: Clases WMI de servidor de administración basada en roles
-  href: core/servers/configure/role-based-administration-server-wmi-classes.md
   items:
     - name: Clase WMI de servidor SMS_Admin
       href: core/servers/configure/sms_admin-server-wmi-class.md
       items:
-        - name: Método GetAdminExtendedData de la clase SMS_Admin
+        - name: Método GetAdminExtendedData
           href: core/servers/configure/getadminextendeddata-method-in-class-sms_admin.md
     - name: Clase WMI de servidor SMS_AdminCategory
       href: core/servers/configure/sms_admincategory-server-wmi-class.md
@@ -2038,41 +1823,40 @@
     - name: Clase WMI de servidor SMS_RbacSecuredObject
       href: core/servers/configure/sms_rbacsecuredobject-server-wmi-class.md
       items:
-        - name: Método GetAvailableScopes de la clase SMS_RbacSecuredObject
+        - name: Método GetAvailableScopes
           href: core/servers/configure/getavailablescopes-method-in-class-sms_rbacsecuredobject.md
-        - name: Método GetCollectionsWithResourcePermissions de la clase SMS_RbacSecuredObject
+        - name: Método GetCollectionsWithResourcePermissions
           href: core/servers/configure/getcollectionswithresourcepermissions-method-in-class-sms_rbacsecuredobject.md
-        - name: Método GetUserList de la clase SMS_RbacSecuredObject
+        - name: Método GetUserList
           href: core/servers/configure/getuserlist-method-in-class-sms_rbacsecuredobject.md
-        - name: Método UserHasPermissions de la clase SMS_RbacSecuredObject
+        - name: Método UserHasPermissions
           href: core/servers/configure/userhaspermissions-method-in-class-sms_rbacsecuredobject.md
     - name: Clase WMI de servidor SMS_Role
       href: core/servers/configure/sms_role-server-wmi-class.md
       items:
-        - name: Método ExportRole de la clase SMS_Role
+        - name: Método ExportRole
           href: core/servers/configure/exportrole-method-in-class-sms_role.md
-        - name: Método ImportRole de la clase SMS_Role
+        - name: Método ImportRole
           href: core/servers/configure/importrole-method-in-class-sms_role.md
     - name: Clase WMI de servidor SMS_SecuredCategory
       href: core/servers/configure/sms_securedcategory-server-wmi-class.md
     - name: Clase WMI de servidor SMS_SecuredCategoryMembership
       href: core/servers/configure/sms_securedcategorymembership-server-wmi-class.md
       items:
-        - name: Método AddMemberships de la clase SMS_SecuredCategoryMembership
+        - name: Método AddMemberships
           href: core/servers/configure/addmemberships-method-in-class-sms_securedcategorymembership.md
-        - name: Método RemoveMemberships de la clase SMS_SecuredCategoryMembership
+        - name: Método RemoveMemberships
           href: core/servers/configure/removememberships-method-in-class-sms_securedcategorymembership.md
     - name: Clase WMI de servidor SMS_SettableSecuredCategory
       href: core/servers/configure/sms_settablesecuredcategory-server-wmi-class.md
 - name: Clases WMI de servidor de programación
-  href: core/servers/configure/scheduling-server-wmi-classes.md
   items:
     - name: Clase WMI de servidor SMS_ScheduleMethods
       href: core/servers/configure/sms_schedulemethods-server-wmi-class.md
       items:
-        - name: Método ReadFromString de la clase SMS_ScheduleMethods
+        - name: Método ReadFromString
           href: core/servers/configure/readfromstring-method-in-class-sms_schedulemethods.md
-        - name: Método WriteToString de la clase SMS_ScheduleMethods
+        - name: Método WriteToString
           href: core/servers/configure/writetostring-method-in-class-sms_schedulemethods.md
     - name: Clase WMI de servidor SMS_ScheduleToken
       href: core/servers/configure/sms_scheduletoken-server-wmi-class.md
@@ -2087,34 +1871,33 @@
     - name: Clase WMI de servidor SMS_ST_RecurWeekly
       href: core/servers/configure/sms_st_recurweekly-server-wmi-class.md
 - name: Clases WMI de servidor SEDO
-  href: misc/sedo-server-wmi-classes.md
   items:
     - name: Clase WMI de servidor SMS_ObjectLock
       href: misc/sms_objectlock-server-wmi-class.md
       items:
-        - name: Método CancelLockRequest de la clase SMS_ObjectLock
+        - name: Método CancelLockRequest
           href: misc/cancellockrequest-method-in-class-sms_objectlock.md
-        - name: Método CancelLockRequests de la clase SMS_ObjectLock
+        - name: Método CancelLockRequests
           href: misc/cancellockrequests-method-in-class-sms_objectlock.md
-        - name: Método CheckLockRequest de la clase SMS_ObjectLock
+        - name: Método CheckLockRequest
           href: misc/checklockrequest-method-in-class-sms_objectlock.md
-        - name: Método CheckLockRequests de la clase SMS_ObjectLock
+        - name: Método CheckLockRequests
           href: misc/checklockrequests-method-in-class-sms_objectlock.md
-        - name: Método GetLockInformation de la clase SMS_ObjectLock
+        - name: Método GetLockInformation
           href: misc/getlockinformation-method-in-class-sms_objectlock.md
-        - name: Método ReleaseAllLocks de la clase SMS_ObjectLock
+        - name: Método ReleaseAllLocks
           href: misc/releasealllocks-method-in-class-sms_objectlock.md
-        - name: Método ReleaseLock de la clase SMS_ObjectLock
+        - name: Método ReleaseLock
           href: misc/releaselock-method-in-class-sms_objectlock.md
-        - name: Método ReleaseLocks de la clase SMS_ObjectLock
+        - name: Método ReleaseLocks
           href: misc/releaselocks-method-in-class-sms_objectlock.md
-        - name: Método RequestLock de la clase SMS_ObjectLock
+        - name: Método RequestLock
           href: misc/requestlock-method-in-class-sms_objectlock.md
-        - name: Método RequestLockAsync de la clase SMS_ObjectLock
+        - name: Método RequestLockAsync
           href: misc/requestlockasync-method-in-class-sms_objectlock.md
-        - name: Método RequestLocks de la clase SMS_ObjectLock
+        - name: Método RequestLocks
           href: misc/requestlocks-method-in-class-sms_objectlock.md
-        - name: Método RequestLocksAsync de la clase SMS_ObjectLock
+        - name: Método RequestLocksAsync
           href: misc/requestlocksasync-method-in-class-sms_objectlock.md
     - name: Clase WMI de servidor SMS_ObjectLockRequest
       href: misc/sms_objectlockrequest-server-wmi-class.md
@@ -2126,26 +1909,26 @@
     - name: Clase WMI de servidor SMS_BoundaryGroup
       href: core/servers/configure/sms_boundarygroup-server-wmi-class.md
       items:
-        - name: Método AddBoundary de la clase SMS_BoundaryGroup
+        - name: Método AddBoundary
           href: core/servers/configure/addboundary-method-in-class-sms_boundarygroup.md
-        - name: Método AddSiteSystem de la clase SMS_BoundaryGroup
+        - name: Método AddSiteSystem
           href: core/servers/configure/addsitesystem-method-in-class-sms_boundarygroup.md
-        - name: Método RemoveBoundary de la clase SMS_BoundaryGroup
+        - name: Método RemoveBoundary
           href: core/servers/configure/removeboundary-method-in-class-sms_boundarygroup.md
-        - name: Método RemoveSiteSystem de la clase SMS_BoundaryGroup
+        - name: Método RemoveSiteSystem
           href: core/servers/configure/removesitesystem-method-in-class-sms_boundarygroup.md
     - name: Clase WMI de servidor SMS_BoundaryGroupMembers
       href: core/servers/configure/sms_boundarygroupmembers-server-wmi-class.md
     - name: Clase WMI de servidor SMS_BoundaryGroupRelationships
       href: core/servers/configure/sms-boundarygrouprelationships-server-wmi-class.md
       items:
-        - name: Método FallbackDP de la clase SMS_BoundaryGroupRelationships
+        - name: Método FallbackDP
           href: core/servers/configure/fallbackdp-method-in-class-sms-boundarygrouprelationships.md
-        - name: Método FallbackMP de la clase SMS_BoundaryGroupRelationships
+        - name: Método FallbackMP
           href: core/servers/configure/fallbackmp-method-in-class-sms-boundarygrouprelationships.md
-        - name: Método FallbackSMP de la clase SMS_BoundaryGroupRelationships
+        - name: Método FallbackSMP
           href: core/servers/configure/fallbacksmp-method-in-class-sms-boundarygrouprelationships.md
-        - name: Método FallbackSUP de la clase SMS_BoundaryGroupRelationships
+        - name: Método FallbackSUP
           href: core/servers/configure/fallbacksup-method-in-class-sms-boundarygrouprelationships.md
     - name: Clase WMI de servidor SMS_BoundaryGroupSiteSystems
       href: core/servers/configure/sms_boundarygroupsitesystems-server-wmi-class.md
@@ -2156,13 +1939,13 @@
     - name: Clase WMI servidor SMS_DefaultBoundaryGroup
       href: core/servers/configure/sms-defaultboundarygroup-server-wmi-class.md
       items:
-        - name: Método AddBoundary de la clase SMS_DefaultBoundaryGroup
+        - name: Método AddBoundary
           href: core/servers/configure/addboundary-method-in-class-sms-defaultboundarygroup.md
-        - name: Método AddSiteSystem de la clase SMS_DefaultBoundaryGroup
+        - name: Método AddSiteSystem
           href: core/servers/configure/addsitesystem-method-in-class-sms-defaultboundarygroup.md
-        - name: Método RemoveBoundary de la clase SMS_DefaultBoundaryGroup
+        - name: Método RemoveBoundary
           href: core/servers/configure/removeboundary-method-in-class-sms-defaultboundarygroup.md
-        - name: Método RemoveSiteSystem de la clase SMS_DefaultBoundaryGroup
+        - name: Método RemoveSiteSystem
           href: core/servers/configure/removesitesystem-method-in-class-sms-defaultboundarygroup.md
     - name: Clase WMI de servidor SMS_EmbeddedProperty
       href: core/servers/configure/sms_embeddedproperty-server-wmi-class.md
@@ -2171,13 +1954,13 @@
     - name: Clase WMI de servidor SMS_Identification
       href: core/servers/configure/sms_identification-server-wmi-class.md
       items:
-        - name: Método GetCurrentUser de la clase SMS_Identification
+        - name: Método GetCurrentUser
           href: core/servers/configure/getcurrentuser-method-in-class-sms_identification.md
-        - name: Método GetFileBinary de la clase SMS_Identification
+        - name: Método GetFileBinary
           href: core/servers/configure/getfilebinary-method-in-class-sms_identification.md
-        - name: Método GetProviderVersion de la clase SMS_Identification
+        - name: Método GetProviderVersion
           href: core/servers/configure/getproviderversion-method-in-class-sms_identification.md
-        - name: Método GetSiteID de la clase SMS_Identification
+        - name: Método GetSiteID
           href: core/servers/configure/getsiteid-method-in-class-sms_identification.md
     - name: Clase WMI de servidor SMS_RcmSqlControl
       href: core/servers/configure/sms_rcmsqlcontrol-server-wmi-class.md
@@ -2186,7 +1969,7 @@
     - name: Clase WMI de servidor SMS_ReplicationGroup
       href: core/servers/configure/sms_replicationgroup-server-wmi-class.md
       items:
-        - name: Método InitializeData de la clase SMS_ReplicationGroup
+        - name: Método InitializeData
           href: core/servers/configure/initializedata-method-in-class-sms_replicationgroup.md
     - name: Clase WMI de servidor SMS_ReplicationLinkStatus
       href: core/servers/configure/sms_replicationlinkstatus-server-wmi-class.md
@@ -2231,45 +2014,43 @@
     - name: Clase WMI de servidor SMS_Site
       href: core/servers/configure/sms_site-server-wmi-class.md
       items:
-        - name: Método EncryptDataEx de la clase SMS_Site
+        - name: Método EncryptDataEx
           href: core/servers/configure/encryptdataex-method-in-class-sms_site.md
-        - name: Método GetAutoUpgradeConfigs de la clase SMS_Site
+        - name: Método GetAutoUpgradeConfigs
           href: core/servers/configure/getautoupgradeconfigs-method-in-class-sms_site.md
-        - name: Método GetClientInfo de la clase SMS_Site
+        - name: Método GetClientInfo
           href: core/servers/configure/getclientinfo-method-in-class-sms_site.md
-        - name: Método GetClientPilotingConfigs de la clase SMS_Site
+        - name: Método GetClientPilotingConfigs
           href: core/servers/configure/getclientpilotingconfigs-method-in-class-sms_site.md
-        - name: Método GetFeatureState de la clase SMS_Site
+        - name: Método GetFeatureState
           href: core/servers/configure/getfeaturestate-method-in-class-sms_site.md
-        - name: Método GetSiteADInfo de la clase SMS_Site
+        - name: Método GetSiteADInfo
           href: core/servers/configure/getsiteadinfo-method-in-class-sms_site.md
-        - name: Método ImportGlobalUserAccount de la clase SMS_Site
+        - name: Método ImportGlobalUserAccount
           href: core/servers/configure/importglobaluseraccount-method-in-class-sms_site.md
-        - name: Método ImportGlobalUserAccountEx de la clase SMS_Site
+        - name: Método ImportGlobalUserAccountEx
           href: core/servers/configure/importglobaluseraccountex-method-in-class-sms_site.md
-        - name: Método ImportMachineEntry de la clase SMS_Site
+        - name: Método ImportMachineEntry
           href: core/servers/configure/importmachineentry-method-in-class-sms_site.md
-        - name: Método ImportMachineEntryToMultipleCollections de la clase SMS_Site
+        - name: Método ImportMachineEntryToMultipleCollections
           href: core/servers/configure/importmachineentrytomultiplecollections-method-in-class-sms_site.md
-        - name: Método IsUsedCert de la clase SMS_Site
+        - name: Método IsUsedCert
           href: core/servers/configure/isusedcert-method-in-class-sms_site.md
-        - name: Método RedistributeAutoUpgradeClientContent de la clase SMS_Site
+        - name: Método RedistributeAutoUpgradeClientContent
           href: core/servers/configure/redistributeautoupgradeclientcontent-method-in-class-sms_site.md
-        - name: Método SubmitAMTCert de la clase SMS_Site
-          href: core/servers/configure/submitamtcert-method-in-class-sms_site.md
-        - name: Método SubmitRegistrationRecord de la clase SMS_Site
+        - name: Método SubmitRegistrationRecord
           href: core/servers/configure/submitregistrationrecord-method-in-class-sms_site.md
-        - name: Método UpdateAutoUpgradeClientContent de la clase SMS_Site
+        - name: Método UpdateAutoUpgradeClientContent
           href: core/servers/configure/updateautoupgradeclientcontent-method-in-class-sms_site.md
-        - name: Método UpdateAutoUpgradeConfigs de la clase SMS_Site
+        - name: Método UpdateAutoUpgradeConfigs
           href: core/servers/configure/updateautoupgradeconfigs-method-in-class-sms_site.md
-        - name: Método UpdateClientPilotingConfigs de la clase SMS_Site
+        - name: Método UpdateClientPilotingConfigs
           href: core/servers/configure/updateclientpilotingconfigs-method-in-class-sms_site.md
-        - name: Método UpdateConsoleUsageData de la clase SMS_Site
+        - name: Método UpdateConsoleUsageData
           href: core/servers/configure/updateconsoleusagedata-method-in-class-sms_site.md
-        - name: Método UpdateFeatureState de la clase SMS_Site
+        - name: Método UpdateFeatureState
           href: core/servers/configure/updatefeaturestate-method-in-class-sms_site.md
-        - name: Método VerifyNoLoops de la clase SMS_Site
+        - name: Método VerifyNoLoops
           href: core/servers/configure/verifynoloops-method-in-class-sms_site.md
     - name: Clase WMI de servidor SMS_SiteAndSubsites
       href: core/servers/configure/sms_siteandsubsites-server-wmi-class.md
@@ -2286,7 +2067,7 @@
     - name: Clase WMI de servidor SMS_SiteInstallMap
       href: core/servers/configure/sms_siteinstallmap-server-wmi-class.md
       items:
-        - name: Método Refresh de la clase SMS_SiteInstallMap
+        - name: Método Refresh
           href: core/servers/configure/refresh-method-in-class-sms_siteinstallmap.md
     - name: Clase WMI de servidor SMS_SystemResourceList
       href: core/servers/configure/sms_systemresourcelist-server-wmi-class.md
@@ -2299,22 +2080,21 @@
     - name: Clase WMI de servidor SMS_SiteToSiteID_a
       href: core/servers/configure/sms_sitetositeid_a-server-wmi-class.md
 - name: Clases WMI de servidor de distribución de software
-  href: core/servers/configure/software-distribution-server-wmi-classes.md
   items:
     - name: Clase WMI de servidor SMS_Advertisement
       href: core/servers/configure/sms_advertisement-server-wmi-class.md
       items:
-        - name: Método GetAdvertisements de la clase SMS_Advertisement
+        - name: Método GetAdvertisements
           href: core/servers/configure/getadvertisements-method-in-class-sms_advertisement.md
-        - name: Método GetNextID de la clase SMS_Advertisement
+        - name: Método GetNextID
           href: core/servers/configure/getnextid-method-in-class-sms_advertisement.md
-        - name: Método RiskyDeploymentStatusMessage de la clase SMS_Advertisement
+        - name: Método RiskyDeploymentStatusMessage
           href: core/servers/configure/riskydeploymentstatusmessage-method-in-class-sms_advertisement.md
-        - name: Método SetNextID de la clase SMS_Advertisement
+        - name: Método SetNextID
           href: core/servers/configure/setnextid-method-in-class-sms_advertisement.md
-        - name: Método SetSourceSite de la clase SMS_Advertisement
+        - name: Método SetSourceSite
           href: core/servers/configure/setsourcesite-method-in-class-sms_advertisement.md
-        - name: Método Unlock de la clase SMS_Advertisement
+        - name: Método Unlock
           href: core/servers/configure/unlock-method-in-class-sms_advertisement.md
     - name: Clase WMI de servidor SMS_AdvertisementInfo
       href: core/servers/configure/sms_advertisementinfo-server-wmi-class.md
@@ -2337,30 +2117,30 @@
     - name: Clase WMI de servidor SMS_DistributionPoint
       href: core/servers/configure/sms_distributionpoint-server-wmi-class.md
       items:
-        - name: Método VerifyPackage de la clase SMS_DistributionPoint
+        - name: Método VerifyPackage
           href: core/servers/configure/verifypackage-method-in-class-sms_distributionpoint.md
-        - name: Método CancelDistribution de la clase SMS_DistributionPoint
+        - name: Método CancelDistribution
           href: core/servers/configure/canceldistribution-method-in-class-sms_distributionpoint.md
     - name: Clase WMI de servidor SMS_DistributionPointDriveInfo
       href: core/servers/configure/sms_distributionpointdriveinfo-server-wmi-class.md
     - name: Clase WMI de servidor SMS_DistributionPointGroup
       href: core/servers/configure/sms_distributionpointgroup-server-wmi-class.md
       items:
-        - name: Método AddDistributionPoints de la clase SMS_DistributionPointGroup
+        - name: Método AddDistributionPoints
           href: core/servers/configure/adddistributionpoints-method-in-class-sms_distributionpointgroup.md
-        - name: Método AddPackages de la clase SMS_DistributionPointGroup
+        - name: Método AddPackages
           href: core/servers/configure/addpackages-method-in-class-sms_distributionpointgroup.md
-        - name: Método AssociateCollections de la clase SMS_DistributionPointGroup
+        - name: Método AssociateCollections
           href: core/servers/configure/associatecollections-method-in-class-sms_distributionpointgroup.md
-        - name: Método DisassociateCollections de la clase SMS_DistributionPointGroup
+        - name: Método DisassociateCollections
           href: core/servers/configure/disassociatecollections-method-in-class-sms_distributionpointgroup.md
-        - name: Método ReDistributePackage de la clase SMS_DistributionPointGroup
+        - name: Método ReDistributePackage
           href: core/servers/configure/redistributepackage-method-in-class-sms_distributionpointgroup.md
-        - name: Método RefreshDPGroup de la clase SMS_DistributionPointGroup
+        - name: Método RefreshDPGroup
           href: core/servers/configure/refreshdpgroup-method-in-class-sms_distributionpointgroup.md
-        - name: Método RemoveDistributionPoints de la clase SMS_DistributionPointGroup
+        - name: Método RemoveDistributionPoints
           href: core/servers/configure/removedistributionpoints-method-in-class-sms_distributionpointgroup.md
-        - name: Método RemovePackages de la clase SMS_DistributionPointGroup
+        - name: Método RemovePackages
           href: core/servers/configure/removepackages-method-in-class-sms_distributionpointgroup.md
     - name: Clase WMI de servidor SMS_DistributionPointInfo
       href: core/servers/configure/sms_distributionpointinfo-server-wmi-class.md
@@ -2378,21 +2158,21 @@
     - name: Clase WMI de servidor SMS_Package
       href: core/servers/configure/sms_package-server-wmi-class.md
       items:
-        - name: Método AddChangeNotification de la clase SMS_Package
+        - name: Método AddChangeNotification
           href: core/servers/configure/addchangenotification-method-in-class-sms_package.md
-        - name: Método AddDistributionPoints de la clase SMS_Package
+        - name: Método AddDistributionPoints
           href: core/servers/configure/adddistributionpoints-method-in-class-sms_package.md
-        - name: Método CheckDuplicateShareName de la clase SMS_Package
+        - name: Método CheckDuplicateShareName
           href: core/servers/configure/checkduplicatesharename-method-in-class-sms_package.md
-        - name: Método CheckDuplicateSourceName de la clase SMS_Package
+        - name: Método CheckDuplicateSourceName
           href: core/servers/configure/checkduplicatesourcename-method-in-class-sms_package.md
-        - name: Método CheckPackageShareForTaskSequenceDeployment de la clase SMS_Package
+        - name: Método CheckPackageShareForTaskSequenceDeployment
           href: core/servers/configure/checkpackagesharefortasksequencedeployment-method-in-class-sms_package.md
-        - name: Método RefreshPkgSource de la clase SMS_Package
+        - name: Método RefreshPkgSource
           href: core/servers/configure/refreshpkgsource-method-in-class-sms_package.md
-        - name: Método SetSourceSite de la clase SMS_Package
+        - name: Método SetSourceSite
           href: core/servers/configure/setsourcesite-method-in-class-sms_package.md
-        - name: Método Unlock de la clase SMS_Package
+        - name: Método Unlock
           href: core/servers/configure/unlock-method-in-class-sms_package.md
     - name: Clase WMI de servidor SMS_PackageAccessByUsers
       href: core/servers/configure/sms_packageaccessbyusers-server-wmi-class.md
@@ -2411,20 +2191,20 @@
     - name: Clase WMI de servidor SMS_PackageToContent
       href: core/servers/configure/sms_packagetocontent-server-wmi-class.md
       items:
-        - name: Método IsContentValid en la clase SMS_PackageToContent
+        - name: Método IsContentValid
           href: core/servers/configure/iscontentvalid-method-in-class-sms_packagetocontent.md
     - name: Clase WMI de servidor SMS_PackageToSourceSite_a
       href: core/servers/configure/sms_packagetosourcesite_a-server-wmi-class.md
     - name: Clase WMI de servidor SMS_PDF_Package
       href: core/servers/configure/sms_pdf_package-server-wmi-class.md
       items:
-        - name: Método GetPDFData de la clase SMS_PDF_Package
+        - name: Método GetPDFData
           href: core/servers/configure/getpdfdata-method-in-class-sms_pdf_package.md
-        - name: Método LoadIconForPDF de la clase SMS_PDF_Package
+        - name: Método LoadIconForPDF
           href: core/servers/configure/loadiconforpdf-method-in-class-sms_pdf_package.md
-        - name: Método LoadPDF de la clase SMS_PDF_Package
+        - name: Método LoadPDF
           href: core/servers/configure/loadpdf-method-in-class-sms_pdf_package.md
-        - name: Método ProcessInBox de la clase SMS_PDF_Package
+        - name: Método ProcessInBox
           href: core/servers/configure/processinbox-method-in-class-sms_pdf_package.md
     - name: Clase WMI de servidor SMS_PDF_Program
       href: core/servers/configure/sms_pdf_program-server-wmi-class.md
@@ -2443,12 +2223,11 @@
     - name: Clase WMI de servidor SMS_SupportedPlatforms
       href: core/servers/configure/sms_supportedplatforms-server-wmi-class.md
       items:
-        - name: Método Enable de la clase SMS_SupportedPlatforms
+        - name: Método Enable
           href: core/servers/configure/enable-method-in-class-sms_supportedplatforms.md
     - name: Clase WMI de servidor SMS_SupportedPlatformsOfflineServicing
       href: core/servers/configure/sms_supportedplatformsofflineservicing-server-wmi-class.md
-- name: Clases WMI de servidor medición de software
-  href: apps/software-metering-server-wmi-classes.md
+- name: Clases WMI de servidor de medición de software
   items:
     - name: Clase WMI de servidor SMS_FileUsageSummary
       href: apps/sms_fileusagesummary-server-wmi-class.md
@@ -2469,21 +2248,20 @@
     - name: Clase WMI de servidor SMS_SummarizationInterval
       href: apps/sms_summarizationinterval-server-wmi-class.md
 - name: Clases WMI de servidor de actualizaciones de software
-  href: sum/software-updates-server-wmi-classes.md
   items:
     - name: Clase WMI de servidor SMS_ADRDeploymentSettings
       href: sum/sms_adrdeploymentsettings-server-wmi-class.md
     - name: Clase WMI de servidor SMS_AutoDeployment
       href: sum/sms_autodeployment-server-wmi-class.md
       items:
-        - name: Método EvaluateAllAutoDeployment de la clase SMS_AutoDeployment
+        - name: Método EvaluateAllAutoDeployment
           href: sum/evaluateallautodeployment-method-in-class-sms_autodeployment.md
-        - name: Método EvaluateAutoDeployment de la clase SMS_AutoDeployment
+        - name: Método EvaluateAutoDeployment
           href: sum/evaluateautodeployment-method-in-class-sms_autodeployment.md
     - name: Clase WMI de servidor SMS_AuthorizationList
       href: sum/sms_authorizationlist-server-wmi-class.md
       items:
-        - name: Método RunAuthListStatusSummarization de la clase SMS_AuthorizationList
+        - name: Método RunAuthListStatusSummarization
           href: sum/runauthliststatussummarization-method-in-class-sms_authorizationlist.md
     - name: Clase WMI de servidor SMS_CIAllCategories
       href: sum/sms_ciallcategories-server-wmi-class.md
@@ -2498,30 +2276,30 @@
     - name: Clase WMI de servidor SMS_CM_UpdateFeatures
       href: sum/sms_cm_updatefeatures-server-wmi-class.md
       items:
-        - name: Método UpdateFeatureExposureStatus de la clase SMS_CM_UpdateFeatures
+        - name: Método UpdateFeatureExposureStatus
           href: sum/updatefeatureexposurestatus-method-in-class-sms_cm_updatefeatures.md
     - name: Clase WMI de servidor SMS_CM_UpdatePackageFeatures
       href: sum/sms_cm_updatepackagefeatures-server-wmi-class.md
       items:
-        - name: Método UpdateFeatureExposureStatus de la clase SMS_CM_UpdatePackageFeatures
+        - name: Método UpdateFeatureExposureStatus
           href: sum/updatefeatureexposurestatus-method-in-class-sms_cm_updatepackagefeatures.md
     - name: Clase WMI de servidor SMS_CM_UpdatePackages
       href: sum/sms_cm_updatepackages-server-wmi-class.md
       items:
-        - name: Método IsCurrentWorkingUpdatePackage de la clase SMS_CM_UpdatePackages
+        - name: Método IsCurrentWorkingUpdatePackage
           href: sum/iscurrentworkingupdatepackage-method-in-class-sms_cm_updatepackages.md
-        - name: Método RetryContentReplication de la clase SMS_CM_UpdatePackages
+        - name: Método RetryContentReplication
           href: sum/retrycontentreplication-method-in-class-sms_cm_updatepackages.md
-        - name: Método SetIgnorePrereqWarning de la clase SMS_CM_UpdatePackages
+        - name: Método SetIgnorePrereqWarning
           href: sum/setignoreprereqwarning-method-in-class-sms_cm_updatepackages.md
-        - name: Método UpdatePrereqAndStateFlags de la clase SMS_CM_UpdatePackages
+        - name: Método UpdatePrereqAndStateFlags
           href: sum/updateprereqandstateflags-method-in-class-sms_cm_updatepackages.md
     - name: Clase WMI de servidor SMS_CM_UpdatePackagesHistory
       href: sum/sms_cm_updatepackageshistory-server-wmi-class.md
     - name: Clase WMI de servidor SMS_CM_UpdatePackageSiteStatus
       href: sum/sms_cm_updatepackagesitestatus-server-wmi-class.md
       items:
-        - name: Método UpdatePackageSiteState de la clase SMS_CM_UpdatePackageSiteStatus
+        - name: Método UpdatePackageSiteState
           href: sum/updatepackagesitestate-method-in-class-sms_cm_updatepackagesitestatus.md
     - name: Clase WMI de servidor SMS_CM_UpdatePackDetailedMonitoring
       href: sum/sms_cm_updatepackdetailedmonitoring-server-wmi-class.md
@@ -2542,13 +2320,13 @@
     - name: Clase WMI de servidor SMS_SoftwareUpdate
       href: sum/sms_softwareupdate-server-wmi-class.md
       items:
-        - name: Método AcceptEULA de la clase SMS_SoftwareUpdate
+        - name: Método AcceptEULA
           href: sum/accepteula-method-in-class-sms_softwareupdate.md
-        - name: Método GetEULA de la clase SMS_SoftwareUpdate
+        - name: Método GetEULA
           href: sum/geteula-method-in-class-sms_softwareupdate.md
-        - name: Método SetEnforcement de la clase SMS_SoftwareUpdate
+        - name: Método SetEnforcement
           href: sum/setenforcement-method-in-class-sms_softwareupdate.md
-        - name: Método SyncNow de la clase SMS_SoftwareUpdate
+        - name: Método SyncNow
           href: sum/syncnow-method-in-class-sms_softwareupdate.md
     - name: Clase WMI de servidor SMS_SoftwareUpdateBase
       href: sum/sms_softwareupdatebase-server-wmi-class.md
@@ -2557,23 +2335,23 @@
     - name: Clase WMI de servidor SMS_SoftwareUpdatesPackage
       href: sum/sms_softwareupdatespackage-server-wmi-class.md
       items:
-        - name: Método AddChangeNotification de la clase SMS_SoftwareUpdatesPackage
+        - name: Método AddChangeNotification
           href: sum/addchangenotification-method-in-class-sms_softwareupdatespackage.md
-        - name: Método AddDistributionPoints de la clase SMS_SoftwareUpdatesPackage
+        - name: Método AddDistributionPoints
           href: sum/adddistributionpoints-method-in-class-sms_softwareupdatespackage.md
-        - name: Método AddUpdateContent de la clase SMS_SoftwareUpdatesPackage
+        - name: Método AddUpdateContent
           href: sum/addupdatecontent-method-in-class-sms_softwareupdatespackage.md
-        - name: Método RebuildPackage de la clase SMS_SoftwareUpdatesPackage
+        - name: Método RebuildPackage
           href: sum/rebuildpackage-method-in-class-sms_softwareupdatespackage.md
-        - name: Método RefreshPkgSource de la clase SMS_SoftwareUpdatesPackage
+        - name: Método RefreshPkgSource
           href: sum/refreshpkgsource-method-in-class-sms_softwareupdatespackage.md
-        - name: Método RemoveContent de la clase SMS_SoftwareUpdatesPackage
+        - name: Método RemoveContent
           href: sum/removecontent-method-in-class-sms_softwareupdatespackage.md
-        - name: Método SetSourceSite de la clase SMS_SoftwareUpdatesPackage
+        - name: Método SetSourceSite
           href: sum/setsourcesite-method-in-class-sms_softwareupdatespackage.md
-        - name: Método Unlock de la clase SMS_SoftwareUpdatesPackage
+        - name: Método Unlock
           href: sum/unlock-method-in-class-sms_softwareupdatespackage.md
-        - name: Método ValidateNewPackageSource de la clase SMS_SoftwareUpdatesPackage
+        - name: Método ValidateNewPackageSource
           href: sum/validatenewpackagesource-method-in-class-sms_softwareupdatespackage.md
     - name: Clase WMI de servidor SMS_SUMDeploymentAssetDetails
       href: sum/sms_sumdeploymentassetdetails-server-wmi-class.md
@@ -2596,31 +2374,28 @@
     - name: Clase WMI de servidor SMS_UpdatesAssignment
       href: sum/sms_updatesassignment-server-wmi-class.md
 - name: Clases WMI de servidor de compatibilidad
-  href: misc/supporting-server-wmi-classes.md
   items:
     - name: Clase WMI de servidor SMS_ContextMethods
       href: misc/sms_contextmethods-server-wmi-class.md
       items:
-        - name: Método ClearContextHandle de la clase SMS_ContextMethods
+        - name: Método ClearContextHandle
           href: misc/clearcontexthandle-method-in-class-sms_contextmethods.md
-        - name: Método GetContextHandle de la clase SMS_ContextMethods
+        - name: Método GetContextHandle
           href: misc/getcontexthandle-method-in-class-sms_contextmethods.md
     - name: Clase WMI de servidor SMS_ExtendedStatus
       href: misc/sms_extendedstatus-server-wmi-class.md
     - name: Clase WMI de servidor SMS_NAL_Methods
       href: misc/sms_nal_methods-server-wmi-class.md
       items:
-        - name: Método PackNALPath de la clase SMS_NAL_Methods
+        - name: Método PackNALPath
           href: misc/packnalpath-method-in-class-sms_nal_methods.md
-        - name: Método UnPackNALPath de la clase SMS_NAL_Methods
+        - name: Método UnPackNALPath
           href: misc/unpacknalpath-method-in-class-sms_nal_methods.md
     - name: Clase WMI de servidor SMS_ProviderLocation
       href: misc/sms_providerlocation-server-wmi-class.md
 - name: Clases de estado
-  href: core/servers/manage/status-classes.md
   items:
     - name: API de cliente de estado
-      href: core/servers/manage/status-client-apis.md
       items:
         - name: Funciones de mensajes de estado Smscstat.dll
           href: core/servers/manage/smscstat.dll-status-message-functions.md
@@ -2645,7 +2420,6 @@
             - name: Método ICCMEvent SubmitPending
               href: core/servers/manage/iccmevent--submitpending-method.md
     - name: Tipos de mensaje de estado
-      href: core/servers/manage/status-message-types.md
       items:
         - name: SMS_SofwareDistribution_Event
           href: core/servers/manage/sms_sofwaredistribution_event.md
@@ -2665,7 +2439,6 @@
         - name: Función InstallStatusMIFEx
           href: core/servers/manage/installstatusmifex-function.md
     - name: API de servidor de estado
-      href: core/servers/manage/status-server-api.md
       items:
         - name: Clase SMSFormatMessageCtl
           href: core/servers/manage/smsformatmessagectl-class.md
@@ -2677,12 +2450,11 @@
             - name: Método FormatSystemMessage
               href: core/servers/manage/formatsystemmessage-method.md
     - name: Clases WMI de servidor de estado
-      href: core/servers/manage/status-server-wmi-classes.md
       items:
         - name: Clase WMI de servidor SMS_ComponentSummarizer
           href: core/servers/manage/sms_componentsummarizer-server-wmi-class.md
           items:
-            - name: Método DeleteStatistics de la clase SMS_ComponentSummarizer
+            - name: Método DeleteStatistics
               href: core/servers/manage/deletestatistics-method-in-class-sms_componentsummarizer.md
         - name: Clase WMI de servidor SMS_SecondarySiteStatus
           href: core/servers/manage/sms_secondarysitestatus-server-wmi-class.md
@@ -2707,48 +2479,46 @@
         - name: Clase WMI de servidor SMS_StatusMessage
           href: core/servers/manage/sms_statusmessage-server-wmi-class.md
           items:
-            - name: Método DeleteByID de la clase SMS_StatusMessage
+            - name: Método DeleteByID
               href: core/servers/manage/deletebyid-method-in-class-sms_statusmessage.md
-            - name: Método DeleteByQuery de la clase SMS_StatusMessage
+            - name: Método DeleteByQuery
               href: core/servers/manage/deletebyquery-method-in-class-sms_statusmessage.md
-            - name: Método RaiseErrorStatusMsg de la clase SMS_StatusMessage
+            - name: Método RaiseErrorStatusMsg
               href: core/servers/manage/raiseerrorstatusmsg-method-in-class-sms_statusmessage.md
-            - name: Método RaiseInformationalStatusMsg de la clase SMS_StatusMessage
+            - name: Método RaiseInformationalStatusMsg
               href: core/servers/manage/raiseinformationalstatusmsg-method-in-class-sms_statusmessage.md
-            - name: Método RaiseRawStatusMsg de la clase SMS_StatusMessage
+            - name: Método RaiseRawStatusMsg
               href: core/servers/manage/raiserawstatusmsg-method-in-class-sms_statusmessage.md
-            - name: Método RaiseWarningStatusMsg de la clase SMS_StatusMessage
+            - name: Método RaiseWarningStatusMsg
               href: core/servers/manage/raisewarningstatusmsg-method-in-class-sms_statusmessage.md
         - name: Clase WMI de servidor SMS_SummarizerRootStatus
           href: core/servers/manage/sms_summarizerrootstatus-server-wmi-class.md
           items:
-            - name: Método GetTallyIntervals de la clase SMS_SummarizerRootStatus
+            - name: Método GetTallyIntervals
               href: core/servers/manage/gettallyintervals-method-in-class-sms_summarizerrootstatus.md
         - name: Clase WMI de servidor SMS_SummarizationSettings
           href: core/servers/manage/sms_summarizationsettings-server-wmi-class.md
           items:
-            - name: Método GetSummarizationSettings de la clase SMS_SummarizationSettings
+            - name: Método GetSummarizationSettings
               href: core/servers/manage/getsummarizationsettings-method-in-class-sms_summarizationsettings.md
-            - name: Método SetSummarizationSettings de la clase SMS_SummarizationSettings
+            - name: Método SetSummarizationSettings
               href: core/servers/manage/setsummarizationsettings-method-in-class-sms_summarizationsettings.md
         - name: Clase WMI de servidor SMS_SummarizerSiteStatus
           href: core/servers/manage/sms_summarizersitestatus-server-wmi-class.md
         - name: Clase WMI de servidor SMS_SummarizerStatus
           href: core/servers/manage/sms_summarizerstatus-server-wmi-class.md
-- name: Clases WMI de servidor de Microsoft Azure
-  href: core/servers/configure/windows-azure-server-wmi-classes.md
+- name: Clases WMI de servidor Microsoft Azure
   items:
     - name: Clase WMI de servidor SMS_AzureService
       href: core/servers/configure/sms_azureservice-server-wmi-class.md
       items:
-        - name: Método Start de la clase SMS_AzureService
+        - name: Método Start
           href: core/servers/configure/start-method-in-class-sms_azureservice.md
-        - name: Método Stop de la clase SMS_AzureService
+        - name: Método Stop
           href: core/servers/configure/stop-method-in-class-sms_azureservice.md
     - name: Clase WMI de servidor SMS_AzureServicesTask
       href: core/servers/configure/sms_azureservicestask-server-wmi-class.md
 - name: Clases WMI de servidor de servicio de Windows 10
-  href: misc/windows-10-servicing-server-wmi-classes.md
   items:
     - name: Clase WMI de servidor SMS_AdminUIContent
       href: misc/sms-adminuicontent-server-wmi-class.md

@@ -1,5 +1,7 @@
 - name: Administración de dispositivos móviles
+  href: understand/hybrid-mobile-device-management.md
 - name: Información general
+  expanded: true
   items:
     - name: Qué es MDM híbrida
       href: understand/hybrid-mobile-device-management.md

@@ -1,5 +1,7 @@
 - name: Administración conjunta
+  href: overview.md
 - name: Información general
+  expanded: true
   items:
     - name: ¿Qué es administración conjunta?
       href: overview.md

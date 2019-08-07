@@ -1,5 +1,7 @@
-- name: Implementación de sistema operativo
+- name: Implementación del sistema operativo
+  href: understand/introduction-to-operating-system-deployment.md
 - name: Conocer y explorar
+  expanded: true
   items:
     - name: Introducción a la implementación del sistema operativo
       href: understand/introduction-to-operating-system-deployment.md
