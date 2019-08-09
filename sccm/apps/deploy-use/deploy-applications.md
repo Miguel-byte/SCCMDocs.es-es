@@ -2,7 +2,7 @@
 title: Implementar aplicaciones
 titleSuffix: Configuration Manager
 description: Crear o simular una implementación de una aplicación en una recopilación de dispositivo o usuario
-ms.date: 06/04/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5760b36ddb29c39d6887afb61445f1353f46bbec
-ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
+ms.openlocfilehash: fa56c5ec5b6ad3f24255d6b8e37e56c46c94d17f
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66715677"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68534917"
 ---
 # <a name="deploy-applications-with-configuration-manager"></a>Implementar aplicaciones con Configuration Manager
 
@@ -25,6 +25,8 @@ ms.locfileid: "66715677"
 Crear o simular una implementación de una aplicación en una recopilación de dispositivo o usuario en Configuration Manager. Esta implementación proporciona instrucciones para el cliente de Configuration Manager sobre cómo y cuándo instalar el software.
 
 Antes de implementar una aplicación, cree al menos un tipo de implementación para la aplicación. Para obtener más información, consulte [Create applications](/sccm/apps/deploy-use/create-applications) (Creación de aplicaciones).
+
+A partir de la versión 1906, puede crear un grupo de aplicaciones que puede enviar a una colección de usuarios o dispositivos como una sola implementación. Para obtener más información, vea [crear grupos de aplicaciones](/sccm/apps/deploy-use/create-app-groups).
 
 También puede simular la implementación de una aplicación. Esta simulación prueba la aplicabilidad de una implementación sin instalar o desinstalar la aplicación. Una implementación simulada evalúa el método de detección, los requisitos y las dependencias de un tipo de implementación y muestra los resultados en el nodo **Implementaciones** del área de trabajo **Supervisión**. Para obtener más información, consulte el artículo sobre [simular implementaciones de aplicaciones ](/sccm/apps/deploy-use/simulate-application-deployments).
 
@@ -37,9 +39,9 @@ También puede simular la implementación de una aplicación. Esta simulación p
 
 ## <a name="bkmk_deploy"></a> Implementar una aplicación
 
-1. En la consola de Configuration Manager, vaya al área de trabajo **Biblioteca de software**, expanda **Administración de aplicaciones** y seleccione el nodo **Aplicaciones**.  
+1. En la consola de Configuration Manager, vaya al área de trabajo **Biblioteca de software**, expanda **Administración de aplicaciones** y seleccione el nodo **Aplicaciones** o **Grupos de aplicaciones**.
 
-2. En la lista **Aplicaciones**, seleccione la aplicación que quiera implementar. En la cinta de opciones, haga clic en **Implementar**.  
+2. Seleccione una aplicación o un grupo de aplicaciones de la lista que desea implementar. En la cinta de opciones, haga clic en **Implementar**.  
 
 > [!Note]  
 > Al ver las propiedades de una implementación existente, las secciones siguientes se corresponden con pestañas de la ventana de propiedades de la implementación:  
@@ -112,20 +114,17 @@ En la página **Configuración de implementación**, especifique la siguiente in
 
     > [!Note]  
     > Esta opción siempre funciona, independientemente de la aprobación del administrador. Si un administrador ya aprobó la versión reemplazada, no necesitará aprobar también la versión que sustituye. La aprobación solo es necesaria para nuevas solicitudes, no para actualizaciones que reemplazan.<!--515824-->  
-
-    > [!NOTE]  
-    > A partir de la versión 1802, esta opción se puede habilitar o deshabilitar para el propósito de instalación **Disponible**. <!--1351266-->
+    >
+    > Esta opción se puede habilitar o deshabilitar para el propósito de instalación **Disponible**. <!--1351266-->
 
 
 #### <a name="bkmk_approval"></a> Configuración de aprobación
 
-Se mostrará una de las siguientes opciones de configuración de aprobación, según su versión de Configuration Manager:
+El comportamiento de aprobación de la aplicación depende de si se habilita la característica opcional recomendada, se **aprueban las solicitudes de aplicación para los usuarios por dispositivo**.
 
-- **Solicitar aprobación del administrador si los usuarios solicitan esta aplicación**: para las versiones 1710 y anteriores, el administrador aprueba las solicitudes de la aplicación de cualquier usuario antes de poder instalarla. La opción está atenuada cuando el propósito de implementación es **Obligatorio**, o bien cuando se implementa la aplicación en una colección de dispositivos.  
+- **Un administrador debe aprobar una solicitud para esta aplicación en el dispositivo** : si habilita la característica opcional, el administrador aprueba las solicitudes de usuario para la aplicación antes de que el usuario pueda instalarla en el dispositivo solicitado. Si el administrador aprueba la solicitud, el usuario solo tiene la posibilidad de instalar la aplicación en ese dispositivo. El usuario debe enviar otra solicitud para instalar la aplicación en otro dispositivo. La opción está atenuada cuando el propósito de implementación es **Obligatorio**, o bien cuando se implementa la aplicación en una colección de dispositivos.
 
-- **An administrator must approve a request for this application on the device** (Un administrador debe aprobar una solicitud para esta aplicación en el dispositivo): a partir de la versión 1802, el administrador aprueba las solicitudes de usuario para la aplicación antes de que el usuario pueda instalarla en el dispositivo solicitado. Si el administrador aprueba la solicitud, el usuario solo tiene la posibilidad de instalar la aplicación en ese dispositivo. El usuario debe enviar otra solicitud para instalar la aplicación en otro dispositivo. La opción está atenuada cuando el propósito de implementación es **Obligatorio**, o bien cuando se implementa la aplicación en una colección de dispositivos.
-
-A partir de la versión 1810, también puede definir una lista de direcciones de correo electrónico para notificar sobre la solicitud de aprobación.<!--1357015-->  
+- **Solicitar aprobación del administrador si los usuarios solicitan esta aplicación**: si no habilita la característica opcional, el administrador aprueba las solicitudes de la aplicación de cualquier usuario antes de poder instalarla. La opción está atenuada cuando el propósito de implementación es **Obligatorio**, o bien cuando se implementa la aplicación en una colección de dispositivos.  
 
 Para obtener más información, vea [Aprobar aplicaciones](/sccm/apps/deploy-use/app-approval).
 
@@ -197,7 +196,7 @@ Al implementar un tipo de implementación de iOS, también verá la página **Di
 ## <a name="bkmk_phased"></a> Creación de una implementación por fases
 
 <!--1358147-->
-A partir de la versión 1806, se puede crear una implementación por fases para una aplicación. Las Implementaciones por fases permiten organizar un lanzamiento de software coordinado y secuencial según criterios y grupos personalizables. Por ejemplo, implemente la aplicación en una colección piloto y luego continúe automáticamente con la implementación según los criterios de éxito. 
+A partir de la versión 1806, se puede crear una implementación por fases para una aplicación. Las Implementaciones por fases permiten organizar un lanzamiento de software coordinado y secuencial según criterios y grupos personalizables. Por ejemplo, implemente la aplicación en una colección piloto y luego continúe automáticamente con la implementación según los criterios de éxito.
 
 Vea los siguientes artículos para más información:  
 
@@ -209,11 +208,11 @@ Vea los siguientes artículos para más información:
 
 ## <a name="bkmk_delete"></a> Eliminar una implementación
 
-1. En la consola de Configuration Manager, vaya al área de trabajo **Biblioteca de software**, expanda **Administración de aplicaciones** y seleccione el nodo **Aplicaciones**.  
+1. En la consola de Configuration Manager, vaya al área de trabajo **Biblioteca de software**, expanda **Administración de aplicaciones** y seleccione el nodo **Aplicaciones** o **Grupos de aplicaciones**.  
 
-2. En la lista **Aplicaciones**, seleccione la aplicación que contenga la implementación que quiera eliminar.  
+2. Seleccione la aplicación o el grupo de aplicaciones que incluye la implementación que quiere eliminar.  
 
-3. Cambie a la pestaña **Implementaciones** del panel de detalles y seleccione la implementación de aplicaciones.  
+3. Cambie a la pestaña **Implementaciones** del panel de detalles y seleccione la implementación.  
 
 4. En la cinta de opciones, en el grupo **Implementación** de la pestaña **Implementación**, haga clic en **Eliminar**.  
 
@@ -281,7 +280,7 @@ Después de que los clientes reciban la implementación, se aplica el comportami
 ## <a name="deploy-user-available-applications-on-azure-ad-joined-devices"></a>Implementar aplicaciones disponibles para el usuario en dispositivos unidos a Azure AD
 
 <!-- 1322613 -->
-Si se implementan aplicaciones como disponibles para los usuarios, a partir de la versión 1802 pueden examinarlas e instalarlas a través del Centro de software en dispositivos de Azure Active Directory (Azure AD).  
+Si implementa aplicaciones como disponibles para los usuarios, puede examinarlas e instalarlas a través del Centro de software en dispositivos de Azure Active Directory (Azure AD).  
 
 ### <a name="prerequisites"></a>Requisitos previos
 

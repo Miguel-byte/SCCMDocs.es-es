@@ -2,7 +2,7 @@
 title: Referencia de variables de secuencia de tareas
 titleSuffix: Configuration Manager
 description: Obtenga información sobre las variables para controlar y personalizar una secuencia de tareas de Configuration Manager.
-ms.date: 05/06/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e1ad62c8b8b0f780670e7baf7ebf11de7f6b483
-ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
-ms.translationtype: MTE75
+ms.openlocfilehash: b92fad9054c50ea58caeb11e209cd04b6951493f
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194578"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68537117"
 ---
 # <a name="task-sequence-variables"></a>Variables de la secuencia de tareas
 
@@ -140,6 +140,11 @@ Almacena el código de retorno de la última acción que se ha ejecutado. Esta v
 - Si se produce un error en el último paso, es `false`.  
 
 - Si la secuencia de tareas omitió la última acción debido a que el paso está deshabilitado o la condición asociada se evaluó como **false**, esta variable no se restablece. y sigue teniendo el valor de la acción anterior.  
+
+### <a name="SMSTSLastContentDownloadLocation"></a>_SMSTSLastContentDownloadLocation
+
+<!-- 2840337 -->
+A partir de la versión 1906, esta variable contiene la última ubicación donde la secuencia de tareas ha descargado o intentado descargar el contenido. Inspeccione esta variable en lugar de analizar los registros de cliente para esta ubicación de contenido.
 
 ### <a name="SMSTSLaunchMode"></a> _SMSTSLaunchMode
 
@@ -480,6 +485,28 @@ Si hay varios controladores de dispositivo en el catálogo de controladores que 
 (entrada)
 
 Una lista delimitada por comas de los identificadores únicos de las categorías del catálogo de controladores. El paso **Aplicar controladores automáticamente** solo tiene en cuenta los controladores de al menos una de las categorías especificadas. Este valor es opcional y no está establecido de forma predeterminada. Obtenga los identificadores de categoría disponibles mediante la enumeración de la lista de objetos **SMS_CategoryInstance** en el sitio.
+
+### <a name="OSDBitLockerRebootCount"></a>OSDBitLockerRebootCount
+
+*Se aplica al paso [Deshabilitar BitLocker](task-sequence-steps.md#BKMK_DisableBitLocker).*
+
+<!-- 4512937 -->
+A partir de la versión 1906, utilice esta variable para establecer el número de reinicios después del cual reanudar la protección.
+
+#### <a name="valid-values"></a>Valores válidos
+
+Entero de `1` a `15`.
+
+### <a name="OSDBitLockerRebootCountOverride"></a>OSDBitLockerRebootCountOverride
+
+*Se aplica al paso [Deshabilitar BitLocker](task-sequence-steps.md#BKMK_DisableBitLocker).*
+
+<!-- 4512937 -->
+A partir de la versión 1906, establezca este valor para invalidar el recuento establecido por el paso o la variable [OSDBitLockerRebootCount](#OSDBitLockerRebootCount) . Aunque los otros métodos solo aceptan valores de 1 a 15, si esta variable se establece en 0, BitLocker permanece deshabilitado de forma indefinida. Esta variable es útil cuando la secuencia de tareas establece un valor, pero quiere establecer un valor independiente para cada colección o dispositivo.
+
+#### <a name="valid-values"></a>Valores válidos
+
+Entero de `0` a `15`.
 
 ### <a name="OSDBitLockerRecoveryPassword"></a> OSDBitLockerRecoveryPassword
 
@@ -1477,6 +1504,16 @@ Especifica el número de segundos que se debe para esperar antes de reiniciar el
 
 - `60`: mostrar una notificación durante un minuto  
 
+### <a name="SMSTSRebootDelayNext"></a>SMSTSRebootDelayNext
+
+<!--4447680-->
+A partir de la versión 1906, use esta variable con la variable [SMSTSRebootDelay](/sccm/osd/understand/task-sequence-variables#SMSTSRebootDelay) existente. Si desea que los reinicios posteriores se realicen con un tiempo de espera distinto al primero, defina SMSTSRebootDelayNext con un valor diferente en segundos.
+
+#### <a name="example"></a>Ejemplo
+
+Desea proporcionar a los usuarios una notificación de reinicio de sesenta minutos al principio de una secuencia de tareas de actualización en contexto de Windows 10. Después de ese primer tiempo de espera largo, desea que los tiempos de espera adicionales sean solo de 60 segundos. Establezca SMSTSRebootDelay en `3600` y SMSTSRebootDelayNext en `60`.  
+
+
 ### <a name="SMSTSRebootMessage"></a> SMSTSRebootMessage
 
 Especifica el mensaje que se mostrará en el cuadro de diálogo de notificación de reinicio. Si esta variable no se establece, aparecerá un mensaje predeterminado.
@@ -1541,6 +1578,13 @@ Esta variable de secuencia de tareas opcional controla el comportamiento del cli
 Establezca el valor de SMSTSWaitForSecondReboot en segundos para especificar durante cuánto tiempo se pausa la secuencia de tareas en este paso mientras se reinicia el equipo. Deje tiempo suficiente en caso de que haya un segundo reinicio.
 
 Por ejemplo, si establece SMSTSWaitForSecondReboot en `600`, la secuencia de tareas se pausa durante 10 minutos tras un reinicio antes de que se ejecuten los pasos adicionales. Esta variable resulta útil cuando un único paso de secuencia de tareas de instalación de actualizaciones de software instala cientos de actualizaciones de software.
+
+### <a name="TSDebugMode"></a>TSDebugMode
+
+<!--3612274-->
+A partir de la versión 1906, establezca esta `TRUE` variable en en una colección en la que se implemente una secuencia de tareas. Esta variable cambia el comportamiento de cualquier secuencia de tareas en cualquier dispositivo de esa colección para usar el depurador de la secuencia de tareas.
+
+Para obtener más información, vea [Depurar una secuencia de tareas](/sccm/osd/deploy-use/debug-task-sequence).
 
 ### <a name="TSDisableProgressUI"></a> TSDisableProgressUI
 

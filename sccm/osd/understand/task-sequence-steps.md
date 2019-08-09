@@ -2,7 +2,7 @@
 title: Pasos de la secuencia de tareas
 titleSuffix: Configuration Manager
 description: Obtenga información sobre los pasos que puede agregar a una secuencia de tareas de Configuration Manager.
-ms.date: 06/12/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5434e42bfdcdf9bd423035c1d30a3c68974d9dd
-ms.sourcegitcommit: de3c86077bbf91b793e94e1f60814df18da11bab
+ms.openlocfilehash: 6f5760e26b7a52f31aea0a272c0e76a2eee547bd
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67726268"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68537134"
 ---
 # <a name="task-sequence-steps"></a>Pasos de la secuencia de tareas
 
@@ -695,6 +695,11 @@ Si tiene varias unidades cifradas, deshabilite BitLocker en las unidades de dato
 
 Este paso solo se ejecuta en el sistema operativo completo. No se ejecuta en Windows PE.  
 
+A partir de la versión 1906, use las siguientes variables de secuencia de tareas con este paso:  
+
+- [OSDBitLockerRebootCount](/sccm/osd/understand/task-sequence-variables#OSDBitLockerRebootCount)  
+- [OSDBitLockerRebootCountOverride](/sccm/osd/understand/task-sequence-variables#OSDBitLockerRebootCountOverride)  
+
 Para agregar este paso en el editor de secuencia de tareas, seleccione **Agregar**, **Discos** y **Deshabilitar BitLocker**.
 
 ### <a name="properties"></a>Propiedades  
@@ -709,6 +714,12 @@ Deshabilita BitLocker en la unidad actual del sistema operativo.
 
 Deshabilita BitLocker en una unidad específica. Use la lista desplegable para especificar la unidad donde se deshabilita BitLocker.  
 
+#### <a name="resume-protection-after-windows-has-been-restarted-the-specified-number-of-times"></a>Reanudar la protección después de que se haya reiniciado Windows el número de veces especificado
+
+<!-- 4512937 -->
+A partir de la versión 1906, use esta opción para especificar el número de reinicios para mantener BitLocker deshabilitado. En lugar de agregar varias instancias de este paso, defina un valor comprendido entre 1 (el predeterminado) y 15.
+
+Puede establecer y modificar este comportamiento con las variables de secuencia de tareas [OSDBitLockerRebootCount](/sccm/osd/understand/task-sequence-variables#OSDBitLockerRebootCount) y [OSDBitLockerRebootCountOverride](/sccm/osd/understand/task-sequence-variables#OSDBitLockerRebootCountOverride).
 
 
 ## <a name="BKMK_DownloadPackageContent"></a> Descargar contenido de paquete  
@@ -719,7 +730,7 @@ Use este paso para descargar cualquiera de los tipos de paquete siguientes:
 - Paquetes de actualización del sistema operativo  
 - Paquetes de controladores  
 - Paquetes  
-- Imágenes de arranque (en versión 1810 y anteriores)  
+- Imágenes de arranque (en la versión 1810 y anteriores)  
 
 Este paso funciona bien en una secuencia de tareas para actualizar un sistema operativo en los escenarios siguientes:  
 
@@ -733,7 +744,7 @@ Este paso funciona bien en una secuencia de tareas para actualizar un sistema op
 Este paso se ejecuta en el sistema operativo completo o Windows PE. En Windows PE no se admite la opción de guardar el paquete en la caché de cliente de Configuration Manager.
 
 > [!NOTE]  
-> El **descargar contenido de paquete** tarea no se admite para su uso con medios independientes. Para obtener más información, consulte [no admite acciones para medios independientes](/sccm/osd/deploy-use/create-stand-alone-media#unsupported-actions-for-stand-alone-media).  
+> La tarea **descargar contenido de paquete** no se admite para su uso con medios independientes. Para obtener más información, consulte [acciones no compatibles para medios independientes](/sccm/osd/deploy-use/create-stand-alone-media#unsupported-actions-for-stand-alone-media).  
 
 Para agregar este paso en el editor de secuencia de tareas, seleccione **Agregar**, **Software** y **Descargar contenido de paquete**.
 
@@ -909,9 +920,9 @@ Cuando se ejecuta este paso, la aplicación comprueba la aplicabilidad de las re
 
 > [!NOTE]  
 > Para instalar una aplicación que reemplace a otra, los archivos de contenido de la aplicación sustituida deben estar disponibles. En caso contrario, se producirá un error en este paso de secuencia de tareas. Por ejemplo, Microsoft Visio 2010 se instala en un cliente o en una imagen capturada. Cuando el paso **Instalar aplicación** instala Microsoft Visio 2013, los archivos de contenido de Microsoft Visio 2010 (la aplicación sustituida) deben estar disponibles en un punto de distribución. Si Microsoft Visio no está instalado en un cliente o una imagen capturada, la secuencia de tareas instala Microsoft Visio 2013 sin comprobar los archivos de contenido de Microsoft Visio 2010.  
-
-> [!NOTE]  
-> Si el cliente no puede recuperar la lista de puntos de administración de los servicios de ubicación, use las variables de secuencia de tareas **SMSTSMPListRequestTimeoutEnabled** y **SMSTSMPListRequestTimeout**. Estas variables especifican los milisegundos que espera una secuencia de tareas antes de reintentar la instalación de una aplicación. Para obtener más información, vea [Task sequence variables](/sccm/osd/understand/task-sequence-variables) (Variables de secuencia de tareas).
+>
+> Si retira una aplicación reemplazada y se hace referencia a la nueva aplicación en una secuencia de tareas, la secuencia de tareas no se inicia.
+Este comportamiento es así por diseño: la secuencia de tareas requiere todas las referencias de la aplicación.<!-- SCCMDocs 1711 -->  
 
 Este paso de secuencia de tareas solo se ejecuta en el sistema operativo completo. No se ejecuta en Windows PE.  
 
@@ -922,7 +933,17 @@ Utilice las siguientes variables de secuencia de tareas con este paso:
 - [SMSTSMPListRequestTimeout](/sccm/osd/understand/task-sequence-variables#SMSTSMPListRequestTimeout)  
 - [TSErrorOnWarning](/sccm/osd/understand/task-sequence-variables#TSErrorOnWarning)  
 
+> [!NOTE]  
+> Si el cliente no puede recuperar la lista de puntos de administración de los servicios de ubicación, use las variables de secuencia de tareas **SMSTSMPListRequestTimeoutEnabled** y **SMSTSMPListRequestTimeout**. Estas variables especifican los milisegundos que espera una secuencia de tareas antes de reintentar la instalación de una aplicación. Para más información, vea [Task sequence variables](/sccm/osd/understand/task-sequence-variables) (Variables de secuencia de tareas).
+
 Para agregar este paso en el editor de secuencia de tareas, seleccione **Agregar**, **Software** e **Instalar aplicación**.
+
+Administre este paso con los siguientes cmdlets de PowerShell:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepinstallapplication?view=sccm-ps)
+- [New-CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepinstallapplication?view=sccm-ps)
+- [Remove-CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepinstallapplication?view=sccm-ps)
+- [Set-CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepinstallapplication?view=sccm-ps)
 
 ### <a name="properties"></a>Propiedades  
 
@@ -973,6 +994,12 @@ Las condiciones siguientes afectan a las aplicaciones instaladas por la secuenci
 #### <a name="if-an-application-fails-continue-installing-other-applications-in-the-list"></a>Continuar instalando otras aplicaciones en la lista si se produce un error de instalación de aplicación
 
 Esta configuración especifica que el paso continúe cuando se produzca un error en la instalación de una aplicación. Si especifica esta opción, la secuencia de tareas continúa con independencia de los errores de instalación. Si no se especifica esta opción y se produce un error en la instalación, el paso finaliza inmediatamente.  
+
+#### <a name="clear-application-content-from-cache-after-installing"></a>Borrar el contenido de la aplicación de la memoria caché después de instalar
+
+<!--4485675-->
+A partir de la versión 1906, elimine el contenido de la aplicación de la memoria caché del cliente después de que se ejecute el paso. Este comportamiento es beneficioso en dispositivos con unidades de disco duro pequeñas o cuando se instala una gran cantidad de aplicaciones de gran tamaño de forma sucesiva.
+
 
 ### <a name="options"></a>Opciones
 
@@ -1648,6 +1675,11 @@ Este paso ejecuta otra secuencia de tareas. Se crea una relación de elementos p
 
 Para agregar este paso en el editor de secuencia de tareas,seleccione **Agregar**, **General** y **Ejecutar secuencia de tareas**.
 
+A partir de la versión 1906, administre este paso con los siguientes cmdlets de PowerShell:<!-- 2839943, SCCMDocs #1118 -->
+
+- **New-CMTSStepRunTaskSequence**
+- **Set-CMTSStepRunTaskSequence**
+
 ### <a name="specifications-and-limitations"></a>Especificaciones y limitaciones
 
 Tenga en cuenta los siguientes puntos al agregar una secuencia de tareas secundaria a una secuencia de tareas:  
@@ -1774,7 +1806,7 @@ La secuencia de tareas establece la variable en este valor. Establezca esta vari
 
 Use este paso para realizar la transición desde Windows PE al nuevo sistema operativo. Este paso de secuencia de tareas es una parte necesaria de cualquier implementación de sistema operativo. Se instala el cliente de Configuration Manager en el nuevo sistema operativo y se prepara para que la secuencia de tareas continúe con la ejecución en el sistema operativo.  
 
-Este paso es responsable de pasar la secuencia de tareas de Windows PE para el sistema operativo completo. El paso se ejecuta en Windows PE y el sistema operativo completo debido a esta transición. Sin embargo, puesto que la transición se inicia en Windows PE, solo puede agregarse durante la parte de Windows PE de la secuencia de tareas.  
+Este paso es responsable de la transición de la secuencia de tareas de Windows PE al sistema operativo completo. El paso se ejecuta tanto en Windows PE como en el sistema operativo completo debido a esta transición. Sin embargo, dado que la transición comienza en Windows PE, solo se puede Agregar durante la parte de Windows PE de la secuencia de tareas.  
 
 Utilice las siguientes variables de secuencia de tareas con este paso:  
 

@@ -5,18 +5,18 @@ description: Implementación automática de actualizaciones de software usando r
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 10/02/2018
+ms.date: 07/26/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a7cd2e499ac55f9a1210d4f3309b6e0b6cefe16
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 6a45b1d1853ef4b0faa6205919b8b06d58a81b12
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67678195"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68537150"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Implementar actualizaciones de software automáticamente  
 
@@ -88,6 +88,13 @@ Las actualizaciones de software se pueden aprobar e implementar automáticamente
 
      - A partir de la versión 1806, está disponible un filtro de propiedad para **Arquitectura**. Use este filtro para excluir arquitecturas como Itanium y ARM64 que son menos comunes. Recuerde que hay aplicaciones de 32 bits (x86) y componentes que se ejecutan en sistemas de 64 bits (x64). A menos que esté seguro de que no necesita x86, habilítelo también cuando elija x64.<!--1322266-->  
 
+    > [!NOTE]  
+    > **Windows 10, versión 1903 y posteriores** se ha agregado a Microsoft Update como un producto propio en lugar de formar parte del producto **Windows 10** como en las versiones anteriores. Este cambio le obligaba a realizar una serie de pasos manuales para asegurarse de que los clientes veían estas actualizaciones. Hemos ayudado a reducir el número de pasos manuales que debe realizar para el nuevo producto en Configuration Manager versión 1906. <!--4682946-->
+    >
+    > Cuando actualice a la versión 1906 de Configuration Manager y tenga seleccionado el producto **Windows 10** para la sincronización, las siguientes acciones tendrán lugar de forma automática:
+    > - Las reglas de implementación automática que contienen el producto **Windows 10** se actualizarán para incluir **Windows 10, versión 1903 y posteriores**.
+    > - El producto **Windows 10, versión 1903 y posteriores** se agrega para la sincronización. Para más información, vea [Configurar las clasificaciones y los productos](/sccm/sum/get-started/configure-classifications-and-products).
+    > - Los [planes de mantenimiento](/sccm/osd/deploy-use/manage-windows-as-a-service#servicing-plan-workflow) se actualizan para incluir el producto **Windows 10, versión 1903 y posteriores**.
 
 6.  En la página **Programación de evaluación**, especifique si quiere habilitar la regla de implementación automática para que se ejecute en función de una programación. Si la habilita, haga clic en **Personalizar** para configurar la programación periódica.  
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28d1f01cbdd6238754cafc36be8d30499b041597
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: d4d4775819efbbb33bdd46e80e857a7d1b2d47ab
+ms.sourcegitcommit: ef7800a294e5db5d751921c34f60296c1642fc1f
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67676213"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68712486"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Creación y ejecución de scripts de PowerShell desde la consola de Configuration Manager
 
@@ -76,7 +76,7 @@ La funcionalidad de ejecución de scripts utiliza el concepto de *autores de scr
 
 ### <a name="scripts-roles-control"></a>Control de los roles de scripts
 
-De forma predeterminada, los usuarios no pueden aprobar un script que han creado. Dado que los scripts son eficaces y versátiles, y se pueden implementar en varios dispositivos, podrá separar los roles de la persona que los crea y la persona que los aprueba. Esto proporciona un nivel adicional de seguridad frente a la ejecución de un script sin supervisión. Puede desactivar esta aprobación secundaria para facilitar las pruebas.
+De forma predeterminada, los usuarios no pueden aprobar un script que hayan creado. Dado que los scripts son eficaces y versátiles, y se pueden implementar en varios dispositivos, podrá separar los roles de la persona que los crea y la persona que los aprueba. Esto proporciona un nivel adicional de seguridad frente a la ejecución de un script sin supervisión. Puede desactivar esta aprobación secundaria para facilitar las pruebas.
 
 ### <a name="approve-or-deny-a-script"></a>Aprobación o denegación de un script
 
@@ -249,19 +249,19 @@ Puede **editar** o **copiar** un script de PowerShell existente que se usa con l
 > [!Tip]  
 > No edite un script que se esté ejecutando activamente en los clientes, porque no terminarán de ejecutar el script original y es posible que no obtenga los resultados deseados de estos clientes.  
 
-### <a name="edit-a-script"></a>Editar una secuencia de comandos
+### <a name="edit-a-script"></a>Editar un script
 
-1. Vaya a la **Scripts** nodo bajo el **biblioteca de Software** área de trabajo.
-1. Seleccione la secuencia de comandos para editar y, después, haga clic en **editar** en la cinta de opciones. 
-1. Cambiar o volver a importar el script en el **detalles del Script** página.
-1. Haga clic en **siguiente** para ver el **resumen** , a continuación, **cerrar** cuando haya terminado de edición.
+1. Vaya al nodo **scripts** en el área de trabajo **biblioteca de software** .
+1. Seleccione el script que desea editar y, a continuación, haga clic en **Editar** en la cinta de opciones. 
+1. Cambiar o volver a importar el script en la página de **detalles del script** .
+1. Haga clic en **siguiente** para ver el **Resumen** y, a continuación, **cierre** cuando haya terminado de editar.
 
-### <a name="copy-a-script"></a>Copiar una secuencia de comandos
+### <a name="copy-a-script"></a>Copia de un script
 
-1. Vaya a la **Scripts** nodo bajo el **biblioteca de Software** área de trabajo.
-1. Seleccione la secuencia de comandos para copiar, a continuación, haga clic en **copia** en la cinta de opciones.
-1. Cambiar el nombre de la secuencia de comandos en el **nombre del Script** campo y realice las modificaciones adicionales que necesite.
-1. Haga clic en **siguiente** para ver el **resumen** , a continuación, **cerrar** cuando haya terminado de edición.
+1. Vaya al nodo **scripts** en el área de trabajo **biblioteca de software** .
+1. Seleccione el script que desea copiar y, a continuación, haga clic en **copiar** en la cinta de opciones.
+1. Cambie el nombre del script en el campo **nombre del script** y realice las modificaciones adicionales que necesite.
+1. Haga clic en **siguiente** para ver el **Resumen** y, a continuación, **cierre** cuando haya terminado de editar.
 
 
 ## <a name="run-a-script"></a>Ejecutar un script

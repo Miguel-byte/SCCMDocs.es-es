@@ -5,18 +5,18 @@ description: La consola de System Center Configuration Manager proporciona alert
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 07/09/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 9afd7b0f-5c8e-48bc-9a65-1f7d74103688
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5cd5c27aa04f25b044f74533983a214dc9f9341b
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 0933346884c0bad9fcc6923629228391b707a710
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500152"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68537186"
 ---
 # <a name="monitor-software-updates-in-system-center-configuration-manager"></a>Supervisar actualizaciones de software en System Center Configuration Manager
 
@@ -25,7 +25,23 @@ ms.locfileid: "65500152"
 System Center Configuration Manager ofrece muchas maneras de ayudarle a supervisar los objetos, procesos e información de compatibilidad de las actualizaciones de software. Use las secciones siguientes para supervisar las actualizaciones de software.
 
 ## <a name="software-updates-dashboard"></a>Panel de actualizaciones de software
-A partir de Configuration Manager versión 1610, puede usar el panel de actualizaciones de software para ver el estado de cumplimiento actual de los dispositivos de la organización y analizar rápidamente los datos para ver los dispositivos que están en riesgo. Para ver el panel, vaya a **Supervisión** > **Introducción** > **Seguridad** > **Software Updates Dashboard** (Panel de actualizaciones de software).   
+
+*(Se introdujo en la versión 1610)*
+
+A partir de Configuration Manager versión 1610, puede usar el panel de actualizaciones de software para ver el estado de cumplimiento actual de los dispositivos de la organización y analizar rápidamente los datos para ver los dispositivos que están en riesgo. Para ver el panel, vaya a **Supervisión** > **Introducción** > **Seguridad** > **Software Updates Dashboard** (Panel de actualizaciones de software).
+
+## <a name="drill-through-required-updates"></a>Obtención de detalles de actualizaciones necesarias
+<!--4224414-->
+*(Se introdujo en la versión 1906)*
+
+Puede obtener detalles de las estadísticas de cumplimiento para ver qué dispositivos requieren una actualización de software de Office 365 específica. Para ver la lista de dispositivos, necesita permiso para ver las actualizaciones y las colecciones a las que pertenecen los dispositivos. Para profundizar en la lista de dispositivos:
+
+1. Vaya a **Biblioteca de software** > **Actualizaciones de software** > **Todas las actualizaciones de software**.
+1. Seleccione las actualizaciones que requiera al menos un dispositivo.
+1. En la pestaña **Resumen** encontrará un gráfico circular bajo **Estadísticas**.
+1. Seleccione el hipervínculo **Vista necesaria** situado junto al gráfico circular para obtener los detalles de la lista de dispositivos.
+1. Esta acción le llevará a un nodo temporal en **Dispositivos** donde podrá ver los dispositivos que requieren la actualización. También puede realizar acciones para el nodo, como crear una colección a partir de la lista.
+
 
 ##  <a name="BKMK_SUAlerts"></a> Alertas de actualizaciones de software  
  Puede configurar alertas de actualizaciones de software a fin de notificar a los usuarios administrativos cuándo los niveles de compatibilidad de las implementaciones de actualizaciones de software están por debajo del porcentaje configurado. Puede configurar alertas para las implementaciones de actualizaciones de software en las siguientes ubicaciones:  

@@ -2,7 +2,7 @@
 title: Administrar controladores
 titleSuffix: Configuration Manager
 description: Use el catálogo de controladores de Configuration Manager para importar controladores de dispositivos, controladores de grupo en paquetes y distribuir esos paquetes a puntos de distribución.
-ms.date: 03/02/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be3cc24721674e9da276e7a65af03a5b4a266eed
-ms.sourcegitcommit: 33a006204f7f5f9b9acd1f3e84c4bc207362d00a
+ms.openlocfilehash: 685b3f08a855cb8d5a0c4bd3363daf1f8e0a26b0
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305701"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68537042"
 ---
 # <a name="manage-drivers-in-configuration-manager"></a>Administración de controladores en Configuration Manager
 
@@ -98,15 +98,19 @@ Actualiza el paquete de controladores de dispositivo en todos los puntos de dist
 #### <a name="properties"></a>Propiedades
 Se abrirá el cuadro de diálogo **Propiedades**. Revise y cambie el contenido y las propiedades del controlador. Por ejemplo, cambie el nombre y la descripción del controlador, habilítelo o deshabilítelo y especifique en qué plataformas se puede ejecutar. 
 
-<!--3607716, fka 1358270--> A partir de la versión 1810, los paquetes de controladores tienen campos de metadatos para **Fabricante** y **Modelo**. Use estos campos para etiquetar los paquetes de controladores con información para ayudar en el mantenimiento general o para identificar controladores antiguos y duplicados que se pueden eliminar. En la pestaña **General**, seleccione un valor existente en las listas desplegables o escriba una cadena para crear una nueva entrada. 
+<!--3607716, fka 1358270-->
+A partir de la versión 1810, los paquetes de controladores tienen campos de metadatos para **Fabricante** y **Modelo**. Use estos campos para etiquetar los paquetes de controladores con información para ayudar en el mantenimiento general o para identificar controladores antiguos y duplicados que se pueden eliminar. En la pestaña **General**, seleccione un valor existente en las listas desplegables o escriba una cadena para crear una nueva entrada.
 
-En el nodo **Paquetes de controladores**, estos campos se muestran en la lista como las columnas **Fabricante del controlador** y **Modelo del controlador**. También se pueden usar como criterios de búsqueda. 
+En el nodo **Paquetes de controladores**, estos campos se muestran en la lista como las columnas **Fabricante del controlador** y **Modelo del controlador**. También se pueden usar como criterios de búsqueda.
+
+A partir de la versión 1906, use estos atributos para almacenar en caché previamente el contenido de un cliente. Para obtener más información, vea [Configuración del contenido de la caché previa](/sccm/osd/deploy-use/configure-precache-content).<!--4224642-->  
+
 
 
 
 ## <a name="BKMK_DeviceDrivers"></a> Controladores de dispositivo
 
-Puede instalar controladores en equipos de destino sin incluirlos en la imagen del sistema operativo que se implementa. Configuration Manager proporciona un catálogo de controladores con referencias a todos los controladores que se importan en Configuration Manager. El catálogo de controladores se encuentra en el área de trabajo **Biblioteca de software** y consta de dos nodos: **Controladores** y **Paquetes de controladores**. El nodo **Controladores** enumera todos los controladores que haya importado en el catálogo de controladores.  
+Puede instalar controladores en equipos de destino sin incluirlos en la imagen del sistema operativo que se implementa. Configuration Manager proporciona un catálogo de controladores con referencias a todos los controladores que se importan en Configuration Manager. El catálogo de controladores se encuentra en el área de trabajo **Biblioteca de software** y se compone de dos nodos: **Controladores** y **Paquetes de controladores**. El nodo **Controladores** enumera todos los controladores que haya importado en el catálogo de controladores.  
 
 
 ### <a name="BKMK_ImportDrivers"></a> Importar controladores de dispositivos en el catálogo de controladores  
@@ -137,14 +141,14 @@ Después de importar controladores de dispositivos en el catálogo, agréguelos 
 
 3. En la página **Buscar controlador**, especifique las opciones siguientes:  
 
-    - **Importar todos los controladores en la siguiente ruta de acceso de red (UNC)**: Para importar todos los controladores de dispositivo en una carpeta específica, especifique la ruta de acceso de red. Por ejemplo: `\\servername\share\folder`.  
+    - **Importar todos los controladores en la siguiente ruta de acceso de red (UNC)** : para importar todos los controladores de dispositivos en una carpeta específica, especifique la ruta de acceso de red. Por ejemplo: `\\servername\share\folder`.  
 
         > [!NOTE]  
         > Si hay un gran número de subcarpetas y una gran cantidad de archivos INF del controlador, este proceso puede tardar tiempo.  
 
     - **Importar un controlador específico**: para importar un controlador específico desde una carpeta, especifique la ruta de acceso de red al archivo INF del controlador de dispositivo de Windows.  
 
-    - **Especificar la opción para controladores duplicados**: seleccione cómo quiere que Configuration Manager administre las categorías de controladores cuando importe un controlador de dispositivo duplicado.  
+    - **Especificar la opción para controladores duplicados**: seleccione cómo desea que Configuration Manager administre las categorías de controladores cuando importe un controlador de dispositivo duplicado.  
         - **Importar el controlador y agregar una nueva categoría a las categorías existentes**  
         - **Importar el controlador y conservar las categorías existentes**  
         - **Importar el controlador y sobrescribir las categorías existentes**  
@@ -155,13 +159,13 @@ Después de importar controladores de dispositivos en el catálogo, agréguelos 
 
 4. En la página **Detalles del controlador**, especifique las opciones siguientes:  
 
-    - **Ocultar los controladores que no sean de almacenamiento o red (para imágenes de arranque)**: Use esta opción para mostrar solo los controladores de almacenamiento y red. Esta opción también oculta otros controladores que no suelen ser necesarios para las imágenes de arranque, como un controlador de vídeo o de módem.  
+    - **Ocultar los controladores que no sean de almacenamiento o red (para imágenes de arranque)** : utilice este valor para mostrar solo los controladores de almacenamiento y de red. Esta opción también oculta otros controladores que no suelen ser necesarios para las imágenes de arranque, como un controlador de vídeo o de módem.  
 
-    - **Ocultar los controladores que no estén firmados digitalmente**: Microsoft recomienda usar solo los controladores que estén firmados digitalmente.  
+    - **Ocultar controladores que no están firmados digitalmente**: Microsoft recomienda usar solo los controladores firmados digitalmente.  
 
     - En la lista de controladores, seleccione los controladores que desee importar en el catálogo de controladores.  
 
-    - **Habilitar estos controladores y permitir que los equipos los instalen**: seleccione esta opción para permitir que los equipos instalen los controladores de dispositivos. Esta opción está habilitada de forma predeterminada.  
+    - **Habilitar estos controladores y permitir que los equipos los instalen**: seleccione esta opción para permitir que los equipos instalen los controladores de dispositivo. Esta opción está habilitada de forma predeterminada.  
 
         > [!IMPORTANT]  
         > Si un controlador de dispositivo causa un problema o desea suspender su instalación, deshabilítelo durante la importación. También puede deshabilitar los controladores después de importarlos.  
@@ -174,14 +178,14 @@ Después de importar controladores de dispositivos en el catálogo, agréguelos 
 
         Si es necesario, seleccione **Nuevo paquete** para crear un nuevo paquete de controladores. Cuando cree un nuevo paquete de controladores, proporcione un recurso compartido de red que no use ningún otro paquete de controladores.  
 
-    - Si el paquete ya se distribuyó a los puntos de distribución, seleccione **Sí** en el cuadro de diálogo para actualizar las imágenes de arranque en los puntos de distribución. No puede utilizar controladores de dispositivos hasta que se distribuyan a los puntos de distribución. Si selecciona **No**, ejecute la acción **Actualizar punto de distribución** acción antes de usar la imagen de arranque. Si el paquete de controladores no se distribuyó nunca, debe usar la acción **Distribuir contenido** en el nodo **Paquetes de controladores**.  
+    - Si el paquete ya se distribuyó a los puntos de distribución, seleccione **Sí** en el cuadro de diálogo para actualizar las imágenes de arranque en los puntos de distribución. No puede utilizar controladores de dispositivos hasta que se distribuyan a los puntos de distribución. Si selecciona **No**, ejecute la acción **Actualizar punto de distribución** antes de usar la imagen de arranque. Si el paquete de controladores no se distribuyó nunca, debe usar la acción **Distribuir contenido** en el nodo **Paquetes de controladores**.  
 
 6. En la página **Agregar controlador a imágenes de arranque**, elija si desea agregar los controladores de dispositivos a imágenes de arranque existentes.  
 
     > [!NOTE]  
     > Agregue solo controladores de almacenamiento y red a las imágenes de arranque.  
 
-    - Seleccione **Sí** en el cuadro de diálogo para actualizar las imágenes de arranque en los puntos de distribución. No puede utilizar controladores de dispositivos hasta que se distribuyan a los puntos de distribución. Si selecciona **No**, ejecute la acción **Actualizar punto de distribución** acción antes de usar la imagen de arranque. Si el paquete de controladores no se distribuyó nunca, debe usar la acción **Distribuir contenido** en el nodo **Paquetes de controladores**.  
+    - Seleccione **Sí** en el cuadro de diálogo para actualizar las imágenes de arranque en los puntos de distribución. No puede utilizar controladores de dispositivos hasta que se distribuyan a los puntos de distribución. Si selecciona **No**, ejecute la acción **Actualizar punto de distribución** antes de usar la imagen de arranque. Si el paquete de controladores no se distribuyó nunca, debe usar la acción **Distribuir contenido** en el nodo **Paquetes de controladores**.  
 
     - Configuration Manager le advierte si la arquitectura de uno o varios controladores no coincide con la arquitectura de las imágenes de arranque que seleccionó. Si no coinciden, seleccione **Aceptar**. Vuelva a la página **Detalles del controlador** para borrar los controladores que no coinciden con la arquitectura de la imagen de arranque seleccionada. Por ejemplo, si selecciona una imagen de arranque x64 y x86, todos los controladores deben admitir ambas arquitecturas. Si selecciona una imagen de arranque x64, todos los controladores deben admitir la arquitectura x64.  
 
@@ -281,9 +285,9 @@ Se abrirá el cuadro de diálogo **Propiedades**. Revise y cambie las propiedade
 
 Use secuencias de tareas para automatizar la implementación del sistema operativo. Cada paso en la secuencia de tareas puede realizar una acción determinada como, por ejemplo, la instalación de un controlador. Puede usar estos dos pasos de secuencia de tareas para instalar controladores de dispositivos durante la implementación de un sistema operativo:  
 
-- [Aplicar controladores automáticamente](/sccm/osd/understand/task-sequence-steps#BKMK_AutoApplyDrivers): Este paso le permite encontrar controladores de dispositivos coincidentes e instalarlos como parte de la implementación de sistema operativo. Puede configurar el paso de la secuencia de tareas para instalar solo el controlador que mejor coincida con cada dispositivo de hardware detectado. Alternativamente, especifique que el paso instala todos los controladores compatibles con cada dispositivo de hardware detectado y permita que el programa de instalación de Windows elija el mejor controlador. Además, puede especificar una categoría de controladores para limitar los controladores que están disponibles en este paso.  
+- [Aplicar controladores automáticamente	](/sccm/osd/understand/task-sequence-steps#BKMK_AutoApplyDrivers): esta etapa le permite encontrar controladores de dispositivos coincidentes e instalarlos automáticamente como parte de una implementación de sistema operativo. Puede configurar el paso de la secuencia de tareas para instalar solo el controlador que mejor coincida con cada dispositivo de hardware detectado. Alternativamente, especifique que el paso instala todos los controladores compatibles con cada dispositivo de hardware detectado y permita que el programa de instalación de Windows elija el mejor controlador. Además, puede especificar una categoría de controladores para limitar los controladores que están disponibles en este paso.  
 
-- [Aplicar paquete de controladores](/sccm/osd/understand/task-sequence-steps#BKMK_ApplyDriverPackage): Este paso le permite poner todos los controladores de dispositivos en un determinado paquete de controladores a disposición del programa de instalación de Windows. El programa de instalación de Windows busca los controladores de dispositivos necesarios en los paquetes de controladores especificados. Al crear medios independientes, debe usar esta etapa para instalar controladores de dispositivos.  
+- [Aplicar paquete de controladores](/sccm/osd/understand/task-sequence-steps#BKMK_ApplyDriverPackage): esta etapa le permite poner todos los controladores de dispositivos en un determinado paquete de controladores a disposición del programa de instalación de Windows. El programa de instalación de Windows busca los controladores de dispositivos necesarios en los paquetes de controladores especificados. Al crear medios independientes, debe usar esta etapa para instalar controladores de dispositivos.  
 
 Al usar estos pasos de la secuencia de tareas, también puede especificar cómo se instalan los controladores de dispositivos en el equipo en el que se implementa el sistema operativo. Para obtener más información, vea [Manage task sequences to automate tasks](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks) (Administración de secuencias de tareas para automatizar tareas).  
 

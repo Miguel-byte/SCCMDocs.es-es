@@ -1,8 +1,8 @@
 ---
 title: Administración de Windows Device Guard
 titleSuffix: Configuration Manager
-description: Aprenda a usar System Center Configuration Manager para administrar Windows Device Guard.
-ms.date: 12/19/2017
+description: Aprenda a usar Configuration Manager para administrar Windows Device Guard.
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d7c6fcdf0113dd9fa83d2d303661ad5690362715
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 82f262b01129452da7c34ffb6f1a1bb2f15be8a8
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67678729"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68533813"
 ---
 # <a name="device-guard-management-with-configuration-manager"></a>Administración de Device Guard con Configuration Manager
 
@@ -41,8 +41,8 @@ Configure uno de los siguientes modos:
 1. **Cumplimiento habilitado**: solo se pueden ejecutar archivos ejecutables de confianza.
 2. **Solo auditoría**: permite la ejecución de todos los archivos ejecutables, pero registra los archivos ejecutables que se ejecutan en el registro de eventos del cliente local.
 
->[!TIP]
->En esta versión de Configuration Manager, Device Guard es una característica de versión preliminar. Para habilitarla, vea [Características de versión preliminar en System Center Configuration Manager](/sccm/core/servers/manage/pre-release-features).
+> [!Tip]  
+> Esta característica se introdujo por primera vez en la versión 1702 como una [característica de versión preliminar](/sccm/core/servers/manage/pre-release-features). A partir de la versión 1906, ya no es de versión preliminar.  
 
 ## <a name="what-can-run-when-you-deploy-a-windows-defender-application-control-policy"></a>¿Qué se puede ejecutar cuando se implementa una directiva de Windows Defender Application Control?
 
@@ -89,7 +89,7 @@ Antes de configurar o implementar directivas de Windows Defender Application Con
     - **Modo de cumplimiento**: elija uno de los siguientes métodos de cumplimiento de Device Guard en el equipo cliente.
         - **Cumplimiento habilitado**: solo se permiten archivos ejecutables de confianza.
         - **Solo auditoría**: permite la ejecución de todos los archivos ejecutables, pero registra los archivos ejecutables que se ejecutan en el registro de eventos del cliente local.
-5. En la pestaña **Inclusiones** del **Asistente para crear directivas de Control de aplicaciones**, elija si quiere **Autorizar el software de confianza para Intelligent Security Graph**.
+5. En la pestaña **Inclusiones** del **Asistente para crear directivas de Control de aplicaciones**, puede elegir **Autorizar el software de confianza para Intelligent Security Graph**.
 6. Haga clic en **Agregar** si quiere agregar la relación de confianza a determinados archivos o carpetas en los equipos. En el cuadro de diálogo **Agregar archivo o carpeta de confianza**, puede especificar un archivo local o una ruta de acceso de carpeta de confianza. También puede especificar una ruta de acceso de archivo o carpeta en un dispositivo remoto en el que tenga permiso para conectarse. Cuando agregue confianza para determinados archivos y carpetas en una directiva de control de aplicaciones de Windows Defender, puede realizar lo siguiente:
     - Solucionar problemas con los comportamientos de instalador administrado
     - Confiar en aplicaciones de línea de negocio que no se pueden implementar con Configuration Manager

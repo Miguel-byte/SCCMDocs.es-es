@@ -2,7 +2,7 @@
 title: Administrar imágenes del sistema operativo
 titleSuffix: Configuration Manager
 description: Obtenga información sobre los métodos para administrar imágenes de sistema operativo almacenadas en archivos de imagen (WIM) de Windows.
-ms.date: 05/28/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35670ea78c2883d232040da30898f753c88e39b1
-ms.sourcegitcommit: 18a94eb78043cb565b05cd0e9469b939b29cccf0
+ms.openlocfilehash: ecee342fb65cde6a210a4f2d13d4d75a5f30f19a
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66355099"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68537011"
 ---
 # <a name="manage-os-images-with-configuration-manager"></a>Administración de imágenes del sistema operativo con Configuration Manager
 
@@ -77,6 +77,8 @@ Para poder usar una imagen de sistema operativo, primero debe agregarla a su sit
         > Configuration Manager no modifica el archivo de imagen de origen. Crea un nuevo archivo de imagen en el mismo directorio de origen.
         >
         > Puede producirse un error en este proceso de extracción en el caso de los archivos de imagen muy grandes, por ejemplo, de más de 60 GB. El error de DISM es `Not enough storage is available to process this command.` La línea de comandos que usa Configuration Manager está en smsprov.log y dism.log. Ejecute manualmente el mismo comando y, luego, importe la imagen.<!-- SCCMDocs-pr issue 3502 -->  
+
+    - A partir de la versión 1906, si quiere almacenar previamente en caché contenido en un cliente, especifique la **Arquitectura** y el **Lenguaje** de la imagen. Para obtener más información, vea [Configuración del contenido de la caché previa](/sccm/osd/deploy-use/configure-precache-content).<!--4224642-->  
 
 4. En la página **General**, especifique la siguiente información. Esta información es útil para identificar la imagen de sistema operativo cuando se tiene más de una.  
 

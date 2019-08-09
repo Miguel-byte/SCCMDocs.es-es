@@ -5,18 +5,18 @@ description: Configuration Manager sincroniza las actualizaciones de cliente de 
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/11/2019
+ms.date: 07/26/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fbbaf7322b0103b9958b4d7b2c66c018d12d20a4
-ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.openlocfilehash: 276c5dd71b62a29a3f68b1eed2cdc814cfd1c804
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194617"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68537171"
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>Administración de Office 365 ProPlus con Configuration Manager
 
@@ -58,7 +58,7 @@ A partir de la versión 1806 de Configuration Manager, la Herramienta de persona
 3. En la página **Configuración de la aplicación**, proporcione un nombre y una descripción para la aplicación, escriba la ubicación de descarga de los archivos y haga clic en **Siguiente**. La ubicación se debe especificar de la siguiente forma: &#92;&#92;*servidor*&#92;*recurso compartido*.
 4. En la página **Configuración Office**, haga clic en **Ir a la herramienta de personalización de Office**. Se abrirá la [Herramienta de personalización de Office de hacer clic y ejecutar](https://config.office.com).
 5. Configure los valores deseados para la instalación de Office 365. Haga clic en **Enviar** en la esquina superior derecha de la página cuando complete la configuración. 
-6. En la página **Implementación**, determine si quiere implementar ahora o en un momento posterior. Si decide implementar más adelante, puede encontrar la aplicación en la **Biblioteca de Software** < **Administración de aplicaciones** < **Aplicaciones**.  
+6. En la página **Implementación**, determine si quiere implementar ahora o en un momento posterior. Si decide implementar más adelante, puede encontrar la aplicación en la **Biblioteca de Software** > **Administración de aplicaciones** > **Aplicaciones**.  
 7. Confirme la configuración en la página **Resumen**. 
 8. Haga clic en **Siguiente** y después en **Cerrar** una vez que se complete el Asistente para la instalación del cliente de Office 365. 
 
@@ -83,6 +83,19 @@ A partir de la versión 1806 de Configuration Manager, la Herramienta de persona
 Después de crear e implementar aplicaciones de Office 365 mediante el Instalador de Office 365, Configuration Manager no administrará las actualizaciones de Office de forma predeterminada. Para permitir que los clientes de Office 365 reciban actualizaciones de Configuration Manager, vea [Implementar actualizaciones de Office 365 con Configuration Manager](#deploy-office-365-updates).
 
 Después de implementar las aplicaciones de Office 365, puede crear reglas de implementación automática para mantener esas aplicaciones. Para crear una regla de implementación automática para las aplicaciones de Office 365, haga clic en **Crear un ADR** desde el [panel de administración de clientes de Office 365](/sccm/sum/deploy-use/office-365-dashboard). Seleccione **Cliente de Office 365** cuando elija el producto. Para más información, vea [Implementar actualizaciones de software automáticamente](/sccm/sum/deploy-use/automatically-deploy-software-updates).
+
+
+## <a name="drill-through-required-office-365-updates"></a>Obtener detalles de las actualizaciones necesarias de Office 365
+<!--4224414-->
+*(Se introdujo en la versión 1906)*
+
+Puede obtener detalles de las estadísticas de cumplimiento para ver qué dispositivos requieren una actualización de software de Office 365 específica. Para ver la lista de dispositivos, necesita permiso para ver las actualizaciones y las colecciones a las que pertenecen los dispositivos. Para profundizar en la lista de dispositivos:
+
+1. Vaya a **Biblioteca de software** > **Administración de clientes de Office 365** > **Actualizaciones de Office 365**.
+1. Seleccione las actualizaciones que requiera al menos un dispositivo.
+1. En la pestaña **Resumen** encontrará un gráfico circular bajo **Estadísticas**.
+1. Seleccione el hipervínculo **Vista necesaria** situado junto al gráfico circular para obtener los detalles de la lista de dispositivos.
+1. Esta acción le llevará a un nodo temporal en **Dispositivos** donde podrá ver los dispositivos que requieren la actualización. También puede realizar acciones para el nodo, como crear una colección a partir de la lista.
 
 
 ## <a name="deploy-office-365-updates"></a>Implementación de actualizaciones de Office 365

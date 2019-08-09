@@ -3,7 +3,7 @@ title: Mantenimiento de las actualizaciones de software
 titleSuffix: Configuration Manager
 description: Para mantener las actualizaciones en Configuration Manager, puede programar la tarea de limpieza de WSUS o ejecutarla de forma manual.
 author: mestew
-ms.date: 03/27/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -11,12 +11,12 @@ ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
 manager: dougeby
 ms.author: mstewart
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1f8624e898e22ebb2eef66d72a242d02b36d342d
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.openlocfilehash: 11a817b907a27c0991fe6fc610063e1151ae94f9
+ms.sourcegitcommit: 75f48834b98ea6a238d39f24e04c127b2959d913
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65083353"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68604537"
 ---
 # <a name="software-updates-maintenance"></a>Mantenimiento de las actualizaciones de software
 
@@ -100,6 +100,50 @@ Las siguientes opciones del **Asistente para la limpieza de WSUS Server** no se 
 - Archivos de actualización innecesarios
 
   Para obtener más información e instrucciones, vea la entrada de blog [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance (La guía completa para el mantenimiento de Microsoft WSUS y Configuration Manager SUP)](https://support.microsoft.com/help/4490644/complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maint/).
+
+## <a name="wsus-cleanup-starting-in-version-1906"></a>Limpieza de WSUS a partir de la versión 1906
+<!--41101009-->
+
+ Tiene tareas de mantenimiento de WSUS adicionales que Configuration Manager pueden ejecutar para mantener puntos de actualización de software correctos. Además de rechazar las actualizaciones expiradas en WSUS, Configuration Manager puede agregar índices no clúster a las bases de datos de WSUS y quitar las actualizaciones obsoletas de las bases de datos de WSUS. El mantenimiento de WSUS se produce después de cada sincronización.
+
+### <a name="add-non-clustered-indexes-to-the-wsus-database-to-improve-wsus-cleanup-performance"></a>Agregar índices no agrupados a la base de datos de WSUS para mejorar el rendimiento de la limpieza de WSUS
+
+La adición de índices no clúster mejora el rendimiento de la limpieza de WSUS que Configuration Manager.
+
+1. En la consola de Configuration Manager, vaya a **Administración** > **Información general** > **Configuración del sitio** > **Sitios**.
+2. Seleccione el sitio en la parte superior de la jerarquía de Configuration Manager.
+3. Haga clic en **Configurar componentes de sitio** en el grupo Configuración y, a continuación, haga clic en **Punto de actualización de software** para abrir las propiedades del componente de punto de actualización de software.
+4. En la pestaña **WSUS Maintenance** (Mantenimiento de WSUS), seleccione **Add non-clustered indexes to the WSUS database** (Agregar índices no en clúster a la base de datos de WSUS).
+5. En cada SUSDB usado por Configuration Manager, los índices se agregan a las tablas siguientes:
+   - tbLocalizedPropertyForRevision
+   - tbRevisionSupersedesUpdate
+
+#### <a name="sql-permissions-for-creating-indexes"></a>Permisos SQL para crear índices
+
+Cuando la base de datos WSUS se encuentra en un servidor SQL remoto, la cuenta de equipo del servidor de sitio necesita los siguientes permisos de SQL:
+
+- Para crear un índice se requiere el permiso `ALTER` en la tabla o la vista. La cuenta de equipo del servidor de sitio debe ser un miembro del rol fijo de servidor `sysadmin` o de los roles fijos de base de datos `db_ddladmin` y `db_owner`. Para más información sobre la creación, el índice y los permisos, consulte [CREATE INDEX (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/create-index-transact-sql?view=sql-server-2017#permissions).
+- El permiso de servidor `CONNECT SQL` se debe conceder a la cuenta de equipo del servidor de sitio. Para más información, consulte [GRANT (permisos de servidor de Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017). 
+
+> [!NOTE]  
+>  Si la base de datos de WSUS se encuentra en un servidor SQL remoto mediante un puerto no predeterminado, entonces puede que los índices no se agreguen. Puede crear un [alias de servidor mediante SQL Server Configuration Manager](https://docs.microsoft.com/sql/database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client?view=sql-server-2017) para este escenario. Una vez que se agrega el alias y Configuration Manager puede realizar una conexión a la base de datos de WSUS, se agregarán los índices.
+
+### <a name="remove-obsolete-updates-from-the-wsus-database"></a>Quitar actualizaciones obsoletas de la base de datos de WSUS
+
+Las actualizaciones obsoletas son actualizaciones sin usar y revisiones de actualización en la base de datos de WSUS. Por lo general, una actualización se considera obsoleta una vez que ya no está en el [Catálogo de Microsoft Update](https://www.catalog.update.microsoft.com/) y no es necesaria para otras actualizaciones como requisito previo o dependencia.
+
+1. En la consola de Configuration Manager, vaya a **Administración** > **Información general** > **Configuración del sitio** > **Sitios**.
+2. Seleccione el sitio en la parte superior de la jerarquía de Configuration Manager.
+3. Haga clic en **Configurar componentes de sitio** en el grupo Configuración y, a continuación, haga clic en **Punto de actualización de software** para abrir las propiedades del componente de punto de actualización de software.
+4. En la pestaña **Mantenimiento de WSUS**, seleccione **Remove obsolete updates from the WSUS database** (Quitar las actualizaciones obsoletas de la base de datos de WSUS).
+   - Se permitirá que la eliminación de actualizaciones obsoletas se ejecute hasta un máximo de 30 minutos antes de detenerse. Se volverá a iniciar después de que se produzca la siguiente sincronización.  
+
+#### <a name="sql-permissions-for-removing-obsolete-updates"></a>Permisos SQL para quitar actualizaciones obsoletas
+
+Cuando la base de datos WSUS se encuentra en un servidor SQL remoto, la cuenta de equipo del servidor de sitio necesita los siguientes permisos de SQL:
+
+- Los roles fijos de base de datos `db_datareader` y `db_datawriter`. Para más información, consulte [Roles de nivel de base de datos](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles?view=sql-server-2017#fixed-database-roles).
+- El permiso de servidor `CONNECT SQL` se debe conceder a la cuenta de equipo del servidor de sitio. Para más información, consulte [GRANT (permisos de servidor de Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017).
 
 ## <a name="updates-cleanup-log-entries"></a>Actualiza las entradas de registro de limpieza
 

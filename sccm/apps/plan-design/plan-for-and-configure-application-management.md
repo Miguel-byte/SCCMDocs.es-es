@@ -2,7 +2,7 @@
 title: Planeación de administración de aplicaciones
 titleSuffix: Configuration Manager
 description: Implemente y configure las dependencias necesarias para la implementación de aplicaciones en Configuration Manager.
-ms.date: 05/21/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3ec099d9ffbb5ffaee1c962faf8443a900c1b324
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: aed5c94057dbc564c5275660c488ac82339927f6
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176860"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68535285"
 ---
 # <a name="plan-for-and-configure-application-management-in-configuration-manager"></a>Planeamiento y configuración de la administración de aplicaciones en Configuration Manager
 
@@ -33,12 +33,18 @@ Use la información de este artículo como ayuda para implementar las dependenci
 
 Se requiere IIS en los servidores que ejecutan los siguientes roles del sistema de sitios:
 
-- Punto de sitios web del catálogo de aplicaciones  
-- Punto de servicio web del catálogo de aplicaciones  
 - Punto de administración  
 - Punto de distribución  
 
 Para obtener más información, consulte [Site and site system prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) (Requisitos previos de sitio y sistema de sitio).  
+
+> [!Note]  
+> El catálogo de aplicaciones también requiere IIS. Sin embargo, su experiencia del usuario de Silverlight no se admite a partir de la versión 1806 de la rama actual. A partir de la versión 1906, los clientes actualizados usan automáticamente el punto de administración para las implementaciones de aplicaciones disponibles para el usuario. Tampoco se pueden instalar nuevos roles del catálogo de aplicaciones. En la primera versión de la rama actual después del 31 de octubre de 2019, finalizará el soporte técnico para los roles de catálogo de aplicaciones.  
+>
+> Vea los siguientes artículos para más información:
+>
+> - [Configurar el Centro de software](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)
+> - [Características eliminadas y en desuso](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)  
 
 
 ### <a name="certificates-on-code-signed-applications-for-mobile-devices"></a>Certificados de aplicaciones con firma de código para dispositivos móviles
@@ -68,10 +74,16 @@ Para más información sobre la afinidad entre usuario y dispositivo, vea [Vincu
 
 ### <a name="management-point"></a>Punto de administración
 
-Los clientes se ponen en contacto con un punto de administración para descargar la directiva de cliente, buscar contenido y conectarse al catálogo de aplicaciones. Si los clientes no pueden obtener acceso a un punto de administración, no podrán usar el catálogo de aplicaciones.
+Los clientes se pongan en contacto con un punto de administración para descargar la Directiva de cliente para buscar contenido.
+
+A partir de la versión 1906, los clientes actualizados usan automáticamente el punto de administración para las implementaciones de aplicaciones disponibles para el usuario.
+
+En la versión 1902 y anteriores, los clientes usan el punto de administración para conectarse al catálogo de aplicaciones. Si los clientes no pueden obtener acceso a un punto de administración, no podrán usar el catálogo de aplicaciones.
 
 > [!Note]  
 > A partir de la versión 1806, los roles del catálogo de aplicaciones ya no son necesarios para mostrar las aplicaciones disponibles para el usuario en el Centro de software. Para obtener más información, consulte [Configurar el centro de software](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).<!--1358309-->  
+>
+> A partir de la versión 1906, no se pueden instalar nuevos roles del catálogo de aplicaciones. En la primera versión de la rama actual después del 31 de octubre de 2019, finalizará el soporte técnico para los roles de catálogo de aplicaciones.  
   
 
 ### <a name="distribution-point"></a>Punto de distribución
@@ -158,23 +170,23 @@ El catálogo de aplicaciones está en desuso. Para más información, consulte [
 
 - A partir de la versión 1806, la **experiencia de usuario de Silverlight** del punto de sitios web del catálogo de aplicaciones ya no se admite.<!--1358309--> El rol de punto de servicio web del catálogo de aplicaciones ya no es *necesario*, pero todavía se *admite*.
 
-- En la primera versión de la rama actual después del 30 de junio de 2019, los clientes actualizados utilizarán automáticamente el punto de administración para las implementaciones de aplicaciones disponibles para los usuarios. Tampoco podrá instalar nuevos roles de catálogo de aplicaciones.
+- A partir de la versión 1906, los clientes actualizados usan automáticamente el punto de administración para las implementaciones de aplicaciones disponibles para el usuario. Tampoco se pueden instalar nuevos roles del catálogo de aplicaciones.
 
-- En la primera versión de la rama actual después del 31 de octubre de 2019, el soporte técnico terminará para los roles de catálogo de aplicaciones.  
+- En la primera versión de la rama actual después del 31 de octubre de 2019, finalizará el soporte técnico para los roles de catálogo de aplicaciones.  
 
-Estas mejoras iterativas en el Centro de software y en punto de administración son para simplificar la infraestructura y eliminar la necesidad del catálogo de aplicaciones para las implementaciones disponibles para los usuarios. Centro de software puede entregar todas las implementaciones de aplicaciones sin el catálogo de aplicaciones. Además, si habilita TLS 1.2 y utiliza HTTP con el catálogo de aplicaciones, los usuarios no podrán ver las implementaciones disponibles y dirigidas a los usuarios.
+Estas mejoras iterativas en el Centro de software y en punto de administración son para simplificar la infraestructura y eliminar la necesidad del catálogo de aplicaciones para las implementaciones disponibles para los usuarios. Centro de software puede entregar todas las implementaciones de aplicaciones sin el catálogo de aplicaciones. Además, si habilita TLS 1.2 y utiliza HTTP con el catálogo de aplicaciones, los usuarios no podrán ver las implementaciones disponibles y dirigidas a los usuarios. Actualice Configuration Manager a la versión 1906 o posterior para beneficiarse de estas mejoras.
 
-1. Actualice a todos los clientes a la versión 1806 o posterior.  
+1. Actualice a todos los clientes a la versión 1806 o posterior. Se recomienda la versión 1906.  
 
 1. Establezca la personalización de marca para el Centro de software, en lugar de en las propiedades del rol de sitio web del catálogo de aplicaciones. Para obtener más información, vea [Acerca de la configuración de cliente](/sccm/core/clients/deploy/about-client-settings#software-center).  
 
 1. Revise la configuración del cliente, tanto personalizada como predeterminada. En el grupo **Agente de equipo**, asegúrese de que **Punto de sitios web del catálogo de aplicaciones predeterminado** es `(none)`.  
 
-    El cliente solo cambia para utilizar el punto de administración cuando no hay roles de catálogo de aplicación en la jerarquía. De lo contrario, los clientes siguen utilizando una de las instancias del catálogo de aplicaciones en la jerarquía. Este comportamiento se aplica en todos los sitios principales independientes.  
+    En la versión 1902, el cliente solo cambia para utilizar el punto de administración cuando no hay roles de catálogo de aplicación en la jerarquía. De lo contrario, los clientes siguen utilizando una de las instancias del catálogo de aplicaciones en la jerarquía. Este comportamiento se aplica en todos los sitios principales independientes.  
 
 1. Quite los roles de sistema del **sitio web del catálogo de aplicaciones** y del **servicio web de catálogo de aplicaciones** de todos los sitios principales.
 
-Después de quitar los roles de catálogo de aplicaciones, el Centro de software comienza a utilizar el punto de administración para las implementaciones disponibles y dirigidas a los usuarios. Puede tardar hasta 65 minutos para que tenga lugar este cambio. Para comprobar este comportamiento en un cliente específico, revise `SCClient_<username>.log`y busque una entrada similar a la siguiente línea:
+Después de quitar los roles de catálogo de aplicaciones, el Centro de software comienza a utilizar el punto de administración para las implementaciones disponibles y dirigidas a los usuarios. En la versión 1902 y versiones anteriores, el cambio puede tardar hasta 65 minutos. Para comprobar este comportamiento en un cliente específico, revise `SCClient_<username>.log`y busque una entrada similar a la siguiente línea:
 
 `Using endpoint Url: https://mp.contoso.com/CMUserService_WindowsAuth, Windows authentication`
 

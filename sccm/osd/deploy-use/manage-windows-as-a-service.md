@@ -2,7 +2,7 @@
 title: Administración de Windows como servicio
 titleSuffix: Configuration Manager
 description: Vea el estado de Windows como servicio (WaaS) mediante Configuration Manager, cree planes de mantenimiento para formar anillos de implementación y vea alertas cuando los clientes de Windows 10 estén próximos al final del soporte técnico.
-ms.date: 04/12/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5cf48e73e2d273fcff6b6b99cf0eaa06cababa16
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 4cf8e70146fa369e11cd26bdd5f982380678655a
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159500"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68537055"
 ---
 # <a name="manage-windows-as-a-service-using-system-center-configuration-manager"></a>Administración de Windows como servicio mediante System Center Configuration Manager
 
@@ -55,6 +55,8 @@ ms.locfileid: "67159500"
 
 -   Las actualizaciones de software deben estar configuradas y sincronizadas. Seleccione la clasificación de **Actualizaciones** y sincronizar las actualizaciones de software antes de que las actualizaciones de características de Windows 10 estén disponibles en la consola de Configuration Manager. Para obtener más información, consulte [Prepare for software updates management](../../sum/get-started/prepare-for-software-updates-management.md) (Preparación para la administración de actualizaciones de software).  
 - A partir de la versión 1902 de Configuration Manager, compruebe la [configuración de cliente](/sccm/core/clients/deploy/about-client-settings#bkmk_thread-priority) **Especificar la prioridad de subproceso para las actualizaciones de características** para asegurarse de que es apropiada para su entorno.
+- A partir de la versión 1906 de Configuration Manager, compruebe la **configuración de cliente** [Habilitar la actualización dinámica para las actualizaciones de características](/sccm/core/clients/deploy/about-client-settings#bkmk_du) para asegurarse de que es apropiada para su entorno. <!--4062619-->
+ para su entorno. <!--4062619-->
 
 ##  <a name="BKMK_ServicingDashboard"></a> Panel de mantenimiento de Windows 10  
  El panel de mantenimiento de Windows 10 le proporciona información acerca de los equipos con Windows 10 de su entorno, los planes de mantenimiento activos, la información de cumplimiento, etc. Los datos del panel de mantenimiento de Windows 10 dependen de si el punto de conexión de servicio está instalado. El panel presenta los iconos siguientes:  
@@ -78,6 +80,18 @@ ms.locfileid: "67159500"
 > [!IMPORTANT]  
 >  La información que se muestra en el panel de mantenimiento de Windows 10 (por ejemplo, el ciclo de vida de soporte técnico para las versiones de Windows 10) se proporciona para su comodidad y solo para uso interno en su empresa. No debe confiar exclusivamente en esta información para comprobar el cumplimiento de la actualización. Asegúrese de comprobar la exactitud de la información proporcionada.  
 
+## <a name="drill-through-required-updates"></a>Obtención de detalles de actualizaciones necesarias
+<!--4224414-->
+*(Se introdujo en la versión 1906)*
+
+Puede obtener detalles de las estadísticas de cumplimiento para ver qué dispositivos requieren una actualización de software de Office 365 específica. Para ver la lista de dispositivos, necesita permiso para ver las actualizaciones y las colecciones a las que pertenecen los dispositivos. Para profundizar en la lista de dispositivos:
+
+1. Vaya a **Biblioteca de software** > **Mantenimiento de Windows 10** > **Todas las actualizaciones de Windows 10**.
+1. Seleccione las actualizaciones que requiera al menos un dispositivo.
+1. En la pestaña **Resumen** encontrará un gráfico circular bajo **Estadísticas**.
+1. Seleccione el hipervínculo **Vista necesaria** situado junto al gráfico circular para obtener los detalles de la lista de dispositivos.
+1. Esta acción le llevará a un nodo temporal en **Dispositivos** donde podrá ver los dispositivos que requieren la actualización. También puede realizar acciones para el nodo, como crear una colección a partir de la lista.
+
 ## <a name="servicing-plan-workflow"></a>Flujo de trabajo del plan de mantenimiento  
  Los planes de mantenimiento de Windows 10 en Configuration Manager son muy similares a las reglas de implementación automática de las actualizaciones de software. Se crea un plan de mantenimiento con los siguientes criterios evaluados por Configuration Manager:  
 
@@ -89,16 +103,25 @@ ms.locfileid: "67159500"
 
   Cuando una actualización cumple los criterios, el plan de mantenimiento agrega la actualización al paquete de implementación, distribuye el paquete a los puntos de distribución e implementa la actualización a la recopilación basándose en los valores configurados en el plan de mantenimiento. Puede supervisar las implementaciones en el icono Service Plan Monitoring del panel de mantenimiento de Windows 10. Para obtener más información, consulte [Monitor software updates](../../sum/deploy-use/monitor-software-updates.md) (Supervisión de las actualizaciones de software).  
 
+> [!NOTE]  
+> **Windows 10, versión 1903 y posteriores** se ha agregado a Microsoft Update como un producto propio en lugar de formar parte del producto **Windows 10** como en las versiones anteriores. Este cambio le obligaba a realizar una serie de pasos manuales para asegurarse de que los clientes veían estas actualizaciones. Hemos ayudado a reducir el número de pasos manuales que debe realizar para el nuevo producto en Configuration Manager versión 1906. <!--4682946-->
+>
+> Cuando actualice a la versión 1906 de Configuration Manager y tenga seleccionado el producto **Windows 10** para la sincronización, las siguientes acciones tendrán lugar de forma automática:
+> - Los planes de mantenimiento se actualizan para incluir el producto **Windows 10, versión 1903 y versiones posteriores**.
+> - El producto **Windows 10, versión 1903 y posteriores** se agrega para la sincronización. Para más información, vea [Configurar las clasificaciones y los productos](/sccm/sum/get-started/configure-classifications-and-products).
+> - Las [reglas de implementación automática](/sccm/sum/deploy-use/automatically-deploy-software-updates#bkmk_adr-process) que contienen el producto **Windows 10** se actualizarán para incluir **Windows 10, versión 1903 y versiones posteriores**.
+
+
 ##  <a name="BKMK_ServicingPlan"></a> Plan de mantenimiento de Windows 10  
  A medida que implementa el canal semianual de Windows 10, puede crear uno o varios planes de mantenimiento para definir los canales de implementación que quiere en su entorno, así como supervisarlos en el panel de mantenimiento de Windows 10. Los planes de mantenimiento solo usan la clasificación de actualizaciones de software **Actualizaciones** , no las actualizaciones acumulativas de Windows 10. Este tipo de actualizaciones deberá seguir implementándose mediante el flujo de trabajo de las actualizaciones de software. La experiencia del usuario final con un plan de mantenimiento es la misma que con las actualizaciones de software, incluida la configuración del plan de mantenimiento.  
 
 > [!NOTE]  
->  Puede usar una secuencia de tareas para implementar una actualización para cada compilación de Windows 10, pero requiere más trabajo manual. Debería importar los archivos de origen actualizados como un paquete de actualización de sistema operativo y, después, crear e implementar la secuencia de tareas en el conjunto de equipos adecuado. Sin embargo, una secuencia de tareas proporciona opciones personalizadas adicionales, como las acciones anteriores y posteriores a la implementación.  
+> Puede usar una secuencia de tareas para implementar una actualización para cada compilación de Windows 10, pero requiere más trabajo manual. Debería importar los archivos de origen actualizados como un paquete de actualización de sistema operativo y, después, crear e implementar la secuencia de tareas en el conjunto de equipos adecuado. Sin embargo, una secuencia de tareas proporciona opciones personalizadas adicionales, como las acciones anteriores y posteriores a la implementación.  
 
  Puede crear un plan de mantenimiento básico desde el panel de mantenimiento de Windows 10. Debe especificar el nombre, la recopilación (solo muestra las primeras diez recopilaciones por tamaño, la más pequeña primero), el paquete de implementación (solo muestra los diez primeros paquetes modificados más recientemente) y el estado de disponibilidad, Configuration Manager crea el plan de mantenimiento con los valores predeterminados de otras configuraciones. También puede iniciar el Asistente para crear planes de mantenimiento para configurar todos los valores. Use el procedimiento siguiente para crear un plan de mantenimiento mediante el Asistente para crear planes de mantenimiento.  
 
 > [!NOTE]  
->  Puede administrar el comportamiento de las implementaciones de alto riesgo. Una implementación de alto riesgo es una implementación que se instala automáticamente y puede provocar resultados no deseados. Por ejemplo, una secuencia de tareas con el propósito **Requerido** que implementa Windows 10 se considera una implementación de alto riesgo. Para obtener más información, consulte [Settings to manage high-risk deployments](../../protect/understand/settings-to-manage-high-risk-deployments.md) (Configuración para administrar implementaciones de alto riesgo).  
+> Puede administrar el comportamiento de las implementaciones de alto riesgo. Una implementación de alto riesgo es una implementación que se instala automáticamente y puede provocar resultados no deseados. Por ejemplo, una secuencia de tareas con el propósito **Requerido** que implementa Windows 10 se considera una implementación de alto riesgo. Para obtener más información, consulte [Settings to manage high-risk deployments](/sccm/core/servers/manage/settings-to-manage-high-risk-deployments) (Configuración para administrar implementaciones de alto riesgo).  
 
 #### <a name="to-create-a-windows-10-servicing-plan"></a>Para crear un plan de mantenimiento de Windows 10  
 
@@ -114,23 +137,17 @@ ms.locfileid: "67159500"
 
    -   **Descripción:** especifique una descripción para el plan de mantenimiento. La descripción debería proporcionar información general del plan de mantenimiento, además de cualquier otra información relevante que permita identificar y diferenciarlo del resto de resto de planes del sitio de Configuration Manager. El campo de descripción es opcional, tiene un límite de 256 caracteres y tiene un valor en blanco de forma predeterminada.  
 
-5. En la página Plan de mantenimiento, configure las opciones siguientes:  
+5. En la página Plan de mantenimiento, especifique la **recopilación de destino**. los miembros de la recopilación reciben las actualizaciones de Windows 10 definidas en el plan de mantenimiento.  
 
-   -   **Recopilación de destino**: especifica la recopilación de destino que se usará para el plan de mantenimiento. los miembros de la recopilación reciben las actualizaciones de Windows 10 definidas en el plan de mantenimiento.  
+    - Al realizar una implementación de alto riesgo, como un plan de mantenimiento, en la ventana **Seleccionar recopilación** solo se muestran las recopilaciones personalizadas que cumplen con la configuración de comprobación de implementación que está configurada en las propiedades del sitio.
 
-       > [!NOTE]  
-       >  Al realizar una implementación de alto riesgo, como un plan de mantenimiento, en la ventana **Seleccionar recopilación** solo se muestran las recopilaciones personalizadas que cumplen con la configuración de comprobación de implementación que está configurada en las propiedades del sitio.
-       >    
-       > Las implementaciones de alto riesgo siempre se limitan a las recopilaciones personalizadas, las recopilaciones que cree y la recopilación integrada **Equipos desconocidos** . Cuando cree una implementación de alto riesgo, no puede seleccionar una recopilación integrada como **Todos los sistemas**. Desactive **Ocultar recopilaciones con un número de miembros superior a la configuración de tamaño mínimo del sitio** para ver todas las recopilaciones personalizadas que contienen menos clientes que el tamaño máximo configurado. Para obtener más información, consulte [Settings to manage high-risk deployments](../../protect/understand/settings-to-manage-high-risk-deployments.md) (Configuración para administrar implementaciones de alto riesgo).  
-       >  
-       > La configuración de comprobación de implementación se basa en la pertenencia actual de la recopilación. Después de implementar el plan de mantenimiento, la pertenencia a la recopilación no se vuelve a evaluar para la configuración de implementación de alto riesgo.  
-       >  
-       > Por ejemplo, supongamos que establece el **Tamaño predeterminado** en 100 y el **Tamaño máximo** en 1000. Al crear una implementación de alto riesgo, la ventana **Seleccionar recopilación** solo mostrará las recopilaciones que contienen menos de 100 clientes. Si desactiva la configuración **Ocultar recopilaciones con un recuento de miembros mayor que la configuración de tamaño mínimo del sitio**, la ventana mostrará las recopilaciones que contienen menos de 1000 clientes.  
-       >
-       > Al seleccionar una recopilación que contiene un rol de sitio, se aplican estos criterios:    
-       >   
-       >    - Si la recopilación contiene un servidor de sistema de sitio y establece la configuración de comprobación de implementación para bloquear las recopilaciones con servidores de sistema de sitio, se producirá un error y no podrá continuar.    
-       >    - El Asistente para implementar software mostrará una advertencia de alto riesgo cuando la recopilación contenga un servidor de sistema de sitio y establezca la configuración de comprobación de implementación para advertirle si las recopilaciones tienen servidores de sistema de sitio, si la recopilación supera el valor de tamaño predeterminado o si la recopilación contiene un servidor. Debe aceptar la creación de una implementación de alto riesgo y se creará un mensaje de estado de auditoría.  
+    - Las implementaciones de alto riesgo siempre se limitan a las recopilaciones personalizadas, las recopilaciones que cree y la recopilación integrada **Equipos desconocidos** . Cuando cree una implementación de alto riesgo, no puede seleccionar una recopilación integrada como **Todos los sistemas**. Desactive **Ocultar recopilaciones con un número de miembros superior a la configuración de tamaño mínimo del sitio** para ver todas las recopilaciones personalizadas que contienen menos clientes que el tamaño máximo configurado. Para obtener más información, consulte [Settings to manage high-risk deployments](../../protect/understand/settings-to-manage-high-risk-deployments.md) (Configuración para administrar implementaciones de alto riesgo).  
+
+    - La configuración de comprobación de implementación se basa en la pertenencia actual de la recopilación. Después de implementar el plan de mantenimiento, la pertenencia a la recopilación no se vuelve a evaluar para la configuración de implementación de alto riesgo.  
+
+        - Por ejemplo, supongamos que establece el **Tamaño predeterminado** en 100 y el **Tamaño máximo** en 1000. Al crear una implementación de alto riesgo, la ventana **Seleccionar recopilación** solo mostrará las recopilaciones que contienen menos de 100 clientes. Si desactiva la configuración **Ocultar recopilaciones con un recuento de miembros mayor que la configuración de tamaño mínimo del sitio**, la ventana mostrará las recopilaciones que contienen menos de 1000 clientes. Al seleccionar una recopilación que contiene un rol de sitio, se aplican estos criterios:
+          - Si la recopilación contiene un servidor de sistema de sitio y establece la configuración de comprobación de implementación para bloquear las recopilaciones con servidores de sistema de sitio, se producirá un error y no podrá continuar.
+          - El Asistente para implementar software mostrará una advertencia de alto riesgo cuando la recopilación contenga un servidor de sistema de sitio y establezca la configuración de comprobación de implementación para advertirle si las recopilaciones tienen servidores de sistema de sitio, si la recopilación supera el valor de tamaño predeterminado o si la recopilación contiene un servidor. Debe aceptar la creación de una implementación de alto riesgo y se creará un mensaje de estado de auditoría.  
 
 6. En la página Canal de implementación, configure las siguientes opciones:  
 
@@ -191,9 +208,7 @@ ms.locfileid: "67159500"
     -   **Comportamiento de reinicio de dispositivo**: especifique si se debe suprimir el reinicio del sistema necesario para completar la instalación de actualizaciones en servidores y estaciones de trabajo.  
 
     -   **Tratamiento de filtros de escritura para dispositivos de Windows Embedded**: cuando implemente actualizaciones en dispositivos de Windows Embedded habilitados para filtro de escritura, puede especificar que las actualizaciones se instalen en la superposición temporal y, o bien confirmar los cambios más tarde, o bien confirmar los cambios en la fecha límite de instalación o durante una ventana de mantenimiento. Al confirmar los cambios en la fecha límite de instalación o durante una ventana de mantenimiento, es necesario reiniciar. Los cambios se conservan en el dispositivo.  
-
-        > [!NOTE]  
-        >  Cuando implemente una actualización en un dispositivo de Windows Embedded, asegúrese de que el dispositivo es miembro de una recopilación que tenga una ventana de mantenimiento configurada.  
+        - Cuando implemente una actualización en un dispositivo de Windows Embedded, asegúrese de que el dispositivo es miembro de una recopilación que tenga una ventana de mantenimiento configurada.  
 
 10. En la página Paquete de implementación, seleccione un paquete de implementación existente o configure las opciones siguientes para crear un nuevo paquete de implementación:  
 
@@ -202,15 +217,9 @@ ms.locfileid: "67159500"
     2.  **Descripción**: especifique una descripción que proporcione información sobre el paquete de implementación. La descripción está limitada a 127 caracteres.  
 
     3.  **Origen de paquete**: especifica la ubicación de los archivos de origen de la actualización de software. Escriba una ruta de red de la ubicación de los archivos de origen, por ejemplo, **\\\servidor\nombre de recurso compartido\ruta**, o haga clic en **Examinar** para buscar la ubicación de red. Cree la carpeta compartida para los archivos de origen del paquete de implementación antes de continuar con la página siguiente.  
-
-        > [!NOTE]  
-        >  Ningún otro paquete de implementación de software podrá usar la ubicación de origen del paquete de implementación que especifique.  
-
-        > [!IMPORTANT]  
-        >  Tanto la cuenta de equipo del proveedor de SMS como el usuario que ejecuta el asistente para descargar actualizaciones de software deben tener permisos NTFS de **escritura** en la ubicación de descarga. Debe restringir cuidadosamente el acceso a la ubicación de descarga para reducir el riesgo de alteración de los archivos de origen de la actualización de software por parte de atacantes.  
-
-        > [!IMPORTANT]  
-        >  Puede cambiar la ubicación de origen del paquete en las propiedades del paquete de implementación después de que Configuration Manager cree el paquete de implementación. Pero si lo hace, primero debe copiar el contenido desde el origen del paquete original a la nueva ubicación de origen del paquete.  
+        - Ningún otro paquete de implementación de software podrá usar la ubicación de origen del paquete de implementación que especifique.  
+        - Tanto la cuenta de equipo del proveedor de SMS como el usuario que ejecuta el asistente para descargar actualizaciones de software deben tener permisos NTFS de **escritura** en la ubicación de descarga. Debe restringir cuidadosamente el acceso a la ubicación de descarga para reducir el riesgo de alteración de los archivos de origen de la actualización de software por parte de atacantes.  
+        - Puede cambiar la ubicación de origen del paquete en las propiedades del paquete de implementación después de que Configuration Manager cree el paquete de implementación. Pero si lo hace, primero debe copiar el contenido desde el origen del paquete original a la nueva ubicación de origen del paquete.  
 
     4.  **Prioridad de envío**: especifique la prioridad de envío del paquete de implementación. Configuration Manager usa la prioridad de envío para el paquete de implementación cuando envía el paquete a los puntos de distribución. Los paquetes de implementación se envían en orden de prioridad: Alta, Media, o Baja. Los paquetes con prioridades idénticas se envían en el orden en que se crearon. Si no hay ningún trabajo pendiente, el paquete se procesa inmediatamente sin tener en cuenta su prioridad.  
 
@@ -254,12 +263,8 @@ Use el siguiente procedimiento para modificar las propiedades de un plan de mant
     -   **Tipo de implementación**: especifique el tipo de implementación para la implementación de actualizaciones de software. Seleccione **Requerido** para crear una implementación de actualización de software obligatoria en la que las actualizaciones de software se instalan automáticamente en los clientes antes de una fecha límite configurada. Seleccione **Disponible** para crear una implementación de actualización de software que esté disponible para que los usuarios la instalen desde el Centro de software.  
 
         > [!IMPORTANT]  
-        >  Una vez creada la implementación de actualización de software, no podrá cambiar el tipo de implementación.  
-
-        > [!NOTE]  
-        >  Un grupo de actualizaciones de software implementado como **Requerido** se descarga en segundo plano y se respeta la configuración de BITS, si se ha configurado.  
-        >  
-        > Sin embargo, los grupos de actualizaciones de software implementados como **Disponible** se descargan en primer plano y omiten la configuración de BITS.  
+        > - Una vez creada la implementación de actualización de software, no podrá cambiar el tipo de implementación.  
+        > - Un grupo de actualizaciones de software implementado como **Requerido** se descarga en segundo plano y se respeta la configuración de BITS, si se ha configurado. Sin embargo, los grupos de actualizaciones de software implementados como **Disponible** se descargan en primer plano y omiten la configuración de BITS.  
 
     -   **Usar Wake-on-LAN para activar clientes para las implementaciones requeridas**: especifique si quiere habilitar Wake on LAN en la fecha límite para enviar paquetes de reactivación a equipos que requieran una o varias actualizaciones de software en la implementación. Los equipos que están en modo de suspensión en la fecha límite de instalación se activan para que se pueda iniciar la instalación de las actualizaciones de software. Los clientes que están en modo de suspensión pero no requieren actualizaciones de software de la implementación no se iniciarán. De forma predeterminada, esta opción no está habilitada. Sólo está disponible cuando **Tipo de implementación** está establecido en **Requerido**.  
 
@@ -283,9 +288,8 @@ Use el siguiente procedimiento para modificar las propiedades de un plan de mant
     -   Especifique si desea permitir que los clientes descarguen después de la fecha límite de instalación cuando utilizan una conexión a Internet de uso medido. En ocasiones, los proveedores de acceso a Internet cobran según la cantidad de datos que envía y recibe cuando se utiliza una conexión a Internet de uso medido.   
 
     **Alertas**: en la pestaña Alertas, configure cómo generarán Configuration Manager y System Center Operations Manager las alertas para esta implementación. Sólo se pueden configurar alertas si **Tipo de implementación** está establecido en **Requerido** en la página Configuración de implementación.  
+    - Puede revisar las alertas de las actualizaciones de software recientes en el área de trabajo **Biblioteca de software** del nodo **Actualizaciones de software** .  
 
-    > [!NOTE]  
-    >  Puede revisar las alertas de las actualizaciones de software recientes en el área de trabajo **Biblioteca de software** del nodo **Actualizaciones de software** .  
+## <a name="next-steps"></a>Pasos siguientes
 
-**Para más información:** <br/>
-[Aspectos básicos de Configuration Manager como servicio y de Windows como servicio](/sccm/core/understand/configuration-manager-and-windows-as-service)
+Para más información, vea [Aspectos básicos de Configuration Manager como servicio y de Windows como servicio](/sccm/core/understand/configuration-manager-and-windows-as-service).

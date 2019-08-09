@@ -5,18 +5,18 @@ description: Revisión de la información de los clientes de Office 365 en el p
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/10/2019
+ms.date: 07/26/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 69f234a2-b04b-445a-b81f-6b4acfc00eaf
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aff55aee5b2eaa584a6161452b4a232fab07412a
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: cf18203d4b6d4c8858e3547671b7bf63a2250db7
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802179"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68537288"
 ---
 # <a name="office-365-client-management-dashboard"></a>Panel de administración de clientes de Office 365
 
@@ -75,6 +75,34 @@ De manera predeterminada, el agente de detección busca en la lista de archivos 
 - Formatos de Office más antiguos que no indican si hay contenido de macro, como un libro de Excel 97-2003 (.xls).
 
 Si necesita una evaluación más detallada, implemente **Office Readiness Toolkit**. Esta herramienta analiza el código de un archivo de macro. Comprueba si hay cualquier posible problema de compatibilidad. Por ejemplo, que un archivo use una función que pueda cambiar en una versión más reciente de Office. Después de ejecutar Office Readiness Toolkit, Configuration Manager podrá usar los resultados obtenidos. Estos datos adicionales permiten mejorar el cálculo de la preparación del dispositivo. Para obtener más información, vea [Usar Readiness Toolkit para evaluar la compatibilidad de aplicaciones de Office 365 ProPlus](http://aka.ms/readinesstoolkit).
+
+## <a name="office-365-proplus-upgrade-readiness-dashboard"></a>Panel de Upgrade Readiness para Office 365 ProPlus
+
+*(Se introdujo en la versión 1906)*
+
+<!--4021125-->
+Para ayudarle a determinar qué dispositivos están listos para actualizar a Office 365 ProPlus, hay un panel de preparación a partir de la versión 1906. Incluye el icono de **Upgrade Readiness para Office 365 ProPlus** que se publicó en la versión 1902 de la rama actual de Configuration Manager. Los siguientes iconos nuevos de este panel le ayudan a evaluar la preparación de las macros y los complementos de Office:
+
+- Implementación
+- Preparación del dispositivo
+- Preparación de complementos
+- Instrucciones de compatibilidad de complementos
+- Complementos principales por número de versión
+- Número de dispositivos que tienen macros
+- Preparación de las macros
+- Avisos de macros
+
+### <a name="using-the-office-365-proplus-upgrade-readiness-dashboard"></a>Uso del panel de Upgrade Readiness para Office 365 ProPlus
+ 
+1. En la consola de Configuration Manager, vaya al área de trabajo **Biblioteca de software** y expanda **Administración de clientes de Office 365**.
+1. Seleccione el nodo **Office 365 ProPlus upgrade Readiness** .
+1. Cambie la arquitectura de **Office** de **colección** y destino para cambiar la información retransmitida en el panel.
+
+![Panel de Upgrade Readiness para Office 365 ProPlus](./media/4021125-office-365-upgrade-readiness-dashboard.png)
+
+![Panel de Upgrade Readiness para Office 365 ProPlus](./media/4021125-office-365-to-add-ins.png)
+
+![Panel de Upgrade Readiness para Office 365 ProPlus](./media/4021125-office-365-macro-advisories.png)
 
 ## <a name="next-steps"></a>Pasos siguientes
 

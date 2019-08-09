@@ -5,18 +5,18 @@ description: Es imprescindible planear la infraestructura de punto de actualizac
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 06/19/2019
+ms.date: 07/31/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ce5a80b99149d31282036b33b97b57294ab38663
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: fc5c4fd7627aaa95f53a8a67ef983fda862a2526
+ms.sourcegitcommit: 8c296886e79e20b971842458f6e88761e5df30be
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340460"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68684695"
 ---
 # <a name="plan-for-software-updates-in-configuration-manager"></a>Planear actualizaciones de software en Configuration Manager
 
@@ -44,7 +44,7 @@ Utilice las siguientes recomendaciones como una línea de base. Esta línea de b
 
 El número de clientes admitidos depende de la versión de Windows Server Update Services (WSUS) que se ejecuta en el punto de actualización de software. También depende de si el rol de sistema de sitio del punto de actualización de software coexiste con otro rol de sistema de sitio:  
 
--   El punto de actualización de software puede admitir hasta 25 000 clientes cuando WSUS se ejecuta en el servidor del punto de actualización de software y este punto coexiste con otro rol de sistema de sitio.  
+-   El punto de actualización de software puede admitir hasta 25 000 clientes cuando WSUS se ejecuta en el servidor del punto de actualización de software y este punto coexiste con otro rol de sistema de sitio.  
 
 -   El punto de actualización de software puede admitir hasta 150 000 clientes cuando un servidor remoto cumple los requisitos de WSUS, WSUS se utiliza con Configuration Manager y configura las siguientes opciones:
 
@@ -64,6 +64,9 @@ Limite el número de actualizaciones de software a 1000 por cada implementación
 
 Limite también el número de actualizaciones de software a 1000 en una línea base de configuración. Para obtener más información, consulte [Crear una línea base de configuración](/sccm/compliance/deploy-use/create-configuration-baselines).
 
+#### <a name="limit-of-580-security-scopes-for-automatic-deployment-rules"></a>Límite de 580 ámbitos de seguridad para las reglas de implementación automática
+<!--ado 4962928-->
+Limite el número de ámbitos de seguridad en reglas de implementación automática (ADR) a menos de 580. Al crear una ADR, se agregan automáticamente los ámbitos de seguridad que tienen acceso a ella. Si hay más de 580 ámbitos de seguridad establecidos, el ADR no podrá ejecutarse y se registrará un error en RuleEngine. log.
 
 
 ##  <a name="BKMK_SUPInfrastructure"></a> Determinar la infraestructura del punto de actualización de software  
@@ -332,6 +335,7 @@ Esta sección incluye los subtemas siguientes:
 - [Productos](#BKMK_UpdateProducts)
 - [Reglas de sustitución](#BKMK_SupersedenceRules)
 - [Idiomas](#BKMK_UpdateLanguages)  
+- [Duración máxima de la ejecución](#bkmk_maxruntime)
 
 
 La sincronización de las actualizaciones de software de Configuration Manager descargan los metadatos de las actualizaciones de software en función de los criterios que se configuren. El sitio de nivel superior de la jerarquía sincroniza las actualizaciones de software desde Microsoft Update. Tiene la opción de configurar el punto de actualización de software en el sitio de nivel superior para la sincronización con un servidor WSUS existente, no en la jerarquía de Configuration Manager. Los sitios primarios secundarios sincronizan los metadatos de las actualizaciones de software desde el punto de actualización de software del sitio de administración central. Antes de instalar y configurar un punto de actualización de software, utilice esta sección para planear la configuración de sincronización.  
@@ -437,6 +441,8 @@ Configure los idiomas para la opción **Archivo de actualización de software** 
 
 Configure la opción de idioma del archivo de configuración de software con los idiomas que se utilizan con más frecuencia en el entorno. Por ejemplo, los clientes de su sitio usan principalmente inglés y japonés para Windows o aplicaciones. Hay algunos idiomas adicionales que se usan en el sitio. Seleccione solo inglés y japonés en la columna **Archivo de actualización de software** al descargar o implementar la actualización de software. Esta acción le permite utilizar la configuración predeterminada en la página **Selección de idioma** de los asistentes de implementación y descarga. Esta acción también impide la descarga de archivos de actualización no necesarios. Configure esta opción en cada punto de actualización de software de la jerarquía de Configuration Manager.  
 
+
+
 #### <a name="summary-details"></a>Detalles de resumen  
 Durante el proceso de sincronización, se actualiza la información de detalles de resumen (metadatos de las actualizaciones de software) para buscar actualizaciones de software en los idiomas especificados. Los metadatos proporcionan información sobre la actualización de software, por ejemplo:
 - Nombre
@@ -450,9 +456,35 @@ Durante el proceso de sincronización, se actualiza la información de detalles 
 Configure las opciones de los detalles de resumen solo en el sitio de nivel superior. Los detalles de resumen no se configuran en el punto de actualización de software en los sitios secundarios porque los metadatos de actualizaciones de software se replican desde el sitio de administración central mediante una replicación basada en archivos. Al seleccionar los idiomas de los detalles de resumen, seleccione solo los idiomas que necesita en el entorno. Cuantos más idiomas seleccione, más tiempo tomará sincronizar los metadatos de las actualizaciones de software. Configuration Manager muestra los metadatos de las actualizaciones de software en la configuración regional del sistema operativo en el que se ejecuta la consola de Configuration Manager. Si las propiedades localizadas de las actualizaciones de software no están disponibles en la configuración regional de este sistema operativo, la información de las actualizaciones de software se muestra en inglés.  
 
 > [!IMPORTANT]  
->  Seleccione todos los idiomas de los detalles de resumen que necesita. Cuando el punto de actualización de software del sitio de nivel superior se sincroniza con el origen de la sincronización, los idiomas de los detalles de resumen seleccionados determinan los metadatos de las actualizaciones de software que recupera. Si modifica los idiomas de los detalles de resumen después de que la sincronización se haya ejecutado al menos una vez, recupera los metadatos de las actualizaciones de software para los idiomas de los detalles de resumen modificados solo para las actualizaciones de software nuevas o actualizadas. Las actualizaciones de software ya sincronizadas no se actualizan con los nuevos metadatos en los idiomas modificados, salvo que se produzca un cambio en la actualización de software en el origen de la sincronización.  
+>  Seleccione todos los idiomas de los detalles de resumen que necesita. Cuando el punto de actualización de software del sitio de nivel superior se sincroniza con el origen de la sincronización, los idiomas de los detalles de resumen seleccionados determinan los metadatos de las actualizaciones de software que recupera. Si modifica los idiomas de los detalles de resumen después de que la sincronización se haya ejecutado al menos una vez, recupera los metadatos de las actualizaciones de software para los idiomas de los detalles de resumen modificados solo para las actualizaciones de software nuevas o actualizadas. Las actualizaciones de software ya sincronizadas no se actualizan con los nuevos metadatos en los idiomas modificados, salvo que se produzca un cambio en la actualización de software en el origen de la sincronización.
 
 
+###  <a name="bkmk_maxruntime"></a> Duración máxima de la ejecución
+<!--3734426-->
+*(Se introdujo en la versión 1906)*
+
+A partir de la versión 1906, puede especificar la cantidad máxima de tiempo de la que dispone una instalación de actualización de software. Puede especificar el tiempo de ejecución máximo para lo siguiente:
+
+- **Duración máxima de la ejecución para actualizaciones de características de Windows (minutos)**
+  - **Actualizaciones de características**: una actualización de una de estas tres clasificaciones:
+    - Actualizaciones
+    - Paquetes acumulativos de revisiones
+    - Service Packs
+
+- **Tiempo de ejecución máximo para actualizaciones de Office 365 y actualizaciones que no son de características para Windows (minutos)**
+  - **Actualizaciones que no son de características**: una actualización que no es una actualización de características y cuyo producto aparece como uno de los siguientes:
+    - Windows 10 (todas las versiones)
+    - Windows Server 2012
+    - Windows Server 2012 R2
+    - Windows Server 2016
+    - Windows Server 2019
+    - Office 365
+
+- Esta configuración solo cambia la duración máxima de la ejecución para las actualizaciones nuevas que se sincronizan desde Microsoft Update. No cambia la duración de la ejecución de actualizaciones de características o que no son características existentes.
+- Todos los demás productos y clasificaciones no se pueden configurar con esta opción. Si tiene que cambiar el tiempo de ejecución máximo de una de estas actualizaciones, [configure las opciones de actualización de software](/sccm/sum/get-started/manage-settings-for-software-updates#BKMK_SoftwareUpdatesSettings).
+
+> [!NOTE]
+> En la versión 1906, el tiempo de ejecución máximo no está disponible cuando se instala el punto de actualización de software de nivel superior. Después de la instalación, edite el tiempo de ejecución máximo en el punto de actualización de software de nivel superior.
 
 ##  <a name="BKMK_MaintenanceWindow"></a> Planear una ventana de mantenimiento de actualizaciones de software  
 

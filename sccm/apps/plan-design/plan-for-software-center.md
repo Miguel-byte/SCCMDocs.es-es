@@ -2,7 +2,7 @@
 title: Planeamiento del centro de software
 titleSuffix: Configuration Manager
 description: Decida cómo quiere configurar y personalizar la marca del Centro de software para que los usuarios interactúen con Configuration Manager.
-ms.date: 05/01/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -11,25 +11,33 @@ ms.assetid: c6826794-aa19-469d-ae47-1a0db68a1ff1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 50683b43cff113f7cd77efb5d8798fd24b53f90a
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
-ms.translationtype: MTE75
+ms.openlocfilehash: 2384fb0584fde331cf8667822c81de51eb60cbf0
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65106524"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68534970"
 ---
 # <a name="plan-for-software-center"></a>Planeamiento del centro de software
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Los usuarios cambian la configuración y buscan e instalan aplicaciones desde el Centro de software. Cuando se instala el cliente de Configuration Manager en un dispositivo de Windows, se instala automáticamente también el Centro de software. El nuevo Centro de software tiene un aspecto moderno. Las aplicaciones que solo se hubiesen mostrado en el catálogo de aplicaciones que depende de Silverlight (aplicaciones disponibles para el usuario) ahora se muestran en la pestaña **Aplicaciones** del Centro de software.
+Los usuarios cambian la configuración y buscan e instalan aplicaciones desde el Centro de software. Cuando se instala el cliente de Configuration Manager en un dispositivo de Windows, se instala automáticamente también el Centro de software.
 
 Para obtener más información sobre otras características del Centro de software, consulte el [Manual del usuario del Centro de software](/sccm/core/understand/software-center).  
 
-
 ## <a name="bkmk_userex"></a> Configurar el Centro de software  
 
+Actualice los sitios y clientes de Configuration Manager a la versión 1906 o posterior para beneficiarse de las mejoras más recientes.
+
 Revise las mejoras generales en el Centro de software:
+
+> [!Important]  
+> Estas mejoras iterativas del Centro de software y el punto de administración son para retirar los roles de catálogo de aplicaciones.
+>
+> - La experiencia del usuario de Silverlight no se admite a partir de la versión 1806 de la rama actual.
+> - A partir de la versión 1906, los clientes actualizados usan automáticamente el punto de administración para las implementaciones de aplicaciones disponibles para el usuario. Tampoco se pueden instalar nuevos roles del catálogo de aplicaciones.
+> - En la primera versión de la rama actual después del 31 de octubre de 2019, finalizará el soporte técnico para los roles de catálogo de aplicaciones.  
 
 ### <a name="starting-in-version-1802"></a>A partir de la versión 1802
 
@@ -47,6 +55,24 @@ Revise las mejoras generales en el Centro de software:
     > Si está usando actualmente el catálogo de aplicaciones, y actualiza Configuration Manager a la versión 1806, este sigue funcionando. Los roles de punto de sitios web y punto de servicio web del catálogo de aplicaciones ya no son *necesarios*, aunque todavía son *compatibles*. La **experiencia de usuario de Silverlight** del *punto de sitios web* del catálogo de aplicaciones ya no se admite. Para más información, consulte [Características en desuso y eliminadas](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).
     >
     > Comience a planear la retirada de los roles del catálogo de aplicaciones de su infraestructura en el futuro. Aproveche las mejoras del Centro de software para usar el punto de administración y simplificar su entorno de Configuration Manager.  
+
+### <a name="starting-in-version-1902"></a>A partir de la versión 1902
+
+- Configure la afinidad entre usuario y dispositivo. Para obtener más información, vea [Vincular usuarios y dispositivos con la afinidad entre usuario y dispositivo](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).
+
+### <a name="starting-in-version-1906"></a>A partir de la versión 1906
+
+- El Centro de software ahora se comunica con un punto de administración para las aplicaciones destinadas a los usuarios, si existen. Ya no usa el catálogo de aplicaciones. Este cambio facilita la eliminación del catálogo de aplicaciones del sitio.
+
+- Anteriormente, el Centro de software elegía el primero punto de administración de la lista de servidores disponibles. A partir de esta versión, usa el mismo punto de administración que el cliente. Este cambio permite al Centro de software usar el mismo punto de administración del sitio primario asignado que el cliente.
+
+- El punto de administración tiene puntos de conexión del centro de software para admitir estas nuevas características. Ahora comprueba el estado de estos puntos de conexión cada cinco minutos. Notifica los problemas a través de mensajes de estado para el componente de sitio SMS_MP_CONTROL_MANAGER.
+
+- No se pueden agregar nuevos roles del catálogo de aplicaciones al sitio. Los roles existentes continúan funcionando. Solo los clientes existentes usan el catálogo de aplicaciones para las implementaciones disponibles para el usuario. Los clientes actualizados usan automáticamente el punto de administración para todas las implementaciones.
+
+- Puede Agregar hasta 5 pestañas personalizadas al centro de software. Para obtener más información, vea [Acerca de la configuración de cliente](/sccm/core/clients/deploy/about-client-settings#software-center). <!--4063773-->
+
+### <a name="summary-of-infrastructure-requirements-per-version"></a>Resumen de los requisitos de infraestructura por versión
 
 Use la siguiente tabla para ayudar a comprender los requisitos para el Centro de software según la versión específica de Configuration Manager:
 
@@ -109,24 +135,6 @@ En la ventana de diálogo siguiente:
 
 Cambie la apariencia del Centro de software para cumplir con los requisitos de marca de su organización. Esta configuración ayuda a que los usuarios confíen en el Centro de software.
 
-Configuration Manager aplica la personalización de marca para el Centro de Software según las prioridades siguientes:  
-
-- Si no ha instalado el catálogo de aplicaciones (recomendado):  
-
-    1. Configuración de cliente del **Centro de software**. Para más información, vea [Acerca de la configuración de cliente](/sccm/core/clients/deploy/about-client-settings#software-center).  
-
-    2. Configuración de cliente del **Nombre de la organización** en el grupo **Agente de equipo**. Para más información, vea [Acerca de la configuración de cliente](/sccm/core/clients/deploy/about-client-settings#computer-agent).  
-
-- Si ha instalado el catálogo de aplicaciones:  
-
-    1. Configuración de cliente del **Centro de software**. Para más información, vea [Acerca de la configuración de cliente](/sccm/core/clients/deploy/about-client-settings#software-center).  
-
-    2. Si conecta una suscripción de Microsoft Intune a Configuration Manager, el Centro de software muestra el *nombre de la organización*, el *color* y el *logotipo de la empresa* que especifique en las propiedades de la suscripción de Intune. Para más información, vea [Configuring the Microsoft Intune subscription (Configuración de la suscripción de Microsoft Intune)](/sccm/mdm/deploy-use/configure-intune-subscription).  
-
-    3. El *nombre de organización* y el *color* que especifique en las propiedades de punto de sitios web del catálogo de aplicaciones. Para más información, vea [Configuration options for Application Catalog website point (Opciones de configuración del punto de sitios web del catálogo de aplicaciones)](/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#BKMK_ApplicationCatalog_Website).  
-
-    4. Configuración de cliente del **Nombre de la organización** en el grupo **Agente de equipo**. Para más información, vea [Acerca de la configuración de cliente](/sccm/core/clients/deploy/about-client-settings#computer-agent).  
-
 ### <a name="configure-software-center-branding"></a>Configuración de la marca del Centro de software
 
 <!-- 1351224 -->
@@ -136,6 +144,32 @@ Vea los siguientes artículos para más información:
 
 - Grupo de configuración de cliente del [Centro de software](/sccm/core/clients/deploy/about-client-settings#software-center).  
 - [Cómo establecer la configuración del cliente](/sccm/core/clients/deploy/configure-client-settings)  
+
+### <a name="branding-priorities"></a>Prioridades de personalización de marca
+
+Configuration Manager aplica la personalización de marca para el Centro de Software según las prioridades siguientes:  
+
+1. Configuración de cliente del **Centro de software**. Para más información, vea [Acerca de la configuración de cliente](/sccm/core/clients/deploy/about-client-settings#software-center).  
+
+2. Configuración de cliente del **Nombre de la organización** en el grupo **Agente de equipo**. Para más información, vea [Acerca de la configuración de cliente](/sccm/core/clients/deploy/about-client-settings#computer-agent).  
+
+#### <a name="application-catalog-branding-priorities"></a>Prioridades de personalización de marca del catálogo de aplicaciones
+
+> [!Important]
+> La experiencia de usuario de Silverlight del catálogo de aplicaciones no se admite a partir de la versión de la rama actual 1806. A partir de la versión 1906, los clientes actualizados usan automáticamente el punto de administración para las implementaciones de aplicaciones disponibles para el usuario. Tampoco se pueden instalar nuevos roles del catálogo de aplicaciones. En la primera versión de la rama actual después del 31 de octubre de 2019, finalizará el soporte técnico para los roles de catálogo de aplicaciones.  
+
+Si utiliza el catálogo de aplicaciones, la personalización de marca sigue estas prioridades:  
+
+1. Configuración de cliente del **Centro de software**. Para más información, vea [Acerca de la configuración de cliente](/sccm/core/clients/deploy/about-client-settings#software-center).  
+
+2. Si conecta una suscripción de Microsoft Intune a Configuration Manager, el Centro de software muestra el *nombre de la organización*, el *color* y el *logotipo de la empresa* que especifique en las propiedades de la suscripción de Intune. Para más información, vea [Configuring the Microsoft Intune subscription (Configuración de la suscripción de Microsoft Intune)](/sccm/mdm/deploy-use/configure-intune-subscription).  
+
+    > [!Important]
+    > La administración de dispositivos móviles es una [característica en desuso](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).
+
+3. El *nombre de organización* y el *color* que especifique en las propiedades de punto de sitios web del catálogo de aplicaciones. Para más información, vea [Punto de sitios web del catálogo de aplicaciones](/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#BKMK_ApplicationCatalog_Website).  
+
+4. Configuración de cliente del **Nombre de la organización** en el grupo **Agente de equipo**. Para más información, vea [Acerca de la configuración de cliente](/sccm/core/clients/deploy/about-client-settings#computer-agent).  
 
 
 ## <a name="see-also"></a>Consulte también
