@@ -5,18 +5,18 @@ description: Obtenga información sobre cómo administrar simultáneamente dispo
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/26/2019
+ms.date: 08/01/2019
 ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e0ae5c392acd03509f70c19f551731065bc4be2
-ms.sourcegitcommit: 23852dda81bb8496dd10c0a8ec4f740a8e15efc3
+ms.openlocfilehash: 3710cc7178020af1d03bfd02953e2a2f3ed64f26
+ms.sourcegitcommit: 16dd488c51b5cf01a7dd4204f7d40ee9ae0abe85
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64873277"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68743622"
 ---
 # <a name="what-is-co-management"></a>¿Qué es administración conjunta?
 
@@ -29,7 +29,9 @@ Cuando un dispositivo Windows 10 tiene el cliente de Configuration Manager y e
 
 También podemos realizar un piloto en una carga de trabajo con una req de dispositivos independiente. El piloto permite probar la funcionalidad de Intune con un subconjunto de dispositivos antes de cambiar a un grupo más grande.
 
-![Diagrama de información general de administración conjunta](media/co-management-overview.png)
+![Diagrama de información general de administración conjunta](media/co-management-overview.svg)
+
+[Ver el diagrama en tamaño completo](media/co-management-overview.svg)
 
 > [!Note]  
 > Al administrar simultáneamente dispositivos Windows 10 mediante Configuration Manager y Microsoft Intune, esta configuración se denomina *administración conjunta*. Al administrar dispositivos con Configuration Manager e inscribirse a un servicio de MDM de terceros, esta configuración se denomina *coexistencia*. Tener dos autoridades de administración para un único dispositivo puede ser complicado si no hay una orquestación correcta entre los dos. Con la administración conjunta, Configuration Manager e Intune equilibran las [cargas de trabajo](#workloads) para asegurarse de que no hay ningún conflicto. Esta interacción no existe con los servicios de terceros, por lo que hay limitaciones con las funcionalidades de administración de coexistencia. Para más información, vea [Coexistencia de MDM de terceros con Configuration Manager](/sccm/comanage/coexistence).

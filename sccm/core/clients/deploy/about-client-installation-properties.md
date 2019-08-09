@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: feef839af1f51c4cbb291f4ed5bc6336da6409b3
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: e5526afcf826c29ff5cf5d55f730092ce3031a0b
+ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286875"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68859805"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-system-center-configuration-manager"></a>Acerca de los parámetros y propiedades de instalación de cliente en System Center Configuration Manager
 
@@ -488,7 +488,7 @@ Ejemplo: `CCMSetup.exe DISABLECACHEOPT=TRUE`
 
 Especifica el punto de estado de reserva que recibe y procesa los mensajes de estado enviados por los equipos cliente de Configuration Manager.  
 
-Para más información sobre el punto de estado de reserva, vea [Determine if you need a fallback status point](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point) (Determinar si necesita un punto de estado de reserva).  
+Para más información sobre el punto de estado de reserva, vea [Determine if you need a fallback status point](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#fallback-status-point) (Determinar si necesita un punto de estado de reserva).  
 
 Ejemplo: `CCMSetup.exe FSP=SMSFP01`  
 
