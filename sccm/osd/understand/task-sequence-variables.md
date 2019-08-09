@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b92fad9054c50ea58caeb11e209cd04b6951493f
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
-ms.translationtype: HT
+ms.openlocfilehash: b78d8b6cd60f14843855d00ea44632b6feda3d90
+ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537117"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68859818"
 ---
 # <a name="task-sequence-variables"></a>Variables de la secuencia de tareas
 
@@ -1378,7 +1378,7 @@ A partir de la versión 1802, establezca esta variable en `true` y el motor de s
 Cuando se reinicia la secuencia de tareas, el valor de esta variable persiste. Pero la secuencia de tareas intenta enviar un mensaje de estado inicial. Este primer intento incluye varios reintentos. Si se realiza correctamente, la secuencia de tareas sigue enviando mensajes de estado independientemente del valor de esta variable. Si no se puede enviar el mensaje de estado, la secuencia de tareas usa el valor de esta variable.
 
 > [!NOTE]  
-> Los [informes de estado de la secuencia de tareas](/sccm/core/servers/manage/list-of-reports#task-sequence---deployment-status) se basan en estos mensajes de estado para mostrar el progreso, el historial y los detalles de cada paso.
+> Los [informes de estado de la secuencia de tareas](/sccm/core/servers/manage/list-of-reports#task-sequence---deployment-status) se basan en estos mensajes de estado para mostrar el progreso, el historial y los detalles de cada paso. Si no se envían mensajes de estado, no se ponen en cola. Cuando la conectividad se restaura en el punto de administración, no se envían en un momento posterior. Este comportamiento hace que los informes de estado de la secuencia de tareas sean incompletos y faltan elementos.
 
 ### <a name="SMSTSDisableWow64Redirection"></a> SMSTSDisableWow64Redirection
 

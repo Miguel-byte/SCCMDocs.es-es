@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a875c5deb30a94d91f7307f1044fc0eeea1f944a
-ms.sourcegitcommit: ef7800a294e5db5d751921c34f60296c1642fc1f
-ms.translationtype: HT
+ms.openlocfilehash: 0a650fd5517fb86108d230cc997c8586520826e7
+ms.sourcegitcommit: 16dd488c51b5cf01a7dd4204f7d40ee9ae0abe85
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68712374"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68743579"
 ---
 # <a name="approve-applications-in-configuration-manager"></a>Aprobar aplicaciones en Configuration Manager
 
@@ -62,7 +62,7 @@ A partir de 1906, puede ver qué implementaciones requieren aprobación. Selecci
 <!--4336307-->
 A partir de la versión 1906, puede volver a intentar la instalación de una aplicación que haya aprobado previamente para un usuario o dispositivo. La opción de aprobación es solo para las implementaciones disponibles. Si el usuario desinstala la aplicación, o si se produce un error en el proceso de instalación inicial, Configuration Manager no vuelve a evaluar su estado y reinstalarla. Esta característica permite que un técnico de soporte técnico intente volver a instalar la aplicación rápidamente para un usuario que llame para obtener ayuda.
 
-1. Abra el usuario de la consola de Configuration Manager un usuario que tenga el permiso **aprobar** en el objeto de aplicación. Por ejemplo, los roles integrados **Administrador de aplicaciones** o **Autor de aplicaciones** tienen este permiso.
+1. Abra la consola de Configuration Manager como un usuario que tenga el permiso **aprobar** en el objeto de aplicación. Por ejemplo, los roles integrados **Administrador de aplicaciones** o **Autor de aplicaciones** tienen este permiso.
 
 1. Implemente una aplicación que requiera aprobación y apruébela.
 

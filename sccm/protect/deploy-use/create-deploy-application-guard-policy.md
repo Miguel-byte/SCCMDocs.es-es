@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d3859b56b71b7818baaf6f63e068c0dec80bba44
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
-ms.translationtype: HT
+ms.openlocfilehash: a21ef053cbd5f0a57d7688d69f29bc6f8871484a
+ms.sourcegitcommit: b5c7496ca408803046acc8403858aafd5dca8808
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68533597"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794740"
 ---
 # <a name="create-and-deploy-windows-defender-application-guard-policy"></a>Creación e implementación de directivas de Protección de aplicaciones de Windows Defender
 
@@ -81,7 +81,7 @@ Configura el comportamiento de la aplicación dentro de la sesión de Protecció
 <!--3555858-->
 A partir de Configuration Manager versión 1906, hay una configuración de directiva que permite a los usuarios confiar en los archivos que normalmente se abren en la protección de aplicaciones. Tras completarse correctamente, los archivos se abrirán en el dispositivo de host en lugar de hacerlo en Protección de aplicaciones. Para más información sobre las directivas de Protección de aplicaciones, vea [Establecer la configuración de la directiva de Protección de aplicaciones de Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard).
 
-- **Permitir a los usuarios confiar en archivos que se abren en protección de aplicaciones de Windows Defender** : permite al usuario marcar archivos como de confianza. Cuando un archivo es de confianza, se abre en el host en lugar de en la protección de aplicaciones. Se aplica a los clientes de Windows 10 versión 1810 o posterior.
+- **Permitir a los usuarios confiar en archivos que se abren en protección de aplicaciones de Windows Defender** : permite al usuario marcar archivos como de confianza. Cuando un archivo es de confianza, se abre en el host en lugar de en la protección de aplicaciones. Se aplica a los clientes de Windows 10 versión 1809 o posterior.
   - **Prohibido**: no se permite que los usuarios marquen los archivos como de confianza (valor predeterminado).
   - **Archivo protegido por antivirus:** Permitir a los usuarios marcar archivos como de confianza después de una comprobación antivirus.
   - **Todos los archivos:** se permite que los usuarios marquen cualquier archivo como de confianza.
