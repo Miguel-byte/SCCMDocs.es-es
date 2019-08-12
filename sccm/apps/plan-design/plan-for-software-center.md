@@ -2,7 +2,7 @@
 title: Planeamiento del centro de software
 titleSuffix: Configuration Manager
 description: Decida cómo quiere configurar y personalizar la marca del Centro de software para que los usuarios interactúen con Configuration Manager.
-ms.date: 07/26/2019
+ms.date: 08/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.assetid: c6826794-aa19-469d-ae47-1a0db68a1ff1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2384fb0584fde331cf8667822c81de51eb60cbf0
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
-ms.translationtype: HT
+ms.openlocfilehash: 7fbd8f570fe0e6fad18b964220d5cb723e5fecad
+ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68534970"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68859861"
 ---
 # <a name="plan-for-software-center"></a>Planeamiento del centro de software
 
@@ -36,7 +36,7 @@ Revise las mejoras generales en el Centro de software:
 > Estas mejoras iterativas del Centro de software y el punto de administración son para retirar los roles de catálogo de aplicaciones.
 >
 > - La experiencia del usuario de Silverlight no se admite a partir de la versión 1806 de la rama actual.
-> - A partir de la versión 1906, los clientes actualizados usan automáticamente el punto de administración para las implementaciones de aplicaciones disponibles para el usuario. Tampoco se pueden instalar nuevos roles del catálogo de aplicaciones.
+> - A partir de la versión 1906, los clientes actualizados usan automáticamente el punto de administración para las implementaciones de aplicaciones disponibles para el usuario. Tampoco puede instalar nuevos roles del catálogo de aplicaciones.
 > - En la primera versión de la rama actual después del 31 de octubre de 2019, finalizará el soporte técnico para los roles de catálogo de aplicaciones.  
 
 ### <a name="starting-in-version-1802"></a>A partir de la versión 1802
@@ -130,6 +130,8 @@ En la ventana de diálogo siguiente:
 
 ![Ventana de diálogo con el reinicio del equipo](media/3555947-restart-dialog.png)
 
+> [!IMPORTANT]
+> En Configuration Manager 1902, en determinadas circunstancias, el cuadro de diálogo no reemplazará las notificaciones del sistema. Para resolver este problema, instale el [paquete acumulativo de actualizaciones para Configuration Manager versión 1902](https://support.microsoft.com/help/4500571/update-rollup-for-configuration-manager-current-branch-1902). <!--4404715-->
 
 ## <a name="branding-software-center"></a>Personalización de la marca del Centro de software
 
@@ -156,7 +158,7 @@ Configuration Manager aplica la personalización de marca para el Centro de Soft
 #### <a name="application-catalog-branding-priorities"></a>Prioridades de personalización de marca del catálogo de aplicaciones
 
 > [!Important]
-> La experiencia de usuario de Silverlight del catálogo de aplicaciones no se admite a partir de la versión de la rama actual 1806. A partir de la versión 1906, los clientes actualizados usan automáticamente el punto de administración para las implementaciones de aplicaciones disponibles para el usuario. Tampoco se pueden instalar nuevos roles del catálogo de aplicaciones. En la primera versión de la rama actual después del 31 de octubre de 2019, finalizará el soporte técnico para los roles de catálogo de aplicaciones.  
+> La experiencia del usuario de Silverlight del catálogo de aplicaciones no se admite a partir de la versión 1806 de la rama actual. A partir de la versión 1906, los clientes actualizados usan automáticamente el punto de administración para las implementaciones de aplicaciones disponibles para el usuario. Tampoco puede instalar nuevos roles del catálogo de aplicaciones. En la primera versión de la rama actual después del 31 de octubre de 2019, finalizará el soporte técnico para los roles de catálogo de aplicaciones.  
 
 Si utiliza el catálogo de aplicaciones, la personalización de marca sigue estas prioridades:  
 
