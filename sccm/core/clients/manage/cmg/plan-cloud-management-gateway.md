@@ -2,7 +2,7 @@
 title: Planear para Cloud Management Gateway
 titleSuffix: Configuration Manager
 description: Planee y diseñe Cloud Management Gateway (CMG) para simplificar la administración de clientes basados en Internet.
-ms.date: 06/19/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,19 +11,19 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9dadd289c0a275964273d27c5b9685c1fa7f08e6
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 43145e7f94fb381d1051ddb7de09367f4f69d556
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286781"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68535612"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Planificación de Cloud Management Gateway en Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
 <!--1101764-->
-Cloud Management Gateway (CMG) proporciona una manera sencilla de administrar clientes de Configuration Manager en Internet. Al implementar CMG como un servicio en la nube de Microsoft Azure, puede administrar los clientes tradicionales que se mueven por Internet sin una infraestructura adicional. Tampoco necesita exponer la infraestructura local a Internet.
+Cloud Management Gateway (CMG) proporciona una manera sencilla de administrar clientes de Configuration Manager en Internet. Al implementar CMG como un servicio en la nube de Microsoft Azure, puede administrar los clientes tradicionales que se mueven por Internet sin una infraestructura local adicional. Tampoco necesita exponer la infraestructura local a Internet.
 
 > [!Note]  
 > Configuration Manager no habilita esta característica opcional de forma predeterminada. Deberá habilitarla para poder usarla. Para obtener más información, consulte [Habilitar características opcionales de las actualizaciones](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
@@ -47,7 +47,7 @@ Hay varios escenarios en los que CMG resulta beneficioso. Los escenarios siguien
     - Estado de cliente y de inventario
     - Configuración de cumplimiento
     - Distribución de software para el dispositivo
-    - Secuencia de tareas de actualización local de Windows 10 (a partir de la versión 1802)
+    - Secuencia de tareas de actualización local de Windows 10
 
 - Administración de clientes tradicionales de Windows 10 con identidad moderna, tanto híbridos como unidos a un dominio en la nube pura con Azure Active Directory (Azure AD). Los clientes usan Azure AD para la autenticación, en lugar de certificados PKI. Azure AD es más fácil de instalar, configurar y mantener que los sistemas PKI más complejos. Las actividades de administración son las mismas que el primer escenario, a las que se agregan la siguiente:  
     - Distribución de software para el usuario  
@@ -171,14 +171,12 @@ Del mismo modo, cuando los clientes de París se mueven hacia Internet, se comun
 
 - Podrían ser necesarios **otros certificados**, según el modelo de autenticación y la versión del sistema operativo del cliente. Para obtener más información, vea [CMG certificates](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway) (Certificados de CMG).  
 
-    - En la versión 1802, debe configurar todos los [**puntos de administración compatibles con CMG para que usen HTTPS**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps).  
-
-    - A partir de la versión 1806, cuando se usa la opción del sitio **Usar los certificados generados por Configuration Manager para sistemas de sitios HTTP**, el punto de administración puede ser HTTP. Para obtener más información, vea [HTTP mejorado](/sccm/core/plan-design/hierarchy/enhanced-http).  
+    A partir de la versión 1806, cuando se usa la opción del sitio **Usar los certificados generados por Configuration Manager para sistemas de sitios HTTP**, el punto de administración puede ser HTTP. Para obtener más información, vea [HTTP mejorado](/sccm/core/plan-design/hierarchy/enhanced-http).
 
 - En la versión 1810 o anteriores de Configuration Manager, si se usa el método de implementación clásico de Azure, debe usar un [**certificado de automatización de Azure**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_azuremgmt).  
 
     > [!TIP]  
-    > A partir de la versión 1802 de Configuration Manager, use el modelo de implementación de **Azure Resource Manager**. No necesita este certificado de administración.
+    > Use el modelo de implementación de **Azure Resource Manager**. No necesita este certificado de administración.
     >
     > El método de implementación clásico está en desuso desde la versión 1810.  
 
@@ -195,7 +193,7 @@ Del mismo modo, cuando los clientes de París se mueven hacia Internet, se comun
 
 - Los puntos de actualización de software que usan un equilibrador de carga de red no funcionan con CMG. <!--505311-->  
 
-- A partir de la versión 1802, las implementaciones de CMG que usan Azure Resource Model no permiten la compatibilidad con proveedores de servicios en la nube (CSP) de Azure. La implementación de CMG con Azure Resource Manager sigue usando el servicio en la nube clásico, que no es compatible con los proveedores de servicios en la nube. Para obtener más información, vea [Servicios de Azure disponibles en el programa CSP](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services).  
+- Las implementaciones de CMG que usan el modelo de implementación de Azure no permiten la compatibilidad con proveedores de servicios en la nube (CSP) de Azure. La implementación de CMG con Azure Resource Manager sigue usando el servicio en la nube clásico, que no es compatible con los proveedores de servicios en la nube. Para obtener más información, vea [Servicios de Azure disponibles en el programa CSP](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services).  
 
 ### <a name="support-for-configuration-manager-features"></a>Compatibilidad con características de Configuration Manager
 
@@ -212,14 +210,13 @@ En la tabla siguiente se muestra la compatibilidad de CMG con características d
 | Instalación de cliente<br>(con integración de Azure AD)     | ![Compatible.](media/green_check.png) |
 | Distribución de software (dirigida al dispositivo)     | ![Compatible.](media/green_check.png) |
 | Distribución de software (dirigida al usuario, obligatorio)<br>(con integración de Azure AD)     | ![Compatible.](media/green_check.png) |
-| Distribución de software (dirigida al usuario, disponible)<br>([todos los requisitos](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)) | ![Compatible.](media/green_check.png)  (1802) |
-| Secuencia de tareas de actualización local de Windows 10      | ![Compatible.](media/green_check.png)  (1802) |
-| Secuencias de tareas que no usan imágenes de arranque y que se implementan con una opción: **Descargar todo el contenido localmente antes de iniciar la secuencia de tareas**      | ![Compatible.](media/green_check.png)  (1802) |
+| Distribución de software (dirigida al usuario, disponible)<br>([todos los requisitos](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)) | ![Compatible.](media/green_check.png) |
+| Secuencia de tareas de actualización local de Windows 10      | ![Compatible.](media/green_check.png) |
+| Secuencias de tareas que no usan imágenes de arranque y que se implementan con una opción: **Descargar todo el contenido localmente antes de iniciar la secuencia de tareas**      | ![Compatible.](media/green_check.png) |
 | CMPivot     | ![Compatible.](media/green_check.png)  (1806) |
 | Cualquier otro escenario de secuencia de tareas     | ![No compatible](media/Red_X.png) |
 | Inserción de cliente     | ![No compatible](media/Red_X.png) |
 | Asignación automática de sitio     | ![No compatible](media/Red_X.png) |
-| Catálogo de aplicaciones     | ![No compatible](media/Red_X.png) |
 | Solicitudes de aprobación de software     | ![No compatible](media/Red_X.png) |
 | Consola de Configuration Manager     | ![No compatible](media/Red_X.png) |
 | Herramientas remotas     | ![No compatible](media/Red_X.png) |
@@ -272,6 +269,8 @@ CMG usa los siguientes componentes de Azure, que conllevan cargos en la cuenta d
 
     > [!NOTE]  
     > Si realiza otras acciones, como implementar actualizaciones de software o aplicaciones, aumentará la cantidad de transferencia de datos de salida de Azure.
+
+- La configuración errónea de la opción CMG para **comprobar la revocación de certificado de cliente**  puede generar tráfico adicional desde los clientes a CMG. Este tráfico adicional puede aumentar los datos de salida de Azure, lo que podría aumentar los costos de Azure.<!-- SCCMDocs#1434 --> Para obtener más información, vea [Publicar la lista de revocación de certificados](https://docs.microsoft.com/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway#bkmk_crl).  
 
 ### <a name="content-storage"></a>Almacenamiento de contenido
 

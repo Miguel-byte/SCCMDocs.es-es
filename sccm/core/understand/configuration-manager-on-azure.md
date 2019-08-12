@@ -10,12 +10,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d8c713dd1de90eaf8705859f5a814e38da9435e6
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: cb185a009740b73a7836b94aca18f9748aa76fb5
+ms.sourcegitcommit: b59e57ab4cf9f03e8beeb70588f3b9f1a6021e36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340219"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68662619"
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Configuration Manager en Azure - Preguntas más frecuentes
 *Se aplica a: System Center Configuration Manager (Rama actual)*
@@ -132,7 +132,7 @@ El enfoque para la administración de contenido es en gran medida igual que para
 - Si usa un plan de datos según uso y el costo del ancho de banda constituye un problema o la conexión de red entre la intranet y Azure no es rápida o puede ser poco confiable, podría considerar otros enfoques. Estos incluyen colocar puntos de distribución estándar o de extracción en local y usar BranchCache. El empleo de puntos de distribución basados en la nube también es una opción, pero hay algunos límites con respecto a los tipos de contenido admitidos (por ejemplo, no se admiten paquetes de actualizaciones de software).
 
 > [!NOTE]
->  Si se necesita compatibilidad con PXE, debe usar puntos de distribución locales (estándar o de extracción) para responder a las solicitudes de inicio. [WDS no se admite de momento en las máquinas virtuales de Azure](https://technet.microsoft.com/library/hh831764(v=ws.11).aspx).
+>  Si se necesita compatibilidad con PXE o con la multidifusión, debe usar puntos de distribución locales (estándar o de extracción) para responder a las solicitudes de inicio.
 
 
 ### <a name="while-i-am-ok-with-the-limitations-of-cloud-based-distribution-points-i-dont-want-to-put-my-management-point-into-a-dmz-even-though-that-is-needed-to-support-my-internet-based-clients-do-i-have-any-other-options"></a>Aunque no tengo problemas con las limitaciones de los puntos de distribución basados en la nube, no quiero colocar mi punto de administración en una red perimetral, aunque sea necesario para admitir a mis clientes basados en Internet. ¿Tengo alguna otra opción?

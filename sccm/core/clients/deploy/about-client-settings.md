@@ -2,7 +2,7 @@
 title: Configuración de cliente
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la configuración predeterminada y personalizada para controlar los comportamientos del cliente.
-ms.date: 06/20/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d329f2d0125a168d776b2855b6fd35e7a223111
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: a7d43a2eea28073ef0193c454c4e1a10bc5f3763
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67677900"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68535184"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Información sobre la configuración de cliente en Configuration Manager
 
@@ -75,7 +75,10 @@ Si elige **Sí**, especifique lo siguiente:
 - **Tamaño máximo de caché (MB)**
 - **Tamaño de caché máximo (porcentaje de disco)** : El tamaño de la caché de cliente se expande hasta el tamaño máximo en megabytes (MB) o el porcentaje del disco, lo que sea inferior.
 
-### <a name="enable-configuration-manager-client-in-full-os-to-share-content"></a>Habilitar el cliente de Configuration Manager en el SO completo para compartir contenido
+### <a name="enable-as-peer-cache-source"></a>Habilitación como origen de caché del mismo nivel
+
+> [!Note]  
+> En la versión 1902 y versiones anteriores, esta configuración se denominaba **Habilitar el cliente de Configuration Manager en el SO completo para compartir contenido**. El comportamiento de la configuración no cambió.
 
 Habilita la [caché del mismo nivel](/sccm/core/plan-design/hierarchy/client-peer-cache) para los clientes de Configuration Manager. Seleccione **Sí** y, después, especifique el puerto con el que el cliente se comunica con el equipo del mismo nivel.
 
@@ -84,6 +87,16 @@ Habilita la [caché del mismo nivel](/sccm/core/plan-design/hierarchy/client-pee
 - **Puerto para descarga de contenido desde sistema del mismo nivel** (TCP 8003 de manera predeterminada): Configuration Manager configura automáticamente las reglas de Firewall de Windows para permitir este tráfico. Debe configurar los puertos manualmente si usa otro firewall.  
 
     Para más información, consulte [Puertos usados para las conexiones](/sccm/core/plan-design/hierarchy/ports#BKMK_PortsClient-ClientWakeUp).  
+
+### <a name="minimum-duration-before-cached-content-can-be-removed-minutes"></a>Duración mínima antes de que se pueda quitar contenido almacenado en caché (minutos)
+
+<!--4485509-->
+A partir de la versión 1906, especifique el tiempo mínimo durante el cual el cliente de Configuration Manager mantendrá el contenido almacenado en caché. Esta configuración de cliente controla cuánto tiempo almacena el cliente el contenido en la caché antes de eliminarlo.
+
+De forma predeterminada, este valor es de 1.440 minutos (24 horas).
+
+Esta opción proporciona mayor control sobre la caché de cliente en diferentes tipos de dispositivos. Puede reducir el valor en clientes que tienen unidades de disco duro pequeñas y no necesitan mantener el contenido existente antes de que se ejecute otra implementación.
+
 
 ## <a name="client-policy"></a>Directiva de cliente  
 
@@ -102,11 +115,15 @@ De forma predeterminada, este valor es de 60 minutos. La reducción de este valo
 
 Al establecer esta opción en **Sí**y usar la [detección de usuarios](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser), los clientes reciben las aplicaciones y programas destinados al usuario que ha iniciado sesión.  
 
-El catálogo de aplicaciones recibe la lista de software disponible para los usuarios desde el servidor de sitio. Por tanto, no es necesario establecer esta opción en **Sí** para que los usuarios puedan ver y solicitar aplicaciones del catálogo de aplicaciones. Si esta opción es **No**, los usuarios no podrán instalar las aplicaciones que vean en el catálogo de aplicaciones.  
-
-Además, si esta opción se establece en **No**, los usuarios no recibirán las aplicaciones necesarias que implemente para ellos. Los usuarios tampoco recibirán otras tareas de administración de directivas de usuario.  
+Si esta opción se establece en **No**, los usuarios no recibirán las aplicaciones necesarias que implemente para ellos. Los usuarios tampoco recibirán otras tareas de administración de directivas de usuario.  
 
 Esta configuración se aplica a los usuarios cuando sus equipos estén en la intranet o en Internet. Debe ser **Sí** si también quiere habilitar directivas de usuario en Internet.  
+
+> [!Note]  
+> A partir de la versión 1906, los clientes actualizados usan automáticamente el punto de administración para las implementaciones de aplicaciones disponibles para el usuario. No es posible instalar nuevos roles de catálogo de aplicaciones.
+>
+> Si sigue usando el catálogo de aplicaciones, este recibe la lista de software disponible para los usuarios desde el servidor de sitio. Por tanto, no es necesario establecer esta opción en **Sí** para que los usuarios puedan ver y solicitar aplicaciones del catálogo de aplicaciones. Si esta opción es **No**, los usuarios no podrán instalar las aplicaciones que vean en el catálogo de aplicaciones.  
+
 
 ### <a name="enable-user-policy-requests-from-internet-clients"></a>Habilitar solicitudes de directiva de usuario de clientes de Internet
 
@@ -118,7 +135,7 @@ Establezca esta opción en **Sí** para que los usuarios reciban la directiva de
 
 - El punto de administración basado en Internet autentica correctamente al usuario mediante la autenticación de Windows (Kerberos o NTLM). Para obtener más información, vea [Consideraciones sobre las comunicaciones de cliente desde Internet](/sccm/core/plan-design/hierarchy/communications-between-endpoints#BKMK_clientspan).  
 
-- A partir de la versión 1710, Cloud Management Gateway autentica correctamente al usuario mediante el uso de Azure Active Directory. Para obtener más información, vea cómo [implementar aplicaciones disponibles para el usuario en dispositivos unidos a Azure AD](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices).  
+- Cloud Management Gateway autentica correctamente al usuario mediante el uso de Azure Active Directory. Para obtener más información, vea cómo [implementar aplicaciones disponibles para el usuario en dispositivos unidos a Azure AD](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices).  
 
 Si esta opción se establece en **No** (o no se cumple alguno de los requisitos anteriores), un equipo conectado a Internet solo recibirá directivas de equipo. En este escenario, los usuarios sí podrán ver, solicitar e instalar aplicaciones desde un catálogo de aplicaciones basado en Internet. Si esta opción se establece en **No**, pero la opción **Habilitar directiva de usuario en clientes** se establece en **Sí**, los usuarios no recibirán las directivas de usuario hasta que el equipo se conecte a la intranet.  
 
@@ -171,30 +188,36 @@ Para obtener más información sobre las siguientes tres configuraciones, vea [N
 
 ### <a name="default-application-catalog-website-point"></a>Punto de sitios web del catálogo de aplicaciones predeterminado
 
-> [!Note]  
-> A partir de la versión 1806, el punto de sitios web del catálogo de aplicaciones ya no es *necesario* en la versión 1806, pero todavía es *compatible*. Para obtener más información, consulte [Configurar el centro de software](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).
+> [!Important]  
+> La experiencia del usuario de Silverlight del catálogo de aplicaciones no se admite a partir de la versión 1806 de la rama actual. A partir de la versión 1906, los clientes actualizados usan automáticamente el punto de administración para las implementaciones de aplicaciones disponibles para el usuario. Tampoco puede instalar nuevos roles de catálogo de aplicaciones. En la primera versión de la rama actual después del 31 de octubre de 2019, finalizará el soporte técnico para los roles de catálogo de aplicaciones.  
 >
-> La **experiencia de usuario de Silverlight** del punto de sitios web del catálogo de aplicaciones ya no se admite. Para más información, consulte [Características en desuso y eliminadas](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
+> Vea los siguientes artículos para más información:
+>
+> - [Configurar el Centro de software](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)
+> - [Características eliminadas y en desuso](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)  
 
 Configuration Manager utiliza este valor para conectar a los usuarios al catálogo de aplicaciones desde el Centro de software. Seleccione **Sitio web** para especificar un servidor que hospede el punto de sitios web del catálogo de aplicaciones. Escriba su nombre NetBIOS o FQDN, especifique la detección automática o una dirección URL para implementaciones personalizadas. En la mayoría de los casos, la detección automática es la mejor opción.
 
 ### <a name="add-default-application-catalog-website-to-internet-explorer-trusted-sites-zone"></a>Agregar sitio web predeterminado del catálogo de aplicaciones a una zona de sitios de confianza de Internet Explorer
 
-> [!Note]  
-> A partir de la versión 1806, el punto de sitios web del catálogo de aplicaciones ya no es *necesario* en la versión 1806, pero todavía es *compatible*. Para obtener más información, consulte [Configurar el centro de software](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).
+> [!Important]  
+> La experiencia del usuario de Silverlight del catálogo de aplicaciones no se admite a partir de la versión 1806 de la rama actual. A partir de la versión 1906, los clientes actualizados usan automáticamente el punto de administración para las implementaciones de aplicaciones disponibles para el usuario. Tampoco puede instalar nuevos roles de catálogo de aplicaciones. En la primera versión de la rama actual después del 31 de octubre de 2019, finalizará el soporte técnico para los roles de catálogo de aplicaciones.  
 >
-> La **experiencia de usuario de Silverlight** del punto de sitios web del catálogo de aplicaciones ya no se admite. Para más información, consulte [Características en desuso y eliminadas](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
+> Vea los siguientes artículos para más información:
+>
+> - [Configurar el Centro de software](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)
+> - [Características eliminadas y en desuso](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)  
 
-Si esta opción es **Sí**, el cliente agrega de forma automática la dirección URL del sitio web del catálogo de aplicaciones predeterminado actual a la zona de sitios de confianza de Internet Explorer.  
+Si esta opción es **Sí**, el cliente agrega de forma automática la dirección URL del sitio web del catálogo de aplicaciones predeterminado actual a la zona de sitios de confianza de Internet Explorer.  
 
-Este valor garantiza que no esté habilitada la configuración de Internet Explorer para el modo protegido. Si el modo protegido está habilitado, es posible que el cliente de Configuration Manager no pueda instalar aplicaciones desde el catálogo de aplicaciones. De forma predeterminada, la zona de sitios de confianza también admite el inicio de sesión de usuario para el catálogo de aplicaciones, lo que requiere la autenticación de Windows.  
+Este valor garantiza que no esté habilitada la configuración de Internet Explorer para el modo protegido. Si el modo protegido está habilitado, es posible que el cliente de Configuration Manager no pueda instalar aplicaciones desde el catálogo de aplicaciones. De manera predeterminada, la zona de sitios de confianza también admite el inicio de sesión de usuario para el catálogo de aplicaciones, lo que requiere la autenticación de Windows.  
 
 Si esta opción se mantiene como **No**, es posible que los clientes de Configuration Manager no puedan instalar aplicaciones desde el catálogo de aplicaciones. Un método alternativo consiste en configurar estas opciones de Internet Explorer en otra zona para la dirección URL del catálogo de aplicaciones que usan los clientes.  
 
 ### <a name="allow-silverlight-applications-to-run-in-elevated-trust-mode"></a>Permitir que las aplicaciones de Silverlight se ejecuten en modo de confianza elevado.
 
 > [!Important]  
-> A partir de la versión 1802 de Configuration Manager, el cliente no instala Silverlight de manera automática.
+> El cliente no instala Silverlight automáticamente.
 >
 > A partir de la versión 1806, la **experiencia de usuario de Silverlight** del punto de sitios web del catálogo de aplicaciones ya no se admite. Los usuarios deben utilizar el nuevo Centro de software. Para obtener más información, consulte [Configurar el centro de software](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).  
 
@@ -210,14 +233,9 @@ Escriba el nombre que ven los usuarios en el Centro de software. Esta informaci�
 
 ### <a name="use-new-software-center"></a>Usar el nuevo Centro de software
 
-A partir de Configuration Manager 1802, el valor predeterminado es **Sí**.
+El valor predeterminado es **Sí**.
 
-Si establece esta opción en **Sí**, todos los equipos cliente usarán el Centro de software. En el Centro de software se muestran aplicaciones disponibles para el usuario a las que antes solo se podía tener acceso desde el catálogo de aplicaciones. El catálogo de aplicaciones necesita Silverlight, lo que no es un requisito previo para el Centro de software.
-
-A partir de la versión 1806, los roles de punto de sitios web y punto de servicio web del catálogo de aplicaciones ya no son *necesarios*, aunque todavía son *compatibles*. Para obtener más información, consulte [Configurar el centro de software](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).
-
-> [!Note]  
-> La **experiencia de usuario de Silverlight** del punto de sitios web del catálogo de aplicaciones ya no se admite. Para más información, consulte [Características en desuso y eliminadas](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
+Cuando establece esta opción en **Sí**, todos los equipos cliente usan el Centro de software. El Centro de software muestra software, actualizaciones de software y secuencias de tareas que se implementan en usuarios o dispositivos.
 
 ### <a name="enable-communication-with-health-attestation-service"></a>Habilitar la comunicación con el servicio de atestación de estado
 
@@ -229,10 +247,7 @@ Establezca esta opción en **Sí** para que los dispositivos usen un servicio lo
 
 ### <a name="install-permissions"></a>Permisos de instalación
 
-> [!IMPORTANT]  
-> Esta configuración se aplica al catálogo de aplicaciones y al Centro de software. No tiene efecto cuando los usuarios utilizan el Portal de empresa.  
-
-Configure cómo pueden iniciar los usuarios la instalación de software, las actualizaciones de software y las secuencias de tareas:  
+Configure cómo los usuarios pueden instalar software, actualizaciones de software y secuencias de tareas:  
 
 - **Todos los usuarios**: usuarios con cualquier permiso excepto Invitado.  
 
@@ -240,7 +255,7 @@ Configure cómo pueden iniciar los usuarios la instalación de software, las act
 
 - **Solo administradores y usuarios primarios**: los usuarios deben ser miembros del grupo de administradores local o usuarios primarios del equipo.  
 
-- **Ningún usuario**: ningún usuario que haya iniciado sesión en un equipo cliente podrá iniciar la instalación de software, las actualizaciones de software y las secuencias de tareas. Las implementaciones necesarias para el equipo siempre se instalan en la fecha límite. Los usuarios no pueden iniciar la instalación de software desde el catálogo de aplicaciones o el Centro de software.  
+- **Ningún usuario**: ningún usuario que haya iniciado sesión en un equipo cliente podrá instalar software, actualizaciones de software y secuencias de tareas. Las implementaciones necesarias para el equipo siempre se instalan en la fecha límite. Los usuarios no pueden instalar software desde el Centro de software.  
 
 ### <a name="suspend-bitlocker-pin-entry-on-restart"></a>Suspender indicación de PIN de BitLocker en el reinicio
 
@@ -259,7 +274,7 @@ Habilite esta opción solo si se cumple alguna de las siguientes condiciones:
 - Utilice el kit de desarrollo de software (SDK) de Configuration Manager para administrar las notificaciones de agente de cliente y la instalación de aplicaciones y actualizaciones de software.  
 
 > [!WARNING]  
-> Si selecciona esta opción y no se cumple ninguna de estas condiciones, el cliente no instalará las actualizaciones de software y las aplicaciones necesarias. Esta configuración no impide que los usuarios instalen aplicaciones desde el catálogo de aplicaciones, ni que se instalen paquetes, programas y secuencias de tareas.  
+> Si selecciona esta opción y no se cumple ninguna de estas condiciones, el cliente no instalará las actualizaciones de software y las aplicaciones necesarias. Esta configuración no impide que los usuarios instalen software disponible desde el Centro de software, incluidas aplicaciones, paquetes y secuencias de tareas.  
 
 ### <a name="powershell-execution-policy"></a>Directiva de ejecución de PowerShell
 
@@ -306,7 +321,13 @@ Las opciones siguientes deben tener menos duración que la ventana de mantenimie
 - **Mostrar una notificación temporal al usuario que indique el intervalo antes de que el usuario se desconecte o el equipo se inicie (minutos)**
 - **Mostrar un cuadro de diálogo que el usuario no pueda cerrar, que muestre el intervalo de recuento antes de que el usuario se desconecte o el equipo se reinicie (minutos)**
 
+
 Para obtener más información sobre las ventanas de mantenimiento, consulte [Cómo utilizar las ventanas de mantenimiento](/sccm/core/clients/manage/collections/use-maintenance-windows).
+
+- **Especifique la duración de repetición para las notificaciones de cuenta regresiva de reinicio de equipo (horas)** (A partir de la versión 1906).<!--3976435-->
+  - El valor predeterminado es 4 horas.
+  - El valor de duración de repetición debe ser menor que el valor de notificación temporal menos el valor para la notificación que el usuario no puede descartar.
+  - Para más información, consulte [Notificaciones de reinicio del dispositivo](/sccm/core/clients/deploy/device-restart-notifications).
 
 **Cuando una implementación requiere reiniciar, mostrar al usuario una ventana de diálogo en lugar de una notificación del sistema**<!--3555947-->: A partir de la versión 1902, al configurar este valor en **Sí**, la experiencia del usuario pasa a ser más intrusiva. Esta configuración se aplica a todas las implementaciones de aplicaciones, secuencias de tareas y actualizaciones de software. Para más información, consulte [Planeamiento del centro de software](/sccm/apps/plan-design/plan-for-software-center#bkmk_impact).
 
@@ -315,7 +336,7 @@ Para obtener más información sobre las ventanas de mantenimiento, consulte [C�
 ## <a name="delivery-optimization"></a>Optimización de entrega
 
 <!-- 1324696 -->
-Los grupos de límites de Configuration Manager se usan para definir y regular la distribución de contenido a través de la red corporativa y en las oficinas remotas. La [optimización de distribución de Windows](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) es una tecnología entre iguales basada en la nube para compartir contenido entre los dispositivos de Windows 10. A partir de la versión 1802, configure la optimización de entrega para usar los grupos de límites al compartir contenido entre iguales.
+Los grupos de límites de Configuration Manager se usan para definir y regular la distribución de contenido a través de la red corporativa y en las oficinas remotas. La [optimización de distribución de Windows](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) es una tecnología entre iguales basada en la nube para compartir contenido entre los dispositivos de Windows 10. Configure la optimización de entrega para usar los grupos de límites al compartir contenido entre iguales.
 
 > [!Note]
 > La optimización de distribución solo está disponible en clientes de Windows 10
@@ -324,6 +345,10 @@ Los grupos de límites de Configuration Manager se usan para definir y regular l
 
 Seleccione **Sí** para aplicar el identificador del grupo de límites como identificador del grupo de optimización de entrega en el cliente. Cuando el cliente se comunica con el servicio en la nube de optimización de distribución, utiliza este identificador para buscar elementos del mismo nivel con el contenido deseado.
 
+### <a name="enable-devices-managed-by-configuration-manager-to-use-delivery-optimization-in-network-cache-servers-beta-for-content-download"></a>Permita que los dispositivos administrados por Configuration Manager usen servidores de caché en la red de optimización de distribución (Beta) para la descarga de contenido.
+
+<!--3555764-->
+Elija **Sí** para permitir que los clientes descarguen contenido de un punto de distribución local que se habilita como servidor de caché en la red de optimización de entrega (DOINC). Para más información, consulte el artículo sobre la [caché en la red de optimización de entrega en Configuration Manager](/sccm/core/plan-design/hierarchy/delivery-optimization-in-network-cache).
 
 
 ## <a name="endpoint-protection"></a>Endpoint Protection
@@ -335,11 +360,11 @@ Seleccione **Sí** para aplicar el identificador del grupo de límites como iden
 
 Seleccione **Sí** si quiere administrar los clientes existentes de Endpoint Protection y Windows Defender en los equipos de la jerarquía.  
 
-Seleccione esta opción si ya ha instalado el cliente de Endpoint Protection y quiere administrarlo con Configuration Manager. En esta instalación independiente se incluye un proceso incluido en script en el que se usa una aplicación o un paquete de Configuration Manager y un programa. A partir de la versión 1802 de Configuration Manager, no es necesario que los dispositivos con Windows 10 tengan instalado el agente de Endpoint Protection. Aun así, seguirá siendo necesario habilitar la **administración del cliente de Endpoint Protection en equipos cliente** para estos dispositivos. <!--503654-->
+Seleccione esta opción si ya ha instalado el cliente de Endpoint Protection y quiere administrarlo con Configuration Manager. En esta instalación independiente se incluye un proceso incluido en script en el que se usa una aplicación o un paquete de Configuration Manager y un programa. No es necesario que los dispositivos Windows 10 tengan instalado el agente de Endpoint Protection. Aun así, seguirá siendo necesario habilitar la **administración del cliente de Endpoint Protection en equipos cliente** para estos dispositivos. <!--503654-->
 
 ### <a name="install-endpoint-protection-client-on-client-computers"></a>Instalar cliente de Endpoint Protection en equipos cliente
 
-Seleccione **Sí** para instalar y habilitar el cliente de Endpoint Protection en los equipos cliente donde aún no se ejecute. A partir de la versión 1802 de Configuration Manager, no es necesario que los clientes de Windows 10 tengan instalado el agente de Endpoint Protection.  
+Seleccione **Sí** para instalar y habilitar el cliente de Endpoint Protection en los equipos cliente donde aún no se ejecute. No es necesario que los clientes Windows 10 tengan instalado el agente de Endpoint Protection.  
 
 > [!NOTE]  
 > Si el cliente de Endpoint Protection ya está instalado y se selecciona **No**, el cliente de Endpoint Protection no se desinstalará. Para desinstalar el cliente de Endpoint Protection, establezca la configuración de cliente **Administrar el cliente de Endpoint Protection en equipos cliente** en **No**. Después, implemente un paquete y un programa para desinstalar el cliente de Endpoint Protection.  
@@ -457,12 +482,12 @@ Elija una de las opciones siguientes para esta configuración:
 
     - Mensajes de estado del cliente para enviar al sitio  
 
-    - Solicitudes de instalación de software mediante el catálogo de aplicaciones  
+    - Solicitudes de instalación de software desde el Centro de software  
 
     - Implementaciones requeridas (una vez alcanzada la fecha límite de instalación)  
 
     > [!IMPORTANT]  
-    > El cliente siempre permite las instalaciones de software desde el Centro de software o el catálogo de aplicaciones, independientemente de la configuración de la conexión de Internet de uso medido.  
+    > El cliente siempre permite las instalaciones de software desde el Centro de software, independientemente de la configuración de la conexión de Internet de uso medido.  
 
     Si se alcanza el límite de transferencia de datos para la conexión a Internet de uso medido, el cliente ya no intentará comunicarse con los sitios de Configuration Manager.  
 
@@ -620,11 +645,11 @@ Establezca esta opción en **Sí** y, después, especifique las opciones siguien
 
 ### <a name="bkmk_HideUnapproved"></a> Ocultar aplicaciones no aprobadas en el Centro de software
 
-A partir de la versión 1802 de Configuration Manager, al habilitar esta opción, las aplicaciones disponibles para los usuarios que necesiten aprobación se ocultarán en el Centro de software.<!--1355146-->
+Cuando esta opción está habilitada, las aplicaciones disponibles para el usuario que requieren aprobación están ocultas en el Centro de software.<!--1355146-->
 
 ### <a name="bkmk_HideInstalled"></a> Ocultar aplicaciones instaladas en el Centro de software
 
-A partir de la versión 1802 de Configuration Manager, al habilitar esta opción, las aplicaciones instaladas ya no aparecerán en la pestaña Aplicaciones. Esta opción se establece como valor predeterminado al instalar o actualizar a Configuration Manager 1802. Las aplicaciones instaladas siguen estando disponibles para su revisión en la pestaña Estado de la instalación. <!--1357592-->
+Cuando esta opción está habilitada, las aplicaciones que ya están instaladas ya no se muestran en la pestaña Aplicaciones. Esta opción se establece como valor predeterminado al instalar o actualizar a Configuration Manager 1802. Las aplicaciones instaladas siguen estando disponibles para su revisión en la pestaña Estado de la instalación. <!--1357592-->
 
 ### <a name="bkmk_HideAppCat"></a> Ocultar el vínculo del catálogo de aplicaciones en el Centro de software
 
@@ -632,6 +657,28 @@ A partir de la versión 1806 de Configuration Manager, puede especificar la visi
 
 
 ### <a name="software-center-tab-visibility"></a>Visibilidad de las pestañas del Centro de software
+
+#### <a name="starting-in-version-1906"></a>A partir de la versión 1906
+<!--4063773-->
+
+Elija las pestañas que estarán visibles en el Centro de software. Use el botón **Agregar** para mover una pestaña a **Pestañas visibles**. Use el botón **Quitar** para moverla a la lista **Pestañas ocultas**. Ordene las pestañas con los botones **Subir** o **Bajar**. 
+
+Pestañas disponibles:
+- **Aplicaciones**
+- **Actualizaciones**
+- **Sistemas operativos**
+- **Estado de la instalación**
+- **Cumplimiento de dispositivos**
+- **Opciones**
+- Haga clic en el botón **Agregar pestaña** para agregar hasta 5 pestañas personalizadas.
+  - Especifique los valores para **Nombre de la pestaña** y **Dirección URL de contenido** para la pestaña personalizada.
+  - Haga clic en **Eliminar pestaña** para quitar una pestaña personalizada.  
+
+  >[!Important]  
+  > - Puede que algunas de las características de los sitios web no funcionen cuando se usen como una pestaña personalizada en el Centro de software. Asegúrese de probar los resultados antes de implementar esto en los clientes. <!--519659-->
+  > - Cuando agregue una pestaña personalizada, especifique solo direcciones de sitio web de intranet o de confianza.<!--SCCMDocs issue 1575-->
+
+#### <a name="version-1902-and-earlier"></a>Versión 1902 y versiones anteriores
 
 Establezca las opciones adicionales de este grupo en **Sí** para que las pestañas siguientes sean visibles en el Centro de software:
 
@@ -849,7 +896,19 @@ Esta nueva configuración de cliente proporciona estas opciones:
 
 ### <a name="enable-third-party-software-updates"></a>Habilitar actualizaciones de software de terceros
 
-Cuando esta opción se configura como **Sí**, se establece la directiva para **permitir actualizaciones firmadas para una ubicación del servicio Microsoft Update en la intranet** y se instala el certificado de firma en el almacén de editores de confianza en el cliente. Esta configuración de cliente se agregó en Configuration Manager versión 1802.
+Cuando esta opción se configura como **Sí**, se establece la directiva para **permitir actualizaciones firmadas para una ubicación del servicio Microsoft Update en la intranet** y se instala el certificado de firma en el almacén de editores de confianza en el cliente.
+
+### <a name="bkmk_du"></a>Habilitación de la actualización dinámica de las actualizaciones de características
+<!--4062619-->
+A partir de la versión 1906 de Configuration Manager, puede configurar la [actualización dinámica de Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847). La actualización dinámica instala paquetes de idioma, características a petición, controladores y actualizaciones acumulativas durante la instalación de Windows al dirigir al cliente a descargar estas actualizaciones de Internet. Cuando esta configuración se establece en **Sí** o en **No**, Configuration Manager modifica el archivo [setupconfig](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) que se usa durante la instalación de la actualización de las características.
+
+- **No configurado**: el valor predeterminado. No se realiza ningún cambio en el archivo setupconfig.
+  - La actualización dinámica está habilitada de manera predeterminada en todas las versiones compatibles de Windows 10.
+    - En las versiones 1803 y anteriores de Windows 10, la actualización dinámica revisa si en el servidor WSUS del dispositivo hay actualizaciones dinámicas aprobadas. En entornos de Configuration Manager, las actualizaciones dinámicas nunca se aprueban directamente en el servidor WSUS, por lo que estos dispositivos no las instalan.
+    - A partir de la versión 1809 de Windows 10, la actualización dinámica usa la conexión a Internet del dispositivo para obtener actualizaciones dinámicas desde Microsoft Update. Estas actualizaciones dinámicas no se publican para el uso de WSUS.
+- **Sí**: habilita la actualización dinámica.
+- **No**: deshabilita la actualización dinámica.
+
 
 ## <a name="state-messaging"></a>Mensajes de estado
 

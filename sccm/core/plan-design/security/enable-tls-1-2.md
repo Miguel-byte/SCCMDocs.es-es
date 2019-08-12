@@ -2,7 +2,7 @@
 title: Habilitación de TLS 1.2
 titleSuffix: Configuration Manager
 description: Información sobre cómo habilitar TLS 1.2 para Configuration Manager.
-ms.date: 06/05/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.assetid: 31de47c9-891b-4de7-8d5e-fbbc1bff7c60
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a3d97ee2e68f9f4606ad46c8566467fad459ffa9
-ms.sourcegitcommit: 725e1bf7d3250c2b7b7be9da01135517428be7a1
+ms.openlocfilehash: b58f6d1441d338c121b67754989128944adcc923
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66822076"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68536557"
 ---
 # <a name="how-to-enable-tls-12"></a>Habilitación de TLS 1.2
 
@@ -51,6 +51,7 @@ En esta sección se describen las dependencias para características y escenario
 |Roles de sistema de sitio| - [Actualice .NET Framework](#update-net-framework-to-support-tls-12) y compruebe la configuración de la criptografía segura. <br/> - [Actualice SQL Server y sus componentes cliente](#update-sql-server-and-client-components) en roles que lo necesitan, como [SQL Server Native Client](#sql-server-native-client).|
 |Punto de servicios de informes|- [Actualice .NET Framework](#update-net-framework-to-support-tls-12) en el servidor de sitio, los servidores de SQL Reporting Services y cualquier equipo que tenga la consola.<br/> - Reinicie el servicio SMS_Executive según sea necesario.|
 |Punto de actualización de software|[Actualice WSUS](#update-windows-server-update-services-wsus).|
+|Puerta de enlace de administración en la nube|[Exigir TLS 1.2](/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway#bkmk_tls)|
 |Consola de Configuration Manager| - [Actualice .NET Framework](#update-net-framework-to-support-tls-12)<br/> - Compruebe la configuración de la criptografía segura.|
 |Cliente de Configuration Manager con roles de sistema de sitio HTTPS|[Actualice Windows para admitir TLS 1.2 para las comunicaciones cliente-servidor mediante WinHTTP](#update-windows-and-winhttp).|
 |Centro de software| - [Actualice .NET Framework](#update-net-framework-to-support-tls-12)<br/> - Compruebe la configuración de la criptografía segura.|

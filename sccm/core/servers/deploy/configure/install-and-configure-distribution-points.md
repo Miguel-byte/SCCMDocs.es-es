@@ -2,7 +2,7 @@
 title: Administración de puntos de distribución
 titleSuffix: Configuration Manager
 description: Use puntos de distribución para hospedar el contenido que implemente en dispositivos y usuarios.
-ms.date: 05/28/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91bcdf4e593d2c39fed19f0b01045cab32f921da
-ms.sourcegitcommit: 9670e11316c9ec6e5f78cd70c766bbfdf04ea3f9
+ms.openlocfilehash: 49be9ccc0f44656752de18f4814b91c0c0d25f66
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67818172"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68536481"
 ---
 # <a name="install-and-configure-distribution-points-in-configuration-manager"></a>Instalar y configurar puntos de distribución en Configuration Manager
 
@@ -72,6 +72,7 @@ Siga este procedimiento para agregar un nuevo punto de distribución. Para cambi
 Empiece con el procedimiento general para [Instalar roles de sistema de sitio](/sccm/core/servers/deploy/configure/install-site-system-roles). Seleccione el rol de **punto de distribución** en la página **Selección de rol del sistema** del Asistente para crear servidor de sistema de sitio. Esta acción agregará las páginas siguientes al asistente:  
 
 - [Punto de distribución](#bkmk_config-general)
+- [Comunicación](#bkmk_config-comm)
 - [Configuración de la unidad](#bkmk_config-drive)
 - [Punto de distribución de extracción](#bkmk_config-pull)
 - [Configuración de PXE](#bkmk_config-pxe)
@@ -167,7 +168,7 @@ Este proceso rellena automáticamente la pestaña **Miembros** de la ventana “
 
 Muchos clientes tienen grandes infraestructuras de Configuration Manager y reducen los sitios primarios o secundarios para simplificar su entorno. Tienen que conservar los puntos de distribución en las ubicaciones de las sucursales para entregar el contenido a los clientes administrados. Estos puntos de distribución a menudo contienen varios terabytes o más de contenido. Este contenido es costoso en términos de tiempo y ancho de banda de red para distribuirlo entre estos servidores remotos.
 
-A partir de la versión 1802, esta característica permite volver a asignar un punto de distribución a otro sitio primario sin redistribuir el contenido. Esta acción actualiza la asignación del sistema de sitio mientras se conserva todo el contenido en el servidor. Si necesita reasignar varios puntos de distribución, primero ejecute esta acción en un único punto de distribución. Después, continúe con otros servidores, de uno en uno.
+Esta característica permite volver a asignar un punto de distribución a otro sitio primario sin redistribuir el contenido. Esta acción actualiza la asignación del sistema de sitio mientras se conserva todo el contenido en el servidor. Si necesita reasignar varios puntos de distribución, primero ejecute esta acción en un único punto de distribución. Después, continúe con otros servidores, de uno en uno.
 
 > [!IMPORTANT]  
 > El servidor de destino solo puede hospedar el rol de punto de distribución. Si el servidor de sistema de sitio hospeda otro rol de servidor de Configuration Manager, como el punto de migración de estado, el punto de distribución no se puede reasignar. No se puede reasignar un punto de distribución de nube.
@@ -255,6 +256,7 @@ Los puntos de distribución individuales admiten varias configuraciones. Sin emb
 En las secciones siguientes, se describen las configuraciones de puntos de distribución al [instalar uno nuevo](#bkmk_install-procedure) o [editar uno existente](#bkmk_change-procedure):  
 
 - [Configuración general](#bkmk_config-general)
+- [Comunicación](#bkmk_config-comm)
 - [Configuración de la unidad](#bkmk_config-drive)
 - [Configuración del firewall](#bkmk_firewall)
 - [Punto de distribución de extracción](#bkmk_config-pull)
@@ -275,7 +277,12 @@ En las secciones siguientes, se describen las configuraciones de puntos de distr
 
 ### <a name="bkmk_config-general"></a> General  
 
+> [!Note]  
+> En la versión 1902 y anteriores, esta página tiene una configuración adicional para HTTP/HTTPS y los certificados. A partir de la versión 1906, esta configuración se encuentra ahora en la página [Comunicación](#bkmk_config-comm).
+
 Las opciones siguientes se encuentran en la página **Punto de distribución** del Asistente para crear servidor de sistema de sitio y en la pestaña **General** de la ventana Propiedades de punto de distribución:  
+
+- **Descripción**: descripción opcional para este rol de punto de distribución.  
 
 - **Instalar y configurar IIS si lo requiere Configuration Manager**: si IIS todavía no está instalado en el servidor, Configuration Manager lo instala y lo configura. Para usar Configuration Manager, es necesario instalar IIS en todos los puntos de distribución. Si no selecciona esta opción e IIS no está instalado en el servidor, primero instale IIS antes de que Configuration Manager pueda instalar correctamente el punto de distribución.  
 
@@ -301,7 +308,17 @@ Las opciones siguientes se encuentran en la página **Punto de distribución** d
         - Windows Server 2016 con las actualizaciones KB4132216 y KB4284833
         - Windows Server 2019  
 
-- **Descripción**: descripción opcional para este rol de punto de distribución.  
+- **Habilitar este punto de distribución para contenido preconfigurado**: esta opción permite agregar contenido al servidor antes de distribuir software. Como los archivos de contenido ya se encuentran en la biblioteca de contenido, no se transfieren a través de la red al distribuir el software. Para obtener más información, vea [Contenido preconfigurado](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent).  
+
+- **Habilitar este punto de distribución para usarse como servidor de caché en la red de optimización de distribución**: A partir de la versión 1906, puede instalar un servidor de caché en la red de Optimización de distribución (DOINC) en los puntos de distribución. Al almacenar en caché este contenido de forma local, los clientes pueden beneficiarse de la característica de Optimización de entrega y, además, puede ayudar a proteger los vínculos WAN. Para más información, incluida la descripción de la configuración adicional, vea [Servidor de caché en la red de Optimización de distribución en Configuration Manager](/sccm/core/plan-design/hierarchy/delivery-optimization-in-network-cache).
+
+
+### <a name="bkmk_config-comm"></a> Comunicación
+
+> [!Note]  
+> A partir de la versión 1906, la siguiente configuración se encuentra en la pestaña **Comunicación**. En la versión 1902 y versiones anteriores, esta configuración está en la pestaña [General](#bkmk_config-general).
+
+Las opciones siguientes se encuentran en la página **Comunicación** del Asistente para crear servidor de sistema de sitio y en la ventana Propiedades de punto de distribución:  
 
 - **Configure cómo se comunican los dispositivos cliente con el punto de distribución**: el uso de **HTTP** o **HTTPS** presenta ventajas e inconvenientes. Para obtener más información, consulte [Prácticas recomendadas de seguridad para la administración de contenido](/sccm/core/plan-design/hierarchy/security-and-privacy-for-content-management#BKMK_Security_ContentManagement).  
 
@@ -335,8 +352,6 @@ Las opciones siguientes se encuentran en la página **Punto de distribución** d
 
     Para obtener un ejemplo de implementación de este certificado, vea [Implementar el certificado de cliente para puntos de distribución](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clientdistributionpoint2008_cm2012).  
 
-- **Habilitar este punto de distribución para contenido preconfigurado**: esta opción permite agregar contenido al servidor antes de distribuir software. Como los archivos de contenido ya se encuentran en la biblioteca de contenido, no se transfieren a través de la red al distribuir el software. Para obtener más información, vea [Contenido preconfigurado](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent).  
-
 ### <a name="bkmk_config-drive"></a> Configuración de la unidad  
 
 > [!NOTE]  
@@ -344,9 +359,9 @@ Las opciones siguientes se encuentran en la página **Punto de distribución** d
 
 Especifique la configuración de unidad para el punto de distribución. Configure hasta dos unidades de disco para la biblioteca de contenido y dos discos de unidad para el recurso compartido de paquete. Configuration Manager puede usar otras unidades cuando las dos primeras alcancen la reserva de espacio de unidad configurada. La página **Configuración de unidad** permite configurar la prioridad de las unidades de disco y la cantidad de espacio libre en disco que debe quedar en cada unidad de disco.  
 
-- **Reserva de espacio de unidad (MB)**: este valor determina la cantidad de espacio disponible en una unidad antes de que Configuration Manager seleccione otra unidad y continúe con el proceso de copia en esa unidad. Los archivos de contenido pueden ocupar varias unidades.  
+- **Reserva de espacio de unidad (MB)** : este valor determina la cantidad de espacio disponible en una unidad antes de que Configuration Manager seleccione otra unidad y continúe con el proceso de copia en esa unidad. Los archivos de contenido pueden ocupar varias unidades.  
 
-- **Ubicaciones de contenido**: especifique las ubicaciones de la biblioteca de contenido y el recurso compartido de paquete en este punto de distribución. De forma predeterminada, todas las ubicaciones de contenido se establecen en **Automático**. Configuration Manager copia el contenido en la ubicación primaria de contenido hasta que la cantidad de espacio libre alcance el valor especificado en **Reserva de espacio de unidad (MB)**. Al seleccionar **Automático**, Configuration Manager establece las ubicaciones de contenido primarias en la unidad de disco con la mayor cantidad de espacio en disco disponible en el momento de la instalación. Establece las ubicaciones secundarias en la unidad de disco con la segunda mayor cantidad de espacio disponible en disco. Cuando las ubicaciones primaria y secundaria alcanzan la reserva de espacio de unidad, Configuration Manager seleccionará otra unidad disponible que tenga la mayor cantidad de espacio disponible en disco para continuar con el proceso de copia.  
+- **Ubicaciones de contenido**: especifique las ubicaciones de la biblioteca de contenido y el recurso compartido de paquete en este punto de distribución. De forma predeterminada, todas las ubicaciones de contenido se establecen en **Automático**. Configuration Manager copia el contenido en la ubicación primaria de contenido hasta que la cantidad de espacio libre alcance el valor especificado en **Reserva de espacio de unidad (MB)** . Al seleccionar **Automático**, Configuration Manager establece las ubicaciones de contenido primarias en la unidad de disco con la mayor cantidad de espacio en disco disponible en el momento de la instalación. Establece las ubicaciones secundarias en la unidad de disco con la segunda mayor cantidad de espacio disponible en disco. Cuando las ubicaciones primaria y secundaria alcanzan la reserva de espacio de unidad, Configuration Manager seleccionará otra unidad disponible que tenga la mayor cantidad de espacio disponible en disco para continuar con el proceso de copia.  
 
 > [!Tip]  
 > Para evitar que Configuration Manager se instale en una unidad específica, cree un archivo vacío llamado **no_sms_on_drive.sms** y cópielo en la carpeta raíz de la unidad antes de instalar el punto de distribución.  
@@ -415,7 +430,7 @@ Seleccione la opción **Habilitar compatibilidad de PXE para clientes** y, despu
     > [!Note]  
     > Al cambiar la interfaz de red, reinicie el servicio WDS para asegurarse de que guarde correctamente la configuración. A partir de la versión 1806, al usar el servicio del respondedor del entorno PXE, reinicie el **Servicio del respondedor PXE de Configuration Manager** (SccmPxe).<!--SCCMDocs issue 642-->  
 
-- **Especificar retraso en la respuesta del servidor PXE (segundos)**: al usar varios servidores PXE, especifique cuánto tiempo tiene que esperar este punto de distribución compatible con PXE antes de que responda a solicitudes de equipos. De forma predeterminada, el punto de distribución compatible con PXE de Configuration Manager responde de inmediato.  
+- **Especificar retraso en la respuesta del servidor PXE (segundos)** : al usar varios servidores PXE, especifique cuánto tiempo tiene que esperar este punto de distribución compatible con PXE antes de que responda a solicitudes de equipos. De forma predeterminada, el punto de distribución compatible con PXE de Configuration Manager responde de inmediato.  
 
 ### <a name="bkmk_config-multicast"></a> Multidifusión  
 
@@ -441,9 +456,9 @@ Seleccione la opción **Habilitar multidifusión para enviar datos simultáneame
 
 - **Habilitar multidifusión programada**: especifique de qué manera controla Configuration Manager cuándo se debe iniciar la implementación de sistemas operativos en los equipos de destino. Configure las siguientes opciones:  
 
-    - **Retraso de inicio de sesión (minutos)**: especifique el número de minutos que Configuration Manager espera antes de responder a la primera solicitud de implementación.  
+    - **Retraso de inicio de sesión (minutos)** : especifique el número de minutos que Configuration Manager espera antes de responder a la primera solicitud de implementación.  
 
-    - **Tamaño de sesión mínimo (clientes)**: especifique cuántas solicitudes deben recibirse para que Configuration Manager inicie la implementación del sistema operativo.  
+    - **Tamaño de sesión mínimo (clientes)** : especifique cuántas solicitudes deben recibirse para que Configuration Manager inicie la implementación del sistema operativo.  
 
 > [!IMPORTANT]  
 > A partir de la versión 1806, para habilitar y configurar la multidifusión en la pestaña **Multidifusión** de las propiedades del punto de distribución, el punto de distribución tiene que usar el Servicio de implementación de Windows.  
@@ -536,4 +551,4 @@ Configure los límites de frecuencia para controlar el ancho de banda de red que
 
 - **Modo por pulsos**: esta opción especifica el tamaño de los bloques de datos que el servidor de sitio envía al punto de distribución. También puede especificar un retraso de tiempo entre el envío de cada bloque de datos. Utilice esta opción cuando tenga que enviar datos a través de una conexión de red con un ancho de banda muy bajo al punto de distribución. Por ejemplo, tiene restricciones para enviar 1 KB de datos cada cinco segundos, independientemente de la velocidad del vínculo o de su uso en un momento específico.  
 
-- **Limitado al máximo especificado de velocidades de transferencia por hora**: especifique esta opción para que un sitio envíe datos a un punto de distribución usando solo el porcentaje de tiempo que configure. Al usar esta opción, Configuration Manager no identifica el ancho de banda disponible de la red. En su lugar, divide el tiempo en que puede enviar datos. El servidor envía datos durante un breve período de tiempo, seguido de períodos de tiempo en los que no se envían datos. Por ejemplo, si establece la opción **Limitar ancho de banda disponible** en **50 %**, Configuration Manager transmite datos durante un período de tiempo, seguido de un período de tiempo de la misma duración en el que no se envían datos. La cantidad de datos reales (o el tamaño del bloque de datos) no se administra. Solo se administra la cantidad de tiempo durante el que se envían datos.  
+- **Limitado al máximo especificado de velocidades de transferencia por hora**: especifique esta opción para que un sitio envíe datos a un punto de distribución usando solo el porcentaje de tiempo que configure. Al usar esta opción, Configuration Manager no identifica el ancho de banda disponible de la red. En su lugar, divide el tiempo en que puede enviar datos. El servidor envía datos durante un breve período de tiempo, seguido de períodos de tiempo en los que no se envían datos. Por ejemplo, si establece la opción **Limitar ancho de banda disponible** en **50 %** , Configuration Manager transmite datos durante un período de tiempo, seguido de un período de tiempo de la misma duración en el que no se envían datos. La cantidad de datos reales (o el tamaño del bloque de datos) no se administra. Solo se administra la cantidad de tiempo durante el que se envían datos.  

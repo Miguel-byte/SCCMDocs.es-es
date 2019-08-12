@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 130cc8511b90da3e95c69f9239e57e2c7ac61d8c
-ms.sourcegitcommit: 20bbb870baf624c7809d3972f2d09a8d2df79cda
+ms.openlocfilehash: 583db1b3ac5682ef6eb65338a3e35d280f46fe38
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67623343"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68536737"
 ---
 # <a name="enhanced-http"></a>HTTP mejorado
 
@@ -101,7 +101,12 @@ Las características siguientes de Configuration Manager admiten o requieren HT
 
 1. En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Configuración del sitio** y haga clic en el nodo **Sitios**. Seleccione el sitio y haga clic en **Propiedades** en la cinta.  
 
-2. Cambie a la pestaña **Comunicación de equipo cliente**. Seleccione la opción **HTTPS o HTTP** y, después, habilite la opción **Usar los certificados generados por Configuration Manager para sistemas de sitios HTTP**.  
+2. Cambie a la pestaña **Comunicación de equipo cliente**.
+
+    > [!Note]
+    > A partir de la versión 1906, esta pestaña se denomina **Communication Security** (Seguridad de la comunicación).<!-- SCCMDocs#1645 -->  
+
+    Seleccione la opción para **HTTPS o HTTP**. A continuación, habilite la opción **Usar los certificados generados por Configuration Manager para sistemas de sitios HTTP**.
 
 > [!Tip]
 > Espere hasta 30 minutos para que el punto de administración reciba y configure el nuevo certificado desde el sitio.

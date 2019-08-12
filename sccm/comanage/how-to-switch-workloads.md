@@ -4,19 +4,19 @@ titleSuffix: Configuration Manager
 description: Obtenga información sobre cómo cambiar las cargas de trabajo que administra actualmente Configuration Manager a Microsoft Intune.
 ms.prod: configuration-manager
 ms.technology: configmgr-client
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.date: 01/14/2019
+ms.date: 07/26/2019
 ms.topic: conceptual
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4b50d0491644e6be0967c1adcf2db641c1bb1cd
-ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.openlocfilehash: 050242e331796c04d05b8b751203b8d6be4f7e2d
+ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "56755611"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68859840"
 ---
 # <a name="how-to-switch-configuration-manager-workloads-to-intune"></a>Cambio de las cargas de trabajo de Configuration Manager a Intune
 
@@ -24,10 +24,33 @@ Una de las ventajas de la administración conjunta es cambiar las cargas de trab
 
 Para más información sobre las cargas de trabajo admitidas, consulte [Cargas de trabajo](/sccm/comanage/workloads).
 
-Puede cambiar las cargas de trabajo cuando habilita la administración conjunta o puede hacerlo posteriormente cuando esté preparado. Si todavía no habilita la administración conjunta, primero debe hacer eso. Para más información, consulte [cómo habilitar la administración conjunta](/sccm/comanage/how-to-enable).
+## <a name="switch-workloads-starting-in-version-1906"></a>Modificación de las cargas de trabajo a partir de la versión 1906
+<!--3555750 FKA 1357954 -->
+A partir de la versión 1906, puede configurar distintas colecciones piloto para cada una de las cargas de trabajo de administración conjunta. La posibilidad de usar diferentes colecciones piloto permite adoptar un enfoque más específico al cambiar las cargas de trabajo. Puede cambiar las cargas de trabajo cuando habilita la administración conjunta o puede hacerlo posteriormente cuando esté preparado. Si todavía no habilita la administración conjunta, primero debe hacer eso. Para más información, consulte [cómo habilitar la administración conjunta](/sccm/comanage/how-to-enable). Después de habilitar la administración conjunta, modifique la configuración en las propiedades de administración conjunta.
 
+1. En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Servicios en la nube** y seleccione el nodo **Administración conjunta**.  
+2. Seleccione el objeto de administración conjunta y, después, elija **Propiedades** en la cinta.  
+3. Cambie a la pestaña **Cargas de trabajo**. De manera predeterminada, todas las cargas de trabajo se establecen en la configuración **Configuration Manager**. Para cambiar una carga de trabajo, mueva el control deslizante de esa carga de trabajo a la configuración deseada.  
 
-Después de habilitar la administración conjunta, modifique la configuración en las propiedades de administración conjunta. 
+    ![Captura de pantalla de la pestaña Cargas de trabajo en la página de propiedades de administración conjunta](media/3555750-co-management-workloads-tab.png)
+
+    - **Configuration Manager**: Configuration Manager sigue administrando esta carga de trabajo.  
+
+    - **Intune piloto**: cambie esta carga de trabajo solo en los dispositivos de la recopilación piloto. Puede cambiar las **recopilaciones piloto** en la pestaña **Almacenamiento provisional** de la página de propiedades de administración conjunta.  
+
+    - **Intune**: cambie esta carga de trabajo para todos los dispositivos de Windows 10 inscritos en la administración conjunta.  
+
+4. Vaya a la pestaña **Almacenamiento provisional** y cambie la **recopilación piloto** de todas las cargas que sea necesario.
+  
+   ![Captura de pantalla de la pestaña Cargas de trabajo en la página de propiedades de administración conjunta](media/3555750-co-management-staging-tab.png)
+
+> [!Important]  
+> - Antes de cambiar las cargas de trabajo, asegúrese de que la carga de trabajo correspondiente en Intune se configuró e implementó correctamente. Asegúrese de que las cargas de trabajo siempre se administren mediante una de las herramientas de administración para los dispositivos.
+> - A partir de la versión 1806 de Configuration Manager, cuando se cambia una carga de trabajo de administración compartida, los dispositivos administrados conjuntamente sincronizan automáticamente la directiva MDM de Microsoft Intune. Esta sincronización también se produce al iniciar la acción **Descargar directiva de equipo** desde Notificaciones de cliente en la consola de Configuration Manager. Para obtener más información, vea [Iniciar la recuperación de directivas de cliente mediante la notificación de cliente](/sccm/core/clients/manage/manage-clients#initiate-client-policy-retrieval-using-client-notification). <!--1357377-->
+
+## <a name="switch-workloads-in-version-1902-and-earlier"></a>Modificación de las cargas de trabajo en la versión 1902 y versiones anteriores
+
+Puede cambiar las cargas de trabajo cuando habilita la administración conjunta o puede hacerlo posteriormente cuando esté preparado. Si todavía no habilita la administración conjunta, primero debe hacer eso. Para más información, consulte [cómo habilitar la administración conjunta](/sccm/comanage/how-to-enable). Después de habilitar la administración conjunta, modifique la configuración en las propiedades de administración conjunta.
 
 1. En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Servicios en la nube** y seleccione el nodo **Administración conjunta**.  
 
@@ -43,11 +66,14 @@ Después de habilitar la administración conjunta, modifique la configuración e
 
     - **Intune**: cambie esta carga de trabajo para todos los dispositivos de Windows 10 inscritos en la administración conjunta.  
 
+4. En la pestaña **Almacenamiento provisional** de la página de propiedades de la administración conjunta, cambie la **recopilación piloto** de las cargas de trabajo en caso de ser necesario.
+
+5. Haga clic en **Aceptar** para guardar los cambios y salir de las propiedades de administración conjunta.
 
 > [!Important]  
-> Antes de cambiar las cargas de trabajo, asegúrese de que la carga de trabajo correspondiente en Intune se configuró e implementó correctamente. Asegúrese de que las cargas de trabajo siempre se administren mediante una de las herramientas de administración para los dispositivos.  
+> - Antes de cambiar las cargas de trabajo, asegúrese de que la carga de trabajo correspondiente en Intune se configuró e implementó correctamente. Asegúrese de que las cargas de trabajo siempre se administren mediante una de las herramientas de administración para los dispositivos. 
+> - A partir de la versión 1806 de Configuration Manager, cuando se cambia una carga de trabajo de administración compartida, los dispositivos administrados conjuntamente sincronizan automáticamente la directiva MDM de Microsoft Intune. Esta sincronización también se produce al iniciar la acción **Descargar directiva de equipo** desde Notificaciones de cliente en la consola de Configuration Manager. Para obtener más información, vea [Iniciar la recuperación de directivas de cliente mediante la notificación de cliente](/sccm/core/clients/manage/manage-clients#initiate-client-policy-retrieval-using-client-notification). <!--1357377-->
 
-<!--1357377-->
-A partir de la versión 1806 de Configuration Manager, cuando se cambia una carga de trabajo de administración compartida, los dispositivos administrados conjuntamente sincronizan automáticamente la directiva MDM de Microsoft Intune. Esta sincronización también se produce al iniciar la acción **Descargar directiva de equipo** desde Notificaciones de cliente en la consola de Configuration Manager. Para obtener más información, vea [Iniciar la recuperación de directivas de cliente mediante la notificación de cliente](/sccm/core/clients/manage/manage-clients#initiate-client-policy-retrieval-using-client-notification).
+## <a name="next-steps"></a>Pasos siguientes
 
-
+[Supervisión de la administración conjunta](/sccm/comanage/how-to-monitor)

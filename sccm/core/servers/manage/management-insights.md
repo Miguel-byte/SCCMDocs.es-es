@@ -2,7 +2,7 @@
 title: Información de administración
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la funcionalidad Información de administración disponible en la consola de Configuration Manager.
-ms.date: 07/12/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17600d9fa04e678e488f36bb923a39e8c41647aa
-ms.sourcegitcommit: b62de6c9cb1bc3e4c9ea5ab5ed3355d83e3a59bc
+ms.openlocfilehash: 23b0839366502e44e37689c4b732c74ed2fe8458
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894099"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68536204"
 ---
 # <a name="management-insights-in-configuration-manager"></a>Información de administración en Configuration Manager
 
@@ -25,8 +25,7 @@ ms.locfileid: "67894099"
 Información de administración de Configuration Manager proporciona información sobre el estado actual del entorno. La información se basa en el análisis de los datos de la base de datos del sitio. Esta información le ayuda a entender mejor el entorno y tomar medidas en consecuencia. Esta característica se publicó en la versión 1802 de Configuration Manager. <!--1353967-->
 
 
-
-## <a name="review-management-insights"></a>Revisar información de administración 
+## <a name="review-management-insights"></a>Revisar información de administración
 
 Para ver las reglas, su cuenta debe tener el permiso **leer** en el objeto **sitio**.
 
@@ -39,7 +38,7 @@ Para ver las reglas, su cuenta debe tener el permiso **leer** en el objeto **sit
 
 3. Abra el grupo de información de administración que quiera revisar. Haga clic en **Mostrar información** en la cinta de opciones.  
 
-Las siguientes cuatro pestañas están disponibles para su revisión: 
+Las siguientes cuatro pestañas están disponibles para su revisión:
 
 - **Todas las reglas**: proporciona la lista completa de las reglas para el grupo de información de administración elegido.  
 
@@ -51,12 +50,11 @@ Las siguientes cuatro pestañas están disponibles para su revisión:
 
 El panel **Requisitos previos** muestra los elementos necesarios para ejecutar la regla.
 
-#### <a name="all-rules-and-prerequisites-for-the-cloud-services-group"></a>Todas las reglas y requisitos previos para el grupo de servicios en la nube
+### <a name="all-rules-and-prerequisites-for-the-cloud-services-group"></a>Todas las reglas y requisitos previos para el grupo de servicios en la nube
+
 ![Información de administración: todas las reglas y requisitos previos para el grupo de servicios en la nube](./media/Management-insights-all-cloud-rules.png)
 
-
 Seleccione una regla y después haga clic en **Más detalles** para ver los detalles de la regla.
-
 
 
 ## <a name="operations"></a>Operaciones
@@ -66,7 +64,7 @@ Las reglas de información de administración vuelven a evaluar su aplicabilidad
 El archivo de registro para reglas de información de administración es **SMS_DataEngine.log** en el servidor de sitio.
 
 <!--1357930-->
-A partir de la versión 1806, algunas reglas le permiten tomar medidas. Seleccione una regla y haga clic en **Más detalles**. Después, si está disponible, seleccione **Tomar medidas**. 
+A partir de la versión 1806, algunas reglas le permiten tomar medidas. Seleccione una regla y haga clic en **Más detalles**. Después, si está disponible, seleccione **Tomar medidas**.
 
 En función de la regla, esta acción muestra uno de los siguientes comportamientos:  
 
@@ -75,13 +73,14 @@ En función de la regla, esta acción muestra uno de los siguientes comportamien
 - Navegar a una vista filtrada basándose en una consulta. Por ejemplo, al actuar en la regla de recopilaciones vacías se muestran solo estas recopilaciones en la lista de recopilaciones. Después puede realizar otra acción, como eliminar una recopilación o modificar sus reglas de pertenencia.  
 
 
-
 ## <a name="bkmk_insights"></a> Panel de información de administración
+
 <!--1357979-->
 
-A partir de la versión 1810, el nodo **Información de administración** incluye un panel gráfico. Este panel muestra información general de los estados de la regla, con lo que le resultará más fácil mostrar el progreso. 
+A partir de la versión 1810, el nodo **Información de administración** incluye un panel gráfico. Este panel muestra información general de los estados de la regla, con lo que le resultará más fácil mostrar el progreso.
 
 Use los siguientes filtros en la parte superior del panel para ajustar la vista:
+
 - Mostrar completadas
 - Opcional
 - Recomendado
@@ -93,20 +92,21 @@ En el panel se incluyen los iconos siguientes:
 
 - **Grupos de Información de administración**: muestra el porcentaje de las reglas en cada grupo, teniendo en cuenta los filtros. Seleccione un grupo para explorar en profundidad las reglas específicas de este grupo.  
 
-- **Prioridad de Información de administración**: muestra el porcentaje de las reglas por prioridad, teniendo en cuenta los filtros.   
+- **Prioridad de Información de administración**: muestra el porcentaje de las reglas por prioridad, teniendo en cuenta los filtros.  
 
 - **Toda la información**: una tabla de información, incluida la prioridad y el estado. Use el campo **Filtro** situado en la parte superior de la tabla para emparejar las cadenas de cualquiera de las columnas disponibles. El panel ordena la tabla en el orden siguiente:
+
     - Estado: acción necesaria, completado, desconocido  
     - Prioridad: crítica, recomendada, opcional  
-    - Último cambio: fechas más antiguas en la parte superior   
+    - Último cambio: fechas más antiguas en la parte superior  
 
 ![Captura de pantalla del panel de información de administración](media/1357979-management-insights-dashboard.png)
-
 
 
 ## <a name="groups-and-rules"></a>Reglas y grupos
 
 Las reglas se organizan en los siguientes grupos de información de administración:
+
 - [Aplicaciones](#applications)  
 - [Servicios en la nube](#cloud-services)  
 - [Recopilaciones](#collections)  
@@ -116,17 +116,15 @@ Las reglas se organizan en los siguientes grupos de información de administraci
 - [Centro de software](#software-center)  
 - [Windows 10](#windows-10)  
 
-
 ### <a name="applications"></a>Aplicaciones
 
 Conclusiones de administración de la aplicación.
 
 - **Aplicaciones sin implementaciones**: enumera las aplicaciones del entorno sin implementaciones activas. Esta regla ayuda a encontrar y eliminar las aplicaciones sin usar para simplificar la lista de aplicaciones que se muestran en la consola. Para obtener más información, consulte [Deploy applications](/sccm/apps/deploy-use/deploy-applications) (Implementar aplicaciones).  
 
-
 ### <a name="cloud-services"></a>Servicios en la nube
 
-Ayuda a integrar con muchos servicios en la nube, lo que permite la administración moderna de los dispositivos. 
+Ayuda a integrar con muchos servicios en la nube, lo que permite la administración moderna de los dispositivos.
 
 - **Evaluar la preparación de la administración conjunta**: ayuda a comprender qué pasos son necesarios para habilitar la administración conjunta. Esta regla tiene requisitos previos. Para obtener más información, vea [Información general sobre la administración conjunta](/sccm/comanage/overview).  
 
@@ -135,7 +133,6 @@ Ayuda a integrar con muchos servicios en la nube, lo que permite la administraci
 - **Habilitar dispositivos para que sean híbridos unidos a Azure Active Directory**: los dispositivos unidos a Azure AD permiten a los usuarios iniciar sesión con sus credenciales de dominio y también asegurarse de que los dispositivos cumplen los estándares de seguridad y cumplimiento de la organización. Para obtener más información, vea [Consideraciones de diseño de identidad híbrida de Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview).  
 
 - **Actualización de clientes a la versión más reciente de Windows 10**: Windows 10, versión 1709 o superior, mejora y moderniza la experiencia informática de los usuarios. Para obtener más información, vea [Artículos clave sobre la adopción de Windows como servicio](/sccm/core/understand/configuration-manager-and-windows-as-service#key-articles-about-adopting-windows-as-a-service).  
-
 
 ### <a name="collections"></a>Recopilaciones
 
@@ -161,8 +158,9 @@ A partir de la versión 1902, hay nuevas reglas con recomendaciones sobre la adm
 
 
 ### <a name="proactive-maintenance"></a>Mantenimiento proactivo
+
 <!--1352184-->
-A partir de la versión 1806, las reglas de este grupo resaltan posibles problemas de configuración que puede evitar mediante el mantenimiento de los objetos de Configuration Manager. 
+A partir de la versión 1806, las reglas de este grupo resaltan posibles problemas de configuración que puede evitar mediante el mantenimiento de los objetos de Configuration Manager.
 
 - **Grupos de límites sin sistemas de sitio asignados**: sin los sistemas de sitio asignados, los grupos de límites solo pueden usarse para la asignación de sitio. Para obtener más información, vea [Configuración de grupos de límites](/sccm/core/servers/deploy/configure/boundary-groups).  
 
@@ -178,16 +176,17 @@ A partir de la versión 1806, las reglas de este grupo resaltan posibles problem
 
 - **Actualizar los orígenes de caché del mismo nivel a la última versión del cliente de Configuration Manager**: indentifique a los clientes que actúan como origen de caché del mismo nivel, pero no se ha actualizado desde una versión del cliente anterior a la 1806. Los clientes de la versión anterior a la 1806 no pueden usarse como un origen de caché del mismo nivel para clientes que ejecutan la versión 1806 o alguna posterior. Seleccione **Realizar acción** para abrir una vista de dispositivo que muestre la lista de clientes.<!--1358008-->  
 
-
 ### <a name="security"></a>Seguridad
-Conclusiones para mejorar la seguridad de su infraestructura y dispositivos. 
+
+Conclusiones para mejorar la seguridad de su infraestructura y dispositivos.
+
+- **La reserva de NTLM está habilitada**:<!--4572953--> a partir de la versión 1906, esta regla detecta si habilitó el método de reserva de autenticación NTLM menos seguro para el sitio. Cuando se usa el método de inserción de cliente para la instalación del cliente de Configuration Manager, el sitio puede requerir la autenticación mutua Kerberos. Esta mejora ayuda a proteger la comunicación entre el servidor y el cliente. Para obtener más información, vea [Cómo instalar clientes con inserción de cliente](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).
 
 - **Versiones del cliente antimalware no admitidas**: Más del 10 % de los clientes ejecutan versiones de System Center Endpoint Protection que no son compatibles. Para obtener más información, vea [Endpoint Protection](/sccm/protect/deploy-use/endpoint-protection).  
 
-
 ### <a name="simplified-management"></a>Administración simplificada
 
-Conclusiones que le ayudarán a simplificar la administración diaria de su entorno. 
+Conclusiones que le ayudarán a simplificar la administración diaria de su entorno.
 
 - **Versiones de cliente diferentes de CB**: enumera todos los clientes cuyas versiones no son una compilación de la rama actual (CB). Para obtener más información, vea [Actualizar clientes](/sccm/core/clients/manage/upgrade/upgrade-clients).  
 
@@ -196,20 +195,20 @@ Conclusiones que le ayudarán a simplificar la administración diaria de su ento
 
 ### <a name="software-center"></a>Centro de software
 
-Conclusiones para la administración del Centro de software. 
+Conclusiones para la administración del Centro de software.
 
-- **Dirigir a los usuarios al Centro de software en lugar de al catálogo de aplicaciones**: compruebe si los usuarios han instalado o solicitado aplicaciones del catálogo de aplicaciones en los últimos 14 días. La funcionalidad principal del Catálogo de aplicaciones ahora se incluye en el Centro de software. La compatibilidad con el sitio web del catálogo de aplicaciones finaliza en la versión 1806. Para más información, vea [Deprecated Features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures#deprecated-features) (Características en desuso).  
+- **Dirigir a los usuarios al Centro de software en lugar de al catálogo de aplicaciones**: compruebe si los usuarios han instalado o solicitado aplicaciones del catálogo de aplicaciones en los últimos 14 días. La funcionalidad principal del Catálogo de aplicaciones ahora se incluye en el Centro de software. El catálogo de aplicaciones está en desuso. Para más información, vea [Deprecated Features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures#deprecated-features) (Características en desuso).  
 
 - **Uso de la nueva versión del Centro de software**: La versión anterior del Centro de software ya no se admite. Configure los clientes para que usen el nuevo Centro de software. Para ello, habilite la opción de cliente **Usar nuevo Centro de software** en el grupo **Agente de equipo**. Para más información, vea [Acerca de la configuración de cliente](/sccm/core/clients/deploy/about-client-settings#use-new-software-center).  
-
 
 ### <a name="windows-10"></a>Windows 10
 
 Conclusiones relacionadas con la implementación y el mantenimiento de Windows 10. El grupo de información de administración de Windows 10 está solo disponible cuando más de la mitad de los clientes ejecutan Windows 7, Windows 8 o Windows 8.1.
 
-- **Configurar la telemetría de Windows y la clave de id. comercial**: para usar datos de Upgrade Readiness, configure los dispositivos con una clave de id. comercial y habilite la telemetría. Establezca los dispositivos Windows 10 en el nivel de telemetría Mejorado (limitado) o en uno superior. Para obtener más información, vea [Configuración de clientes para notificar datos a Windows Analytics](/sccm/core/clients/manage/monitor-windows-analytics#configure-clients-to-report-data-to-windows-analytics).  
+- **Configurar la telemetría de Windows y la clave de id. comercial**: para usar datos de Upgrade Readiness, configure los dispositivos con una clave de id. comercial y habilite la recopilación de datos de diagnóstico. Establezca los dispositivos Windows 10 en el nivel **Mejorado (limitado)** o en un nivel superior. Para más información, consulte [Configuración de clientes para notificar datos a Windows Analytics](/sccm/core/clients/manage/monitor-windows-analytics#configure-clients-to-report-data-to-windows-analytics).  
 
-- **Conexión de Configuration Manager con Upgrade Readiness**: aproveche Upgrade Readiness para agilizar sus implementaciones de Windows 10 antes de que Windows 7 se quede sin soporte. Para obtener más información, vea [Integrar Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics).   
+- **Conexión de Configuration Manager con Upgrade Readiness**: use Upgrade Readiness para las implementaciones de Windows 10 antes de que Windows 7 se quede sin soporte. Para obtener más información, vea [Integrar Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics).  
 
 #### <a name="windows-10-management-insights-rules"></a>Reglas de información de administración de Windows 10
+
 ![Reglas de información de administración para Windows 10](./media/Windows-10-insights-group.png)

@@ -2,7 +2,7 @@
 title: Administración de recopilaciones
 titleSuffix: Configuration Manager
 description: Realice tareas de administración de recopilaciones comunes en Configuration Manager.
-ms.date: 04/23/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f3099e61b28687ac2705d3da140af272d9de9fe2
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: 02161f79270176f2904ae58af5d0dbec9a204ab6
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68339046"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68535429"
 ---
 # <a name="how-to-manage-collections-in-configuration-manager"></a>Administración de recopilaciones en Configuration Manager
 
@@ -180,6 +180,9 @@ Configure variables que se aplican a esta recopilación y se pueden utilizar por
 
 #### <a name="distribution-point-groups"></a>Grupos de puntos de distribución
 Asocie uno o varios grupos de puntos de distribución a los miembros de la recopilación seleccionada. Para obtener más información, consulte [Manage content and content infrastructure](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure) (Administración del contenido y de la infraestructura de contenido).
+
+#### <a name="aad-group-sync"></a>Sincronización de grupos de AAD
+Sincronice los resultados de la pertenencia a recopilaciones con grupos de Azure Active Directory. Esta sincronización es una [característica de versión preliminar](/sccm/core/servers/manage/pre-release-features) a partir de la versión 1906. Para más información, vea [Create collections](/sccm/core/clients/manage/collections/create-collections#bkmk_aadcollsync) (Crear recopilaciones).
 
 #### <a name="security"></a>Seguridad
 Muestra los usuarios administrativos que tienen permisos para la recopilación seleccionada de ámbitos de seguridad y roles asociados. Para obtener más información, vea [Aspectos básicos de la administración basada en roles](/sccm/core/understand/fundamentals-of-role-based-administration).  

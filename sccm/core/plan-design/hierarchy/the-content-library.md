@@ -2,7 +2,7 @@
 title: La biblioteca de contenido
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la biblioteca de contenido que usa Configuration Manager para reducir el tamaño total del contenido distribuido.
-ms.date: 03/27/2019
+ms.date: 07/31/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6251bfa098f575662d1a1c0dbf742b35af05846
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: fb4efaf8fb424ee4f6af221ad5316d8fd03f8aa0
+ms.sourcegitcommit: ef7800a294e5db5d751921c34f60296c1642fc1f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58523952"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68712592"
 ---
 # <a name="the-content-library-in-configuration-manager"></a>La biblioteca de contenido en Configuration Manager
 
@@ -42,16 +42,14 @@ Configuration Manager copia los archivos de contenido en la unidad con la priori
 
 - No se pueden configurar las opciones de unidad en las propiedades del punto de distribución una vez finalizada la instalación.  
 
-
 Para obtener más información sobre cómo configurar la unidad para el punto de distribución, vea [Administración del contenido y de la infraestructura de contenido](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure).  
 
-
 > [!IMPORTANT]
->  Para mover la biblioteca de contenido a otra ubicación en un punto de distribución después de la instalación, use la **herramienta de transferencia de biblioteca de contenido** de las herramientas de Configuration Manager. Para obtener más información, vea [Content Library Transfer tool](/sccm/core/support/content-library-transfer) (Herramienta de transferencia de biblioteca de contenido).  
+> Para mover la biblioteca de contenido a otra ubicación en un punto de distribución después de la instalación, use la **herramienta de transferencia de biblioteca de contenido** de las herramientas de Configuration Manager. Para obtener más información, vea [Content Library Transfer tool](/sccm/core/support/content-library-transfer) (Herramienta de transferencia de biblioteca de contenido).  
 
 
+## <a name="about-the-content-library-on-the-central-administration-site"></a>Acerca de la biblioteca de contenido en el sitio de administración central
 
-## <a name="about-the-content-library-on-the-central-administration-site"></a>Acerca de la biblioteca de contenido en el sitio de administración central  
 De manera predeterminada, Configuration Manager crea una biblioteca de contenido en el sitio de administración central cuando se instala el sitio. La biblioteca de contenido se ubica en la unidad del servidor de sitio que dispone de más espacio libre. Como no se puede instalar un punto de distribución en el sitio de administración central, no se puede priorizar el uso de las unidades en la biblioteca de contenido. Al igual que la biblioteca de contenido en otros servidores de sitio y en puntos de distribución, cuando la unidad que contiene la biblioteca de contenido se queda sin espacio disponible en disco, la biblioteca de contenido se distribuye a la siguiente unidad disponible.  
 
 Configuration Manager usa la biblioteca de contenido en el sitio de administración central en los siguientes escenarios:  
@@ -61,7 +59,7 @@ Configuration Manager usa la biblioteca de contenido en el sitio de administraci
 - Se migra el contenido desde otro sitio de Configuration Manager y se asigna el sitio de administración central como el sitio que administra ese contenido.  
 
 > [!NOTE]  
->  Cuando se crea contenido en un sitio primario y después se distribuye a otro sitio primario o a uno secundario de otro sitio primario, el sitio de administración central almacena temporalmente ese contenido en la bandeja de entrada del programador del sitio de administración central, pero no lo agrega a su biblioteca de contenido.  
+> Cuando se crea contenido en un sitio primario y después se distribuye a otro sitio primario o a uno secundario de otro sitio primario, el sitio de administración central almacena temporalmente ese contenido en la bandeja de entrada del programador del sitio de administración central, pero no lo agrega a su biblioteca de contenido.  
 
 Utilice las siguientes opciones para administrar la biblioteca de contenido en el sitio de administración central:  
 
@@ -73,21 +71,20 @@ Utilice las siguientes opciones para administrar la biblioteca de contenido en e
 > Los puntos de distribución de nube no usan el almacenamiento de instancia única. El sitio cifra los paquetes antes de enviarlos a Azure, y cada paquete tiene una clave cifrada única. Incluso si dos archivos fueran idénticos, las versiones cifradas no serían iguales.  
 
 
+## <a name="bkmk_remote"></a> Configuración de una biblioteca de contenido remota para el servidor de sitio
 
-## <a name="bkmk_remote"></a> Configuración de una biblioteca de contenido remota para el servidor de sitio  
 <!--1357525-->
 A partir de la versión 1806, para configurar la [alta disponibilidad del servidor de sitio](/sccm/core/servers/deploy/configure/site-server-high-availability) o para liberar espacio de disco duro en los servidores de sitio primario o de administración central, reubique la biblioteca de contenido en otra ubicación de almacenamiento. Mueva la biblioteca de contenido a otra unidad del servidor de sitio, un servidor independiente o discos tolerantes a errores de una red de área de almacenamiento (SAN). Se recomienda una SAN, ya que tiene alta disponibilidad y proporciona almacenamiento elástico que aumenta o disminuye con el tiempo para satisfacer los requisitos variables del contenido. Para obtener más información, vea [High availability options](/sccm/protect/understand/high-availability-options) (Opciones de alta disponibilidad).
 
-Una biblioteca de contenido remota es un requisito previo para la [alta disponibilidad del servidor de sitio](/sccm/core/servers/deploy/configure/site-server-high-availability). 
+Una biblioteca de contenido remota es un requisito previo para la [alta disponibilidad del servidor de sitio](/sccm/core/servers/deploy/configure/site-server-high-availability).
 
 > [!Note]  
 > Esta acción solo mueve la biblioteca de contenido en el servidor de sitio. No afecta a la ubicación de la biblioteca de contenido en los puntos de distribución. 
 
 > [!Tip]  
-> Planee también la administración de contenido de origen del paquete, que es externo a la biblioteca de contenido. Todos los objetos de software de Configuration Manager tienen un origen del paquete en un recurso compartido de red. Considere la posibilidad de centralizar todos los orígenes en un mismo recurso compartido, pero asegúrese de que esta ubicación es redundante y de alta disponibilidad. 
-> 
+> Planee también la administración de contenido de origen del paquete, que es externo a la biblioteca de contenido. Todos los objetos de software de Configuration Manager tienen un origen del paquete en un recurso compartido de red. Considere la posibilidad de centralizar todos los orígenes en un mismo recurso compartido, pero asegúrese de que esta ubicación es redundante y de alta disponibilidad.
+>
 > Si mueve la biblioteca de contenido al mismo volumen de almacenamiento que los orígenes de paquete, no puede marcar este volumen para la desduplicación de datos. Aunque la biblioteca de contenido es compatible con la desduplicación de datos, el volumen de los orígenes del paquete no lo admite. Para obtener más información, vea [Introducción a la desduplicación de datos](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#bkmmk_datadedup).<!--SCCMDOcs issue #831-->  
-
 
 ### <a name="prerequisites"></a>Requisitos previos  
 
@@ -98,7 +95,6 @@ Una biblioteca de contenido remota es un requisito previo para la [alta disponib
 > [!Important]  
 > No reutilice una ubicación de red compartida entre varios sitios. Por ejemplo, no use la misma ruta de acceso para un sitio de administración central y un sitio primario secundario. Esta configuración tiene el potencial de dañar la biblioteca de contenido y tendrá que volver a generarla.<!--SCCMDocs-pr issue 2764-->  
 
-
 ### <a name="process-to-manage-the-content-library"></a>Proceso para administrar la biblioteca de contenido
 
 1. Cree una carpeta en un recurso compartido de red como destino para la biblioteca de contenido. Por ejemplo, `\\server\share\folder`.  
@@ -108,9 +104,9 @@ Una biblioteca de contenido remota es un requisito previo para la [alta disponib
 
 2. En la consola de Configuration Manager, cambie al área de trabajo **Administración**. Expanda **Configuración del sitio**, haga clic en el nodo **Sitios** y seleccione el sitio. En la pestaña **Resumen** de la parte inferior del panel de detalles, observará una nueva columna **Biblioteca de contenido**.  
 
-3. Haga clic en **Administrar la biblioteca de contenido** en la cinta.   
+3. Seleccione **Administrar la biblioteca de contenido** en la cinta de opciones.  
 
-4. En la ventana Administrar la biblioteca de contenido, en el campo **Ubicación actual** se muestra la unidad local y la ruta de acceso. Escriba una ruta de acceso de red válida para **Nueva ubicación**. Esta ruta de acceso es la ubicación a la que el sitio mueve la biblioteca de contenido. Debe incluir un nombre de carpeta que ya exista en el recurso compartido, por ejemplo, `\\server\share\folder`. Haga clic en **Aceptar**.  
+4. En la ventana Administrar la biblioteca de contenido, en el campo **Ubicación actual** se muestra la unidad local y la ruta de acceso. Escriba una ruta de acceso de red válida para **Nueva ubicación**. Esta ruta de acceso es la ubicación a la que el sitio mueve la biblioteca de contenido. Debe incluir un nombre de carpeta que ya exista en el recurso compartido, por ejemplo, `\\server\share\folder`. Seleccione **Aceptar**.  
 
 5. Observe el valor **Estado** de la columna Biblioteca de contenido en la pestaña Resumen del panel de detalles. Se actualiza para mostrar el progreso del sitio cuando se mueve la biblioteca de contenido.  
 
@@ -122,30 +118,29 @@ Una biblioteca de contenido remota es un requisito previo para la [alta disponib
    - Si se produce un estado de error, el estado muestra el error. Errores comunes incluyen **acceso denegado** o **disco lleno**.  
 
    - Cuando finaliza, se muestra **Completado**.  
-    
+
      Consulte **distmgr.log** para más información. Para más información, consulte [Registros de servidor de sistema de sitio y servidor de sitio](/sccm/core/plan-design/hierarchy/log-files#BKMK_SiteSiteServerLog).  
 
 Para obtener más información sobre este proceso, vea [Flowchart - Manage content library](/sccm/core/plan-design/hierarchy/manage-content-library-flowchart) (Diagrama de flujo: administración de la biblioteca de contenido).
 
 El sitio *copia* en realidad los archivos de biblioteca de contenido en la ubicación remota. Este proceso no elimina los archivos de biblioteca de contenido en la ubicación original en el servidor de sitio. Para liberar espacio, un administrador debe eliminar manualmente estos archivos originales.
 
-Si la biblioteca de contenido original abarca dos unidades, se combina en una sola carpeta en el nuevo destino. 
+Si la biblioteca de contenido original abarca dos unidades, se combina en una sola carpeta en el nuevo destino.
 
-A partir de la versión 1810, durante el proceso de copia, el sitio deja los componentes del **procesador de paquetes** y **administrador de distribución**. Esta acción garantiza que el contenido no se agregue a la biblioteca mientras se está eliminando. Programe en cualquier caso este cambio durante un mantenimiento del sistema.
+A partir de la versión 1810, durante el proceso de copia, los componentes del **procesador de paquetes** y del **administrador de distribución** no procesan los nuevos paquetes. Esta acción garantiza que el contenido no se agregue a la biblioteca mientras se está eliminando. Programe en cualquier caso este cambio durante un mantenimiento del sistema.
 
-Si tiene que devolver la biblioteca de contenido al servidor de sitio, repita este proceso, pero escriba una unidad y ruta de acceso locales para **Nueva ubicación**. Debe incluir un nombre de carpeta que ya exista en la unidad, por ejemplo, `D:\SCCMContentLib`. Cuando el contenido original todavía existe, el proceso mueve rápidamente la configuración a la ubicación local en el servidor de sitio. 
+Si tiene que devolver la biblioteca de contenido al servidor de sitio, repita este proceso, pero escriba una unidad y ruta de acceso locales para **Nueva ubicación**. Debe incluir un nombre de carpeta que ya exista en la unidad, por ejemplo, `D:\SCCMContentLib`. Cuando el contenido original todavía existe, el proceso mueve rápidamente la configuración a la ubicación local en el servidor de sitio.
 
 > [!Tip]  
 > Para mover el contenido a otra unidad en el servidor de sitio, use la herramienta **Content Library Transfer**. Para obtener más información, vea [Content Library Transfer tool](/sccm/core/support/content-library-transfer) (Herramienta de transferencia de biblioteca de contenido).  
 
 
-
 ## <a name="inside-the-content-library"></a>Dentro de la biblioteca de contenido
 
 > [!Warning]  
-> La sección siguiente se proporciona únicamente con fines informativos. No modifique, agregue o quite ningún archivo ni carpeta de la biblioteca de contenido. Si lo hace, podría dañar los paquetes, el contenido o la biblioteca de contenido en su totalidad. Si sospecha que faltan datos o que hay datos dañados o no válidos, use la característica de validación en la consola de Configuration Manager para detectar estos problemas. Después, redistribuya el contenido afectado para corregir los problemas. 
+> La sección siguiente se proporciona únicamente con fines informativos. No modifique, agregue o quite ningún archivo ni carpeta de la biblioteca de contenido. Si lo hace, podría dañar los paquetes, el contenido o la biblioteca de contenido en su totalidad. Si sospecha que faltan datos o que hay datos dañados o no válidos, use la característica de validación en la consola de Configuration Manager para detectar estos problemas. Después, redistribuya el contenido afectado para corregir los problemas.
 
-De forma predeterminada, la biblioteca de contenido se almacena en la raíz de una unidad en una carpeta denominada **SCCMContentLib**. Esta carpeta se comparte de forma predeterminada como **SCCMContentLib$**. La carpeta y el recurso compartido tienen permisos restringidos para evitar daños accidentales. Todos los cambios se deben realizar desde la consola de Configuration Manager. En esta carpeta se encuentran los objetos siguientes:  
+De forma predeterminada, la biblioteca de contenido se almacena en la raíz de una unidad en una carpeta denominada **SCCMContentLib**. Esta carpeta se comparte de forma predeterminada como **SCCMContentLib$** . La carpeta y el recurso compartido tienen permisos restringidos para evitar daños accidentales. Todos los cambios se deben realizar desde la consola de Configuration Manager. En esta carpeta se encuentran los objetos siguientes:  
 
 - La biblioteca de paquetes (carpeta **PkgLib**): información sobre qué paquetes están presentes en el punto de distribución.  
 
@@ -158,37 +153,35 @@ De forma predeterminada, la biblioteca de contenido se almacena en la raíz de u
 > [!Tip]  
 > Use la herramienta **Content Library Explorer** de las herramientas de Configuration Manager para examinar el contenido de la biblioteca de contenido. Esta herramienta no se puede usar para modificar el contenido. Proporciona información sobre lo que está presente, además de permitir la validación y redistribución. Para obtener más información, vea [Content Library Explorer](/sccm/core/support/content-library-explorer) (Explorador de la biblioteca de contenido).  
 
-
 ### <a name="package-library"></a>Biblioteca de paquetes
+
 En la carpeta de biblioteca de paquetes, **PkgLib**, se incluye un archivo para cada paquete que se distribuye al punto de distribución. El nombre de archivo es el identificador del paquete, por ejemplo, `ABC00001.INI`. En este archivo, en la sección `[Packages]`, hay una lista de identificadores de contenido que forman parte del paquete, así como otra información como la versión. Por ejemplo, **ABC00001** es un paquete heredado en la versión **1**. El identificador de contenido de este archivo es `ABC00001.1`.
 
-
 ### <a name="data-library"></a>Biblioteca de datos
-En la carpeta de biblioteca de datos, **DataLib**, se incluye un archivo y una carpeta para el contenido de cada paquete. Por ejemplo, los nombres de este archivo y esta carpeta son `ABC00001.1.INI` y `ABC00001.1`, respectivamente. El archivo incluye información para la validación. La carpeta vuelve a crear la estructura de carpetas del paquete original. 
+
+En la carpeta de biblioteca de datos, **DataLib**, se incluye un archivo y una carpeta para el contenido de cada paquete. Por ejemplo, los nombres de este archivo y esta carpeta son `ABC00001.1.INI` y `ABC00001.1`, respectivamente. El archivo incluye información para la validación. La carpeta vuelve a crear la estructura de carpetas del paquete original.
 
 Los archivos de la biblioteca de datos se reemplazan por archivos INI con el nombre del archivo original en el paquete. Por ejemplo, `MyFile.exe.INI`. Estos archivos incluyen información sobre el archivo original, como el tamaño, la hora de modificación y el código hash. Use los cuatro primeros caracteres del código hash para buscar el archivo original en la biblioteca de archivos. Por ejemplo, el código hash de MyFile.exe.INI es **DEF98765**, y los cuatro primeros caracteres son **DEF9**.
 
-
 ### <a name="file-library"></a>Biblioteca de archivos
+
 Si la biblioteca de contenido abarca varias unidades, los archivos del paquete podrían estar en la carpeta de biblioteca de archivos, **FileLib**, en cualquiera de estas unidades.
 
 Busque un archivo específico mediante los cuatro primeros caracteres del código hash encontrado en la biblioteca de datos. Dentro de la carpeta de biblioteca de archivos hay muchas carpetas, cada una con un nombre de cuatro caracteres. Busque la carpeta que coincida con los cuatro primeros caracteres del código hash. Una vez que encuentre esta carpeta, incluye uno o varios conjuntos de tres archivos. Estos archivos comparten el mismo nombre, pero uno tiene la extensión INI, otro tiene la extensión SIG y otro no tiene ninguna extensión de archivo. El archivo original es el que no tiene extensión cuyo nombre es igual que el código hash de la biblioteca de datos.
 
 Por ejemplo, la carpeta **DEF9** incluye `DEF98765.INI`, `DEF98765.SIG` y `DEF98765`. `DEF98765` es el `MyFile.exe` original. El archivo INI incluye una lista de "usuarios" o identificadores de contenido que comparten el mismo archivo. El sitio no quita un archivo a menos que también se eliminen todos estos contenidos.
 
-
 ### <a name="drive-spanning"></a>Expansión de unidades
 
 La biblioteca de contenido puede abarcar varias unidades. Puede elegir estas unidades al crear el punto de distribución. De forma predeterminada, Configuration Manager elige automáticamente las unidades cuando se expande la biblioteca de contenido.
 
-Al elegir las unidades, seleccione una unidad principal y otra secundaria. El sitio almacena todos los metadatos en la unidad principal. Solo expande la biblioteca de archivos en la unidad secundaria. El nombre de recurso compartido de la carpeta para las unidades secundarias incluye la letra de unidad. Por ejemplo, si D: y E: son unidades secundarias para la biblioteca de contenido, los nombres de recurso compartido son **SCCMContentLibD$** y **SCCMContentLibE$**.
+Al elegir las unidades, seleccione una unidad principal y otra secundaria. El sitio almacena todos los metadatos en la unidad principal. Solo expande la biblioteca de archivos en la unidad secundaria. El nombre de recurso compartido de la carpeta para las unidades secundarias incluye la letra de unidad. Por ejemplo, si D: y E: son unidades secundarias para la biblioteca de contenido, los nombres de recurso compartido son **SCCMContentLibD$** y **SCCMContentLibE$** .
 
-Si ha seleccionado la opción **Automático**, Configuration Manager selecciona la unidad con más espacio disponible como la unidad principal. Almacena todos los metadatos en esta unidad. El sitio solo expande la biblioteca de archivos en las unidades secundarias. 
+Si ha seleccionado la opción **Automático**, Configuration Manager selecciona la unidad con más espacio disponible como la unidad principal. Almacena todos los metadatos en esta unidad. El sitio solo expande la biblioteca de archivos en las unidades secundarias.
 
 Especifique una cantidad de espacio de reserva durante la configuración. Configuration Manager intenta usar un disco secundario cuando el mejor disco disponible solo tiene libre esta cantidad de espacio de reserva. Cada vez que se selecciona una unidad nueva para su uso, se selecciona la unidad con el máximo espacio libre disponible.
 
-No se puede especificar que un punto de distribución deba usar todas las unidades excepto para un conjunto específico. Para impedir este comportamiento, cree un archivo vacío en la raíz de la unidad, denominado `NO_SMS_ON_DRIVE.SMS`. Coloque este archivo antes de que Configuration Manager seleccione la unidad que se va a usar. Si Configuration Manager detecta este archivo en la raíz de la unidad, no use la unidad para la biblioteca de contenido. 
-
+No se puede especificar que un punto de distribución deba usar todas las unidades excepto para un conjunto específico. Para impedir este comportamiento, cree un archivo vacío en la raíz de la unidad, denominado `NO_SMS_ON_DRIVE.SMS`. Coloque este archivo antes de que Configuration Manager seleccione la unidad que se va a usar. Si Configuration Manager detecta este archivo en la raíz de la unidad, no use la unidad para la biblioteca de contenido.
 
 
 ## <a name="troubleshooting"></a>Solución de problemas
@@ -199,9 +192,8 @@ Las sugerencias siguientes pueden ayudar a solucionar problemas relacionados con
 
 - Use la herramienta [Content Library Explorer](/sccm/core/support/content-library-explorer).  
 
-- Busque bloqueos de archivo por otros procesos, como software antivirus. Excluya la biblioteca de contenido en todas las unidades de los análisis antivirus automáticos, así como el directorio de ensayo temporal, **SMS_DP$**, en cada unidad.  
+- Busque bloqueos de archivo por otros procesos, como software antivirus. Excluya la biblioteca de contenido en todas las unidades de los análisis antivirus automáticos, así como el directorio de ensayo temporal, **SMS_DP$** , en cada unidad.  
 
 - Para ver si hay diferencias en el código hash, valide el paquete desde la consola de Configuration Manager.  
 
 - Como última opción, redistribuya el contenido. Con esta acción se debería resolver la mayoría de los problemas.  
-

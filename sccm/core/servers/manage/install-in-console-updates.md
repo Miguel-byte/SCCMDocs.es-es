@@ -2,7 +2,7 @@
 title: Actualización en la consola
 titleSuffix: Configuration Manager
 description: Instalación de actualizaciones en Configuration Manager desde Microsoft Cloud
-ms.date: 03/27/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,19 +11,18 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6eea68e5d700bda23a306257c4764d8446b2958
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: 44430d86dfa017475edfe301f1ce112d6cdd9ab2
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67252037"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68536221"
 ---
 # <a name="install-in-console-updates-for-configuration-manager"></a>Instalar actualizaciones en consola para Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Configuration Manager se sincroniza con el servicio de Microsoft Cloud para obtener actualizaciones. Después, puede instalar estas actualizaciones desde la consola de Configuration Manager.
-
 
 
 ## <a name="get-available-updates"></a>Obtención de actualizaciones disponibles
@@ -39,13 +38,11 @@ El sitio solo descargará actualizaciones válidas para su infraestructura y ver
 > [!NOTE]  
 > Si es necesario, puede importar correcciones fuera de banda en la consola. Para ello, use la [herramienta de registro de actualizaciones](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes). Estas correcciones fuera de banda complementan las actualizaciones que obtendrá al sincronizar con el servicio de Microsoft Cloud.  
 
-
 Cuando se sincronicen las actualizaciones, podrá verlas en la consola de Configuration Manager. Vaya al área de trabajo **Administración** y seleccione el nodo **Actualizaciones y mantenimiento**.  
 
 - Las actualizaciones no instaladas se muestran con el estado **Disponible**.  
 
 - Las actualizaciones instaladas se muestran con el estado **Instalada**. Solo se muestra la última actualización instalada. Para ver las actualizaciones instaladas anteriormente, seleccione **Historial** en la cinta de opciones.  
-
 
 Antes de configurar el punto de conexión de servicio, es conveniente conocer y planear sus usos adicionales. Los usos siguientes pueden afectar al modo en que se configura este rol de sistema de sitio:  
 
@@ -60,13 +57,12 @@ Para entender mejor lo que ocurre cuando se descargan las actualizaciones, vea l
 - [Diagrama de flujo: replicación de actualización](/sccm/core/servers/manage/update-replication-flowchart)  
 
 
-
 ## <a name="assign-permissions-to-view-and-manage-updates-and-features"></a>Asignar permisos para ver y administrar actualizaciones y características
 
-Para que un usuario vea las actualizaciones en la consola, debe tener asignado un rol de seguridad de administración basado en roles que incluya la clase de seguridad **Paquetes de actualización**. Esta clase concede acceso para ver y administrar las actualizaciones en la consola de Configuration Manager.    
+Para que un usuario vea las actualizaciones en la consola, debe tener asignado un rol de seguridad de administración basado en roles que incluya la clase de seguridad **Paquetes de actualización**. Esta clase concede acceso para ver y administrar las actualizaciones en la consola de Configuration Manager.
 
+### <a name="about-the-update-packages-class"></a>Sobre la clase Paquetes de actualización
 
-#### <a name="about-the-update-packages-class"></a>Sobre la clase Paquetes de actualización   
 De forma predeterminada, la clase **Paquetes de actualización** (SMS_CM_Updatepackages) forma parte de los siguientes roles de seguridad integrados con los permisos indicados:  
 
 - **Administrador total** con permisos **Modificar** y **Lectura** :  
@@ -79,32 +75,34 @@ De forma predeterminada, la clase **Paquetes de actualización** (SMS_CM_Updatep
 
     - Un usuario con este rol de seguridad y acceso al ámbito **Predeterminado** puede ver actualizaciones pero no instalarlas. Este usuario también podrá ver características después de actualizar el sitio, pero no podrá habilitarlas.  
 
+### <a name="permissions-required-for-updates-and-servicing"></a>Permisos necesarios para las actualizaciones y el mantenimiento
 
-#### <a name="permissions-required-for-updates-and-servicing"></a>Permisos necesarios para las actualizaciones y el mantenimiento   
 - Use una cuenta que tenga asignado un rol de seguridad con la clase **Paquetes de actualización** y los permisos **Modificar** y **Lectura**.  
 
 - Asigne la cuenta al ámbito **Predeterminado**.  
 
-#### <a name="permissions-to-only-view-updates"></a>Permisos para solo ver las actualizaciones   
+### <a name="permissions-to-only-view-updates"></a>Permisos para solo ver las actualizaciones
+
 - Use una cuenta que tenga asignado un rol de seguridad con la clase **Paquetes de actualización** y que tenga solo con el permiso **Lectura**.  
 
 - Asigne la cuenta al ámbito **Predeterminado**.  
 
-#### <a name="permissions-required-to-enable-features-after-the-site-updates"></a>Permisos necesarios para habilitar características cuando se actualice el sitio   
--  Use una cuenta que tenga asignado un rol de seguridad con la clase **Paquetes de actualización** y los permisos **Modificar** y **Lectura**.  
+### <a name="permissions-required-to-enable-features-after-the-site-updates"></a>Permisos necesarios para habilitar características cuando se actualice el sitio
 
--  Asigne la cuenta al ámbito **Todo**.  
+- Use una cuenta que tenga asignado un rol de seguridad con la clase **Paquetes de actualización** y los permisos **Modificar** y **Lectura**.  
+
+- Asigne la cuenta al ámbito **Todo**.  
 
 
-
-##  <a name="bkmk_beforeinstall"></a> Antes de instalar una actualización en la consola  
+## <a name="bkmk_beforeinstall"></a> Antes de instalar una actualización en la consola  
 
 Revise los pasos siguientes antes de instalar una actualización desde la consola de Configuration Manager.  
 
-
-###  <a name="bkmk_step1"></a> Paso 1: revisar la lista de comprobación de actualización  
+### <a name="bkmk_step1"></a> Paso 1: revisar la lista de comprobación de actualización  
 
 Revise la lista de comprobación de actualización aplicable para las acciones que deben realizarse antes de iniciar la actualización:
+
+- [Lista de comprobación para la instalación de la actualización 1906](/sccm/core/servers/manage/checklist-for-installing-update-1906)  
 
 - [Lista de comprobación para la instalación de la actualización 1902](/sccm/core/servers/manage/checklist-for-installing-update-1902)
 
@@ -112,10 +110,7 @@ Revise la lista de comprobación de actualización aplicable para las acciones q
 
 - [Lista de comprobación para la instalación de la actualización 1806](/sccm/core/servers/manage/checklist-for-installing-update-1806)  
 
-- [Lista de comprobación para la instalación de la actualización 1802](/sccm/core/servers/manage/checklist-for-installing-update-1802)
-
-
-###  <a name="bkmk_step2"></a> Paso 2: ejecutar el comprobador de requisitos previos antes de instalar una actualización  
+### <a name="bkmk_step2"></a> Paso 2: ejecutar el comprobador de requisitos previos antes de instalar una actualización  
 
 Antes de instalar una actualización, puede ejecutar la comprobación de requisitos previos para la actualización. Si ejecuta la comprobación de requisitos previos antes de instalar una actualización:  
 
@@ -123,14 +118,14 @@ Antes de instalar una actualización, puede ejecutar la comprobación de requisi
 
 - La comprobación de requisitos previos se volverá a ejecutar automáticamente cuando instale la actualización.  
 
-> [!NOTE]   
+> [!NOTE]  
 > Al iniciar una comprobación de requisitos previos y, después, ver el estado, parecerá que la fase **Instalación** está activa. Pero, en realidad, no se instalará la actualización en el sitio. Para ejecutar la comprobación de requisitos previos, el proceso de actualización extrae el paquete de la biblioteca de contenido. Después, copia el paquete en una carpeta de almacenamiento provisional, donde puede acceder a las comprobaciones de requisitos previos actuales. El mismo proceso también se ejecuta al instalar una actualización. Este comportamiento se debe a que la fase de instalación se muestra con el estado **En curso**. En la categoría de instalación solo se muestra el paso *Extraer paquete de actualización*.  
 
 Más adelante, cuando instale la actualización, puede configurarla para omitir las advertencias de comprobación de requisitos previos.  
 
 #### <a name="to-run-the-prerequisite-checker-before-installing-an-update"></a>Para ejecutar el Comprobador de requisitos previos antes de instalar una actualización  
 
-1. En la consola de Configuration Manager, vaya al área de trabajo **Administración** y seleccione el nodo **Actualizaciones y mantenimiento**.   
+1. En la consola de Configuration Manager, vaya al área de trabajo **Administración** y seleccione el nodo **Actualizaciones y mantenimiento**.  
 
 2. Haga clic con el botón derecho en el paquete de actualización para el que quiera ejecutar la comprobación de requisitos previos.  
 
@@ -147,8 +142,7 @@ Más adelante, cuando instale la actualización, puede configurarla para omitir 
     3. Para obtener más información, vea el archivo **ConfigMgrPrereq.log** en el servidor de sitio.  
 
 
-
-##  <a name="bkmk_install"></a> Instalación de actualizaciones en la consola  
+## <a name="bkmk_install"></a> Instalación de actualizaciones en la consola  
 
 Cuando esté listo para instalar actualizaciones en la consola de Configuration Manager, empiece con el sitio de primer nivel de la jerarquía. Este sitio puede ser el sitio de administración central o un sitio primario independiente.  
 
@@ -162,10 +156,10 @@ Le recomendamos que instale la actualización fuera del horario comercial habitu
 
 - Después de que el servidor de sitio completa correctamente la instalación de una actualización, actualiza automáticamente todos los roles de sistema de sitio aplicables. Pero no se reinstalan todos los puntos de distribución y pasan a estar sin conexión para actualizar al mismo tiempo. En su lugar, el servidor de sitio usa la configuración de distribución de contenido del sitio para distribuir la actualización a un subconjunto de puntos de distribución a la vez. El resultado es que solo algunos puntos de distribución se desconectan para instalar la actualización. Los puntos de distribución que todavía no han empezado a actualizarse o que han completado la actualización permanecen en línea y pueden proporcionar contenido a los clientes.
 
+### <a name="bkmk_overview"></a> Información general sobre la instalación de actualizaciones en la consola  
 
-###  <a name="bkmk_overview"></a> Información general sobre la instalación de actualizaciones en la consola  
+#### <a name="1-when-the-update-installation-starts"></a>1. Cuando se inicia la instalación de la actualización
 
-#### <a name="1-when-the-update-installation-starts"></a>1. Cuando se inicia la instalación de la actualización  
 Verá el asistente para actualizaciones, donde se muestra una lista de las áreas de producto que se corresponden con la actualización.  
 
 - En la página **General** del asistente, puede configurar **Advertencias de requisitos previos** según sea necesario:  
@@ -180,8 +174,8 @@ Verá el asistente para actualizaciones, donde se muestra una lista de las área
 
 - Si hay una actualización válida para el cliente de Configuration Manager, pruebe la actualización de cliente con un conjunto limitado de clientes. Para obtener más información, vea [Cómo probar las actualizaciones de cliente en una recopilación de preproducción](/sccm/core/clients/manage/upgrade/test-client-upgrades).  
 
+#### <a name="2-during-the-update-installation"></a>2. Durante la instalación de la actualización
 
-#### <a name="2-during-the-update-installation"></a>2. Durante la instalación de la actualización  
 Como parte de la instalación de actualizaciones, Configuration Manager realiza las acciones siguientes:  
 
 - Vuelve a instalar los componentes afectados, como los roles de sistema de sitio o la consola de Configuration Manager.  
@@ -193,8 +187,8 @@ Como parte de la instalación de actualizaciones, Configuration Manager realiza 
 > [!TIP]  
 > Al instalar actualizaciones de Configuration Manager, el sitio también actualiza la carpeta CD.Latest. Para obtener más información, vea [La carpeta CD.Latest](/sccm/core/servers/manage/the-cd.latest-folder).  
 
+#### <a name="3-monitor-the-progress-of-updates-as-they-install"></a>3. Supervisar el progreso de las actualizaciones mientras se instalan
 
-#### <a name="3-monitor-the-progress-of-updates-as-they-install"></a>3. Supervisar el progreso de las actualizaciones mientras se instalan  
 Para supervisar el progreso, siga este procedimiento:  
 
 - En la consola de Configuration Manager, vaya al área de trabajo **Administración** y seleccione el nodo **Actualizaciones y mantenimiento**. En este nodo se muestra el estado de instalación de todos los paquetes de actualización.  
@@ -203,20 +197,27 @@ Para supervisar el progreso, siga este procedimiento:
 
     La instalación de actualizaciones se divide en varias fases para facilitar la supervisión. Por cada una de las fases siguientes, en los detalles adicionales del estado de la instalación, se indica qué archivo de registro contiene más información:  
 
-    - **Descargar**: esta fase solo se aplica en el sitio de primer nivel con el punto de conexión de servicio.   
+    - **Descargar**: esta fase solo se aplica en el sitio de primer nivel con el punto de conexión de servicio.
 
-    - **replicación**   
+    - **replicación**
 
-    - **Comprobación de requisitos previos**   
+    - **Comprobación de requisitos previos**
 
-    - **Instalación**    
+    - **Instalación**
 
     - **Después de la instalación**: Para obtener más información, vea [Tareas posteriores a la instalación](#post-installation-tasks).  
 
 - Vea el archivo **CMUpdate.log** en `<ConfigMgr_Installation_Directory>\Logs` en el servidor de sitio.  
 
+>[!NOTE]
+> - A partir de la versión 1906, puede ver el estado de la tarea **Actualización de la base de datos de ConfigMgr** durante la fase de **instalación**.
+>   - Si se bloquea la actualización de la base de datos, se le proporcionará la advertencia **En curso, requiere atención**.
+>     - En cmupdate.log se registrará el nombre del programa y el identificador de sesión de SQL que bloquea la actualización de la base de datos.
+>   - Cuando la actualización de la base de datos deje de estar bloqueada, el estado se restablecerá a **En curso** o **Completado**.
+>     - Cuando la actualización de la base de datos está bloqueada, se realiza una comprobación cada cinco minutos para ver el bloqueo persiste.
 
-#### <a name="4-when-the-update-installation-completes"></a>4. Cuando se completa la instalación de la actualización  
+#### <a name="4-when-the-update-installation-completes"></a>4. Cuando se completa la instalación de la actualización
+
 Después de que se completa la primera actualización del sitio:  
 
 - Los sitios primarios secundarios instalan la actualización automáticamente. No es necesario hacer nada.  
@@ -225,8 +226,8 @@ Después de que se completa la primera actualización del sitio:
 
 - Hasta el momento en que todos los sitios de la jerarquía estén actualizados a la nueva versión, la jerarquía funciona en modo de versión mixta. Para obtener más información, vea [Interoperabilidad entre diferentes versiones](/sccm/core/plan-design/hierarchy/interoperability-between-different-versions).  
 
+#### <a name="5-update-configuration-manager-consoles"></a>5. Actualizar consolas de Configuration Manager
 
-#### <a name="5-update-configuration-manager-consoles"></a>5. Actualizar consolas de Configuration Manager  
 Cuando se actualice un sitio de administración central o un sitio primario, también tendrán que actualizarse todas las consolas de Configuration Manager que se conecten a ese sitio. Se le pedirá que actualice una consola:  
 
 - Cuando abre la consola.  
@@ -238,16 +239,13 @@ Actualice la consola inmediatamente después de que se actualice el sitio.
 Cuando se actualice la consola, compruebe que la versión de la consola y del sitio sean correctas. Vaya a **Acerca de System Center Configuration Manager** en la esquina superior izquierda de la consola.  
 
 > [!Note]  
-> A partir de la versión 1802, la versión de la consola ahora es ligeramente diferente de la versión del sitio. La versión secundaria de la consola ahora corresponde a la versión de lanzamiento de Configuration Manager. Por ejemplo, en Configuration Manager versión 1802, la versión de sitio inicial es 5.0.8634.1000 y la versión inicial de la consola es 5. **1802**.1082.1700. Los números de compilación (1082) y revisión (1700) pueden cambiar con futuras revisiones de la versión 1802.
+> La versión de la consola es ligeramente distinta de la versión del sitio. La versión secundaria de la consola corresponde a la versión de lanzamiento de Configuration Manager. Por ejemplo, en Configuration Manager versión 1802, la versión de sitio inicial es 5.0.8634.1000 y la versión inicial de la consola es 5. **1802**.1082.1700. Los números de compilación (1082) y revisión (1700) pueden cambiar con futuras revisiones.
 
-
-
-###  <a name="bkmk_toptier"></a> Para iniciar la instalación de actualizaciones en el sitio de primer nivel  
+### <a name="bkmk_toptier"></a> Para iniciar la instalación de actualizaciones en el sitio de primer nivel  
 
 En el sitio de primer nivel de la jerarquía, en la consola de Configuration Manager, vaya al área de trabajo **Administración** y seleccione el nodo **Actualizaciones y mantenimiento**. Seleccione una actualización con el estado **Disponible** y, después, elija **Instalar el paquete de actualización** en la cinta de opciones.  
 
-
-###  <a name="bkmk_secondary"></a> Para iniciar la instalación de la actualización en un sitio secundario  
+### <a name="bkmk_secondary"></a> Para iniciar la instalación de la actualización en un sitio secundario  
 
 Cuando se actualice el sitio primario principal de un sitio secundario, actualice el sitio secundario desde la consola de Configuration Manager. Para ello, utilice el **Asistente para actualizar sitios secundarios**.  
 
@@ -259,7 +257,6 @@ Para supervisar la instalación de actualizaciones en un sitio secundario, selec
 
 En algunos casos, el estado de la consola no se actualiza ni sugiere que la actualización produce errores. Después de actualizar correctamente un sitio secundario, use la opción **Volver a intentar la instalación**. Esta opción no reinstala la actualización del sitio secundario que instaló correctamente la actualización, sino que obliga a la consola a actualizar el estado.
 
-
 ### <a name="post-installation-tasks"></a>Tareas posteriores a la instalación
 
 Cuando un sitio instala una actualización, hay varias tareas que no se pueden iniciar hasta que la actualización finalice la instalación en el servidor de sitio. Esta lista contiene las tareas posteriores a la instalación que son críticas para las operaciones de sitio y jerarquía. Como son críticas, se supervisan activamente. Entre las tareas adicionales que no se supervisan directamente, se encuentra la reinstalación de los roles de sistema de sitio. Para ver el estado de las tareas críticas posteriores a la instalación, seleccione la tarea **Postinstalación** durante la supervisión de la instalación de actualizaciones para un sitio.
@@ -269,51 +266,60 @@ No todas las tareas se completan de inmediato. Algunas tareas no se inician hast
 Entre las tareas posteriores a la instalación figuran las siguientes:
 
 - **Instalación del servicio SMS_EXECUTIVE**
+
     - Servicio crítico que se ejecuta en el servidor de sitio.
     - La reinstalación de este servicio se debe completar rápidamente.
 
 - **Instalación del componente SMS_DATABASE_NOTIFICATION_MONITOR**
+
     - Subproceso de componente de sitio crítico del servicio SMS_EXECUTIVE.
     - La reinstalación de este servicio se debe completar rápidamente.
 
 - **Instalación del componente SMS_HIERARCHY_MANAGER**
+
     - Componente de sitio crítico que se ejecuta en el servidor de sitio.
     - Responsable de la reinstalación de los roles de sistema de sitio en los servidores de sistema de sitio. No se muestra el estado de la reinstalación del rol de sistema de sitio individual.
     - La reinstalación de este servicio se debe completar rápidamente.
 
 - **Instalación del componente SMS_REPLICATION_CONFIGURATION_MONITOR**
+
     - Componente de sitio crítico que se ejecuta en el servidor de sitio.
     - La reinstalación de este servicio se debe completar rápidamente.
 
 - **Instalación del componente SMS_POLICY_PROVIDER**
+
     - Componente de sitio crítico que se ejecuta solo en sitios primarios.
     - La reinstalación de este servicio se debe completar rápidamente.
 
-- **Supervisando inicialización de replicación**   
+- **Supervisando inicialización de replicación**
+
     - Esta tarea se muestra solo en el sitio de administración central y los sitios primarios secundarios.
     - Depende de SMS_REPLICATION_CONFIGURATION_MONITOR.
     - Debe completarse rápidamente.
 
-- **Actualizando el paquete de preproducción del cliente de Configuration Manager**    
+- **Actualizando el paquete de preproducción del cliente de Configuration Manager**
+
     - Esta tarea se muestra incluso cuando la preproducción del cliente (también llamada piloto de cliente) no está habilitada para su uso.
     - No se inicia hasta que todos los sitios de la jerarquía terminan de instalar la actualización.
 
 - **Actualizando la carpeta Client en el servidor de sitio**
+
     - Esta tarea no se muestra si usa el cliente en preproducción.  
     - Debe completarse rápidamente.
 
 - **Actualizando el paquete del cliente de Configuration Manager**
+
     - Esta tarea no se muestra si usa el cliente en preproducción.  
     - Finaliza solo después de que todos los sitios instalan la actualización.  
 
 - **Activación de características**
+
     - Esta tarea se muestra únicamente en el sitio de nivel superior de la jerarquía.
     - No se inicia hasta que todos los sitios de la jerarquía terminan de instalar la actualización.
     - No se muestran las características individuales.
 
 
-
-##  <a name="bkmk_retry"></a> Reintento de la instalación de una actualización con errores  
+## <a name="bkmk_retry"></a> Reintento de la instalación de una actualización con errores  
 
 Si no puede instalar una actualización, revise los comentarios en la consola para identificar las soluciones de errores y las advertencias. Para obtener más información, vea el archivo **ConfigMgrPrereq.log** en el servidor de sitio. Antes de reintentar la instalación de una actualización, debe solucionar los errores y las advertencias.  
 
@@ -322,31 +328,33 @@ Si no puede instalar una actualización, revise los comentarios en la consola pa
 
 Cuando esté listo para reintentar la instalación de una actualización, seleccione la actualización con errores y elija una opción adecuada. El comportamiento del reintento de instalación de la actualización depende del nodo desde el que se inicia el reintento y de la opción de reintento que se usa.  
 
-#### <a name="retry-installation-for-the-hierarchy"></a>Volver a intentar la instalación en la jerarquía
+### <a name="retry-installation-for-the-hierarchy"></a>Volver a intentar la instalación en la jerarquía
+
 Puede volver a intentar la instalación de una actualización en toda la jerarquía si la actualización se encuentra en alguno de los estados siguientes:  
 
-- Las comprobaciones de requisitos previos se han superado con una o más advertencias y la opción de omitir las advertencias de comprobación de requisitos previos no se ha establecido en el Asistente para actualización. (El valor de actualización de **Ignorar advertencia sobre requisitos previos** en el nodo **Actualizaciones y mantenimiento** es **No**).   
+- Las comprobaciones de requisitos previos se han superado con una o más advertencias y la opción de omitir las advertencias de comprobación de requisitos previos no se ha establecido en el Asistente para actualización. (El valor de actualización de **Ignorar advertencia sobre requisitos previos** en el nodo **Actualizaciones y mantenimiento** es **No**).
 
-- Errores en la comprobación de requisitos previos    
+- Errores en la comprobación de requisitos previos
 
 - Error de instalación  
 
-- Error en la replicación del contenido en el sitio   
+- Error en la replicación del contenido en el sitio
 
 Vaya al área de trabajo **Administración** y seleccione el nodo **Actualizaciones y mantenimiento**. Seleccione la actualización y, después, elija una de estas opciones:  
 
 - **Reintentar**: al **Reintentar** desde **Actualizaciones y mantenimiento**, la instalación de la actualización vuelve a empezar y omite automáticamente las advertencias de requisitos previos. Si la réplica de contenido ha producido errores anteriormente, el contenido de la actualización se volverá a replicar.  
 
-- **Omitir advertencias de requisitos previos**: si se detiene la instalación de la actualización debido a una advertencia, puede seleccionar **Omitir advertencias de requisitos previos**. Esta acción permite que la instalación de la actualización continúe en unos minutos y usa la opción para omitir las advertencias de requisitos previos.   
+- **Omitir advertencias de requisitos previos**: si se detiene la instalación de la actualización debido a una advertencia, puede seleccionar **Omitir advertencias de requisitos previos**. Esta acción permite que la instalación de la actualización continúe en unos minutos y usa la opción para omitir las advertencias de requisitos previos.
 
-#### <a name="retry-installation-for-the-site"></a>Volver a intentar la instalación en el sitio  
+### <a name="retry-installation-for-the-site"></a>Volver a intentar la instalación en el sitio
+
 Puede reintentar la instalación de una actualización en un sitio específico si la actualización se encuentra en alguno de los estados siguientes:  
 
 - Las comprobaciones de requisitos previos se han superado con una o más advertencias y la opción de omitir las advertencias de comprobación de requisitos previos no se ha establecido en el Asistente para actualización. (El valor de actualizaciones de **Ignorar advertencia sobre requisitos previos** en el nodo Actualizaciones y mantenimiento es **No**).  
 
-- Errores en la comprobación de requisitos previos    
+- Errores en la comprobación de requisitos previos
 
-- Error de instalación    
+- Error de instalación
 
 Vaya al área de trabajo **Supervisión** y seleccione el nodo **Estado de mantenimiento del sitio**. Seleccione la actualización y, después, elija una de estas opciones:  
 
@@ -355,10 +363,11 @@ Vaya al área de trabajo **Supervisión** y seleccione el nodo **Estado de mante
 - **Omitir advertencias de requisitos previos**: si se detiene la instalación de la actualización debido a una advertencia, puede seleccionar **Omitir advertencias de requisitos previos**. Esta acción permite que la instalación de la actualización continúe en unos minutos y usa la opción para omitir las advertencias de requisitos previos.  
 
 
-
-##  <a name="bkmk_after"></a> Después de que un sitio instala una actualización  
+## <a name="bkmk_after"></a> Después de que un sitio instala una actualización  
 
 Una vez que se actualice el sitio, revise la lista de comprobación posterior a la actualización para la versión correspondiente:  
+
+- [Lista de comprobación posterior a la actualización para la versión 1906](/sccm/core/servers/manage/checklist-for-installing-update-1906#post-update-checklist)  
 
 - [Lista de comprobación posterior a la actualización para la versión 1902](/sccm/core/servers/manage/checklist-for-installing-update-1902#post-update-checklist)  
 
@@ -366,11 +375,8 @@ Una vez que se actualice el sitio, revise la lista de comprobación posterior a 
 
 - [Lista de comprobación posterior a la actualización para la versión 1806](/sccm/core/servers/manage/checklist-for-installing-update-1806#post-update-checklist)  
 
-- [Lista de comprobación posterior a la actualización para la versión 1802](/sccm/core/servers/manage/checklist-for-installing-update-1802#post-update-checklist)  
 
-
-
-##  <a name="bkmk_options"></a> Habilitar características opcionales de las actualizaciones  
+## <a name="bkmk_options"></a> Habilitar características opcionales de las actualizaciones  
 
 Cuando una actualización incluye una o varias características opcionales, tiene la oportunidad de habilitar esas características en la jerarquía. Puede habilitar características cuando se instale la actualización, o bien puede volver a la consola posteriormente y habilitar las características opcionales.
 
@@ -383,7 +389,8 @@ Cuando una característica no es opcional, se instala automáticamente. No apare
 
 Al habilitar una característica nueva o de versión preliminar, el Administrador de jerarquía de Configuration Manager (HMAN) debe procesar el cambio antes de que dicha característica esté disponible. El procesamiento del cambio suele ser inmediato. Según el ciclo de procesamiento de HMAN, puede tardar hasta 30 minutos en completarse. Una vez procesado el cambio, reinicie la consola antes de usar la característica.
 
-#### <a name="list-of-optional-features"></a>Lista de características opcionales
+### <a name="list-of-optional-features"></a>Lista de características opcionales
+
 Las siguientes características son opcionales en la versión más reciente de Configuration Manager:<!--505213-->  
 
 <!--Note to include in target articles
@@ -393,42 +400,45 @@ Las siguientes características son opcionales en la versión más reciente de C
 
 -->
 
-- [Administrador de conversión de paquetes](/sccm/apps/pcm/package-conversion-manager) <!--1357861-->
-- [Actualizaciones de software de terceros](/sccm/sum/deploy-use/third-party-software-updates)<!--1357605,1352101,1358714-->
-- [Aprobación de solicitudes de aplicación para los usuarios por dispositivo](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy-settings) <!--1357015-->  
-- [Compatibilidad con Cisco AnyConnect 4.0.07x y versiones posteriores para iOS](/sccm/mdm/deploy-use/create-vpn-profiles)<!--1357393-->
-- [Evaluación de Atestación de estado de dispositivo para las directivas de cumplimiento de acceso condicional](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--1235616-->
-- [Creación y ejecución de scripts](/sccm/apps/deploy-use/create-deploy-scripts) <!--1236459-->
-- [Ejecutar paso de secuencia de tareas](/sccm/osd/understand/task-sequence-steps#child-task-sequence) <!--1261338-->
-- [Almacenamiento en caché previa de contenido de secuencias de tareas](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) <!--1021244-->
-- [Actualizaciones de controladores de Surface](/sccm/sum/get-started/configure-classifications-and-products) <!--1098490-->
-- [Puerta de enlace de administración en la nube](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) <!--1101764-->
-- [Punto de servicio de almacenamiento de datos](/sccm/core/servers/manage/data-warehouse) <!--1277922-->
-- [Caché del mismo nivel para clientes](/sccm/core/plan-design/hierarchy/client-peer-cache) <!--1101436-->
-- [Creación de PFX](/sccm/protect/deploy-use/introduction-to-certificate-profiles) <!--1321368-->
-- [Conector de Log Analytics de Azure](/sccm/core/clients/manage/sync-data-log-analytics) <!--1258052-->
-- [Directiva de Protección contra vulnerabilidades de seguridad de Windows Defender](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) <!--1355468-->
-- [VPN para Windows 10](/sccm/protect/deploy-use/vpn-profiles) <!--1283610-->
-- [Windows Hello para empresas](/sccm/protect/deploy-use/windows-hello-for-business-settings) (conocido anteriormente como *Passport for Work*) <!--1245704-->
-- [Acceso condicional para los equipos administrados](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)  <!--1191496-->
-
+- [Sincronización de los resultados de pertenencia a recopilaciones con Azure Active Directory](/sccm/core/clients/manage/collections/create-collections#bkmk_aadcollsync) <!--3607475,C2127144-C8DE-49F6-9CB3-D4F5B59F9515-->
+- [Detección de grupos de usuarios de Azure Active Directory](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_azuregroupdisco) <!--3611956,023715E7-BFBA-4E9E-A80F-B5B626464ADD-->
+- [Grupos de aplicaciones](/sccm/apps/deploy-use/create-app-groups) <!--3555907,EE16A1D8-EF1B-4094-845F-AC107E7C621D-->
+- [Depurador de secuencia de tareas](/sccm/osd/deploy-use/debug-task-sequence) <!--3612274,C3F37661-69E4-4D53-A39C-5D02F97E0E71-->
+- [Administrador de conversión de paquetes](/sccm/apps/pcm/package-conversion-manager) <!--1357861,4E0C09AF-7FC1-4412-A8BB-166D9BCD0093-->
+- [Aplicaciones cliente para dispositivos administrados conjuntamente](/sccm/comanage/workloads#client-apps) <!--1357892,CC3AE625-BF72-49B1-8AB1-AF0DCF2D6F4C-->
+- [Actualizaciones de software de terceros](/sccm/sum/deploy-use/third-party-software-updates)<!--1357605,1352101,1358714;B5E192AE-C81F-4348-9EF9-07A3C0FBE597-->
+- [Aprobación de solicitudes de aplicación para los usuarios por dispositivo](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy-settings) <!--1357015,4BA987C9-08FC-48E2-BFFE-C9DCF35B496A-->  
+- [Compatibilidad con Cisco AnyConnect 4.0.07x y versiones posteriores para iOS](/sccm/mdm/deploy-use/create-vpn-profiles)<!--1357393,A421682F-C1A5-4933-A329-3EF35737E52A-->
+- [Evaluación de Atestación de estado de dispositivo para las directivas de cumplimiento de acceso condicional](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--1235616,0E986DC1-D20A-4386-9EB5-108D9D5118EB-->
+- [Creación y ejecución de scripts](/sccm/apps/deploy-use/create-deploy-scripts) <!--1236459,566F8720-F415-4E10-9A51-CDE682BA2B2E-->
+- [Ejecutar paso de secuencia de tareas](/sccm/osd/understand/task-sequence-steps#child-task-sequence) <!--1261338,3CFFE6AC-D46F-47F0-AD25-19F6EEF21F28-->
+- [Almacenamiento en caché previa de contenido de secuencias de tareas](/sccm/osd/deploy-use/configure-precache-content) <!--1021244,1C6BD2E9-C8DB-4DEE-A937-AA84B38957A7-->
+- [Actualizaciones de controladores de Surface](/sccm/sum/get-started/configure-classifications-and-products) <!--1098490,82AD973A-7CDF-4B67-A665-72875D6E099A-->
+- [Puerta de enlace de administración en la nube](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) <!--1101764,DD043119-789C-4158-AC79-725E999F385A-->
+- [Punto de servicio de almacenamiento de datos](/sccm/core/servers/manage/data-warehouse) <!--1277922,0EAC8088-6895-440F-B871-11E3C305CFCD-->
+- [Caché del mismo nivel para clientes](/sccm/core/plan-design/hierarchy/client-peer-cache) <!--1101436,4C5F2976-7999-4E0C-BAF2-DEB793AD540E-->
+- [Creación de PFX](/sccm/protect/deploy-use/introduction-to-certificate-profiles) <!--1321368,CED76B79-929C-4C45-981F-B9BCA6D38A17-->
+- [Conector de Log Analytics de Azure](/sccm/core/clients/manage/sync-data-log-analytics) <!--1258052,73A7EC4D-EF22-4EA4-82A9-419C2A8CFC4D-->
+- [Directiva de Protección contra vulnerabilidades de seguridad de Windows Defender](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) <!--1355468,8491D4C8-8484-46B8-BCD6-17DC2CADBAEB-->
+- [VPN para Windows 10](/sccm/protect/deploy-use/vpn-profiles) <!--1283610,EDBEBA3D-3A4D-4465-84D9-D71EB811E7F6-->
+- [Mantenimiento de una recopilación compatible con clústeres (grupos de servidores)](/sccm/sum/deploy-use/service-a-server-group) <!--1081776,290B66D8-C735-4895-B59A-DD732D84A697-->
+- [Windows Hello para empresas](/sccm/protect/deploy-use/windows-hello-for-business-settings) (conocido anteriormente como *Passport for Work*) <!--1245704,8BCA2642-3719-4862-A355-9D39C979E1B4-->
+- [Acceso condicional para los equipos administrados](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)  <!--1191496,1CD5B9FC-022E-4A78-89F5-DEA58B6F5050-->
 
 > [!Tip]  
 > Para obtener más información sobre las características cuya habilitación requiere consentimiento, consulte las [características de versión preliminar](/sccm/core/servers/manage/pre-release-features).  
-> 
+>
 > Para más información sobre las características que solo están disponibles en la rama de Technical Preview, vea [Technical Preview](/sccm/core/get-started/technical-preview).
 
 
-
-##  <a name="bkmk_prerelease"></a> Uso de las características de versión preliminar de las actualizaciones
+## <a name="bkmk_prerelease"></a> Uso de las características de versión preliminar de las actualizaciones
 
 Las características de versión preliminar se incluyen en la Rama actual para realizar pruebas anticipadamente en un entorno de producción. Para obtener más información, vea [Características de versión preliminar](/sccm/core/servers/manage/pre-release-features).
 
 
-
 ## <a name="bkmk_faq"></a> Preguntas más frecuentes
 
-###  <a name="why-dont-i-see-certain-updates-in-my-console"></a>¿Por qué no se ven determinadas actualizaciones en la consola?  
+### <a name="why-dont-i-see-certain-updates-in-my-console"></a>¿Por qué no se ven determinadas actualizaciones en la consola?
 
 Si no encuentra una actualización específica en la consola después de una sincronización correcta con el servicio en la nube de Microsoft, este comportamiento podría deberse a uno de los motivos siguientes:  
 
@@ -437,4 +447,3 @@ Si no encuentra una actualización específica en la consola después de una sin
     Si cree que tiene las configuraciones necesarias y otros requisitos previos para una actualización que falta, confirme que su punto de conexión de servicio se encuentre en el modo en línea. Después, use la opción **Buscar actualizaciones** en el nodo **Actualizaciones y mantenimiento** para forzar una comprobación. Cuando el punto de conexión de servicio está en el modo sin conexión, se usa la herramienta de conexión de servicio para ejecutar manualmente la sincronización con el servicio en la nube.  
 
 - La cuenta no dispone de los permisos de administración basada en roles correctos para ver las actualizaciones en la consola de Configuration Manager. Para obtener más información, vea [Permisos para administrar actualizaciones](#assign-permissions-to-view-and-manage-updates-and-features).  
-

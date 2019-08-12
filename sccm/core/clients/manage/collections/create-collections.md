@@ -2,7 +2,7 @@
 title: Creación de recopilaciones
 titleSuffix: Configuration Manager
 description: Cree recopilaciones en Configuration Manager para facilitar la administración de grupos de usuarios y dispositivos.
-ms.date: 03/05/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ed08a9abb746681eb8e89d471e19990ced313788
-ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
+ms.openlocfilehash: b8ff3dac5c5ff4d04be6f30c02dba8523ce1b80b
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67550908"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68535487"
 ---
 # <a name="how-to-create-collections-in-configuration-manager"></a>Creación de recopilaciones en Configuration Manager
 
@@ -217,6 +217,61 @@ Para obtener más información acerca de cómo exportar las colecciones, vea [Ad
 
 5. Complete el asistente para importar la recopilación. La nueva recopilación se muestra en el nodo **Recopilaciones de usuarios** o **Recopilaciones de dispositivos** del área de trabajo **Activos y compatibilidad** . Actualice o vuelva a cargar la consola de Configuration Manager para ver los miembros de la recopilación recién importada.  
 
+## <a name="bkmk_aadcollsync"></a> Sincronización de los resultados de pertenencia a recopilaciones con grupos de Azure Active Directory
+*(Presentada como una característica de versión preliminar a partir de la versión 1906)*
+<!--3607475-->
+> [!NOTE]
+> La sincronización de las pertenencias a recopilaciones con un grupo de Azure Active Directory (Azure AD) es una característica de versión preliminar que se presentó en la versión 1906. Para habilitarla, consulte el artículo sobre las [características de versión preliminar](/sccm/core/servers/manage/pre-release-features).
+
+Puede habilitar la sincronización de las pertenencias a recopilaciones con un grupo de Azure Active Directory (Azure AD). Esta sincronización permite usar las reglas de agrupación locales existentes en la nube mediante la creación de pertenencias a grupos de Azure AD en función de los resultados de la pertenencia a recopilaciones. Puede sincronizar recopilaciones de dispositivos. Solo los dispositivos con un registro de Azure Active Directory se reflejan en el grupo de Azure AD. Se admiten tanto los dispositivos unidos a Azure Active Directory como los unidos a Azure HD híbrido.
+
+La sincronización con Azure AD se realiza cada cinco minutos. Es un proceso unidireccional, desde Configuration Manager a Azure AD. Los cambios realizados en Azure AD no se reflejan en las recopilaciones de Configuration Manager, pero Configuration Manager no las sobrescribe. Por ejemplo, si la recopilación de Configuration Manager tiene dos dispositivos y el grupo de Azure AD tiene tres dispositivos diferentes, después de la sincronización el grupo de Azure AD tendrá cinco dispositivos.
+
+
+### <a name="prerequisites"></a>Requisitos previos
+
+- [Administración en la nube](/sccm/core/servers/deploy/configure/azure-services-wizard)
+- [Detección de usuarios de Azure Active Directory](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc)
+
+### <a name="create-a-group-and-set-the-owner-in-azure-ad"></a>Creación de un grupo y establecimiento del propietario en Azure AD
+
+1. Vaya a [https://portal.azure.com](https://portal.azure.com).
+1. Vaya a **Azure Active Directory** > **Grupos** > **Todos los grupos**.
+1. Haga clic en **Nuevo grupo** y especifique los valores de **Nombre del grupo** y **Descripción del grupo**.
+1. Seleccione **Propietarios** y, luego, agregue la identidad que creará la relación de sincronización en Configuration Manager.
+1. Haga clic en **Crear** para completar la creación del grupo de Azure AD.
+
+### <a name="enable-collection-synchronization-for-the-azure-service"></a>Habilitación de la sincronización de recopilaciones para el servicio de Azure
+
+1. En la consola de Configuration Manager, vaya a **Administración** > **Información general** > **Servicios en la nube** > **Servicios de Azure**.
+1. Haga clic con el botón derecho en el inquilino de Azure AD donde creó el grupo y seleccione **Propiedades**.
+1. En la pestaña **Sincronización de recopilaciones**, active la casilla de la opción **Enable Azure Directory Group Sync** (Habilitar la sincronización de grupos de Azure Directory).
+1. Haga clic en **Aceptar** para guardar la configuración.
+
+### <a name="enable-the-collection-to-synchronize"></a>Habilitación de la recopilación para sincronizar
+
+1. En la consola de Configuration Manager, vaya a **Activos y compatibilidad** > **Información general** > **Recopilaciones de dispositivos**.
+1. Haga clic en la recopilación que se va a sincronizar y, luego, haga clic en **Propiedades**. 
+1. En la pestaña **AAD Group Sync** (Sincronización de grupos de AAD), haga clic en **Agregar**.
+1. En el menú desplegable, seleccione el **inquilino** donde creó el grupo de Azure AD.
+1. Escriba los criterios de búsqueda en el campo **El nombre empieza por** y, luego, haga clic en **Buscar**.
+  - Si se le pide iniciar sesión, use la identidad que especificó como el propietario del grupo de Azure AD.
+1. Seleccione el grupo de destino, haga clic en **Aceptar** para agregar el grupo y nuevamente en **Aceptar** para salir de las propiedades de la recopilación.
+1. Tendrá que esperar unos 5 o 7 minutos antes de poder comprobar las pertenencias a un grupo en Azure Portal.
+   - Para iniciar una sincronización completa, haga clic con el botón derecho en la recopilación y, luego, seleccione **Synchronize Membership** (Sincronizar pertenencia).
+
+
+### <a name="verify-the-azure-ad-group-membership"></a>Compruebe la pertenencia a un grupo de Azure AD
+
+1. Vaya a [https://portal.azure.com](https://portal.azure.com).
+1. Vaya a **Azure Active Directory** > **Grupos** > **Todos los grupos**.
+1. Busque el grupo que creó y seleccione **Miembros**. 
+1. Confirme que los miembros reflejan los de la recopilación de Configuration Manager.
+   - E el grupo solo se mostrarán los dispositivos con identidad de Azure AD.
+
+
+![Sincronización de recopilaciones con Azure AD](media/3607475-sync-collection-to-azuread.png)
+
 ## <a name="bkmk_powershell"></a> Con PowerShell
 
 Puede usar PowerShell para crear e importar las recopilaciones. Para obtener más información, vea:
@@ -224,3 +279,7 @@ Puede usar PowerShell para crear e importar las recopilaciones. Para obtener má
 * [New-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmcollection)
 * [Set-CMCollection](https://docs.microsoft.com/powershell/module/ConfigurationManager/Set-CMCollection)
 * [Import-CMCollection](https://docs.microsoft.com/powershell/module/ConfigurationManager/Import-CMCollection)
+
+## <a name="next-steps"></a>Pasos siguientes
+
+[Administración de recopilaciones](/sccm/core/clients/manage/collections/manage-collections)

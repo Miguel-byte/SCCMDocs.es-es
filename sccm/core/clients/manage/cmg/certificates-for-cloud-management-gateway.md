@@ -5,18 +5,18 @@ description: Obtenga información sobre los diferentes certificados digitales qu
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 06/17/2019
+ms.date: 07/26/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a905420c2c1189552f1bf11b16fb92968f4f590e
-ms.sourcegitcommit: b62de6c9cb1bc3e4c9ea5ab5ed3355d83e3a59bc
+ms.openlocfilehash: 05031bbec72f5540e7f44d7f232b9527dce7789a
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894109"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68535584"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Certificados para Cloud Management Gateway
 
@@ -47,9 +47,9 @@ Los certificados para Cloud Management Gateway admiten las siguientes configurac
 
 - Proveedores de almacenamiento de claves para claves privadas de certificado. Para obtener más información, consulte [Introducción a los certificados CNG](/sccm/core/plan-design/network/cng-certificates-overview).  
 
-- A partir de la versión 1802, al configurar Windows con la siguiente directiva: **Criptografía de sistema: use algoritmos que cumplan la norma FIPS para cifrado, aplicación de algoritmo hash y firma**.  
+- Al configurar Windows con la siguiente directiva: **Criptografía de sistema: use algoritmos que cumplan la norma FIPS para cifrado, aplicación de algoritmo hash y firma**.  
 
-- A partir de la versión 1802, es compatible con **TLS 1.2**. Para más información, vea [Referencia técnica de controles criptográficos](/sccm/core/plan-design/security/cryptographic-controls-technical-reference#about-ssl-vulnerabilities).  
+- **TLS 1.2**. Para más información, consulte [Habilitación de TLS 1.2](/sccm/core/plan-design/security/enable-tls-1-2).  
 
 
 ## <a name="bkmk_serverauth"></a> Certificado de autenticación de servidor CMG
@@ -61,7 +61,7 @@ Este certificado se proporciona al crear la instancia de CMG en la consola de Co
 CMG crea un servicio HTTPS al que se conectan los clientes basados en Internet. El servidor requiere un certificado de autenticación de servidor para crear el canal seguro. Puede adquirir un certificado para este fin de un proveedor público o emitirlo desde su propia infraestructura de clave pública (PKI). Para obtener más información, vea [Certificado raíz de confianza de CMG para clientes](#bkmk_cmgroot).
 
 > [!NOTE]
-> A partir de la versión 1802, el certificado de autenticación de servidor de CMG admite caracteres comodín. Algunas entidades de certificación emiten certificados con un carácter comodín para el nombre de host. Por ejemplo, `*.contoso.com`. Algunas organizaciones usan certificados con caracteres comodín para simplificar sus PKI y reducir los costos de mantenimiento.<!--491233-->  
+> El certificado de autenticación de servidor de CMG admite caracteres comodín. Algunas entidades de certificación emiten certificados con un carácter comodín para el nombre de host. Por ejemplo, `*.contoso.com`. Algunas organizaciones usan certificados con caracteres comodín para simplificar sus PKI y reducir los costos de mantenimiento.<!--491233-->  
 >
 > Para más información sobre cómo usar un certificado comodín con una instancia de CMG, vea [Configurar una instancia de CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#set-up-a-cmg).<!--SCCMDocs issue #565-->  
 
@@ -80,6 +80,7 @@ Si también permitirá la instancia de CMG para el contenido, confirme que el no
 - Busque la **cuenta de almacenamiento**.
 - Puede su nombre en el campo **Storage account name** (Nombre de la cuenta de almacenamiento).
 
+El perfil de nombre DNS (por ejemplo, *GraniteFalls*) debe tener entre 3 y 24 caracteres alfanuméricos. No use caracteres especiales, como guiones (`-`).<!-- SCCMDocs#1080 -->
 
 ### <a name="bkmk_cmgroot"></a> Certificado raíz de confianza de CMG para clientes
 
@@ -136,7 +137,7 @@ Los clientes usan este certificado al autenticarse con CMG. Los dispositivos de 
 
 Aprovisione este certificado fuera del contexto de Configuration Manager. Por ejemplo, use Servicios de certificados de Active Directory y una directiva de grupo para emitir certificados de autenticación de cliente. Para obtener más información, vea [Implementación del certificado de cliente para equipos Windows](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012).
 
-El punto de conexión de CMG requiere este certificado para reenviar las solicitudes de cliente a un punto de administración HTTPS de forma segura. Si usa Azure AD o HTTP mejorado, este certificado no es necesario. Para obtener más información, vea [Enable management point for HTTPS](#bkmk_mphttps) (Habilitar el punto de administración para HTTPS).
+Para desviar las solicitudes de cliente, el punto de conexión de CMG requiere un certificado de autenticación del cliente que corresponde al certificado de autenticación de servidor en el punto de administración HTTPS. Si los clientes usan la autenticación de Azure AD o si se configura el punto de administración para HTTP mejorado, este certificado no es necesario. Para obtener más información, vea [Enable management point for HTTPS](#bkmk_mphttps) (Habilitar el punto de administración para HTTPS).
 
 ### <a name="bkmk_clientroot"></a> Certificado raíz de confianza de cliente para CMG
 
@@ -144,10 +145,12 @@ El punto de conexión de CMG requiere este certificado para reenviar las solicit
 
 Este certificado se proporciona al crear la instancia de CMG en la consola de Configuration Manager.
 
-CMG debe confiar en los certificados de autenticación de cliente. Para conseguir esta relación de confianza, proporcione la cadena de certificados raíz de confianza. Puede especificar dos entidades de certificación raíz de confianza y cuatro entidades de certificación intermedias (subordinadas). Asegúrese de agregar todos los certificados en la cadena de confianza. Por ejemplo, si una entidad de certificación intermedia emite el certificado de autenticación del cliente, agregue tanto el certificado de la CA intermedia como el de la CA raíz.
+CMG debe confiar en los certificados de autenticación de cliente. Para conseguir esta relación de confianza, proporcione la cadena de certificados raíz de confianza. Asegúrese de agregar todos los certificados en la cadena de confianza. Por ejemplo, si una entidad de certificación intermedia emite el certificado de autenticación del cliente, agregue tanto el certificado de la CA intermedia como el de la CA raíz.
 
 > [!Note]  
 > A partir de la versión 1806, para crear una instancia de CMG ya no es necesario proporcionar un certificado raíz de confianza en la página Configuración. Este certificado no es necesario cuando se usa Azure Active Directory (Azure AD) para la autenticación de cliente, pero solía ser necesario en el asistente. Si usa certificados de autenticación de cliente PKI, entonces todavía debe agregar un certificado raíz de confianza a la CMG.<!--SCCMDocs-pr issue #2872 SCCMDocs issue #1319-->
+>
+> En la versión 1902 y versiones anteriores, solo puede agregar dos CA raíz de confianza y cuatro CA intermedias (subordinadas).
 
 #### <a name="export-the-client-certificates-trusted-root"></a>Exportar la raíz de confianza del certificado de cliente
 
@@ -186,11 +189,12 @@ Después de emitir un certificado de autenticación de cliente a un equipo, siga
 
 Aprovisione este certificado fuera del contexto de Configuration Manager. Por ejemplo, use Servicios de certificados de Active Directory y una directiva de grupo para emitir un certificado de servidor web. Para obtener más información, vea [Requisitos de certificados PKI ](/sccm/core/plan-design/network/pki-certificate-requirements) e [Implementación del certificado de servidor web para sistemas de sitio que ejecutan IIS](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).
 
-- En la versión 1710, cuando se administran clientes tradicionales con una identidad local mediante un certificado de autenticación del cliente, este certificado es recomendable pero no obligatorio. Cuando se administran clientes de Windows 10 unidos a Azure AD, este certificado es necesario para los puntos de administración.
-
 - En la versión 1802, este certificado es necesario en todos los escenarios. Solo los puntos de administración que habilite para CMG deben ser HTTPS. Este cambio de comportamiento proporciona una mejor compatibilidad con la autenticación basada en tokens de Azure AD.  
 
 - A partir de la versión 1806, cuando se usa la opción del sitio **Usar los certificados generados por Configuration Manager para sistemas de sitios HTTP**, el punto de administración puede ser HTTP. Para obtener más información, vea [HTTP mejorado](/sccm/core/plan-design/hierarchy/enhanced-http).
+
+> [!Tip]  
+> Si no usa HTTP mejorado y el entorno tiene varios puntos de administración, no es necesario que los habilite por HTTPS para CMG. Configure los puntos de administración habilitados para CMG como **solo para Internet**. Por lo tanto, los clientes locales no intentan usarlos.<!-- SCCMDocs#1676 -->
 
 ### <a name="management-point-client-connection-mode-summary"></a>Resumen del modo de conexión de cliente de punto de administración
 
@@ -200,12 +204,12 @@ En estas tablas se resume si el punto de administración requiere HTTP o HTTPS, 
 
 Configure un punto de administración local para permitir conexiones desde la instancia de CMG con el modo de conexión de cliente siguiente:
 
-| Tipo de cliente   | 1710        | 1802        | 1806        | 1810        |
-|------------------|-------------|-------------|-------------|-------------|
-| Grupo de trabajo        | HTTP, HTTPS | HTTPS       | E-HTTP<sup>[Nota 1](#bkmk_note1)</sup>, HTTPS | E-HTTP<sup>[Nota 1](#bkmk_note1)</sup>, HTTPS |
-| Unido a dominio de AD | HTTP, HTTPS | HTTPS       | E-HTTP<sup>[Nota 1](#bkmk_note1)</sup>, HTTPS | E-HTTP<sup>[Nota 1](#bkmk_note1)</sup>, HTTPS |
-| Unidos a Azure AD  | HTTPS       | HTTPS       | E-HTTP, HTTPS | E-HTTP, HTTPS |
-| Unido a híbrido    | HTTP, HTTPS | HTTPS       | E-HTTP, HTTPS | E-HTTP, HTTPS |
+| Tipo de cliente   | 1802  | 1806        | 1810        |
+|------------------|-------|-------------|-------------|
+| Grupo de trabajo        | HTTPS | E-HTTP<sup>[Nota 1](#bkmk_note1)</sup>, HTTPS | E-HTTP<sup>[Nota 1](#bkmk_note1)</sup>, HTTPS |
+| Unido a dominio de AD | HTTPS | E-HTTP<sup>[Nota 1](#bkmk_note1)</sup>, HTTPS | E-HTTP<sup>[Nota 1](#bkmk_note1)</sup>, HTTPS |
+| Unidos a Azure AD  | HTTPS | E-HTTP, HTTPS | E-HTTP, HTTPS |
+| Unido a híbrido    | HTTPS | E-HTTP, HTTPS | E-HTTP, HTTPS |
 
 <a name="bkmk_note1"></a>
 
@@ -216,12 +220,12 @@ Configure un punto de administración local para permitir conexiones desde la in
 
 Configure un punto de administración local con el modo de conexión de cliente siguiente:
 
-| Tipo de cliente   | 1710        | 1802        | 1806        | 1810        |
-|------------------|-------------|-------------|-------------|-------------|
-| Grupo de trabajo        | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS |
-| Unido a dominio de AD | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS |
-| Unidos a Azure AD  | HTTPS       | HTTPS       | HTTPS       | HTTPS       |
-| Unido a híbrido    | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS |
+| Tipo de cliente   | 1802        | 1806        | 1810        |
+|------------------|-------------|-------------|-------------|
+| Grupo de trabajo        | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS |
+| Unido a dominio de AD | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS |
+| Unidos a Azure AD  | HTTPS       | HTTPS       | HTTPS       |
+| Unido a híbrido    | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS |
 
 > [!Note]  
 > En la versión 1806, los clientes unidos a un dominio de AD admiten los escenarios centrados en el dispositivo y el usuario para la comunicación con un punto de administración HTTP o HTTPS.  
@@ -236,7 +240,9 @@ Configure un punto de administración local con el modo de conexión de cliente 
 - *Unido a híbrido*: el dispositivo se une a un dominio de Active Directory y un inquilino de Azure AD.  
 - *HTTP*: en las propiedades del punto de administración, las conexiones de cliente se establecen en **HTTP**.  
 - *HTTPS*: en las propiedades del punto de administración, las conexiones de cliente se establecen en **HTTPS**.  
-- *E-HTTP*: en las propiedades del sitio, en la pestaña Comunicación de equipo cliente, la configuración del sistema de sitio se establece en **HTTPS o HTTP**, y se habilita la opción para **usar los certificados generados por Configuration Manager para sistemas de sitios HTTP**. Configurará el punto de administración para HTTP; el punto de administración de HTTP está preparado para comunicaciones HTTP y HTTPS (escenarios de autenticación por tokens).  
+- *E-HTTP*: en las propiedades del sitio, en la pestaña **Comunicación de equipo cliente**, la configuración del sistema de sitio se establece en **HTTPS o HTTP**, y se habilita la opción para **usar los certificados generados por Configuration Manager para sistemas de sitios HTTP**. Configurará el punto de administración para HTTP; el punto de administración de HTTP está preparado para comunicaciones HTTP y HTTPS (escenarios de autenticación por tokens).  
+    > [!Note]
+    > A partir de la versión 1906, esta pestaña se denomina **Communication Security** (Seguridad de la comunicación).<!-- SCCMDocs#1645 -->  
 
 
 ## <a name="bkmk_azuremgmt"></a> Certificado de administración de Azure

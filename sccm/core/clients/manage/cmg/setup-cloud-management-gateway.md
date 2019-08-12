@@ -5,18 +5,18 @@ description: Use este proceso paso a paso para configurar una instancia de Cloud
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 06/17/2019
+ms.date: 07/26/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69ad130dddaecf2a9247126802f9c14fb7176db9
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 7d9f3d922093319c3bfc9341f8fe5472a198a083
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286600"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68535457"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configurar puerta de enlace de administración en la nube para Configuration Manager
 
@@ -38,7 +38,7 @@ Use la lista de comprobación siguiente para asegurarse de que tiene la informac
 
 - Necesitará uno o varios certificados para CMG, en función del diseño. Para obtener más información, vea [Certificates for cloud management gateway](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway) (Certificados para Cloud Management Gateway).  
 
-- A partir de la versión 1802, se *recomienda* seleccionar la **implementación de Azure Resource Manager**. Para obtener más información, vea [Azure Resource Manager](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager). Necesitará los requisitos siguientes para una implementación de Azure Resource Manager de CMG:  
+- Necesitará los requisitos siguientes para una implementación de [Azure Resource Manager](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager) de CMG:  
 
     - Integración con [Azure AD](/sccm/core/servers/deploy/configure/azure-services-wizard) para la **administración en la nube**. La detección de usuarios de Azure AD no es necesaria.  
 
@@ -74,12 +74,10 @@ Realice este procedimiento en el sitio de nivel superior. Ese sitio es un sitio 
 
 2. Seleccione **Crear instancia de Cloud Management Gateway** en la cinta de opciones.  
 
-3. A partir de la versión 1802, en la página General del asistente, seleccione **Implementación de Azure Resource Manager** como método de implementación de CMG.  
-
-    Haga clic en **Iniciar sesión** para autenticarse con una cuenta de administrador de suscripción de Azure. El asistente rellena automáticamente los campos restantes con la información almacenada durante el requisito previo de integración de Azure AD. Si tiene varias suscripciones, seleccione el **Id. de suscripción** de la suscripción deseada que se va a usar.
+3. En la página General del asistente, seleccione **Iniciar sesión**. Autentíquese con una cuenta de administración de suscripción de Azure. El asistente rellena automáticamente los campos restantes con la información almacenada durante el requisito previo de integración de Azure AD. Si tiene varias suscripciones, seleccione el **Id. de suscripción** de la suscripción deseada que se va a usar.
 
     > [!Note]  
-    > A partir de la versión 1810, las implementaciones de servicio clásico de Azure estarán en desuso en Configuration Manager.
+    > A partir de la versión 1810, las implementaciones de servicio clásico de Azure entraron en desuso en Configuration Manager. En la versión 1902 y versiones anteriores, seleccione la **implementación de Azure Resource Manager** como el método de implementación de CMG.
     >
     > Si necesita usar una implementación de servicio clásico, seleccione esa opción en esta página. Primero escriba su **id. de suscripción** de Azure. Después, haga clic en **Examinar** y elija el archivo .PFX para el certificado de administración de Azure.
 
@@ -90,30 +88,34 @@ Realice este procedimiento en el sitio de nivel superior. Ese sitio es un sitio 
 6. En la página de configuración del asistente, seleccione primero **Examinar** y elija el archivo .PFX para el certificado de autenticación de servidor de CMG. El nombre de este certificado rellena los campos **FQDN de servicio** y **Nombre de servicio** necesarios.  
 
    > [!NOTE]  
-   > A partir de la versión 1802, el certificado de autenticación de servidor de CMG admite caracteres comodín. Si usa un certificado comodín, reemplace el asterisco (`*`) en el campo **FQDN de servicio** por el nombre de host deseado para la instancia de CMG.<!--491233-->  
+   > El certificado de autenticación de servidor de CMG admite caracteres comodín. Si usa un certificado comodín, reemplace el asterisco (`*`) en el campo **FQDN de servicio** por el nombre de host deseado para la instancia de CMG.<!--491233-->  
 
 7. Seleccione la lista desplegable **Región** para elegir la región de Azure para esta instancia de CMG.  
 
-8. En la versión 1802, y cuando se usa una implementación de Azure Resource Manager, seleccione una opción **Grupo de recursos**.
+8. Seleccione una opción de **Grupo de recursos**.
    1. Si elige **Usar existente**, seleccione un grupo de recursos existente en la lista desplegable. El grupo de recursos seleccionado debe existir en ese momento en la región seleccionada en el paso 7. Si selecciona un grupo de recursos existente que se encuentre en una región distinta a la seleccionada previamente, se producirá un error de aprovisionamiento de CMG.
    2. Si elige **Crear nuevo**, escriba el nombre del nuevo grupo de recursos.
 
 9. En el campo **Instancia de VM**, escriba el número de máquinas virtuales para este servicio. El valor predeterminado es uno, pero se puede escalar hasta 16 máquinas virtuales por instancia de CMG.  
 
-10. Seleccione **Certificados** para agregar certificados raíz de confianza de cliente. Agregue hasta dos entidades de certificación raíz de confianza y cuatro entidades de certificación intermedias (subordinadas). Asegúrese de agregar todos los certificados en la cadena de confianza.  
+10. Seleccione **Certificados** para agregar certificados raíz de confianza de cliente. Agregue todos los certificados de la cadena de confianza.  
 
     > [!Note]  
     > A partir de la versión 1806, para crear una instancia de CMG ya no es necesario proporcionar un certificado raíz de confianza en la página Configuración. Este certificado no es necesario cuando se usa Azure Active Directory (Azure AD) para la autenticación de cliente, pero solía ser necesario en el asistente. Si usa certificados de autenticación de cliente PKI, entonces todavía debe agregar un certificado raíz de confianza a la CMG.<!--SCCMDocs-pr issue #2872-->  
+    >
+    > En la versión 1902 y versiones anteriores, solo puede agregar dos CA raíz de confianza y cuatro CA intermedias (subordinadas).<!-- SCCMDocs-pr#4022 -->
 
-11. De forma predeterminada, el asistente habilita la opción para **Comprobar revocación de certificado de cliente**. Para que esta verificación funcione, se debe publicar de manera pública una lista de revocación de certificados (CRL). Si no se publica una CRL, desactive esta opción.  
+11. De forma predeterminada, el asistente habilita la opción para **Comprobar revocación de certificado de cliente**. Para que esta verificación funcione, se debe publicar de manera pública una lista de revocación de certificados (CRL). Para obtener más información, vea [Publicar la lista de revocación de certificados](https://docs.microsoft.com/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway#bkmk_crl).  
 
-12. A partir de la versión 1806, de forma predeterminada, el asistente habilita la opción siguiente: **Permitir a CMG funcionar como un punto de distribución de nube y servir contenido desde Azure Storage**. Ahora una instancia de CMG también puede servir contenido a los clientes. Esta funcionalidad reduce los certificados necesarios y el costo de máquinas virtuales de Azure.  
+12. A partir de la versión 1906, puede **exigir TLS 1.2**. Esta configuración solo se aplica a una máquina virtual de servicio en la nube de Azure. No se aplica a ningún cliente ni servidor de sitio de Configuration Manager local. Para más información sobre TLS 1.2, consulte [Habilitación de TLS 1.2](/sccm/core/plan-design/security/enable-tls-1-2).<!-- SCCMDocs-pr#4021 -->
 
-13. Seleccione **Siguiente**.  
+13. A partir de la versión 1806, de forma predeterminada, el asistente habilita la opción siguiente: **Permitir a CMG funcionar como un punto de distribución de nube y servir contenido desde Azure Storage**. Ahora una instancia de CMG también puede servir contenido a los clientes. Esta funcionalidad reduce los certificados necesarios y el costo de máquinas virtuales de Azure.  
 
-14. Para supervisar el tráfico de CMG con un umbral de 14 días, active la casilla para activar la alerta de umbral. Luego, especifique el umbral y el porcentaje en que desea elevar los distintos niveles de alerta. Elija **Siguiente** cuando termine.  
+14. Seleccione **Siguiente**.  
 
-15. Revise la configuración y elija **Siguiente**. Configuration Manager comienza a configurar el servicio. Cuando cierre el asistente, se tardarán entre cinco y 15 minutos en aprovisionar totalmente el servicio en Azure. Compruebe la columna **Estado** de la nueva instancia de CMG para determinar si el servicio está listo.  
+15. Para supervisar el tráfico de CMG con un umbral de 14 días, active la casilla para activar la alerta de umbral. Luego, especifique el umbral y el porcentaje en que desea elevar los distintos niveles de alerta. Elija **Siguiente** cuando termine.  
+
+16. Revise la configuración y elija **Siguiente**. Configuration Manager comienza a configurar el servicio. Cuando cierre el asistente, se tardarán entre cinco y 15 minutos en aprovisionar totalmente el servicio en Azure. Compruebe la columna **Estado** de la nueva instancia de CMG para determinar si el servicio está listo.  
 
     > [!Note]  
     > Para solucionar problemas con las implementaciones de CMG, use **CloudMgr.log** y **CMGSetup.log**. Para obtener más información, vea [Archivos de registro](/sccm/core/plan-design/hierarchy/log-files#cloud-management-gateway).
@@ -127,7 +129,10 @@ Si se usan [certificados de autenticación de cliente](/sccm/core/clients/manage
 
 2. Seleccione el sitio primario al que se asignan los clientes basados en Internet y haga clic en **Propiedades**.  
 
-3. Cambie a la pestaña **Comunicaciones de equipo cliente** de la hoja de propiedades del sitio primario y active la casilla **Usar un certificado de cliente PKI (capacidad de autenticación de cliente) cuando esté disponible**.  
+3. Cambie a la pestaña **Comunicación de equipo cliente** de la hoja de propiedades del sitio primario y active la casilla **Usar un certificado de cliente PKI (capacidad de autenticación de cliente) cuando esté disponible**.  
+
+    > [!Note]
+    > A partir de la versión 1906, esta pestaña se denomina **Communication Security** (Seguridad de la comunicación).<!-- SCCMDocs#1645 -->  
 
 4. Si no se publica una CRL, desactive la opción **Los clientes comprueban la lista de revocación de certificados (CRL) para sistemas de sitio**.  
 
@@ -209,7 +214,7 @@ Después de crear una instancia de CMG, puede modificar algunas de sus configura
 
 - **Certificados**: agregar o quitar certificados de entidades de certificación raíz de confianza o intermedias. Esta opción es útil cuando se agregan nuevas entidades de certificación o se retiran los certificados caducados.  
 
-- **Comprobar revocación de certificado de cliente**: si originalmente no se habilitó esta opción al crear la instancia de CMG, se puede habilitar posteriormente una vez que se publica la CRL.  
+- **Comprobar revocación de certificado de cliente**: si originalmente no se habilitó esta opción al crear la instancia de CMG, se puede habilitar posteriormente una vez que se publica la CRL. Para obtener más información, vea [Publicar la lista de revocación de certificados](https://docs.microsoft.com/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway#bkmk_crl).  
 
 - **Permitir a CMG funcionar como un punto de distribución de nube y servir contenido desde Azure Storage**: a partir de la versión 1806, esta nueva opción está habilitada de forma predeterminada. Ahora una instancia de CMG también puede servir contenido a los clientes. Esta funcionalidad reduce los certificados necesarios y el costo de máquinas virtuales de Azure.<!--1358651-->  
 
@@ -232,7 +237,7 @@ Mantenga siempre al menos una instancia de CMG activa para que los clientes basa
 
 De forma predeterminada, los clientes actualizan la directiva cada 24 horas, por lo que después de crear una instancia de CMG, espere al menos un día antes de eliminar la antigua. Si los clientes están apagados o sin conexión a Internet, debe esperar más.
 
-A partir de la versión 1802, si tiene una instancia de CMG existente en el método de implementación clásico, debe implementar una instancia de CMG nueva para usar el método de implementación de Azure Resource Manager.<!--509753--> Hay dos opciones:  
+Si tiene una instancia de CMG existente en el método de implementación clásico, debe implementar una instancia de CMG nueva para usar el método de implementación de Azure Resource Manager.<!--509753--> Hay dos opciones:  
 
 - Si quiere reutilizar el mismo nombre de servicio:  
 

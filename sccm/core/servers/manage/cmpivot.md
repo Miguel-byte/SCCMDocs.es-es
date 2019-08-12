@@ -2,7 +2,7 @@
 title: CMPivot para datos en tiempo real
 titleSuffix: Configuration Manager
 description: Obtenga información sobre cómo usar CMPivot en Configuration Manager para realizar consultas en clientes en tiempo real.
-ms.date: 05/24/2019
+ms.date: 07/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 704e9ea1c8ddaf8cfebf1377381f6f345a9f7ea1
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: 19275385c75477c1c0da24109d6a9c601c5aa8d0
+ms.sourcegitcommit: 75f48834b98ea6a238d39f24e04c127b2959d913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68339720"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68604558"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>CMPivot para datos en tiempo real en Configuration Manager
 
@@ -368,7 +368,7 @@ Por ejemplo, seleccione el número de dispositivos con un estado de error. Vea e
 
 ### <a name="cmpivot-audit-status-messages"></a>Mensajes de estado de auditoría de CMPivot
 
-A partir de la versión 1810, al ejecutar CMPivot, se crea un mensaje de estado de auditoría con el **MessageID 40805**. Para ver los mensajes de estado, vaya a **Supervisión** < **Estado del sistema** < **Consultas de mensaje de estado**. Puede ejecutar **Todos los mensajes de estado de auditoría de un usuario específico** o **All Audit status Messages for a Specific Site** (Todos los mensajes de estado de auditoria de un sitio específico), o bien crear su propia consulta de mensaje de estado.
+A partir de la versión 1810, al ejecutar CMPivot, se crea un mensaje de estado de auditoría con el **MessageID 40805**. Para ver los mensajes de estado, vaya a **Supervisión** > **Estado del sistema** > **Consultas de mensaje de estado**. Puede ejecutar **Todos los mensajes de estado de auditoría de un usuario específico** o **All Audit status Messages for a Specific Site** (Todos los mensajes de estado de auditoria de un sitio específico), o bien crear su propia consulta de mensaje de estado.
 
 Se usa el formato siguiente para el mensaje:
 
@@ -386,7 +386,7 @@ MessageID 40805: El usuario &lt;nombre de usuario> ejecutó el script &lt;GUID d
 <!--3610960-->
 A partir de Configuration Manager versión 1902, puede ejecutar CMPivot desde el sitio de administración central (CAS) en una jerarquía. El sitio primario sigue controlando la comunicación con el cliente. Al ejecutar CMPivot desde el sitio de administración central, se comunica con el sitio primario a través del canal de suscripción de mensajes de alta velocidad. Esta comunicación no depende de la replicación SQL estándar entre sitios.
 
-Para ejecutar CMPivot en el CAS, se requieren permisos adicionales cuando SQL o el proveedor no están en el mismo equipo o en el caso de la configuración Always On de SQL. Con estas configuraciones remotas, tiene un "escenario de salto doble" para CMPivot.
+Para ejecutar CMPivot en el sitio CAS, se requieren permisos adicionales cuando SQL o el proveedor no están en el mismo equipo o en el caso de la configuración Always On de SQL. Con estas configuraciones remotas, tiene un "escenario de salto doble" para CMPivot.
 
 Para que CMPivot funcione en el CAS con dicho "escenario de salto doble", puede definir una delegación restringida. Lea el artículo [Información general de la delegación restringida de Kerberos](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) para entender las implicaciones de seguridad de esta configuración. Si tiene más de una configuración remota, como el proveedor de SCCM o SQL junto con el CAS, es posible que necesite una combinación de opciones de permisos. A continuación se muestran los pasos que debe realizar:
 
@@ -445,6 +445,111 @@ Para que CMPivot funcione en el CAS con dicho "escenario de salto doble", puede 
 1. Reinicie los servidores principales de SQL Server.
 1. Reinicie el servidor de sitio del CAS y los servidores SQL Server del CAS.
 
+## <a name="bkmk_cmpivot1906"></a> CMPivot a partir de la versión 1906
+
+A partir de la versión 1906, estos elementos se agregaron a CMPivot:
+
+- [Combinaciones, operadores adicionales y agregadores](#bkmk_cmpivot_joins).
+- [Permisos de CMPivot agregados al rol Administrador de seguridad](#bkmk_cmpivot_secadmin1906).
+- [CMPivot independiente](#bkmk_standalone) se agregó como **característica de versión preliminar**.
+
+### <a name="bkmk_cmpivot_joins"></a> Adición de combinaciones, operadores adicionales y agregadores en CMPivot
+<!--4054074-->
+Ahora tiene más operadores aritméticos, agregadores y la posibilidad de agregar combinaciones de consulta como el uso conjunto de Registro y Archivo. Se han agregado los elementos siguientes:
+
+#### <a name="table-operators"></a>Operadores de tabla
+
+|Operadores de tabla| Descripción|
+|-----|-----|
+| [join](https://docs.microsoft.com/azure/kusto/query/joinoperator)| Combina las filas de dos tablas para formar una nueva tabla mediante la coincidencia de fila para el mismo dispositivo|
+|render|Representa los resultados como salida gráfica|
+
+El operador render ya existe en CMPivot. Se ha agregado compatibilidad con varias series y la instrucción **with**. Para más información, vea la sección de [ejemplos](#bkmk_cmpivot_examples1906) y el artículo sobre el [operador join](https://docs.microsoft.com/azure/kusto/query/joinoperator) de Kusto.
+
+#### <a name="limitations-for-joins"></a>Limitaciones para las combinaciones
+
+1. La columna de combinación siempre se realiza de forma implícita en el campo **Dispositivo**.
+1. Puede usar un máximo de 5 combinaciones por consulta.
+1. Puede usar un máximo de 64 columnas combinadas.
+
+#### <a name="scalar-operators"></a>Operadores escalares
+
+|Operador| Descripción|Ejemplo|
+|-----|-----|-----|
+| + | Agregar| `2 + 1, now() + 1d`|
+| - |  Restar| `2 - 1, now() - 1d`|
+| * | Multiplicar| `2 * 2`|
+| / | Dividir | `2 / 1`|
+| % | Módulo | `2 % 1`
+
+#### <a name="aggregation-functions"></a>Funciones de agregación
+
+|Función| Descripción|
+|-----|-----|
+| percentile()| Devuelve una estimación para el percentil más próximo a la clasificación especificada de la población definida por la expresión|
+| sumif() | Devuelve una suma de Expresión para la que Predicado se evalúa como true|
+
+#### <a name="scalar-functions"></a>Funciones escalares
+
+|Función| Descripción|
+|-----|-----|
+| case()| Evalúa una lista de predicados y devuelve la primera expresión de resultado cuyo predicado se cumpla |
+| iff() | Evalúa el primer argumento y devuelve el valor del segundo o tercer argumento en función de si el predicado se ha evaluado como true (el segundo) o false (el tercero)|
+ | indexof() | La función notifica el índice de base cero de la primera repetición de una cadena especificada dentro de la cadena de entrada|
+| strcat() | Concatena entre 1 y 64 argumentos |
+| strlen()| Devuelve la longitud, en caracteres, de la cadena de entrada|
+| substring() | Extrae una subcadena de una cadena de origen desde un índice hasta el final de la cadena |
+| tostring() | Convierte la entrada en una operación de cadena |
+
+#### <a name="bkmk_cmpivot_examples1906"></a> Ejemplos
+
+- Mostrar el dispositivo, el fabricante, el modelo y la versión del SO:
+
+   ```Kusto
+   ComputerSystem
+   | project Device, Manufacturer, Model
+   | join (OperatingSystem | project Device, OSVersion=Caption)
+   ```
+
+- Mostrar el gráfico de tiempos de arranque para un dispositivo:
+
+   ```Kusto
+   SystemBootData
+   | where Device == 'MyDevice'
+   | project SystemStartTime, BootDuration, OSStart=EventLogStart, GPDuration, UpdateDuration
+   | order by SystemStartTime desc
+   | render barchart with (kind=stacked, title='Boot times for MyDevice', ytitle='Time (ms)')
+   ```
+
+   ![Gráfico de barras apiladas en el que se muestran los tiempos de arranque para un dispositivo en ms](./media/4054074-render-using-with-statement.png)
+
+### <a name="bkmk_cmpivot_secadmin1906"></a> Permisos de CMPivot agregados al rol Administrador de seguridad
+<!--4683130-->
+
+A partir de la versión 1906, se agregaron los permisos siguientes al rol **Administrador de seguridad** integrado de Configuration Manager:
+ - Lectura en script SMS
+ - Ejecución de CMPivot en colección
+ - Lectura en Informe de inventario
+
+### <a name="bkmk_standalone"></a> CMPivot independiente
+<!--3555890, 4619340, 4683130 -->
+
+A partir de la versión 1906, puede usar CMPivot como una aplicación independiente. CMPivot independiente es una [característica de versión preliminar](/sccm/core/servers/manage/pre-release-features#bkmk_table) y solo está disponible en inglés. Ejecútelo fuera de la consola de Configuration Manager para ver el estado en tiempo real de los dispositivos en su entorno. Este cambio le permite usar CMPivot en un dispositivo sin instalar primero la consola.
+
+Puede compartir la eficacia de CMPivot con otras personas, como administradores del departamento de soporte técnico o seguridad, que no tienen la consola instalada en su equipo. Estas otras personas pueden usar CMPivot para consultar Configuration Manager junto con las otras herramientas que usan tradicionalmente. Al compartir estos datos de administración enriquecidos, pueden trabajar juntos para resolver proactivamente los problemas empresariales de los roles.
+
+#### <a name="install-cmpivot-standalone"></a>Instalación de CMPivot independiente
+
+1. Configurar los permisos necesarios para ejecutar CMPivot. Para más información, consulte los [requisitos previos](#prerequisites). También puede usar el [rol Administrador de seguridad](#bkmk_cmpivot_secadmin1906) si los permisos son adecuados para el usuario.
+2. Encuentre el instalador de la aplicación CMPivot en la ruta de acceso siguiente: `<site install path>\tools\CMPivot\CMPivot.msi`. Puede ejecutarlo desde esa ruta de acceso o copiarlo en otra ubicación.
+3. Cuando ejecute la aplicación CMPivot independiente, se le pedirá que se conecte a un sitio. Especifique el nombre de dominio completo o el nombre de equipo del servidor del sitio primario o del servidor del sitio de administración central.
+   - Cada vez que abra CMPivot independiente se le pedirá conectarse a un servidor de sitio.
+4. Vaya a la colección donde quiere ejecutar CMPivot y, luego, ejecute la consulta.
+
+   ![Vaya a la colección donde quiere ejecutar la consulta](./media/3555890-cmpivot-standalone-browse-collection.png)
+
+> [!NOTE]
+> Las acciones del menú contextual, como **Ejecutar scripts** y **Explorador de recursos**, no están disponibles en CMPivot independiente.
 
 ## <a name="inside-cmpivot"></a>Dentro de CMPivot
 

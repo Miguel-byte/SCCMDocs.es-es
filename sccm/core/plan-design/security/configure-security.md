@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c623799f4a7dd34a0556069d168f0bb3abfd5ff1
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 08027a99f37b31ca0100dd9737819bb2eac1b94c
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159406"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68536625"
 ---
 # <a name="configure-security-in-configuration-manager"></a>Configuración de la seguridad en Configuration Manager
 
@@ -42,7 +42,8 @@ Si desea usar certificados de infraestructura de clave pública (PKI) para conex
 
 2.  En la cinta, haga clic en **Propiedades**. Después, cambie a la pestaña **Comunicación de equipo cliente**.  
 
-    Esta pestaña está disponible solamente en un sitio primario. Si no puede ver la pestaña **Comunicación de equipo cliente**, compruebe que no esté conectado a un sitio de administración central o a un sitio secundario.  
+    > [!Note]
+    > A partir de la versión 1906, esta pestaña se denomina **Communication Security** (Seguridad de la comunicación).<!-- SCCMDocs#1645 -->  
 
 3.  Seleccione la configuración para los sistemas de sitio que usen IIS.  
 

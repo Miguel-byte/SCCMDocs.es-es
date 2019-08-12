@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 679f62bb38bab06c074c97e92ff7d3adcae80f1b
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: f02c61a3af0088a2f2bb564643a085bd117d63bb
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65501442"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68536604"
 ---
 # <a name="about-discovery-methods-for-system-center-configuration-manager"></a>Acerca de los métodos de detección para System Center Configuration Manager
 
@@ -198,14 +198,19 @@ Para obtener más información sobre cómo configurar este método de detección
 
 
 ## <a name="azureaddisc"></a> Detección de usuarios de Azure Active Directory
-Use la detección de usuarios de Azure Active Directory (Azure AD) para buscar la suscripción de Azure AD para los usuarios con una identidad de nube moderna. La detección de usuarios de Azure AD puede encontrar los atributos siguientes:  
--   objectId
--   DisplayName
--   mail
--   mailNickname
--   onPremisesSecurityIdentifier
--   userPrincipalName
--   tenantID de AAD
+
+Use la detección de usuarios de Azure Active Directory (Azure AD) para buscar la suscripción de Azure AD para los usuarios con una identidad de nube moderna. La detección de usuarios de Azure AD puede encontrar los atributos siguientes:
+
+- objectId
+- DisplayName
+- mail
+- mailNickname
+- onPremisesSecurityIdentifier
+- userPrincipalName
+- tenantID de AAD
+- onPremisesDomainName
+- onPremisesSamAccountName
+- onPremisesDistinguishedName
 
 Este método es compatible con la sincronización completa y de diferencias de atributos de usuario de Azure AD. Esta información puede utilizarse con los datos de detección que recopile de los otros métodos de detección.
 
@@ -213,7 +218,19 @@ Las acciones para la detección de usuarios de Azure AD se registran en el archi
 
 Para configurar la detección de usuarios de Azure AD, vea [Configuración de servicios de Azure](/sccm/core/servers/deploy/configure/Azure-services-wizard) para la administración en la nube. Para obtener más información sobre cómo configurar este método de detección, consulte la sección [Configuración de la detección de usuarios de Azure AD](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc).
 
+## <a name="bkmk_azuregroupdisco"></a> Detección de grupos de usuarios de Azure Active Directory
+<!--3611956-->
+*(Presentada como una [característica de versión preliminar](/sccm/core/servers/manage/pre-release-features) en la versión 1906)*
 
+Puede descubrir grupos de usuarios y miembros de esos grupos desde Azure Active Directory (Azure AD). La detección de grupos de usuarios de Azure AD puede encontrar los atributos siguientes:
+
+- objectId
+- DisplayName
+- mailNickname
+- onPremisesSecurityIdentifier
+- tenantID de AAD
+
+Las acciones para la detección de grupos de usuarios de Azure AD se registran en el archivo **SMS_AZUREAD_DISCOVERY_AGENT.log** del servidor del sitio de nivel superior de la jerarquía. Para más información sobre cómo configurar este método de detección, vea [Configuración de la detección de grupos de usuarios de Azure AD](/sccm/core/servers/deploy/configure/configure-discovery-methods#azuregroupdisco).
 
 ##  <a name="bkmk_aboutHeartbeat"></a> Detección de latidos  
 **Configurable:** Sí  

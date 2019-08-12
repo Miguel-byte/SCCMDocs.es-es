@@ -1,7 +1,7 @@
 ---
 title: Asistente para la instalación
 titleSuffix: Configuration Manager
-ms.date: 05/23/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e69dbd246e9989494db95cfe5996862c7772822b
-ms.sourcegitcommit: bfb8a17f60dcb9905e739045a5141ae45613fa2c
+ms.openlocfilehash: e424254af1068bdb6f637f38622dc737528702b4
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66198495"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68536262"
 ---
 # <a name="use-the-setup-wizard-to-install-configuration-manager-sites"></a>Use el Asistente para instalación si quiere instalar sitios de Configuration Manager.
 
@@ -25,13 +25,29 @@ Para instalar un nuevo sitio de Configuration Manager mediante una interfaz de u
 
 Instale un sitio secundario desde la consola de Configuration Manager. Los sitios secundarios no admiten una instalación de línea de comandos por script.
 
+> [!Note]  
+> A partir de la versión 1906, el archivo **splash.hta** ya no existe en la raíz del soporte de instalación. Proporciona vínculos a la siguiente información:<!--SCCMDocs-pr#3545-->
+>
+> - **Instalar el sitio**: `smssetup\bin\x64\setup.exe`. Para más información, vea [Instalación de un sitio de administración central o primario](#bkmk_primary).
+> - **Antes de comenzar**: [Diseñar una jerarquía de sitios](/sccm/core/plan-design/hierarchy/design-a-hierarchy-of-sites) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626543 -->
+> - **Evaluar la preparación del servidor**: [Comprobador de requisitos previos](/sccm/core/servers/deploy/install/prerequisite-checker) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626546 -->
+> - **Descargar archivos de requisitos previos requeridos**: `smssetup\bin\x64\setupdl.exe`. Para obtener más información, consulte [Descargador del programa de instalación](/sccm/core/servers/deploy/install/setup-downloader).
+> - **Instalar la consola de Configuration Manager**: `smssetup\bin\i386\consolesetup.exe`. Para más información, vea [Instalar consolas](/sccm/core/servers/deploy/install/install-consoles).
+> - [**Descargar System Center Updates Publisher**](/sccm/sum/tools/updates-publisher) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626548 -->
+> - [**Descargar clientes para sistemas operativos adicionales**](https://www.microsoft.com/download/details.aspx?id=47719) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626550 -->
+> - [**Notas de la versión**](/sccm/core/servers/deploy/install/release-notes) <!-- https://go.microsoft.com/fwlink/?LinkID=626571 -->
+> - [**Leer documentación**](https://docs.microsoft.com/sccm)<!-- https://go.microsoft.com/fwlink/p/?LinkId=626547 -->
+> - **Obtener asistencia para la instalación**: [Foros de TechNet: Configuration Manager (rama actual): implementación de cliente y de sitio](https://social.technet.microsoft.com/Forums/en-us/home?forum=ConfigMgrDeployment) <!--NOTE: this link requires en-us locale to work-->   <!-- https://go.microsoft.com/fwlink/p/?LinkId=626549 -->
+> - **Comunidad de Configuration Manager**: [Comunidad de System Center: Cómo participar](https://social.technet.microsoft.com/wiki/contents/articles/11504.system-center-community-how-to-participate.aspx) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626544 -->
+> - [**Página principal de Configuration Manager**](https://www.microsoft.com/en-us/cloud-platform/system-center-configuration-manager) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626545 -->
 
 
 ## <a name="bkmk_primary"></a> Instalación de un sitio de administración central o primario
 
-Utilice el siguiente procedimiento para instalar un sitio de administración central o primario. Úselo también para actualizar un sitio de evaluación a un sitio de Configuration Manager con licencia completa.   
+Utilice el siguiente procedimiento para instalar un sitio de administración central o primario. Úselo también para actualizar un sitio de evaluación a un sitio de Configuration Manager con licencia completa.
 
 Antes de iniciar la instalación del sitio, debe familiarizarse con los detalles que se incluyen en los artículos siguientes:
+
 - [Preparar la instalación de sitios](/sccm/core/servers/deploy/install/prepare-to-install-sites)
 - [Requisitos previos para instalar un sitio](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites)
 
@@ -60,7 +76,7 @@ Si va a instalar un sitio de administración central como parte de un escenario 
 
         > [!TIP]  
         > Normalmente, solo se selecciona la opción **Usar opciones de instalación típica para un sitio primario independiente** para instalar un sitio primario independiente en un entorno de prueba. Cuando se selecciona esta opción, el programa de instalación realiza las siguientes acciones:  
-        > 
+        >
         > - Configura automáticamente el sitio como un sitio primario independiente.  
         > - Usa una ruta de instalación predeterminada.  
         > - Usa una instalación local de la instancia predeterminada de SQL Server para la base de datos del sitio.  
@@ -77,8 +93,8 @@ Si va a instalar un sitio de administración central como parte de un escenario 
 
     - También puede especificar la **fecha de expiración de Software Assurance** de su contrato de licencia. Es un cómodo recordatorio de esa fecha. Si no la especifica durante la instalación, puede especificarla más tarde desde la consola de Configuration Manager.  
 
-        > [!NOTE]   
-        > Microsoft no valida la fecha de expiración especificada y no la usa para la validación de la licencia, pero usted puede usarla como un recordatorio de la fecha de expiración. Esta fecha es útil porque Configuration Manager comprueba periódicamente si hay nuevas actualizaciones de software que se ofrecen en línea. El estado de su licencia de Software Assurance debe ser actual para reunir los requisitos que permiten usar estas actualizaciones adicionales.    
+        > [!NOTE]  
+        > Microsoft no valida la fecha de expiración especificada y no la usa para la validación de la licencia, pero usted puede usarla como un recordatorio de la fecha de expiración. Esta fecha es útil porque Configuration Manager comprueba periódicamente si hay nuevas actualizaciones de software que se ofrecen en línea. El estado de su licencia de Software Assurance debe ser actual para reunir los requisitos que permiten usar estas actualizaciones adicionales.  
 
     Para obtener más información, vea [Licencias y ramas](/sccm/core/understand/learn-more-editions).  
 
@@ -104,11 +120,11 @@ Si va a instalar un sitio de administración central como parte de un escenario 
 
 10. En la página **Configuración de sitio e instalación**, especifique los siguientes valores para el nuevo sitio que va a instalar:  
 
-    - **Código de sitio**: [Cada código de sitio en una jerarquía debe ser único](/sccm/core/servers/deploy/install/prepare-to-install-sites#bkmk_sitecodes). Utilice tres dígitos alfanuméricos: Entre la A y la Z y del 0 al 9. Dado que el código de sitio se usa en nombres de carpeta, no use nombres reservados para Windows, como los siguientes:    
+    - **Código de sitio**: [Cada código de sitio en una jerarquía debe ser único](/sccm/core/servers/deploy/install/prepare-to-install-sites#bkmk_sitecodes). Utilice tres dígitos alfanuméricos: Entre la A y la Z y del 0 al 9. Dado que el código de sitio se usa en nombres de carpeta, no use nombres reservados para Windows, como los siguientes:  
         - AUX  
-        - CON    
-        - NUL    
-        - PRN    
+        - CON  
+        - NUL  
+        - PRN  
         - SMS  
 
         > [!NOTE]  
@@ -211,7 +227,7 @@ Si va a instalar un sitio de administración central como parte de un escenario 
 
     - Cuando el Comprobador de requisitos previos encuentre un problema, seleccione un elemento de la lista para obtener más información sobre cómo resolverlo.  
 
-    - Antes de continuar para instalar el sitio, resuelva los elementos **con error**. También debe resolver los elementos que tienen el estado **Advertencia**, pero no impiden la instalación del sitio.  
+    - Antes de continuar para instalar el sitio, resuelva los elementos **con error**. Intente resolver los elementos que tienen el estado **Advertencia**, pero no impiden la instalación del sitio.  
 
     - Después de solucionar los problemas, seleccione **Ejecutar comprobación** para volver a ejecutar el Comprobador de requisitos previos.  
 
@@ -227,10 +243,9 @@ Si va a instalar un sitio de administración central como parte de un escenario 
     - Cuando el programa de instalación haya finalizado, puede conectar una consola en la que puede editar objetos y configuraciones.  
 
 
-
 ## <a name="bkmk_expand"></a> Expandir un sitio primario independiente
 
-Cuando haya instalado un sitio primario independiente como primer sitio, después tendrá la opción de expandir dicho sitio en una jerarquía más grande, instalando un sitio de administración central.   
+Cuando haya instalado un sitio primario independiente como primer sitio, después tendrá la opción de expandir dicho sitio en una jerarquía más grande, instalando un sitio de administración central.
 
 Al expandir un sitio primario independiente, instale un sitio de administración central nuevo que use la base de datos del sitio primario independiente existente como referencia. Después de instalar un nuevo sitio de administración central, el sitio primario independiente hace la función de sitio primario secundario.
 
@@ -242,7 +257,6 @@ Al expandir un sitio primario independiente, instale un sitio de administración
 
 - Para quitar un sitio primario de una jerarquía con un sitio de administración central, desinstale primero el sitio primario.  
 
-
 Para expandir el sitio, use el Asistente para instalación de Configuration Manager para instalar un nuevo sitio de administración central con las siguientes observaciones:  
 
 - Instale el sitio de administración central usando la misma versión de Configuration Manager que el sitio primario independiente.  
@@ -253,10 +267,7 @@ Para expandir el sitio, use el Asistente para instalación de Configuration Mana
 
 - En la página **Instalación del sitio**, seleccione la opción de expandir el sitio primario independiente.  
 
-
 Para expandir un sitio primario independiente, vea primero los [requisitos previos para expandir un sitio](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#bkmk_expand). Luego, use el procedimiento [para instalar un sitio primario o de administración central](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#bkmk_installpri) que aparece en este artículo.
-
-
 
 
 ## <a name="bkmk_secondary"></a> Instalar un sitio secundario
@@ -268,7 +279,6 @@ Use la consola de Configuration Manager para instalar un sitio secundario.
 - Antes de comenzar la instalación del sitio, asegúrese de que su cuenta de usuario tiene los permisos necesarios. Además, asegúrese de que el servidor que hospedará el nuevo sitio secundario cumple todos los requisitos previos para su uso como un servidor de sitio secundario.  
 
 - Al instalar el sitio secundario, Configuration Manager configura el nuevo sitio secundario para que pueda usar los puertos de comunicación de cliente que están configurados en el sitio primario principal.  
-
 
 ### <a name="bkmk_installsecondary"></a> Proceso para instalar un sitio secundario  
 
@@ -282,9 +292,9 @@ Use la consola de Configuration Manager para instalar un sitio secundario.
 
     - **Código de sitio**: Cada código de sitio en una jerarquía debe ser único. Utilice tres dígitos alfanuméricos: Entre la A y la Z y del 0 al 9. Dado que el código de sitio se usa en nombres de carpeta, no use nombres reservados para Windows, como los siguientes:  
 
-        - AUX    
-        - CON    
-        - NUL    
+        - AUX  
+        - CON  
+        - NUL  
         - PRN  
         - SMS  
 
@@ -312,13 +322,13 @@ Use la consola de Configuration Manager para instalar un sitio secundario.
         - La ubicación del archivo de origen CD.Latest incluye una carpeta llamada **Redist**. Mueva esta carpeta **Redist** como una subcarpeta debajo de la carpeta **SMSSETUP**.  
 
             > [!Note]  
-            > Si se producen errores de falta de coincidencia de hash durante la instalación, actualice la carpeta **Redist**. Use el [Descargador del programa de instalación](/sccm/core/servers/deploy/install/setup-downloader) para obtener los archivos más recientes. En el caso de los archivos que provocan un error de coincidencia de hash, cópielos también de la carpeta **Redist** actualizada a la carpeta **SMSSETUP\BIN\X64**. 
+            > Si se producen errores de falta de coincidencia de hash durante la instalación, actualice la carpeta **Redist**. Use el [Descargador del programa de instalación](/sccm/core/servers/deploy/install/setup-downloader) para obtener los archivos más recientes. En el caso de los archivos que provocan un error de coincidencia de hash, cópielos también de la carpeta **Redist** actualizada a la carpeta **SMSSETUP\BIN\X64**.
 
     - **Versión 1806 y posteriores**<!-- SCCMDocs-pr issue 3164 -->
 
         - La ubicación del archivo de origen CD.Latest incluye una carpeta llamada **Redist**. Mueva esta carpeta **Redist** como una subcarpeta debajo de la carpeta **SMSSETUP**.  
 
-        - Copie los siguientes archivos desde la carpeta **Redist** a la carpeta **SMSSETUP\BIN\X64**:   
+        - Copie los siguientes archivos desde la carpeta **Redist** a la carpeta **SMSSETUP\BIN\X64**:  
             - SharedManagementObjects.msi
             - SQLSysClrTypes.msi
             - sqlncli.msi
@@ -400,7 +410,6 @@ Use la consola de Configuration Manager para instalar un sitio secundario.
 
 11. En la página **Resumen**, compruebe la configuración y seleccione **Siguiente** para instalar el sitio secundario. Cuando el asistente muestre la página **Finalización**, puede cerrarlo. La instalación del sitio secundario continúa en segundo plano.  
 
-
 ### <a name="bkmk_verify"></a> Comprobación del estado de instalación del sitio secundario  
 
 1. En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Configuración del sitio** y seleccione el nodo **Sitios**.  
@@ -409,4 +418,3 @@ Use la consola de Configuration Manager para instalar un sitio secundario.
 
     > [!TIP]  
     > Si se instala más de un sitio secundario a la vez, el Comprobador de requisitos previos se ejecuta en los distintos sitios de uno en uno. Debe finalizar un sitio antes de empezar a comprobar el siguiente.  
-

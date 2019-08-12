@@ -2,7 +2,7 @@
 title: Comprobaciones de requisitos previos
 titleSuffix: Configuration Manager
 description: Referencia de las comprobaciones de requisitos previos específicos para las actualizaciones de Configuration Manager.
-ms.date: 04/02/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79730167346490350a7536c6badb5f0bc0fa85f4
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: 85d868793f876d2b749eb5cfc1376278699e2a7d
+ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67252282"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68536424"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Lista de comprobaciones de requisitos previos de Configuration Manager
 
@@ -374,6 +374,20 @@ Al usar Always On de SQL Server, las réplicas del grupo de disponibilidad se c
 *Se aplica a: servidor de base de datos del sitio*
 
 Al usar Always On de SQL Server, las réplicas del grupo de disponibilidad se encuentran en la instancia predeterminada.
+
+### <a name="sql-availability-group-replicas-must-all-have-the-same-seeding-mode"></a>Todos los grupos de disponibilidad de SQL deben tener el mismo modo de propagación
+
+<!-- SCCMDocs-pr#3899 -->
+*Se aplica a: servidor de base de datos del sitio*
+
+A partir de la versión 1906, al usar SQL Server Always On, debe configurar las réplicas del grupo de disponibilidad con el mismo [modo de propagación](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas).
+
+### <a name="sql-availability-group-replicas-must-be-healthy"></a>Las réplicas del grupo de disponibilidad de SQL deben estar en buen estado
+
+<!-- SCCMDocs-pr#3899 -->
+*Se aplica a: servidor de base de datos del sitio*
+
+A partir de la versión 1906, al usar Always On de SQL Server, las réplicas del grupo de disponibilidad presentan un estado correcto.
 
 ### <a name="sql-server-configuration-for-site-upgrade"></a>Configuración de SQL Server para la actualización de sitio
 
