@@ -2,7 +2,7 @@
 title: Consola de Configuration Manager
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la navegación a través de la consola de Configuration Manager.
-ms.date: 07/26/2019
+ms.date: 08/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3ca011fda7227092f44961e5636ecf86b683129b
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: b93e636ea690fa99fd2a0dfc63bd12932d2f7a5e
+ms.sourcegitcommit: b5c7496ca408803046acc8403858aafd5dca8808
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68536375"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794672"
 ---
 # <a name="using-the-configuration-manager-console"></a>Uso de la consola de Configuration Manager
 
@@ -337,13 +337,6 @@ Este comportamiento mejora significativamente el tiempo necesario para buscar po
 *(Se introdujo en la versión 1906)*
 
 En el área de trabajo **Biblioteca de software**, expanda **Sistemas operativos** y haga clic en el nodo **Secuencias de tareas**. Edite una secuencia de tareas y seleccione o agregue el paso [Instalar paquete](/sccm/osd/understand/task-sequence-steps#BKMK_InstallPackage). Si un paquete tiene más de un programa, ahora en la lista desplegable los programas se ordenan alfabéticamente.
-
-#### <a name="multiselect-and-delete-packages"></a>Selección múltiple y eliminación de paquetes
-<!--4616810-->
-*(Se introdujo en la versión 1906)*
-
-En el área de trabajo **Biblioteca de software**, expanda **Administración de aplicaciones** y seleccione el nodo **Paquetes**. Seleccione más de un paquete. En el grupo Paquete de la cinta, ahora puede eliminar más de un paquete a la vez.
-
 
 #### <a name="task-sequences-tab-in-applications-node"></a>Pestaña Secuencias de tareas en el nodo Aplicaciones
 <!--4616810-->

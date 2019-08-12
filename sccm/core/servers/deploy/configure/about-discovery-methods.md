@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f02c61a3af0088a2f2bb564643a085bd117d63bb
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 21183b620b8161056377bb7fc6e86bde79f31767
+ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68536604"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68860076"
 ---
 # <a name="about-discovery-methods-for-system-center-configuration-manager"></a>Acerca de los métodos de detección para System Center Configuration Manager
 
@@ -230,7 +230,7 @@ Puede descubrir grupos de usuarios y miembros de esos grupos desde Azure Active 
 - onPremisesSecurityIdentifier
 - tenantID de AAD
 
-Las acciones para la detección de grupos de usuarios de Azure AD se registran en el archivo **SMS_AZUREAD_DISCOVERY_AGENT.log** del servidor del sitio de nivel superior de la jerarquía. Para más información sobre cómo configurar este método de detección, vea [Configuración de la detección de grupos de usuarios de Azure AD](/sccm/core/servers/deploy/configure/configure-discovery-methods#azuregroupdisco).
+Las acciones para la detección de grupos de usuarios de Azure AD se registran en el archivo **SMS_AZUREAD_DISCOVERY_AGENT.log** del servidor del sitio de nivel superior de la jerarquía. Para más información sobre cómo configurar este método de detección, vea [Configuración de la detección de grupos de usuarios de Azure AD](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_azuregroupdisco).
 
 ##  <a name="bkmk_aboutHeartbeat"></a> Detección de latidos  
 **Configurable:** Sí  
