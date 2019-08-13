@@ -2,7 +2,7 @@
 title: Activos en análisis de escritorio
 titleSuffix: Configuration Manager
 description: Obtenga información acerca de los dispositivos, los controladores y las aplicaciones de análisis de escritorio.
-ms.date: 06/13/2019
+ms.date: 08/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 63800bf6c8fa1d35eac44f64f2f03bde4f1d5022
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 96e76eb9a1874daa9af844d598808e30bb1a45d2
+ms.sourcegitcommit: 6b5a003256305c1f0cb605e52aeaaf19c23af5a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68535950"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956239"
 ---
 # <a name="assets-in-desktop-analytics"></a>Activos en análisis de escritorio
 
@@ -52,6 +52,10 @@ Configure la **importancia** de las aplicaciones mediante la configuración de u
 - Aún
 - Ignorar
 - No revisado
+- No es importante<!-- 3587232 -->
+
+    > [!Tip]
+    > Para obtener más información sobre la categoría "no importante", vea [decisión de actualización automática de aplicaciones del sistema y de la tienda](/sccm/desktop-analytics/about-deployment-plans#bkmk_plan-autoapp).
 
 Seleccione la aplicación en la lista y seleccione **Editar**. Esta acción muestra los detalles de la aplicación. Seleccione el menú desplegable **importancia** y establezca un valor. También puede asignar un **propietario**. Si realiza cambios, seleccione **Guardar**.
 

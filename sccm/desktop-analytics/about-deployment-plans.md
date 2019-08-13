@@ -1,8 +1,8 @@
 ---
-title: Planes de implementación en escritorio Analytics
+title: Planes de implementación en análisis de escritorio
 titleSuffix: Configuration Manager
-description: Obtenga información sobre los planes de implementación en escritorio Analytics.
-ms.date: 06/13/2019
+description: Obtenga información sobre los planes de implementación de análisis de escritorio.
+ms.date: 08/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,120 +11,140 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e1f084f1f3fdfd8b51caa7db696a841ffbf2e57
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 2a1acd99ca1a4676c4397eee427cdcb8b795cf00
+ms.sourcegitcommit: 6b5a003256305c1f0cb605e52aeaaf19c23af5a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159260"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956394"
 ---
-# <a name="about-deployment-plans-in-desktop-analytics"></a>Acerca de los planes de implementación en escritorio Analytics
+# <a name="about-deployment-plans-in-desktop-analytics"></a>Acerca de los planes de implementación en el análisis de escritorio
 
 > [!Note]  
-> Esta información se relaciona con un servicio en versión preliminar que puede modificarse sustancialmente antes de su lanzamiento comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información aquí proporcionada.  
+> Esta información está relacionada con un servicio de vista previa que se puede modificar sustancialmente antes de que se publique comercialmente. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información aquí proporcionada.  
 
-Escritorio Analytics recopila y analiza los datos de dispositivos, aplicaciones y controladores de su organización. Según este análisis y la entrada, puede usar el servicio para crear planes de implementación para Windows 10. Planes de implementación tienen las siguientes características:  
+Análisis de escritorio recopila y analiza los datos de dispositivos, aplicaciones y controladores de la organización. En función de este análisis y de la entrada, puede usar el servicio para crear planes de implementación para Windows 10. Los planes de implementación tienen las siguientes características:  
 
-- Le recomienda automáticamente los dispositivos que se va a incluir en las pruebas piloto  
+- Recomendar automáticamente los dispositivos que se van a incluir en los pilotos  
 
 - Identificar problemas de compatibilidad y sugerir mitigaciones  
 
 - Evaluar el estado de la implementación antes, durante y después de las actualizaciones  
 
-- Realizar un seguimiento del progreso de la implementación  
+- Seguimiento del progreso de la implementación  
 
-Como parte de su plan de implementación, realice las siguientes acciones:  
+Como parte del plan de implementación, realice las siguientes acciones:  
 
-- Defina qué versiones de Windows 10 que desea implementar  
+- Definir qué versiones de Windows 10 desea implementar  
 
-- Elija qué grupos de dispositivos a la que desea implementar  
+- Elegir los grupos de dispositivos en los que se va a implementar  
 
 - Crear reglas de preparación para la implementación  
 
 - Definir la importancia de las aplicaciones  
 
-- Elegir dispositivos pilotos según las recomendaciones automática  
+- Elección de dispositivos piloto basados en recomendaciones automáticas  
 
-- Decidir cómo solucionar problemas con las aplicaciones basadas en las recomendaciones de análisis de escritorio  
+- Decidir cómo corregir problemas con aplicaciones basadas en recomendaciones de análisis de escritorio  
 
-De forma predeterminada, el análisis de escritorio actualiza diariamente datos del plan de implementación. Los cambios que realice en un plan de implementación, como asignar importancia para una aplicación o elegir un dispositivo debe incluir en una prueba piloto, tarda hasta 24 horas en procesarse. Para acelerar este proceso, solicitar una actualización de datos y a petición. Para obtener más información, consulte [preguntas más frecuentes sobre análisis de escritorio](/sccm/desktop-analytics/faq#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).  
+De forma predeterminada, Desktop Analytics actualiza los datos del plan de implementación diariamente. Los cambios que realice en un plan de implementación, como la asignación de importancia a una aplicación o la elección de un dispositivo para incluirlo en una prueba piloto, tardan hasta 24 horas en procesarse. Para acelerar este proceso, solicite una actualización de datos a petición. Para obtener más información, consulte [p + f de análisis de escritorio](/sccm/desktop-analytics/faq#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).  
 
-Después de conectarse a análisis de escritorio a Configuration Manager, seleccione las colecciones de los planes de implementación. A continuación, esta integración le permite implementar Windows a una colección en función de los datos de análisis de escritorio.
+Después de conectar el análisis de escritorio a Configuration Manager, seleccione sus colecciones en los planes de implementación. Esta integración le permite implementar Windows en una recopilación basada en los datos de análisis de escritorio.
 
 
 
 ## <a name="readiness-rules"></a>Reglas de preparación
 
-Las siguientes reglas de disponibilidad están disponibles en los planes de implementación:
+Las siguientes reglas de preparación están disponibles en los planes de implementación:
 
-- Si los dispositivos reciban automáticamente controladores de Windows Update. Si los dispositivos reciben las actualizaciones de controladores desde Windows Update, entonces cualquier problema de controlador identificado como parte de la evaluación de preparación se marca automáticamente como **listo**.  
+- Si los dispositivos reciben controladores automáticamente desde Windows Update. Si los dispositivos reciben las actualizaciones de controladores de Windows Update, los problemas de controladores identificados como parte de la evaluación de disponibilidad se marcan automáticamente como **listos**.  
 
-- Instalar bajo el umbral de recuento para las aplicaciones de Windows. Si una aplicación está instalada en un mayor porcentaje de equipos a este umbral, el plan de implementación marca la aplicación como **Noteworthy**. Esta etiqueta significa que puede decidir cuán importante es la prueba durante la fase piloto.  
+- Umbral de recuento de instalaciones bajas para las aplicaciones de Windows. Si una aplicación se instala en un porcentaje mayor de equipos que este umbral, el plan de implementación marca la aplicación como **digno**de interés. Esta etiqueta significa que puede decidir la importancia de la prueba de la aplicación durante la fase piloto.  
 
 
-## <a name="plan-assets"></a>Plan de recursos
+## <a name="plan-assets"></a>Planear recursos
 
 <!-- 4670224 -->
 
-Mientras el [activos](/sccm/desktop-analytics/about-assets) área también muestra los dispositivos y aplicaciones, el **Plan activos** área debajo de un plan de implementación específico incluye información adicional.
+Aunque el área [activos](/sccm/desktop-analytics/about-assets) también muestra dispositivos y aplicaciones, el área **activos del plan** en un plan de implementación específico incluye información adicional.
 
 ### <a name="devices"></a>Dispositivos
 
 Consulte la **decisión de actualización de Windows** para cada dispositivo en el plan de implementación.
 
-Decisión de actualización de la Windows **dispositivo reemplazar** puede deberse a uno de los siguientes motivos:
+La decisión de actualización de Windows para **reemplazar el dispositivo** puede deberse a uno de los siguientes motivos:
 
-- Se produjo un error de una comprobación de procesador de Windows 10 necesarios. Para obtener más información, consulte [requisitos mínimos de hardware](https://docs.microsoft.com/windows-hardware/design/minimum/minimum-hardware-requirements-overview#31-processor).
+- No se pudo realizar una comprobación del procesador necesaria para Windows 10. Para obtener más información, consulte [requisitos mínimos de hardware](https://docs.microsoft.com/windows-hardware/design/minimum/minimum-hardware-requirements-overview#31-processor).
 - Tiene un bloque de BIOS
-- No tiene memoria suficiente
-- Un componente crítico de arranque en el sistema tiene un controlador de bloqueo
-- No se pueden actualizar la marca y modelo
-- Hay un componente de la clase de la pantalla con un bloque de controlador que tiene todos los atributos siguientes:
-    - No se invalidan
+- No tiene suficiente memoria
+- Un componente crítico para el arranque en el sistema tiene un controlador bloqueado
+- La marca y el modelo específicos no pueden actualizarse
+- Hay un componente de clase de pantalla con un bloque de controladores que tiene todos los atributos siguientes:
+    - No invalide
     - No hay ningún controlador en la nueva versión del sistema operativo
-    - Aún no está en Windows Update
-- Hay otro componente de plug and play en el sistema que bloquea la actualización
-- Hay un componente inalámbrico que usa un controlador XP emulados
-- Un componente de red con una conexión activa perderá su controlador. En otras palabras, después de la actualización podría perder conectividad de red.
+    - Todavía no está en Windows Update
+- Hay otro componente plug-and-Play en el sistema que bloquea la actualización
+- Hay un componente inalámbrico que usa un controlador emulado de XP
+- Un componente de red con una conexión activa perderá su controlador. En otras palabras, después de la actualización, podría perder la conectividad de red.
 
 ### <a name="apps"></a>Aplicaciones
 
-Establecer el **decisión de actualización** , así como la **importancia** para esta aplicación en este plan de implementación. Para obtener más información, consulte [cómo crear planes de implementación](/sccm/desktop-analytics/create-deployment-plans).
+Establezca la **decisión de actualización** y la **importancia** de esta aplicación en este plan de implementación. Para obtener más información, vea [Cómo crear planes de implementación](/sccm/desktop-analytics/create-deployment-plans).
 
-En los detalles de la aplicación, también puede ver la información siguiente: Las recomendaciones, factores de riesgo de compatibilidad y problemas conocidos de Microsoft. Utilice esta información para ayudar a conjunto el **decisión de actualización**. Para obtener más información, consulte [Compatibility assessment de](/sccm/desktop-analytics/compat-assessment).
+En los detalles de la aplicación, también puede ver la siguiente información: Recomendaciones, factores de riesgo de compatibilidad y problemas conocidos de Microsoft. Use esta información para ayudar a establecer la **decisión de actualización**. Para obtener más información, vea [evaluación de compatibilidad](/sccm/desktop-analytics/compat-assessment).
 
-Las aplicaciones que se muestra el escritorio de análisis como *notable* se basan en el umbral de recuento de baja de instalación para las reglas de preparación del plan de implementación. Para obtener más información, consulte [reglas de preparación](/sccm/desktop-analytics/create-deployment-plans#readiness-rules).
+Las aplicaciones que análisis de escritorio muestran como *destacadas* se basan en el umbral de recuento de instalaciones bajas para las reglas de preparación del plan de implementación. Para obtener más información, consulte [reglas de preparación](/sccm/desktop-analytics/create-deployment-plans#readiness-rules).
+
+#### <a name="a-namebkmk_plan-autoapp--automatic-upgrade-decision-of-system-and-store-apps"></a><a name="bkmk_plan-autoapp" />Decisión de actualización automática de las aplicaciones del sistema y de la tienda
+
+<!-- 3587232 -->
+La identificación de la **importancia** y la **decisión de actualización** es fundamental para todas las aplicaciones destacables en el flujo de trabajo de análisis de escritorio. Para ayudar a reducir los esfuerzos de anotar estas aplicaciones, determinados tipos de aplicaciones se marcan automáticamente como *no importantes*. La decisión de actualización del plan de implementación de estas aplicaciones también se marca como *listo*. Las siguientes aplicaciones son compatibles y deben seguir funcionando después de actualizar Windows:
+
+- Aplicaciones del sistema y componentes publicados por Microsoft
+
+- Aplicaciones administradas y actualizadas desde el Microsoft Store
+
+> [!Tip]
+> Administre las entradas de cualquier aplicación a nivel global o por plan de implementación.
+>
+> 1. En el portal de análisis de escritorio, en el menú **administrar** , seleccione **activos**. Después, seleccione **aplicaciones**.
+>
+> 2. Use las columnas **tipo** y **categoría** para administrar estas categorías de aplicaciones:
+>
+>    - En el caso de las aplicaciones de la tienda, el **tipo** de filtro es **moderno**
+>    - Para aplicaciones del sistema, filtrar **categoría** como **proceso en segundo plano** o **componente de Windows**
+
 
 ### <a name="drivers"></a>Controladores
 
-Consulte la lista de los controladores incluidos con este plan de implementación. Establecer el **decisión de actualización**, revise la recomendación de Microsoft y vea los factores de riesgo de compatibilidad.
+Consulte la lista de controladores que se incluyen en este plan de implementación. Establezca la **decisión de actualización**, revise la recomendación de Microsoft y vea los factores de riesgo de compatibilidad.
 
 
-## <a name="importance"></a>Importancia
+## <a name="importance"></a>Importance
 
-Como parte del plan de implementación, configure el *importancia* de las aplicaciones. Escritorio Analytics detecta estas aplicaciones instaladas en los dispositivos de destino. Esta configuración permite a los análisis de escritorio determinar qué dispositivos incluye en la fase piloto de la implementación.
+Como parte del plan de implementación, establezca la *importancia* de las aplicaciones. Análisis de escritorio detecta estas aplicaciones tal como están instaladas en los dispositivos de destino. Esta configuración ayuda a análisis de escritorio a determinar qué dispositivos incluye en la fase piloto de la implementación.
 
-Si una aplicación está instalada en menos de 2% de los dispositivos de destino, se marca **bajo número de instalaciones**. El valor predeterminado es de dos por ciento. Puede ajustar el umbral en la configuración de preparación de 0% al 10%. Escritorio Analytics marca automáticamente estas aplicaciones como **listo para actualizar**.  
+Si una aplicación está instalada en menos del 2% de los dispositivos de destino, se marca como **número de instalaciones bajas**. Dos por ciento es el valor predeterminado. Puede ajustar el umbral en la configuración de preparación de 0% a 10%. Análisis de escritorio marca automáticamente estas aplicaciones como **listas para su actualización**.  
 
-Para las aplicaciones, elija una importancia de **crítico**, **importante**, o **importante no**. Si marca una como importante o crítico, análisis de escritorio incluye en la implementación piloto algunos dispositivos con esa aplicación. El servicio incluye en el proyecto piloto de más instancias de una aplicación crítica. Si marca una aplicación como no importante, análisis de escritorio lo establece automáticamente en **listo para actualizar**.
+En el caso de las aplicaciones, elija una importancia **crítica**, **importante**o **no importante**. Si marca uno como crítico o importante, el análisis de escritorio incluye en la implementación piloto algunos dispositivos con esa aplicación. El servicio incluye en el piloto más instancias de una aplicación crítica. Si marca una aplicación como no importante, el análisis de escritorio lo establece automáticamente en **listo para actualizar**.
 
 
 
-## <a name="pilot-devices"></a>Dispositivos pilotos
+## <a name="pilot-devices"></a>Dispositivos piloto
 
-Análisis de escritorio combina la información de importancia con la configuración global de piloto. A continuación, crea una recomendación para el que los dispositivos deben formar parte de la implementación piloto. La implementación piloto recomendada incluye dispositivos con distintas configuraciones de hardware y una o varias instancias de todas las aplicaciones críticas e importantes. Si una aplicación se marca crítica, el servicio recomienda más dispositivos con esa aplicación en el proyecto piloto.
+El análisis de escritorio combina su información de importancia con la configuración de la prueba piloto global. A continuación, crea una recomendación para la que los dispositivos deben formar parte de la implementación piloto. La implementación piloto recomendada incluye dispositivos con diferentes configuraciones de hardware y una o más instancias de todas las aplicaciones críticas e importantes. Si una aplicación está marcada como crítica, el servicio recomienda más dispositivos con esa aplicación en el piloto.
 
 
 
 ## <a name="deployment-plans-in-configuration-manager"></a>Planes de implementación en Configuration Manager
 
-Después de crear un plan de implementación, use Configuration Manager para implementar los productos. Una vez se inicia la implementación, análisis escritorio supervisa la implementación según la configuración en el plan.
+Después de crear un plan de implementación, utilice Configuration Manager para implementar los productos. Una vez que se inicia la implementación, el análisis de escritorio supervisa la implementación en función de la configuración del plan.
 
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- [Obtenga información acerca de los activos de análisis de escritorio](/sccm/desktop-analytics/about-assets): dispositivos, aplicaciones y controladores  
+- [Más información sobre los activos de análisis de escritorio](/sccm/desktop-analytics/about-assets): dispositivos, controladores y aplicaciones  
 
-- [Obtenga información acerca de las actualizaciones de seguridad y la característica](/sccm/desktop-analytics/about-updates)  
+- [Más información sobre la seguridad y las actualizaciones de características](/sccm/desktop-analytics/about-updates)  
 
 - [Crear un plan de implementación](/sccm/desktop-analytics/create-deployment-plans)  
