@@ -163,6 +163,14 @@
               href: plan-design/hierarchy/manage-network-bandwidth.md
             - name: Seguridad y privacidad de la administración de contenido
               href: plan-design/hierarchy/security-and-privacy-for-content-management.md
+        - name: Transferencias de datos entre sitios
+          items:
+            - name: Tipos de transferencias de datos
+              href: plan-design/hierarchy/data-transfers-between-sites.md
+            - name: replicación basada en archivos
+              href: plan-design/hierarchy/file-based-replication.md
+            - name: Replicación de base de datos
+              href: plan-design/hierarchy/database-replication.md
         - name: Cómo los clientes buscan servicios y recursos
           href: plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md
         - name: Seguridad y privacidad para la administración de sitios
@@ -507,16 +515,34 @@
       href: servers/manage/site-failure-impacts.md
     - name: Supervisar la infraestructura
       items:
+        - name: Supervisión de la jerarquía
+          href: servers/manage/monitor-hierarchy.md
         - name: Usar alertas y el sistema de estado
           href: servers/manage/use-alerts-and-the-status-system.md
         - name: Atestación de estado
           href: servers/manage/health-attestation.md
-        - name: Supervisar la infraestructura de la jerarquía y replicación
+        - name: Infraestructura de replicación
           items:
-            - name: Supervisar la infraestructura de la jerarquía y replicación
-              href: servers/manage/monitor-hierarchy-and-replication-infrastructure.md
-            - name: Transferencias de datos entre sitios
-              href: servers/manage/data-transfers-between-sites.md
+            - name: Supervisión de la replicación
+              href: servers/manage/monitor-replication.md
+            - name: Solución de problemas de replicación de SQL
+              items:
+                - name: Solución de problemas de replicación de SQL
+                  href: servers/manage/replication/overview.md
+                - name: Replicación de SQL
+                  href: servers/manage/replication/sql-replication.md
+                - name: Configuración de SQL
+                  href: servers/manage/replication/sql-configuration.md
+                - name: Rendimiento de SQL
+                  href: servers/manage/replication/sql-performance.md
+                - name: Reinicialización de replicación de SQL (reinit)
+                  href: servers/manage/replication/sql-replication-reinit.md
+                - name: Reinicialización de datos globales
+                  href: servers/manage/replication/global-data-reinit.md
+                - name: Reinicialización de datos de sitio
+                  href: servers/manage/replication/site-data-reinit.md
+                - name: Mensaje de que falta reinicialización
+                  href: servers/manage/replication/reinit-missing-message.md
         - name: Consultas
           items:
             - name: Introducción a las consultas
