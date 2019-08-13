@@ -2,7 +2,7 @@
 title: Notificaciones de reinicio del dispositivo
 titleSuffix: Configuration Manager
 description: Comportamiento de las notificaciones de reinicio para diversas opciones de configuración de cliente en Configuration Manager.
-ms.date: 07/26/2019
+ms.date: 08/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 948c92fc718446bba92bb92e88223fc93213c798
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 9e057a7391bbdbe697b7f53c13a90a74efe22635
+ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537871"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68859654"
 ---
 # <a name="device-restart-notifications-in-configuration-manager"></a>Notificaciones de reinicio del dispositivo en Configuration Manager
 
@@ -97,6 +97,9 @@ Las opciones siguientes deben tener menos duración que la [ventana de mantenimi
 
 - **Mostrar una notificación temporal al usuario que indique el intervalo antes de que el usuario se desconecte o el equipo se inicie (minutos)**
 - **Mostrar un cuadro de diálogo que el usuario no pueda cerrar, que muestre el intervalo de recuento antes de que el usuario se desconecte o el equipo se reinicie (minutos)**
+
+> [!IMPORTANT]
+> En Configuration Manager 1902, en determinadas circunstancias, el cuadro de diálogo no reemplazará las notificaciones del sistema. Para resolver este problema, instale el [paquete acumulativo de actualizaciones para Configuration Manager versión 1902](https://support.microsoft.com/help/4500571/update-rollup-for-configuration-manager-current-branch-1902). <!--4404715-->
 
 ## <a name="device-restart-notifications-starting-in-version-1906"></a>Notificaciones de reinicio del dispositivo a partir de la versión 1906
 <!--3976435-->

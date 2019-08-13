@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19275385c75477c1c0da24109d6a9c601c5aa8d0
-ms.sourcegitcommit: 75f48834b98ea6a238d39f24e04c127b2959d913
+ms.openlocfilehash: 339c9df44f2647b12936ce8a1077fd0ee0f7ee37
+ms.sourcegitcommit: 16dd488c51b5cf01a7dd4204f7d40ee9ae0abe85
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68604558"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68743728"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>CMPivot para datos en tiempo real en Configuration Manager
 
@@ -38,12 +38,6 @@ Los siguientes componentes son necesarios para usar CMPivot:
 
 - Actualice los dispositivos de destino a la última versión del cliente de Configuration Manager.  
 
-- Permisos para CMPivot:
-  - Permiso de **L¡lectura** en el objeto **Scripts SMS**
-  - Permiso para **ejecutar scripts** en la **colección**
-  - Permiso de **lectura** en los **informes de inventario**
-  - Ámbito predeterminado. 
-
 - Los clientes de destino requieren como mínimo PowerShell versión 4.
 
 - Para recopilar datos para las siguientes entidades, los clientes de destino requieren la versión 5.0 de PowerShell:  
@@ -52,6 +46,16 @@ Los siguientes componentes son necesarios para usar CMPivot:
   - IPConfig
   - SMBConfig
 
+
+- Permisos para CMPivot:
+  - Permiso de **L¡lectura** en el objeto **Scripts SMS**
+  - Permiso para **ejecutar scripts** en la **colección**
+    - Como alternativa, a partir de la versión 1906, puede usar **Ejecutar CMPivot** en **Colección**.
+  - Permiso de **lectura** en los **informes de inventario**
+  - Ámbito predeterminado.
+
+>[!NOTE]
+> **Ejecutar scripts** es un superconjunto del permiso **Ejecutar CMPivot**.
  
 ## <a name="limitations"></a>Limitaciones
 
@@ -527,9 +531,14 @@ El operador render ya existe en CMPivot. Se ha agregado compatibilidad con varia
 <!--4683130-->
 
 A partir de la versión 1906, se agregaron los permisos siguientes al rol **Administrador de seguridad** integrado de Configuration Manager:
- - Lectura en script SMS
- - Ejecución de CMPivot en colección
- - Lectura en Informe de inventario
+
+ - **Lectura** en script SMS
+ - **Ejecutar CMPivot** en Colección
+ - **Lectura** en Informe de inventario
+
+>[!NOTE]
+> **Ejecutar scripts** es un superconjunto del permiso **Ejecutar CMPivot**.
+ 
 
 ### <a name="bkmk_standalone"></a> CMPivot independiente
 <!--3555890, 4619340, 4683130 -->

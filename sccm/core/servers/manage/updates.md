@@ -2,7 +2,7 @@
 title: Actualizaciones y mantenimiento
 titleSuffix: Configuration Manager
 description: Conozca el método de servicio en la consola denominado Actualizaciones y mantenimiento con el que es más fácil encontrar e instalar actualizaciones recomendadas.
-ms.date: 06/06/2019
+ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bb875529224655fb56aeea5636bf92c7ddaf8b2c
-ms.sourcegitcommit: 9d186b8b9ff652d5ea8a5d352f3f793f11db66f0
+ms.openlocfilehash: 4901494c195c4602fe40aa191621a0322bc9f8e2
+ms.sourcegitcommit: 75f48834b98ea6a238d39f24e04c127b2959d913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "66822051"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68604523"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Actualizaciones y servicio para Configuration Manager
 
@@ -28,7 +28,7 @@ Configuration Manager usa un método de servicio en la consola denominado **Actu
 > Los términos *actualizar* e *instalar* se usan para describir dos conceptos independientes en Configuration Manager. Para obtener más información sobre cómo se usa cada término, vea [Acerca de la actualización e instalación](/sccm/core/understand/upgrade-update-install).  
 
 
-##  <a name="bkmk_Baselines"></a> Versiones de línea de base y versiones de actualización  
+## <a name="bkmk_Baselines"></a> Versiones de línea de base y versiones de actualización  
 
 Use la versión de línea de base más reciente cuando instale un sitio nuevo en una jerarquía nueva.
 
@@ -62,11 +62,11 @@ Las siguientes versiones admitidas de Configuration Manager están actualmente d
 
 | Versión | Fecha de disponibilidad | [Fecha de finalización del soporte técnico](/sccm/core/servers/manage/current-branch-versions-supported) | Línea de base | Actualización en la consola |  
 |-------------|-----------|------------|--------------|------------------------|  
+| [1906](/sccm/core/plan-design/changes/whats-new-in-version-1906)<br /><br /> 5.00.8853.1000 | 26 de julio de 2019 | 26 de enero de 2021 | No | Sí |
 | [1902](/sccm/core/plan-design/changes/whats-new-in-version-1902)<br /><br /> 5.00.8790.1000 | 27 de marzo de 2019 | 27 de septiembre de 2020 | Sí<sup>[Nota 1](#bkmk_note1)</sup> | Sí |
 | [1810](/sccm/core/plan-design/changes/whats-new-in-version-1810)<br /><br /> 5.00.8740.1000 | 27 de noviembre de 2018 | 27 de mayo de 2020 | No | Sí |
 | [1806](/sccm/core/plan-design/changes/whats-new-in-version-1806)<br /><br /> 5.00.8692.1000 | 31 de julio de 2018 | 31 de enero de 2020 | No | Sí |
 | [1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)<br /><br /> 5.00.8634.1000 | 22 de marzo de 2018 | 22 de septiembre de 2019 | Sí<sup>[Nota 1](#bkmk_note1)</sup> | Sí |
-| [1710](/sccm/core/plan-design/changes/whats-new-in-version-1710)<br /><br /> 5.00.8577.1000 | 20 de noviembre de 2017 | 20 de mayo de 2019 | No | Sí |
 
 <a name="bkmk_note1"></a>
 
@@ -85,12 +85,13 @@ En la siguiente tabla se enumeran las versiones históricas de la rama actual de
 
 | Versión | Fecha de disponibilidad | Fecha de finalización del soporte técnico | Línea de base | Actualización en la consola |  
 |-------------|-----------|------------|--------------|------------------------|  
+| 1710 <br /><br /> 5.00.8577.1000 | 20 de noviembre de 2017 | 20 de mayo de 2019 | No | Sí |
 | 1706 <br /><br /> 5.00.8540.1000 | 31 de julio de 2017 | 31 de julio de 2018 | No | Sí |
 | 1702 <br /><br /> 5.00.8498.1000 | 27 de marzo de 2017 | 27 de marzo de 2018 | Sí | Sí |
 | 1610 <br /><br /> 5.00.8458.1000 | 18 de noviembre de 2016 | 18 de noviembre de 2017 | No | Sí |
 | 1606 <br /><br /> 5.00.8412.1000 | 22 de julio de 2016 | 22 de julio de 2017 | No | Sí |
 | 1606 con el paquete acumulativo de revisiones 1606 (KB3186654) <br><br>5.00.8412.1307 | 12 de octubre de 2016 | 12 de octubre de 2017 | Sí | No |
-| 1602<br /><br /> 5.00.8355.1000 | 11 de marzo de 2016 | 11 de marzo de 2017 | No | Sí |
+| 1602 <br /><br /> 5.00.8355.1000 | 11 de marzo de 2016 | 11 de marzo de 2017 | No | Sí |
 | 1511 <br /><br /> 5.00.8325.1000 | 8 de diciembre de 2015 | 8 de diciembre de 2016 | Sí | No |  
 
 #### <a name="how-to-check-the-version"></a>Cómo comprobar la versión
@@ -98,7 +99,7 @@ En la siguiente tabla se enumeran las versiones históricas de la rama actual de
 Para comprobar la versión del sitio de Configuration Manager, en la consola, vaya a **Acerca de System Center Configuration Manager** en la esquina superior izquierda de la consola. Este cuadro de diálogo muestra las versiones del sitio y la consola.  
 
 > [!Note]  
-> A partir de la versión 1802, la versión de la consola ahora es ligeramente diferente de la versión del sitio. La versión secundaria de la consola ahora corresponde a la versión de lanzamiento de Configuration Manager. Por ejemplo, en Configuration Manager versión 1802, la versión de sitio inicial es 5.0.8634.1000 y la versión inicial de la consola es 5. **1802**.1082.1700. Los números de compilación (1082) y revisión (1700) pueden cambiar con futuras revisiones de la versión 1802.
+> La versión de la consola es ligeramente distinta de la versión del sitio. La versión secundaria de la consola corresponde a la versión de lanzamiento de Configuration Manager. Por ejemplo, en Configuration Manager versión 1802, la versión de sitio inicial es 5.0.8634.1000 y la versión inicial de la consola es 5. **1802**.1082.1700. Los números de compilación (1082) y revisión (1700) pueden cambiar con futuras revisiones.
 
 
 ## <a name="bkmk_inconsole"></a> Actualizaciones y servicio en la consola  
@@ -153,7 +154,7 @@ Cuando se instala una actualización en la consola, se produce el siguiente proc
 - Una vez que se actualiza un sitio principal, los sitios secundarios no se actualizan automáticamente. En lugar de eso, es usted quien debe iniciar manualmente la actualización de los sitios secundarios.  
 
 > [!NOTE]  
-> La rama actual de Configuration Manager, la rama de mantenimiento a largo plazo y la rama de Technical Preview son versiones distintas. Las actualizaciones que se aplican a una rama no están disponibles como actualizaciones en consola para las demás. Para más información sobre las diferentes ramas, consulte [Which branch of Configuration Manager should I use (¿Qué rama de Configuration Manager debo usar?)](/sccm/core/understand/which-branch-should-i-use).
+> La rama actual de Configuration Manager, la rama de mantenimiento a largo plazo y la rama de Technical Preview son versiones distintas. Las actualizaciones que se aplican a una rama no están disponibles como actualizaciones en consola para las demás. Para más información sobre las diferentes ramas, consulte [¿Qué rama de Configuration Manager debo utilizar?](/sccm/core/understand/which-branch-should-i-use).
 
 ### <a name="bkmk_supersede"></a> Sustitución para las revisiones en la consola
 
@@ -179,7 +180,7 @@ Normalmente, cuando se busca corregir o atajar un problema con la implementació
 
 Instale estas revisiones manualmente, mediante uno de estos dos métodos:  
 
-#### <a name="update-registration-tool"></a>Herramienta de registro de actualizaciones
+### <a name="update-registration-tool"></a>Herramienta de registro de actualizaciones
 
 Esta herramienta importa manualmente la revisión a la consola de Configuration Manager. Luego instala la actualización como si fuera una actualización en la consola que se detecta automáticamente.  
 
@@ -188,7 +189,7 @@ Este método se usa para las revisiones que usan la siguiente estructura de nomb
 
 Para obtener más información, vea [Use the update registration tool to import hotfixes](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes) (Uso de la herramienta de registro de actualizaciones para importar revisiones).  
 
-#### <a name="hotfix-installer"></a>Instalador de revisiones
+### <a name="hotfix-installer"></a>Instalador de revisiones
 
 Use esta herramienta para instalar manualmente una revisión que no se puede instalar con el método en la consola.  
 

@@ -5,18 +5,18 @@ description: Obtenga información sobre las cargas de trabajo que puede cambiar 
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 05/24/2019
+ms.date: 08/01/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5fb11ac9ffbacfc37b69cb91d34a6885f44abe08
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: ef39c354e384f130b5c585e8aeb099d083fe0418
+ms.sourcegitcommit: 16dd488c51b5cf01a7dd4204f7d40ee9ae0abe85
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286646"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68743648"
 ---
 # <a name="co-management-workloads"></a>Administración conjunta de cargas de trabajo
 
@@ -120,12 +120,17 @@ Para más información sobre la característica de Intune, consulte [Asignación
 
 A partir de Configuration Manager 1806, use Intune para administrar las aplicaciones cliente y los scripts de PowerShell en dispositivos Windows 10 administrados en conjunto. Después de realizar la transición de esta carga de trabajo, las aplicaciones disponibles implementadas desde Intune están disponibles en el Portal de empresa. Las aplicaciones implementadas desde Configuration Manager están disponibles en el Centro de software.
 
-
 Para más información sobre la característica de Intune, consulte [¿Qué es la administración de aplicaciones de Microsoft Intune?](https://docs.microsoft.com/intune/app-management)
-
 
 > [!Note]  
 > La carga de trabajo de aplicaciones cliente es una característica de versión preliminar. Para habilitarla, vea [Características de versión preliminar](/sccm/core/servers/manage/pre-release-features).  
+
+
+## <a name="diagram-for-app-workloads"></a>Diagrama para cargas de trabajo de aplicaciones
+
+![Diagrama de cargas de trabajo de aplicaciones de administración conjunta](media/co-management-apps.svg)
+
+[Ver el diagrama en tamaño completo](media/co-management-apps.svg)
 
 
 ## <a name="next-steps"></a>Pasos siguientes

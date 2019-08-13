@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43145e7f94fb381d1051ddb7de09367f4f69d556
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: dff4d0ff8fe2bcb7fbbcd8b0b1c5c701f02d20fb
+ms.sourcegitcommit: 159c6c9fe1df03fd2c4633125a593e3050a2f2da
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68535612"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68833175"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Planificación de Cloud Management Gateway en Configuration Manager
 
@@ -54,7 +54,7 @@ Hay varios escenarios en los que CMG resulta beneficioso. Los escenarios siguien
 
 - Instalación del cliente de Configuration Manager en dispositivos Windows 10 a través de Internet. El uso de Azure AD permite que el dispositivo se autentique en CMG para el registro y la asignación de clientes. Puede instalar el cliente de forma manual o mediante otro método de distribución de software, como Microsoft Intune.  
 
-- Aprovisionamiento de dispositivos nuevos con administración conjunta. No se necesita CMG para la administración conjunta, pero ayuda a completar un escenario de un extremo a otro para dispositivos nuevos que implican Windows AutoPilot, Azure AD, Microsoft Intune y Configuration Manager.  
+- Aprovisionamiento de dispositivos nuevos con administración conjunta. Al inscribir automáticamente los clientes existentes, CMG no es necesario para la administración conjunta. Se necesita para nuevos dispositivos que implican Windows AutoPilot, Azure AD, Microsoft Intune y Configuration Manager. Para más información, consulte [Rutas hacia la administración conjunta](https://docs.microsoft.com/sccm/comanage/quickstart-paths).
 
 ### <a name="specific-use-cases"></a>Casos de uso específicos
 
@@ -109,7 +109,7 @@ A partir de la versión 1902 de Configuration Manager, Azure Resource Manager 
 En la versión 1810 y versiones anteriores de Configuration Manager, el asistente de CMG seguirá proporcionando la opción de una **implementación del servicio clásico** mediante un certificado de administración de Azure. Para simplificar la implementación y la administración de recursos, se recomienda el modelo de implementación de Azure Resource Manager para todas las instancias nuevas de CMG. Si es posible, vuelva a implementar las instancias existentes de CMG a través de Resource Manager. Para obtener más información, vea [Modify a CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg) (Modificar una instancia de CMG).
 
 > [!Important]  
-> A partir de la versión 1810, la implementación del servicio clásico de Azure ya no se usa en Configuration Manager. Esta versión es la última que admite la creación de estas implementaciones de Azure. Esta funcionalidad se retirará en la primera versión de Configuration Manager que se publique a partir del 1 de julio de 2019. Mueva los puntos de distribución en la nube y CMG a implementaciones de Azure Resource Manager antes de este momento. <!--SCCMDocs-pr issue #2993-->  
+> A partir de la versión 1810, la implementación del servicio clásico de Azure ya no se usa en Configuration Manager. Esta versión es la última que admite la creación de estas implementaciones de Azure. Esta funcionalidad se quitará en una edición futura de Configuration Manager.<!--SCCMDocs-pr issue #2993-->  
 
 ### <a name="hierarchy-design"></a>Diseño de jerarquía
 

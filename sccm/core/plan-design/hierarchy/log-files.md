@@ -2,7 +2,7 @@
 title: Referencia del archivo de registro
 titleSuffix: Configuration Manager
 description: Una referencia de todos los archivos de registro del cliente, el servidor y los componentes dependientes de Configuration Manager.
-ms.date: 07/26/2019
+ms.date: 08/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c88035f7aff8b6021639b3c26387567e722cfc63
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 44ed3f61914cf62a9eceb189be933330cf04124e
+ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68536702"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68860068"
 ---
 # <a name="log-file-reference"></a>Referencia del archivo de registro
 
@@ -144,6 +144,7 @@ En la siguiente tabla se muestran los archivos de registro del cliente de Config
 |CoManagementHandler.log|Se utiliza para solucionar problemas de administración conjunta en el cliente.|
 |ContentTransferManager.log|Programa el Servicio de transferencia inteligente en segundo plano (BITS) o el Bloque de mensajes del servidor (SMB) para descargar paquetes u acceder a ellos.|  
 |DataTransferService.log|Registra todas las comunicaciones de BITS para el acceso de directiva o paquete.|  
+|DeltaDownload.log|Registra información sobre la descarga de actualizaciones rápidas y actualizaciones descargadas mediante Optimización de entrega.|  
 |EndpointProtectionAgent|Registra información sobre la instalación del cliente de System Center Endpoint Protection y la aplicación de directivas antimalware en el cliente.|  
 |execmgr.log|Registra detalles acerca de los paquetes y las secuencias de tareas que se ejecutan en el cliente.|  
 |ExpressionSolver.log|Registra detalles sobre los métodos de detección mejorada que se usan cuando el registro detallado o de depuración está activado.|  
@@ -833,7 +834,8 @@ En la tabla siguiente se indican los archivos de registro que contienen informac
 |Nombre del registro|Descripción|Equipo con el archivo de registro|  
 |--------------|-----------------|----------------------------|  
 |AlternateHandler.log|Registra los detalles cuando el cliente llama a la interfaz COM de hacer clic y ejecutar de Office para descargar e instalar las actualizaciones de cliente de Office 365. Es similar al uso de WuaHandler cuando llama a la API del agente de Windows Update para descargar e instalar las actualizaciones de Windows.<!-- SCCMDocs#888 -->|Cliente|
-|Ccmperf.log|Registra actividades relacionadas con el mantenimiento y la captura de datos relacionados con los contadores de rendimiento de cliente.|Cliente|  
+|Ccmperf.log|Registra actividades relacionadas con el mantenimiento y la captura de datos relacionados con los contadores de rendimiento de cliente.|Cliente|
+|DeltaDownload.log|Registra información sobre la descarga de actualizaciones rápidas y actualizaciones descargadas mediante Optimización de entrega.|Cliente|  
 |PatchDownloader.log|Registra detalles sobre el proceso de descarga de actualizaciones de software del origen de actualizaciones al destino de descarga en el servidor de sitio.|Cuando las actualizaciones se descargan de forma manual, este archivo de registro se encontrará en el directorio %temp% del usuario que ejecuta la consola en el equipo en el que se ejecute la consola. Para las reglas de implementación automática, este archivo de registro se encontrará en el servidor del sitio en %windir%\CCM\Logs si el cliente de Configuration Manager está instalado en el servidor del sitio.|  
 |PolicyEvaluator.log|Registra los detalles acerca de la evaluación de directivas en los equipos cliente, incluidas las directivas de las actualizaciones de software.|Cliente|  
 |RebootCoordinator.log|Registra los detalles acerca de la coordinación de reinicios del sistema en los equipos cliente después de que se instalan las actualizaciones de software.|Cliente|  

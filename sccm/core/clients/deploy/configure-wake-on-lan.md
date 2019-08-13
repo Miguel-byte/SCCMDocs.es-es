@@ -2,7 +2,7 @@
 title: Configurar Wake On LAN
 titleSuffix: Configuration Manager
 description: Seleccione la configuración de Wake on LAN en System Center Configuration Manager.
-ms.date: 05/02/2019
+ms.date: 08/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 59d99a3e3626be111e927dae8651d2e01364ccf5
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.openlocfilehash: d28b4809f3f3c615657a9d4c95af67f97b3d0b66
+ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65083158"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68859717"
 ---
 # <a name="how-to-configure-wake-on-lan-in-system-center-configuration-manager"></a>Cómo configurar Wake on LAN en System Center Configuration Manager
 
@@ -53,7 +53,7 @@ Anteriormente tenía que habilitar manualmente el cliente para activar la LAN en
 1. Seleccione la configuración de cliente que desea editar o cree una configuración de cliente personalizada para implementarla. Para obtener más información, vea [Cómo configurar el cliente](/sccm/core/clients/deploy/configure-client-settings).
 1. En la configuración de cliente **Administración de energía**, seleccione **Habilitar** para la configuración **Permitir reactivación de red**. Para más información sobre esta configuración, vea [Acerca de la configuración de cliente](/sccm/core/clients/deploy/about-client-settings#power-management).
 
-4. A partir de Configuration Manager 1902, la nueva versión de Wake on LAN respeta el puerto UDP personalizado que especifique para la [configuración de cliente](/sccm/core/clients/deploy/about-client-settings#power-management) **Número de puerto de Wake on LAN (UDP)**. Esta configuración se comparte entre la versión anterior y la nueva de Wake on LAN.
+4. A partir de Configuration Manager 1902, la nueva versión de Wake on LAN respeta el puerto UDP personalizado que especifique para la [configuración de cliente](/sccm/core/clients/deploy/about-client-settings#power-management) **Número de puerto de Wake on LAN (UDP)** . Esta configuración se comparte entre la versión anterior y la nueva de Wake on LAN.
  
 <!--3605925-->
 
@@ -67,7 +67,8 @@ Puede reactivar un único cliente o cualquier cliente en suspensión de una cole
 
 - **Para reactivar todos los clientes en suspensión en una colección**: Haga clic con el botón derecho en la colección de dispositivos, vaya a **Notificación de cliente** y, después, seleccione **Reactivar**.
    - Esta acción no se puede ejecutar en las colecciones integradas.
-   - Cuando hay una combinación de clientes inactivos y activos en una colección, solo se envía una solicitud de Wake on LAN a los clientes inactivos.  
+   - Cuando hay una combinación de clientes inactivos y activos en una colección, solo se envía una solicitud de Wake on LAN a los clientes inactivos.
+   - Esta acción solo está activa cuando la consola de Configuration Manager está conectada a un sitio primario independiente o secundario. Cuando está conectada a un sitio de administración central, la acción no está disponible.
 
 ### <a name="what-to-expect-when-only-the-new-version-of-wake-on-lan-is-enabled"></a>Qué esperar cuando se habilita solo la nueva versión de Wake on LAN
 
@@ -79,7 +80,7 @@ A partir de Configuration Manager versión 1902, puede especificar el puerto de
 
 Cuando tiene ambas versiones de Wake on LAN habilitadas, puede usar la notificación de cliente **Reactivar** para realizar la reactivación en la fecha límite. La notificación de cliente funciona de manera un poco diferente a la versión tradicional de Wake on LAN. Para obtener una breve explicación de cómo funciona la notificación de cliente, vea la sección [Wake on LAN a partir de la versión 1810](#bkmk_wol-1810). La nueva configuración de cliente **Permitir reactivación de red** cambiará las propiedades de la NIC para permitir Wake on LAN. Ya no necesite cambiarla manualmente para los equipos nuevos que se agregan a su entorno. Todas las demás funcionalidades de Wake on LAN no se han modificado.
 
-A partir de la versión 1902, la notificación de cliente **Reactivar** respeta la configuración existente **Número de puerto de Wake on LAN (UDP)**.
+A partir de la versión 1902, la notificación de cliente **Reactivar** respeta la configuración existente **Número de puerto de Wake on LAN (UDP)** .
 
 
 ## <a name="bkmk_wol-previous"></a> Wake on LAN para la versión 1806 y versiones anteriores

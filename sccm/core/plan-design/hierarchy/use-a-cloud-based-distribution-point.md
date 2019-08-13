@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe6544e020f819f1ed18592ce811f2992a5603eb
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: 72b374b738a7938126d0e03a9b8b8fdb8dab220a
+ms.sourcegitcommit: 159c6c9fe1df03fd2c4633125a593e3050a2f2da
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67251495"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68833020"
 ---
 # <a name="use-a-cloud-distribution-point-in-configuration-manager"></a>Usar un punto de distribución de nube en Configuration Manager
 
@@ -100,7 +100,7 @@ A partir de la versión 1902 de Configuration Manager, Azure Resource Manager 
 En la versión 1810 y versiones anteriores de Configuration Manager, el asistente del punto de distribución de nube seguirá proporcionando la opción de una **implementación del servicio clásico** mediante un certificado de administración de Azure. Para simplificar la implementación y administración de recursos, use el modelo de implementación de Azure Resource Manager para todos los puntos de distribución de nube nuevos. Si es posible, vuelva a implementar los puntos de distribución de nube a través de Resource Manager.
 
 > [!Important]  
-> A partir de la versión 1810, la implementación del servicio clásico de Azure ya no se usa en Configuration Manager. Esta versión es la última que admite la creación de estas implementaciones de Azure. Esta funcionalidad se retirará en la primera versión de Configuration Manager que se publique a partir del 1 de julio de 2019. Mueva los puntos de distribución en la nube y CMG a implementaciones de Azure Resource Manager antes de este momento. <!--SCCMDocs-pr issue #2993-->  
+> A partir de la versión 1810, la implementación del servicio clásico de Azure ya no se usa en Configuration Manager. Esta versión es la última que admite la creación de estas implementaciones de Azure. Esta funcionalidad se quitará en una edición futura de Configuration Manager.<!--SCCMDocs-pr issue #2993-->  
 
 Configuration Manager no migra los puntos de distribución de nube clásicos existentes al modelo de implementación de Azure Resource Manager. Cree nuevos puntos de distribución de nube con las implementaciones de Azure Resource Manager y luego quite los puntos de distribución de nube clásicos.
 
