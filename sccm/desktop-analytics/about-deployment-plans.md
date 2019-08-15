@@ -2,7 +2,7 @@
 title: Planes de implementación en análisis de escritorio
 titleSuffix: Configuration Manager
 description: Obtenga información sobre los planes de implementación de análisis de escritorio.
-ms.date: 08/09/2019
+ms.date: 08/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2a1acd99ca1a4676c4397eee427cdcb8b795cf00
-ms.sourcegitcommit: 6b5a003256305c1f0cb605e52aeaaf19c23af5a9
+ms.openlocfilehash: 65dff1dbf8e8154bc2d481e274dd47d352aa9d6e
+ms.sourcegitcommit: fe8934487158ed3bd15c7a6a456c3cafe58aed64
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68956394"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68995392"
 ---
 # <a name="about-deployment-plans-in-desktop-analytics"></a>Acerca de los planes de implementación en el análisis de escritorio
 
@@ -95,24 +95,8 @@ En los detalles de la aplicación, también puede ver la siguiente información:
 
 Las aplicaciones que análisis de escritorio muestran como *destacadas* se basan en el umbral de recuento de instalaciones bajas para las reglas de preparación del plan de implementación. Para obtener más información, consulte [reglas de preparación](/sccm/desktop-analytics/create-deployment-plans#readiness-rules).
 
-#### <a name="a-namebkmk_plan-autoapp--automatic-upgrade-decision-of-system-and-store-apps"></a><a name="bkmk_plan-autoapp" />Decisión de actualización automática de las aplicaciones del sistema y de la tienda
-
-<!-- 3587232 -->
-La identificación de la **importancia** y la **decisión de actualización** es fundamental para todas las aplicaciones destacables en el flujo de trabajo de análisis de escritorio. Para ayudar a reducir los esfuerzos de anotar estas aplicaciones, determinados tipos de aplicaciones se marcan automáticamente como *no importantes*. La decisión de actualización del plan de implementación de estas aplicaciones también se marca como *listo*. Las siguientes aplicaciones son compatibles y deben seguir funcionando después de actualizar Windows:
-
-- Aplicaciones del sistema y componentes publicados por Microsoft
-
-- Aplicaciones administradas y actualizadas desde el Microsoft Store
-
-> [!Tip]
-> Administre las entradas de cualquier aplicación a nivel global o por plan de implementación.
->
-> 1. En el portal de análisis de escritorio, en el menú **administrar** , seleccione **activos**. Después, seleccione **aplicaciones**.
->
-> 2. Use las columnas **tipo** y **categoría** para administrar estas categorías de aplicaciones:
->
->    - En el caso de las aplicaciones de la tienda, el **tipo** de filtro es **moderno**
->    - Para aplicaciones del sistema, filtrar **categoría** como **proceso en segundo plano** o **componente de Windows**
+   > [!Tip]
+   > Para obtener más información sobre la categoría de aplicación "no importante", consulte [decisión de actualización automática de aplicaciones del sistema y de la tienda](/sccm/desktop-analytics/about-assets#bkmk_plan-autoapp). <!-- 3587232 -->
 
 
 ### <a name="drivers"></a>Controladores
