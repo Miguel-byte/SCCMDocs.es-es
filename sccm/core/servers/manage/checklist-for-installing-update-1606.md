@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f7568a2bdd5b7a814d430a9e38378f7fb8d2149
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: b5275d24cecebbcda06b75de3d27dae1fe7c1e6c
+ms.sourcegitcommit: 6b5a003256305c1f0cb605e52aeaaf19c23af5a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68339385"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956363"
 ---
 # <a name="checklist-for-installing-update-1606-for-system-center-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 1606 de System Center Configuration Manager
 
@@ -71,7 +71,8 @@ Para obtener más información, consulte [Usar alertas y el sistema de estado pa
 
 **Revisar la replicación de datos y archivos entre sitios:**  Asegúrese de que la replicación de archivos y base de datos entre sitios funciona y está actualizada. Los retrasos o los trabajos pendientes pueden impedir una actualización correcta y sin problemas.    
 
-Para la replicación de base de datos, puede utilizar Replication Link Analyzer para ayudar a resolver problemas antes de iniciar la actualización. Para obtener más información, consulte [Acerca de Replication Link Analyzer](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md#BKMK_RLA) en el tema [Supervisar la infraestructura de la jerarquía y replicación de System Center Configuration Manager](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md).  
+Para la replicación de base de datos, puede utilizar Replication Link Analyzer para ayudar a resolver problemas antes de iniciar la actualización. Para obtener más información, vea [Acerca de Replication Link Analyzer](/sccm/core/servers/manage/monitor-replication#BKMK_RLA).  
+
 
 **Instalar todas las actualizaciones críticas aplicables de los sistemas operativos en los equipos que hospedan el sitio, el servidor de base de datos del sitio y los roles del sistema de sitio remoto:** Antes de instalar una actualización para Configuration Manager, instale las actualizaciones críticas para cada sistema de sitio aplicable. Si alguna de las actualizaciones que instala requiere un reinicio, reinicie los equipos correspondientes antes de iniciar la actualización.  
 

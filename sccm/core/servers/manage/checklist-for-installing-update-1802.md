@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9db81a81ba816aa94325ac2b57f84ab339295dd
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: 0b698298838c1fa9d6f050c39e1d6ab5d1df21a9
+ms.sourcegitcommit: 6b5a003256305c1f0cb605e52aeaaf19c23af5a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67252141"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956460"
 ---
 # <a name="checklist-for-installing-update-1802-for-system-center-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 1802 de System Center Configuration Manager
 
@@ -95,7 +95,7 @@ Para obtener más información, vea  [Usar alertas y el sistema de estado de Sy
 Asegúrese de que la replicación de archivos y base de datos entre sitios funciona y está actualizada. Los retrasos o los trabajos pendientes pueden impedir una actualización correcta y sin problemas.
 Para la replicación de base de datos, puede utilizar Replication Link Analyzer para ayudar a resolver problemas antes de iniciar la actualización.
 
-Para obtener más información, vea [Acerca de Replication Link Analyzer](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA)  en el tema  [Supervisar la infraestructura de la jerarquía y replicación de System Center Configuration Manager](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure) .
+Para obtener más información, vea [Acerca de Replication Link Analyzer](/sccm/core/servers/manage/monitor-replication#BKMK_RLA).
 
 **Instale todas las actualizaciones críticas aplicables de los sistemas operativos en los equipos que hospedan el sitio, el servidor de base de datos del sitio y los roles del sistema de sitio remoto:**   Antes de instalar una actualización para Configuration Manager, instale las actualizaciones críticas para cada sistema de sitio aplicable. Si alguna de las actualizaciones que instala requiere un reinicio, reinicie los equipos correspondientes antes de iniciar la actualización.
 

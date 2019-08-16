@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7672af696844cfa8afbbe54b1260d8f4c78437a8
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 95641ed36bb3847a3f7d39c4ad8d7296ecd11e77
+ms.sourcegitcommit: 6b5a003256305c1f0cb605e52aeaaf19c23af5a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67676521"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956286"
 ---
 #  <a name="the-data-warehouse-service-point-for-configuration-manager"></a>El punto de servicio de almacenamiento de datos para Configuration Manager
 
@@ -71,7 +71,7 @@ A partir de la versión 1810, puede sincronizar más tablas desde la base de dat
 
     - Clúster de conmutación por error de SQL Server  
 
-- Si usa [vistas distribuidas](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_distviews), debe instalar el punto de servicio de almacenamiento de datos en el mismo servidor que hospeda la base de datos del sitio de administración central.  
+- Si usa [vistas distribuidas](/sccm/core/plan-design/hierarchy/database-replication#bkmk_distviews), debe instalar el punto de servicio de almacenamiento de datos en el mismo servidor que hospeda la base de datos del sitio de administración central.  
 
 Para obtener más información sobre las licencias de SQL Server, vea las [preguntas más frecuentes sobre productos y licencias](/sccm/core/understand/product-and-licensing-faq). <!-- sms500967 -->
 

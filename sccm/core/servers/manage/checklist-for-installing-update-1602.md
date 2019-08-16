@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba54ff30f880520106ef615ef713781149776eda
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: b9a17bd50bd9380b410623ff0c04b6d9a4417d82
+ms.sourcegitcommit: 6b5a003256305c1f0cb605e52aeaaf19c23af5a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65501200"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956501"
 ---
 # <a name="checklist-for-installing-update-1602-for-system-center-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 1602 para System Center Configuration Manager
 
@@ -63,7 +63,7 @@ Para obtener más información, consulte [Usar alertas y el sistema de estado pa
 
 Para la replicación de base de datos, puede utilizar Replication Link Analyzer para ayudar a resolver problemas antes de iniciar la actualización.    
 
- Para obtener más información, consulte [Acerca de Replication Link Analyzer](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md#BKMK_RLA) en el tema [Supervisar la infraestructura de la jerarquía y replicación de System Center Configuration Manager](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md).  
+ Para obtener más información, vea [Acerca de Replication Link Analyzer](/sccm/core/servers/manage/monitor-replication#BKMK_RLA).  
 
  **Instalar todas las actualizaciones críticas aplicables de los sistemas operativos en los equipos que hospedan el sitio, el servidor de base de datos del sitio y los roles del sistema de sitio remoto:** Antes de instalar una actualización para Configuration Manager, instale las actualizaciones críticas para cada sistema de sitio aplicable. Si alguna de las actualizaciones que instala requiere un reinicio, reinicie los equipos correspondientes antes de iniciar la actualización.  
 
