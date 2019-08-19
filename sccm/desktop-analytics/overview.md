@@ -2,7 +2,7 @@
 title: Análisis de escritorio
 titleSuffix: Configuration Manager
 description: Información general del servicio de análisis de escritorio integrado con Configuration Manager.
-ms.date: 07/19/2019
+ms.date: 07/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: overview
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 154c142b285c58da714193c964b353dc1e173481
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: fd86e5bd939ecd356a6cf290958a766266248645
+ms.sourcegitcommit: 75f48834b98ea6a238d39f24e04c127b2959d913
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68339261"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68604478"
 ---
 # <a name="what-is-desktop-analytics"></a>¿Qué es el análisis de escritorio?
 
@@ -74,17 +74,17 @@ Para usar el análisis de escritorio, asegúrese de que el entorno cumple los re
     > [!Important]  
     > El análisis de escritorio se ofrece actualmente como un servicio de Office 365 y requiere una suscripción de Office 365 en el inquilino de Azure AD. Esto puede no ser un requisito en el futuro.
 
-    - Permisos de propietario  o colaborador del **área de trabajo** para **configurar el área de trabajo**y los roles siguientes:  
+    - Permisos de propietario o colaborador del **área de trabajo** para **configurar el área de trabajo**y los roles siguientes:  
 
       - Rol de [**Administrador de análisis de escritorio**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) .
 
       - [**Log Analytics colaborador**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#log-analytics-contributor) y [**Administrador de acceso de usuario**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) en el grupo de recursos para usar un área de trabajo existente o crear una nueva área de trabajo en un grupo de recursos existente.
 
-      - Permisos de [**propietario**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner)o colaborador y [**Administrador de acceso de usuario**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) en la suscripción para crear un área de trabajo en un nuevo grupo de recursos. [](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor)  
+      - Permisos de [**propietario**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner) o [**colaborador**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) y [**Administrador de acceso de usuario**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) en la suscripción para crear un área de trabajo en un nuevo grupo de recursos.  
 
 - Configuration Manager, versión 1902 con el paquete acumulativo de actualizaciones (4500571) o posterior. Para obtener más información, vea [actualizar Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
 
-    - Rol de **Administrador total** en Configuration Manager  
+    - Rol de [**Administrador total**](/sccm/core/understand/fundamentals-of-role-based-administration#bkmk_Planroles) en Configuration Manager  
 
     > [!Note]  
     > El análisis de escritorio admite un ID. comercial por cada inquilino de Azure Active Directory (Azure AD) y Configuration Manager jerarquía. Si tiene varias jerarquías en su entorno, use distintos identificadores comerciales y Azure AD inquilinos.<!-- 4958160 -->
@@ -109,7 +109,7 @@ Para usar el análisis de escritorio, asegúrese de que el entorno cumple los re
 - Conectividad de red desde dispositivos a la nube pública de Microsoft. Para obtener más información, consulte [Habilitar el uso compartido de datos](/sccm/desktop-analytics/enable-data-sharing) .  
 
 
-### <a name="licensing"></a>Licencias
+### <a name="licensing-and-costs"></a>Licencias y costos
 
 El análisis de escritorio requiere una de las siguientes suscripciones de licencia:
 
@@ -119,7 +119,14 @@ El análisis de escritorio requiere una de las siguientes suscripciones de licen
 
 - Windows VDA E3 o E5  
 
+Además del costo de las suscripciones de licencias, no hay ningún costo adicional por el uso de análisis de escritorio. En Azure Log Analytics, el análisis de escritorio es "con una clasificación cero". Esta clasificación significa que se excluye de los costos y los límites de datos, independientemente del plan de tarifa de Azure Log Analytics que haya elegido. Para más información sobre los planes de tarifa de Azure Log Analytics, consulte [precios log Analytics](https://azure.microsoft.com/pricing/details/monitor/).
 
+- Si usa el nivel gratis, que tiene un límite en la cantidad de datos recopilados por día, los datos de análisis de escritorio no cuentan para este límite. Puede recopilar todos los datos de análisis de escritorio de sus dispositivos y seguir teniendo el límite completo disponible para recopilar datos adicionales de otros orígenes.
+
+- Si usa un nivel de pago que cobra por GB de datos recopilados, no se le cobrará por los datos de análisis de escritorio. Puede recopilar todos los datos de análisis de escritorio de sus dispositivos y no incurrir en ningún costo.
+
+> [!Note]  
+> Los distintos planes de Azure Log Analytics tienen períodos de retención de datos diferentes. El análisis de escritorio hereda la Directiva de retención de datos del área de trabajo. Si el área de trabajo se encuentra en el plan gratis, el análisis de escritorio conserva los últimos 30 días de "instantáneas diarias" que se recopilan en el área de trabajo.
 
 
 ## <a name="next-steps"></a>Pasos siguientes
