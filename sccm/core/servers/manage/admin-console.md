@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b93e636ea690fa99fd2a0dfc63bd12932d2f7a5e
-ms.sourcegitcommit: b5c7496ca408803046acc8403858aafd5dca8808
+ms.openlocfilehash: e99d82a39e1b3c1ef9e52072fc01ab722f3e3e61
+ms.sourcegitcommit: 4241c15a277c57b5480dea70fc30f1ed46ffd4f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794672"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490105"
 ---
 # <a name="using-the-configuration-manager-console"></a>Uso de la consola de Configuration Manager
 
@@ -200,6 +200,9 @@ A partir de la versión 1902 de Configuration Manager, hay un nodo de **Documen
 
 - **Artículos de solución de problemas**: tutoriales guiados que le ayudarán a solucionar problemas de características y componentes de Configuration Manager.
 - **Artículos de soporte técnico nuevos y actualizados**: artículos que son nuevos o se han actualizado en los últimos dos meses.
+
+### <a name="troubleshooting-connection-errors"></a>Solución de errores de conexión
+El nodo **Documentación** no tiene ninguna configuración de proxy explícita. Usa cualquier proxy definido por el sistema operativo en el applet del panel de control **Opciones de Internet**. Para volver a intentarlo después de un error de conexión, actualice el nodo **Documentación**.
 
 
 ## <a name="command-line-options"></a>Opciones de línea de comandos

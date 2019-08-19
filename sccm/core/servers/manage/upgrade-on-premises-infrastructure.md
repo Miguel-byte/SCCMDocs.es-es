@@ -2,7 +2,7 @@
 title: Actualizar la infraestructura local
 titleSuffix: Configuration Manager
 description: Obtenga información sobre cómo actualizar la infraestructura, como SQL Server y el sistema operativo de sistemas de sitio.
-ms.date: 06/07/2019
+ms.date: 08/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a361ff057d6448169088f383ac8373673a97294d
-ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
+ms.openlocfilehash: d456bfa1bf177a721a967a57b51cf513ed5c08c3
+ms.sourcegitcommit: 6b5a003256305c1f0cb605e52aeaaf19c23af5a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834964"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956408"
 ---
 # <a name="upgrade-on-premises-infrastructure-that-supports-configuration-manager"></a>Actualizar la infraestructura local compatible con Configuration Manager
 
@@ -29,7 +29,6 @@ Use la información de este artículo para ayudarle a actualizar la infraestruct
 - Si quiere *actualizar* la infraestructura de Configuration Manager, rama actual, a una nueva versión, vea [Actualizaciones para Configuration Manager](/sccm/core/servers/manage/updates).  
 
 
-
 ## <a name="BKMK_SupConfigUpgradeSiteSrv"></a> Actualización del sistema operativo de los sistemas de sitio  
 
 Configuration Manager admite la actualización local del sistema operativo del servidor que hospeda un servidor de sitio y de cualquier rol de sistema de sitio en las situaciones siguientes:  
@@ -38,17 +37,17 @@ Configuration Manager admite la actualización local del sistema operativo del s
 
 - Actualización local desde:  
 
-    - Windows Server 2016 para Windows Server 2019   
+    - Windows Server 2016 para Windows Server 2019  
 
-    - Windows Server 2012 R2 para Windows Server 2019   
+    - Windows Server 2012 R2 para Windows Server 2019  
 
-    - Windows Server 2012 R2 para Windows Server 2016   
+    - Windows Server 2012 R2 para Windows Server 2016  
 
-    - Windows Server 2012 para Windows Server 2016   
+    - Windows Server 2012 para Windows Server 2016  
 
-    - Windows Server 2012 a Windows Server 2012 R2   
+    - Windows Server 2012 a Windows Server 2012 R2  
 
-    - Windows Server 2008 R2 a Windows Server 2012 R2   
+    - Windows Server 2008 R2 a Windows Server 2012 R2  
 
 Para actualizar un servidor, use los procedimientos de actualización que proporciona el SO al que se va a actualizar. Vea los siguientes artículos:  
 
@@ -56,8 +55,7 @@ Para actualizar un servidor, use los procedimientos de actualización que propor
 
 - [Upgrade and conversion options for Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths) (Opciones de actualización y conversión de Windows Server 2016)  
 
-- [Upgrade Options for Windows Server 2012 R2](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11)) (Opciones de actualización de Windows Server 2012 R2)   
-
+- [Upgrade Options for Windows Server 2012 R2](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11)) (Opciones de actualización de Windows Server 2012 R2)  
 
 ### <a name="bkmk_2016-2019"></a> Actualizar Windows Server 2016 o 2019
 
@@ -67,13 +65,18 @@ Use los pasos que se describen en esta sección para cualquiera de los escenario
 
 - Actualice Windows Server 2012 o Windows Server 2012 R2 a Windows Server 2016  
 
+#### <a name="before-upgrade"></a>Antes de la actualización
 
-#### <a name="before-upgrade"></a>Antes de la actualización  
 - (Windows Server 2012 o Windows Server 2012 R2): Quite el cliente de System Center Endpoint Protection (SCEP). Ahora Windows Server tiene Windows Defender integrado, que reemplaza al cliente SCEP. La presencia del cliente SCEP puede impedir la actualización a Windows Server.  
 
 - Quite el rol de WSUS del servidor si está instalado. Puede mantener el SUSDB y readjuntarlo una vez que se vuelva a instalar WSUS.  
 
-#### <a name="after-upgrade"></a>Después de la actualización   
+- Si va a actualizar el sistema operativo del servidor de sitio, asegúrese de que la [replicación basada en archivos](/sccm/core/plan-design/hierarchy/file-based-replication) es correcta para el sitio. Compruebe todas las bandejas de entrada en busca de trabajos pendientes, tanto en sitios de envío como en sitios de recepción. Si hay muchos trabajos de replicación bloqueados o pendientes, espere hasta que desaparezca.<!-- SCCMDocs#1792 -->
+    - En el sitio de envío, revise el archivo **sender.log**.
+    - En el sitio de recepción, revise el archivo **despooler.log**.
+
+#### <a name="after-upgrade"></a>Después de la actualización
+
 - Asegúrese de que Windows Defender está habilitado, establecido para el inicio automático y en ejecución.  
 
 - Asegúrese de que se ejecutan los siguientes servicios de Configuration Manager:  
@@ -98,7 +101,8 @@ Use los pasos que se describen en esta sección para cualquiera de los escenario
 
 - Si va a actualizar el servidor de sitio primario, [ejecute un restablecimiento del sitio](/sccm/core/servers/manage/modify-your-infrastructure#bkmk_reset).  
 
-#### <a name="known-issue-for-remote-configuration-manager-consoles"></a>Problema conocido de consolas remotas de Configuration Manager   
+#### <a name="known-issue-for-remote-configuration-manager-consoles"></a>Problema conocido de consolas remotas de Configuration Manager
+
 Después de actualizar el servidor de sitio o una instancia del proveedor de SMS, no podrá conectarse con la consola de Configuration Manager. Para evitar este problema, restaure de forma manual los permisos del grupo de **administradores de SMS** en WMI. Los permisos deben establecerse en el servidor de sitio y en cada servidor remoto que hospeda una instancia del proveedor de SMS:
 
 1. En los servidores aplicables, abra Microsoft Management Console (MMC), agregue el complemento de **Control WMI** y, luego, seleccione **Equipo local**.  
@@ -123,23 +127,28 @@ Después de actualizar el servidor de sitio o una instancia del proveedor de SMS
 
 5. Guarde los permisos para restaurar el acceso de la consola de Configuration Manager.  
 
-
 #### <a name="known-issue-for-remote-site-systems"></a>Problema conocido relativo a los sistemas de sitios remotos
-Tras actualizar un servidor que aloja un sistema de sitio remoto, es posible que valor `Software\Microsoft\SMS` no figure en la siguiente clave del Registro: `HKLM\SYSTEM\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedPaths`. 
+
+Tras actualizar un servidor que aloja un sistema de sitio remoto, es posible que valor `Software\Microsoft\SMS` no figure en la siguiente clave del Registro: `HKLM\SYSTEM\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedPaths`.
 
 Si no aparece tras actualizar Windows en el servidor, agréguelo manualmente. De lo contrario, al cargar archivos a los buzones del servidor de sitio, puede haber problemas con los roles de los sistemas de sitios.
-
 
 ### <a name="bkmk_2012r2"></a> Actualizar Windows Server 2012 R2
 
 Al hacer la actualización de Windows Server 2008 R2 o Windows Server 2012 a Windows Server 2012 R2, se aplican las condiciones siguientes:
 
-#### <a name="before-upgrade"></a>Antes de la actualización  
+#### <a name="before-upgrade"></a>Antes de la actualización
+
 - En Windows Server 2012: Quite el rol de WSUS del servidor si está instalado. Puede mantener el SUSDB y readjuntarlo una vez que se vuelva a instalar WSUS.  
 
 - En Windows Server 2008 R2: Antes de actualizar a Windows Server 2012 R2, debe desinstalar WSUS 3.2 del servidor. Puede mantener el SUSDB y readjuntarlo una vez que se vuelva a instalar WSUS. Para más información, vea [Windows Server Update Services Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality) (Introducción a Windows Server Update Services).  
 
-#### <a name="after-upgrade"></a>Después de la actualización  
+- Si va a actualizar el sistema operativo del servidor de sitio, asegúrese de que la [replicación basada en archivos](/sccm/core/plan-design/hierarchy/file-based-replication) es correcta para el sitio. Compruebe todas las bandejas de entrada en busca de trabajos pendientes, tanto en sitios de envío como en sitios de recepción. Si hay muchos trabajos de replicación bloqueados o pendientes, espere hasta que desaparezca.<!-- SCCMDocs#1792 -->
+    - En el sitio de envío, revise el archivo **sender.log**.
+    - En el sitio de recepción, revise el archivo **despooler.log**.
+
+#### <a name="after-upgrade"></a>Después de la actualización
+
 - El proceso de actualización deshabilita los servicios de implementación de Windows. Asegúrese de que este servicio se inicia y ejecuta en los siguientes roles de sistema de sitio:  
 
     - Servidor de sitio  
@@ -164,7 +173,6 @@ Al hacer la actualización de Windows Server 2008 R2 o Windows Server 2012 a W
 
     Después de restaurar los requisitos previos que falten, reinicie el servidor una vez más para asegurarse de que los servicios se hayan iniciado y estén operativos.  
 
-
 ### <a name="unsupported-upgrade-scenarios"></a>Escenarios de actualización no compatibles
 
 Con frecuencia, se pregunta sobre los siguientes escenarios de actualización de Windows Server, pero no son compatibles con Configuration Manager:  
@@ -174,8 +182,7 @@ Con frecuencia, se pregunta sobre los siguientes escenarios de actualización de
 - Windows Server 2008 R2 a Windows Server 2012  
 
 
-
-##  <a name="BKMK_SupConfigUpgradeClient"></a> Actualizar el sistema operativo de los clientes  
+## <a name="BKMK_SupConfigUpgradeClient"></a> Actualizar el sistema operativo de los clientes  
 
 Configuration Manager admite una actualización local del SO para los clientes de Configuration Manager en las situaciones siguientes:  
 
@@ -186,22 +193,19 @@ Configuration Manager admite una actualización local del SO para los clientes d
 - Actualizaciones de mantenimiento desde una compilación a otra de Windows 10. Para obtener más información, consulte [Manage Windows as a service](/sccm/osd/deploy-use/manage-windows-as-a-service) (Administrar Windows como servicio).  
 
 
+## <a name="BKMK_SupConfigUpgradeDBSrv"></a> Actualizar SQL Server  
 
-##  <a name="BKMK_SupConfigUpgradeDBSrv"></a> Actualizar SQL Server  
-
-Configuration Manager admite una actualización local de SQL Server en el servidor de base de datos del sitio. 
+Configuration Manager admite una actualización local de SQL Server en el servidor de base de datos del sitio.
 
 Para más información sobre las versiones de SQL Server compatibles con Configuration Manager, consulte [Versiones de SQL Server compatibles con System Center Configuration Manager](/sccm/core/plan-design/configs/support-for-sql-server-versions).  
 
-
-### <a name="upgrade-the-service-pack-version-of-sql-server"></a>Actualizar la versión del Service Pack de SQL Server    
+### <a name="upgrade-the-service-pack-version-of-sql-server"></a>Actualizar la versión del Service Pack de SQL Server
 
 Si Configuration Manager sigue admitiendo el nivel de Service Pack resultante de SQL Server, admite la actualización local de SQL Server a un Service Pack posterior.
 
 Si tiene más de un sitio de Configuration Manager en una jerarquía, cada sitio puede ejecutar una versión de Service Pack de SQL Server diferente. No hay ninguna limitación en el orden en el que los sitios actualizan la versión del Service Pack de SQL Server.
 
-
-### <a name="upgrade-to-a-new-version-of-sql-server"></a>Actualización a una nueva versión de SQL Server   
+### <a name="upgrade-to-a-new-version-of-sql-server"></a>Actualización a una nueva versión de SQL Server
 
 Configuration Manager es compatible con la actualización local de SQL Server a las siguientes versiones:
 
@@ -221,8 +225,7 @@ Al actualizar la versión de SQL Server que hospeda la base de datos de sitio, d
 
 3. Actualice los sitios primarios principales en último lugar. Estos sitios incluyen tanto los sitios primarios secundarios, que informan a un sitio de administración central, como los sitios primarios independientes, que están en el sitio de nivel superior de una jerarquía.  
 
- 
-### <a name="sql-server-cardinality-estimation-level"></a>Nivel de estimación de cardinalidad de SQL Server   
+### <a name="sql-server-cardinality-estimation-level"></a>Nivel de estimación de cardinalidad de SQL Server
 
 Al actualizar una base de datos del sitio a partir de una versión anterior de SQL Server, la base de datos conserva su nivel existente de estimación de cardinalidad (CE) de SQL si se encuentra en el mínimo permitido para esa instancia de SQL Server. La actualización de SQL Server con una base de datos en un nivel de compatibilidad inferior al nivel permitido establece automáticamente la base de datos en el nivel de compatibilidad más bajo que permite SQL Server.
 
@@ -235,12 +238,12 @@ En la tabla siguiente se identifican los niveles de compatibilidad recomendados 
 | SQL Server 2014 | 120, 110      | 110 |
 
 Para identificar el nivel de compatibilidad de la estimación de cardinalidad de SQL Server en uso para la base de datos del sitio, ejecute la siguiente consulta SQL en el servidor de base de datos del sitio:  
+
 ```SQL
 SELECT name, compatibility_level FROM sys.databases
 ```
 
 Para obtener más información sobre los niveles de compatibilidad de CE de SQL y cómo establecerlos, consulte [Nivel de compatibilidad de ALTER DATABASE (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017).
-
 
 Para más información sobre la actualización de SQL Server, consulte los siguientes artículos de SQL Server:  
 
@@ -249,8 +252,6 @@ Para más información sobre la actualización de SQL Server, consulte los sigui
 - [Actualización a SQL Server 2016](https://docs.microsoft.com/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2016)  
 
 - [Actualización a SQL Server 2014](https://docs.microsoft.com/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2014)  
-
-
 
 ### <a name="to-upgrade-sql-server-on-the-site-database-server"></a>Para actualizar SQL Server en el servidor de base de datos del sitio  
 

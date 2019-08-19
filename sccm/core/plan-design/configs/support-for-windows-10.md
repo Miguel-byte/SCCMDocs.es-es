@@ -1,8 +1,8 @@
 ---
 title: Compatibilidad con Windows 10
 titleSuffix: Configuration Manager
-description: Obtenga información sobre las versiones de Windows 10 que se admiten como clientes o para OSD con System Center Configuration Manager.
-ms.date: 07/26/2019
+description: Obtención de información sobre las versiones de Windows 10 que se admiten como clientes o para OSD con Configuration Manager
+ms.date: 08/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e95cc6be22c05afcf489fa7e9db8456cb0da0f79
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: f4cc83e3b7d234b7dfbab24ba54079e4633814d5
+ms.sourcegitcommit: 9c29ee22d3af5ab2bf8d51262c11d5a756dc55c7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68536796"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68913770"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Compatibilidad con Windows 10 en Configuration Manager  
 
@@ -64,8 +64,12 @@ En la tabla siguiente se enumeran las versiones de Windows 10 que puede usar com
 
 <!-- lifecycle reference: https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet -->
 
+Para más información sobre el ciclo de vida de Windows, vea [Hoja de datos del ciclo de vida de Windows](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
+
 > [!Note]  
 > En la compatibilidad para las versiones del Canal semianual de Windows 10, se incluyen las ediciones siguientes: Enterprise, Pro, Education y Pro Education.  
+>
+> A partir de la versión 1906, Configuration Manager admite Windows 10 Pro for Workstation.
 
 | Clave |
 |--|
@@ -74,8 +78,6 @@ En la tabla siguiente se enumeran las versiones de Windows 10 que puede usar com
 
 > [!NOTE]  
 > Configuration Manager es compatible con el cliente en dispositivos ARM64 de Windows 10. Las características de administración de cliente existentes deben funcionar con estos nuevos dispositivos. Por ejemplo, el inventario de hardware y software, las actualizaciones de software y la administración de aplicaciones. La implementación de SO no se admite actualmente. <!-- 1353704 -->
-
-Para más información sobre el ciclo de vida de Windows, vea [Hoja de datos del ciclo de vida de Windows](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
 
 
 ## <a name="windows-10-adk"></a>Windows 10 ADK
@@ -96,14 +98,14 @@ En la tabla siguiente se enumeran las versiones de Windows 10 ADK que puede usar
 | **1809**<br>(10.1.17763) | ![No compatible](media/Red_X.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) | ![Compatible con versiones anteriores](media/blue_compat.png) |
 | **1903**<br>(10.1.18362) | ![No compatible](media/Red_X.png) | ![No compatible](media/Red_X.png) | ![No compatible](media/Red_X.png) | ![Compatible.](media/green_check.png) | ![Compatible.](media/green_check.png) |
 
+> [!Note]  
+> Configuration Manager solo admite componentes x86 y amd64 de Windows 10 ADK. Actualmente no admite componentes ARM o ARM64.
+
 |Clave|
 |--|
 | ![Compatible](media/green_check.png) = **Compatible** <br/> Microsoft recomienda el uso de la versión de Windows ADK que coincida con la de Windows que va a implementar. Al implementar la versión más reciente de Windows 10, use la versión más reciente de Windows ADK. La versión más reciente de Windows ADK puede admitir la implementación de versiones anteriores del sistema operativo, como Windows 7.<!-- SCCMDocs issue 1229 --> Para obtener más información sobre la compatibilidad del componente Windows ADK, consulte [DISM supported platforms](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms) (Plataformas compatibles con DISM) y [USMT requirements](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1) (Requisitos de USMT). |
 | ![Compatible con versiones anteriores](media/blue_compat.png)  = **Compatible con versiones anteriores** <br/> Esta combinación no se ha probado pero debería funcionar. Informaremos de cualquier problema conocido o advertencia. |
 | ![No compatible](media/Red_X.png) = **Not supported** |
-
-> [!Note]  
-> Configuration Manager solo admite componentes x86 y amd64 de Windows 10 ADK. Actualmente no admite componentes ARM o ARM64.
 
 > [!Tip]
 > Las compilaciones de Windows Server tienen el mismo requisito de Windows ADK que la versión de Windows 10 asociada. Por ejemplo, Windows Server 2016 es la misma versión de compilación que Windows 10 LTSB 2016.

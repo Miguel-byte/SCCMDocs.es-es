@@ -1,6 +1,6 @@
 ---
 title: Documentación en consola
-ms.date: 06/15/2019
+ms.date: 08/09/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -10,12 +10,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4cf8cd6d750549b307530dff17269e32356e7057
-ms.sourcegitcommit: b62de6c9cb1bc3e4c9ea5ab5ed3355d83e3a59bc
+ms.openlocfilehash: b413dd90a30317c4dec091a7963b637024eab442
+ms.sourcegitcommit: fe8934487158ed3bd15c7a6a456c3cafe58aed64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894154"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68995425"
 ---
 <!-- 
 - Feature 1357546
@@ -26,7 +26,7 @@ ms.locfileid: "67894154"
 
 # <a name="configuration-manager-documentation"></a>Documentación de Configuration Manager
 
-*Última actualización: 15/06/2019*
+*Última actualización: 09/08/2019*
 
 Este contenido puede ayudarle a aprender a usar Configuration Manager.
 
@@ -54,20 +54,22 @@ Lista recopilada manualmente de artículos importantes.
 
 ## <a name="trending"></a>Tendencias
 
-Los artículos más populares entre el 1 de junio y el 30 de junio de 2019.
+Los artículos más populares entre el 1 de julio y el 31 de julio de 2019.
 
 | Vistas de página | Título |
 |------------|-------|
-| 20786 | [Archivos de registro para la solución de problemas](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) |
-| 17237 | [Habilitación de TLS 1.2](https://docs.microsoft.com/sccm/core/plan-design/security/enable-tls-1-2) |
-| 12788 | [Novedades de la versión 1902](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1902) |
-| 12418 | [Puertos usados para las conexiones](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) |
-| 11553 | [Cómo implementar clientes en equipos Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
-| 9889 | [Administrar las actualizaciones de Office 365 ProPlus](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates) |
-| 8781 | [Compatibilidad con Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
-| 8464 | [Actualizaciones y mantenimiento](https://docs.microsoft.com/sccm/core/servers/manage/updates) |
-| 8349 | [Pasos de la secuencia de tareas](https://docs.microsoft.com/sccm/osd/understand/task-sequence-steps) |
-| 8021 | [Instalación de la consola](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles) |
+| 19223 | [Referencia del archivo de registro](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) |
+| 17954 | [Habilitación de TLS 1.2](https://docs.microsoft.com/sccm/core/plan-design/security/enable-tls-1-2) |
+| 13242 | [Puertos usados para las conexiones](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) |
+| 12120 | [Cómo implementar clientes en equipos Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
+| 11772 | [Novedades de la versión 1902](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1902) |
+| 10206 | [Análisis de escritorio](https://docs.microsoft.com/sccm/desktop-analytics/overview) |
+| 9885 | [Administrar las actualizaciones de Office 365 ProPlus](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates) |
+| 8740 | [Novedades de la versión 1906](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1906) |
+| 8464 | [Compatibilidad con Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
+| 8398 | [Actualizaciones y mantenimiento](https://docs.microsoft.com/sccm/core/servers/manage/updates) |
+
+En [la página del centro de Configuration Manager](https://docs.microsoft.com/sccm/) se recibieron 24 008 vistas de página en este período de tiempo.
 
 ## <a name="recently-updated"></a>Actualizado recientemente
 
@@ -75,16 +77,16 @@ Artículos con una actualización reciente y significativa.
 
 | Últimas revisiones | Título |
 |---------------|-------|
-| 28/6/2019 | [Versiones de Technical Preview](https://docs.microsoft.com/sccm/core/get-started/technical-preview) |
-| 28/6/2019 | [Solución de problemas de Análisis de escritorio](https://docs.microsoft.com/sccm/desktop-analytics/troubleshooting) |
-| 27/6/2019 | [Rutas hacia la administración conjunta](https://docs.microsoft.com/sccm/comanage/quickstart-paths) |
-| 20/6/2019 | [Novedades de la versión 1902](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1902) |
-| 20/6/2019 | [Configuración de cliente](https://docs.microsoft.com/sccm/core/clients/deploy/about-client-settings) |
-| 20/6/2019 | [Creación y ejecución de scripts](https://docs.microsoft.com/sccm/apps/deploy-use/create-deploy-scripts) |
-| 20/6/2019 | [Consola de Configuration Manager](https://docs.microsoft.com/sccm/core/servers/manage/admin-console) |
-| 19/6/2019 | [PREGUNTAS MÁS FRECUENTES SOBRE CLOUD MANAGEMENT GATEWAY](https://docs.microsoft.com/sccm/core/clients/manage/cmg/cloud-management-gateway-faq) |
-| 19/6/2019 | [Requisitos de acceso a Internet](https://docs.microsoft.com/sccm/core/plan-design/network/internet-endpoints) |
-| 17/6/2019 | [Notas de la versión](https://docs.microsoft.com/sccm/core/servers/deploy/install/release-notes) |
+| 2019-07-30 | [Servidor de caché en la red de optimización de distribución](https://docs.microsoft.com/en-us/sccm/core/plan-design/hierarchy/delivery-optimization-in-network-cache) |
+| 2019-07-26 | [Notificaciones de reinicio del dispositivo](https://docs.microsoft.com/en-us/sccm/core/clients/deploy/device-restart-notifications) |
+| 2019-07-26 | [Evaluación de compatibilidad](https://docs.microsoft.com/en-us/sccm/desktop-analytics/compat-assessment) |
+| 2019-07-26 | [Depurar una secuencia de tareas](https://docs.microsoft.com/en-us/sccm/osd/deploy-use/debug-task-sequence) |
+| 2019-07-26 | [SQL Server Always On](https://docs.microsoft.com/en-us/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database) |
+| 2019-07-26 | [Acerca de los archivo de registro](https://docs.microsoft.com/en-us/sccm/core/plan-design/hierarchy/about-log-files) |
+| 2019-07-26 | [Configuración del contenido de la caché previa](https://docs.microsoft.com/en-us/sccm/osd/deploy-use/configure-precache-content) |
+| 2019-07-26 | [Crear grupos de aplicaciones](https://docs.microsoft.com/en-us/sccm/apps/deploy-use/create-app-groups) |
+| 2019-07-19 | [Notas de la versión 1906](https://docs.microsoft.com/en-us/powershell/sccm/1906-release-notes) |
+| 2019-07-11 | [Versión 1907 de Technical Preview](https://docs.microsoft.com/en-us/sccm/core/get-started/2019/technical-preview-1907) |
 
 ## <a name="troubleshooting-articles"></a>Artículos de solución de problemas
 
@@ -100,16 +102,10 @@ Tutoriales guiados que le ayudarán a solucionar problemas de características y
 
 ## <a name="new-and-updated-support-articles"></a>Artículos de soporte técnico nuevos y actualizados
 
-Artículos de soporte técnico nuevos o actualizados entre el 10 de junio y el 10 de julio de 2019.
+Artículos de soporte técnico nuevos o actualizados entre el 11 de julio y el 12 de agosto de 2019.
 
-- [KB 4505439: Solución de problemas de sincronización de actualizaciones de software en Configuration Manager](https://support.microsoft.com/help/4505439)
-- [KB 4508653: Error en la distribución del paquete a un punto de distribución remoto debido a un error de inicio de sesión](https://support.microsoft.com/help/4508653)
-- [KB 4508855: Las aplicaciones no se implementan para los usuarios que iniciaron sesión en controladores de dominio en Configuration Manager](https://support.microsoft.com/help/4508855)
-- [KB 4500571: Paquete acumulativo de actualizaciones de la rama actual de System Center Configuration Manager, versión 1902](https://support.microsoft.com/help/4500571)
-- [KB 4508760: "Error de secuencia de funciones" aparece repetidamente en el registro Smsdbmon.log en la versión 1902 de Configuration Manager](https://support.microsoft.com/help/4508760)
-- [KB 4509131: Error en la secuencia de tareas de Configuration Manager OSD con el código de error 80070005](https://support.microsoft.com/help/4509131)
-- [KB 4509132: "Error de IDispatch 3603" durante la distribución de contenido en Configuration Manager](https://support.microsoft.com/help/4509132)
-- [KB 4509681: Bloqueo de la actualización de Configuration Manager durante la actualización de la base de datos de Configuration Manager](https://support.microsoft.com/help/4509681)
-- [KB 4509484: Error 80070070 durante la distribución de contenido en un CMG o DP en la nube en Configuration Manager](https://support.microsoft.com/help/4509484)
+- [KB 4511621: Error "No hay suficientes recursos de memoria" al crear medios independientes o preconfigurados en Configuration Manager](https://support.microsoft.com/help/4511621)
+- [KB 4511618: El certificado no se actualiza en un DP habilitado para el entorno PXE y se ven varias entradas de error de registro](https://support.microsoft.com/help/4511618)
+- [KB 4509382: Solución de problemas de la implementación de una aplicación en Configuration Manager](https://support.microsoft.com/help/4509382)
 
 Para suscribirse a notificaciones de Atom o RSS de nuevos artículos de soporte técnico de Configuration Manager, vea [Support content updates](https://support.microsoft.com/help/4089498/) (Actualizaciones de contenido de soporte técnico) y seleccione **System Center Configuration Manager**.  

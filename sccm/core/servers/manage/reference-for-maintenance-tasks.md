@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 24e76f9281158aa28e153efe9124ba2adf94a14d
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 4bbde522e5c856bbc700fcd6ceb22d4637513d18
+ms.sourcegitcommit: 6b5a003256305c1f0cb605e52aeaaf19c23af5a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67676375"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956431"
 ---
 # <a name="reference-for-maintenance-tasks-for-system-center-configuration-manager"></a>Referencia de tareas de mantenimiento para System Center Configuration Manager
 
@@ -148,7 +148,7 @@ Esta tarea se aplica en dispositivos inscritos con Microsoft Intune (híbrido) o
 -   **Sitio primario**: Habilitado    
 -   Sitio secundario: No disponible  
 
-**Eliminar datos de resumen de replicación vencidos**: use esta tarea para eliminar datos de resumen de replicación antiguos de la base de datos del sitio cuando no se haya actualizado durante un período de tiempo especificado. Para obtener más información, consulte la sección [How to monitor database replication links and replication status](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md#BKMK_MonitorRepLinksAndStatuss) (Cómo supervisar los vínculos de replicación de bases de datos y el estado de replicación) del tema [Monitor hierarchy and replication infrastructure in System Center Configuration Manager](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md) (Supervisar la infraestructura de la jerarquía y replicación en System Center Configuration Manager).  
+**Eliminar datos de resumen de replicación vencidos**: use esta tarea para eliminar datos de resumen de replicación antiguos de la base de datos del sitio cuando no se haya actualizado durante un período de tiempo especificado. Para obtener más información, consulte [Supervisión de la replicación de la base de datos](/sccm/core/servers/manage/monitor-replication).  
 
 -   **Sitio de administración central**: Habilitado    
 -   **Sitio primario**: Habilitado    
@@ -160,7 +160,7 @@ Esta tarea se aplica en dispositivos inscritos con Microsoft Intune (híbrido) o
 -   **Sitio primario**: Habilitado    
 -   Sitio secundario: No disponible  
 
-**Eliminar datos antiguos de seguimiento de replicación**: use esta tarea para eliminar datos antiguos sobre la replicación de base de datos entre los sitios de Configuration Manager de la base de datos. Si cambia la configuración de esta tarea de mantenimiento, la configuración se aplica a todos los sitios aplicables en la jerarquía. Para obtener más información, consulte la sección [How to monitor database replication links and replication status](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md#BKMK_MonitorRepLinksAndStatuss) (Cómo supervisar los vínculos de replicación de bases de datos y el estado de replicación) del tema [Monitor hierarchy and replication infrastructure in System Center Configuration Manager](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md) (Supervisar la infraestructura de la jerarquía y replicación en System Center Configuration Manager).  
+**Eliminar datos antiguos de seguimiento de replicación**: use esta tarea para eliminar datos antiguos sobre la replicación de base de datos entre los sitios de Configuration Manager de la base de datos. Si cambia la configuración de esta tarea de mantenimiento, la configuración se aplica a todos los sitios aplicables en la jerarquía. Para obtener más información, consulte [Supervisión de la replicación de la base de datos](/sccm/core/servers/manage/monitor-replication).  
 
 -   **Sitio de administración central**: Habilitado    
 -   **Sitio primario**: Habilitado    

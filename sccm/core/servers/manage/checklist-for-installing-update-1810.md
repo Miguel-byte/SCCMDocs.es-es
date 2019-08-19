@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 59cb31a0d57af21331f48c6a6ba415439fa97239
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: ad724a1af65fcd7dcd533d30c0871c67795106d3
+ms.sourcegitcommit: 6b5a003256305c1f0cb605e52aeaaf19c23af5a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67252179"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956469"
 ---
 # <a name="checklist-for-installing-update-1810-for-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 1810 de Configuration Manager
 
@@ -105,7 +105,7 @@ Para obtener más información, vea  [Usar alertas y el sistema de estado](/scc
 #### <a name="review-file-and-data-replication-between-sites"></a>Revisar la replicación de datos y archivos entre sitios   
 Asegúrese de que la replicación de archivos y bases de datos entre sitios funciona y está actualizada. Los retrasos o los trabajos pendientes pueden impedir una actualización correcta y sin problemas. Para la replicación de base de datos, puede utilizar Replication Link Analyzer para ayudar a resolver problemas antes de iniciar la actualización.
 
-Para obtener más información, vea [Acerca de Replication Link Analyzer](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA).
+Para obtener más información, vea [Acerca de Replication Link Analyzer](/sccm/core/servers/manage/monitor-replication#BKMK_RLA).
 
 #### <a name="install-all-applicable-critical-windows-updates"></a>Instale todas las actualizaciones de Windows críticas aplicables
 Antes de instalar una actualización para Configuration Manager, instale las actualizaciones críticas del sistema operativo para cada sistema de sitio aplicable. Estos servidores incluyen el servidor de sitio, el servidor de base de datos de sitio y los roles de sistema de sitio remoto. Si alguna de las actualizaciones que instala requiere un reinicio, reinicie los servidores correspondientes antes de iniciar la actualización.
@@ -187,8 +187,10 @@ En la consola de Configuration Manager, vaya a las ubicaciones siguientes para v
 -   Área de trabajo **Supervisión**, **nodo Replicación de base de datos**  
 
 Vea los siguientes artículos para más información:  
-- [Supervisar la infraestructura de la jerarquía y replicación](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure)
-- [Información sobre Replication Link Analyzer](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA)  
+
+- [Supervisión de la jerarquía](/sccm/core/servers/manage/monitor-hierarchy)
+- [Supervisión de la replicación](/sccm/core/servers/manage/monitor-replication)
+- [Información sobre Replication Link Analyzer](/sccm/core/servers/manage/monitor-replication#BKMK_RLA)  
 
 
 #### <a name="update-configuration-manager-consoles"></a>Actualizar consolas de Configuration Manager

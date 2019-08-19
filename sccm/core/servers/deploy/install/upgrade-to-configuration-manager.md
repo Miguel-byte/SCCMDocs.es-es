@@ -1,7 +1,7 @@
 ---
 title: Actualización a Configuration Manager
 description: Obtenga información sobre qué pasos seguir para ejecutar correctamente una actualización local desde un sitio y jerarquía que ejecutan System Center 2012 Configuration Manager.
-ms.date: 03/27/2019
+ms.date: 08/16/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 86e41e932995abc47b6229ce3405f810d75b992b
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: fb0d120fd9d9b301cf02af9c6126a0991524e9c6
+ms.sourcegitcommit: 4241c15a277c57b5480dea70fc30f1ed46ffd4f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159293"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490060"
 ---
 # <a name="upgrade-to-configuration-manager"></a>Actualización a Configuration Manager
 
@@ -35,7 +35,7 @@ Las siguientes opciones son las rutas de actualización local admitidas actualme
 
 ### <a name="upgrade-to-version-1902"></a>Actualizar a la versión 1902
 
-Si tiene medios de línea de base de la versión 1902, puede actualizar lo siguiente a una versión con licencia completa de System Center Configuration Manager, versión 1902:   
+Puede actualizar lo siguiente a una versión completa con licencia de System Center Configuration Manager versión 1902:   
 - Una instalación de evaluación de System Center Configuration Manager, versión 1902
 - System Center 2012 Configuration Manager con Service Pack 1
 - System Center 2012 Configuration Manager con Service Pack 2
@@ -43,28 +43,14 @@ Si tiene medios de línea de base de la versión 1902, puede actualizar lo sigui
 - System Center 2012 R2 Configuration Manager con Service Pack 1
 
 ### <a name="upgrade-to-version-1802"></a>Actualizar a la versión 1802
-Si tiene medios de base de referencia de la versión 1802, puede actualizar lo siguiente a una versión con licencia completa de System Center Configuration Manager, versión 1802:   
+Puede actualizar lo siguiente a una versión completa con licencia de System Center Configuration Manager versión 1802:   
 - Una instalación de evaluación de System Center Configuration Manager, versión 1802
 - System Center 2012 Configuration Manager con Service Pack 1
 - System Center 2012 Configuration Manager con Service Pack 2
 - System Center 2012 R2 Configuration Manager
 - System Center 2012 R2 Configuration Manager con Service Pack 1
 
-### <a name="upgrade-to-version-1606"></a>Actualizar a la versión 1606
-El 15 de diciembre de 2016, se volvió a publicar el medio de línea de base de la versión 1606 a fin de agregar compatibilidad con más escenarios de actualización. Esta versión admite la actualización de las siguientes versiones a una versión con licencia completa de System Center Configuration Manager versión 1606:  
-- Una instalación de evaluación de System Center Configuration Manager versión 1606
-- Una instalación de versión candidata de System Center Configuration Manager  
-- System Center 2012 Configuration Manager con Service Pack 1  
-- System Center 2012 Configuration Manager con Service Pack 2  
-- System Center 2012 R2 Configuration Manager sin ningún Service Pack
-- System Center 2012 R2 Configuration Manager con Service Pack 1  
-
-Si usa un medio de línea de base de la versión 1606 descargado antes del 15 de diciembre de 2016, solo puede actualizar lo siguiente a una versión con licencia completa de System Center Configuration Manager versión 1606:
-- Una instalación de evaluación de System Center Configuration Manager versión 1606
-- System Center 2012 Configuration Manager con Service Pack 2
-- System Center 2012 R2 Configuration Manager con Service Pack 1
-
-Para más información sobre el uso de la versión 1606, consulte [Preguntas más frecuentes sobre las licencias y ramas de Configuration Manager](/sccm/core/understand/product-and-licensing-faq).
+Para más información, consulte [Preguntas más frecuentes sobre las licencias y ramas de Configuration Manager](/sccm/core/understand/product-and-licensing-faq).
 
 > [!TIP]  
 >  Al realizar la actualización desde una versión de System Center 2012 Configuration Manager a la Rama actual, es posible simplificar el proceso de actualización. Para obtener más información, consulte:  

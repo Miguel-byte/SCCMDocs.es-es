@@ -2,7 +2,7 @@
 title: Lista de comprobación de 1906
 titleSuffix: Configuration Manager
 description: Sepa lo que debe hacer antes de actualizar a la versión 1906 de Configuration Manager.
-ms.date: 08/07/2019
+ms.date: 08/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba3195db4445b4a96e04e9805cf92e6e21c9b2be
-ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
+ms.openlocfilehash: a64fc82121535272c0417d1c2dbc6bed65745ce8
+ms.sourcegitcommit: 6b5a003256305c1f0cb605e52aeaaf19c23af5a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68860014"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956441"
 ---
 # <a name="checklist-for-installing-update-1906-for-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 1906 de Configuration Manager
 
@@ -145,9 +145,26 @@ Para obtener más información, vea  [Usar alertas y el sistema de estado](/scc
 
 ### <a name="review-file-and-data-replication-between-sites"></a>Revisar la replicación de datos y archivos entre sitios
 
-Asegúrese de que la replicación de archivos y bases de datos entre sitios funciona y está actualizada. Los retrasos o los trabajos pendientes pueden impedir una actualización correcta. Para la replicación de base de datos, utilice Replication Link Analyzer para ayudar a resolver problemas antes de iniciar la actualización.
+Asegúrese de que la replicación de archivos y bases de datos entre sitios funciona y está actualizada. Los retrasos o los trabajos pendientes pueden impedir una actualización correcta.
 
-Para obtener más información, vea [Acerca de Replication Link Analyzer](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA).
+#### <a name="database-replication"></a>Replicación de base de datos
+
+Para la [replicación de base de datos](/sccm/core/plan-design/hierarchy/database-replication), para ayudar a resolver problemas antes de iniciar la actualización, utilice **Replication Link Analyzer** (RLA). Para obtener más información, consulte [Supervisión de la replicación de la base de datos](/sccm/core/servers/manage/monitor-replication).
+
+Use RLA para responder a las siguientes preguntas:
+
+- ¿Está la replicación por grupo en buen estado?
+- ¿Hay algún vínculo degradado?
+- ¿Hay algún error?
+
+Si hay un trabajo pendiente, espere hasta que desaparezca. Si el trabajo pendiente es grande, como millones de registros, el vínculo se encuentra en mal estado. Antes de actualizar el sitio, resuelva el problema de replicación. Si necesita más ayuda, póngase en contacto con el Soporte técnico de Microsoft.<!-- 2838129 -->
+
+#### <a name="file-based-replication"></a>replicación basada en archivos
+
+Para la [replicación basada en archivos](/sccm/core/plan-design/hierarchy/file-based-replication), compruebe todas las bandejas de entrada en busca de trabajos pendientes, tanto en sitios de envío como en sitios de recepción. Si hay muchos trabajos de replicación bloqueados o pendientes, espere hasta que desaparezca.<!-- SCCMDocs#1792 -->
+
+- En el sitio de envío, revise el archivo **sender.log**.
+- En el sitio de recepción, revise el archivo **despooler.log**.
 
 ### <a name="install-all-applicable-critical-windows-updates"></a>Instale todas las actualizaciones de Windows críticas aplicables
 
@@ -241,7 +258,7 @@ En la consola de Configuration Manager, vaya a las ubicaciones siguientes para v
 Vea los siguientes artículos para más información:  
 
 - [Supervisar la infraestructura de la jerarquía y replicación](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure)
-- [Información sobre Replication Link Analyzer](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA)  
+- [Información sobre Replication Link Analyzer](/sccm/core/servers/manage/monitor-replication#BKMK_RLA)  
 
 ### <a name="update-configuration-manager-consoles"></a>Actualizar consolas de Configuration Manager
 
