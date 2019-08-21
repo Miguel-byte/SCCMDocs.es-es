@@ -11,21 +11,24 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d93e7fd61b2cff49e7729a9037e56d69c6e4c5ac
-ms.sourcegitcommit: f531d0a622f220739710b2fe6644ea58d024064a
+ms.openlocfilehash: 00d6ccd54e7be4021c6dc31d30aedac50b41e3dd
+ms.sourcegitcommit: 7b111cd8a797877031378349898810c3dd0a3750
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65933514"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69632486"
 ---
 # <a name="enroll-devices-with-device-enrollment-manager-with-configuration-manager"></a>Inscribir dispositivos con el administrador de inscripción de dispositivos con Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
+> [!Important]  
+> Desde el 14 de agosto de 2018, la administración híbrida de dispositivos móviles es una [característica en desuso](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Para más información, vea [¿Qué es la Administración híbrida de dispositivos móviles (MDM)?](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
+
 Las organizaciones pueden usar Intune para administrar un gran número de dispositivos móviles con una sola cuenta de usuario. La cuenta del *administrador de inscripción de dispositivos* (DEM) es una cuenta de usuario especial utilizada para inscribir dispositivos. Agregue usuarios existentes a la cuenta de DEM para ofrecerles funcionalidades DEM especiales. Cada dispositivo inscrito usa una sola licencia. Se recomienda que use dispositivos inscritos a través de esta cuenta como dispositivos compartidos sin afinidad de usuario, en lugar de dispositivos dedicados personales.  
 
 ## <a name="enroll-corporate-owned-devices-with-the-device-enrollment-manager"></a>Inscribir dispositivos propiedad de la empresa con el administrador de inscripción de dispositivos  
- Puede asignar un almacén de administrador o supervisor, por ejemplo, un administrador de inscripción de dispositivos de la cuenta de usuario para permitir que este usuario hacer lo siguiente:  
+ Puede asignar un administrador o supervisor de almacén, por ejemplo, una cuenta de usuario del administrador de inscripción de dispositivos para permitir que este usuario haga lo siguiente:  
 
 -   Inscribir hasta 1000 dispositivos para la administración  
 -   Usar la aplicación de portal de empresa para instalar aplicaciones de empresa  
@@ -40,8 +43,8 @@ Las limitaciones siguientes se aplican a los dispositivos que se administran med
 - El sitio web del portal de empresa no está disponible para cuentas de administrador de inscripción de dispositivos. Use la aplicación de portal de empresa.
 - Si usa DEM para inscribir dispositivos iOS, no puede usa Apple Configurator ni el Programa de inscripción de dispositivos (DEP) de Apple para inscribir dispositivos. (Solo iOS) 
 
-  **Ejemplos de escenario de administrador de inscripción de dispositivos:**   
-  Un restaurante quiere tabletas de punto de venta para los camareros y monitores de pedidos para el personal de cocina. Los empleados no necesitan nunca acceder a los datos de la empresa ni iniciar sesión como usuario. El administrador de Intune crea una cuenta de administrador de inscripción de dispositivos e inscribe los dispositivos propiedad de la empresa usando esa cuenta. Como alternativa, el administrador podría dar la inscripción del dispositivo las credenciales de administrador a un responsable del restaurante, lo que les permite inscribir y administrar los dispositivos.  
+  **Ejemplos de escenario de administrador de inscripción de dispositivos:**    
+  Un restaurante quiere tabletas de punto de venta para los camareros y monitores de pedidos para el personal de cocina. Los empleados no necesitan nunca acceder a los datos de la empresa ni iniciar sesión como usuario. El administrador de Intune crea una cuenta de administrador de inscripción de dispositivos e inscribe los dispositivos propiedad de la empresa usando esa cuenta. Como alternativa, el administrador puede proporcionar las credenciales del administrador de inscripción de dispositivos a un administrador de restaurante, permitiéndoles inscribir y administrar los dispositivos.  
 
   El administrador puede implementar aplicaciones específicas de cada rol en los dispositivos del restaurante. Un administrador también puede seleccionar un dispositivo en la consola y retirarlo de la administración de dispositivos móviles.  
 
