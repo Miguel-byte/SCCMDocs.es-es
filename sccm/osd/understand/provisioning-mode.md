@@ -11,12 +11,12 @@ ms.assetid: 3e3ff3a4-7a75-41bb-bdf9-33ede9c0e3a3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 970b1fea320d8fe039062cf81789d14398930be5
-ms.sourcegitcommit: 3f43fa8462bf39b2c18b90a11a384d199c2822d8
+ms.openlocfilehash: f0e5a313bb5afd0501f0d6027d42b5a51a7e8946
+ms.sourcegitcommit: 7b111cd8a797877031378349898810c3dd0a3750
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66403432"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631949"
 ---
 # <a name="provisioning-mode"></a>Modo de aprovisionamiento
 
@@ -45,6 +45,13 @@ A partir de la versión 1902, la secuencia de tareas establece una marca de tie
 
 48 horas es el valor predeterminado de tiempo de espera del modo de aprovisionamiento. Puede ajustar este temporizador en un dispositivo estableciendo el valor **ProvisioningMaxMinutes** en la siguiente clave del Registro: `HKLM\Software\Microsoft\CCM\CcmExec`. Si este valor no existe o es `0`, el cliente usa el valor predeterminado de 48 horas.
 
+La marca de tiempo **ProvisioningEnabledTime** se encuentra en la siguiente clave `HKLM\Software\Microsoft\CCM\CcmExec`del registro:. La marca de tiempo tiene un valor de la última vez que el equipo entró en modo de aprovisionamiento. El formato es tiempo (marca de tiempo de UNIX) y está en UTC.
+
+Esta marca de tiempo también se restablece en la hora actual cuando se coloca manualmente el equipo en modo de aprovisionamiento mediante el comando siguiente:
+
+```powershell
+Invoke-WmiMethod -Namespace root\CCM -Class SMS_Client -Name SetClientProvisioningMode -ArgumentList $true
+```
 
 ## <a name="process-flow-diagrams"></a>Diagramas de flujo del proceso
 

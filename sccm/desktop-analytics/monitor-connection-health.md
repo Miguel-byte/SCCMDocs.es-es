@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3406c0fff57a1ecef24a045e3061417fc5fac46c
-ms.sourcegitcommit: e0438c191df945305625ae91596c9417d16e8510
+ms.openlocfilehash: 17a58992c01f59080edd74051329b82a0f760938
+ms.sourcegitcommit: e0d303d87c737811c2d3c40d01cd3d260a5c7bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68491657"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69974809"
 ---
 # <a name="monitor-connection-health"></a>Supervisión del estado de conexión
 
@@ -63,7 +63,7 @@ Este icono muestra Cuándo Configuration Manager sincroniza con el servicio en l
 - **Siguiente sincronización del servicio**: Cuando pueda esperar la siguiente instantánea diaria en análisis de escritorio.
 
 > [!Note]  
-> Ninguno de estos valores se actualiza automáticamente cuando se solicita una instantánea a petición. Para obtener más información, consulte [latencia de datos](/sccm/desktop-analytics/troubleshooting#data-latency).
+> La primera vez que se inscriben dispositivos en el análisis de escritorio, los datos pueden tardar varios días en cargarse y procesarse. Durante este tiempo, el icono de detalles de la **última sincronización** puede aparecer en blanco. Además, ninguno de los valores de este icono se actualiza automáticamente cuando se solicita una instantánea a petición. Para obtener más información, consulte [latencia de datos](/sccm/desktop-analytics/troubleshooting#data-latency).
 
 Si cree que algunos dispositivos no se muestran en el análisis de escritorio, asegúrese de que los dispositivos son compatibles con el análisis de escritorio. Para obtener más información, consulte [Requisitos previos](/sccm/desktop-analytics/overview#prerequisites).
 

@@ -2,7 +2,7 @@
 title: Referencia de variables de secuencia de tareas
 titleSuffix: Configuration Manager
 description: Obtenga información sobre las variables para controlar y personalizar una secuencia de tareas de Configuration Manager.
-ms.date: 07/26/2019
+ms.date: 08/16/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b78d8b6cd60f14843855d00ea44632b6feda3d90
-ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
+ms.openlocfilehash: 2283b87f305471f2831042f4b6b66d1c8a735b24
+ms.sourcegitcommit: f7e4ff38d4b4afb49e3bccafa28514be406a9d7b
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68859818"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69549539"
 ---
 # <a name="task-sequence-variables"></a>Variables de la secuencia de tareas
 
@@ -1582,9 +1582,9 @@ Por ejemplo, si establece SMSTSWaitForSecondReboot en `600`, la secuencia de tar
 ### <a name="TSDebugMode"></a>TSDebugMode
 
 <!--3612274-->
-A partir de la versión 1906, establezca esta `TRUE` variable en en una colección en la que se implemente una secuencia de tareas. Esta variable cambia el comportamiento de cualquier secuencia de tareas en cualquier dispositivo de esa colección para usar el depurador de la secuencia de tareas.
+A partir de la versión 1906, establezca esta `TRUE` variable en en un objeto de equipo o colección en el que se implementa la secuencia de tareas. Cualquier dispositivo que tenga este conjunto de variables colocará cualquier secuencia de tareas implementada en el modo de depuración.
 
-Para obtener más información, vea [Depurar una secuencia de tareas](/sccm/osd/deploy-use/debug-task-sequence).
+Para más información, consulte [Depurar una secuencia de tareas](/sccm/osd/deploy-use/debug-task-sequence).
 
 ### <a name="TSDisableProgressUI"></a> TSDisableProgressUI
 

@@ -5,68 +5,24 @@ description: Es imprescindible planear la infraestructura de punto de actualizac
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 07/31/2019
+ms.date: 08/20/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fc5c4fd7627aaa95f53a8a67ef983fda862a2526
-ms.sourcegitcommit: 8c296886e79e20b971842458f6e88761e5df30be
+ms.openlocfilehash: 03aa63ccf8fac5c84a1a32e420434b8cefbb6dd6
+ms.sourcegitcommit: 18e88352860dcaf938dbbe1e8694b658e1bfd8ac
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68684695"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69584660"
 ---
 # <a name="plan-for-software-updates-in-configuration-manager"></a>Planear actualizaciones de software en Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Antes de usar las actualizaciones de software en un entorno de producción de Configuration Manager, es importante que siga el proceso de planeamiento. Tener un buen plan para la infraestructura de punto de actualización de software es la clave para conseguir una correcta implementación de actualizaciones de software.
-
-
-
-## <a name="capacity-planning-recommendations-for-software-updates"></a>Recomendaciones para la planeación de capacidad para las actualizaciones de software  
-
-Esta sección incluye los subtemas siguientes:  
-- [Planeación de la capacidad para el punto de actualización de software](#BKMK_SUMCapacity)
-- [Planeación de la capacidad para los objetos de actualizaciones de software](#bkmk_sum-capacity-obj)  
-
-
-Utilice las siguientes recomendaciones como una línea de base. Esta línea de base le ayuda a determinar la información para la planeación de la capacidad de las actualizaciones de software que sea adecuada para su organización. Los requisitos reales de capacidad pueden variar respecto a los incluidos en las recomendaciones de este artículo, en función de los siguientes criterios: 
-- El entorno de red específico
-- El hardware que se usa para hospedar el punto de actualización de software del sistema de sitio
-- El número de clientes administrados
-- Los otros roles de sistema de sitio instalados en el servidor  
-
-
-###  <a name="BKMK_SUMCapacity"></a> Planeación de la capacidad para el punto de actualización de software  
-
-El número de clientes admitidos depende de la versión de Windows Server Update Services (WSUS) que se ejecuta en el punto de actualización de software. También depende de si el rol de sistema de sitio del punto de actualización de software coexiste con otro rol de sistema de sitio:  
-
--   El punto de actualización de software puede admitir hasta 25 000 clientes cuando WSUS se ejecuta en el servidor del punto de actualización de software y este punto coexiste con otro rol de sistema de sitio.  
-
--   El punto de actualización de software puede admitir hasta 150 000 clientes cuando un servidor remoto cumple los requisitos de WSUS, WSUS se utiliza con Configuration Manager y configura las siguientes opciones:
-
-    Grupos de aplicaciones de IIS:
-    - Aumente la longitud de cola de WsusPool a 2000
-    - Cuadriplique el límite de memoria privada de WsusPool o defínalo en 0 (ilimitado). Por ejemplo, si el límite predeterminado es 1 843 200 KB, auméntelo a 7 372 800. Para más información, vea esta [entrada del blog del equipo de soporte técnico de Configuration Manager](https://blogs.technet.microsoft.com/configurationmgr/2015/03/23/configmgr-2012-support-tip-wsus-sync-fails-with-http-503-errors/).  
-
-    Para más información sobre los requisitos de hardware para el punto de actualización de software, vea [Requisitos recomendados para sistemas de sitio](/sccm/core/plan-design/configs/recommended-hardware#bkmk_ScaleSieSystems).  
-
-
-### <a name="bkmk_sum-capacity-obj"></a> Planeación de la capacidad para los objetos de actualizaciones de software  
-
-Utilice la siguiente información de capacidad para planear los objetos de actualizaciones de software:  
-
-#### <a name="limit-of-1000-software-updates-in-a-deployment"></a>Límite de 1.000 actualizaciones de software en una implementación  
-Limite el número de actualizaciones de software a 1000 por cada implementación de actualización de software. Cuando crea una regla de implementación automática (ADR), especifique un criterio que limite el número de actualizaciones de software. La regla de implementación automática produce un error cuando los criterios especificados devuelven más de 1000 actualizaciones de software. Compruebe el estado de la ADR desde el nodo **Reglas de implementación automática** de la consola de Configuration Manager. Al implementar manualmente las actualizaciones de software, no seleccione más de 1000 actualizaciones para implementar.  
-
-Limite también el número de actualizaciones de software a 1000 en una línea base de configuración. Para obtener más información, consulte [Crear una línea base de configuración](/sccm/compliance/deploy-use/create-configuration-baselines).
-
-#### <a name="limit-of-580-security-scopes-for-automatic-deployment-rules"></a>Límite de 580 ámbitos de seguridad para las reglas de implementación automática
-<!--ado 4962928-->
-Limite el número de ámbitos de seguridad en reglas de implementación automática (ADR) a menos de 580. Al crear una ADR, se agregan automáticamente los ámbitos de seguridad que tienen acceso a ella. Si hay más de 580 ámbitos de seguridad establecidos, el ADR no podrá ejecutarse y se registrará un error en RuleEngine. log.
+Antes de usar las actualizaciones de software en un entorno de producción de Configuration Manager, es importante que siga el proceso de planeamiento. Tener un buen plan para la infraestructura de punto de actualización de software es la clave para conseguir una correcta implementación de actualizaciones de software. Para obtener información sobre el planeamiento de la capacidad de las actualizaciones de software, consulte [números de tamaño y escala](/sccm/core/plan-design/configs/size-and-scale-numbers#software-update-point).
 
 
 ##  <a name="BKMK_SUPInfrastructure"></a> Determinar la infraestructura del punto de actualización de software  
@@ -471,7 +427,7 @@ A partir de la versión 1906, puede especificar la cantidad máxima de tiempo de
     - Paquetes acumulativos de revisiones
     - Service Packs
 
-- **Tiempo de ejecución máximo para actualizaciones de Office 365 y actualizaciones que no son de características para Windows (minutos)**
+- **Duración máxima de la ejecución para actualizaciones de Office 365 y las actualizaciones que no son de características para Windows (minutos)** .
   - **Actualizaciones que no son de características**: una actualización que no es una actualización de características y cuyo producto aparece como uno de los siguientes:
     - Windows 10 (todas las versiones)
     - Windows Server 2012
