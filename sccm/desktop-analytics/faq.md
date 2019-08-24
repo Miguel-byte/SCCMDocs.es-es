@@ -2,7 +2,7 @@
 title: Preguntas más frecuentes sobre análisis de escritorio
 titleSuffix: Configuration Manager
 description: Preguntas más frecuentes sobre el análisis de escritorio.
-ms.date: 07/22/2019
+ms.date: 08/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58230d373d7269c95937a108c021e7c73cdbf07a
-ms.sourcegitcommit: 315fbb9c44773b3b1796ae398568cb61bd07092e
+ms.openlocfilehash: 84cbcd11790ebf83b508a3db167efc7c02152652
+ms.sourcegitcommit: e2e07d74779a2f48693ecaa17a5974204949d109
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68374431"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69999384"
 ---
 # <a name="desktop-analytics-faq"></a>Preguntas más frecuentes sobre análisis de escritorio
 
@@ -84,3 +84,10 @@ Los datos de diagnóstico de Windows de los equipos están cifrados, enviados y 
 ### <a name="can-i-use-desktop-analytics-for-my-office-365-proplus-upgrades"></a>¿Puedo usar el análisis de escritorio para las actualizaciones de Office 365 ProPlus?
 
 No, el análisis de escritorio se centra en Windows. Microsoft desarrolló el análisis del escritorio en estrecha colaboración con numerosos clientes. A través del programa de vista previa, los comentarios de los clientes fueron sobre cómo el análisis de escritorio mejoró su capacidad para administrar implementaciones de Windows de forma segura. También nos dijeron que querían que [office 365 ProPlus](/sccm/sum/deploy-use/office-365-dashboard#bkmk_o365_readiness) provienen más estrechamente integrados con las herramientas de administración de office en Configuration Manager e Intune. Microsoft continuará realizando inversiones en esas áreas, mientras se centra en los escenarios de Windows en el análisis del escritorio.
+
+### <a name="how-can-i-provide-feedback-about-desktop-analytics"></a>¿Cómo puedo proporcionar comentarios sobre el análisis de escritorio?
+
+Para compartir sus comentarios sobre el análisis de escritorio, seleccione el icono **enviar una sonrisa** en la parte superior del portal. Incluya una captura de pantalla con su envío para ayudar a Microsoft a comprender mejor sus comentarios. También puede enviar sugerencias de productos y votar otras ideas en [UserVoice](https://configurationmanager.uservoice.com/forums/300492-ideas?category_id=366805).
+
+> [!Note]
+> No comparta nunca información privada a través de enviar una sonrisa o UserVoice. Esta información privada incluye el identificador de inquilino o el ID. comercial. Microsoft no proporciona soporte técnico a través de los canales enviar una sonrisa o UserVoice. Para obtener ayuda con el área de trabajo de análisis de escritorio, seleccione el vínculo **ayuda y soporte técnico** en el menú de navegación para abrir una incidencia de soporte técnico.
