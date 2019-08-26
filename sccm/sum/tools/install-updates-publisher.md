@@ -2,7 +2,7 @@
 title: Instalar Updates Publisher
 titleSuffix: Configuration Manager
 description: Instalar System Center Updates Publisher en el entorno
-ms.date: 02/19/2019
+ms.date: 08/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb07b154c1da9c7b93f2d8e0f06b825eb52fd561
-ms.sourcegitcommit: 417e3834a42b415a8e129327dd3c15cc0c7ec5a2
+ms.openlocfilehash: 7194d77d7d1fd2c4f9cd143bcf3b69446f394c08
+ms.sourcegitcommit: e0d303d87c737811c2d3c40d01cd3d260a5c7bde
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65443203"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69974691"
 ---
 # <a name="install-updates-publisher"></a>Instalar Updates Publisher
 
@@ -41,7 +41,7 @@ Instale y ejecute Updates Publisher en ediciones de 64 bits de los sistemas oper
 Los siguientes requisitos se aplican al equipo donde se ejecuta Updates Publisher.
 
 -   **Sistema operativo de 64 bits**: el equipo donde instale Updates Publisher debe ejecutar un sistema operativo de 64 bits.
--   **WSUS 4.0 o versiones posteriores**:
+-   **WSUS 6.2 o versiones posteriores**:
     -   En Windows Server, instale la Consola de administración predeterminada para cumplir este requisito.
     -   En Windows 10 y Windows 8.1, instale las [Herramientas de administración remota del servidor (RSAT) para sistemas operativos Windows](https://support.microsoft.com/help/2693643/remote-server-administration-tools-rsat-for-windows-operating-systems). Esto instala la compatibilidad necesaria para usar Updates Publisher (*API y cmdlets de PowerShell* e *Interfaz de usuario de la Consola de administración*).
 -   **Permisos**:

@@ -2,7 +2,7 @@
 title: Administración de Windows como servicio
 titleSuffix: Configuration Manager
 description: Vea el estado de Windows como servicio (WaaS) mediante Configuration Manager, cree planes de mantenimiento para formar anillos de implementación y vea alertas cuando los clientes de Windows 10 estén próximos al final del soporte técnico.
-ms.date: 07/26/2019
+ms.date: 08/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4cf8e70146fa369e11cd26bdd5f982380678655a
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 165574cb85a41cb8acba9efba653ebc7fc4a6fe1
+ms.sourcegitcommit: e0d303d87c737811c2d3c40d01cd3d260a5c7bde
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537055"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69974705"
 ---
 # <a name="manage-windows-as-a-service-using-system-center-configuration-manager"></a>Administración de Windows como servicio mediante System Center Configuration Manager
 
@@ -36,9 +36,11 @@ ms.locfileid: "68537055"
 
 -   Los equipos con Windows 10 deben usar las actualizaciones de software de Configuration Manager con Windows Server Update Services (WSUS) para la administración de las actualizaciones de software. Cuando los equipos usan Windows Update para empresas (o Windows Insider) para la administración de actualizaciones de software, el equipo no se evalúa en los planes de mantenimiento de Windows 10. Para obtener más información, consulte [Integración con Windows Update for Business en Windows 10](../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md) (Integración con Windows Update for Business en Windows 10).  
 
--   WSUS 4.0 con la [revisión 3095113](https://support.microsoft.com/kb/3095113) debe estar instalado en los puntos de actualización de software y servidores de sitio. Esta revisión agrega la clasificación de actualizaciones de software de **Actualizaciones**. Para obtener más información, consulte [Requisitos previos para los roles de sistema de sitio](../../sum/plan-design/prerequisites-for-software-updates.md).  
-
--   WSUS 4.0 con la [revisión 3159706](https://support.microsoft.com/kb/3159706) debe estar instalado en los puntos de actualización de software y los servidores de sitio a fin de actualizar equipos a Windows 10 Anniversary Update, así como para las versiones posteriores. Existen pasos manuales descritos en el artículo de ayuda que debe seguir para instalar esta revisión. Para obtener más información, consulte [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/05/update-your-configmgr-1606-sup-servers-to-deploy-the-windows-10-anniversary-update/) (Blog de seguridad y movilidad empresarial).
+- Usar una versión compatible de WSUS: 
+  - WSUS 10.0.14393 (rol de Windows Server 2016)
+  - WSUS 10.0.17763 (rol de Windows Server 2019) (requiere Configuration Manager 1810 o posterior)
+  - WSUS 6.2 y 6.3 (rol de Windows Server 2012 y Windows Server 2012 R2)
+    - [Kb 3095113 y kb 3159706 (o una actualización equivalente) deben instalarse](/sccm/sum/plan-design/prerequisites-for-software-updates#BKMK_wsus2012) en WSUS 6,2 y 6,3.
 
 -   Habilitar la detección de latidos Los datos que se muestran en el panel de mantenimiento de Windows 10 se buscaron mediante esta detección. Para obtener más información, vea [Configure Heartbeat Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#BKMK_ConfigHBDisc) (Configuración de la detección de latidos).  
 
@@ -84,7 +86,7 @@ ms.locfileid: "68537055"
 <!--4224414-->
 *(Se introdujo en la versión 1906)*
 
-Puede obtener detalles de las estadísticas de cumplimiento para ver qué dispositivos requieren una actualización de software de Office 365 específica. Para ver la lista de dispositivos, necesita permiso para ver las actualizaciones y las colecciones a las que pertenecen los dispositivos. Para profundizar en la lista de dispositivos:
+Se pueden obtener detalles de las estadísticas de compatibilidad para ver qué dispositivos requieren una actualización de software de Office 365 específica. Para ver la lista de dispositivos, necesita permiso para ver las actualizaciones y las colecciones a las que pertenecen los dispositivos. Para profundizar en la lista de dispositivos:
 
 1. Vaya a **Biblioteca de software** > **Mantenimiento de Windows 10** > **Todas las actualizaciones de Windows 10**.
 1. Seleccione las actualizaciones que requiera al menos un dispositivo.
@@ -153,7 +155,7 @@ Puede obtener detalles de las estadísticas de cumplimiento para ver qué dispos
 
    -   **Especificar el estado de disponibilidad de Windows al que debe aplicarse este plan de mantenimiento**: seleccione una de estas opciones:  
 
-       -   **Canal semianual (dirigido)** : en este modelo de servicio, las actualizaciones de las características están disponibles en cuanto Microsoft las vaya lanzando.
+       -   **Canal semianual (dirigido)**: en este modelo de servicio, las actualizaciones de las características están disponibles en cuanto Microsoft las vaya lanzando.
 
        -   **Canal semianual**: Este canal de mantenimiento normalmente se usa para una implementación amplia. Los clientes de Windows 10 en el canal semianual reciben la misma versión de Windows 10 que los dispositivos en el canal dirigido, solo que más tarde.
 

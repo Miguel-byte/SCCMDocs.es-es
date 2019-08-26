@@ -2,7 +2,7 @@
 title: Depurar una secuencia de tareas
 titleSuffix: Configuration Manager
 description: Use la herramienta de depuración de secuencias de tareas para solucionar problemas de una secuencia de tareas.
-ms.date: 07/26/2019
+ms.date: 08/16/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.assetid: 4b60b0e1-ffa4-4fd5-864e-70a0546c8b3b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fadcd362f44e5261ae5226ed22b7cff4c4eb261f
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 00c05b7023f90783fbdd741a354cfd6382f632ad
+ms.sourcegitcommit: f7e4ff38d4b4afb49e3bccafa28514be406a9d7b
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537743"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69549564"
 ---
 # <a name="debug-a-task-sequence"></a>Depurar una secuencia de tareas
 
@@ -44,7 +44,7 @@ A partir de la versión 1906, el depurador de la secuencia de tareas es una nuev
 1. Seleccione una secuencia de tareas. En el grupo Implementación de la cinta, seleccione **Depurar**.
 
     > [!Tip]  
-    > Como alternativa, establezca la variable **TSDebugMode** en `TRUE` en una colección en la que se haya implementado la secuencia de tareas. Esta variable cambia el comportamiento de cualquier secuencia de tareas en cualquier dispositivo de la colección.  
+    > Como alternativa, establezca la variable **TSDebugMode** en `TRUE` en una colección en la que se haya implementado la secuencia de tareas, o bien en un objeto de equipo en el que también se hayan implementado. Cualquier dispositivo que tenga este conjunto de variables colocará cualquier secuencia de tareas implementada en el modo de depuración.
 
 1. Cree una implementación de depuración. La configuración de implementación es la misma que la de una implementación de secuencia de tareas normal. Para obtener más información, vea [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence#process).
 
