@@ -5,18 +5,18 @@ description: Haga lo siguiente para configurar los productos y clasificaciones d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 08/22/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1f6f74b76ca046ec877a22fac6f2fbea29d66b53
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: c0aba3ab65ffe35c4d303f5f957507c43a4523b9
+ms.sourcegitcommit: e0d303d87c737811c2d3c40d01cd3d260a5c7bde
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537231"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69974734"
 ---
 # <a name="configure-classifications-and-products-to-synchronize"></a>Configurar las clasificaciones y los productos que va a sincronizar  
 
@@ -47,9 +47,9 @@ Los metadatos de las actualizaciones de software se recuperan durante el proceso
      - **Herramientas**: especifica una utilidad o característica que ayuda a realizar una o más tareas.  
      - **Actualizaciones acumulativas**: especifica un conjunto acumulativo y probado de revisiones, actualizaciones de seguridad, actualizaciones críticas y actualizaciones que se incluyen en un producto de forma conjunta para facilitar su implementación. Un paquete acumulativo de actualizaciones suele relacionarse, por lo general, con un área específica (por ejemplo, un componente del producto o de la seguridad).  
      - **Actualizaciones**: especifica una corrección de amplia distribución de un problema específico. Una actualización proporciona una solución para un error de código no crítico y no relacionado con la seguridad.  
-     - **Actualizaciones**: especifica una actualización para las características y la funcionalidad de Windows 10. Los sitios y los puntos de actualización de software tienen que ejecutar como mínimo WSUS 4.0 con la [revisión 3095113](https://support.microsoft.com/kb/3095113) para obtener la clasificación **Actualización**.
+     - **Actualizaciones**: especifica una actualización para las características y la funcionalidad de Windows 10. Los sitios y los puntos de actualización de software tienen que ejecutar como mínimo WSUS 6.2 con la [revisión 3095113](https://support.microsoft.com/kb/3095113) para obtener la clasificación **Actualización**. Para obtener más información sobre la instalación de esta actualización y **otras**actualizaciones para [las actualizaciones, consulte requisitos previos para las actualizaciones](/sccm/sum/plan-design/prerequisites-for-software-updates#BKMK_wsus2012)de software.
 
-    > [!NOTE]
+    > [!NOTE] 
     > 
     > A partir de la versión 1706 de Configuration Manager, puede activar la casilla **Incluir actualizaciones de controladores y firmware de Microsoft Surface** para sincronizar los controladores de Microsoft Surface.<!--1098490--> Todos los puntos de actualización de software deben ejecutar Windows Server 2016 para sincronizar correctamente los controladores de Surface. Si habilita un punto de actualización de software en un equipo que ejecuta Windows Server 2012 después de habilitar a los controladores de Surface, los resultados del examen de las actualizaciones de controladores no serán precisos. Esto genera datos de cumplimiento incorrectos que se muestran en la consola y en los informes de Configuration Manager.  
     >  
