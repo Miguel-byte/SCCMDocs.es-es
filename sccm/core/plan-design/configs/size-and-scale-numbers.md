@@ -2,7 +2,7 @@
 title: Tamaño y escala
 titleSuffix: Configuration Manager
 description: Determine el número de roles de sistema de sitio y los sitios que necesitará para admitir los dispositivos en el entorno.
-ms.date: 07/26/2019
+ms.date: 08/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 41614e7f0b63888a8bcee50b4ac4ef2b293d8849
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 17809842c780577db6088bb57de2330e4af09612
+ms.sourcegitcommit: 18e88352860dcaf938dbbe1e8694b658e1bfd8ac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68536833"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69584671"
 ---
 # <a name="size-and-scale-numbers-for-configuration-manager"></a>Números de tamaño y escala para Configuration Manager
 
@@ -58,7 +58,7 @@ Estos números de compatibilidad se basan en el uso del hardware recomendado par
 ### <a name="application-catalog-web-service-point"></a>Punto de servicio web del catálogo de aplicaciones  
 
 > [!Important]
-> La experiencia del usuario de Silverlight del catálogo de aplicaciones no se admite a partir de la versión 1806 de la rama actual. A partir de la versión 1906, los clientes actualizados usan automáticamente el punto de administración para las implementaciones de aplicaciones disponibles para el usuario. Tampoco puede instalar nuevos roles de catálogo de aplicaciones. En la primera versión de la rama actual después del 31 de octubre de 2019, finalizará el soporte técnico para los roles de catálogo de aplicaciones.  
+> La experiencia del usuario de Silverlight del catálogo de aplicaciones no se admite a partir de la versión 1806 de la rama actual. A partir de la versión 1906, los clientes actualizados usan automáticamente el punto de administración para las implementaciones de aplicaciones disponibles para el usuario. Tampoco puede instalar nuevos roles del catálogo de aplicaciones. En la primera versión de la rama actual después del 31 de octubre de 2019, finalizará el soporte técnico para los roles de catálogo de aplicaciones.  
 >
 > Vea los siguientes artículos para más información:
 >
@@ -70,7 +70,7 @@ Estos números de compatibilidad se basan en el uso del hardware recomendado par
 ### <a name="application-catalog-website-point"></a>Punto de sitios web del catálogo de aplicaciones  
 
 > [!Important]
-> La experiencia del usuario de Silverlight del catálogo de aplicaciones no se admite a partir de la versión 1806 de la rama actual. A partir de la versión 1906, los clientes actualizados usan automáticamente el punto de administración para las implementaciones de aplicaciones disponibles para el usuario. Tampoco puede instalar nuevos roles de catálogo de aplicaciones. En la primera versión de la rama actual después del 31 de octubre de 2019, finalizará el soporte técnico para los roles de catálogo de aplicaciones.  
+> La experiencia del usuario de Silverlight del catálogo de aplicaciones no se admite a partir de la versión 1806 de la rama actual. A partir de la versión 1906, los clientes actualizados usan automáticamente el punto de administración para las implementaciones de aplicaciones disponibles para el usuario. Tampoco puede instalar nuevos roles del catálogo de aplicaciones. En la primera versión de la rama actual después del 31 de octubre de 2019, finalizará el soporte técnico para los roles de catálogo de aplicaciones.  
 >
 > Vea los siguientes artículos para más información:
 >
@@ -138,10 +138,37 @@ Para obtener más información sobre el número de clientes y dispositivos que u
 
 ### <a name="software-update-point"></a>Punto de actualización de software  
 
-- Un punto de actualización de software que está instalado en el servidor de sitio puede admitir hasta 25.000 clientes.
+Utilice las siguientes recomendaciones como una línea de base. Esta línea de base le ayuda a determinar la información para la planeación de la capacidad de las actualizaciones de software que sea adecuada para su organización. Los requisitos reales de capacidad pueden variar respecto a los incluidos en las recomendaciones de este artículo, en función de los siguientes criterios: 
+- El entorno de red específico
+- El hardware que se usa para hospedar el punto de actualización de software del sistema de sitio
+- El número de clientes administrados
+- Los otros roles de sistema de sitio instalados en el servidor  
 
-- Un punto de actualización de software remoto del servidor de sitio puede admitir hasta 150 000 clientes cuando el equipo remoto cumple los requisitos de Windows Server Update Services (WSUS) para admitir este número de clientes.  
+#### <a name="BKMK_SUMCapacity"></a> Planeación de la capacidad para el punto de actualización de software  
 
+El número de clientes admitidos depende de la versión de Windows Server Update Services (WSUS) que se ejecuta en el punto de actualización de software. También depende de si el rol de sistema de sitio del punto de actualización de software coexiste con otro rol de sistema de sitio:  
+
+- El punto de actualización de software puede admitir hasta 25 000 clientes cuando WSUS se ejecuta en el servidor del punto de actualización de software y este punto coexiste con otro rol de sistema de sitio.  
+
+- El punto de actualización de software puede admitir hasta 150 000 clientes cuando un servidor remoto cumple los requisitos de WSUS, WSUS se utiliza con Configuration Manager y configura las siguientes opciones:
+
+    Grupos de aplicaciones de IIS:
+    - Aumente la longitud de cola de WsusPool a 2000
+    - Cuadriplique el límite de memoria privada de WsusPool o defínalo en 0 (ilimitado). Por ejemplo, si el límite predeterminado es 1 843 200 KB, auméntelo a 7 372 800. Para más información, vea esta [entrada del blog del equipo de soporte técnico de Configuration Manager](https://blogs.technet.microsoft.com/configurationmgr/2015/03/23/configmgr-2012-support-tip-wsus-sync-fails-with-http-503-errors/).  
+
+    Para más información sobre los requisitos de hardware para el punto de actualización de software, vea [Requisitos recomendados para sistemas de sitio](/sccm/core/plan-design/configs/recommended-hardware#bkmk_ScaleSieSystems).  
+
+
+#### <a name="bkmk_sum-capacity-obj"></a> Planeación de la capacidad para los objetos de actualizaciones de software  
+
+Utilice la siguiente información de capacidad para planear los objetos de actualizaciones de software:  
+
+- **Límite de 1000 actualizaciones de software en una implementación**: limite el número de actualizaciones de software a 1000 por cada implementación de actualización de software. Cuando crea una regla de implementación automática (ADR), especifique un criterio que limite el número de actualizaciones de software. La regla de implementación automática produce un error cuando los criterios especificados devuelven más de 1000 actualizaciones de software. Compruebe el estado de la ADR desde el nodo **Reglas de implementación automática** de la consola de Configuration Manager. Al implementar manualmente las actualizaciones de software, no seleccione más de 1000 actualizaciones para implementar.  
+
+  Limite también el número de actualizaciones de software a 1000 en una línea base de configuración. Para obtener más información, consulte [Crear una línea base de configuración](/sccm/compliance/deploy-use/create-configuration-baselines).
+
+- **Límite de 580 ámbitos de seguridad para las reglas de implementación automática**:<!--ado 4962928-->
+limite el número de ámbitos de seguridad en reglas de implementación automática (ADR) a menos de 580. Al crear una ADR, se agregan automáticamente los ámbitos de seguridad que tienen acceso a ella. Si hay más de 580 ámbitos de seguridad establecidos, la ADR no podrá ejecutarse y se registrará un error en ruleengine.log.
 
 ## <a name="bkmk_clientnumbers"></a> Número de clientes para sitios y jerarquías
 
