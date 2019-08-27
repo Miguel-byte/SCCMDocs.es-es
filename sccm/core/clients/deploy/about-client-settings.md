@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0074e81aade8ee5e26a4bb0024b91244a3ce4111
-ms.sourcegitcommit: 6b5a003256305c1f0cb605e52aeaaf19c23af5a9
+ms.openlocfilehash: d48b2f7a842da0a567c4ed1a51e85e0d283603cf
+ms.sourcegitcommit: 7b111cd8a797877031378349898810c3dd0a3750
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68956224"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69632016"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Información sobre la configuración de cliente en Configuration Manager
 
@@ -94,6 +94,7 @@ Habilita la [caché del mismo nivel](/sccm/core/plan-design/hierarchy/client-pee
 A partir de la versión 1906, especifique el tiempo mínimo durante el cual el cliente de Configuration Manager mantendrá el contenido almacenado en caché. Esta configuración de cliente controla cuánto tiempo almacena el cliente el contenido en la caché antes de eliminarlo.
 
 De forma predeterminada, este valor es de 1.440 minutos (24 horas).
+El valor máximo de esta configuración es de 10.080 minutos (1 semana).
 
 Esta opción proporciona mayor control sobre la caché de cliente en diferentes tipos de dispositivos. Puede reducir el valor en clientes que tienen unidades de disco duro pequeñas y no necesitan mantener el contenido existente antes de que se ejecute otra implementación.
 

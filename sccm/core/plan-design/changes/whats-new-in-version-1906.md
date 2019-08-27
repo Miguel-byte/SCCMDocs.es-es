@@ -2,7 +2,7 @@
 title: Novedades de la versión 1906
 titleSuffix: Configuration Manager
 description: Obtenga detalles sobre los cambios y las nuevas funcionalidades incorporados en la versión 1906 de la rama actual de Configuration Manager.
-ms.date: 08/07/2019
+ms.date: 08/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79901ed2922348de06467efbae8d720f9f2d75b5
-ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
+ms.openlocfilehash: 5ced44684415c60bede26e86a02a47ed555b2b9e
+ms.sourcegitcommit: 7b111cd8a797877031378349898810c3dd0a3750
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68860097"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69632003"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Novedades de la versión 1906 de la rama actual de Configuration Manager
 
@@ -556,7 +556,8 @@ Para más información, consulte [Servicio de administración](/sccm/core/plan-d
 En el área de trabajo **Activos y compatibilidad**, vaya al nodo **Dispositivos** y seleccione un dispositivo. En el panel de detalles, cambie a la nueva pestaña **Colecciones**. En esta pestaña se enumeran las colecciones que incluyen este dispositivo.
 
 > [!Note]  
-> Esta pestaña no está actualmente disponible en un subnodo de dispositivos bajo el nodo **Recopilaciones de dispositivos**. Por ejemplo, cuando selecciona la opción **Mostrar miembros** en una colección.
+> - Esta pestaña no está actualmente disponible en un subnodo de dispositivos bajo el nodo **Recopilaciones de dispositivos**. Por ejemplo, cuando selecciona la opción **Mostrar miembros** en una colección.
+> - Es posible que esta pestaña no se rellene como se esperaba para algunos usuarios. Para ver la lista completa de colecciones a las que pertenece un dispositivo, debe tener el rol de seguridad **Administrador total**. Este es un problema conocido. <!--5107309-->
 
 ### <a name="task-sequences-tab-in-applications-node"></a>Pestaña Secuencias de tareas en el nodo Aplicaciones
 
@@ -614,7 +615,7 @@ A partir de esta versión las características siguientes dejarán de estar en v
 - [Servicio de administración Proveedor de SMS](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service)
 - [Administración de Device Guard](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)
 
-<!-- Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4498910). -->
+ Además de nuevas características, esta versión también incluye cambios adicionales como, por ejemplo, correcciones de errores. Para obtener más información, consulte [Resumen de cambios en la rama actual de Configuration Manager, versión 1906](https://support.microsoft.com/help/4514258).
 
 Para más información sobre los cambios en los cmdlets de Windows PowerShell para Configuration Manager, consulte las [notas de la versión de PowerShell 1906](https://docs.microsoft.com/powershell/sccm/1906-release-notes?view=sccm-ps).<!-- link is not live yet; will be published before this release branch -->
 
@@ -636,8 +637,8 @@ The following additional hotfixes are available to address specific issues:
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En este momento, la versión 1906 se lanzará para el círculo de actualizaciones inicial. Para instalar esta actualización, debe indicar su consentimiento para participar. Para más información, consulte [Círculo de actualizaciones inicial](/sccm/core/servers/manage/checklist-for-installing-update-1906#early-update-ring).
-<!-- As of <Date>, version 1906 is globally available for all customers to install. -->
+<!--At this time, version 1906 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](/sccm/core/servers/manage/checklist-for-installing-update-1906#early-update-ring). -->
+A partir del 16 de agosto de 2019, la versión 1906 está disponible globalmente para que todos los clientes puedan instalarla.
 
 Cuando esté listo para instalar esta versión, consulte [Instalación de actualizaciones para Configuration Manager](/sccm/core/servers/manage/updates) y [Lista de comprobación para la instalación de la actualización 1906](/sccm/core/servers/manage/checklist-for-installing-update-1906).
 

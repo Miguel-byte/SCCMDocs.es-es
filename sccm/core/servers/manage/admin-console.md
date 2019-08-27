@@ -2,7 +2,7 @@
 title: Consola de Configuration Manager
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la navegación a través de la consola de Configuration Manager.
-ms.date: 08/05/2019
+ms.date: 08/16/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e99d82a39e1b3c1ef9e52072fc01ab722f3e3e61
-ms.sourcegitcommit: 4241c15a277c57b5480dea70fc30f1ed46ffd4f3
+ms.openlocfilehash: 593a479c713df76d63090749ee45cb89aeb413e4
+ms.sourcegitcommit: f7e4ff38d4b4afb49e3bccafa28514be406a9d7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490105"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69549501"
 ---
 # <a name="using-the-configuration-manager-console"></a>Uso de la consola de Configuration Manager
 
@@ -290,7 +290,8 @@ Hay varias maneras de mostrar una lista de dispositivos en el nodo **Dispositivo
 En el área de trabajo **Activos y compatibilidad**, vaya al nodo **Dispositivos** y seleccione un dispositivo. En el panel de detalles, cambie a la nueva pestaña **Colecciones**. En esta pestaña se enumeran las colecciones que incluyen este dispositivo. 
 
 > [!Note]  
-> Esta pestaña no está actualmente disponible en un subnodo de dispositivos bajo el nodo **Recopilaciones de dispositivos**. Por ejemplo, cuando selecciona la opción **Mostrar miembros** en una colección.
+> - Esta pestaña no está actualmente disponible en un subnodo de dispositivos bajo el nodo **Recopilaciones de dispositivos**. Por ejemplo, cuando selecciona la opción **Mostrar miembros** en una colección.
+> - Es posible que esta pestaña no se rellene como se esperaba para algunos usuarios. Para ver la lista completa de colecciones a las que pertenece un dispositivo, debe tener el rol de seguridad **Administrador total**. Este es un problema conocido. <!--5107309--> <!--5107309-->
 
 
 #### <a name="add-smbios-guid-column-to-device-and-device-collection-nodes"></a>Incorporación de una columna GUID de SMBIOS a los nodos de recopilación de dispositivos y dispositivos
