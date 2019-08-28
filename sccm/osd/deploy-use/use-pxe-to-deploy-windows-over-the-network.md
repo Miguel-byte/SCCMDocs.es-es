@@ -42,7 +42,7 @@ Complete los pasos de uno de los escenarios de implementación de SO y luego use
 Para implementar sistemas operativos en clientes de Configuration Manager que efectúan solicitudes de arranque PXE, debe configurar uno o varios puntos de distribución para que acepten las solicitudes PXE. Una vez configurado el punto de distribución, responde a las solicitudes de arranque de PXE y determina las acciones de implementación adecuadas que se van a llevar a cabo. Para obtener más información, consulte [Instalar o modificar un punto de distribución](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).  
 
 > [!NOTE]  
-> Al configurar un único punto de distribución habilitado con PXE para admitir varias subredes, no se permite usar las opciones de DHCP. Configure aplicaciones auxiliares de IP en los enrutadores para permitir que las solicitudes PXE se reenvíen a los puntos de distribución habilitados con PXE.
+> Al configurar un único punto de distribución habilitado con PXE para admitir varias subredes, no se permite usar las opciones de DHCP. Configure asistentes de IP en los enrutadores para permitir que las solicitudes PXE se reenvíen a los puntos de distribución habilitados con PXE.
 
 > [!Note]  
 > En la versión 1810 y anterior, no se permite usar el respondedor PXE sin WDS en servidores que también ejecutan un servidor DHCP.
