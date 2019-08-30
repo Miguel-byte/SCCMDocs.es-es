@@ -2,7 +2,7 @@
 title: CMPivot para datos en tiempo real
 titleSuffix: Configuration Manager
 description: Obtenga información sobre cómo usar CMPivot en Configuration Manager para realizar consultas en clientes en tiempo real.
-ms.date: 07/30/2019
+ms.date: 08/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 339c9df44f2647b12936ce8a1077fd0ee0f7ee37
-ms.sourcegitcommit: 16dd488c51b5cf01a7dd4204f7d40ee9ae0abe85
+ms.openlocfilehash: 4c4b0ed9150988deee3f8484e5c7b10eb919c086
+ms.sourcegitcommit: 9aa852d54670b5bc568a1ca6e57cd9c1349e5724
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68743728"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70053762"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>CMPivot para datos en tiempo real en Configuration Manager
 
@@ -509,7 +509,7 @@ El operador render ya existe en CMPivot. Se ha agregado compatibilidad con varia
 
 - Mostrar el dispositivo, el fabricante, el modelo y la versión del SO:
 
-   ```Kusto
+   ```
    ComputerSystem
    | project Device, Manufacturer, Model
    | join (OperatingSystem | project Device, OSVersion=Caption)
@@ -517,7 +517,7 @@ El operador render ya existe en CMPivot. Se ha agregado compatibilidad con varia
 
 - Mostrar el gráfico de tiempos de arranque para un dispositivo:
 
-   ```Kusto
+   ```
    SystemBootData
    | where Device == 'MyDevice'
    | project SystemStartTime, BootDuration, OSStart=EventLogStart, GPDuration, UpdateDuration

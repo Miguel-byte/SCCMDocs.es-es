@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f5760e26b7a52f31aea0a272c0e76a2eee547bd
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: f4ee01c85cf978b595aa9d6a7948503b34927c31
+ms.sourcegitcommit: 2d38de4846ea47a03cc884cbd3df27db48f64a6a
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537134"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110242"
 ---
 # <a name="task-sequence-steps"></a>Pasos de la secuencia de tareas
 
@@ -915,6 +915,9 @@ Las aplicaciones deben cumplir los criterios siguientes:
 - No debe interactuar con el escritorio. El programa debe ejecutarse en modo silencioso o en modo desatendido.  
 
 - No debe iniciarse ni reiniciarse por sí misma. La aplicación debe solicitar un reinicio mediante el código estándar de reinicio: 3010. Este comportamiento garantiza que este paso controla correctamente el reinicio. Si la aplicación devuelve un código de salida 3010, el motor de secuencia de tareas reinicia el equipo. Tras el reinicio, la secuencia de tareas continúa automáticamente.  
+
+> [!Note]
+> Si la aplicación [comprueba si hay archivos](/sccm/apps/deploy-use/deploy-applications#bkmk_exe-check)ejecutables en ejecución, la secuencia de tareas no podrá instalarlos. Si no configura este paso para continuar después de un error, se produce un error en la secuencia de tareas completa.
 
 Cuando se ejecuta este paso, la aplicación comprueba la aplicabilidad de las reglas de requisitos y el método de detección en sus tipos de implementación. Según los resultados de esta comprobación, la aplicación instala el tipo de implementación correspondiente. Si un tipo de implementación contiene dependencias, el tipo de implementación dependiente se evalúa y se instala como parte del paso. Las dependencias de aplicación no son compatibles con medios independientes.  
 

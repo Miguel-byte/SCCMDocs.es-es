@@ -2,7 +2,7 @@
 title: Referencia de variables de secuencia de tareas
 titleSuffix: Configuration Manager
 description: Obtenga información sobre las variables para controlar y personalizar una secuencia de tareas de Configuration Manager.
-ms.date: 08/16/2019
+ms.date: 08/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2283b87f305471f2831042f4b6b66d1c8a735b24
-ms.sourcegitcommit: f7e4ff38d4b4afb49e3bccafa28514be406a9d7b
+ms.openlocfilehash: 8a279602a2e52b47f42f0204e6953801c26454a1
+ms.sourcegitcommit: 04dd0c17e47763a3e2b6c44c005428ea7d67f4bd
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69549539"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70021991"
 ---
 # <a name="task-sequence-variables"></a>Variables de la secuencia de tareas
 
@@ -1524,7 +1524,10 @@ Especifica el mensaje que se mostrará en el cuadro de diálogo de notificación
 
 ### <a name="SMSTSRebootRequested"></a> SMSTSRebootRequested
 
-Indica que se ha solicitado el reinicio una vez completado el paso actual de la secuencia de tareas. Si se requiere un reinicio, basta con establecer esta variable en `true` y el administrador de la secuencia de tareas reiniciará el equipo después de este paso de la secuencia de tareas. Si el paso de secuencia de tareas requiere un reinicio para completar la acción, establezca esta variable. Una vez reiniciado el equipo, la secuencia de tareas seguirá ejecutándose desde el paso siguiente de la secuencia de tareas.
+Indica que se ha solicitado el reinicio una vez completado el paso actual de la secuencia de tareas. Si el paso de secuencia de tareas requiere un reinicio para completar la acción, establezca esta variable. Una vez reiniciado el equipo, la secuencia de tareas seguirá ejecutándose desde el paso siguiente de la secuencia de tareas.
+
+- `HD`: Reiniciar en el sistema operativo instalado
+- `WinPE`: Reiniciar en la imagen de arranque asociada
 
 ### <a name="SMSTSRetryRequested"></a> SMSTSRetryRequested
 
@@ -1578,6 +1581,9 @@ Esta variable de secuencia de tareas opcional controla el comportamiento del cli
 Establezca el valor de SMSTSWaitForSecondReboot en segundos para especificar durante cuánto tiempo se pausa la secuencia de tareas en este paso mientras se reinicia el equipo. Deje tiempo suficiente en caso de que haya un segundo reinicio.
 
 Por ejemplo, si establece SMSTSWaitForSecondReboot en `600`, la secuencia de tareas se pausa durante 10 minutos tras un reinicio antes de que se ejecuten los pasos adicionales. Esta variable resulta útil cuando un único paso de secuencia de tareas de instalación de actualizaciones de software instala cientos de actualizaciones de software.
+
+> [!Note]
+> Esta variable solo se aplica a una secuencia de tareas que implementa un sistema operativo. No funciona en una secuencia de tareas personalizada. <!-- 2839998 -->
 
 ### <a name="TSDebugMode"></a>TSDebugMode
 

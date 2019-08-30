@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fa56c5ec5b6ad3f24255d6b8e37e56c46c94d17f
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 7871e092369a096d8c776d4733e70095ef629a14
+ms.sourcegitcommit: 2d38de4846ea47a03cc884cbd3df27db48f64a6a
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68534917"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110192"
 ---
 # <a name="deploy-applications-with-configuration-manager"></a>Implementar aplicaciones con Configuration Manager
 
@@ -26,7 +26,7 @@ Crear o simular una implementación de una aplicación en una recopilación de d
 
 Antes de implementar una aplicación, cree al menos un tipo de implementación para la aplicación. Para obtener más información, consulte [Create applications](/sccm/apps/deploy-use/create-applications) (Creación de aplicaciones).
 
-A partir de la versión 1906, puede crear un grupo de aplicaciones que puede enviar a una colección de usuarios o dispositivos como una sola implementación. Para obtener más información, vea [crear grupos de aplicaciones](/sccm/apps/deploy-use/create-app-groups).
+A partir de la versión 1906, puede crear un grupo de aplicaciones que puede enviar a una colección de usuarios o dispositivos como una sola implementación. Para más información, consulte [Crear grupos de aplicaciones](/sccm/apps/deploy-use/create-app-groups).
 
 También puede simular la implementación de una aplicación. Esta simulación prueba la aplicabilidad de una implementación sin instalar o desinstalar la aplicación. Una implementación simulada evalúa el método de detección, los requisitos y las dependencias de un tipo de implementación y muestra los resultados en el nodo **Implementaciones** del área de trabajo **Supervisión**. Para obtener más información, consulte el artículo sobre [simular implementaciones de aplicaciones ](/sccm/apps/deploy-use/simulate-application-deployments).
 
@@ -260,6 +260,8 @@ Configure una implementación para comprobar si determinados archivos ejecutable
 
 5. Al implementar la aplicación, seleccione la opción **Cerrar automáticamente los archivos ejecutables especificados en la ficha Comportamiento de instalación del cuadro de diálogo de propiedades Tipo de implementación que estén en ejecución**. Esta opción se encuentra en la pestaña **Configuración de implementación** de las propiedades de la implementación.  
 
+> [!Note]
+> Si configura una aplicación para que compruebe los archivos ejecutables en ejecución y lo incluye en el paso de secuencia de tareas [instalar aplicación](/sccm/osd/understand/task-sequence-steps#BKMK_InstallApplication) , la secuencia de tareas no podrá instalarla. Si no configura este paso de secuencia de tareas para continuar después de un error, se produce un error en la secuencia de tareas completa.
 
 ### <a name="client-behaviors-and-user-notifications"></a>Comportamientos de cliente y notificaciones de usuario
 

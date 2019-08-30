@@ -2,7 +2,7 @@
 title: Conceptos básicos de administración de contenido
 titleSuffix: Configuration Manager
 description: Use herramientas y opciones en Configuration Manager para administrar el contenido que implemente.
-ms.date: 07/26/2019
+ms.date: 08/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d9cad46b4ca89ce890c0e9f9b4638107ba5c1ae
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: e53e5fc081be04209312cd3144c38d0ecd944fc1
+ms.sourcegitcommit: 04dd0c17e47763a3e2b6c44c005428ea7d67f4bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68536711"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70021964"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Aspectos básicos de la administración de contenido en Configuration Manager
 
@@ -187,7 +187,7 @@ Para obtener más información, consulte [Almacenamiento en caché del mismo niv
 <!--1358112-->
 Windows Low Extra Delay Background Transport (LEDBAT) es una característica de control de congestión de la red de Windows Server que permite administrar transferencias de red en segundo plano. En los puntos de distribución que se ejecuten en versiones compatibles de Windows Server, habilite una opción para ayudar a ajustar el tráfico de red. Después, los clientes solo usarán el ancho de banda de red cuando esté disponible.
 
-Para obtener información general sobre Windows LEDBAT, vea la entrada de blog [Nuevos avances en transporte](https://blogs.technet.microsoft.com/networking/2016/07/18/announcing-new-transport-advancements-in-the-anniversary-update-for-windows-10-and-windows-server-2016/).
+Para obtener información general sobre Windows LEDBAT, vea la entrada de blog [Nuevos avances en transporte](https://techcommunity.microsoft.com/t5/Networking-Blog/Announcing-Transport-Features-and-Performance-Advancements-in/ba-p/339726).
 
 Para obtener más información sobre cómo usar Windows LEDBAT con puntos de distribución de Configuration Manager, vea la opción **Ajustar la velocidad de descarga para usar el ancho de banda de red sin usar (Windows LEDBAT)** al [Configurar las opciones generales de un punto de distribución](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-general).
 

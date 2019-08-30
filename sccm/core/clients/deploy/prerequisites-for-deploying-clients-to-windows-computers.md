@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9f9881a8b2cc945b49d79d40777409379aef3fd
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 586083f0de3241adb20bacbf432563681b0370f0
+ms.sourcegitcommit: 2d38de4846ea47a03cc884cbd3df27db48f64a6a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68535627"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110078"
 ---
 # <a name="prerequisites-for-deploying-clients-to-windows-computers-in-configuration-manager"></a>Requisitos previos para la implementación de clientes en equipos Windows con Configuration Manager
 
@@ -59,7 +59,7 @@ Si no actualiza estas versiones del sistema operativo, no puede instalar la vers
 Si tiene que administrar un cliente en una versión de Windows que no está actualizada o que es anterior a las versiones mencionadas, use la versión 1902 del cliente de interoperabilidad extendida (EIC) de Configuration Manager. Para más información, consulte [Cliente de interoperabilidad extendida](/sccm/core/understand/interoperability-client).
 
 > [!Tip]  
-> Si no usa la [actualización automática de cliente](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#use-automatic-client-upgrade) y actualiza los clientes con otro mecanismo, asegúrese de actualizar la versión de ccmsetup. Es posible que una versión anterior de ccmsetup no valide correctamente el nuevo certificado de firma de código SHA-2 en los archivos binarios de cliente de la versión 1906. Por ejemplo, si copia ccmsetup.exe en un recurso compartido o usa ccmsetup.msi con una directiva de grupo.<!-- 4963362 -->
+> Si no usa la [actualización automática de cliente](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#bkmk_autoupdate) y actualiza los clientes con otro mecanismo, asegúrese de actualizar la versión de ccmsetup. Es posible que una versión anterior de ccmsetup no valide correctamente el nuevo certificado de firma de código SHA-2 en los archivos binarios de cliente de la versión 1906. Por ejemplo, si copia ccmsetup.exe en un recurso compartido o usa ccmsetup.msi con una directiva de grupo.<!-- 4963362 -->
 >
 > Los mecanismos de actualización de cliente siguientes no deberían verse afectados:
 >
@@ -86,7 +86,7 @@ Si el cliente requiere estas dependencias para completar la instalación, las in
 |Componentes de Microsoft SQL Server Compact 4.0 SP1|Necesarios para almacenar información relacionada con las operaciones de cliente.|  
 
 > [!Important]
-> La experiencia del usuario de Silverlight del catálogo de aplicaciones no se admite a partir de la versión 1806 de la rama actual. A partir de la versión 1906, los clientes actualizados usan automáticamente el punto de administración para las implementaciones de aplicaciones disponibles para el usuario. Tampoco puede instalar nuevos roles de catálogo de aplicaciones. En la primera versión de la rama actual después del 31 de octubre de 2019, finalizará el soporte técnico para los roles de catálogo de aplicaciones.  
+> La experiencia del usuario de Silverlight del catálogo de aplicaciones no se admite a partir de la versión 1806 de la rama actual. A partir de la versión 1906, los clientes actualizados usan automáticamente el punto de administración para las implementaciones de aplicaciones disponibles para el usuario. Tampoco puede instalar nuevos roles del catálogo de aplicaciones. En la primera versión de la rama actual después del 31 de octubre de 2019, finalizará el soporte técnico para los roles de catálogo de aplicaciones.  
 >
 > Vea los siguientes artículos para más información:
 >
