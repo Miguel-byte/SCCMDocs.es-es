@@ -1,8 +1,8 @@
 ---
-title: Actualizar un equipo existente con una nueva versión de Windows
+title: Actualizar el sistema operativo de un equipo existente
 titleSuffix: Configuration Manager
-description: Puede usar varios métodos en Configuration Manager para la partición y el formato (borrado) de un equipo existente, así como para instalar un nuevo sistema operativo en el equipo.
-ms.date: 10/06/2016
+description: Puede usar varios métodos en Configuration Manager para la partición y el formato de un equipo existente, así como para instalar un nuevo sistema operativo en el equipo.
+ms.date: 08/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,76 +11,84 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8481b0934998a44b6142131d2cff3dbbd0821720
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: e2443f8ddc280e880ffb43a8e82bbc47b49d4395
+ms.sourcegitcommit: 2d38de4846ea47a03cc884cbd3df27db48f64a6a
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56124251"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110210"
 ---
-# <a name="refresh-an-existing-computer-with-a-new-version-of-windows-using-system-center-configuration-manager"></a>Actualizar un equipo existente con una nueva versión de Windows mediante System Center Configuration Manager
+# <a name="refresh-an-existing-computer-with-a-new-version-of-windows"></a>Actualizar un equipo existente con una nueva versión de Windows
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-En este tema se proporcionan las etapas generales de System Center Configuration Manager para la partición y el formato (borrado) de un equipo existente, así como para instalar un nuevo sistema operativo en el equipo. Para este escenario, puede elegir entre muchos métodos de implementación diferentes, como PXE, el medio de arranque o el Centro de software. También puede optar por instalar un punto de migración de estado para almacenar la configuración y, después, restaurarla en el nuevo sistema operativo después de instalarlo. Si no está seguro de si se trata del escenario de implementación de sistema operativo adecuado para usted, consulte [Escenarios para implementar sistemas operativos de empresa](scenarios-to-deploy-enterprise-operating-systems.md).  
+Utilice Configuration Manager para particionar y formatear un equipo existente y, a continuación, instalar un nuevo sistema operativo. Este proceso se denomina a veces volver a *Imaging* o *borrar y cargar*. Para este escenario, puede elegir entre muchos métodos de implementación diferentes, como PXE, el medio de arranque o el Centro de software. También puede usar un punto de migración de estado para almacenar la configuración y, a continuación, restaurarla en el nuevo sistema operativo.
 
- Use las secciones siguientes para actualizar un equipo existente con una nueva versión de Windows.  
+Para elegir el escenario de implementación de sistema operativo adecuado, consulte [escenarios para implementar sistemas operativos de empresa](/sccm/osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems).  
 
-##  <a name="BKMK_Plan"></a> Plan  
+## <a name="BKMK_Plan"></a> Plan  
 
--   **Planear e implementar los requisitos de infraestructura**  
+### <a name="plan-for-and-implement-infrastructure-requirements"></a>Planeación e implementación de los requisitos de infraestructura
 
-     Hay varios requisitos de infraestructura que deben cumplirse antes de implementar sistemas operativos, como Windows ADK, la Herramienta de migración de estado de usuario (USMT), los Servicios de implementación de Windows (WDS), las configuraciones compatibles de disco duro, etc. Para obtener más información, consulte [Infrastructure requirements for operating system deployment](../plan-design/infrastructure-requirements-for-operating-system-deployment.md) (Requisitos de infraestructura para la implementación de sistema operativo).  
+Hay varios requisitos de infraestructura que deben cumplirse para poder implementar un sistema operativo. Algunos de estos requisitos incluyen Windows ADK, el Herramienta de migración de estado de usuario (USMT) y servicios de implementación de Windows (WDS). Para más información, vea [Requisitos de infraestructura para la implementación de SO en Configuration Manager](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
 
--   **Instalar un punto de migración de estado (solo es necesario si se transfiere la configuración)**  
+### <a name="install-a-state-migration-point"></a>Instalar un punto de migración de estado
 
-     Si se dispone a capturar la configuración del equipo existente para restaurarla posteriormente en el nuevo sistema operativo, debe instalar un punto de migración de estado. Para obtener más información, consulte [State migration point](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints) (Punto de migración de estado).  
+Si desea capturar la configuración de un equipo existente y, a continuación, restaurar la configuración en el nuevo sistema operativo, considere la posibilidad de usar un punto de migración de estado. Para obtener más información, consulte [State migration point](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments#BKMK_StateMigrationPoints) (Punto de migración de estado).  
 
-##  <a name="BKMK_Configure"></a> Configurar  
+## <a name="BKMK_Configure"></a> Configurar  
 
-1.  **Preparar una imagen de arranque**  
+### <a name="prepare-a-boot-image"></a>Preparar una imagen de arranque
 
-     Las imágenes de arranque inician un equipo en un entorno de Windows PE (un sistema operativo mínimo con componentes y servicios limitados) que puede instalar un sistema operativo completo de Windows en el equipo.   Al implementar sistemas operativos, debe seleccionar una imagen de arranque para el uso y la distribución de la imagen en un punto de distribución. Para preparar la imagen de arranque, use lo siguiente:  
+Las imágenes de arranque inician un equipo en un entorno de Windows PE. Windows PE es un sistema operativo mínimo con componentes y servicios limitados. En Windows PE, Configuration Manager puede instalar un sistema operativo Windows completo en el equipo.
 
-    -   Para obtener más información sobre las imágenes de arranque, consulte [Manage boot images (Administrar imágenes de arranque)](../get-started/manage-boot-images.md).  
+Vea los siguientes artículos para más información:
 
-    -   Para obtener más información sobre la personalización de una imagen de arranque, consulte [Customize boot images (Personalizar imágenes de arranque)](../get-started/customize-boot-images.md).  
+- [Administrar imágenes de arranque](/sccm/osd/get-started/manage-boot-images)
 
-    -   Distribuya la imagen de arranque a puntos de distribución. Para obtener más información, vea [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).  
+- [Personalizar imágenes de arranque](/sccm/osd/get-started/customize-boot-images)
 
-2.  **Preparar una imagen de sistema operativo**  
+- [Distribución de contenido](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute)
 
-     La imagen del sistema operativo contiene los archivos necesarios para instalar el sistema operativo en el equipo de destino. Use lo siguiente para preparar la imagen del sistema operativo:  
+### <a name="prepare-an-os-image"></a>Preparar una imagen de sistema operativo
 
-    -   Para obtener más información sobre cómo crear una imagen de sistema operativo, consulte [Manage operating system images (Administrar imágenes de sistema operativo)](../get-started/manage-operating-system-images.md).  
+La imagen del sistema operativo contiene los archivos necesarios para instalar el sistema operativo en el equipo de destino.
 
-    -   Distribuya la imagen del sistema operativo a los puntos de distribución. Para obtener más información, consulte [Distribute content (Distribución del contenido)](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).  
+Vea los siguientes artículos para más información:
 
-3.  **Crear una secuencia de tareas para implementar sistemas operativos a través de la red**  
+- [Administración de imágenes del sistema operativo](/sccm/osd/get-started/manage-operating-system-images)
 
-     Use una secuencia de tareas para automatizar la instalación del sistema operativo a través de la red. Siga los pasos de [Crear una secuencia de tareas para instalar un sistema operativo](create-a-task-sequence-to-install-an-operating-system.md). Según el método de implementación que elija, puede haber consideraciones adicionales para la secuencia de tareas.  
+- [Distribución de contenido](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute)
 
-    > [!NOTE]  
-    >  En este escenario, la secuencia de tareas da formato y realiza la partición de los discos duros en el equipo. Para capturar la configuración de usuario, debe usar el punto de migración de estado y seleccionar **Guardar archivos y configuración de usuario en un punto de migración de estado** en la página **Migración de estado** del Asistente para crear secuencia de tareas. Si guarda la configuración y los archivos de usuario localmente, se perderán al formatear el disco duro y Configuration Manager no podrá restaurar la configuración. Para obtener más información, consulte [Manage user state](../get-started/manage-user-state.md) (Administrar el estado de usuario).  
+### <a name="create-a-task-sequence-to-deploy-an-os"></a>Creación de una secuencia de tareas para implementar un sistema operativo
 
-##  <a name="BKMK_Deploy"></a> Implementar  
+Use una secuencia de tareas para automatizar la instalación del sistema operativo. Según el método de implementación que elija, puede haber consideraciones adicionales para la secuencia de tareas.
 
--   Use uno de los siguientes métodos de implementación para implementar el sistema operativo:  
+Vea los siguientes artículos para más información:
 
-    -   [Usar PXE para implementar Windows a través de la red](use-pxe-to-deploy-windows-over-the-network.md)  
+- [Creación de una secuencia de tareas para instalar un sistema operativo](/sccm/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system)
 
-    -   [Usar multidifusión para implementar Windows a través de la red](use-multicast-to-deploy-windows-over-the-network.md)  
+- [Administrar el estado de usuario](/sccm/osd/get-started/manage-user-state)
 
-    -   [Crear una imagen para un OEM en fábrica o en un almacén local](create-an-image-for-an-oem-in-factory-or-a-local-depot.md)  
+## <a name="BKMK_Deploy"></a> Implementar
 
-    -   [Use stand-alone media to deploy Windows without using the network](use-stand-alone-media-to-deploy-windows-without-using-the-network.md) (Uso de medios independientes para implementar Windows sin usar la red)  
+- Para implementar el sistema operativo, use uno de los métodos de implementación siguientes:  
 
-    -   [Usar medios de arranque para implementar Windows a través de la red](use-bootable-media-to-deploy-windows-over-the-network.md)  
+  - [Usar PXE para implementar Windows a través de la red](/sccm/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network)  
 
-    -   [Usar Centro de software para implementar Windows a través de la red](use-software-center-to-deploy-windows-over-the-network.md)  
+  - [Usar multidifusión para implementar Windows a través de la red](/sccm/osd/deploy-use/use-multicast-to-deploy-windows-over-the-network)  
+
+  - [Crear una imagen para un OEM en fábrica o en un almacén local](/sccm/osd/deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot)  
+
+  - [Use stand-alone media to deploy Windows without using the network](/sccm/osd/deploy-use/use-stand-alone-media-to-deploy-windows-without-using-the-network) (Uso de medios independientes para implementar Windows sin usar la red)  
+
+  - [Usar medios de arranque para implementar Windows a través de la red](/sccm/osd/deploy-use/use-bootable-media-to-deploy-windows-over-the-network)  
+
+  - [Usar Centro de software para implementar Windows a través de la red](/sccm/osd/deploy-use/use-software-center-to-deploy-windows-over-the-network)  
 
 ## <a name="monitor"></a>Monitor  
 
--   **Supervisar la implementación de la secuencia de tareas**  
+Para más información, vea [Supervisar las implementaciones de sistema operativo en System Center Configuration Manager](/sccm/osd/deploy-use/monitor-operating-system-deployments).  
 
-     Para supervisar la implementación de la secuencia de tareas para instalar el sistema operativo, consulte [Monitor operating system deployments (Supervisar implementaciones del sistema operativo)](monitor-operating-system-deployments.md).  
+> [!Note]
+> Al restablecer la imagen inicial de un dispositivo UEFI, el administrador de arranque de Windows crea una nueva entrada en el cargador de arranque. Este comportamiento es más evidente cuando se restablece la imagen inicial de un dispositivo de forma repetida, como en un entorno de prueba o un laboratorio de estudiantes. Por lo general, no afecta al rendimiento ni al uso del dispositivo. Si la lista es demasiado grande, algunos dispositivos de hardware específicos pueden encontrar problemas funcionales. Por ejemplo, no arrancar en una unidad USB externa o no puede seleccionar la entrada de arranque actual de la lista. Use el comando **bcdedit** de Windows para borrar las entradas de arranque sin usar. Para obtener más información, vea [bcdedit/deletevalue](https://docs.microsoft.com/windows-hardware/drivers/devtest/bcdedit--deletevalue).<!-- 2841926 -->
