@@ -107,8 +107,6 @@
           href: deploy-use/debug-task-sequence.md
         - name: Configuración del contenido de la caché previa
           href: deploy-use/configure-precache-content.md
-        - name: Utilizar una secuencia de tareas para administrar discos duros virtuales
-          href: deploy-use/use-a-task-sequence-to-manage-virtual-hard-disks.md
     - name: Escenarios de secuencia de tareas personalizadas
       items:
         - name: Crear una secuencia de tareas personalizada
