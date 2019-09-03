@@ -3,23 +3,23 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 07/26/2019
+ms.date: 08/23/2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 06a138edce2b42bb0f367544eb46bd9120c4fb8c
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 02e8f49972b3cc85dc25ff28c44ed87ea45d61fb
+ms.sourcegitcommit: 04dd0c17e47763a3e2b6c44c005428ea7d67f4bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68533940"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70036773"
 ---
 <!--Don't apply H2/H3 in this include file since they are context driven by article-->
 1. En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Servicios en la nube** y seleccione el nodo **Administración conjunta**. Haga clic en **Configurar administración conjunta** en la cinta para abrir el **Asistente para la configuración de administración conjunta**.
 
 2. En la página **Suscripción** del asistente, seleccione **Iniciar sesión**. Inicie sesión en su inquilino de Intune y después haga clic en **Siguiente**.  
 
-3. En la página **Habilitación**, elija la opción **Inscripción automática en Intune**, ya sea **Piloto** o **Todo**.
+3. En la página **Habilitación**, elija la opción **Inscripción automática en Intune**, ya sea **Piloto** o **Todo**. Si el usuario anula la inscripción de un dispositivo, se volverá a inscribir en la siguiente evaluación de la directiva. <!--3330596--> 
 
-    Esta acción permite la inscripción automática de clientes en Intune para los clientes existentes de Configuration Manager. Si elige **Piloto**, solo los clientes de Configuration Manager que sean miembros de la colección piloto se inscribirán de forma automática en Intune. Esta opción permite habilitar la administración conjunta en un subconjunto de los clientes para probarla inicialmente e implementarla con un enfoque por fases.  
+    Esta acción permite la inscripción automática de clientes en Intune para los clientes existentes de Configuration Manager. Si elige **Piloto**, solo los clientes de Configuration Manager que sean miembros de la colección piloto se inscribirán de forma automática en Intune. Esta opción permite habilitar la administración conjunta en un subconjunto de los clientes para probarla inicialmente e implementarla con un enfoque por fases. 
 
     > [!Note]  
     > A partir de la versión 1806, la inscripción automática no es inmediata para todos los clientes. Este comportamiento ayuda a escalar la inscripción mejor para entornos de gran tamaño. Configuration Manager aleatoriza la inscripción según el número de clientes. Por ejemplo, si el entorno tiene 100 000 clientes, cuando se habilita esta configuración, la inscripción tiene lugar durante varios días.<!--1358003-->  

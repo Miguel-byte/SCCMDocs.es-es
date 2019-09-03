@@ -2,7 +2,7 @@
 title: Novedades de la versión 1906
 titleSuffix: Configuration Manager
 description: Obtenga detalles sobre los cambios y las nuevas funcionalidades incorporados en la versión 1906 de la rama actual de Configuration Manager.
-ms.date: 08/20/2019
+ms.date: 08/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ced44684415c60bede26e86a02a47ed555b2b9e
-ms.sourcegitcommit: 7b111cd8a797877031378349898810c3dd0a3750
+ms.openlocfilehash: 13c9f2e6f6b279aeea13ce2ede66b6d11f2c12a2
+ms.sourcegitcommit: e2e07d74779a2f48693ecaa17a5974204949d109
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69632003"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69999431"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Novedades de la versión 1906 de la rama actual de Configuration Manager
 
@@ -224,7 +224,7 @@ Para más información, consulte [Centro de soporte técnico OneTrace](/sccm/cor
 ### <a name="configure-client-cache-minimum-retention-period"></a>Configuración del período de retención mínimo de caché de cliente
 
 <!--4485509-->
-Ahora puede especificar el tiempo mínimo que el cliente de Configuration Manager mantendrá el contenido almacenado en caché. Esta configuración de cliente controla cuánto tiempo almacena el cliente el contenido en la caché antes de eliminarlo. En el grupo **Configuración de caché de cliente** de la configuración cliente, establezca la opción siguiente: **Minimum duration before cached content can be removed (minutes)** (Duración mínima antes de que se pueda quitar contenido almacenado en caché (minutos)).
+Ahora puede especificar el tiempo mínimo que el cliente de Configuration Manager mantendrá el contenido almacenado en caché. Esta configuración de cliente define el tiempo mínimo que el agente de Configuration Manager debe esperar para quitar contenido de la memoria caché en caso de que se necesite más espacio. En el grupo **Configuración de caché de cliente** de la configuración cliente, establezca la opción siguiente: **Minimum duration before cached content can be removed (minutes)** (Duración mínima antes de que se pueda quitar contenido almacenado en caché (minutos)).
 
 > [!Note]  
 > En el mismo grupo de configuración de cliente, la opción existente para **Habilitar el cliente de Configuration Manager en el SO completo para compartir contenido** ahora se denomina **Habilitar como origen de caché del mismo nivel**. El comportamiento de la configuración no cambia.  
@@ -411,7 +411,7 @@ Para más información, vea [Crear e implementar una aplicación](/sccm/apps/get
 
 <!--3976435-->
 
-Ahora un reinicio pendiente se recordará con más frecuencia a los usuarios finales mediante notificaciones de cuenta regresiva intermitentes. Puede definir el intervalo de las notificaciones intermitentes en **Configuración de cliente** en la página **Reinicio de equipo**. Cambie el valor de **Especifique la duración de repetición para las notificaciones de cuenta regresiva de reinicio de equipo (horas)** para configurar la frecuencia con que el usuario recibe un recordatorio respecto de un reinicio pendiente hasta que se produzca la notificación de cuenta regresiva final.
+Ahora un reinicio pendiente se recordará con más frecuencia a los usuarios finales mediante notificaciones de cuenta regresiva intermitentes. Puede definir el intervalo de las notificaciones intermitentes en **Configuración de cliente** en la página **Reinicio de equipo**. Cambie el valor de **Especifique la duración de repetición para las notificaciones de cuenta regresiva de reinicio de equipo (minutos)** para configurar la frecuencia con que el usuario recibe un recordatorio respecto de un reinicio pendiente hasta que se produzca la notificación de cuenta regresiva final.
 
 Además, el valor máximo de **Mostrar una notificación temporal al usuario que indique el intervalo antes de que el usuario se desconecte o el equipo se inicie (minutos)** ha aumentado de 1440 minutos (24 horas) a 20160 minutos (2 semanas).
 

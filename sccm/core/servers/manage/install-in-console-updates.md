@@ -2,7 +2,7 @@
 title: Actualización en la consola
 titleSuffix: Configuration Manager
 description: Instalación de actualizaciones en Configuration Manager desde Microsoft Cloud
-ms.date: 07/26/2019
+ms.date: 08/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44430d86dfa017475edfe301f1ce112d6cdd9ab2
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 08cde14b93b5f38aece4ee90f8148f467aab25e3
+ms.sourcegitcommit: 2d38de4846ea47a03cc884cbd3df27db48f64a6a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68536221"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110056"
 ---
 # <a name="install-in-console-updates-for-configuration-manager"></a>Instalar actualizaciones en consola para Configuration Manager
 
@@ -180,7 +180,7 @@ Como parte de la instalación de actualizaciones, Configuration Manager realiza 
 
 - Vuelve a instalar los componentes afectados, como los roles de sistema de sitio o la consola de Configuration Manager.  
 
-- Administra las actualizaciones de los clientes en función de las selecciones realizadas para las comprobaciones piloto de clientes y para las [actualizaciones de cliente automáticas](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#use-automatic-client-upgrade).  
+- Administra las actualizaciones de los clientes en función de las selecciones realizadas para las comprobaciones piloto de clientes y para las [actualizaciones de cliente automáticas](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#bkmk_autoupdate).  
 
 - Normalmente, los servidores de sistema de sitio no necesitan reiniciarse como parte de la actualización. Si un rol usa .NET y el paquete actualiza ese componente de requisitos previos, puede que se reinicie el sistema de sitio.  
 
@@ -280,6 +280,9 @@ Entre las tareas posteriores a la instalación figuran las siguientes:
     - Componente de sitio crítico que se ejecuta en el servidor de sitio.
     - Responsable de la reinstalación de los roles de sistema de sitio en los servidores de sistema de sitio. No se muestra el estado de la reinstalación del rol de sistema de sitio individual.
     - La reinstalación de este servicio se debe completar rápidamente.
+
+    > [!Note]
+    > Algunos roles de sitio de Configuration Manager comparten el marco del cliente. Por ejemplo, el punto de administración y el punto de distribución de extracción. Cuando estos roles se actualizan, la versión del cliente en estos servidores se actualiza al mismo tiempo. Para obtener más información, vea [Actualizar clientes](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers).
 
 - **Instalación del componente SMS_REPLICATION_CONFIGURATION_MONITOR**
 

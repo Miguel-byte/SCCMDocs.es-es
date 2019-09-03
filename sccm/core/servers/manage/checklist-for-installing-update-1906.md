@@ -2,7 +2,7 @@
 title: Lista de comprobación de 1906
 titleSuffix: Configuration Manager
 description: Sepa lo que debe hacer antes de actualizar a la versión 1906 de Configuration Manager.
-ms.date: 08/17/2019
+ms.date: 08/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37a995305ebfcf5f411c92af5092f9816e89e118
-ms.sourcegitcommit: f7e4ff38d4b4afb49e3bccafa28514be406a9d7b
+ms.openlocfilehash: 4b2c712a3d5b0948f5069fb84d48e5cbf01d27b1
+ms.sourcegitcommit: 2d38de4846ea47a03cc884cbd3df27db48f64a6a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69549524"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110029"
 ---
 # <a name="checklist-for-installing-update-1906-for-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 1906 de Configuration Manager
 
@@ -201,6 +201,12 @@ Antes de actualizar un sitio, detenga el software antivirus en los servidores de
 Antes de actualizar el sitio, haga una copia de seguridad de la base de datos del sitio en el sitio de administración central y los sitios primarios. Esta copia de seguridad garantiza la disponibilidad de una copia de seguridad correcta para su uso para la recuperación ante desastres.
 
 Para obtener más información, vea  [Hacer una copia de seguridad de sitios](/sccm/protect/understand/backup-and-recovery).
+
+### <a name="back-up-customized-files"></a>Copia de seguridad de archivos personalizados
+
+Si usted o un producto de terceros personaliza cualquier archivo de configuración Configuration Manager, guarde una copia de las personalizaciones.
+
+Pongamos por ejemplo que agrega entradas personalizadas al archivo **osdinjection.xml** en la carpeta `bin\X64` del directorio de instalación de Configuration Manager. Después de actualizar Configuration Manager, estas personalizaciones no se conservan. Es necesario volver a aplicar las personalizaciones.
 
 ### <a name="plan-for-client-piloting"></a>Plan piloto de cliente
 

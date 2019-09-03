@@ -1,8 +1,8 @@
 ---
 title: Actualizar clientes.
 titleSuffix: Configuration Manager
-description: Actualice clientes en equipos Windows en System Center Configuration Manager.
-ms.date: 05/04/2017
+description: Actualice clientes en equipos Windows en Configuration Manager.
+ms.date: 08/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65cea36edd50af6beeae20c5ab0eaf1f7b4855fc
-ms.sourcegitcommit: 9670e11316c9ec6e5f78cd70c766bbfdf04ea3f9
+ms.openlocfilehash: 547eb9844ace451a13b01113633796d711bea7c8
+ms.sourcegitcommit: 2d38de4846ea47a03cc884cbd3df27db48f64a6a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67818098"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110103"
 ---
-# <a name="how-to-upgrade-clients-for-windows-computers-in-system-center-configuration-manager"></a>Actualizar clientes de equipos Windows con System Center Configuration Manager
+# <a name="how-to-upgrade-clients-for-windows-computers-in-configuration-manager"></a>Actualización de clientes de equipos Windows con System Center Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Puede actualizar el cliente en equipos Windows mediante los métodos de instalación de cliente o las características de actualización de cliente automática que ofrece Configuration Manager. Los siguientes métodos de instalación de cliente son mecanismos válidos para actualizar el software cliente en equipos Windows:  
+Actualice el cliente de Configuration Manager en equipos Windows mediante los métodos de instalación de cliente o la característica de actualización de cliente automática. Los siguientes métodos de instalación de cliente son mecanismos válidos para actualizar el software cliente en equipos Windows:  
 
 - Instalación de directiva de grupo  
 
@@ -32,68 +32,76 @@ Puede actualizar el cliente en equipos Windows mediante los métodos de instalac
 
 - Instalación de actualización  
 
-  Si está interesado en actualizar el cliente mediante los métodos de instalación de cliente, obtenga más información sobre el uso de tales métodos en [Implementar clientes en equipos Windows con System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md).
+Para obtener más información, consulte [Cómo implementar clientes en equipos Windows](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).
 
-  Puede excluir clientes de la actualización; para ello, debe especificar un grupo de exclusión. Para obtener más información, consulte [How to exclude upgrading clients for Windows computers](exclude-clients-windows.md) (Cómo excluir la actualización de clientes para equipos Windows). Los clientes excluidos podrán continuar descargando y ejecutando CCMSETUP, pero no se actualizarán.
-
+Excluya clientes de la actualización especificando una colección de exclusión. Para obtener más información, consulte [Cómo excluir la actualización de clientes](/sccm/core/clients/manage/upgrade/exclude-clients-windows). Los clientes excluidos podrán continuar descargando y ejecutando CCMSETUP, pero no se actualizarán.
 
 > [!TIP]  
->  Si va a actualizar su infraestructura desde una versión anterior de Configuration Manager \(como Configuration Manager 2007 o System Center 2012 Configuration Manager\), se recomienda que realice las actualizaciones de servidor, incluida la instalación de todas las actualizaciones de la rama actual, antes de actualizar los clientes Configuration Manager.   La última actualización de la rama actual contiene la versión más reciente del cliente, por lo que es mejor realizar las actualizaciones de cliente después de instalar todas las actualizaciones de Configuration Manager que desea utilizar.
+> Si actualiza la infraestructura del servidor desde una versión anterior de Configuration Manager, complete las actualizaciones del servidor antes de actualizar los clientes de Configuration Manager. Este proceso incluye la instalación de todas las actualizaciones de la rama actual. La última actualización de la rama actual contiene la versión más reciente del cliente. Actualice los clientes después de haber instalado todas las actualizaciones de Configuration Manager.
 
 > [!NOTE]
-> Si piensa volver a asignar el sitio a los clientes durante la actualización, puede especificar el nuevo sitio mediante la propiedad de client.msi SMSSITECODE. Si usa AUTO para la propiedad SMSSITECODE, también debe especificar SITEREASSIGN=TRUE para permitir que se produzca la reasignación de sitio automática durante la actualización. Para obtener más información, consulte [SMSSITECODE](../../deploy/about-client-installation-properties.md#smssitecode).
+> Si piensa volver a asignar el sitio a los clientes durante la actualización, especifique el nuevo sitio mediante la propiedad de client.msi `SMSSITECODE`. Si usa el valor de `AUTO` para `SMSSITECODE`, especifique también `SITEREASSIGN=TRUE`. Esta propiedad permite la reasignación de sitio automática durante la actualización. Para obtener más información, vea [Acerca de las propiedades de instalación de clientes: SMSSITECODE](/sccm/core/clients/deploy/about-client-installation-properties#smssitecode).
 
-## <a name="use-automatic-client-upgrade"></a>Usar una actualización de cliente automática  
- También puede configurar Configuration Manager para actualizar de forma automática el software cliente a la versión de cliente de Configuration Manager más reciente cuando Configuration Manager identifique que un cliente que está asignado a la jerarquía de Configuration Manager sea de una versión anterior a la usada en la jerarquía. Este escenario incluye la actualización del cliente a la última versión cuando intenta asignarse a un sitio de Configuration Manager.  
+## <a name="bkmk_autoupdate"></a> Acerca de la actualización de cliente automática
 
- Un cliente puede actualizarse automáticamente en los siguientes escenarios:  
+Configure el sitio para actualizar automáticamente los clientes a la última versión de Configuration Manager. Cuando Configuration Manager identifica que la versión de un cliente asignado es anterior a la versión de la jerarquía, actualiza automáticamente el cliente. Este escenario incluye la actualización del cliente a la última versión cuando intenta asignarse a un sitio de Configuration Manager.  
 
--   La versión del cliente es anterior a la que se utiliza en la jerarquía.  
+Un cliente puede actualizarse automáticamente en los siguientes escenarios:  
 
--   El cliente del sitio de administración central tiene instalado un paquete de idioma mientras que el cliente existente no.  
+- La versión del cliente es anterior a la que se utiliza en la jerarquía.  
 
--   Uno de los requisitos previos del cliente de la jerarquía es de una versión diferente a la instalada en el cliente.  
+- El cliente del sitio de administración central tiene instalado un paquete de idioma y el cliente existente no lo tiene.  
 
--   Uno o varios de los archivos de instalación del cliente son de una versión diferente.  
+- Uno de los requisitos previos del cliente de la jerarquía es de una versión diferente a la instalada en el cliente.  
 
-> [!NOTE]  
->  Es posible ejecutar el informe **Recuento de clientes de Configuration Manager por versiones de cliente** de la carpeta de informes **Sitio - Información del cliente** para identificar las diferentes versiones del cliente de Configuration Manager de su jerarquía.  
-
- Configuration Manager crea un paquete de actualización de manera predeterminada que se envía de forma automática a todos los puntos de distribución en la jerarquía. Si realiza cambios en el paquete de cliente del sitio de administración central, por ejemplo, si agrega un paquete de idioma del cliente, Configuration Manager actualiza de forma automática el paquete y lo distribuye a todos los puntos de distribución de la jerarquía. Si se habilita la actualización automática de cliente, todos los clientes instalarán automáticamente el nuevo paquete de idioma del cliente.  
+- Uno o varios de los archivos de instalación del cliente son de una versión diferente.  
 
 > [!NOTE]  
->  Configuration Manager no envía de forma automática el paquete de actualización de cliente a los puntos de distribución basados en la nube de Configuration Manager.  
+> Para identificar las diferentes versiones del cliente de Configuration Manager de su jerarquía, use el informe **Recuento de clientes de Configuration Manager por versiones de cliente** de la carpeta de informes **Sitio - Información del cliente**.  
 
- Se recomienda que habilite las actualizaciones de cliente automáticas en la jerarquía. Esto permitirá que los clientes se mantengan actualizados con una sobrecarga administrativa mínima.  
+Configuration Manager crea un paquete de actualización de forma predeterminada. Envía automáticamente el paquete a todos los puntos de distribución de la jerarquía. Si realiza cambios en el paquete de cliente en el sitio de administración central, Configuration Manager actualiza automáticamente el paquete y lo redistribuye. Un cambio de ejemplo es cuando se agrega un paquete de idioma de cliente. Si habilita la actualización automática de cliente, todos los clientes instalan automáticamente el nuevo paquete de idioma del cliente.
 
- Utilice el siguiente procedimiento para configurar la actualización de cliente automática. La actualización de cliente automática debe configurarse en un sitio de administración central y esta configuración se aplica a todos los clientes de la jerarquía.  
+> [!NOTE]  
+> Configuration Manager no envía de forma automática el paquete de actualización de cliente a los puntos de distribución basados en la nube de Configuration Manager.  
 
-### <a name="to-configure-automatic-client-upgrades"></a>Para configurar las actualizaciones automáticas de cliente  
+Habilite las actualizaciones de cliente automáticas en la jerarquía. Esta configuración mantiene los clientes actualizados con menos esfuerzo.  
 
-1.  En la consola de Configuration Manager, haga clic en **Administración**.  
+Si también administra sus sistemas de sitio de Configuration Manager como clientes, determine si desea incluirlos como parte del proceso de actualización automática. Puede excluir todos los servidores, o una colección específica, de la actualización de cliente. Algunos roles de sitio de Configuration Manager comparten el marco de trabajo de cliente. Por ejemplo, el punto de administración y el punto de distribución de extracción. Estos roles se actualizan al actualizar el sitio, por lo que la versión del cliente en estos servidores se actualiza al mismo tiempo.
 
-2.  En el área de trabajo **Administración** , expanda **Configuración del sitio**y, a continuación, haga clic en **Sitios**.  
+## <a name="bkmk_configure"></a> Configuración de la actualización automática de cliente
 
-3.  En la pestaña **Inicio** , en el grupo **Sitios** , haga clic en **Configuración de jerarquía**.  
+Utilice el siguiente procedimiento para configurar la actualización de cliente automática en el sitio de administración central. Esta configuración se aplica a todos los clientes de la jerarquía.  
 
-4.  En la pestaña **Actualización de cliente** del cuadro de diálogo **Propiedades de configuración de jerarquía** , revise la versión y la fecha del cliente de producción y asegúrese de que sea la versión que quiere usar para actualizar equipos Windows.  Si no es la versión de cliente que esperaba ver, quizá sea necesario promover el cliente de preproducción a producción. Para obtener más información, vea [Cómo probar las actualizaciones de cliente en una recopilación de preproducción en System Center Configuration Manager](../../../../core/clients/manage/upgrade/test-client-upgrades.md).  
+1. En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Configuración del sitio** y después haga clic en el nodo **Sitios**.  
 
-5.  Haga clic en **Actualizar todos los clientes en la jerarquía con un cliente de producción** y haga clic en **Aceptar** en el cuadro de diálogo de confirmación.  
+1. En la pestaña **Inicio** de la cinta de opciones, en el grupo **Sitios**, seleccione **Configuración de jerarquía**.  
 
-6.  Si no quiere que las actualizaciones de cliente se apliquen a los servidores, haga clic en **No actualizar servidores**.  
+1. Cambie a la pestaña **Actualización de cliente**. Revise la versión y la fecha del cliente de producción. Asegúrese de que es la versión que desea usar para actualizar los clientes. Si no es la versión de cliente que espera, quizá sea necesario promover el cliente de preproducción a producción. Para obtener más información, vea [Cómo probar las actualizaciones de cliente en una recopilación de preproducción](/sccm/core/clients/manage/upgrade/test-client-upgrades).  
 
-7.  Especifique el número de días en que los equipos deben actualizar el cliente después de recibir la directiva de cliente. El cliente se actualizará en un intervalo aleatorio dentro de este número de días. Esto impide que se produzcan escenarios donde un gran número de equipos cliente se actualiza simultáneamente.
+1. Seleccione **Actualizar todos los clientes en la jerarquía con un cliente de producción**. Seleccione **Aceptar** para confirmar.  
+
+1. Si no quiere que las actualizaciones de cliente se apliquen a los servidores, seleccione **No actualizar servidores**.  
+
+1. Especifique el número de días en que los dispositivos deben actualizar el cliente. Una vez que el dispositivo recibe la directiva, actualiza el cliente en un intervalo aleatorio dentro de este número de días. Este comportamiento impide que un gran número de clientes se actualicen simultáneamente.
 
     > [!NOTE]
-    > Un equipo debe estar en ejecución para actualizar el cliente. Si no hay ningún equipo en ejecución cuando se ha programado la recepción de la actualización, esta no se lleva a cabo. En su lugar, cuando se reinicia el equipo, se programa otra actualización para una hora aleatoria dentro del número de días permitidos. Si esto ocurre una vez transcurrido el número de días para actualizar, la actualización se programará para que se produzca a una hora aleatoria en las próximas 24 horas después de reiniciar el equipo.
-    >     
-    > Debido a este comportamiento, los equipos que habitualmente se apagan al final del día pueden tardar más de lo esperado en actualizarse si la hora de actualización programada de forma aleatoria no se encuentra dentro de las horas normales de trabajo.
+    > Un equipo debe estar en ejecución para actualizar el cliente. Si no hay ningún equipo en ejecución cuando se ha programado la recepción de la actualización, esta no se lleva a cabo. Cuando el equipo se enciende y recibe la directiva, programa la actualización en una hora aleatoria dentro del número de días permitido. Si esto ocurre una vez transcurrido el número de días para actualizar, programa la actualización para que se produzca a una hora aleatoria en las próximas 24 horas después de reiniciar el equipo.
+    >
+    > Debido a este comportamiento, los equipos que habitualmente se apagan pueden tardar más de lo esperado en actualizarse si la hora de actualización programada de forma aleatoria no se encuentra dentro de las horas normales de trabajo.
 
-7. A partir de la versión 1610, si quiere excluir clientes de la actualización, debe hacer clic en **Exclude specified clients from upgrade** (Excluir los clientes especificados de la actualización) y especificar la recopilación que se va a excluir.
+1. Si quiere excluir clientes de la actualización, seleccione **Excluir los clientes especificados de la actualización** y especifique la colección que se va a excluir. Para obtener más información, consulte [Cómo excluir la actualización de clientes para equipos Windows](/sccm/core/clients/manage/upgrade/exclude-clients-windows).
 
-8.  Si quiere que el paquete de instalación de cliente se copie a los puntos de distribución habilitados para contenido preconfigurado, haga clic en **Distribuir automáticamente un paquete de instalación de cliente a los puntos de distribución habilitados para contenido preconfigurado**.  
+1. Si quiere que el sitio copie el paquete de instalación de cliente a los puntos de distribución habilitados para [contenido preconfigurado](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent), seleccione la opción **Distribuir automáticamente un paquete de instalación de cliente a los puntos de distribución habilitados para contenido preconfigurado**.  
 
-9. Haga clic en **Aceptar** para guardar la configuración y cerrar el cuadro de diálogo **Propiedades de configuración de jerarquía** . Los clientes reciben esta configuración la próxima vez que descarguen la directiva.
+1. Haga clic en **Aceptar** para guardar la configuración y cerrar las propiedades de configuración de jerarquía.
 
->[!NOTE]
->Las actualizaciones de cliente cumplen las ventanas de mantenimiento de Configuration Manager que ha configurado.
+Los clientes reciben esta configuración la próxima vez que descarguen la directiva.
+
+> [!NOTE]
+> Las actualizaciones de cliente cumplen las ventanas de mantenimiento de Configuration Manager que ha configurado.
+
+## <a name="next-steps"></a>Pasos siguientes
+
+Para obtener métodos alternativos para actualizar clientes, vea [Cómo implementar clientes en equipos Windows](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).
+
+Excluya clientes específicos de la actualización automática. Para obtener más información, consulte [Cómo excluir la actualización de clientes](/sccm/core/clients/manage/upgrade/exclude-clients-windows).

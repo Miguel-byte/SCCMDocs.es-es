@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 583db1b3ac5682ef6eb65338a3e35d280f46fe38
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: b5634fb611d305fff196b7d6eb0b4ed97ff13d3e
+ms.sourcegitcommit: 2d38de4846ea47a03cc884cbd3df27db48f64a6a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68536737"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110061"
 ---
 # <a name="enhanced-http"></a>HTTP mejorado
 
@@ -27,7 +27,7 @@ ms.locfileid: "68536737"
 > [!Tip]  
 > Esta característica se introdujo por primera vez en la versión 1806 como una [característica de versión preliminar](/sccm/core/servers/manage/pre-release-features). A partir de la versión 1810, ya no es una característica de versión preliminar.  
 
-Microsoft recomienda usar la comunicación HTTPS para todas las vías de comunicación de Configuration Manager, pero es un reto para algunos clientes debido a la sobrecarga de administración de los certificados PKI. La introducción de la integración de Azure Active Directory (Azure AD) reduce algunos requisitos de certificado, pero no todos.
+Microsoft recomienda usar la comunicación HTTPS para todas las vías de comunicación de Configuration Manager, pero es un reto para algunos clientes debido a la sobrecarga de administración de los certificados PKI.
 
 En la versión 1806 de Configuration Manager se incluyen mejoras en la forma en que los clientes se comunican con los sistemas de sitio. Hay dos objetivos principales para estas mejoras:  
 
@@ -51,7 +51,7 @@ Los siguientes escenarios aprovechan estas mejoras:
 ### <a name="bkmk_scenario1"></a> Escenario 1: Cliente a punto de administración
 
 <!--1356889-->
-[Los dispositivos unidos a Azure AD](/azure/active-directory/devices/concept-azure-ad-join) se pueden comunicar con un punto de administración configurado para HTTP. El servidor de sitio genera un certificado para el punto de administración para que pueda comunicarse a través de un canal seguro.
+[Los dispositivos unidos a Azure Active Directory (Azure AD)](/azure/active-directory/devices/concept-azure-ad-join) se pueden comunicar con un punto de administración configurado para HTTP. El servidor de sitio genera un certificado para el punto de administración para que pueda comunicarse a través de un canal seguro.
 
 > [!Note]  
 > Este comportamiento se ha cambiado a partir de la versión 1802 de la rama actual de Configuration Manager, que requiere un punto de administración habilitado para HTTPS para los clientes unidos a Azure AD que se comunican a través de una instancia de Cloud Management Gateway. Para obtener más información, vea [Enable management point for HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps) (Habilitar el punto de administración para HTTPS).  

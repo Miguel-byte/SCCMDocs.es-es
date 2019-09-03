@@ -2,7 +2,7 @@
 title: Notificaciones de reinicio del dispositivo
 titleSuffix: Configuration Manager
 description: Comportamiento de las notificaciones de reinicio para diversas opciones de configuración de cliente en Configuration Manager.
-ms.date: 08/07/2019
+ms.date: 08/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e057a7391bbdbe697b7f53c13a90a74efe22635
-ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
+ms.openlocfilehash: b73d3072883405d1ac2b455f12e1c252244884d1
+ms.sourcegitcommit: e2e07d74779a2f48693ecaa17a5974204949d109
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68859654"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69999446"
 ---
 # <a name="device-restart-notifications-in-configuration-manager"></a>Notificaciones de reinicio del dispositivo en Configuration Manager
 
@@ -105,7 +105,7 @@ Las opciones siguientes deben tener menos duración que la [ventana de mantenimi
 <!--3976435-->
 Algunos administradores prefieren notificaciones de reinicio frecuentes y un período de tiempo breve que permitan a los reinicios posponerse. Otros administradores permiten a los usuarios posponer un reinicio durante períodos de tiempo más largos y desean que se notifique a estos el reinicio pendiente con poca frecuencia. La versión 1906 de Configuration Manager proporciona a un administrador control adicional sobre el tiempo y la frecuencia de las notificaciones de reinicio. Los siguientes elementos se incorporaron en 1906 para proporcionar un mayor control al administrador:
 
-- **Especificar la duración de repetición para las notificaciones de cuenta regresiva de reinicio de equipo (horas)** se agregó a la [configuración de cliente de reinicio de equipo](/sccm/core/clients/deploy/about-client-settings#computer-restart).
+- **Especificar la duración de repetición para las notificaciones de cuenta regresiva de reinicio de equipo (minutos)** se agregó a la [configuración de cliente de reinicio de equipo](/sccm/core/clients/deploy/about-client-settings#computer-restart).
 - El valor máximo de **Mostrar una notificación temporal al usuario que indique el intervalo antes de que el usuario se desconecte o el equipo se inicie (minutos)** ha aumentado de 1440 minutos (24 horas) a 20160 minutos (2 semanas).
 - El usuario no verá una barra de progreso en la notificación de reinicio hasta que el reinicio pendiente sea anterior a 24 horas.
 

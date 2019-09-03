@@ -2,7 +2,7 @@
 title: Configuración de cliente
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la configuración predeterminada y personalizada para controlar los comportamientos del cliente.
-ms.date: 08/09/2019
+ms.date: 08/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d48b2f7a842da0a567c4ed1a51e85e0d283603cf
-ms.sourcegitcommit: 7b111cd8a797877031378349898810c3dd0a3750
+ms.openlocfilehash: 123515f7b7b78d3c92f7372adb6aec73ee64443c
+ms.sourcegitcommit: e2e07d74779a2f48693ecaa17a5974204949d109
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69632016"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69999405"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Información sobre la configuración de cliente en Configuration Manager
 
@@ -91,7 +91,7 @@ Habilita la [caché del mismo nivel](/sccm/core/plan-design/hierarchy/client-pee
 ### <a name="minimum-duration-before-cached-content-can-be-removed-minutes"></a>Duración mínima antes de que se pueda quitar contenido almacenado en caché (minutos)
 
 <!--4485509-->
-A partir de la versión 1906, especifique el tiempo mínimo durante el cual el cliente de Configuration Manager mantendrá el contenido almacenado en caché. Esta configuración de cliente controla cuánto tiempo almacena el cliente el contenido en la caché antes de eliminarlo.
+A partir de la versión 1906, especifique el tiempo mínimo durante el cual el cliente de Configuration Manager mantendrá el contenido almacenado en caché. Esta configuración de cliente define el tiempo mínimo que el agente de Configuration Manager debe esperar para quitar contenido de la memoria caché en caso de que se necesite más espacio.
 
 De forma predeterminada, este valor es de 1.440 minutos (24 horas).
 El valor máximo de esta configuración es de 10.080 minutos (1 semana).
@@ -325,8 +325,8 @@ Las opciones siguientes deben tener menos duración que la ventana de mantenimie
 
 Para obtener más información sobre las ventanas de mantenimiento, consulte [Cómo utilizar las ventanas de mantenimiento](/sccm/core/clients/manage/collections/use-maintenance-windows).
 
-- **Especifique la duración de repetición para las notificaciones de cuenta regresiva de reinicio de equipo (horas)** (A partir de la versión 1906).<!--3976435-->
-  - El valor predeterminado es 4 horas.
+- **Especifique la duración de repetición para las notificaciones de cuenta regresiva de reinicio de equipo (minutos)** (A partir de la versión 1906)<!--3976435-->
+  - El valor predeterminado es 240 minutos.
   - El valor de duración de repetición debe ser menor que el valor de notificación temporal menos el valor para la notificación que el usuario no puede descartar.
   - Para más información, consulte [Notificaciones de reinicio del dispositivo](/sccm/core/clients/deploy/device-restart-notifications).
 
