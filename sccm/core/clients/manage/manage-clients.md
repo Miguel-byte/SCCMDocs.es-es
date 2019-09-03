@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ae4074897359dcebb9b91392bd36893d0276012
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: 52259888bdfe343072bfa34e8eb053c0bb082789
+ms.sourcegitcommit: 2d38de4846ea47a03cc884cbd3df27db48f64a6a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68338999"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110137"
 ---
 # <a name="how-to-manage-clients-in-system-center-configuration-manager"></a>Cómo administrar clientes en System Center Configuration Manager
 
@@ -189,10 +189,11 @@ Tenga en cuenta lo siguiente antes de realizar tareas de nivel de recopilación.
 
 
 ## <a name="restart-clients"></a>Reinicio de clientes
-A partir de la versión 1710, se puede usar la consola de Configuration Manager para identificar los clientes que precisan un reinicio. Después, use una acción de notificación de cliente para reiniciarlos.
+
+Use la consola de Configuration Manager para identificar los clientes que precisan un reinicio. Después, use una acción de notificación de cliente para reiniciarlos.
 
 > [!Tip]
-> También debe actualizar a los clientes a la versión 1710 para que esta característica funcione. Se recomienda habilitar la actualización automática del cliente para mantenerlo al día con la mínima sobrecarga administrativa. Para obtener más información, vea [Usar una actualización de cliente automática](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#use-automatic-client-upgrade).
+> Habilite la actualización de cliente automática para mantener a los clientes actualizados con menos esfuerzo. Para obtener más información, vea [Usar una actualización de cliente automática](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#bkmk_autoupdate).
 
 Para identificar los dispositivos pendientes de reinicio, vaya al área de trabajo **Activos y compatibilidad** de la consola de Configuration Manager y seleccione el nodo **Dispositivos**. Después, puede ver el estado de cada dispositivo en el panel de detalles en una nueva columna denominada **Reinicio pendiente**. Cada dispositivo tiene uno o varios de los valores siguientes: 
 - **No**: no hay ningún reinicio pendiente

@@ -1,8 +1,8 @@
 ---
 title: Exclusión de actualizaciones de cliente en Windows
 titleSuffix: Configuration Manager
-description: Obtenga información sobre cómo excluir clientes Windows de su actualización en System Center Configuration Manager.
-ms.date: 04/23/2017
+description: Obtenga información sobre cómo excluir clientes Windows de su actualización en Configuration Manager.
+ms.date: 08/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,45 +11,62 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc1d82de7863f6aa82e43515c28392865388a79f
-ms.sourcegitcommit: 9670e11316c9ec6e5f78cd70c766bbfdf04ea3f9
+ms.openlocfilehash: 7a16bc859006b0253459259d354a68e2ff1dec83
+ms.sourcegitcommit: 2d38de4846ea47a03cc884cbd3df27db48f64a6a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67818184"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110151"
 ---
-# <a name="how-to-exclude-upgrading-clients-for-windows-computers-in-system-center-configuration-manager"></a>Cómo excluir la actualización de clientes para equipos Windows con System Center Configuration Manager
+# <a name="how-to-exclude-clients-from-upgrade-in-configuration-manager"></a>Cómo excluir clientes Windows de su actualización en Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Puede excluir una colección de clientes de la instalación automática de versiones de cliente actualizadas. Esto se aplica a la actualización automática y a otros métodos como la actualización basada en actualizaciones de software, los scripts de inicio de sesión y la directiva de grupo. Puede usar esto para una colección de equipos a la que haya que prestar una mayor atención a la hora de actualizar el cliente. Un cliente que esté en una colección excluida omite las solicitudes para instalar el software de cliente actualizado.
+Puede excluir una colección de clientes de la instalación automática de versiones de cliente actualizadas. Use esta exclusión para una colección de equipos a la que haya que prestar una mayor atención a la hora de actualizar el cliente. Un cliente que esté en una colección excluida omite las solicitudes para instalar el software de cliente actualizado.
 
->[!NOTE]
->Los clientes excluidos podrán continuar descargando y ejecutando CCMSETUP, pero no se actualizarán.
+Esta exclusión se aplica a los métodos siguientes:
 
+- Actualización automática
+- Actualización basada en actualización de software
+- Scripts de inicio de sesión
+- Directiva de grupo.
 
-## <a name="configure-exclusion-for-automatic-upgrades"></a>Configurar la exclusión de las actualizaciones automáticas
+> [!NOTE]
+> Aunque la interfaz de usuario indica que no se actualizarán los clientes mediante ningún método, hay dos que se pueden usar para invalidar esta configuración. Use la instalación de inserción de cliente y la instalación de cliente manual para invalidar esta configuración. Para obtener más información, consulte [Cómo actualizar un cliente que está en una colección excluida](#bkmk_override).
 
-1. En la consola de Configuration Manager, vaya a **Administración** > **Configuración del sitio** > **Sitios** y, después, haga clic en **Configuración de jerarquía**.
+## <a name="bkmk_exclude"></a> Configuración de la exclusión
 
-2. Haga clic en la pestaña **Actualización de cliente**.
+1. En la consola de Configuration Manager, vaya al área de trabajo **Administración**. Expanda **Configuración del sitio**, seleccione el nodo **Sitios** y luego seleccione **Configuración de jerarquía** en la cinta.
 
-3. Haga clic en la casilla **Excluir los clientes especificados de la actualización** y, en la colección de exclusión, seleccione la colección que quiere excluir. Solo puede seleccionar una colección para la exclusión.
+2. Cambie a la pestaña **Actualización de cliente**.
 
-4.  Haga clic en **Aceptar** para cerrar y guardar la configuración. Luego, después de que los clientes actualicen la directiva, los de la colección excluida ya no instalarán automáticamente las actualizaciones del software de cliente. Para obtener más información, consulte [How to upgrade clients for Windows computers (Cómo actualizar clientes para equipos Windows)](upgrade-clients-for-windows-computers.md).
+3. Seleccione la opción **Excluir los clientes especificados de la actualización**. A continuación, seleccione la **colección de exclusión** que desea excluir. Solo puede seleccionar una colección para la exclusión.
+
+4. Seleccione **Aceptar** para cerrar y guardar la configuración.
 
 ![Configuración de exclusión de actualización automática](media/automatic_upgrade_exclusion.png)
 
->[!NOTE]
->Aunque la interfaz de usuario indica que no se actualizarán los clientes mediante ningún método, hay dos que se pueden usar para invalidar esta configuración. Se pueden usar la instalación de inserción de cliente y la instalación de cliente manual para invalidar esta configuración. Para obtener más detalles, vea la siguiente sección.
+Una vez que los clientes de la colección excluida actualicen la directiva, no instalan automáticamente actualizaciones de cliente. Para obtener más información, consulte [How to upgrade clients for Windows computers (Cómo actualizar clientes para equipos Windows)](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers).
 
-## <a name="how-to-upgrade-a-client-that-is-in-an-excluded-collection"></a>Cómo actualizar un cliente que está en una colección excluida
+> [!NOTE]
+> Los clientes excluidos continuarán descargando y ejecutando Ccmsetup, pero no se actualizarán.
 
-Siempre que una colección está configurada para ser excluida, sus miembros solo pueden actualizar el software de cliente mediante uno de dos métodos que invalidan la exclusión:
-- **Instalación de inserción de cliente**: se puede usar la instalación de inserción de cliente para actualizar un cliente que está en una colección excluida. Se permite porque se considera la intención del administrador y permite actualizar los clientes sin quitar toda la colección de la exclusión.       
+Cuando se quita un cliente de la colección de exclusión, no se actualiza automáticamente hasta el siguiente ciclo de actualización automática.
 
-- **Instalación de cliente manual**: puede actualizar manualmente los clientes que están en una colección excluida con el siguiente modificador de la línea de comandos con ccmsetup: ***/ignoreskipupgrade***
+## <a name="bkmk_override"></a> Actualización de un cliente excluido
 
-  Si intenta actualizar manualmente un cliente que es miembro de la colección excluida y no usa este modificador, el cliente no instalará el nuevo software de cliente. Para más información, vea [How to install Configuration Manager Clients Manually (Instalación manual de clientes de Configuration Manager)](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual).
+Si un dispositivo es miembro de una colección que se ha excluido de la actualización, aún es posible actualizarlo mediante uno de los métodos siguientes:
 
-Para más información sobre los métodos de instalación de clientes, vea [How to deploy clients to Windows computers in System Center Configuration Manager (Implementar clientes en equipos Windows con System Center Configuration Manager)](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).
+- **Instalación de inserción de cliente**: Ccmsetup permite la instalación de inserción de cliente porque es su intención directa. Este método le permite actualizar un cliente sin quitarlo de la colección o quitar toda la colección de la exclusión.
+
+- **Instalación de cliente manual**: Actualice manualmente un cliente excluido usando el siguiente parámetro de la línea de comandos de Ccmsetup: **/IgnoreSkipUpgrade**.
+
+    Si intenta actualizar manualmente un cliente que es miembro de la colección excluida y no usa este parámetro, el cliente no se actualiza. Para obtener más información, vea [How to install Configuration Manager Clients Manually (Instalación manual de clientes de Configuration Manager)](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual).
+
+## <a name="see-also"></a>Consulte también
+
+- [Actualizar clientes](/sccm/core/clients/manage/upgrade/upgrade-clients)
+
+- [Implementar clientes en equipos Windows](/sccm/core/clients/deploy/deploy-clients-to-windows-computers)
+
+- [Cliente de interoperabilidad extendida](/sccm/core/understand/interoperability-client)

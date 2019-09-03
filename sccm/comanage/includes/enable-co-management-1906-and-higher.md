@@ -3,14 +3,14 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 07/26/2019
+ms.date: 08/23/2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5654ffc17264a1a318d0d070eba3b44f273c1790
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 4960c0b9a6c383a73766083a9e385bcd60d799d3
+ms.sourcegitcommit: 04dd0c17e47763a3e2b6c44c005428ea7d67f4bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68533909"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70036774"
 ---
 <!--3555750 FKA 1357954 --Don't apply H2/H3 in this include file since they are context driven by article-->
 1. En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Servicios en la nube** y seleccione el nodo **Administración conjunta**. Haga clic en **Configurar administración conjunta** en la cinta para abrir el **Asistente para la configuración de administración conjunta**.
@@ -23,7 +23,7 @@ ms.locfileid: "68533909"
 
 3. En la página **Habilitación**, elija estas opciones:
 
-   - **Inscripción automática en Azure**: esta acción permite la inscripción automática de clientes en Intune para los clientes existentes de Configuration Manager. Esta opción permite habilitar la administración conjunta en un subconjunto de los clientes para probarla inicialmente e implementarla con un enfoque por fases.
+   - **Inscripción automática en Azure**: esta acción permite la inscripción automática de clientes en Intune para los clientes existentes de Configuration Manager. Esta opción permite habilitar la administración conjunta en un subconjunto de los clientes para probarla inicialmente e implementarla con un enfoque por fases. Si el usuario anula la inscripción de un dispositivo, se volverá a inscribir en la siguiente evaluación de la directiva. <!--3330596-->
 
       - **Piloto**: solo los clientes de Configuration Intune que sean miembros de la colección **Inscripción automática en Intune** se inscriben automáticamente en Intune.
       - **Todo**: permite la inscripción automática para todos los clientes de Windows 10, ya sea la versión 1709 o posterior.
