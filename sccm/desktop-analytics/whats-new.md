@@ -2,7 +2,7 @@
 title: Novedades de análisis de escritorio
 titleSuffix: Configuration Manager
 description: Un resumen de las nuevas características de la última versión mensual del servicio en la nube de análisis de escritorio.
-ms.date: 08/16/2019
+ms.date: 09/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.assetid: fa300181-86cb-4afe-8fbf-895a7572378d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b453abf5ba94b60dc1c28855b8194e7cd476ab7c
-ms.sourcegitcommit: 2b07fb7e2a17b5624429e81f9b6b9b3223b6f16d
+ms.openlocfilehash: 5b6afa437dd37603bef668d4bc6ba39ad05aec2d
+ms.sourcegitcommit: b28a97e22a9a56c5ce3367c750ea2bb4d50449c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69536794"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70243544"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Novedades de análisis de escritorio
 
@@ -31,9 +31,18 @@ Conozca las novedades de cada mes en análisis de escritorio.
 Para obtener una notificación cuando se actualice esta página, copie y pegue la siguiente dirección URL en su lector de fuentes RSS: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
 
+## <a name="september-2019"></a>2019 de septiembre
+
+### <a name="migrate-inputs-from-windows-analytics"></a>Migrar entradas de Windows Analytics
+
+<!-- 4252663 -->
+
+Durante la incorporación, ahora puede migrar las entradas desde un área de trabajo de Windows Analytics existente. Para obtener más información, consulte las preguntas más frecuentes sobre [los clientes existentes de Windows Analytics](/sccm/desktop-analytics/faq#existing-windows-analytics-customers).
+
+
 ## <a name="august-2019"></a>2019 de agosto
 
-### <a name="reset-your-account"></a>Restablecer la cuenta
+### <a name="reset-your-account"></a>Restablecimiento de la cuenta
 
 <!-- 3733897 -->
 

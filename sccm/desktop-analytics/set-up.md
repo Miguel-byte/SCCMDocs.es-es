@@ -2,7 +2,7 @@
 title: Configuración del análisis de escritorio
 titleSuffix: Configuration Manager
 description: Guía de procedimientos para la configuración y la incorporación de análisis de escritorio.
-ms.date: 06/14/2019
+ms.date: 09/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d2a098c560305429e4bba65c95a65f3b0d2e8c45
-ms.sourcegitcommit: 315fbb9c44773b3b1796ae398568cb61bd07092e
+ms.openlocfilehash: ad8111b7d49f89b85c2a4f8b0bd9336a13446a91
+ms.sourcegitcommit: b28a97e22a9a56c5ce3367c750ea2bb4d50449c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68374418"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70243654"
 ---
 # <a name="how-to-set-up-desktop-analytics"></a>Cómo configurar el análisis de escritorio
 
@@ -35,7 +35,7 @@ Use este procedimiento para iniciar sesión en análisis de escritorio y configu
 
 2. En la página **aceptar el contrato de servicio** , revise el contrato de servicio y seleccione **Aceptar**.  
 
-3. En la página **confirmar la suscripción** , revise la lista de licencias aptas necesarias. Cambie la configuración a **sí** junto a **¿tiene una o más**suscripciones admitidas y, a continuación, seleccione **siguiente**.  
+3. En la página **confirmar la suscripción** , revise la lista de licencias aptas necesarias. Cambie la configuración a **sí** junto a **¿tiene una o más suscripciones admitidas**y, a continuación, seleccione **siguiente**.  
 
 4. En la página **conceder acceso a los usuarios** :
 
@@ -54,9 +54,11 @@ Use este procedimiento para iniciar sesión en análisis de escritorio y configu
     - Para usar un área de trabajo existente para el análisis de escritorio, selecciónela y continúe con el siguiente paso.  
 
         > [!Note]  
-        > Si ya está usando Windows Analytics, seleccione la misma área de trabajo. Debe volver a inscribir dispositivos en el análisis de escritorio que se inscribió anteriormente en Windows Analytics.
-        >
         > Solo puede tener un área de trabajo de análisis de escritorio por inquilino de Azure AD. Los dispositivos solo pueden enviar datos de diagnóstico a un área de trabajo.  
+
+        Si ya está usando Windows Analytics, seleccione la misma área de trabajo. Debe volver a inscribir dispositivos en el análisis de escritorio que se inscribió anteriormente en Windows Analytics.
+
+        Para migrar entradas del área de trabajo de Windows Analytics seleccionada, establezca **¿desea ver las entradas de Windows Analytics?** en **sí**. Si no desea migrar, cambie esta configuración a **no**. Para obtener más información, consulte las preguntas más frecuentes sobre [los clientes existentes de Windows Analytics](/sccm/desktop-analytics/faq#existing-windows-analytics-customers).
 
     - Para crear un área de trabajo para el análisis de escritorio, seleccione **Agregar área de trabajo**.  
 
