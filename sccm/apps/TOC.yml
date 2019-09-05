@@ -72,6 +72,8 @@
           href: deploy-use/link-users-and-devices-with-user-device-affinity.md
         - name: Aplicaciones adquiridas por volumen de la Tienda Microsoft para Empresas
           href: deploy-use/manage-apps-from-the-windows-store-for-business.md
+        - name: Solución de problemas de la integración de la Tienda Microsoft para Empresas
+          href: deploy-use/troubleshoot-microsoft-store-for-business-integration.md
         - name: Entornos virtuales de App-V
           href: deploy-use/create-app-v-virtual-environments.md
         - name: Importación y exportación de aplicaciones
