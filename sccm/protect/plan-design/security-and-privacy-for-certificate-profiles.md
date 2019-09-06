@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8c14f6a98aea8178586d99718206590496de2ba
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 75f2a232fe2ad75e8501181c74257a487f996c21
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65493860"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379957"
 ---
 # <a name="security-and-privacy-for-certificate-profiles-in-system-center-configuration-manager"></a>Seguridad y privacidad para perfiles de certificados en System Center Configuration Manager
 
@@ -28,7 +28,7 @@ ms.locfileid: "65493860"
 
 |Práctica recomendada de seguridad|Más información|  
 |----------------------------|----------------------|  
-|Identifique y siga todas las recomendaciones de seguridad para el Servicio de inscripción de dispositivos de red, como la configuración del sitio web de Servicio de inscripción de dispositivos de red en Internet Information Services (IIS) para que requiera SSL y omita certificados de cliente.|Consulte [Network Device Enrollment Service Guidance (Guía del Servicio de inscripción de dispositivos de red)](http://go.microsoft.com/fwlink/p/?LinkId=309016) en la biblioteca de Servicios de certificados de Active Directory de TechNet.|  
+|Identifique y siga todas las recomendaciones de seguridad para el Servicio de inscripción de dispositivos de red, como la configuración del sitio web de Servicio de inscripción de dispositivos de red en Internet Information Services (IIS) para que requiera SSL y omita certificados de cliente.|Consulte [Network Device Enrollment Service Guidance (Guía del Servicio de inscripción de dispositivos de red)](https://go.microsoft.com/fwlink/p/?LinkId=309016) en la biblioteca de Servicios de certificados de Active Directory de TechNet.|  
 |Al configurar los perfiles de certificado SCEP, elija las opciones más seguras que puedan admitir los dispositivos y la infraestructura.|Identifique, implemente y siga las recomendaciones de seguridad indicadas para los dispositivos y la infraestructura.|  
 |Especifique manualmente la afinidad de dispositivo del usuario en lugar de permitir a los usuarios identificar su dispositivo primario. Además, no habilite la configuración basada en el uso.|Si hace clic en **Permitir la inscripción de certificados solo en el dispositivo primario de los usuarios** en un perfil de certificado de SCEP, no considere la información recopilada de los usuarios ni del dispositivo como relevante. Si implementa perfiles de certificado de SCEP con esta configuración y un usuario administrativo confiable no especifica la afinidad de dispositivo de usuario, es posible que se conceda a usuarios no autorizados certificados de autenticación y privilegios elevados.<br /><br /> **Nota:** Si habilita la configuración basada en el uso, esta información se recopilará mediante mensajes de estado que no están protegidos por System Center Configuration Manager. Para mitigar esta amenaza, utilice la firma SMB o IPsec entre equipos cliente y el punto de administración.|  
 |No agregue permisos de lectura ni de inscripción para los usuarios a las plantillas de certificado ni configure el punto de Registro de certificado para omitir la comprobación de la plantilla de certificado.|Aunque Configuration Manager admita la comprobación adicional si agrega los permisos de seguridad de Leer e Inscribir para los usuarios, y usted pueda configurar el punto de registro de certificados para que omita esta comprobación si no es posible la autenticación, no se recomienda ninguna de estas configuraciones. Para más información, vea [Planificación de permisos de plantilla de certificado para perfiles de certificado en System Center Configuration Manager](../../protect/plan-design/planning-for-certificate-template-permissions.md).|  

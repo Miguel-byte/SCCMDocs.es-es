@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ce992a7d47d77d6542c4f6ede3fb37195714659a
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: 571884ded86bd6c0ef7ce2d9a0d92ec9ac9457f7
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68339969"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379460"
 ---
 # <a name="capabilities-in-technical-preview-1712-for-system-center-configuration-manager"></a>Funcionalidades de Technical Preview 1712 para System Center Configuration Manager
 
@@ -150,7 +150,7 @@ Nos gusta tanto recibir comentarios que ahora se permiten a través de la [aplic
 - Implementación del sistema operativo de Configuration Manager
 - Servidor de Configuration Manager
 
-Siga usando nuestra [página User Voice](http://configurationmanager.uservoice.com/) para votar nuevas ideas de características en Configuration Manager.
+Siga usando nuestra [página User Voice](https://configurationmanager.uservoice.com/) para votar nuevas ideas de características en Configuration Manager.
 
 
 <!-- When we have another H2 in this topic, Add this Next Steps section back in.  -->

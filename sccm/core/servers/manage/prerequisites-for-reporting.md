@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 612056861b896d8c7c271e60e0bb6b78fcbd106e
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 226a2632f8aa827975a764f0d22aea0a05ec6d96
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123270"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379763"
 ---
 # <a name="prerequisites-for-reporting-in-system-center-configuration-manager"></a>Requisitos previos de los informes en System Center Configuration Manager
 
@@ -29,7 +29,7 @@ La generación de informes en System Center Configuration Manager tiene dependen
 
 |Requisito previo|Más información|  
 |------------------|----------------------|  
-|SQL Server Reporting Services|Para poder usar los informes en Configuration Manager, debe instalar y configurar SQL Server Reporting Services.<br /><br /> Para obtener información acerca de cómo planificar e implementar Reporting Services en su entorno, consulte la sección [SQL Server Reporting Services](http://go.microsoft.com/fwlink/p/?LinkId=212032) en Libros en pantalla de SQL Server 2008.|  
+|SQL Server Reporting Services|Para poder usar los informes en Configuration Manager, debe instalar y configurar SQL Server Reporting Services.<br /><br /> Para obtener información acerca de cómo planificar e implementar Reporting Services en su entorno, consulte la sección [SQL Server Reporting Services](https://go.microsoft.com/fwlink/p/?LinkId=212032) en Libros en pantalla de SQL Server 2008.|  
 |Dependencias de rol de sistema de sitio para los equipos que ejecutan el punto de servicios de informes.|[Configuraciones admitidas para System Center Configuration Manager](../../../core/plan-design/configs/supported-configurations.md)|  
 
 ## <a name="dependencies-internal-to-configuration-manager"></a>Dependencias internas de Configuration Manager  

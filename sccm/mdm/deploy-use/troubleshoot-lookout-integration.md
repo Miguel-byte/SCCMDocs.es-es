@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9066983e631e1444cccb7b8c686c5b31e6fcf096
-ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
+ms.openlocfilehash: 18edb5a18baa7c009638580d9b338d297fb42e76
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67551446"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70380366"
 ---
 # <a name="troubleshoot-lookout-integration-with-intune"></a>Solucionar problemas de integración de Lookout con Intune
 
@@ -31,7 +31,7 @@ Lookout MTP está configurado para permitir que solo tengan acceso los usuarios 
 Puede ponerse en contacto con el soporte técnico de Lookout de las siguientes maneras:
 
 * Correo electrónico: enterprisesupport@lookout.com
-* Inicie sesión en la [Consola de MTP](http://aad.lookout.com) y vaya al módulo **Soporte técnico**.
+* Inicie sesión en la [Consola de MTP](https://aad.lookout.com) y vaya al módulo **Soporte técnico**.
 * Vaya a: https://enterprise.support.lookout.com/hc/requests y realice una solicitud de soporte técnico.
 
 ### <a name="unable-to-sign-in"></a>No se puede iniciar sesión

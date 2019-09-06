@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d0946c455732bc13520d3363187b22b118d6e403
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 55279eacbe0cddd62a8776b1ff8321b1168534e9
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67678885"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70380403"
 ---
 # <a name="set-up-your-subscription-for-lookout-mobile-threat-defense"></a>Configurar la suscripción con Lookout Mobile Threat Defense
 
@@ -62,8 +62,8 @@ Siga estos pasos para recopilar la información que necesita proporcionar al equ
 
    La consola de Lookout admite dos niveles de acceso:  
 
-   - **Acceso completo:** El Administrador de Azure AD puede crear un grupo para los usuarios que tienen acceso total y, opcionalmente, cree un grupo para los usuarios que tendrán acceso restringido. Solo los usuarios de estos grupos podrán iniciar sesión en la **consola de Lookout**.
-   - **Acceso restringido:** Los usuarios de este grupo no tendrá ningún acceso a varias configuración y los módulos relacionados con la inscripción de la consola de Lookout, y tiene acceso de solo lectura a la **directiva de seguridad** módulo de la consola de Lookout.  
+   - **Acceso completo:** El administrador de Azure AD puede crear un grupo para los usuarios que tienen acceso total y, opcionalmente, crear un grupo para los usuarios que tendrán acceso restringido. Solo los usuarios de estos grupos podrán iniciar sesión en la **consola de Lookout**.
+   - **Acceso restringido:** Los usuarios de este grupo no tendrán acceso a varios módulos relacionados con la configuración y la inscripción de la consola de guardia, y tienen acceso de solo lectura al módulo **Directiva de seguridad** de la consola de guardia.  
 
      > [!TIP]  
      > Para obtener más información sobre los permisos, consulte [este artículo de soporte técnico de Lookout](https://personal.support.lookout.com/hc/articles/114094105653).
@@ -106,7 +106,7 @@ Siga estos pasos para recopilar la información que necesita proporcionar al equ
     >![captura de pantalla de Azure Portal, servicio de Azure Active Directory, página de propiedades](media/aad-group-display-name.png)
 
     >[!NOTE]  
-    >El procedimiento recomendado es usar el valor predeterminado de cinco minutos para el incremento de tiempo a la hora de comprobar si hay nuevos dispositivos. Limitaciones actuales, **Lookout no puede validar los nombres de grupo para mostrar:** Asegúrese del **nombre para mostrar** campo en Azure portal coincide exactamente con el grupo de seguridad de Azure AD. **No se admite la creación de grupos anidados:**  Seguridad de Azure AD grupos que se usan en Lookout solo deben contener usuarios. No pueden contener otros grupos.
+    >El procedimiento recomendado es usar el valor predeterminado de cinco minutos para el incremento de tiempo a la hora de comprobar si hay nuevos dispositivos. Limitaciones actuales, **no se pueden validar los nombres para mostrar del Grupo:** Asegúrese de que el campo **nombre para mostrar** del Azure portal coincida exactamente con el grupo de seguridad Azure ad. **No se admite la creación de grupos anidados:**  Azure AD grupos de seguridad que se usan en la Guardia solo deben contener usuarios. No pueden contener otros grupos.
 
 3.  Una vez agregado el grupo, la próxima vez que un usuario abre la aplicación Lookout for Work en su dispositivo, el dispositivo se activa en Lookout.
 
@@ -141,7 +141,7 @@ Si quiere recibir alertas de correo electrónico para las amenazas, inicie sesi�
 
 
 ## <a name="configure-threat-classification"></a>Configurar la clasificación de amenazas
-Lookout Mobile Threat Defense clasifica las amenazas móviles en varios tipos. Las [clasificaciones de amenazas de Lookout](http://personal.support.lookout.com/hc/articles/114094130693) tienen niveles de riesgo predeterminados asociados a ellos. Esta configuración puede cambiarse en cualquier momento para adaptarse a los requisitos de la empresa.
+Lookout Mobile Threat Defense clasifica las amenazas móviles en varios tipos. Las [clasificaciones de amenazas de Lookout](https://personal.support.lookout.com/hc/articles/114094130693) tienen niveles de riesgo predeterminados asociados a ellos. Esta configuración puede cambiarse en cualquier momento para adaptarse a los requisitos de la empresa.
 
 ![captura de pantalla de la página de directivas que muestra las amenazas y las clasificaciones](media/lookout-threat-classification.png)
 

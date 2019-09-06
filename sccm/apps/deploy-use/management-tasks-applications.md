@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 368fd0b4d86b1ee263bbe47619a4387db614b167
-ms.sourcegitcommit: abfc9e1b3945637fa93ca8d3a11519493a5d5391
+ms.openlocfilehash: 39548117fb7e03614af32fa330fb86bf6de4151e
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66264394"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70378062"
 ---
 # <a name="management-tasks-for-system-center-configuration-manager-applications"></a>Tareas de administración de aplicaciones de System Center Configuration Manager
 
@@ -41,7 +41,7 @@ Para obtener más información sobre la creación de aplicaciones y los tipos de
 |**Actualizar estadísticas**|Actualiza la información que se muestra en el nodo **Implementaciones** del área de trabajo **Supervisión** sobre las implementaciones de esta aplicación.<br /><br /> Consulte [Monitor applications from the System Center Configuration Manager console](../../apps/deploy-use/monitor-applications-from-the-console.md) (Supervisión de aplicaciones desde la consola de System Center Configuration Manager).|  
 |**Restablecer**|Restablece una aplicación retirada anteriormente mediante la tarea de administración **Retirar**.|  
 |**Retirar**|Cuando retira una aplicación, dejará de estar disponible para la implementación. En cambio, la aplicación y sus implementaciones no se eliminan. No se quitarán las copias existentes de la aplicación que se instalaron en equipos cliente. Todos los cambios hechos en la aplicación se eliminarán de Configuration Manager transcurridos 60 días. Pero, las copias instaladas de la aplicación no se eliminan.<br /><br /> Para eliminar una aplicación primero debe retirarla, eliminar todas las implementaciones, quitar las referencias de otras implementaciones a la aplicación y, después, eliminar todas sus revisiones.<br /><br /> See [Revise and supersede applications](../../apps/deploy-use/revise-and-supersede-applications.md) (Revisión y sustitución de aplicaciones).|  
-|**Exportarar**|Abre el **Asistente para exportar aplicaciones** que le permite exportar las aplicaciones seleccionadas en un archivo .zip que puede archivar o instalar en otro sitio. Si decide exportar el contenido de una aplicación, se creará una carpeta con el contenido.<br /><br /> También puede exportar las dependencias de aplicación, las relaciones de sustitución y las condiciones, y el contenido de la aplicación y de sus dependencias.<br /><br /> El cmdlet de Windows PowerShell, **Export-CMApplication**, realiza la misma función. Para obtener más información, consulte [Export-CMApplication](http://go.microsoft.com/fwlink/p/?LinkID=258880) en la documentación de referencia del cmdlet de Microsoft System Center 2012 Configuration Manager SP1.|  
+|**Exportarar**|Abre el **Asistente para exportar aplicaciones** que le permite exportar las aplicaciones seleccionadas en un archivo .zip que puede archivar o instalar en otro sitio. Si decide exportar el contenido de una aplicación, se creará una carpeta con el contenido.<br /><br /> También puede exportar las dependencias de aplicación, las relaciones de sustitución y las condiciones, y el contenido de la aplicación y de sus dependencias.<br /><br /> El cmdlet de Windows PowerShell, **Export-CMApplication**, realiza la misma función. Para obtener más información, consulte [Export-CMApplication](https://go.microsoft.com/fwlink/p/?LinkID=258880) en la documentación de referencia del cmdlet de Microsoft System Center 2012 Configuration Manager SP1.|  
 |**Eliminar**|Elimina la aplicación seleccionada.<br /><br /> No se puede eliminar una aplicación si otras aplicaciones dependen de la misma, si tiene una implementación activa o si tiene secuencias de tareas dependientes.|  
 |**Simular implementación**|Abre el **Asistente para simular implementación de aplicación** , en el que puede probar el resultado de una implementación de aplicación en equipos sin instalar o desinstalar la aplicación.<br /><br /> Consulte [Simulate application deployments](../../apps/deploy-use/simulate-application-deployments.md) (Simulación de implementaciones de aplicaciones).|  
 |**Implementar**|Abre el **Asistente para implementar software** , en el que puede implementar la aplicación seleccionada en recopilaciones de equipos en su jerarquía.<br /><br /> Consulte [Deploy applications](../../apps/deploy-use/deploy-applications.md) (Implementación de aplicaciones).|  

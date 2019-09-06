@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e58f5cffa201224516e03dd6a1e919f352c297d0
-ms.sourcegitcommit: b59e57ab4cf9f03e8beeb70588f3b9f1a6021e36
+ms.openlocfilehash: 72478590144915075ae224552b6d67f7ad8fd87c
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68662623"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70377789"
 ---
 # <a name="use-cloud-services-with-system-center-configuration-manager"></a>Usar servicios en la nube con System Center Configuration Manager.
 
@@ -37,7 +37,7 @@ Aunque el aprovisionamiento de recursos en la nube no es algo que deba hacer ant
 
 -   Para obtener información sobre los puntos de distribución basados en la nube, consulte [Install cloud-based distribution points](/sccm/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure) (Instalar puntos de distribución basados en la nube).
 
--   Para obtener más información sobre Azure, consulte [Azure](http://go.microsoft.com/fwlink/p/?LinkId=262965) en la biblioteca de MSDN.  
+-   Para obtener más información sobre Azure, consulte [Azure](https://go.microsoft.com/fwlink/p/?LinkId=262965) en la biblioteca de MSDN.  
 
 ### <a name="azure-virtual-machines-for-cloud-based-infrastructure"></a>Máquinas virtuales de Azure (para infraestructuras basadas en la nube)  
  Configuration Manager admite el uso de equipos que se ejecutan en máquinas virtuales de Azure, igual que cuando se ejecuta localmente dentro de la red corporativa física. Puede usar máquinas virtuales de Azure en los siguientes escenarios:  
@@ -81,10 +81,10 @@ Para usar estas capacidades adicionales no es necesario tener una suscripción a
 
  Para obtener más información, consulte los detalles de los distintos escenarios de recursos basados en la nube. También puede ver los siguientes temas sobre seguridad de Azure:  
 
--   [Azure: Understanding Security Account Management in Azure (Azure: información sobre la administración de cuentas de seguridad en Windows Azure)](http://go.microsoft.com/fwlink/p/?LinkId=262968)  
+-   [Azure: Understanding Security Account Management in Azure (Azure: información sobre la administración de cuentas de seguridad en Windows Azure)](https://go.microsoft.com/fwlink/p/?LinkId=262968)  
 
--   [Windows Azure Security Overview](http://go.microsoft.com/fwlink/p/?LinkId=262970) (Introducción a la seguridad de Windows Azure)  
+-   [Windows Azure Security Overview](https://go.microsoft.com/fwlink/p/?LinkId=262970) (Introducción a la seguridad de Windows Azure)  
 
--   [Get Past the Security Crossroads in Your Cloud Migration](http://go.microsoft.com/fwlink/p/?LinkId=262971) (Seguridad en la migración de nube)  
+-   [Get Past the Security Crossroads in Your Cloud Migration](https://go.microsoft.com/fwlink/p/?LinkId=262971) (Seguridad en la migración de nube)  
 
--   [Seguridad de los datos en Azure, parte 1 de 2](http://go.microsoft.com/fwlink/p/?LinkId=262974)  
+-   [Seguridad de los datos en Azure, parte 1 de 2](https://go.microsoft.com/fwlink/p/?LinkId=262974)  

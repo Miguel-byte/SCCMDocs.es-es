@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 376d35ae0eaca282b9634e2c3eeb50b9c814f270
-ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
+ms.openlocfilehash: 2ec958701b81c70677f65815d4fa053004c09c2b
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66748011"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70378077"
 ---
 # <a name="learn-more-about-powershell-script-security"></a>Más información sobre la seguridad del script de PowerShell
 
@@ -67,7 +67,7 @@ Pasar parámetros es una manera de disponer de flexibilidad con los scripts y de
 
 ## <a name="environment-recommendations"></a>Recomendaciones de entorno
 Recomendaciones generales para los administradores de PowerShell.
-1. Implemente la versión más reciente de PowerShell, como la versión 5 o superior, integrada en Windows 10. Como alternativa, puede implementar [Windows Management Framework](https://www.microsoft.com/en-us/download/details.aspx?id=54616), disponible hasta Windows 7 y Windows Server 2008 R2 (incluidos). 
+1. Implemente la versión más reciente de PowerShell, como la versión 5 o superior, integrada en Windows 10. Como alternativa, puede implementar [Windows Management Framework](https://www.microsoft.com/download/details.aspx?id=54616), disponible hasta Windows 7 y Windows Server 2008 R2 (incluidos). 
 2. Habilite y recopile registros de PowerShell, incluyendo de forma opcional el registro de eventos protegido. Incorpore estos registros a los flujos de trabajo de firma, búsqueda y respuesta a incidentes.
 3. Implemente Just Enough Administration en sistemas de gran valor para eliminar o reducir el acceso administrativo sin restricciones a esos sistemas.
 4. Implemente directivas de Device Guard y control de aplicaciones para permitir que las tareas administrativas aprobadas previamente usen todas las funciones del lenguaje de PowerShell, al tiempo que se limita el uso interactivo y no aprobado a un subconjunto limitado del lenguaje de PowerShell.

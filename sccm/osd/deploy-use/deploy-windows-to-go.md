@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 494824f80c03e05535ca73d38974a8fc68489ee5
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 2de5d0c6b0c5f2cb2a01052514228b7955896f64
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122668"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379014"
 ---
 # <a name="deploy-windows-to-go-with-system-center-configuration-manager"></a>Implementación de Windows to Go con System Center Configuration Manager
 
@@ -24,7 +24,7 @@ ms.locfileid: "56122668"
 
 En este tema se proporcionan los pasos para aprovisionar Windows To Go en System Center Configuration Manager. Windows To Go es una función empresarial de Windows 8 que habilita la creación de un área de trabajo Windows To Go que se puede arrancar desde una unidad externa conectada mediante USB en equipos que cumplan los requisitos de certificados de Windows 7 o Windows 8, sin tener en cuenta el sistema operativo que se ejecute en el equipo. Las áreas de trabajo de Windows To Go pueden utilizar la misma imagen que usan las empresas en los equipos de escritorio y portátiles, y se puede administrar de la misma manera.  
 
- Para obtener más información sobre Windows To Go, consulte [Windows To Go: Introducción a las características](http://go.microsoft.com/fwlink/p/?LinkId=263433).  
+ Para obtener más información sobre Windows To Go, consulte [Windows To Go: Introducción a las características](https://go.microsoft.com/fwlink/p/?LinkId=263433).  
 
 ## <a name="provision-windows-to-go"></a>Aprovisionar Windows To Go  
  Windows To Go es un sistema operativo almacenado en una unidad externa conectada mediante USB. Puede aprovisionar la unidad de Windows To Go del mismo modo que aprovisiona otras implementaciones de sistema operativo. Sin embargo, como Windows To Go está diseñado para ser una solución de gran movilidad y centrada en el usuario, debe adoptar un enfoque ligeramente diferente para aprovisionar estas unidades.  
@@ -55,7 +55,7 @@ En este tema se proporcionan los pasos para aprovisionar Windows To Go en System
      antes de crear los medios preconfigurados, debe distribuir la imagen de arranque en un punto de distribución.  
 
     > [!NOTE]  
-    >  Las imágenes de arranque se usan para instalar el sistema operativo en los equipos de destino dentro del entorno de Configuration Manager. Contienen una versión de Windows PE que instala el sistema operativo, así como todos los controladores de dispositivo adicionales que fuesen necesarios. Configuration Manager proporciona dos imágenes de arranque: Una para plataformas x86 y otra para plataformas x64. También puede crear sus propias imágenes de arranque. Para más información, vea [Manage boot images (Administrar imágenes de arranque)](../get-started/manage-boot-images.md).  
+    >  Las imágenes de arranque se usan para instalar el sistema operativo en los equipos de destino dentro del entorno de Configuration Manager. Contienen una versión de Windows PE que instala el sistema operativo, así como todos los controladores de dispositivo adicionales que fuesen necesarios. Configuration Manager proporciona dos imágenes de arranque: una compatible con las plataformas x86 y otra compatible con las plataformas x64. También puede crear sus propias imágenes de arranque. Para más información, vea [Manage boot images (Administrar imágenes de arranque)](../get-started/manage-boot-images.md).  
 
 -   **Distribuir la imagen de sistema operativo Windows 8 a un punto de distribución**  
 
@@ -100,7 +100,7 @@ En este tema se proporcionan los pasos para aprovisionar Windows To Go en System
 
 6. En la página **Propiedades de medio**  , especifique la información siguiente y, a continuación, haga clic en **Siguiente**.  
 
-   -   **Creado por**: especifique la persona que creó el medio.  
+   -   **Creado por**: especifique el autor de lo medio.  
 
    -   **Versión**: especifique el número de versión del medio.  
 
@@ -160,9 +160,9 @@ En este tema se proporcionan los pasos para aprovisionar Windows To Go en System
 
 10. En la página **Imágenes** , especifique la información siguiente y, a continuación, haga clic en **Siguiente**.  
 
-    -   **Paquete de imagen**: especifique el paquete que contiene la imagen de sistema operativo de Windows 8.  
+    -   **Paquete de imágenes**: especifique el paquete que contiene la imagen de sistema operativo de Windows 8.  
 
-    -   **Índice de imagen**: especifique la imagen que desea implementar si el paquete contiene varias imágenes de sistema operativo.  
+    -   **Índice de imágenes**: especifique la imagen que se implementará si el paquete contiene varias imágenes de sistema operativo.  
 
     -   **Punto de distribución**: especifique el punto de distribución que hospeda el paquete de imágenes de sistema operativo. El asistente recupera la imagen de sistema operativo desde el punto de distribución y la escribe en el medio.  
 
@@ -179,14 +179,14 @@ En este tema se proporcionan los pasos para aprovisionar Windows To Go en System
 
 15. En la página **Personalización** , especifique la siguiente información y, a continuación, haga clic en **Siguiente**.  
 
-    - **Variables**: Especifique las variables que la secuencia de tareas utiliza para implementar el sistema operativo. Para Windows To Go, utilice la variable SMSTSPreferredAdvertID para seleccionar automáticamente la implementación de Windows To Go mediante el formato siguiente:  
+    - **Variables**: especifique las variables que la secuencia de tareas usa para implementar el sistema operativo. Para Windows To Go, utilice la variable SMSTSPreferredAdvertID para seleccionar automáticamente la implementación de Windows To Go mediante el formato siguiente:  
 
        SMSTSPreferredAdvertID = {*IdImplementación*}, donde IdImplementación es el identificador de implementación asociado a la secuencia de tareas que utilizará para completar el proceso de aprovisionamiento para la unidad de Windows To Go.  
 
       > [!TIP]  
       >  Cuando utilice esta variable con una secuencia de tareas configurada para su ejecución desatendida (configurada anteriormente en este procedimiento), no será necesaria la interacción del usuario y el equipo arrancará automáticamente en la implementación de Windows To Go cuando detecte una unidad de Windows To Go. Se seguirá solicitando una contraseña al usuario si el medio está configurado para la protección con contraseña.  
 
-    - **Comandos de preinicio**: Especifique los comandos de preinicio que desee ejecutar antes de que se ejecute la secuencia de tareas. Los comandos de preinicio pueden ser un script o ejecutable que puede interactuar con el usuario en Windows PE antes de que se ejecute la secuencia de tareas para instalar el sistema operativo. Configure las opciones siguientes para la implementación de Windows To Go:  
+    - **Comandos de preinicio**: especifique los comandos de preinicio que desee ejecutar antes de la ejecución de la secuencia de tareas. Los comandos de preinicio pueden ser un script o ejecutable que puede interactuar con el usuario en Windows PE antes de que se ejecute la secuencia de tareas para instalar el sistema operativo. Configure las opciones siguientes para la implementación de Windows To Go:  
 
       - **OSDBitLockerPIN**: BitLocker para Windows To Go requiere una frase de contraseña. Establezca la variable **OSDBitLockerPIN** como parte de un comando de preinicio para establecer la frase de contraseña de BitLocker para la unidad de Windows To Go.  
 
@@ -241,27 +241,27 @@ En este tema se proporcionan los pasos para aprovisionar Windows To Go en System
 
     -   **Nombre**: especifique el nombre del programa. Por ejemplo, escriba **Creator** como nombre del programa.  
 
-    -   **Línea de comandos**: escriba **WTGCreator.exe /wim:PrestageName.wim**, donde PrestageName es el nombre del archivo preconfigurado que ha creado y copiado en la carpeta de origen del paquete para el paquete de Windows To Go Creator.  
+    -   **Línea de comandos**: escriba **WTGCreator.exe /wim:PrestageName.wim**, donde PrestageName es el nombre del archivo preconfigurado que creó y copió en la carpeta de origen del paquete para el paquete de Windows To Go Creator.  
 
          Si lo desea, puede agregar las siguientes opciones:  
 
         -   **enableBootRedirect**: opción de línea de comandos para cambiar las opciones de inicio de Windows To Go para permitir la redirección del arranque. Cuando use esta opción, el equipo arrancará desde una unidad USB sin necesidad de cambiar el orden de arranque en el firmware del equipo ni de hacer que el usuario seleccione una opción de una lista de opciones de arranque durante el inicio. Si se detecta una unidad de Windows To Go, el equipo se arranca en esa unidad.  
 
-    -   **Ejecutar**: especifique **Normal** para ejecutar el programa según los valores predeterminados del sistema y el programa.  
+    -   **Ejecutar**: especifique **Normal** para ejecutar el programa según los valores predeterminados del programa y del sistema.  
 
-    -   **El programa se puede ejecutar**: especifique si el programa puede ejecutarse solo cuando un usuario inicia sesión.  
+    -   **El programa se puede ejecutar**: especifique si el programa puede ejecutarse solo cuando un usuario tenga una sesión iniciada.  
 
-    -   **Modo de ejecución**: especifique si el programa se ejecutará con los permisos de los usuarios conectados o con permisos administrativos. La herramienta Windows To Go Creator requiere permisos elevados para su ejecución.  
+    -   **Modo de ejecución**: especifique si el programa se ejecutará con los permisos de los usuarios que tengan una sesión iniciada o con permisos administrativos. La herramienta Windows To Go Creator requiere permisos elevados para su ejecución.  
 
     -   Seleccione **Permitir a los usuarios ver la instalación del programa e interactuar con la misma**y, a continuación, haga clic en **Siguiente**.  
 
 12. En la página Requisitos, especifique lo siguiente:  
 
-    - **Requisitos de la plataforma**: seleccione las plataformas de Windows 8 aplicables para permitir el aprovisionamiento.  
+    - **Requisitos de plataforma**: seleccione las plataformas de Windows 8 aplicables para permitir el aprovisionamiento.  
 
     - **Espacio en disco estimado**: especifique el tamaño de la carpeta de origen del paquete para Windows To Go Creator.  
 
-    - **Duración máxima permitida de la ejecución (minutos)**: especifica el tiempo máximo que se espera que el programa se ejecute en el equipo cliente. De forma predeterminada, este valor está establecido en 120 minutos.  
+    - **Tiempo de ejecución máximo permitido (minutos)** : especifica el tiempo máximo que se espera que el programa se ejecute en el equipo cliente. De forma predeterminada, este valor está establecido en 120 minutos.  
 
       > [!IMPORTANT]  
       >  Si está usando ventanas de mantenimiento para la recopilación en la que se ejecuta este programa, puede producirse un conflicto si la **Duración máxima permitida de la ejecución** es mayor que la ventana de mantenimiento programada. Si el tiempo máximo de ejecución se establece como **Desconocido**, comenzará durante la ventana de mantenimiento, pero seguirá ejecutándose hasta que se complete o se produzca un error después de cerrar la ventana de mantenimiento. Si establece el tiempo de ejecución máximo en un periodo específico (no configurado como Desconocido) que supera la duración de cualquiera de las ventanas de mantenimiento disponibles, no se ejecutará el programa.  
@@ -310,7 +310,7 @@ En este tema se proporcionan los pasos para aprovisionar Windows To Go en System
 
 13. En la pestaña **Propiedades** del paso **Ejecutar línea de comandos** , agregue lo siguiente:  
 
-    1.  **Nombre**: especifique un nombre para la línea de comandos, como **Habilitar BitLocker para Windows To Go**.  
+    1.  **Nombre**: especifique un nombre para la línea de comandos, como **Enable BitLocker for Windows To Go**.  
 
     2.  **Línea de comandos**: i386\osdbitlocker_wtg.exe /Enable /pwd:< *None&#124;AD*>  
 
@@ -352,11 +352,11 @@ En este tema se proporcionan los pasos para aprovisionar Windows To Go en System
 
 5.  En la página **General** , especifique la siguiente configuración:  
 
-    1.  **Software**: compruebe que el paquete de Windows To Go está seleccionado.  
+    1.  **Software**: compruebe que el paquete de Windows To Go esté seleccionado.  
 
-    2.  **Colección**: haga clic en **Examinar** para seleccionar la colección en la que quiere implementar el paquete de Windows To Go.  
+    2.  **Recopilación**: haga clic en **Examinar** para seleccionar la recopilación en la que desea implementar el paquete de Windows To Go.  
 
-    3.  **Usar grupos de puntos de distribución predeterminados asociados a esta colección**: seleccione esta opción si desea almacenar el contenido del paquete en el grupo de puntos de distribución de recopilaciones predeterminado. Si no asocia la recopilación seleccionada con un grupo de puntos de distribución, esta opción no estará disponible.  
+    3.  **Usar grupos de puntos de distribución predeterminados asociados a esta recopilación**: seleccione esta opción si desea almacenar el contenido del paquete en el grupo de puntos de distribución predeterminado de las recopilaciones. Si no asocia la recopilación seleccionada con un grupo de puntos de distribución, esta opción no estará disponible.  
 
 6.  En la página **Contenido** , haga clic en **Agregar** y, a continuación, seleccione los puntos de distribución o los grupos de puntos de distribución en los que desee implementar el contenido asociado a este paquete y programa.  
 
@@ -368,25 +368,25 @@ En este tema se proporcionan los pasos para aprovisionar Windows To Go en System
 
 9. En la página **Programación**, configure las opciones siguientes y, a continuación, haga clic en **Siguiente**.  
 
-    1.  **Programar cuándo estará disponible esta implementación**: especifique la fecha y hora en que el paquete y programa estarán disponibles para su ejecución en el equipo de destino. Cuando seleccione **UTC**, este valor asegura que el paquete y programa están disponibles para varios equipos de destino al mismo tiempo, en lugar de en momentos diferentes, según la hora local de los equipos de destino.  
+    1.  **Programar cuándo estará disponible esta implementación**: especifique la fecha y hora en que el paquete y el programa estarán disponibles para su ejecución en el equipo de destino. Cuando seleccione **UTC**, este valor asegura que el paquete y programa están disponibles para varios equipos de destino al mismo tiempo, en lugar de en momentos diferentes, según la hora local de los equipos de destino.  
 
-    2.  **Programar cuándo expirará esta implementación**: especifique la fecha y hora de expiración del paquete y programa en el equipo de destino. Cuando seleccione **UTC**, este valor garantiza que la secuencia de tareas expira en varios equipos de destino al mismo tiempo, en lugar de en momentos diferentes, según la hora local de los equipos de destino.  
+    2.  **Programar cuándo expirará esta implementación**: especifique la fecha y hora en que expirarán el paquete y el programa en el equipo de destino. Cuando seleccione **UTC**, este valor garantiza que la secuencia de tareas expira en varios equipos de destino al mismo tiempo, en lugar de en momentos diferentes, según la hora local de los equipos de destino.  
 
 10. En la página **Experiencia del usuario** del asistente, especifique la siguiente información:  
 
     -   **Instalación de software**: permite que el software se instale fuera de las ventanas de mantenimiento configuradas.  
 
-    -   **Reinicio del sistema (si es necesario para completar la instalación)**: permite que un dispositivo se reinicie fuera de las ventanas de mantenimiento configuradas cuando así lo requiera la instalación del software.  
+    -   **Reinicio del sistema (si es necesario para completar la instalación)** : permite que un dispositivo se reinicie fuera de las ventanas de mantenimiento configuradas si es necesario para la instalación del software.  
 
-    -   **Dispositivos de Embedded**: Cuando implementa paquetes y programas en dispositivos de Windows Embedded habilitados con filtro de escritura, puede especificar la instalación de paquetes y programas en la superposición temporal y confirmar los cambios más tarde, o puede confirmar los cambios en la fecha límite de instalación o durante una ventana de mantenimiento. Al confirmar los cambios en la fecha límite de instalación o durante una ventana de mantenimiento, es necesario reiniciar. Los cambios se conservan en el dispositivo.  
+    -   **Dispositivos incrustados**: si implementa paquetes y programas en dispositivos de Windows Embedded habilitados con filtro de escritura, puede especificar la instalación de paquetes y programas en la superposición temporal y confirmar los cambios más tarde, o bien puede confirmar los cambios en la fecha límite de la instalación o durante una ventana de mantenimiento. Al confirmar los cambios en la fecha límite de instalación o durante una ventana de mantenimiento, es necesario reiniciar. Los cambios se conservan en el dispositivo.  
 
 11. En la página **Puntos de distribución** , especifique la siguiente información:  
 
     -   **Opciones de implementación:** especifique **Descargar contenido desde el punto de distribución y ejecutar localmente**.  
 
-    -   **Permitir a los clientes compartir el contenido con otros clientes en la misma subred**: Para reducir la carga en la red, seleccione esta opción para permitir que los clientes descarguen contenido de otros clientes en la red que ya han descargado el contenido y lo han almacenado en la memoria caché. Esta opción utiliza Windows BranchCache y se puede utilizar en equipos que ejecutan Windows Vista SP2 y posterior.  
+    -   **Permitir a los clientes compartir el contenido con otros clientes en la misma subred**: seleccione esta opción para reducir la carga en la red al permitir que los clientes descarguen contenido desde otros clientes de la red que ya descargaron y almacenaron en caché el contenido. Esta opción utiliza Windows BranchCache y se puede utilizar en equipos que ejecutan Windows Vista SP2 y posterior.  
 
-    -   **Permitir a los clientes usar una ubicación de origen de reserva para el contenido**: Especifique si desea permitir a los clientes usar un punto de distribución no preferido de reserva como ubicación de origen de contenido si el contenido no está disponible en un punto de distribución preferido.  
+    -   **Permitir a los clientes usar una ubicación de origen de reserva para el contenido**: especifique si desea permitir a los clientes usar un punto de distribución no preferido de reserva como ubicación de origen para el contenido cuando el contenido no está disponible en un punto de distribución preferido.  
 
 12. Complete el asistente.  
 
@@ -404,16 +404,16 @@ En este tema se proporcionan los pasos para aprovisionar Windows To Go en System
 
     1.  **Secuencia de tareas**: compruebe que la secuencia de tareas de Windows 8 esté seleccionada.  
 
-    2.  **Colección**: Haga clic en **Examinar** para seleccionar la recopilación que incluye todos los dispositivos para los que un usuario podría aprovisionar Windows To Go.  
+    2.  **Recopilación**: haga clic en **Examinar** para seleccionar la recopilación que incluye todos los dispositivos para los que un usuario podría aprovisionar Windows To Go.  
 
         > [!IMPORTANT]  
-        >  Si el medio preconfigurado que creó en la sección [Crear medios preconfigurados](#BKMK_CreatePrestagedMedia) usa la variable SMSTSPreferredAdvertID, puede implementar la secuencia de tareas en la recopilación **Todos los sistemas** y especificar la opción **Solo Windows PE (oculta)** en la página **Contenido** . Como la secuencia de tareas está oculta, solo estará disponible para los medios.  
+        >  Si el medio preconfigurado que creó en la sección [Create prestaged media](#BKMK_CreatePrestagedMedia) usa la variable SMSTSPreferredAdvertID, puede implementar la secuencia de tareas en la recopilación **Todos los sistemas** y especificar la opción **Solo Windows PE (oculta)** en la página **Contenido** . Como la secuencia de tareas está oculta, solo estará disponible para los medios.  
 
-    3.  **Usar grupos de puntos de distribución predeterminados asociados a esta colección**: seleccione esta opción si desea almacenar el contenido del paquete en el grupo de puntos de distribución de recopilaciones predeterminado. Si no asocia la recopilación seleccionada con un grupo de puntos de distribución, esta opción no estará disponible.  
+    3.  **Usar grupos de puntos de distribución predeterminados asociados a esta recopilación**: seleccione esta opción si desea almacenar el contenido del paquete en el grupo de puntos de distribución predeterminado de las recopilaciones. Si no asocia la recopilación seleccionada con un grupo de puntos de distribución, esta opción no estará disponible.  
 
 6.  En la página **Configuración de implementación** , configure las opciones siguientes y, a continuación, haga clic en **Siguiente**.  
 
-    -   **Finalidad**: seleccione **Disponible**. Cuando implementa la secuencia de tareas en un usuario, el usuario verá la secuencia de tareas publicada en el catálogo de aplicaciones y podrá solicitarla a petición. Si implementa la secuencia de tareas en un dispositivo, el usuario verá la secuencia de tareas en el Centro de Software y podrá instalarla a petición.  
+    -   **Propósito**: seleccione **Disponible**. Cuando implementa la secuencia de tareas en un usuario, el usuario verá la secuencia de tareas publicada en el catálogo de aplicaciones y podrá solicitarla a petición. Si implementa la secuencia de tareas en un dispositivo, el usuario verá la secuencia de tareas en el Centro de Software y podrá instalarla a petición.  
 
     -   **Estar disponible para**: especifique si la secuencia de tareas debe estar disponible para medios, el entorno PXE o clientes de Configuration Manager.  
 
@@ -422,21 +422,21 @@ En este tema se proporcionan los pasos para aprovisionar Windows To Go en System
 
 7.  En la página **Programación** , configure las opciones siguientes y, a continuación, haga clic en **Siguiente**.  
 
-    1.  **Programar cuándo estará disponible esta implementación**: Especifique la fecha y la hora en las que la secuencia de tareas estará disponible para su ejecución en el equipo de destino. Cuando se selecciona **UTC**, este valor garantiza que la secuencia de tareas estará disponible en varios equipos de destino al mismo tiempo, en lugar de en momentos diferentes, según la hora local de los equipos de destino.  
+    1.  **Programar cuándo estará disponible esta implementación**: especifique la fecha y hora en que la secuencia de tareas estará disponible para ejecutarse en el equipo de destino. Cuando se selecciona **UTC**, este valor garantiza que la secuencia de tareas estará disponible en varios equipos de destino al mismo tiempo, en lugar de en momentos diferentes, según la hora local de los equipos de destino.  
 
-    2.  **Programar cuándo expirará esta implementación**: Especifique la fecha y hora de expiración de la secuencia de tareas en el equipo de destino. Cuando seleccione **UTC**, este valor garantiza que la secuencia de tareas expira en varios equipos de destino al mismo tiempo, en lugar de en momentos diferentes, según la hora local de los equipos de destino.  
+    2.  **Programar cuándo expirará esta implementación**: especifique la fecha y hora en que expirará la secuencia de tareas en el equipo de destino. Cuando seleccione **UTC**, este valor garantiza que la secuencia de tareas expira en varios equipos de destino al mismo tiempo, en lugar de en momentos diferentes, según la hora local de los equipos de destino.  
 
 8.  En la página **Experiencia del usuario** , especifique la siguiente información:  
 
     -   **Mostrar progreso de la secuencia de tareas**: especifique si el cliente de Configuration Manager debe mostrar el progreso de la secuencia de tareas.  
 
-    -   **Instalación de software**: Especifique si el usuario puede instalar software fuera de las ventanas de mantenimiento configuradas después del tiempo programado.  
+    -   **Instalación de software**: especifique si el usuario puede instalar software fuera de las ventanas de mantenimiento configuradas después del tiempo programado.  
 
-    -   **Reinicio del sistema (si es necesario para completar la instalación)**: permite que un dispositivo se reinicie fuera de las ventanas de mantenimiento configuradas cuando así lo requiera la instalación del software.  
+    -   **Reinicio del sistema (si es necesario para completar la instalación)** : permite que un dispositivo se reinicie fuera de las ventanas de mantenimiento configuradas si es necesario para la instalación del software.  
 
-    -   **Dispositivos de Embedded**: Cuando implementa paquetes y programas en dispositivos de Windows Embedded habilitados con filtro de escritura, puede especificar la instalación de paquetes y programas en la superposición temporal y confirmar los cambios más tarde, o puede confirmar los cambios en la fecha límite de instalación o durante una ventana de mantenimiento. Al confirmar los cambios en la fecha límite de instalación o durante una ventana de mantenimiento, es necesario reiniciar. Los cambios se conservan en el dispositivo.  
+    -   **Dispositivos incrustados**: si implementa paquetes y programas en dispositivos de Windows Embedded habilitados con filtro de escritura, puede especificar la instalación de paquetes y programas en la superposición temporal y confirmar los cambios más tarde, o bien puede confirmar los cambios en la fecha límite de la instalación o durante una ventana de mantenimiento. Al confirmar los cambios en la fecha límite de instalación o durante una ventana de mantenimiento, es necesario reiniciar. Los cambios se conservan en el dispositivo.  
 
-    -   **Clientes basados en Internet**: Especifique si la secuencia de tareas se puede ejecutar en un cliente basado en Internet. Las operaciones que instalan software, como un sistema operativo, no son compatibles con esta configuración. Utilice esta opción solo para secuencias de tareas basadas en scripts que realizan operaciones en el sistema operativo estándar.  
+    -   **Clientes basados en Internet**: especifique si la secuencia de tareas se puede ejecutar en un cliente basado en Internet. Las operaciones que instalan software, como un sistema operativo, no son compatibles con esta configuración. Utilice esta opción solo para secuencias de tareas basadas en scripts que realizan operaciones en el sistema operativo estándar.  
 
 9. En la página **Alertas** , especifique la configuración de alertas que desea establecer para esta implementación de secuencia de tareas y, a continuación, haga clic en **Siguiente**.  
 
@@ -444,7 +444,7 @@ En este tema se proporcionan los pasos para aprovisionar Windows To Go en System
 
     -   **Opciones de implementación**: seleccione **Descargar el contenido localmente cuando sea necesario mediante la ejecución de una secuencia de tareas**.  
 
-    -   **Cuando no haya disponible ningún punto de distribución local, usar un punto de distribución remoto**: Especifique si los clientes pueden utilizar puntos de distribución en redes lentas y poco confiables para descargar el contenido requerido por la secuencia de tareas.  
+    -   **Cuando no haya disponible ningún punto de distribución local, usar un punto de distribución remoto**: especifique si los clientes pueden usar puntos de distribución en redes lentas y poco confiables para descargar el contenido necesario para la secuencia de tareas.  
 
     -   **Permitir a los clientes usar una ubicación de origen de reserva para el contenido**:
         - *Antes de la versión 1610*, se puede activar la casilla Permitir ubicación de origen de reserva para contenido para permitir a los clientes que están fuera de estos grupos de límites que reviertan y usen el punto de distribución como ubicación de origen para el contenido cuando no estén disponibles otros puntos de distribución.

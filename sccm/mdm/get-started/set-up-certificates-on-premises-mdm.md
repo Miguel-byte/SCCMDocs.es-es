@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8443430b55ee61e9ad5eeac1e70342dfa6e85851
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 3e454212b5a70c903471d0bda82611e12b3c8693
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122379"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70380341"
 ---
 # <a name="set-up-certificates-for-trusted-communications-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Configuración de certificados para comunicaciones de confianza para la administración local de dispositivos móviles en System Center Configuration Manager
 
@@ -31,7 +31,7 @@ La administración local de dispositivos móviles de System Center Configuration
  Otra alternativa para dispositivos no unidos a un dominio, es usar la raíz de una entidad de certificación pública conocida (como Verisign o GoDaddy) para emitir el certificado de servidor. Con ello, se evita tener que instalar manualmente un certificado en el dispositivo, porque la mayoría de los dispositivos confían de forma nativa en las conexiones a los servidores que usan la misma raíz de la entidad de certificación pública. Es una alternativa útil para dispositivos inscritos por el usuario en los que no resulta factible instalar los certificados de confianza a través de la entidad de certificación del sitio en cada dispositivo.  
 
 > [!IMPORTANT]  
->  Existen muchas formas de configurar los certificados para permitir comunicaciones de confianza entre los dispositivos y los servidores de sistema de sitio para la administración local de dispositivos móviles. La información proporcionada en este artículo se facilita como ejemplo de una manera de hacerlo. Para utilizar este método se debe estar ejecutando un servidor en el sitio que tenga instalados el rol Servicios de certificado de Active Directory y los servicios de rol Entidad de certificación e Inscripción web de entidad de certificación. Consulte [Servicios de certificados de Active Directory](http://go.microsoft.com/fwlink/p/?LinkId=115018) para más información e instrucciones sobre este rol de Windows Server.  
+>  Existen muchas formas de configurar los certificados para permitir comunicaciones de confianza entre los dispositivos y los servidores de sistema de sitio para la administración local de dispositivos móviles. La información proporcionada en este artículo se facilita como ejemplo de una manera de hacerlo. Para utilizar este método se debe estar ejecutando un servidor en el sitio que tenga instalados el rol Servicios de certificado de Active Directory y los servicios de rol Entidad de certificación e Inscripción web de entidad de certificación. Consulte [Servicios de certificados de Active Directory](https://go.microsoft.com/fwlink/p/?LinkId=115018) para más información e instrucciones sobre este rol de Windows Server.  
 
  Para configurar el sitio de Configuration Manager para las comunicaciones SSL necesarias para la administración local de dispositivos móviles, siga estos pasos generales:  
 
@@ -135,7 +135,7 @@ La administración local de dispositivos móviles de System Center Configuration
 
 2.  En Conexiones, vaya a **Sitio web predeterminado**, haga clic con el botón derecho y luego haga clic en **Modificar enlaces...**  
 
-3.  En el cuadro de diálogo Enlaces de sitios, haga clic en **https** y luego en **Editar…**   
+3.  En el cuadro de diálogo Enlaces de sitios, haga clic en **https** y luego en **Editar…**  
 
 4.  En el cuadro de diálogo Modificar enlace de sitio, seleccione el certificado que acaba de inscribir como **certificado SSL**, haga clic en **Aceptar** y, luego, en **Cerrar**.  
 
@@ -160,10 +160,10 @@ La administración local de dispositivos móviles de System Center Configuration
 
 7.  Asegúrese de que el formato seleccionado sea **DER binario codificado X.509 (. CER)** y haga clic en **Siguiente**.  
 
-8.  Para el nombre de archivo, haga clic en **Examinar…**, elija una ubicación en la que guardar el archivo de certificado, asigne un nombre al archivo y haga clic en **Guardar**.  
+8.  Para el nombre de archivo, haga clic en **Examinar…** , elija una ubicación en la que guardar el archivo de certificado, asigne un nombre al archivo y haga clic en **Guardar**.  
 
      Los dispositivos que se van a inscribir deben tener acceso a este archivo para importar el certificado raíz, así que elija una ubicación común a la que puedan acceder la mayoría de los dispositivos, o bien puede guardarlo ahora en una ubicación conveniente (como la unidad C) y moverlo más tarde a una ubicación común.  
 
-     Haga clic en **Siguiente**.  
+     Haga clic en **Next**.  
 
 9. Revise la configuración y haga clic en **Finalizar**.  

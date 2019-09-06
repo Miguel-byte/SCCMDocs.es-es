@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5526afcf826c29ff5cf5d55f730092ce3031a0b
-ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
+ms.openlocfilehash: 3758e7aa996a47b78e1d17864843cf0be70bdd8f
+ms.sourcegitcommit: f679fc1e46c191a1780ae961d155c927fc353dce
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68859805"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176524"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-system-center-configuration-manager"></a>Acerca de los parámetros y propiedades de instalación de cliente en System Center Configuration Manager
 
@@ -394,7 +394,7 @@ Ejemplo: **CCMSetup.exe  CCMALLOWSILENTREBOOT**
 
 ### <a name="ccmfirstcert"></a>CCMFIRSTCERT
 
- Si está establecida en 1, esta propiedad especifica que el cliente debe seleccionar el certificado PKI con el período de validez más largo. Esta configuración puede ser necesaria si usa Protección de acceso a redes con cumplimiento de IPsec.  
+ Si está establecida en 1, esta propiedad especifica que el cliente debe seleccionar el certificado PKI con el período de validez más largo.  
 
  Ejemplo: `CCMSetup.exe /UsePKICert CCMFIRSTCERT=1`  
 

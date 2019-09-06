@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 170ae3c327e61bd9bebfb22eb7ac8be513323a3f
-ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
+ms.openlocfilehash: 9f4674921917bb7d087da52f2c8250ca943597f1
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66716197"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70378889"
 ---
 # <a name="how-to-create-configuration-items-for-windows-81-and-windows-10-devices-managed-without-the-system-center-configuration-manager-client"></a>Cómo crear elementos de configuración para dispositivos de Windows 8.1 y Windows 10 administrados sin el cliente de System Center Configuration Manager
 
@@ -72,7 +72,7 @@ ms.locfileid: "66716197"
 ### <a name="password"></a>Contraseña  
  Esta configuración es solo para dispositivos con Windows 10, y versiones posteriores.  
 
-|Configuración|Detalles|  
+|Parámetro|Detalles|  
 |-------------|-------------|  
 |**Requerir configuración de contraseña en dispositivos**|Se requiere una contraseña en dispositivos compatibles.|  
 |**Longitud de contraseña mínima (caracteres)**|La longitud mínima de la contraseña.|  
@@ -110,7 +110,7 @@ ms.locfileid: "66716197"
 ### <a name="email-management"></a>Administración de correo electrónico  
  Esta configuración es solo para dispositivos con Windows 8.1 y Windows 10.  
 
-|Configuración|Detalles|  
+|Parámetro|Detalles|  
 |-------------|-------------|  
 |**Correo electrónico POP e IMAP**|Permite la conexión con cuentas de correo electrónico que usan los estándares POP e IMAP.|  
 |**Tiempo máximo de conservación de correo electrónico**|Tiempo de conservación de correo electrónico antes de eliminarse del servidor.|  
@@ -125,7 +125,7 @@ ms.locfileid: "66716197"
 ### <a name="store"></a>Tienda  
  Esta configuración es solo para dispositivos con Windows 10, y versiones posteriores.  
 
-|Configuración|Detalles|  
+|Parámetro|Detalles|  
 |-------------|-------------|  
 |**Tienda de aplicaciones**|Permite el acceso a la tienda de aplicaciones en el dispositivo.|  
 |**Escribir una contraseña para obtener acceso a la tienda de aplicaciones**|Los usuarios deben escribir una contraseña para obtener acceso a la tienda de aplicaciones.|  
@@ -134,10 +134,10 @@ ms.locfileid: "66716197"
 |**Usar solo una tienda privada**|Habilite esta opción para permitir que solo los usuarios finales descarguen aplicaciones de su tienda privada.|
 |**Inicio de aplicaciones de la tienda**|Se usa para deshabilitar todas las aplicaciones que se han instalado previamente en el dispositivo, o bien que se han descargado de la Tienda Windows.|
 
-### <a name="browser"></a>Explorador  
+### <a name="browser"></a>Browser  
  Esta configuración es solo para dispositivos con Windows 8.1 y Windows 10.  
 
-|Configuración|Detalles|  
+|Parámetro|Detalles|  
 |-------------|-------------|  
 |**Permitir explorador web**|Permitir el uso del explorador web en el dispositivo.|  
 |**Autorrellenar**|El usuario puede cambiar la configuración de Autocompletar en el explorador.|  
@@ -238,7 +238,7 @@ ms.locfileid: "66716197"
 
 2.  En el cuadro de diálogo **Conexión de red inalámbrica**, especifique la siguiente información sobre la conexión inalámbrica que se aprovisionará en dispositivos móviles:  
 
-|Configuración|Más información|  
+|Parámetro|Más información|  
 |-------------|----------------------|  
 |**Nombre de red (SSID)**|Escribir el nombre de la red Wi-Fi.|  
 |**Conexión de red**|Elija **Internet** o **Trabajo**.|  
@@ -289,7 +289,7 @@ ms.locfileid: "66716197"
 
 ### <a name="system-security"></a>Seguridad del sistema  
 
-|Configuración|Detalles|  
+|Parámetro|Detalles|  
 |-------------|-------------|  
 |**Control de cuentas de usuario**|Habilita o deshabilita el Control de cuentas de usuario de Windows en el dispositivo.|  
 |**Firewall de red**|Habilita o deshabilita el Firewall de Windows.<br /><br /> (Solo Windows 8.1)|  
@@ -322,11 +322,11 @@ ms.locfileid: "66716197"
 En la página **Lista de aplicaciones permitidas o bloqueadas**, especifique la siguiente información:  
 
 
-|        Configuración        |                                                                                                                                                                                                                                                                        Más información                                                                                                                                                                                                                                                                         |
+|        Parámetro        |                                                                                                                                                                                                                                                                        Más información                                                                                                                                                                                                                                                                         |
 |-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Lista de aplicaciones bloqueadas** |                                                                                                                                                                                                                                 Seleccione esta opción si desea especificar una lista de aplicaciones que los usuarios no pueden instalar.                                                                                                                                                                                                                                 |
 | **Lista de aplicaciones permitidas** |                                                                                                                                                                                                             Seleccione esta opción si desea especificar una lista de aplicaciones que los usuarios pueden instalar. Se bloqueará la instalación de las demás aplicaciones.                                                                                                                                                                                                             |
-|        **Agregar**        | Agrega una aplicación a la lista seleccionada. Especifique un nombre de su elección (opcionalmente puede ser el editor de la aplicación) y la dirección URL de la aplicación en la tienda de aplicaciones.<br /><br /> Para especificar la dirección URL, en la Tienda Windows, busque la aplicación que desea usar.<br /><br /> Abra la página de la aplicación y copie la dirección URL en el Portapapeles. Ya puede usarla como dirección URL en una la lista de aplicaciones permitidas o bloqueadas.<br /><br /> **Ejemplo:** Buscar en el almacén para el **Skype** app. La dirección URL que usa es **<http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51>** . |
+|        **Agregar**        | Agrega una aplicación a la lista seleccionada. Especifique un nombre de su elección (opcionalmente puede ser el editor de la aplicación) y la dirección URL de la aplicación en la tienda de aplicaciones.<br /><br /> Para especificar la dirección URL, en la Tienda Windows, busque la aplicación que desea usar.<br /><br /> Abra la página de la aplicación y copie la dirección URL en el Portapapeles. Ya puede usarla como dirección URL en una la lista de aplicaciones permitidas o bloqueadas.<br /><br /> **Ejemplo:** Busque en la tienda la aplicación **Skype** . La dirección URL que usa es **<https://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51>** . |
 |       **Editarar**        |                                                                                                                                                                                                                                                 Permite editar el nombre, el editor y la dirección URL de la aplicación seleccionada.                                                                                                                                                                                                                                                 |
 |      **Quitar**       |                                                                                                                                                                                                                                                             Elimina la aplicación seleccionada de la lista.                                                                                                                                                                                                                                                             |
 |      **Importarar**       |                                                                                                                                                                                                          Importa la lista de las aplicaciones que ha especificado en un archivo de valores separados por comas. Utilice el formato, nombre de la aplicación, editor, dirección URL de la aplicación en el archivo.                                                                                                                                                                                                          |

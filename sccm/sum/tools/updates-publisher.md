@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26ad3be032a3dd8ea21d7eeb6a4755c32d546f38
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: dee1a5a998f6d99678f85e6d5f39e52cb35a2bad
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67158634"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70378728"
 ---
 # <a name="system-center-updates-publisher"></a>Editor de actualizaciones de System Center
 
@@ -34,7 +34,7 @@ Con Updates Publisher, puede:
 Después de publicar actualizaciones en un servidor de actualización, puede usar System Center Configuration Manager para detectar esas actualizaciones e implementarlas en los dispositivos administrados.
 
 > [!TIP]  
-> La versión anterior, [System Center Updates Publisher 2011](http://go.microsoft.com/fwlink/?LinkId=848111), sigue teniendo soporte técnico. Esta versión actualizada conserva la misma funcionalidad, pero admite sistemas operativos adicionales, ofrece nuevas características que simplifican algunas tareas y tiene una interfaz de usuario actualizada.
+> La versión anterior, [System Center Updates Publisher 2011](https://go.microsoft.com/fwlink/?LinkId=848111), sigue teniendo soporte técnico. Esta versión actualizada conserva la misma funcionalidad, pero admite sistemas operativos adicionales, ofrece nuevas características que simplifican algunas tareas y tiene una interfaz de usuario actualizada.
 
 ## <a name="workspaces"></a>Áreas de trabajo
 Al abrir Updates Publisher, se abre de manera predeterminada en el nodo Introducción del *área de trabajo Actualizaciones*.
@@ -58,48 +58,48 @@ La administración de publicaciones incluye publicar actualizaciones en un servi
 
 **Catalogs Workspace** (Área de trabajo Catálogos): use este espacio de trabajo para agregar y [administrar catálogos de actualizaciones de software](/sccm/sum/tools/updates-publisher-catalogs). Esta área de trabajo incluye la importación de actualizaciones de software desde esos catálogos al repositorio de Updates Publisher.
 
-## <a name="whats-new-in-the-system-center-updates-publisher-preview"></a>Novedades de la versión preliminar de System Center Updates Publisher
+## <a name="whats-new-in-the-system-center-updates-publisher-preview"></a>Novedades de la vista previa de System Center Updates Publisher
 
 >[!NOTE] 
->La información de esta sección se aplica solo a la versión preliminar de System Center Updates publisher. Para instalar la versión preliminar, descárguelo desde el [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=58390).
+>La información de esta sección solo se aplica a la versión preliminar de System Center updates Publisher. Para instalar la versión preliminar, descárguela desde el [centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=58390).
 
-Hay un nuevo modo de edición en la versión preliminar de System Center Updates Publisher que le ayudarán a crear sus actualizaciones. Cuando se habilita el modo de creación, un **área de trabajo de las categorías** se agrega a la pantalla Inicio. Un nuevo **detección** botón también se agrega a la **área de trabajo actualizaciones** cuando está habilitado el modo de creación. 
+Hay un nuevo modo de creación en la versión preliminar de System Center Updates Publisher para ayudarle a crear las actualizaciones. Al habilitar el modo de creación, se agrega un **área de trabajo categorías** a la pantalla Inicio. También se agrega un nuevo botón **Detectoid** al **área de trabajo actualizaciones** cuando está habilitado el modo de creación. 
 
-### <a name="to-enable-authoring-mode-in-the-preview"></a>Para habilitar el modo de creación de la versión preliminar
+### <a name="to-enable-authoring-mode-in-the-preview"></a>Para habilitar el modo de creación en la vista previa
 
-1. En la esquina superior izquierda de la consola, haga clic en el **Updates Publisher** **propiedades** pestaña y, a continuación, elija **opciones**.
-1. Vaya a la **Authoring** opciones.
-1. Active la casilla de **habilitar modo de creación**.
+1. En la esquina superior izquierda de la consola, haga clic en la pestaña **propiedades** del **publicador de actualizaciones** y, a continuación, elija **Opciones**.
+1. Vaya a las opciones de **creación** .
+1. Active la casilla **Habilitar el modo de creación**.
 
-![Habilitar modo de creación de Updates Publisher](media/scup-enable-authoring-mode.png)
+![Habilitar el modo de creación para updates Publisher](media/scup-enable-authoring-mode.png)
 
-### <a name="about-the-categories-workspace"></a>El área de trabajo de categorías
+### <a name="about-the-categories-workspace"></a>Acerca del área de trabajo categorías
 
-El área de trabajo de categorías permite a los autores de actualización organizar las actualizaciones que forman un conjunto. Por ejemplo, si es un fabricante OEM, es posible que desea organizar las actualizaciones en función de los modelos o las líneas de productos. Puede definir varias categorías y categorías secundarias pero categorías no grand secundario que están limitadas a dos niveles.
+El área de trabajo categorías permite a los autores de actualizaciones organizar las actualizaciones que pertenecen a la vez. Por ejemplo, si es un OEM, puede que desee organizar las actualizaciones basadas en modelos o líneas de productos. Puede definir varias categorías y categorías secundarias, pero no categorías secundarias generales, ya que está limitado a dos niveles.
 
-![Captura de pantalla del área de trabajo de categorías](media/scup-categories-workspace.png)
+![Captura de pantalla del área de trabajo categorías](media/scup-categories-workspace.png)
 
-### <a name="assign-an-update-to-a-category"></a>Asignar una actualización a una categoría
+### <a name="assign-an-update-to-a-category"></a>Asignación de una actualización a una categoría
 
-Una vez que haya creado la actualización, puede asignarla a una categoría mediante la selección de la actualización, a continuación, haga clic en el **clasificar** botón. También puede haga clic en la actualización y seleccione **clasificar**.
+Una vez que haya creado la actualización, puede asignarla a una categoría; para ello, seleccione la actualización y haga clic en el botón **clasificar** . También puede hacer clic con el botón secundario en la actualización y seleccionar **clasificar**.
 
-![Captura de pantalla de categorización de una actualización](media/scup-categorize-update.png)
-
-
-### <a name="about-detectoids"></a>Acerca de los detectoids
-
-Una vez habilitado el modo de creación, puede crear detectoids para las actualizaciones. Los Detectoids son útiles cuando tiene varias actualizaciones que utilizan la misma regla (o un conjunto de reglas) para determinar la aplicabilidad. En esos casos, podría crear un identificador y asígnela como requisito previo para una actualización. Puede asignar varios detectoids a una actualización creada.
+![Captura de pantalla de la categorización de una actualización](media/scup-categorize-update.png)
 
 
-### <a name="create-a-detectoid"></a>Crear un identificador
+### <a name="about-detectoids"></a>Acerca de detectoids
+
+Una vez habilitado el modo de creación, puede crear detectoids para las actualizaciones. Detectoids son útiles cuando se tienen varias actualizaciones que usan la misma regla (o un conjunto de reglas) para determinar la aplicabilidad. En esos casos, crearía un detectoid y lo asignaría como requisito previo para una actualización. Puede asignar varios detectoids a una actualización creada.
+
+
+### <a name="create-a-detectoid"></a>Creación de un detectoid
 
 1. Abra **Updates Workspace** (Área de trabajo Actualizaciones).
-1. En la cinta de opciones, haga clic en el **detección** botón.
-1. Siga las indicaciones del Asistente para crear su identificador.
+1. En la cinta de opciones, haga clic en el botón **Detectoid** .
+1. Siga las indicaciones del Asistente para crear el detectoid.
 
 
 
-![Actualizar los requisitos previos mediante una detección](media/scup-detectoid-as-prerequisite.png)
+![Actualización de los requisitos previos mediante detectoid](media/scup-detectoid-as-prerequisite.png)
 
 
 ## <a name="next-steps"></a>Pasos siguientes

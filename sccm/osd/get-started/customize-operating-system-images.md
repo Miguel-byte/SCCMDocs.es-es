@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b18c8e780ac5fa43f3fdf6790c80ed6d38e02e28
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: fd7f84e097ddfbc36d3c595a28e0cb31b968ce57
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128745"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70380063"
 ---
 # <a name="customize-operating-system-images-with-system-center-configuration-manager"></a>Personalizar imágenes de sistema operativo con System Center Configuration Manager
 
@@ -96,7 +96,7 @@ Las imágenes de sistema operativo de System Center Configuration Manager son ar
     > [!IMPORTANT]  
     >  En el paso de la secuencia de tareas [Prepare Windows for Capture](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture) (Preparar Windows para la captura) se intenta restablecer la contraseña del administrador local del equipo de referencia en un valor en blanco antes de que se ejecute Sysprep. Si la directiva de seguridad local **La contraseña debe cumplir los requisitos de complejidad** está habilitada, este paso de la secuencia de tareas no restablece la contraseña del administrador. En este escenario, deshabilite esta directiva antes de ejecutar la secuencia de tareas.  
 
-     Para más información acerca de Sysprep, consulte [Introducción a Sysprep (preparación del sistema)](http://go.microsoft.com/fwlink/?LinkId=280286).  
+     Para más información acerca de Sysprep, consulte [Introducción a Sysprep (preparación del sistema)](https://go.microsoft.com/fwlink/?LinkId=280286).  
 
 -   **Herramientas y scripts adecuados necesarios para minimizar escenarios de instalación**  
 

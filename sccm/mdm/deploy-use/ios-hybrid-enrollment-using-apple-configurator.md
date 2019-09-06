@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b07fc7bf1c4a226456506d0131c3d6bad14b1766
-ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
+ms.openlocfilehash: e884b7c5d7ceca7fcb241a5bfef1832e66562d38
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66748232"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70378912"
 ---
 # <a name="ios-hybrid-enrollment-using-apple-configurator-with-configuration-manager"></a>Inscripción híbrida de iOS híbrido con Apple Configurator con Configuration Manager
 
@@ -32,7 +32,7 @@ El siguiente procedimiento está recomendado para dispositivos iOS dedicados que
 
 -   Números de serie del dispositivo: [cómo obtener un número de serie de iOS](https://support.apple.com/en-us/HT204308)  
 
--   Equipo Mac con [Apple Configurator 2.0](http://go.microsoft.com/fwlink/?LinkId=518017)  
+-   Equipo Mac con [Apple Configurator 2.0](https://go.microsoft.com/fwlink/?LinkId=518017)  
 
 -   Cables USB para conectar los dispositivos al equipo Mac  
 
@@ -48,7 +48,7 @@ El siguiente procedimiento está recomendado para dispositivos iOS dedicados que
 
     -   **Afinidad de usuario** : especifica cómo se inscriben los dispositivos. En la mayoría de los escenarios del Asistente de configuración, use **Solicitar afinidad de usuarios**.  
 
-        -   **Solicitar afinidad de usuario**: El dispositivo debe estar afiliado a ningún usuario durante la instalación inicial y, a continuación, se le puede permitir tener acceso a datos de la empresa y el correo electrónico como ese usuario.  
+        -   **Solicitar afinidad de usuario**: El dispositivo debe estar afiliado a un usuario durante la instalación inicial y, a continuación, se le puede permitir el acceso a los datos y al correo electrónico de la empresa como dicho usuario.  
 
         -   **Sin afinidad de usuario**: El dispositivo no está afiliado a un usuario. Utilice esta afiliación para dispositivos que realizan tareas sin tener acceso a datos de usuario local. Las aplicaciones que requieren la afiliación de un usuario no funcionarán.
 
@@ -79,7 +79,7 @@ Para obtener más información, consulte [Predeclare devices with IMEI and iOS s
 
     ```  
 
-     por  
+     with  
 
     ```  
     https://appleconfigurator2.manage.microsoft.com/MDMServiceConfig?id=  
@@ -102,9 +102,9 @@ Para preparar los dispositivos iOS para la inscripción, conecte cada dispositiv
 
 2. En la barra de menús, haga clic en **Apple Configurator 2** > **Preferencias**.  
 
-3. En el panel de preferencias, seleccione **Servers** (Servidores) y haga clic en el símbolo "+" debajo del panel izquierdo para iniciar el asistente del servidor MDM. Haga clic en **Siguiente**.  
+3. En el panel de preferencias, seleccione **Servers** (Servidores) y haga clic en el símbolo "+" debajo del panel izquierdo para iniciar el asistente del servidor MDM. Haga clic en **Next**.  
 
-4. Escriba el **Nombre** y la **URL de inscripción** que ha guardado [antes](#export-the-profile-to-deploy-to-ios-devices). Haga clic en **Siguiente**.  
+4. Escriba el **Nombre** y la **URL de inscripción** que ha guardado [antes](#export-the-profile-to-deploy-to-ios-devices). Haga clic en **Next**.  
 
    > [!NOTE]
    > Si recibe una advertencia sobre los requisitos de perfil de confianza para Apple TV, puede cancelar con seguridad la opción **Trust Profile (Perfil de confianza)** haciendo clic en la "X" de color gris. También de forma segura, puede omitir cualquier advertencia de marcador de certificado.

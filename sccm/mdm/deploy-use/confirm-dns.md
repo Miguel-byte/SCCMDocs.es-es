@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e80a001153012763f56686df66ab7c6fcbf9b88
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: a276ab19267d97526d916fb246facd75314006dd
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288209"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379624"
 ---
 # <a name="confirm-domain-name-requirements-with-system-center-configuration-manager-and-microsoft-intune"></a>Confirmación de los requisitos de nombre de dominio con System Center Configuration Manager y Microsoft Intune
 
@@ -34,16 +34,16 @@ Si es necesario, siga estos pasos para satisfacer todas las dependencias externa
     Al configurar el inicio de sesión único, los usuarios pueden iniciar sesión con sus credenciales corporativas para obtener acceso a los servicios de Intune.
 
     Para obtener más información, consulte los temas siguientes:
-   -   [Preparar el inicio de sesión único](http://go.microsoft.com/fwlink/?LinkID=271124)
-   -   [Planear e implementar AD FS 2.0 para su uso con el inicio de sesión único](http://go.microsoft.com/fwlink/?LinkID=271125)
+   -   [Preparar el inicio de sesión único](https://go.microsoft.com/fwlink/?LinkID=271124)
+   -   [Planear e implementar AD FS 2.0 para su uso con el inicio de sesión único](https://go.microsoft.com/fwlink/?LinkID=271125)
 
 3. Implementar y configurar la sincronización de directorios.
 
     La sincronización de directorios permite rellenar Intune con cuentas de usuario sincronizadas. Las cuentas de usuario y los grupos de seguridad sincronizados se agregan a Intune. Los errores al habilitar la sincronización de directorios es una causa común por la que los dispositivos no pueden inscribirse al configurar la MDM de Configuration Manager con Microsoft Intune.
 
-    Para obtener más información, consulte [Integración de directorios](http://go.microsoft.com/fwlink/?LinkID=271120) en la biblioteca de documentación de Active Directory.
+    Para obtener más información, consulte [Integración de directorios](https://go.microsoft.com/fwlink/?LinkID=271120) en la biblioteca de documentación de Active Directory.
 
-4. Opcional, pero no recomendado: Si no usa servicios de federación de Active Directory, restablecer las contraseñas de Microsoft Online de los usuarios.
+4. Opcional, no recomendado: Si no usa Servicios de federación de Active Directory (AD FS), restablezca las contraseñas de Microsoft online de los usuarios.
 
     Si no utiliza AD FS, debe establecer una contraseña de Microsoft Online para cada usuario.
 

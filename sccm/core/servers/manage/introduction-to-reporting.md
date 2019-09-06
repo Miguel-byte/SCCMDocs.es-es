@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 760b159114796922e2c8707e3b7f14484591f7a2
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: c42b8a97c5ceb5bdff64def06f18275585c51dc6
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56141500"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379767"
 ---
 # <a name="introduction-to-reporting-in-system-center-configuration-manager"></a>Introducción a los informes en System Center Configuration Manager
 
@@ -39,7 +39,7 @@ Los informes de System Center Configuration Manager proporcionan un conjunto de 
 
 - Exporta informes que pueden seleccionar los usuarios en una gran variedad de los formatos más usados.  
 
-  Para obtener más información acerca de Reporting Services, consulte [SQL Server Reporting Services](http://go.microsoft.com/fwlink/p/?LinkID=212032) en Libros en pantalla de SQL Server 2008.  
+  Para obtener más información acerca de Reporting Services, consulte [SQL Server Reporting Services](https://go.microsoft.com/fwlink/p/?LinkID=212032) en Libros en pantalla de SQL Server 2008.  
 
 ##  <a name="BKMK_ReportingServicesPoint"></a> Punto de servicios de informes  
  El punto de servicios de informes es un rol de sistema de sitio que está instalado en un servidor que ejecuta Microsoft SQL Server Reporting Services. El punto de servicios de informes copia las definiciones de informes de Configuration Manager en Reporting Services, crea carpetas de informes basadas en categorías de informes y establece una directiva de seguridad sobre los informes y las carpetas de informes que se basa en los permisos basados en roles para los usuarios administrativos de Configuration Manager. En un intervalo de 10 minutos, el punto de servicios de informes se conecta con Reporting Services para volver a aplicar la directiva de seguridad si se cambió, por ejemplo, mediante el Administrador de informes. Para obtener más información acerca de cómo planear e instalar un punto de servicios de informes, consulte la documentación siguiente:  

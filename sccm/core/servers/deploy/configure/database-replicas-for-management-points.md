@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3f03b5b01b443f1611d514e9a7473a93c8e0e5a0
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: c7c2951ad07c3ac0d2ac0658fecf47f7231c62a7
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499556"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70377921"
 ---
 # <a name="database-replicas-for-management-points-for-system-center-configuration-manager"></a>Réplicas de bases de datos para puntos de administración de System Center Configuration Manager
 
@@ -58,7 +58,7 @@ Los sitios primarios de System Center Configuration Manager pueden usar una rép
 
     -   La base de datos del sitio debe **publicar** la réplica de base de datos y cada uno de los servidores remotos de réplica de la base de datos deben **suscribirse** a los datos publicados.  
 
-    -   Tanto el servidor de SQL Server que hospeda la base de datos del sitio como el que hospeda una réplica de la base de datos deben configurarse para admitir un **Tamaño de replicación de texto máximo** de 2 GB. Para obtener un ejemplo acerca de cómo configurarlo para SQL Server 2012, consulte [Establecer la opción de configuración del servidor Tamaño de replicación de texto máximo](http://go.microsoft.com/fwlink/p/?LinkId=273960).  
+    -   Tanto el servidor de SQL Server que hospeda la base de datos del sitio como el que hospeda una réplica de la base de datos deben configurarse para admitir un **Tamaño de replicación de texto máximo** de 2 GB. Para obtener un ejemplo acerca de cómo configurarlo para SQL Server 2012, consulte [Establecer la opción de configuración del servidor Tamaño de replicación de texto máximo](https://go.microsoft.com/fwlink/p/?LinkId=273960).  
 
 -   **Certificado autofirmado**: para configurar una réplica de base de datos, debe crear un certificado autofirmado en el servidor de réplica de base de datos y hacer que este certificado esté disponible para todos los puntos de administración que van a usar ese servidor de réplica de base de datos.  
 
@@ -173,7 +173,7 @@ Utilice el procedimiento siguiente como ejemplo de cómo configurar un servidor 
         -   Si el Agente SQL Server se ejecuta mediante una cuenta diferente, seleccione **Ejecutar en la siguiente cuenta de Windows**y después configure dicha cuenta. Puede especificar una cuenta de Windows o una cuenta de SQL Server.  
 
         > [!IMPORTANT]  
-        >  Debe conceder permiso a la cuenta que ejecuta el Agente de distribución en el publicador como suscripción de extracción. Para obtener información acerca de la configuración de estos permisos, consulte [Seguridad del Agente de distribución](http://go.microsoft.com/fwlink/p/?LinkId=238463) en la biblioteca TechNet de SQL Server.  
+        >  Debe conceder permiso a la cuenta que ejecuta el Agente de distribución en el publicador como suscripción de extracción. Para obtener información acerca de la configuración de estos permisos, consulte [Seguridad del Agente de distribución](https://go.microsoft.com/fwlink/p/?LinkId=238463) en la biblioteca TechNet de SQL Server.  
 
       - Para **Conectarse al distribuidor**, seleccione **Mediante la suplantación de la cuenta de proceso**.  
 
@@ -223,11 +223,11 @@ Utilice el procedimiento siguiente como ejemplo de cómo configurar un servidor 
 
 Además de configurar el punto de administración para que utilice el servidor de réplica de base de datos, debe habilitar **Autenticación de Windows** en **IIS** en el punto de administración:  
 
-1.  Abra el **Administrador de Internet Information Services (IIS)**.  
+1.  Abra el **Administrador de Internet Information Services (IIS)** .  
 
 2.  Seleccione el sitio web utilizado por el punto de administración y abra **Autenticación**.  
 
-3.  Establezca **Autenticación de Windows** en **Habilitado**y, a continuación, cierre **Administración de Internet Information Services (IIS)**.  
+3.  Establezca **Autenticación de Windows** en **Habilitado**y, a continuación, cierre **Administración de Internet Information Services (IIS)** .  
 
 ###  <a name="BKMK_DBReplica_Cert"></a> Paso 4: configurar un certificado autofirmado para el servidor de réplica de base de datos  
  Debe crear un certificado autofirmado en el servidor de réplica de base de datos y hacer que este certificado esté disponible para todos los puntos de administración que van a utilizar ese servidor de réplica de base de datos.  
@@ -392,7 +392,7 @@ Además de configurar el punto de administración para que utilice el servidor d
 
     5.  En el cuadro de diálogo **Agregar o quitar complementos** , haga clic en **Aceptar**.  
 
-    6.  En la consola, expanda **Certificados (equipo local)**, expanda **Personal**y, a continuación, seleccione **Certificados**.  
+    6.  En la consola, expanda **Certificados (equipo local)** , expanda **Personal**y, a continuación, seleccione **Certificados**.  
 
     7.  Haga clic con el botón secundario en el certificado con el nombre descriptivo **ConfigMgr SQL Server Identification Certificate**, haga clic en **Todas las tareas**y, a continuación, seleccione **Exportar**.  
 
@@ -402,7 +402,7 @@ Además de configurar el punto de administración para que utilice el servidor d
 
     1.  Repita que los pasos anteriores del 1.a al 1.e para configurar el MMC del complemento **Certificado** en el equipo de punto de administración.  
 
-    2.  En la consola, expanda **Certificados (equipo local)**, expanda **Personas de confianza**, haga clic con el botón secundario en **Certificados**, seleccione **Todas las tareas**y, a continuación, seleccione **Importar** para iniciar el **Asistente para importación de certificados**.  
+    2.  En la consola, expanda **Certificados (equipo local)** , expanda **Personas de confianza**, haga clic con el botón secundario en **Certificados**, seleccione **Todas las tareas**y, a continuación, seleccione **Importar** para iniciar el **Asistente para importación de certificados**.  
 
     3.  En la página **Archivo para importar** , seleccione el certificado que guardó en el paso 1.h y, a continuación, haga clic en **Siguiente**.  
 
@@ -429,7 +429,7 @@ Para admitir la notificación de cliente con una réplica de base de datos para 
     Ejecute la consulta siguiente para configurar los detalles necesarios en el servidor de réplica de base de datos y para exportar el certificado para el servidor de réplica de base de datos: **EXEC sp_BgbConfigSSBForReplicaDB '&lt;FQDN de SQL Server de réplica\>', '&lt;nombre de base de datos de réplica\>', '&lt;ruta de archivo de copia de seguridad de certificado\>'**  
 
    > [!NOTE]  
-   >  Cuando el servidor de réplica de base de datos no está en la instancia predeterminada de SQL Server, en este paso debe especificar el nombre de instancia junto con el nombre de la base de datos de réplica. Para ello, reemplace **&lt;nombre de base de datos de réplica\>** por **&lt;nombre de instancia\\nombre de base de datos de réplica\>**.  
+   >  Cuando el servidor de réplica de base de datos no está en la instancia predeterminada de SQL Server, en este paso debe especificar el nombre de instancia junto con el nombre de la base de datos de réplica. Para ello, reemplace **&lt;nombre de base de datos de réplica\>** por **&lt;nombre de instancia\\nombre de base de datos de réplica\>** .  
 
     Después de exportar el certificado del servidor de réplica de base de datos, coloque una copia del certificado en el servidor de base de datos de sitios primarios.  
 
@@ -438,7 +438,7 @@ Para admitir la notificación de cliente con una réplica de base de datos para 
     Ejecute la siguiente consulta para importar el certificado del servidor de réplica de base de datos y especifique los detalles necesarios: **EXEC sp_BgbConfigSSBForRemoteService 'REPLICA', '&lt;puerto de SQL Service Broker\>', '&lt;ruta de archivos de certificado\>', '&lt;FQDN de SQL Server de réplica\>', '&lt;nombre de base de datos de réplica\>'**  
 
    > [!NOTE]  
-   >  Cuando el servidor de réplica de base de datos no está en la instancia predeterminada de SQL Server, en este paso debe especificar el nombre de instancia junto con el nombre de la base de datos de réplica. Para ello, reemplace **&lt;nombre de base de datos de réplica\>** por **\nombre de instancia\\nombre de base de datos de réplica\>**.  
+   >  Cuando el servidor de réplica de base de datos no está en la instancia predeterminada de SQL Server, en este paso debe especificar el nombre de instancia junto con el nombre de la base de datos de réplica. Para ello, reemplace **&lt;nombre de base de datos de réplica\>** por **\nombre de instancia\\nombre de base de datos de réplica\>** .  
 
 4. A continuación, en el servidor de base de datos de sitio, ejecute el comando siguiente para exportar el certificado para el servidor de base de datos del sitio: **EXEC sp_BgbCreateAndBackupSQLCert '&lt;ruta de archivo de copia de seguridad de certificado\>'**  
 
@@ -458,7 +458,7 @@ Para admitir la notificación de cliente con una réplica de base de datos para 
 -   En cada réplica de base de datos posterior, use este script para configurar y actualizar el nombre descriptivo del certificado.  Para ello, modifique la línea **$enrollment.CertificateFriendlyName = "ConfigMgr SQL Server Identification Certificate"** y sustituya **ConfigMgr SQL Server Identification Certificate** por un nuevo nombre, como por ejemplo,  **ConfigMgr SQL Server Identification Certificate1**.  
 
 ##  <a name="BKMK_DBReplicaOps"></a> Administrar configuraciones de réplica de base de datos  
- Al utilizar una réplica de base de datos en un sitio, use la información de las siguientes secciones para complementar el proceso para desinstalar una réplica de base de datos, desinstalar un sitio que utiliza una réplica de base de datos o mover la base de datos de sitio a una instalación nueva de SQL Server. Si utiliza la información de las siguientes secciones para eliminar publicaciones, utilice la guía para eliminar la replicación transaccional de la versión SQL Server utilizada para la réplica de base de datos. Por ejemplo, si usa SQL Server 2008 R2, vea [Cómo: eliminar una publicación (programación de la replicación con Transact-SQL)](http://go.microsoft.com/fwlink/p/?LinkId=273934).  
+ Al utilizar una réplica de base de datos en un sitio, use la información de las siguientes secciones para complementar el proceso para desinstalar una réplica de base de datos, desinstalar un sitio que utiliza una réplica de base de datos o mover la base de datos de sitio a una instalación nueva de SQL Server. Si utiliza la información de las siguientes secciones para eliminar publicaciones, utilice la guía para eliminar la replicación transaccional de la versión SQL Server utilizada para la réplica de base de datos. Por ejemplo, si usa SQL Server 2008 R2, vea [Cómo: eliminar una publicación (programación de la replicación con Transact-SQL)](https://go.microsoft.com/fwlink/p/?LinkId=273934).  
 
 > [!NOTE]  
 >  Después de restaurar una base de datos de sitio configurada para réplicas de base de datos, para poder utilizar las réplicas de base de datos debe volver a configurar cada réplica de base de datos y volver a crear tanto las publicaciones como las suscripciones.  

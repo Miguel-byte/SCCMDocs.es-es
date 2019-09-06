@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b586fb4eded2143e42887236d1c52b0a8bae275
-ms.sourcegitcommit: de3c86077bbf91b793e94e1f60814df18da11bab
+ms.openlocfilehash: 107eb6bfa7f373a0ad13dc687fd373dfcae22d2d
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67726250"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379369"
 ---
 # <a name="set-up-your-system-center-configuration-manager-lab"></a>Configurar el laboratorio de System Center Configuration Manager
 
@@ -35,7 +35,7 @@ Las instrucciones de este tema le permitirán configurar un laboratorio para eva
 
 -   **El entorno del laboratorio utiliza SQL Server 2012 SP2** para la base de datos.  
 
-     Puede descargar una versión de evaluación de SQL Server 2012 desde el [Centro de descarga de Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=29066).  
+     Puede descargar una versión de evaluación de SQL Server 2012 desde el [Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=29066).  
 
      SQL Server tiene [versiones compatibles de SQL Server](../../core/plan-design/configs/support-for-sql-server-versions.md#bkmk_SQLVersions) que deben cumplirse para usar con System Center Configuration Manager.  
 
@@ -101,7 +101,7 @@ Los pasos siguientes necesarios para habilitar que los clientes de Configuration
 
 1.  Ejecute el **Editor ADSI**y conéctese al dominio en que reside el servidor de sitio.  
 
-2.  Expanda **Dominio&lt;nombre de dominio completo del equipo\>**, expanda **<nombre distintivo\>**, haga clic con el botón derecho en **CN=System**, haga clic en **Nuevo** y después haga clic en **Objeto**.  
+2.  Expanda **Dominio&lt;nombre de dominio completo del equipo\>** , expanda **<nombre distintivo\>** , haga clic con el botón derecho en **CN=System**, haga clic en **Nuevo** y después haga clic en **Objeto**.  
 
 3.  En el cuadro de diálogo **Crear objeto** , seleccione **Contenedor**y, a continuación, haga clic en **Siguiente**.  
 
@@ -194,7 +194,7 @@ Los pasos siguientes necesarios para habilitar que los clientes de Configuration
 
 9. Haga clic en **Instalar** y compruebe que la instalación se completó correctamente en el panel **Notificaciones** del **Administrador de servidores**.  
 
-10. Cuando se complete la instalación base de. NET, vaya al [Centro de descarga de Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=42643) para obtener el instalador web de .NET Framework 4.5.2. Haga clic en el botón **Descargar** y después en **Ejecutar** para iniciar el programa de instalación. Detectará e instalará automáticamente los componentes necesarios en el idioma seleccionado.  
+10. Cuando se complete la instalación base de. NET, vaya al [Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=42643) para obtener el instalador web de .NET Framework 4.5.2. Haga clic en el botón **Descargar** y después en **Ejecutar** para iniciar el programa de instalación. Detectará e instalará automáticamente los componentes necesarios en el idioma seleccionado.  
 
 Para obtener información adicional, consulte los artículos siguientes de por qué son necesarios estas versiones de .NET Framework:  
 

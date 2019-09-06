@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2356547d01df346b8b5db090ea8690377c8d0dc8
-ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
+ms.openlocfilehash: 862505e7ea1ad1e59b0bbf7ace07bc07d326a83d
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67551028"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379873"
 ---
 # <a name="create-queries-in-system-center-configuration-manager"></a>Creación de consultas en System Center Configuration Manager
 
@@ -50,9 +50,9 @@ En este artículo se describe cómo crear e importar consultas en System Center
     > [!TIP]  
     > Puede usar la siguiente documentación de referencia para que le ayude a construir sus propias consultas WQL:  
     >   
-    > -   [WQL (SQL para WMI)](http://go.microsoft.com/fwlink/p/?LinkId=256653)  
-    > -   [Cláusula WHERE](http://go.microsoft.com/fwlink/p/?LinkId=256654)  
-    > -   [Operadores WQL](http://go.microsoft.com/fwlink/p/?LinkId=256655)  
+    > -   [WQL (SQL para WMI)](https://go.microsoft.com/fwlink/p/?LinkId=256653)  
+    > -   [Cláusula WHERE](https://go.microsoft.com/fwlink/p/?LinkId=256654)  
+    > -   [Operadores WQL](https://go.microsoft.com/fwlink/p/?LinkId=256655)  
 
 8.  En la pestaña **Criterios** del cuadro de diálogo **Propiedades de instrucción** de &lt;nombre de consulta\>, especifique los criterios que se usan para refinar los resultados de la consulta. Por ejemplo, podría devolver solo los recursos que tienen un código de sitio de **XYZ**. Puede configurar varios criterios para una consulta.  
 

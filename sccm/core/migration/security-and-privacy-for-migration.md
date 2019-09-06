@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 277ed98ee4c77acda809affcdc61c56f0eb4c636
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: fdfbd5ae0e72cf258e92e9504a955f39e6ced52b
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56126035"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379291"
 ---
 # <a name="security-and-privacy-for-migration-to-system-center-configuration-manager"></a>Seguridad y privacidad de la migración a System Center Configuration Manager
 
@@ -49,7 +49,7 @@ Al migrar datos desde un sitio de origen a un sitio de destino, perderá cualqui
 
  Para obtener más información acerca de la información de seguridad y privacidad, consulte uno de los siguientes temas:  
 
--   Para obtener más información sobre la información de privacidad de Configuration Manager 2007, consulte [Security and Privacy for Configuration Manager 2007](http://go.microsoft.com/fwlink/p/?LinkId=216450) (Seguridad y privacidad para Configuration Manager 2007) en la biblioteca de documentación de Configuration Manager 2007.  
+-   Para obtener más información sobre la información de privacidad de Configuration Manager 2007, consulte [Security and Privacy for Configuration Manager 2007](https://go.microsoft.com/fwlink/p/?LinkId=216450) (Seguridad y privacidad para Configuration Manager 2007) en la biblioteca de documentación de Configuration Manager 2007.  
 
 -   Para obtener más información sobre la información de privacidad de System Center 2012 Configuration Manager, consulte [Seguridad y privacidad en System Center 2012 Configuration Manager](https://technet.microsoft.com/library/gg682033.aspx) en la biblioteca de documentación de System Center 2012 Configuration Manager.  
 

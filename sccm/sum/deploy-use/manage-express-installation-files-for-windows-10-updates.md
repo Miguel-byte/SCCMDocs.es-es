@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b8d8af88-e8ac-4deb-921b-975e2d2afd80
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 503163fda1cae9802fe4ebdceabb9fd4424a35bb
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 5a7bf171804922399f21551e9c8854883de9cf78
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500183"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379951"
 ---
 # <a name="manage-express-installation-files-for-windows-10-updates"></a>Administración de archivos de instalación rápida para actualizaciones de Windows 10
 
@@ -26,7 +26,7 @@ Para obtener información sobre cómo usar Configuration Manager para administra
 
 
 > [!IMPORTANT]  
-> La compatibilidad con el cliente del sistema operativo está disponible en la versión 1607 de Windows 10, con una actualización del Agente de Windows Update. Esta actualización se incluye con las actualizaciones publicadas el 11 de abril de 2017. Para obtener más información sobre estas actualizaciones, vea el [artículo de soporte técnico 4015217](http://support.microsoft.com/kb/4015217). Las actualizaciones futuras se benefician de la instalación rápida para descargas más pequeñas. Las versiones anteriores de Windows 10 y la versión 1607 de Windows 10 sin esta actualización no admiten los archivos de instalación rápida.  
+> La compatibilidad con el cliente del sistema operativo está disponible en la versión 1607 de Windows 10, con una actualización del Agente de Windows Update. Esta actualización se incluye con las actualizaciones publicadas el 11 de abril de 2017. Para obtener más información sobre estas actualizaciones, vea el [artículo de soporte técnico 4015217](https://support.microsoft.com/kb/4015217). Las actualizaciones futuras se benefician de la instalación rápida para descargas más pequeñas. Las versiones anteriores de Windows 10 y la versión 1607 de Windows 10 sin esta actualización no admiten los archivos de instalación rápida.  
 
 
 ### <a name="enable-the-site-to-download-express-installation-files-for-windows-10-updates"></a>Habilitar el sitio para descargar archivos de instalación rápida para las actualizaciones de Windows 10

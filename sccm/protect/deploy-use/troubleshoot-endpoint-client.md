@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4a8f1ca1484df0480a7923a8d3de64c1670aec6d
-ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
+ms.openlocfilehash: 1e452d515e586b688001a0cfd1fb9bf0ae837589
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66748194"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70380185"
 ---
 # <a name="troubleshooting-windows-defender-or-endpoint-protection-client"></a>Solución de problemas del cliente de Windows Defender o Endpoint Protection
 
@@ -96,7 +96,7 @@ Si tiene problemas con Windows Defender o Endpoint Protection, póngase en conta
 
 2.  Si el mensaje de error recibido contiene el código 0x80072f8f, el problema se debe probablemente a una fecha incorrecta o al valor de tiempo en el equipo.  
 
-3.  Para restablecer el valor de fecha y hora del equipo, siga los pasos de [Fix broken desktop shortcuts and common system maintenance tasks](http://go.microsoft.com/fwlink/?LinkId=155579) (Corregir accesos directos de escritorio rotos y tareas comunes de mantenimiento del sistema) (http://go.microsoft.com/fwlink/?LinkId=155579).  
+3.  Para restablecer el valor de fecha y hora del equipo, siga los pasos de [Fix broken desktop shortcuts and common system maintenance tasks](https://go.microsoft.com/fwlink/?LinkId=155579) (Corregir accesos directos de escritorio rotos y tareas comunes de mantenimiento del sistema) (https://go.microsoft.com/fwlink/?LinkId=155579).  
 
 ### <a name="step-4-rename-the-software-distribution-folder-on-your-computer"></a>Paso 4: cambiar el nombre de la carpeta SoftwareDistribution en el equipo  
 

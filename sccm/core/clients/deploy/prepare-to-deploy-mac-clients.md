@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9ead2348e96856d006c8041705c4b4e30c145e9
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 3718661af1bae7dbf0984e29d95736b9f86104dc
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286812"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70378364"
 ---
 # <a name="prepare-to-deploy-client-software-to-macs"></a>Preparativos para la implementación de software cliente en Mac
 
@@ -28,7 +28,7 @@ Siga estos pasos para asegurarse de que está listo para [implementar el cliente
 
 ## <a name="mac-prerequisites"></a>Requisitos previos de Mac
 
-El paquete de instalación del cliente Mac no se suministra con los medios de Configuration Manager. Descargue los **clientes para sistemas operativos adicionales** del [Centro de descarga de Microsoft](http://go.microsoft.com/fwlink/?LinkID=525184).  
+El paquete de instalación del cliente Mac no se suministra con los medios de Configuration Manager. Descargue los **clientes para sistemas operativos adicionales** del [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/?LinkID=525184).  
 
 Para obtener una lista de las versiones compatibles, vea [Sistemas operativos compatibles con clientes y dispositivos](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#mac-computers).
 

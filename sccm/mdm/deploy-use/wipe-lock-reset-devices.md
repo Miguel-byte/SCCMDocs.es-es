@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0a50dd4df66292837cd7a3667a0790c04ebddb9a
-ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
+ms.openlocfilehash: 358a69af0290cbe7359e07b165ed7f1e805e4db5
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67516027"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70380356"
 ---
 # <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-by-using-configuration-manager"></a>Protección de datos mediante borrado remoto, bloqueo o restablecimiento de código de acceso con Configuration Manager
 
@@ -47,7 +47,7 @@ Emitir una **eliminación de datos completa** a un dispositivo para restaurar el
 > Solo puede realizar un borrado completo en dispositivos propiedad de la empresa.
 
 > [!NOTE]
-> La eliminación en dispositivos de Windows 10 en versiones anteriores a la versión 1511 con menos de 4 GB de RAM puede provocar que el dispositivo no responda. [Obtenga más información](https://technet.microsoft.com/library/mt592024.aspx#full-wipe-disables-windows-10-devices-with-less-than-4-gb-ram).
+> La eliminación en dispositivos de Windows 10 en versiones anteriores a la versión 1511 con menos de 4 GB de RAM puede provocar que el dispositivo no responda. [Más información](https://technet.microsoft.com/library/mt592024.aspx#full-wipe-disables-windows-10-devices-with-less-than-4-gb-ram).
 
 #### <a name="to-initiate-a-remote-wipe-from-the-configuration-manager-console"></a>Para iniciar un borrado remoto desde la consola de Configuration Manager  
 
@@ -70,7 +70,7 @@ Emitir una **eliminación selectiva** a un dispositivo para quitar solo los dato
 |Aplicaciones y datos asociados de la empresa que se instalaron mediante Configuration Manager e Intune|Las aplicaciones se desinstalarán. Se quitarán los datos de la aplicación de empresa.|  
 |Perfiles de VPN y Wi-Fi|Quitado.|  
 |Certificados|Quitado y revocado.|  
-|Configuración|Quitado, excepto: **Permitir itinerancia de voz**, **Permitir itinerancia de datos**, y **permitir la sincronización automática durante la itinerancia**.|  
+|Configuración|Quitado, excepto: **Permitir**itinerancia de voz, **permitir itinerancia de datos**y **permitir la sincronización automática en itinerancia**.|  
 |Agente de administración|Se quitará el perfil de administración.|  
 |Perfiles de correo electrónico|Para los perfiles de correo electrónico configurados mediante Intune, se quitan la cuenta de correo electrónico y el correo electrónico.|  
 
@@ -164,7 +164,7 @@ Los datos y las aplicaciones que son compatibles actualmente con el borrado sele
 
 - Carpetas de trabajo.
 
-- Archivos y carpetas cifrados con EFS. Para obtener más información, consulte las [prácticas recomendadas para el sistema de cifrado de archivos](http://support.microsoft.com/kb/223316).  
+- Archivos y carpetas cifrados con EFS. Para obtener más información, consulte las [prácticas recomendadas para el sistema de cifrado de archivos](https://support.microsoft.com/kb/223316).  
 
 
 ### <a name="best-practices-for-selective-wipe"></a>Procedimientos recomendados para el borrado selectivo  
@@ -191,7 +191,7 @@ Si un usuario olvida su contraseña, puede ayudarle quitando la contraseña de u
 | Android for Work                      | No compatible.                                                                               |
 | PC Windows 10                        | No compatible.                                                                               |
 | Windows 10 Mobile                     | Compatible (excepto los dispositivos unidos a Azure AD).  |
-| Windows Phone 8 y Windows Phone 8.1 | Compatible.                                                                                   |
+| Windows Phone 8 y Windows Phone 8.1 | Se admite.                                                                                   |
 | Windows RT 8.1                        | No compatible.                                                                               |
 | PC Windows 8.1                       | No compatible.                                                                               |
 
@@ -222,10 +222,10 @@ Si un usuario pierde su dispositivo, es posible bloquearlo de forma remota. La t
 
 |Plataforma|Bloqueo remoto|  
 |--------------|-----------------|  
-|iOS|Compatible.|  
-|Android|Compatible.|  
+|iOS|Se admite.|  
+|Android|Se admite.|  
 |Windows 10|No se admite en este momento.|  
-|Windows Phone 8 y Windows Phone 8.1|Compatible.|  
+|Windows Phone 8 y Windows Phone 8.1|Se admite.|  
 |Windows RT 8.1 |Compatible si el usuario actual del dispositivo es el mismo usuario que inscribió el dispositivo.|  
 |Windows 8.1|Compatible si el usuario actual del dispositivo es el mismo usuario que inscribió el dispositivo.|  
 

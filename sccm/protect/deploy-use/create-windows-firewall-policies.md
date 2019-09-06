@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d71ea7cf51d2657cea59ae21f7aa120fe11d191c
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 9b42e8f06cfc5dffb04854f2296837f921eb86c5
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65494558"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70380265"
 ---
 # <a name="create-and-deploy-windows-firewall-policies-for-endpoint-protection-in-system-center-configuration-manager"></a>Crear e implementar directivas de Firewall de Windows para Endpoint Protection en System Center Configuration Manager
 
@@ -41,7 +41,7 @@ Las directivas de firewall de Endpoint Protection en System Center Configuration
 5.  En la página **Configuración de perfil** del asistente, especifique la siguiente configuración para cada perfil de red:  
 
     > [!IMPORTANT]  
-    >  Si quiere implementar directivas de Firewall de Windows en equipos que ejecutan Windows Server 2008 y Windows Vista Service Pack 1, primero debe instalar la [revisión KB971800](http://go.microsoft.com/fwlink/p/?LinkId=231239) en estos equipos.  
+    >  Si quiere implementar directivas de Firewall de Windows en equipos que ejecutan Windows Server 2008 y Windows Vista Service Pack 1, primero debe instalar la [revisión KB971800](https://go.microsoft.com/fwlink/p/?LinkId=231239) en estos equipos.  
 
     > [!NOTE]  
     >  Para más información acerca de los perfiles de red, consulte la documentación de Windows.  

@@ -5,18 +5,18 @@ description: Es imprescindible planear la infraestructura de punto de actualizac
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 08/20/2019
+ms.date: 09/04/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 03aa63ccf8fac5c84a1a32e420434b8cefbb6dd6
-ms.sourcegitcommit: 18e88352860dcaf938dbbe1e8694b658e1bfd8ac
+ms.openlocfilehash: f6b2f0e98527ef04a0bdeec8b2efb87f6ff86b23
+ms.sourcegitcommit: b28a97e22a9a56c5ce3367c750ea2bb4d50449c3
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69584660"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70243724"
 ---
 # <a name="plan-for-software-updates-in-configuration-manager"></a>Planear actualizaciones de software en Configuration Manager
 
@@ -240,6 +240,9 @@ Para obtener más información acerca de cómo instalar WSUS en Windows Server, 
 
 Cuando instale más de un punto de actualización de software en un sitio primario, utilice la misma base de datos de WSUS para cada punto de actualización de software del mismo bosque de Active Directory. Compartir la misma base de datos mejora el rendimiento cuando los clientes cambian a un nuevo punto de actualización de software. Para obtener más información, vea [Usar una base de datos WSUS compartida para los puntos de actualización de software](/sccm/sum/plan-design/software-updates-best-practices#bkmk_shared-susdb).  
 
+#### <a name="configuring-the-wsus-content-directory-path"></a>Configuración de la ruta de acceso al directorio de contenido de WSUS
+
+Al instalar WSUS, deberá proporcionar una ruta de acceso al directorio de contenido. El directorio de contenido de WSUS se usa principalmente para almacenar los archivos de los términos de licencia del software de Microsoft necesarios para los clientes durante el examen. La Configuration Manager el directorio de contenido de WSUS no debe solaparse con el directorio de origen de contenido para los paquetes de implementación de software Configuration Manager. Al superponer el directorio de contenido de WSUS y el origen del paquete de Configuration Manager, se quitarán los archivos incorrectos del directorio de contenido de WSUS.
 
 ####  <a name="BKMK_CustomWebSite"></a> Configurar WSUS para usar un sitio web personalizado  
 Al instalar WSUS, tiene la opción de utilizar el sitio web de IIS predeterminado existente o crear un sitio web de WSUS personalizado. Cree un sitio web personalizado para WSUS para que IIS hospede los servicios WSUS en un sitio web virtual dedicado. En caso contrario, comparte el mismo sitio web que usan otros sistemas de sitio o aplicaciones de Configuration Manager. Esta configuración es especialmente necesaria cuando se instala el rol de punto de actualización de software en el servidor de sitio. Cuando se ejecuta WSUS en Windows Server 2012 o posterior, WSUS se configura de forma predeterminada para usar el puerto 8530 para HTTP y el puerto 8531 para HTTPS. Especifique estos puertos al crear el punto de actualización de software en un sitio.  

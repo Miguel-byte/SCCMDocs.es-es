@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78791648d2ee69dc4eaf0d0869a87cb584f287d7
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 20c701bb5f00b8a109044913291597f27c2a9e29
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499158"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379788"
 ---
 # <a name="websites-for-site-system-servers-in-system-center-configuration-manager"></a>Websites para servidores de sistema de sitio en System Center Configuration Manager
 
@@ -48,9 +48,9 @@ Varios roles de sistema de sitio de Configuration Manager requieren Microsoft In
 
 -   Configure el sitio web personalizado para que responda al mismo puerto configurado para la comunicación de cliente de Configuration Manager (puerto de solicitud de cliente).  
 
--   Por cada sitio web personalizado o predeterminado que use una carpeta personalizada, coloque una copia del tipo de documento predeterminado que use en la carpeta raíz que hospeda el sitio web. Por ejemplo, en un equipo con Windows Server 2008 R2 con las configuraciones predeterminadas, **iisstart.htm** es uno de los distintos tipos de documentos predeterminados. Encontrará este archivo en el directorio raíz del sitio web predeterminado. Coloque una copia de este archivo (o una copia del tipo de documento predeterminado que use) en la carpeta raíz que hospeda el sitio web personalizado SMSWEB. Para más información sobre los tipos de documento predeterminados, vea [Default Document &lt;defaultDocument\> for IIS](http://www.iis.net/configreference/system.webserver/defaultdocument) (Documento predeterminado <defaultDocument> para IIS).  
+-   Por cada sitio web personalizado o predeterminado que use una carpeta personalizada, coloque una copia del tipo de documento predeterminado que use en la carpeta raíz que hospeda el sitio web. Por ejemplo, en un equipo con Windows Server 2008 R2 con las configuraciones predeterminadas, **iisstart.htm** es uno de los distintos tipos de documentos predeterminados. Encontrará este archivo en el directorio raíz del sitio web predeterminado. Coloque una copia de este archivo (o una copia del tipo de documento predeterminado que use) en la carpeta raíz que hospeda el sitio web personalizado SMSWEB. Para más información sobre los tipos de documento predeterminados, vea [Default Document &lt;defaultDocument\> for IIS](https://www.iis.net/configreference/system.webserver/defaultdocument) (Documento predeterminado <defaultDocument> para IIS).  
 
-**Acerca de los requisitos de IIS:**
+**Acerca de los requisitos de IIS:** 
 **Los siguientes roles de sistema de sitio requieren IIS y un sitio web para hospedar los servicios de sistema de sitio:**  
 
 -   Punto de servicio web del catálogo de aplicaciones  

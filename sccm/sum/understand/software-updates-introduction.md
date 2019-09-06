@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e95055473cc5d61b10ee06e43456f3f7dfeb428b
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: ce8b194ffe0a7efccd112b8f69e60636db5e2721
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65493362"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70378648"
 ---
 # <a name="introduction-to-software-updates-in-system-center-configuration-manager"></a>Introducción a las actualizaciones de software en System Center Configuration Manager
 
@@ -138,7 +138,7 @@ Para ver un escenario de ejemplo que muestra cómo podría implementar actualiza
 
 -   **Antes de descargar los archivos de actualización**: cuando un equipo cliente recibe una directiva de asignación para una nueva implementación necesaria, el Agente cliente de actualizaciones de software descarga los archivos de actualización de software en la memoria caché del cliente local. Antes de descargar los archivos de actualización de software, el agente cliente inicia un examen para comprobar que la actualización de software sigue siendo necesaria.  
 
--   **Antes de la instalación de las actualizaciones de software:**: justo antes de la instalación de las actualizaciones de software, el Agente cliente de actualizaciones de software inicia un examen para comprobar que las actualizaciones de software siguen siendo necesarias.  
+-   **Antes de la instalación de las actualizaciones de software:** : justo antes de la instalación de las actualizaciones de software, el Agente cliente de actualizaciones de software inicia un examen para comprobar que las actualizaciones de software siguen siendo necesarias.  
 
 -   **Después de la instalación de las actualizaciones de software**: justo después de completarse la instalación de una actualización de software, el Agente cliente de actualizaciones de software inicia un examen para comprobar que las actualizaciones de software ya no son necesarias y crea un nuevo mensaje de estado que indica que la actualización de software está instalada. Si la instalación finalizó pero es necesario reiniciar el equipo, el mensaje de estado indica que el equipo cliente tiene pendiente un reinicio.  
 
@@ -271,12 +271,12 @@ Para ver un escenario de ejemplo que muestra cómo podría implementar actualiza
 > [!NOTE]  
 >  Cuando implemente una actualización de software en un dispositivo de Windows Embedded, asegúrese de que el dispositivo es miembro de una recopilación que tenga una ventana de mantenimiento configurada. Esto le permite administrar cuándo se deshabilita y habilita el filtro de escritura, y cuándo se reinicia el dispositivo.  
 
- La opción de la experiencia del usuario que permite controlar el comportamiento de los filtros de escritura es la casilla **Confirmar cambios dentro de la fecha límite o en una ventana de mantenimiento (reinicio necesario)**.  
+ La opción de la experiencia del usuario que permite controlar el comportamiento de los filtros de escritura es la casilla **Confirmar cambios dentro de la fecha límite o en una ventana de mantenimiento (reinicio necesario)** .  
 
  Para obtener más información sobre cómo Configuration Manager administra los dispositivos insertados que usan filtros de escritura, consulte [Planeación de implementación de cliente en dispositivos de Windows Embedded](../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).  
 
 ##  <a name="BKMK_ExtendSoftwareUpdates"></a> Extender las actualizaciones de software en Configuration Manager  
- Use System Center Updates Publisher para administrar las actualizaciones de software que no estén disponibles en Microsoft Update. Después de publicar las actualizaciones de software en el servidor de actualización y sincronizarlas en Configuration Manager, puede implementar las actualizaciones de software en los clientes de Configuration Manager. Para obtener más información sobre Updates Publisher, consulte [Updates Publisher 2011](http://go.microsoft.com/fwlink/p/?LinkId=252947).  
+ Use System Center Updates Publisher para administrar las actualizaciones de software que no estén disponibles en Microsoft Update. Después de publicar las actualizaciones de software en el servidor de actualización y sincronizarlas en Configuration Manager, puede implementar las actualizaciones de software en los clientes de Configuration Manager. Para obtener más información sobre Updates Publisher, consulte [Updates Publisher 2011](https://go.microsoft.com/fwlink/p/?LinkId=252947).  
 
 ## <a name="next-steps"></a>Pasos siguientes
 [Planear las actualizaciones de software](../plan-design/plan-for-software-updates.md)

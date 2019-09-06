@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13bf43cb2eb80be6605f6c6a925c641f405732a6
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 1292e2af9a88c1e93252fe080b6b34f2d5702aa3
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56131003"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70378136"
 ---
 # <a name="import-configuration-data-with-system-center-configuration-manager"></a>Importar datos de configuración con System Center Configuration Manager
 
@@ -30,7 +30,7 @@ Además de crear líneas de base de configuración y elementos de configuración
 
 - Datos de configuración que se crearon externamente y que se ajustan al esquema de (SML).  
 
-  Para un ejemplo de paquete de configuración que le ayude a administrar el cumplimiento de los roles de servidor de sitio de System Center 2012 Configuration Manager, vea [System Center 2012 Configuration Manager Configuration Pack](http://www.microsoft.com/en-us/download/details.aspx?id=30710&WT.mc_id=rss_alldownloads_all).  
+  Para un ejemplo de paquete de configuración que le ayude a administrar el cumplimiento de los roles de servidor de sitio de System Center 2012 Configuration Manager, vea [System Center 2012 Configuration Manager Configuration Pack](https://www.microsoft.com/download/details.aspx?id=30710&WT.mc_id=rss_alldownloads_all).  
 
 Al importar una línea base de configuración, algunos o todos los elementos de configuración a los que se hace referencia en la línea de base de configuración pueden incluirse también en el archivo contenedor. Durante el proceso de importación, Configuration Manager comprueba que todos los elementos de configuración a los que se hace referencia en la línea de base de configuración también se incluyen en el archivo .cab o ya existen en el sitio de Configuration Manager. Se produce un error en el proceso de importación si intenta importar una línea de base de configuración que hace referencia a datos de configuración que Configuration Manager no puede encontrar.  
 

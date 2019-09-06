@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a634d252a4e5a6637b4dae18dcb57efe929fcf88
-ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
+ms.openlocfilehash: 013228fc3df9d899d92767ef50a69a4894be07e2
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68859710"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70378102"
 ---
 # <a name="how-to-deploy-clients-to-unix-and-linux-servers-in-configuration-manager"></a>Implementación de clientes en servidores UNIX y Linux en Configuration Manager
 
@@ -37,7 +37,7 @@ Para poder administrar un servidor Linux o UNIX con Configuration Manager, debe 
  Después de instalar el cliente, se especifican las opciones de cliente en la consola de Configuration Manager para configurar el agente cliente de la misma manera que lo haría con clientes basados en Windows. Para obtener más información, consulte [Client settings for Linux and UNIX servers](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ClientSettingsforLnU) (Configuración de cliente para servidores Linux y UNIX).  
 
 ##  <a name="BKMK_AboutInstallPackages"></a> Acerca de los paquetes de instalación de cliente y el agente universal  
- Para instalar el cliente para Linux y UNIX en una plataforma concreta, debe usar el paquete de instalación de cliente aplicable para el equipo donde se instala el cliente. Los paquetes de instalación de cliente aplicables se incluyen como parte de la descarga de cada cliente desde el [Centro de descarga de Microsoft](http://go.microsoft.com/fwlink/?LinkID=525184). Además de los paquetes de instalación de cliente, la descarga de cliente incluye el script de **install** que administra la instalación del cliente en cada equipo.  
+ Para instalar el cliente para Linux y UNIX en una plataforma concreta, debe usar el paquete de instalación de cliente aplicable para el equipo donde se instala el cliente. Los paquetes de instalación de cliente aplicables se incluyen como parte de la descarga de cada cliente desde el [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/?LinkID=525184). Además de los paquetes de instalación de cliente, la descarga de cliente incluye el script de **install** que administra la instalación del cliente en cada equipo.  
 
  Cuando instala un cliente, puede utilizar las mismas propiedades de proceso y línea de comandos sin importar el paquete de instalación de cliente que utilice.  
 

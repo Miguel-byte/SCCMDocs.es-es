@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e0f3e0a20874539b079541f363c6d494a738225f
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: a28b901c731d46fb19140526af6e85825ad43795
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500516"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70380006"
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Preguntas más frecuentes sobre el cliente de Endpoint Protection
 
@@ -146,7 +146,7 @@ Para quitar todos los elementos no deseados o potencialmente peligrosos que Wind
 
 -   Asegúrese de que el software antivirus y antispyware, Windows Defender, usa las actualizaciones más recientes contra amenazas potenciales (consulte ¿Cómo mantengo las definiciones de virus y spyware actualizadas?). Además, asegúrese de usar siempre la versión más reciente de Windows Defender.  
 
--   Descargue solo actualizaciones de orígenes de confianza. Si tiene un sistema operativo Windows, vaya siempre a [Microsoft Update](http://go.microsoft.com/fwlink/?LinkID=96304) (http://go.microsoft.com/fwlink/?LinkID=96304)) y, para el resto de software, use siempre sitios web legítimos de la empresa o la persona que los desarrolla.  
+-   Descargue solo actualizaciones de orígenes de confianza. Si tiene un sistema operativo Windows, vaya siempre a [Microsoft Update](https://go.microsoft.com/fwlink/?LinkID=96304) (https://go.microsoft.com/fwlink/?LinkID=96304) ) y, para el resto de software, use siempre sitios web legítimos de la empresa o la persona que los desarrolla.  
 
 -   Si recibe un correo electrónico con archivos adjuntos y no está seguro del origen, elimínelo inmediatamente. No descargue aplicaciones ni archivos de orígenes desconocidos y tenga cuidado al intercambiar archivos con otros usuarios.  
 
@@ -191,7 +191,7 @@ Para quitar todos los elementos no deseados o potencialmente peligrosos que Wind
 
 ##  <a name="what-is-real-time-protection"></a>¿Qué es la protección en tiempo real?  
 
- La protección en tiempo real permite que Windows Defender supervise el equipo en todo momento y le avise cuando amenazas potenciales, como virus y spyware, intentan instalarse o ejecutarse en el equipo. Dado que esta característica es un elemento importante del mecanismo que usa Windows Defender para ayudar a proteger el equipo, debe asegurarse de que siempre esté siempre activada. Si se desactiva la protección en tiempo real, Windows Defender le avisa y cambia el estado del equipo a **"En riesgo"**.  
+ La protección en tiempo real permite que Windows Defender supervise el equipo en todo momento y le avise cuando amenazas potenciales, como virus y spyware, intentan instalarse o ejecutarse en el equipo. Dado que esta característica es un elemento importante del mecanismo que usa Windows Defender para ayudar a proteger el equipo, debe asegurarse de que siempre esté siempre activada. Si se desactiva la protección en tiempo real, Windows Defender le avisa y cambia el estado del equipo a **"En riesgo"** .  
 
  Siempre que la protección en tiempo real detecta una amenaza real o potencial, Windows Defender muestra una notificación. Ahora puede elegir entre las siguientes opciones:  
 

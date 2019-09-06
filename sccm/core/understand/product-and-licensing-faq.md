@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c0975c2b8dcf945464273930073ebf370bd4c32
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: acafe2aeefc267446042b12f06763fd0f1737cfb
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340154"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70377847"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Preguntas más frecuentes sobre las licencias y ramas de Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (rama actual), System Center Configuration Manager (rama de mantenimiento a largo plazo)*
 
-Estas preguntas más frecuentes tratan las preguntas comunes sobre licencias de la rama actual de Configuration Manager y las versiones de la rama de mantenimiento a largo plazo (LSTB), disponibles a través de los programas de Licencias por Volumen de Microsoft. Este artículo solo tiene fines informativos. No reemplaza ni sustituye ninguna documentación que trate sobre las licencias de System Center Configuration Manager. Para más información, consulte las licencias de producto para [System Center 2016](https://www.microsoft.com/en-us/licensing/product-licensing/system-center-2016.aspx)<!-- this link doesn't work without some language code --> y los [términos del producto](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). En las condiciones del producto se describen los términos de uso de todos los productos de Microsoft en las licencias por volumen.
+Estas preguntas más frecuentes tratan las preguntas comunes sobre licencias de la rama actual de Configuration Manager y las versiones de la rama de mantenimiento a largo plazo (LSTB), disponibles a través de los programas de Licencias por Volumen de Microsoft. Este artículo solo tiene fines informativos. No reemplaza ni sustituye ninguna documentación que trate sobre las licencias de System Center Configuration Manager. Para más información, consulte las licencias de producto para [System Center 2016](https://www.microsoft.com/licensing/product-licensing/system-center-2016.aspx)<!-- this link doesn't work without some language code --> y los [términos del producto](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). En las condiciones del producto se describen los términos de uso de todos los productos de Microsoft en las licencias por volumen.
 
 Para obtener más información acerca de las características de Configuration Manager, vea la [página del producto](https://www.microsoft.com/cloud-platform/system-center-configuration-manager).
 
@@ -44,7 +44,7 @@ Tanto **Software Assurance** (SA) como **Licencia y Software Assurance** (L&SA) 
 
 - **Software Assurance (SA)** : los clientes necesitan tener SA activo en las licencias de Configuration Manager, o derechos de suscripción equivalentes, para instalar y usar la opción de rama actual de Configuration Manager.    
 
-  - Aunque SA es opcional para algunos productos de Microsoft, la única manera de obtener derechos para usar la rama actual de Configuration Manager es con SA *(o derechos de suscripción equivalentes)* . Para más información, consulte [Preguntas más frecuentes sobre Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/FAQ-Software-Assurance.aspx).<!--this link doesn't work without some language code-->
+  - Aunque SA es opcional para algunos productos de Microsoft, la única manera de obtener derechos para usar la rama actual de Configuration Manager es con SA *(o derechos de suscripción equivalentes)* . Para más información, consulte [Preguntas más frecuentes sobre Software Assurance](https://www.microsoft.com/licensing/licensing-programs/FAQ-Software-Assurance.aspx).<!--this link doesn't work without some language code-->
 
 - **Licencia y Software Assurance (L&SA) de Microsoft:** Los clientes que compran licencias nuevas para Configuration Manager necesitan comprar L&SA (la licencia y la cobertura de SA).   
 
@@ -52,12 +52,12 @@ Tanto **Software Assurance** (SA) como **Licencia y Software Assurance** (L&SA) 
 
   - Si el SA expira y todavía tiene una licencia de Configuration Manager, ya no podrá usar la rama actual. Para obtener más información, vea la pregunta [Si mi SA expira y tenía L&SA, ¿qué obtengo?](#bkmk_sa-expires)
 
-Para más información sobre las ofertas de licencias, consulte [Opciones de compra](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs)<!--this link doesn't work without some language code--> y los [términos del programa de licencias](http://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=64).  
+Para más información sobre las ofertas de licencias, consulte [Opciones de compra](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs)<!--this link doesn't work without some language code--> y los [términos del programa de licencias](https://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=64).  
 
 
 ### <a name="bkmk_equiv-sub"></a> He leído el término "suscripción equivalente", ¿a qué programas hace referencia?   
 
-Las suscripciones equivalentes hacen referencia a programas como [Enterprise Mobility + Security](http://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=51) (EMS) o [Microsoft 365 Enterprise](https://www.microsoft.com/microsoft-365/enterprise). Pueden existir otros, pero estos programas son los más comunes. Los términos del producto de las Licencias por Volumen de Microsoft se refieren a esos programas como licencias equivalentes de las licencias de administración.
+Las suscripciones equivalentes hacen referencia a programas como [Enterprise Mobility + Security](https://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=51) (EMS) o [Microsoft 365 Enterprise](https://www.microsoft.com/microsoft-365/enterprise). Pueden existir otros, pero estos programas son los más comunes. Los términos del producto de las Licencias por Volumen de Microsoft se refieren a esos programas como licencias equivalentes de las licencias de administración.
 
 
 ### <a name="bkmk_ems-expires"></a> Tengo Enterprise Mobility + Security y ha expirado, ¿qué debo hacer ahora?  

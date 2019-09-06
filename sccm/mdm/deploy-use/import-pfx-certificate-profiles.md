@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 18879c37bf51adda20dd1cf7bb7a52960312951d
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: 69b2c89a449cac5cb9e16b059c6de4239bec8c67
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68338036"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379518"
 ---
 # <a name="how-to-create-pfx-certificate-profiles-by-importing-certificate-details"></a>Creación de perfiles de certificado PFX mediante la importación de detalles de certificado.
 
@@ -39,7 +39,7 @@ Para obtener más información, consulte [Requisitos previos de los perfiles de 
 System Center Configuration Manager permite importar y, luego, aprovisionar archivos de intercambio de información personal (.pfx) en los dispositivos de usuario. Los archivos PFX pueden usarse para generar certificados específicos del usuario para admitir el intercambio de datos cifrados.
 
 > [!TIP]  
-> En [Cómo crear e implementar perfiles de certificado PFX en Configuration Manager](http://blogs.technet.com/b/karanrustagi/archive/2015/09/01/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager.aspx)también encontrará un tutorial detallado en el que se describe este proceso.  
+> En [Cómo crear e implementar perfiles de certificado PFX en Configuration Manager](https://blogs.technet.com/b/karanrustagi/archive/2015/09/01/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager.aspx)también encontrará un tutorial detallado en el que se describe este proceso.  
 
 ## <a name="create-import-and-deploy-a-personal-information-exchange-pfx-certificate-profile"></a>Creación, importación e implementación de un perfil de certificado de intercambio de información personal (PFX)  
 
@@ -85,7 +85,7 @@ Más adelante, los certificados importados se implementan en los dispositivos in
 
 ### <a name="deploy-a-create-pfx-script"></a>Implementación de un script de creación de PFX
 
-Use el [SDK de Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=613525) para implementar un script de creación de PFX. 
+Use el [SDK de Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=613525) para implementar un script de creación de PFX. 
 
 El script de creación de PFX agregado en Configuration Manager 2012 SP2 agrega una clase SMS_ClientPfxCertificate al SDK. Esta clase incluye los métodos siguientes:  
 

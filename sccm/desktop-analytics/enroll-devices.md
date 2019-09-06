@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7099a31cc9766a3c9904c5ae1013eb1700181102
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 59cd27ac63430a8b9073e7b178b53f9a5cc23da6
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68535971"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70377891"
 ---
 # <a name="how-to-enroll-devices-in-desktop-analytics"></a>Cómo inscribir dispositivos en el análisis de escritorio
 
@@ -55,7 +55,7 @@ Windows 10 incluye el componente de compatibilidad. Para obtener la actualizaci�
 
 #### <a name="windows-81"></a>Windows 8.1
 
-Descargue la actualización: [KB 2976978](http://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB2976978) 
+Descargue la actualización: [KB 2976978](https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB2976978) 
 
 Ejecuta diagnósticos en los sistemas Windows 8.1 que participan en el Programa para la mejora de la experiencia del usuario de Windows. Estos diagnósticos ayudan a determinar si puede tener problemas de compatibilidad al actualizar a Windows 10.
 
@@ -63,7 +63,7 @@ Para obtener más información, consulte [actualización de compatibilidad para 
 
 #### <a name="windows-7-with-service-pack-1"></a>Windows 7 con Service Pack 1
 
-Descargue la actualización: [KB 2952664](http://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB2952664) 
+Descargue la actualización: [KB 2952664](https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB2952664) 
 
 Ejecuta diagnósticos en los sistemas Windows 7 con Service Pack 1 (SP1) que participan en el Programa para la mejora de la experiencia del usuario de Windows. Estos diagnósticos ayudan a determinar si puede tener problemas de compatibilidad al actualizar a Windows 10.
 
@@ -155,12 +155,12 @@ Configuration Manager establece la siguiente configuración de Windows en la rut
 | Directiva   | Value  |
 |----------|--------|
 | **CommercialId** | Para que un dispositivo se muestre en el análisis de escritorio, configúrelo con el identificador comercial de su organización. |
-| **AllowTelemetry**  | Se `1` establece en Basic `2` , para **mejorado**o `3` para datos de diagnóstico **completos** . El análisis de escritorio requiere al menos datos de diagnóstico básicos. Microsoft recomienda usar el nivel mejorado (limitado) con el análisis de escritorio. Para obtener más información, consulte [Configurar los datos de diagnóstico de Windows en la organización](https://docs.microsoft.com/windows/configuration/configure-windows-diagnostic-data-in-your-organization). |
+| **AllowTelemetry**  | Se `1` estableceen Basic `2` , para **mejorado**o `3` para datos de diagnóstico **completos** . El análisis de escritorio requiere al menos datos de diagnóstico básicos. Microsoft recomienda usar el nivel mejorado (limitado) con el análisis de escritorio. Para obtener más información, consulte [Configurar los datos de diagnóstico de Windows en la organización](https://docs.microsoft.com/windows/configuration/configure-windows-diagnostic-data-in-your-organization). |
 | **LimitEnhancedDiagnosticDataWindowsAnalytics** | *Se aplica a Windows 10, versión 1709 y posteriores*: Esta configuración solo se aplica cuando el valor de `2`AllowTelemetry es. Limita los eventos de datos de diagnóstico mejorados enviados a Microsoft a los eventos necesarios para el análisis de escritorio. Para obtener más información, consulte los [eventos y los campos de datos de diagnóstico mejorados de Windows 10, versión 1709 y usados por Windows Analytics](https://docs.microsoft.com/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields).|
 | **AllowDeviceNameInTelemetry** | *Se aplica a Windows 10, versión 1803 y posteriores*: Se requiere una suscripción independiente para permitir que los dispositivos sigan enviando el nombre del dispositivo.<br> <br>Nota: De forma predeterminada, el nombre del dispositivo no se envía a Microsoft. Si no envía el nombre del dispositivo, aparece en análisis de escritorio como "desconocido". Este comportamiento puede dificultar la identificación y la evaluación de los dispositivos. Para obtener más información, consulte [nombre del dispositivo](#device-name). |
 | **CommercialDataOptIn** | *Se aplica a Windows 7 y Windows 8.1*: Se requiere un `1` valor de para el análisis de escritorio. Para obtener más información, consulte participación de los [datos comerciales en Windows 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\)). |
 
-Vea esta configuración en el editor de directivas de grupo en la siguiente ruta de acceso: Configuración > del equipo > **plantillas administrativas** > la**recopilación de datos de componentes de Windows y versiones preliminares**.
+Vea esta configuración en el editor de directivas de grupo en la siguiente ruta de acceso:Configuración > del equipo > **plantillas administrativas** > la**recopilación de datos de componentes de Windows y versiones preliminares**.
 
 > [!Important]  
 > En la mayoría de los casos, use solo Configuration Manager para configurar estas opciones. No aplique también esta configuración en los objetos de directiva de grupo de dominio. Para obtener más información, vea [resolución de conflictos](#conflict-resolution).<!-- SCCMDocs-pr 3120 -->
@@ -184,7 +184,7 @@ Configuration Manager solo configura las opciones de Windows si aún no existe u
 
 Si el destino es Configuration Manager clientes con la configuración de Windows Analytics y análisis de escritorio, la configuración de análisis de escritorio tiene prioridad.
 
-Al configurar el nivel de datos de diagnóstico, se establece el límite superior para el dispositivo. De forma predeterminada, en Windows 10, versión 1803 y versiones posteriores, los usuarios pueden elegir establecer un nivel inferior. Puede controlar este comportamiento mediante la configuración de directiva de grupo **configurar la interfaz de usuario de configuración de**la telemetría. Para obtener más información, consulte [Configurar los datos de diagnóstico de Windows en la organización](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management).
+Al configurar el nivel de datos de diagnóstico, se establece el límite superior para el dispositivo. De forma predeterminada, en Windows 10, versión 1803 y versiones posteriores, los usuarios pueden elegir establecer un nivel inferior. Puede controlar este comportamiento mediante la configuración de directiva de grupo **configurar la interfaz de usuario de configuración de la telemetría**. Para obtener más información, consulte [Configurar los datos de diagnóstico de Windows en la organización](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management).
 
 
 

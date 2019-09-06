@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5499fae986dcd266e0b2a31d2619aa79146f8981
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 98b06429296927ade2dd738fb8df5356668dd89b
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67676020"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70377770"
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>Configuraciones admitidas de la rama de mantenimiento a largo plazo de System Center Configuration Manager
 
@@ -26,7 +26,7 @@ Use la información de este tema para comprender qué sistemas operativos y depe
 Si no se indica lo contrario en este tema o en los temas específicos de la LTSB, se aplican a la LTSB las mismas configuraciones y limitaciones que se aplican a la versión 1606 de la rama actual.  Cuando se produzcan conflictos, use la información que se aplica a la edición que use. Normalmente, la LTSB es más limitada que la rama actual.
 
 ## <a name="general-statement-of-support"></a>Estado general de compatibilidad
-Los siguientes productos y tecnologías son compatibles con esta rama de Configuration Manager. Sin embargo, su inclusión en este contenido no expresa una extensión de la compatibilidad con cualquier producto o versión más allá del ciclo de vida de soporte individual de los productos. Los productos que están fuera de su ciclo de vida de soporte no se pueden usar con Configuration Manager. Para obtener más información, visite el sitio web [Ciclo de vida de soporte de Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=208270) y lea la [Directiva de ciclo de vida de soporte técnico: preguntas más frecuentes](http://go.microsoft.com/fwlink/p/?LinkId=31976).
+Los siguientes productos y tecnologías son compatibles con esta rama de Configuration Manager. Sin embargo, su inclusión en este contenido no expresa una extensión de la compatibilidad con cualquier producto o versión más allá del ciclo de vida de soporte individual de los productos. Los productos que están fuera de su ciclo de vida de soporte no se pueden usar con Configuration Manager. Para obtener más información, visite el sitio web [Ciclo de vida de soporte de Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=208270) y lea la [Directiva de ciclo de vida de soporte técnico: preguntas más frecuentes](https://go.microsoft.com/fwlink/p/?LinkId=31976).
 
 Además, los productos y las versiones de los productos que no aparecen en los temas siguientes no se admiten a menos que se hayan anunciado en el [Blog de Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/).
 
@@ -143,7 +143,7 @@ Puede usar la LTSB para administrar los siguientes dispositivos de Windows Embed
 ### <a name="mac-computers"></a>Equipos Mac  
  Puede usar la LTSB para administrar equipos con Mac OS X con el cliente de Configuration Manager para Mac.
 
-El paquete de instalación del cliente Mac no se suministra con los medios de Configuration Manager. Puede descargarlo como parte de la descarga de clientes para sistemas operativos adicionales en el [Centro de descarga de Microsoft](http://go.microsoft.com/fwlink/?LinkID=525184).  
+El paquete de instalación del cliente Mac no se suministra con los medios de Configuration Manager. Puede descargarlo como parte de la descarga de clientes para sistemas operativos adicionales en el [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/?LinkID=525184).  
 
 La compatibilidad con sistemas operativos Mac se limita a los que aparecen en esta sección. La compatibilidad no incluye otros sistemas operativos que pudieran ser compatibles mediante una futura actualización para paquetes de instalación de cliente Mac para la rama actual.
 
@@ -157,7 +157,7 @@ Para obtener más información, consulte [How to deploy clients to Macs in Syste
 ## <a name="linux-and-unix-servers"></a>Servidores Linux y UNIX
 Puede usar la LTSB para administrar servidores Linux y UNIX con el cliente de Configuration Manager para Linux y UNIX.
 
-Los paquetes de instalación del cliente Linux y UNIX no se suministran con los medios de Configuration Manager. Puede descargarlos como parte de la descarga de clientes para sistemas operativos adicionales en el [Centro de descarga de Microsoft](http://go.microsoft.com/fwlink/?LinkID=525184). Además de los paquetes de instalación de cliente, la descarga de cliente incluye el script de instalación que administra la instalación del cliente en cada equipo.
+Los paquetes de instalación del cliente Linux y UNIX no se suministran con los medios de Configuration Manager. Puede descargarlos como parte de la descarga de clientes para sistemas operativos adicionales en el [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/?LinkID=525184). Además de los paquetes de instalación de cliente, la descarga de cliente incluye el script de instalación que administra la instalación del cliente en cada equipo.
 
 La compatibilidad con sistemas operativos Linux y UNIX se limita a los que aparecen en esta sección. La compatibilidad no incluye otros sistemas operativos que pudieran ser compatibles mediante una futura actualización para paquetes de cliente Linux y UNIX para la rama actual.
 

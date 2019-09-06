@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9ec6756e5c180561bef10bba799e3fdba3dcc303
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: fd48ec41114b122d8d00549c1ae8d99d08ba5f1f
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62289060"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379709"
 ---
 # <a name="configure-your-intune-subscription-with-system-center-configuration-manager-and-microsoft-intune"></a>Configuración de su suscripción a Intune con System Center Configuration Manager y Microsoft Intune
 
@@ -35,7 +35,7 @@ La suscripción a Intune hace lo siguiente:
 
 ## <a name="to-create-the-microsoft-intune-subscription"></a>Para crear la suscripción a Microsoft Intune
 
-1.  Si aún no lo ha hecho, regístrese para obtener una cuenta de Microsoft Intune en [Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=258216).  Después de crear la cuenta de Intune, no tiene que agregar usuarios a la cuenta de Intune ni realizar configuraciones adicionales.
+1.  Si aún no lo ha hecho, regístrese para obtener una cuenta de Microsoft Intune en [Microsoft Intune](https://go.microsoft.com/fwlink/?LinkID=258216).  Después de crear la cuenta de Intune, no tiene que agregar usuarios a la cuenta de Intune ni realizar configuraciones adicionales.
 
 2.  En la consola de Configuration Manager, haga clic en **Administración**.
 
@@ -54,18 +54,18 @@ La suscripción a Intune hace lo siguiente:
 
 7. En la página **General** , especifique las opciones siguientes y, a continuación, haga clic en **Siguiente**.
 
-   - **Colección**: Especifique una recopilación de usuarios que contenga los usuarios que vayan a inscribir sus dispositivos móviles.
+   - **Colección**: Especifique una recopilación de usuarios que contenga los usuarios que inscribirán sus dispositivos móviles.
 
      > [!NOTE]
      >  Si se quita un usuario de la recopilación, el dispositivo del usuario se seguirá administrando durante 24 horas hasta que se quite el registro del usuario de la base de datos de usuarios.
 
-   - **Nombre de la empresa**: Especifique el nombre de su compañía.
+   - **Nombre de la empresa**: Especifique el nombre de la empresa.
 
-   - **Dirección URL de documentación de privacidad**: Si publica la información de privacidad de su compañía en un vínculo que es accesible desde Internet, proporcione un vínculo que los usuarios puedan acceder desde el portal de empresa, por ejemplo http://www.contoso.com/CP_privacy.html. La información de privacidad puede aclarar la información que comparten los usuarios con su compañía.
+   - **Dirección URL de la documentación de privacidad de la empresa**: Si publica la información de privacidad de su compañía en un vínculo que es accesible desde Internet, proporcione un vínculo al que los usuarios puedan tener acceso desde el portal http://www.contoso.com/CP_privacy.html de empresa, por ejemplo. La información de privacidad puede aclarar la información que comparten los usuarios con su compañía.
 
-   - **Combinación de colores de portal de empresa**: Opcionalmente, cambie el color predeterminado azul de los portales de empresa.
+   - **Combinación de colores del portal de empresa**: Opcionalmente, cambie el color predeterminado azul de los portales de la compañía.
 
-   - **Código de sitio de Configuration Manager**: Especifique un código de sitio para un sitio primario administrar los dispositivos móviles.
+   - **Código de sitio de Configuration Manager**: Especifique un código de sitio para un sitio primario para administrar los dispositivos móviles.
 
    > [!NOTE]
    >  El cambio del código de sitio solo afecta a nuevas inscripciones, y no afecta a dispositivos ya inscritos.

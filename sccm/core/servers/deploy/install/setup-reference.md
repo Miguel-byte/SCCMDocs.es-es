@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f602bc42d007fa5780f4a8bc3971aa0ad41abfb9
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: f6c8dd4589cd9f1afedc54a3fb45342f6e566b98
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65501308"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379891"
 ---
 # <a name="reference-for-system-center-configuration-manager-setup"></a>Referencia de la instalación de System Center Configuration Manager
 
@@ -47,7 +47,7 @@ Puede descargar el software cliente de Configuration Manager desde el Centro de 
 
 Use los vínculos siguientes para descargar los clientes de la versión de Configuration Manager que use:  
 
--   Consulte [Microsoft System Center Configuration Manager: clientes para sistemas operativos adicionales](http://www.microsoft.com/download/details.aspx?id=47719)  
+-   Consulte [Microsoft System Center Configuration Manager: clientes para sistemas operativos adicionales](https://www.microsoft.com/download/details.aspx?id=47719)  
 
 ##  <a name="bkmk_usage"></a> Configuración y niveles de datos de uso  
 Al instalar el primer sitio de System Center Configuration Manager, Configuration Manager instala y configura automáticamente un nuevo rol de sistema de sitio (el **punto de conexión de servicio**) en el servidor de sitio. El punto de conexión de servicio tiene esta configuración predeterminada:  
@@ -72,4 +72,4 @@ En la recopilación de datos se incluyen estos tres niveles:
 
 Para obtener más información, incluida la divulgación de los detalles recopilados por cada nivel, consulte [Diagnósticos y datos de uso para System Center Configuration Manager](../../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md).  
 
-Para ver la declaración de privacidad en línea de System Center Configuration Manager, vaya a [http://go.microsoft.com/fwlink/?LinkID=626527](http://go.microsoft.com/fwlink/?LinkID=626527).
+Para ver la declaración de privacidad en línea de System Center Configuration Manager, vaya a [https://go.microsoft.com/fwlink/?LinkID=626527](https://go.microsoft.com/fwlink/?LinkID=626527).

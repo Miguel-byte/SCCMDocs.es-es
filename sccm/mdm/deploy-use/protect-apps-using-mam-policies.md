@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 231988b9c6b41a904e2ae8225bdb070f0b047618
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 2a7b0e8ba4c4c1438c5ecdd6763aa6014e56e176
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67678905"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70380380"
 ---
 # <a name="protect-apps-using-mobile-application-management-policies-in-system-center-configuration-manager"></a>Proteger aplicaciones mediante directivas de administración de aplicaciones móviles en System Center Configuration Manager
 
@@ -38,26 +38,26 @@ Para usar esta nueva función, debe usar el Portal de vista previa de Azure. Los
 
 Para aplicar restricciones a una aplicación, esta debe incorporar el Kit de desarrollo de software (SDK) para aplicaciones de Microsoft Intune. Existen dos métodos de obtención de este tipo de aplicación:  
 
--   **Usar una aplicación administrada por directiva** (Android e iOS): Estas aplicaciones tienen integrado el SDK de la aplicación. Para agregar este tipo de aplicación, especifique un vínculo a la aplicación desde una tienda de aplicaciones como, por ejemplo, iTunes Store o Google Play. No es necesario ningún procesamiento adicional para este tipo de aplicación. Para obtener una lista de aplicaciones administradas por directiva disponibles para dispositivos iOS y Android, consulte [Aplicaciones administradas de directivas de administración de aplicaciones móviles de Microsoft Intune](https://technet.microsoft.com/library/dn708489.aspx).  
+-   **Uso de una aplicación administrada por directiva** (IOS y Android): Estas aplicaciones tienen integrado el SDK de la aplicación. Para agregar este tipo de aplicación, especifique un vínculo a la aplicación desde una tienda de aplicaciones como, por ejemplo, iTunes Store o Google Play. No es necesario ningún procesamiento adicional para este tipo de aplicación. Para obtener una lista de aplicaciones administradas por directiva disponibles para dispositivos iOS y Android, consulte [Aplicaciones administradas de directivas de administración de aplicaciones móviles de Microsoft Intune](https://technet.microsoft.com/library/dn708489.aspx).  
 
--   **Usar una aplicación "ajustada"** (Android e iOS): Estas aplicaciones se vuelven a empaquetar para incluir el SDK para aplicaciones mediante el **Microsoft Intune App Wrapping Tool**. Esta herramienta se usa normalmente para procesar aplicaciones de empresa que se hayan creado internamente. No se puede usar para procesar aplicaciones que se hayan descargado desde la tienda de aplicaciones. Consulte los artículos siguientes para obtener más información:
+-   **Usar una aplicación "ajustada"** (IOS y Android): Estas aplicaciones se empaquetan para incluir el SDK de la aplicación con la **Microsoft Intune herramienta de ajuste de aplicaciones**. Esta herramienta se usa normalmente para procesar aplicaciones de empresa que se hayan creado internamente. No se puede usar para procesar aplicaciones que se hayan descargado desde la tienda de aplicaciones. Consulte los artículos siguientes para obtener más información:
     - [Preparar aplicaciones iOS para la administración de aplicaciones móviles con la Herramienta de ajuste de aplicaciones de Intune](https://technet.microsoft.com/library/dn878028.aspx)
 
     - [Preparar aplicaciones Android para la administración de aplicaciones móviles con la Herramienta de ajuste de aplicaciones de Intune](https://technet.microsoft.com/library/mt147413.aspx)  
 
 ## <a name="create-and-deploy-an-app-with-a-mobile-application-management-policy"></a>Crear e implementar una aplicación con una directiva de administración de aplicaciones móviles  
 
-##  <a name="step-1-obtain-the-link-to-a-policy-managed-app-or-create-a-wrapped-app"></a>Paso 1: Obtenga el vínculo a una aplicación administrada por directiva o crear una aplicación ajustada  
+##  <a name="step-1-obtain-the-link-to-a-policy-managed-app-or-create-a-wrapped-app"></a>Paso 1: Obtener el vínculo a una aplicación administrada por directiva o crear una aplicación ajustada  
 
--   **Para obtener un vínculo a una directiva de aplicación administrada**: Desde la tienda de aplicaciones, busque y anote la dirección URL de la aplicación administrada por directiva que desea implementar.  
+-   **Para obtener un vínculo a una aplicación administrada por directiva**: Desde la tienda de aplicaciones, busque y anote la dirección URL de la aplicación administrada por directiva que desea implementar.  
 
      Por ejemplo, la dirección URL de la aplicación Microsoft Word para iPad es **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**  
 
--   **Para crear una aplicación ajustada**: Use la información de los temas [preparar aplicaciones iOS para la administración de aplicaciones móviles con Microsoft Intune App Wrapping Tool](https://technet.microsoft.com/library/dn878028.aspx) y [preparar aplicaciones Android para la administración de aplicaciones móviles con Microsoft Intune Herramienta de ajuste de aplicaciones](https://technet.microsoft.com/library/mt147413.aspx) para crear una aplicación ajustada.  
+-   **Para crear una aplicación ajustada**: Use la información de los temas [preparar aplicaciones iOS para la administración de aplicaciones móviles con la herramienta de ajuste](https://technet.microsoft.com/library/dn878028.aspx) de aplicaciones de Microsoft Intune y [preparar aplicaciones de Android para la administración de aplicaciones móviles con la herramienta de ajuste](https://technet.microsoft.com/library/mt147413.aspx) de aplicaciones Microsoft Intune para crear un aplicación ajustada.  
 
      La herramienta crea una aplicación procesada y un archivo de manifiesto asociado. Usará estos archivos al crear una aplicación de Configuration Manager que contenga la aplicación.  
 
-##  <a name="step-2-create-a-configuration-manager-application-that-contains-an-app"></a>Paso 2: Crear una aplicación de Configuration Manager que contenga una aplicación  
+##  <a name="step-2-create-a-configuration-manager-application-that-contains-an-app"></a>Paso 2: Creación de una aplicación Configuration Manager que contenga una aplicación  
  El procedimiento para crear la aplicación de Configuration Manager difiere en función de si usa una aplicación administrada por directiva (vínculo externo) o una aplicación creada con la herramienta de ajuste de aplicaciones de Microsoft Intune para iOS (paquete de aplicación de iOS). Use uno de los procedimientos siguientes para crear la aplicación de Configuration Manager.  
 
 1. En la consola de Configuration Manager, elija **Biblioteca de software** > **Administración de aplicaciones** > **Aplicaciones**.  
@@ -109,9 +109,9 @@ Para aplicar restricciones a una aplicación, esta debe incorporar el Kit de des
 
 4)  En la página **Tipo de directiva**, seleccione la plataforma y el tipo de directiva y seleccione **Siguiente**. Los siguientes tipos de directiva están disponibles:  
 
--   **General**: El tipo de directiva General permite modificar la funcionalidad de las aplicaciones que se implementan para ayudar a armonizarlas con sus directivas de seguridad y cumplimiento de la empresa. Por ejemplo, puede restringir las operaciones de cortar, copiar y pegar en una aplicación restringida.  
+-   **General**: El tipo de Directiva general permite modificar la funcionalidad de las aplicaciones que se implementan para ayudar a ponerlas en línea con las directivas de cumplimiento y seguridad de su empresa. Por ejemplo, puede restringir las operaciones de cortar, copiar y pegar en una aplicación restringida.  
 
--   **Explorador administrado**: La directiva de explorador administrado le permite decidir si desea permitir o bloquear el explorador administrado abra una lista de direcciones URL. El tipo de directiva de explorador administrado permite modificar la funcionalidad de la aplicación de explorador administrado de Intune. Se trata de un explorador web que permite administrar las acciones que pueden realizar los usuarios, incluidos los sitios que pueden visitar y cómo se abren los vínculos a contenido en el explorador. Obtenga más información sobre la  [aplicación Intune Managed Browser para iOS](https://itunes.apple.com/us/app/microsoft-intune-managed-browser/id943264951?mt=8) y [la aplicación Intune Managed Browser para Android](https://play.google.com/store/apps/details?id=com.microsoft.intune.mam.managedbrowser&hl=en).
+-   **Managed Browser**: La Directiva de Managed Browser le permite decidir si permitir o bloquear el explorador administrado para que no abra una lista de direcciones URL. El tipo de directiva de explorador administrado permite modificar la funcionalidad de la aplicación de explorador administrado de Intune. Se trata de un explorador web que permite administrar las acciones que pueden realizar los usuarios, incluidos los sitios que pueden visitar y cómo se abren los vínculos a contenido en el explorador. Obtenga más información sobre la  [aplicación Intune Managed Browser para iOS](https://itunes.apple.com/us/app/microsoft-intune-managed-browser/id943264951?mt=8) y [la aplicación Intune Managed Browser para Android](https://play.google.com/store/apps/details?id=com.microsoft.intune.mam.managedbrowser&hl=en).
 
 5)  En la página **Directiva de iOS** o **Directiva de Android**, configure los valores siguientes según sea necesario y, después, seleccione **Siguiente**. Las opciones pueden diferir en función del tipo de dispositivo para el que va a configurar la directiva.  
 
@@ -128,7 +128,7 @@ Para aplicar restricciones a una aplicación, esta debe incorporar el Kit de des
 |**Requerir credenciales corporativas en acceso**|Requiere que el usuario introduzca su información de inicio de sesión corporativa para tener acceso a la aplicación.|  
 |**Requerir cumplimiento de dispositivos con la directiva corporativa en acceso**|Permite que la aplicación se use únicamente cuando el dispositivo no esté liberado ni modificado.|  
 |**Volver a comprobar los requisitos de acceso después de (minutos)**|Especifique el período de tiempo que debe transcurrir antes de que se vuelvan a comprobar los requisitos de acceso de la aplicación una vez iniciada la aplicación (en el campo **Tiempo de espera**).<br /><br /> En el campo **Período de gracia sin conexión**, si el dispositivo está desconectado, se especifica el período de tiempo que debe transcurrir antes de que se vuelvan a comprobar los requisitos de acceso de la aplicación.|  
-|**Cifrar datos de aplicación**|Especifica que se cifren todos los datos asociados a esta aplicación, incluidos los datos almacenados externamente, como los datos almacenados en tarjetas SD.<br /><br /> **Cifrado para iOS**<br /><br /> En el caso de aplicaciones que están asociadas a una directiva de administración de aplicaciones móviles de Configuration Manager, los datos se cifran en reposo con el cifrado de nivel de dispositivo proporcionado por el sistema operativo. Esta opción se habilita a través de la directiva de PIN del dispositivo que debe establecer el administrador de TI. Cuando se requiere un PIN, los datos se cifran según la configuración de la directiva de administración de aplicaciones móviles. Como se indica en la documentación de Apple, [los módulos usados por iOS 7 están certificados mediante FIPS 140-2](http://support.apple.com/en-us/HT202739).<br /><br /> **Cifrado para Android**<br /><br /> En el caso de las aplicaciones que están asociadas a una directiva de administración de aplicaciones móviles de Configuration Manager, Microsoft proporciona el cifrado. Los datos se cifran de forma sincrónica durante las operaciones de E/S de archivos según la configuración de la directiva de administración de aplicaciones móviles. Las aplicaciones administradas en Android usan el cifrado AES-128 en modo CBC mediante las bibliotecas de criptografía de la plataforma. El método de cifrado no está certificado mediante FIPS 140-2. El contenido del almacenamiento del dispositivo está siempre cifrado.|  
+|**Cifrar datos de aplicación**|Especifica que se cifren todos los datos asociados a esta aplicación, incluidos los datos almacenados externamente, como los datos almacenados en tarjetas SD.<br /><br /> **Cifrado para iOS**<br /><br /> En el caso de aplicaciones que están asociadas a una directiva de administración de aplicaciones móviles de Configuration Manager, los datos se cifran en reposo con el cifrado de nivel de dispositivo proporcionado por el sistema operativo. Esta opción se habilita a través de la directiva de PIN del dispositivo que debe establecer el administrador de TI. Cuando se requiere un PIN, los datos se cifran según la configuración de la directiva de administración de aplicaciones móviles. Como se indica en la documentación de Apple, [los módulos usados por iOS 7 están certificados mediante FIPS 140-2](https://support.apple.com/en-us/HT202739).<br /><br /> **Cifrado para Android**<br /><br /> En el caso de las aplicaciones que están asociadas a una directiva de administración de aplicaciones móviles de Configuration Manager, Microsoft proporciona el cifrado. Los datos se cifran de forma sincrónica durante las operaciones de E/S de archivos según la configuración de la directiva de administración de aplicaciones móviles. Las aplicaciones administradas en Android usan el cifrado AES-128 en modo CBC mediante las bibliotecas de criptografía de la plataforma. El método de cifrado no está certificado mediante FIPS 140-2. El contenido del almacenamiento del dispositivo está siempre cifrado.|  
 |**Bloquear captura de pantalla** (solo en dispositivos Android)|Especifica que las funciones de captura de pantalla del dispositivo se bloquean cuando se usa esta aplicación.|  
 |**Deshabilitar sincronización de contactos**| A partir de la versión 1710, esta opción impide que la aplicación pueda guardar datos en la aplicación Contactos nativa del dispositivo. Si elige No, la aplicación podrá guardar los datos en la aplicación Contactos nativa del dispositivo.|  
 |**Deshabilitar la impresión**| A partir de la versión 1710, esta opción impide que la aplicación pueda imprimir datos profesionales o educativos. |  
@@ -140,7 +140,7 @@ Para obtener más información, consulte [Administrar el acceso a Internet media
 
  La directiva nueva se muestra en el nodo **Directivas de administración de aplicaciones** del área de trabajo **Biblioteca de software** .  
 
-##  <a name="step-4-associate-the-application-management-policy-with-a-deployment-type"></a>Paso 4: Asocie la directiva de administración de aplicaciones con un tipo de implementación  
+##  <a name="step-4-associate-the-application-management-policy-with-a-deployment-type"></a>Paso 4: Asociar la Directiva de administración de aplicaciones con un tipo de implementación  
 
  Cuando se crea un tipo de implementación para una aplicación que requiere una directiva de administración de aplicaciones, Configuration Manager lo reconoce y le pregunta si quiere asociar una directiva de administración de aplicaciones. Se le solicitará que asocie una directiva general y una directiva de explorador administrado para el explorador administrado. Para obtener más información, consulte [Create applications](create-applications.md) (Creación de aplicaciones).  
 
@@ -152,7 +152,7 @@ Para obtener más información, consulte [Administrar el acceso a Internet media
 >   
 >  Si se anula la inscripción del dispositivo en Configuration Manager, las directivas no se quitan de las aplicaciones. Las aplicaciones que tenían directivas aplicadas conservan la configuración de las directivas, incluso si la aplicación se desinstala y se vuelve a instalar.  
 
-##  <a name="step-5-monitor-the-app-deployment"></a>Paso 5: Monitor de implementación de la aplicación  
+##  <a name="step-5-monitor-the-app-deployment"></a>Paso 5: Supervisión de la implementación de la aplicación  
  Cuando cree e implemente una aplicación asociada a una directiva de administración de aplicaciones móviles, puede supervisar la aplicación y resolver los conflictos de directivas.  
 
 1. En la consola de Configuration Manager, seleccione **Biblioteca de software** > **Introducción** > **Implementaciones**.  

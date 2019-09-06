@@ -11,12 +11,12 @@ ms.author: mstewart
 description: Obtenga información sobre cómo configurar Windows Server Updates Services para aprobar automáticamente actualizaciones de definiciones.
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f79fd876d19ecfae0872c97a8aabe60c121a90f2
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: e868945cf3d87df17dbe8197ec99497f1478d973
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65494542"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70380256"
 ---
 # <a name="enable-endpoint-protection-malware-definitions-to-download-from-windows-server-update-services-wsus-for-configuration-manager"></a>Habilite la descarga de definiciones de malware de Endpoint Protection desde Windows Server Update Services (WSUS) para Configuration Manager.
 
@@ -92,7 +92,7 @@ ms.locfileid: "65494542"
 10. En el cuadro de diálogo **Aprobaciones automáticas** , active la casilla de la regla creada recientemente y luego haga clic en **Ejecutar regla**.
 
 > [!NOTE]
->  Para maximizar el rendimiento en los equipos cliente y el servidor de WSUS, rechace las actualizaciones de definiciones anteriores. Para ello, puede configurar la aprobación automática de las revisiones y el rechazo automático de las actualizaciones expiradas. Para obtener más información, vea el [artículo de Microsoft Knowledge Base 938947](http://go.microsoft.com/fwlink/p/?LinkId=204078).
+>  Para maximizar el rendimiento en los equipos cliente y el servidor de WSUS, rechace las actualizaciones de definiciones anteriores. Para ello, puede configurar la aprobación automática de las revisiones y el rechazo automático de las actualizaciones expiradas. Para obtener más información, vea el [artículo de Microsoft Knowledge Base 938947](https://go.microsoft.com/fwlink/p/?LinkId=204078).
 > 
 > [!div class="button"]
 > [Paso siguiente >](endpoint-antimalware-policies.md)

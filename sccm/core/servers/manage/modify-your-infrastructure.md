@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cd02452e8a92ca95e2df594a2d4b8c3c735ad924
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: 001b083318771f00e7122c7f63a40aea95a815a4
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68338099"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379868"
 ---
 # <a name="modify-your-system-center-configuration-manager-infrastructure"></a>Modificar la infraestructura de System Center Configuration Manager
 
@@ -189,10 +189,10 @@ La documentación de SQL Server puede ayudarle a [registrar manualmente el SPN](
 
 Puede registrar un SPN para la cuenta de servicio SQL Server del servidor de base de datos del sitio mediante la herramienta **Setspn** . Debe ejecutar la herramienta Setspn en un equipo que reside en el dominio de SQL Server, y debe utilizar credenciales de administrador de dominio para ejecutarla.  
 
-Utilice los procedimientos siguientes como ejemplos de cómo administrar el SPN para la cuenta de servicio de SQL Server que utiliza la herramienta Setspn en Windows Server 2008 R2. Para obtener instrucciones específicas sobre Setspn, consulte [Setspn Overview (Información general de Setspn)](http://go.microsoft.com/fwlink/p/?LinkId=226343), o documentación similar específica de su sistema operativo.  
+Utilice los procedimientos siguientes como ejemplos de cómo administrar el SPN para la cuenta de servicio de SQL Server que utiliza la herramienta Setspn en Windows Server 2008 R2. Para obtener instrucciones específicas sobre Setspn, consulte [Setspn Overview (Información general de Setspn)](https://go.microsoft.com/fwlink/p/?LinkId=226343), o documentación similar específica de su sistema operativo.  
 
 > [!NOTE]  
-> Los procedimientos siguientes hacen referencia a la herramienta de línea de comandos Setspn. La herramienta de línea de comandos Setspn se incluye al instalar Herramientas de soporte de Windows Server 2003 desde el CD de producto o desde [Microsoft Download Center (Centro de descarga de Microsoft)](http://go.microsoft.com/fwlink/p/?LinkId=100114). Para obtener más información sobre la instalación de Herramientas de soporte de Windows desde el CD de producto, consulte [Instalar las herramientas de soporte de Windows](http://go.microsoft.com/fwlink/p/?LinkId=62270).  
+> Los procedimientos siguientes hacen referencia a la herramienta de línea de comandos Setspn. La herramienta de línea de comandos Setspn se incluye al instalar Herramientas de soporte de Windows Server 2003 desde el CD de producto o desde [Microsoft Download Center (Centro de descarga de Microsoft)](https://go.microsoft.com/fwlink/p/?LinkId=100114). Para obtener más información sobre la instalación de Herramientas de soporte de Windows desde el CD de producto, consulte [Instalar las herramientas de soporte de Windows](https://go.microsoft.com/fwlink/p/?LinkId=62270).  
 
 #### <a name="to-manually-create-a-domain-user-service-principal-name-spn-for-the-sql-server-service-account"></a>Para crear manualmente un nombre de entidad de seguridad de servicio (SPN) de usuario de dominio para la cuenta de servicio de SQL Server  
 

@@ -10,12 +10,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8caed88289af0947bb9924e50f8369412e3c55f2
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 76bf5ffecd21d25d152d74957473571b05f7d2a8
+ms.sourcegitcommit: f679fc1e46c191a1780ae961d155c927fc353dce
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67676690"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176705"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>Referencia técnica de controles criptográficos
 
@@ -197,21 +197,17 @@ System Center Configuration Manager usa la firma y el cifrado para ayudar a prot
 
 - Punto de distribución habilitado con multidifusión  
 
-- Servidor que ejecuta Internet Information Services (IIS)  
-
 - Punto de servicios de informes  
 
 - Punto de actualización de software  
 
 - Punto de migración de estado  
 
-- Punto de Validador de mantenimiento del sistema  
-
 - Conector de Microsoft Intune  
 
-  Estos certificados se administran automáticamente mediante Configuration Manager y, en caso necesario, se generan automáticamente.  
+Estos certificados se administran automáticamente mediante Configuration Manager y, en caso necesario, se generan automáticamente.  
 
-  Configuration Manager también usa un certificado de autenticación del cliente para enviar mensajes de estado desde el punto de distribución hasta el punto de administración. Cuando el punto de administración está configurado solamente para conexiones de cliente HTTPS, se debe utilizar un certificado PKI. Si el punto de administración acepta las conexiones HTTP, se puede utilizar un certificado PKI o seleccionar la opción de uso de un certificado autofirmado que tiene capacidad de autenticación de servidor, utiliza SHA-256 y tiene una longitud de clave de 2048 bits.  
+Configuration Manager también usa un certificado de autenticación del cliente para enviar mensajes de estado desde el punto de distribución hasta el punto de administración. Cuando el punto de administración está configurado solamente para conexiones de cliente HTTPS, se debe utilizar un certificado PKI. Si el punto de administración acepta las conexiones HTTP, se puede utilizar un certificado PKI o seleccionar la opción de uso de un certificado autofirmado que tiene capacidad de autenticación de servidor, utiliza SHA-256 y tiene una longitud de clave de 2048 bits.  
 
 ### <a name="server-communication-between-sites"></a>Comunicación de servidor entre sitios  
  Configuration Manager transfiere datos entre sitios mediante el uso de replicación de base de datos y replicación basada en archivos. Para obtener más información, vea [Communications between endpoints](/sccm/core/plan-design/hierarchy/communications-between-endpoints) (Comunicaciones entre puntos de conexión).  

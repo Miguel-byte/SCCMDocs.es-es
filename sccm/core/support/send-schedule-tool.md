@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97c506c85cbb26dbb68b2e0eb0c223ae2a9d5b7e
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 799de01786debb44450d1ba67c75c14a1762f851
+ms.sourcegitcommit: f679fc1e46c191a1780ae961d155c927fc353dce
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500777"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176789"
 ---
 # <a name="send-schedule-tool"></a>Send Schedule Tool
 
@@ -95,7 +95,6 @@ Lista de todos los GUID de mensaje o UID de DCM disponibles para el envío. Mues
 |{00000000-0000-0000-0000-000000000061}|Notificación de estado de DP del mismo nivel|
 |{00000000-0000-0000-0000-000000000062}|Programación de comprobación de paquete pendiente de DP del mismo nivel|
 |{00000000-0000-0000-0000-000000000063}|Programación de instalación de actualizaciones de SUM|
-|{00000000-0000-0000-0000-000000000071}|Acción de NAP|
 |{00000000-0000-0000-0000-000000000101}|Ciclo de recopilación de inventario de hardware|
 |{00000000-0000-0000-0000-000000000102}|Ciclo de recopilación de inventario de software|
 |{00000000-0000-0000-0000-000000000103}|Ciclo de recopilación de datos de detección|
@@ -112,7 +111,6 @@ Lista de todos los GUID de mensaje o UID de DCM disponibles para el envío. Mues
 |{00000000-0000-0000-0000-000000000114}|Actualizar la directiva de almacenamiento|
 |{00000000-0000-0000-0000-000000000115}|Punto alto de envío masivo de directiva de sistema de estado|
 |{00000000-0000-0000-0000-000000000116}|Punto bajo de envío masivo de directiva de sistema de estado|
-|{00000000-0000-0000-0000-000000000120}|Directiva de comprobación de estado de AMT|
 |{00000000-0000-0000-0000-000000000121}|Acción de directiva del administrador de aplicación|
 |{00000000-0000-0000-0000-000000000122}|Acción de directiva del usuario de administrador de aplicación|
 |{00000000-0000-0000-0000-000000000123}|Acción de evaluación global del administrador de aplicación|

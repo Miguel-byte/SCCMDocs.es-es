@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4ecf757a35556d4b810df47ca50a6c7bac59467
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 6c0880b7ba84ecf2e99c2b0e0e791b1c56802378
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68535651"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70378176"
 ---
 # <a name="plan-for-internet-based-client-management-in-system-center-configuration-manager"></a>Planificación de la administración de cliente basada en Internet en System Center Configuration Manager
 
@@ -200,4 +200,4 @@ La administración de cliente basada en Internet (a veces denominada IBCM) le pe
 
     Para obtener información de configuración compatible con estos requisitos, consulte la documentación del firewall o del servidor proxy.  
 
-    Para obtener información sobre requisitos de comunicación similares cuando se usa el punto de actualización de software para conexiones de cliente de Internet, vea la documentación de Windows Server Update Services (WSUS). Por ejemplo, para WSUS en Windows Server 2003, vea [Apéndice D: Security Settings](http://go.microsoft.com/fwlink/p/?LinkId=143368) (Apéndice D: Configuración de seguridad), el apéndice de implementación para la configuración de seguridad.
+    Para obtener información sobre requisitos de comunicación similares cuando se usa el punto de actualización de software para conexiones de cliente de Internet, vea la documentación de Windows Server Update Services (WSUS). Por ejemplo, para WSUS en Windows Server 2003, vea [Apéndice D: Security Settings](https://go.microsoft.com/fwlink/p/?LinkId=143368) (Apéndice D: Configuración de seguridad), el apéndice de implementación para la configuración de seguridad.
