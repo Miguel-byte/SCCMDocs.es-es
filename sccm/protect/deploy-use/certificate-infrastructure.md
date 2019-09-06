@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cd9bef65c7b88fa22663174905b33d8977097d31
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: b597773cda5e36ea56a34ff1c6d7e793fc1f1e0b
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500681"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70380282"
 ---
 # <a name="configure-certificate-infrastructure"></a>Configuración de la infraestructura de certificados
 
@@ -35,7 +35,7 @@ Siga estos pasos para configurar la infraestructura de certificados SCEP o PFX.
 
 ### <a name="to-install-and-configure-the-network-device-enrollment-service-and-dependencies"></a>Para instalar y configurar el Servicio de inscripción de dispositivos de red y dependencias  
 
-1. En un servidor que ejecute Windows Server 2012 R2, instale y configure el servicio de rol Servicio de inscripción de dispositivos de red para el rol de servidor Servicios de certificados de Active Directory. Para obtener más información, consulte [Network Device Enrollment Service Guidance (Guía del Servicio de inscripción de dispositivos de red)](http://go.microsoft.com/fwlink/p/?LinkId=309016) en la biblioteca de Servicios de certificados de Active Directory de TechNet.  
+1. En un servidor que ejecute Windows Server 2012 R2, instale y configure el servicio de rol Servicio de inscripción de dispositivos de red para el rol de servidor Servicios de certificados de Active Directory. Para obtener más información, consulte [Network Device Enrollment Service Guidance (Guía del Servicio de inscripción de dispositivos de red)](https://go.microsoft.com/fwlink/p/?LinkId=309016) en la biblioteca de Servicios de certificados de Active Directory de TechNet.  
 
 2. Compruebe y, si es necesario, modifique los permisos de seguridad para las plantillas de certificado que está utilizando el Servicio de inscripción de dispositivos de red:  
 
@@ -45,7 +45,7 @@ Siga estos pasos para configurar la infraestructura de certificados SCEP o PFX.
 
    -   Para la cuenta de servicio SCEP que el grupo de aplicaciones del Servicio de inscripción de dispositivos de red utiliza: los permisos **Leer** e **Inscribir** .  
 
-        Este requisito no es específico de System Center Configuration Manager, sino que es parte de la configuración del Servicio de inscripción de dispositivos de red. Para obtener más información, consulte [Network Device Enrollment Service Guidance (Guía del Servicio de inscripción de dispositivos de red)](http://go.microsoft.com/fwlink/p/?LinkId=309016) en la biblioteca de Servicios de certificados de Active Directory de TechNet.  
+        Este requisito no es específico de System Center Configuration Manager, sino que es parte de la configuración del Servicio de inscripción de dispositivos de red. Para obtener más información, consulte [Network Device Enrollment Service Guidance (Guía del Servicio de inscripción de dispositivos de red)](https://go.microsoft.com/fwlink/p/?LinkId=309016) en la biblioteca de Servicios de certificados de Active Directory de TechNet.  
 
    > [!TIP]  
    >  Para identificar las plantillas de certificado que el Servicio de inscripción de dispositivos de red usa, consulte la siguiente clave del Registro en el servidor que ejecuta el Servicio de inscripción de dispositivos de red: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP.  
@@ -70,17 +70,17 @@ Siga estos pasos para configurar la infraestructura de certificados SCEP o PFX.
 
    - Establezca la clave **MaxRequestBytes** en **16777216**.  
 
-     Para obtener más información, consulte el artículo [820129: Configuración del Registro de Http.sys para Windows](http://go.microsoft.com/fwlink/?LinkId=309013) en Microsoft Knowledge Base.  
+     Para obtener más información, consulte el artículo [820129: Configuración del Registro de Http.sys para Windows](https://go.microsoft.com/fwlink/?LinkId=309013) en Microsoft Knowledge Base.  
 
 6. En el mismo servidor, en el Administrador de Internet Information Services (IIS), modifique la configuración de filtrado de solicitudes de la aplicación /certsrv/mscep y, a continuación, reinicie el servidor. En el cuadro de diálogo **Modificar configuración del filtrado de solicitudes** , los valores en **Límites de las solicitudes** deben ser los siguientes:  
 
-   - **Longitud de contenido máxima permitida (bytes)**: **30000000**  
+   - **Longitud de contenido máxima permitida (bytes)** : **30000000**  
 
-   - **Longitud máxima de dirección URL (bytes)**: **65534**  
+   - **Longitud máxima de dirección URL (bytes)** : **65534**  
 
-   - **Cadena de consulta máxima (bytes)**: **65534**  
+   - **Cadena de consulta máxima (bytes)** : **65534**  
 
-     Para obtener más información acerca de estas opciones y sobre cómo configurarlas, consulte [Requests Limits (Límites de solicitudes)](http://go.microsoft.com/fwlink/?LinkId=309014) en la biblioteca de referencia de IIS.  
+     Para obtener más información acerca de estas opciones y sobre cómo configurarlas, consulte [Requests Limits (Límites de solicitudes)](https://go.microsoft.com/fwlink/?LinkId=309014) en la biblioteca de referencia de IIS.  
 
 7. Si desea poder solicitar un certificado con un período de validez inferior al de la plantilla de certificado que está utilizando: Esta configuración está deshabilitada de forma predeterminada para una entidad de certificación (CA) empresarial. Para habilitar esta opción en una CA empresarial, utilice la herramienta de línea de comandos Certutil y, a continuación, detenga y reinicie el servicio de certificado mediante el uso de los comandos siguientes:  
 
@@ -90,9 +90,9 @@ Siga estos pasos para configurar la infraestructura de certificados SCEP o PFX.
 
    3. **net start certsvc**  
 
-      Para obtener más información, consulte [Certificate Services Tools and Settings (Configuración y herramientas de servicios de certificados)](http://go.microsoft.com/fwlink/p/?LinkId=309015) en la biblioteca de tecnologías de PKI de TechNet.  
+      Para obtener más información, consulte [Certificate Services Tools and Settings (Configuración y herramientas de servicios de certificados)](https://go.microsoft.com/fwlink/p/?LinkId=309015) en la biblioteca de tecnologías de PKI de TechNet.  
 
-8. Compruebe que el Servicio de inscripción de dispositivos de red funciona. Para ello, use el siguiente vínculo de ejemplo: **https://server.contoso.com/certsrv/mscep/mscep.dll**. Se debería visualizar la página web integrada de Servicio de inscripción de dispositivos de red. En esta página web se define el servicio y se indica que los dispositivos de red utilizan la dirección URL para enviar solicitudes de certificados.  
+8. Compruebe que el Servicio de inscripción de dispositivos de red funciona. Para ello, use el siguiente vínculo de ejemplo: **https://server.contoso.com/certsrv/mscep/mscep.dll** . Se debería visualizar la página web integrada de Servicio de inscripción de dispositivos de red. En esta página web se define el servicio y se indica que los dispositivos de red utilizan la dirección URL para enviar solicitudes de certificados.  
 
    Ahora que están configurados el Servicio de inscripción de dispositivos de red y las dependencias, está listo para instalar y configurar el punto de Registro de certificado.
 
@@ -126,7 +126,7 @@ Debe instalar y configurar al menos un punto de registro de certificados en la j
    - Si ha seleccionado **Procesar solicitudes de certificado SCEP**, configure lo siguiente:
      -   **Nombre del sitio web**, **Número de puerto HTTPS** y **Nombre de aplicación virtual** para el punto de registro de certificado. Estos campos se rellenan automáticamente con los valores predeterminados. 
      -   **Dirección URL para el Servicio de inscripción de dispositivos de red y certificado de CA raíz**: haga clic en **Agregar** y, en el cuadro de diálogo **Agregar dirección URL y certificado de CA raíz**, especifique lo siguiente:
-         - **Dirección URL para el Servicio de inscripción de dispositivos de red**: especifique la dirección URL en el formato siguiente: https://*<server_FQDN>*/certsrv/mscep/mscep.dll . Por ejemplo, si el FQDN del servidor que ejecuta el Servicio de inscripción de dispositivos de red es server1.contoso.com, escriba **https://server1.contoso.com/certsrv/mscep/mscep.dll**.
+         - **Dirección URL para el Servicio de inscripción de dispositivos de red**: especifique la dirección URL en el formato siguiente: https:// *<server_FQDN>* /certsrv/mscep/mscep.dll . Por ejemplo, si el FQDN del servidor que ejecuta el Servicio de inscripción de dispositivos de red es server1.contoso.com, escriba **https://server1.contoso.com/certsrv/mscep/mscep.dll** .
          - **Certificado de CA raíz**: Busque y seleccione el archivo de certificado (.cer) que creó y guardó en **Paso 1: Instalar y configurar el Servicio de inscripción de dispositivos de red y dependencias**. Este certificado de CA raíz permite al punto de registro de certificados validar el certificado de autenticación de cliente que el módulo de directivas de System Center Configuration Manager usará.  
 
    - Si seleccionó **Procesar solicitudes de certificado PFX**, configure los detalles de conexión y las credenciales de la entidad de certificación elegida.
@@ -160,7 +160,7 @@ Debe instalar y configurar al menos un punto de registro de certificados en la j
 
     -   Mediante un explorador, compruebe que puede conectarse a la dirección URL del punto de registro de certificados, como por ejemplo, https://server1.contoso.com/CMCertificateRegistration. Se debería visualizar una página de **error del servidor** para el nombre de la aplicación, con una descripción de HTTP 404.  
 
-11. Busque el archivo de certificado exportado para la CA raíz que el punto de registro de certificado creó automáticamente en la carpeta siguiente en el equipo del servidor de sitio primario:*<ruta de instalación de Configuration Manager\>* \inboxes\certmgr.box. Guarde este archivo en una ubicación protegida a la que pueda acceder de forma segura posteriormente cuando instale el módulo de directivas de System Center Configuration Manager en el servidor que ejecuta el Servicio de inscripción de dispositivos de red.  
+11. Busque el archivo de certificado exportado para la CA raíz que el punto de registro de certificado creó automáticamente en la carpeta siguiente en el equipo del servidor de sitio primario: *<ruta de instalación de Configuration Manager\>* \inboxes\certmgr.box. Guarde este archivo en una ubicación protegida a la que pueda acceder de forma segura posteriormente cuando instale el módulo de directivas de System Center Configuration Manager en el servidor que ejecuta el Servicio de inscripción de dispositivos de red.  
 
     > [!TIP]  
     >  Este certificado no está disponible inmediatamente en esta carpeta. Es posible que tenga que esperar (por ejemplo, media hora) para que System Center Configuration Manager copie el archivo en esta ubicación.  
@@ -186,7 +186,7 @@ Debe instalar y configurar el módulo de directivas de System Center Configurati
 
 4. En la página **Carpeta de instalación** , acepte la carpeta de instalación predeterminada para el módulo de directivas o especifique una carpeta alternativa. A continuación, haga clic en **Siguiente**.  
 
-5. En la página **Punto de registro de certificado** , especifique la dirección URL del punto de registro de certificado. Para ello, use el FQDN del servidor del sistema de sitios y el nombre de la aplicación virtual especificado en las propiedades del punto de registro de certificado. El nombre de la aplicación virtual predeterminado es CMCertificateRegistration. Por ejemplo, si el servidor del sistema de sitio tiene el FQDN server1.contoso.com y se usó el nombre de la aplicación virtual predeterminada, especifique **https://server1.contoso.com/CMCertificateRegistration**.  
+5. En la página **Punto de registro de certificado** , especifique la dirección URL del punto de registro de certificado. Para ello, use el FQDN del servidor del sistema de sitios y el nombre de la aplicación virtual especificado en las propiedades del punto de registro de certificado. El nombre de la aplicación virtual predeterminado es CMCertificateRegistration. Por ejemplo, si el servidor del sistema de sitio tiene el FQDN server1.contoso.com y se usó el nombre de la aplicación virtual predeterminada, especifique **https://server1.contoso.com/CMCertificateRegistration** .  
 
 6. Acepte el puerto predeterminado **443** o especifique otro número de puerto que use el punto de Registro de certificado. A continuación, haga clic en **Siguiente**.  
 

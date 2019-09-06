@@ -10,12 +10,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0a05fc1c07df8b95ad9305d199bf5abbb3eff3a1
-ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
+ms.openlocfilehash: 9a205d17835675f804736c0513bc9d6c7706e19b
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66716179"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379582"
 ---
 # <a name="how-to-create-configuration-items-for-windows-phone-devices-managed-without-the-system-center-configuration-manager-client"></a>Cómo crear elementos de configuración para dispositivos Windows Phone administrados sin el cliente de System Center Configuration Manager
 
@@ -70,7 +70,7 @@ Use el elemento de configuración de **Windows Phone** de System Center Configur
 ### <a name="password"></a>Contraseña  
  Esta configuración se aplica a Windows Phone 8 y Windows Phone 8.1.  
   
-|Configuración|Detalles|  
+|Parámetro|Detalles|  
 |-------------|-------------|  
 |**Requerir configuración de contraseña en dispositivos**|Se requiere una contraseña en dispositivos compatibles.|  
 |**Longitud de contraseña mínima (caracteres)**|La longitud mínima de la contraseña.|  
@@ -82,7 +82,7 @@ Use el elemento de configuración de **Windows Phone** de System Center Configur
   
 ### <a name="device"></a>Dispositivo  
   
-|Configuración|Detalles|  
+|Parámetro|Detalles|  
 |-------------|-------------|  
 |**Captura de pantalla**|Permite al usuario obtener una captura de pantalla del dispositivo.<br /><br /> (Solo Windows Phone 8.1)|  
 |**Envío de datos de diagnóstico**|Permite el envío de archivos de registro de aplicación.|  
@@ -93,7 +93,7 @@ Use el elemento de configuración de **Windows Phone** de System Center Configur
 ### <a name="email-management"></a>Administración de correo electrónico  
  Esta configuración se aplica a Windows Phone 8 y Windows Phone 8.1.  
   
-|Configuración|Detalles|  
+|Parámetro|Detalles|  
 |-------------|-------------|  
 |**Correo electrónico POP e IMAP**|Permite la conexión con cuentas de correo electrónico que usan los estándares POP e IMAP.|  
 |**Tiempo máximo de conservación de correo electrónico**|Tiempo de conservación de correo electrónico antes de eliminarse del servidor.|  
@@ -108,14 +108,14 @@ Use el elemento de configuración de **Windows Phone** de System Center Configur
 ### <a name="store"></a>Tienda  
  Esta configuración se aplica solo a dispositivos Windows Phone 8.1.  
   
-|Configuración|Detalles|  
+|Parámetro|Detalles|  
 |-------------|-------------|  
 |**Tienda de aplicaciones**|Permite el acceso a la tienda de aplicaciones en el dispositivo.|  
   
-### <a name="browser"></a>Explorador  
+### <a name="browser"></a>Browser  
  Esta configuración se aplica a Windows Phone 8 y Windows Phone 8.1.  
   
-|Configuración|Detalles|  
+|Parámetro|Detalles|  
 |-------------|-------------|  
 |**Permitir explorador web**|Habilita o deshabilita el explorador de Internet predeterminado.|  
 |**Autorrellenar**|El usuario puede cambiar la configuración de Autocompletar en el explorador.|  
@@ -127,7 +127,7 @@ Use el elemento de configuración de **Windows Phone** de System Center Configur
 ### <a name="internet-explorer"></a>Internet Explorer  
  Esta configuración se aplica a Windows Phone 8 y Windows Phone 8.1.  
   
-|Configuración|Detalles|  
+|Parámetro|Detalles|  
 |-------------|-------------|  
 |**Enviar siempre el encabezado No realizar seguimiento**|Impide que se envíe información de exploración a sitios de terceros.|  
 |**Zona de seguridad de intranet**||  
@@ -143,7 +143,7 @@ Use el elemento de configuración de **Windows Phone** de System Center Configur
   
 ### <a name="cloud"></a>Nube  
   
-|Configuración|Detalles|  
+|Parámetro|Detalles|  
 |-------------|-------------|  
 |**Sincronización de la configuración**|Permite la sincronización de configuraciones entre diferentes dispositivos.|  
 |**Sincronización de credenciales**|Permite la sincronización de credenciales entre diferentes dispositivos.|  
@@ -152,7 +152,7 @@ Use el elemento de configuración de **Windows Phone** de System Center Configur
   
 ### <a name="security"></a>Seguridad  
   
-|Configuración|Detalles|  
+|Parámetro|Detalles|  
 |-------------|-------------|  
 |**Instalación de archivos sin firmar**|Permite la carga de archivos sin firmar.|  
 |**Aplicaciones sin firmar**|Permite la carga de aplicaciones sin firmar.|  
@@ -165,7 +165,7 @@ Use el elemento de configuración de **Windows Phone** de System Center Configur
 ### <a name="peak-synchronization"></a>Sincronización durante horas punta  
  Esta configuración se aplica a Windows Phone 8 y Windows Phone 8.1.  
   
-|Configuración|Detalles|  
+|Parámetro|Detalles|  
 |-------------|-------------|  
 |**Especifica las horas pico**|Permite especificar un período de tiempo que usarán las dos configuraciones siguientes.|  
 |**Frecuencia de sincronización durante horas punta**|Permite elegir la frecuencia con que el dispositivo se sincronizará durante el tiempo máximo especificado.|  
@@ -174,7 +174,7 @@ Use el elemento de configuración de **Windows Phone** de System Center Configur
 ### <a name="roaming"></a>Movilidad  
  Esta configuración se aplica a Windows Phone 8 y Windows Phone 8.1.  
   
-|Configuración|Detalles|  
+|Parámetro|Detalles|  
 |-------------|-------------|  
 |**Administración de dispositivos en movilidad**|Permite que Configuration Manager administre el dispositivo cuando está en itinerancia.|  
 |**Descarga de software en movilidad**|Permite la descarga de software y aplicaciones cuando se está en movilidad.|  
@@ -184,7 +184,7 @@ Use el elemento de configuración de **Windows Phone** de System Center Configur
 ### <a name="encryption"></a>Cifrado  
  Esta configuración se aplica a Windows Phone 8 y Windows Phone 8.1.  
   
-|Configuración|Detalles|  
+|Parámetro|Detalles|  
 |-------------|-------------|  
 |**Cifrado de tarjeta de almacenamiento**|Se requieren las tarjetas de almacenamiento utilizadas con el dispositivo que se va a cifrar.|  
 |**Cifrado de archivo en el dispositivo**|Requiere el cifrado de los archivos en el dispositivo móvil.|  
@@ -209,7 +209,7 @@ Use el elemento de configuración de **Windows Phone** de System Center Configur
   
 2.  En el cuadro de diálogo **Conexión de red inalámbrica** , especifique la siguiente información sobre la conexión inalámbrica que se aprovisionará en dispositivos móviles:  
   
-|Configuración|Más información|  
+|Parámetro|Más información|  
 |-------------|----------------------|  
 |**Nombre de red (SSID)**||  
 |**Conexión de red**|Elija **Internet** o **Trabajo**.|  
@@ -241,7 +241,7 @@ Use el elemento de configuración de **Windows Phone** de System Center Configur
   
     -   **SPC**  
   
-    -   **Del mismo nivel**  
+    -   **Peer**  
   
 -   **Rol** : si **SPC** (certificado de editor de software) se selecciona como almacén de destino, elija el rol que se asociará con el certificado de:  
   
@@ -260,7 +260,7 @@ Use el elemento de configuración de **Windows Phone** de System Center Configur
 ### <a name="system-security"></a>Seguridad del sistema  
  Esta configuración se aplica a Windows Phone 8 y Windows Phone 8.1.  
   
-|Configuración|Detalles|  
+|Parámetro|Detalles|  
 |-------------|-------------|  
 |**Control de cuentas de usuario**|Habilita o deshabilita el Control de cuentas de usuario de Windows en el dispositivo.|  
 |**Firewall de red**|Habilita o deshabilita el Firewall de Windows.|  
@@ -274,7 +274,7 @@ Use el elemento de configuración de **Windows Phone** de System Center Configur
 ### <a name="windows-server-work-folders"></a>Carpetas de trabajo de Windows Server  
  Esta configuración se aplica a Windows Phone 8 y Windows Phone 8.1.  
   
-|Configuración|Detalles|  
+|Parámetro|Detalles|  
 |-------------|-------------|  
 |**Dirección URL de carpetas de trabajo**|Configura la ubicación de una carpeta de trabajo de Windows Server a la que los usuarios pueden conectarse desde su dispositivo.|  
   
@@ -292,10 +292,10 @@ Use el elemento de configuración de **Windows Phone** de System Center Configur
   
 |||  
 |-|-|  
-|Configuración|Más información|  
+|Parámetro|Más información|  
 |**Lista de aplicaciones bloqueadas**|Seleccione esta opción si desea especificar una lista de aplicaciones que los usuarios no podrán instalar.|  
 |**Lista de aplicaciones permitidas**|Seleccione esta opción si desea especificar una lista de aplicaciones que los usuarios pueden instalar.|  
-|**Agregar**|Agrega una aplicación a la lista seleccionada. Especifique un nombre de su elección (opcionalmente puede ser el editor de la aplicación) y la dirección URL de la aplicación en la tienda de aplicaciones.<br /><br /> Para especificar la dirección URL, en la página de la tienda de Windows Phone, busque la aplicación que desea usar.<br /><br /> **Ejemplo:** Buscar en el almacén para el **Skype** app. La dirección URL que usa será http://www.windowsphone.com/en-us/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51.<br /><br /> Para la aplicación del portal de la empresa, o aplicaciones de línea de negocio, no es necesario especificar una dirección URL completa, solo el GUID de la aplicación.|  
+|**Agregar**|Agrega una aplicación a la lista seleccionada. Especifique un nombre de su elección (opcionalmente puede ser el editor de la aplicación) y la dirección URL de la aplicación en la tienda de aplicaciones.<br /><br /> Para especificar la dirección URL, en la página de la tienda de Windows Phone, busque la aplicación que desea usar.<br /><br /> **Ejemplo:** Busque en la tienda la aplicación **Skype** . La dirección URL que usa será https://www.windowsphone.com/en-us/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51.<br /><br /> Para la aplicación del portal de la empresa, o aplicaciones de línea de negocio, no es necesario especificar una dirección URL completa, solo el GUID de la aplicación.|  
 |**Editarar**|Permite editar el nombre, el editor y la dirección URL de la aplicación seleccionada.|  
 |**Quitar**|Elimina la aplicación seleccionada de la lista.|  
 |**Importarar**|Importa la lista de las aplicaciones que ha especificado en un archivo de valores separados por comas. Utilice el formato, nombre de la aplicación, editor, dirección URL de la aplicación en el archivo.|  

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7811e1ab4a323660f16b707076015d9e81bda2bb
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 7ce20ac1917640bd9762bafb37c0e22fe39375fa
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56121301"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379567"
 ---
 # <a name="set-up-windows-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Configurar la administración híbrida de dispositivos Windows con System Center Configuration Manager y Microsoft Intune
 
@@ -60,17 +60,17 @@ Hay dos factores que determinan cómo puede simplificar la inscripción de dispo
 La inscripción automática permite a los usuarios inscribir en Intune PC Windows 10 y dispositivos móviles Windows 10 corporativos o personales. Para ello, deben agregar una cuenta profesional o educativa y aceptar su administración. Es así de sencillo. En segundo plano, el dispositivo del usuario se registra y se une a Azure Active Directory. Una vez se registra un dispositivo, este se administra con Intune.
 
 **Requisitos previos**
-- Suscripción a Azure Active Directory Premium ([suscripción de prueba](http://go.microsoft.com/fwlink/?LinkID=816845))
+- Suscripción a Azure Active Directory Premium ([suscripción de prueba](https://go.microsoft.com/fwlink/?LinkID=816845))
 - Suscripción a Microsoft Intune
 
 
 ### <a name="configure-automatic-mdm-enrollment"></a>Configurar la inscripción de MDM automática
 
-1. Inicie sesión en el [Portal de administración de Azure](https://portal.azure.com) (https://manage.windowsazure.com)) y seleccione **Azure Active Directory**.
+1. Inicie sesión en el [Portal de administración de Azure](https://portal.azure.com) (https://manage.windowsazure.com) ) y seleccione **Azure Active Directory**.
 
    ![Captura de pantalla de Azure Portal](../media/auto-enroll-azure-main.png)
 
-2. Seleccione **Movilidad (MDM y MAM)**.
+2. Seleccione **Movilidad (MDM y MAM)** .
 
    ![Captura de pantalla de Azure Portal](../media/auto-enroll-mdm.png)
 
@@ -80,7 +80,7 @@ La inscripción automática permite a los usuarios inscribir en Intune PC Window
 
 4. Configure **Ámbito de usuario de MDM**. Especifique qué dispositivos de los usuarios deben administrarse mediante Microsoft Intune. Los dispositivos Windows 10 de estos usuarios se inscribirán automáticamente para la administración con Microsoft Intune.
 
-    - **Ninguno**
+    - **None**
     - **Algunos**
     - **Todos**
 
@@ -104,13 +104,13 @@ Cree registros de recursos DNS CNAME para el dominio de su empresa. Por ejemplo,
 
 Aunque la creación de entradas DNS CNAME es opcional, los registros CNAME facilitan la inscripción para los usuarios. Si no se encuentra ningún registro CNAME de inscripción, se pedirá a los usuarios que escriban de forma manual el nombre del servidor MDM (enrollment.manage.microsoft.com).
 
-|Escriba|Nombre de host|Apunta a|TTL|  
+|Type|Nombre de host|Apunta a|TTL|  
 |----------|---------------|---------------|---|
 |CNAME|EnterpriseEnrollment.company_domain.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 hora|
 
 Si tiene más de un sufijo UPN, debe crear un CNAME para cada nombre de dominio y apuntar todos a EnterpriseEnrollment-s.manage.microsoft.com. Por ejemplo, si los usuarios de Contoso usan name@contoso.com, pero también usan name@us.contoso.com y name@eu.constoso.com como su correo electrónico o UPN, el administrador de DNS de Contoso necesitaría crear los CNAME siguientes.
 
-|Escriba|Nombre de host|Apunta a|TTL|  
+|Type|Nombre de host|Apunta a|TTL|  
 |----------|---------------|---------------|---|
 |CNAME|EnterpriseEnrollment.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 hora|
 |CNAME|EnterpriseEnrollment.us.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 hora|
