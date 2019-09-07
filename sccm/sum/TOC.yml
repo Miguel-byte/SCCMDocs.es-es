@@ -1,7 +1,6 @@
 - name: Administración de actualizaciones de software
   href: understand/software-updates-introduction.md
 - name: Conocer y explorar
-  expanded: true
   items:
     - name: Introducción a las actualizaciones de software
       href: understand/software-updates-introduction.md

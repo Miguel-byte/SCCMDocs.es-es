@@ -1,7 +1,6 @@
 - name: Infraestructura central
   href: understand/introduction.md
 - name: Conocer y explorar
-  expanded: true
   items:
     - name: Introducción a Configuration Manager
       items:

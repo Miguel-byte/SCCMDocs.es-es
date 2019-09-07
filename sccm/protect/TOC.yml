@@ -1,7 +1,6 @@
 - name: Proteger los datos y la infraestructura
   href: understand\protect-data-and-site-infrastructure.md
 - name: Conocer y explorar
-  expanded: true
   items:
     - name: Información general
       href: understand\protect-data-and-site-infrastructure.md
