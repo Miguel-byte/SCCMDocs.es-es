@@ -11,14 +11,14 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd86e5bd939ecd356a6cf290958a766266248645
-ms.sourcegitcommit: 75f48834b98ea6a238d39f24e04c127b2959d913
+ms.openlocfilehash: 44a01fa12a93b041e61e3bfc85890821bdf09c29
+ms.sourcegitcommit: 4316bff400ffbde8404f8a2092ec17e3601b8d29
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68604478"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70738405"
 ---
-# <a name="what-is-desktop-analytics"></a>¿Qué es el análisis de escritorio?
+# <a name="what-is-desktop-analytics"></a>¿Qué es Análisis de escritorio?
 
 > [!Note]  
 > Esta información está relacionada con un servicio de vista previa que se puede modificar sustancialmente antes de que se publique comercialmente. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información aquí proporcionada.  
@@ -69,12 +69,12 @@ Para usar el análisis de escritorio, asegúrese de que el entorno cumple los re
 
 ### <a name="technical"></a>T
 
-- Una suscripción de Azure activa, con permisos de [administrador global](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator) . No se admiten [las cuentas de Microsoft](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts) .  
+- Una suscripción de Azure activa, con permisos de [administrador global](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions) . No se admiten [las cuentas de Microsoft](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts) .  
 
     > [!Important]  
     > El análisis de escritorio se ofrece actualmente como un servicio de Office 365 y requiere una suscripción de Office 365 en el inquilino de Azure AD. Esto puede no ser un requisito en el futuro.
 
-    - Permisos de propietario o colaborador del **área de trabajo** para **configurar el área de trabajo**y los roles siguientes:  
+    - Permisos de propietario o **colaborador** del **área de trabajo** para **configurar el área de trabajo**y los roles siguientes:  
 
       - Rol de [**Administrador de análisis de escritorio**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) .
 

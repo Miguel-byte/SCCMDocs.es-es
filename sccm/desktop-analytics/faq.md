@@ -2,7 +2,7 @@
 title: Preguntas más frecuentes sobre análisis de escritorio
 titleSuffix: Configuration Manager
 description: Preguntas más frecuentes sobre el análisis de escritorio.
-ms.date: 09/03/2019
+ms.date: 09/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 884626cd46659917734fa309fa6e84fbdd517ae2
-ms.sourcegitcommit: b28a97e22a9a56c5ce3367c750ea2bb4d50449c3
+ms.openlocfilehash: 306c6569551e1068c0e682c893e94b8f1a920ade
+ms.sourcegitcommit: 4316bff400ffbde8404f8a2092ec17e3601b8d29
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70243642"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70738275"
 ---
 # <a name="desktop-analytics-faq"></a>Preguntas más frecuentes sobre análisis de escritorio
 
@@ -90,9 +90,9 @@ Sí, al establecer un área de trabajo de Windows Analytics existente como área
 |------------|---------------|
 | Importance | Sí |
 | Propietario de la aplicación | Sí |
-| Decisión de actualización | Sin  |
-| Plan de pruebas | Sin  |
-| Resultado de la prueba | Sin  |
+| Decisión de actualización | Sin |
+| Plan de pruebas | Sin |
+| Resultado de la prueba | Sin |
 
 #### <a name="importance-mapping"></a>Asignación de importancia
 
@@ -122,6 +122,12 @@ El proceso de migración es transaccional. Verá todas las entradas migradas sin
 ### <a name="im-not-ready-yet-can-i-migrate-after-the-initial-onboarding"></a>Todavía no estoy listo, ¿puedo migrar después de la incorporación inicial?
 
 No, en este momento tiene que decidir si migrar durante la [incorporación inicial](/sccm/desktop-analytics/set-up#initial-onboarding).
+
+### <a name="can-i-use-update-compliance-together-with-desktop-analytics"></a>¿Puedo usar Update Compliance junto con el análisis de escritorio?
+
+Sí. Si usa [Update Compliance](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started) en el Azure portal hoy, puede seguir haciendo esto ahora y más allá del 2020 de enero.
+
+<!-- For more information, see [blog post]... -->
 
 ## <a name="other"></a>Otros
 

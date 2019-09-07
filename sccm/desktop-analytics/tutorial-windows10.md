@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c3e69f2403b3a937c0ad6ba4c913483eb5dfdb1
-ms.sourcegitcommit: ef7800a294e5db5d751921c34f60296c1642fc1f
+ms.openlocfilehash: eb33c1e6750fe3302a5a59a6f4d67809b359236a
+ms.sourcegitcommit: 4316bff400ffbde8404f8a2092ec17e3601b8d29
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68712516"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70738292"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Tutorial: Implementación de Windows 10 en el piloto
 
@@ -43,7 +43,7 @@ Análisis de escritorio usa un *área de trabajo de log Analytics* en su suscrip
 
 Antes de comenzar este tutorial, asegúrese de que tiene los siguientes requisitos previos:  
 
-- Una suscripción de Azure activa, con permisos de [**administrador global**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator)  
+- Una suscripción de Azure activa, con permisos de [**administrador global**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions)  
 
     Para obtener más información, consulte [requisitos previos de análisis de escritorio](/sccm/desktop-analytics/overview#prerequisites).
 
@@ -114,7 +114,7 @@ Use este procedimiento para iniciar sesión en análisis de escritorio y configu
 5. En la página para **configurar el área de trabajo**:  
 
     > [!Note]  
-    > Para completar este paso, el usuario necesita permisos de **propietario del área de trabajo** y acceso adicional a la suscripción y al grupo de recursos de Azure. Para obtener más información, consulte [requisitos previos](/sccm/desktop-analytics/overview#prerequisites).  
+    > Para completar este paso, el usuario necesita permisos de **propietario del área de trabajo** y acceso adicional a la suscripción y al grupo de recursos de Azure. Para más información, consulte los [requisitos previos](/sccm/desktop-analytics/overview#prerequisites).  
 
     - Seleccione su suscripción de Azure.  
 
@@ -248,11 +248,11 @@ Use este procedimiento para crear un plan de implementación en análisis de esc
 
         - **Mis equipos obtienen automáticamente controladores de Windows Update**: La configuración predeterminada es **OFF**, que se recomienda al implementar con Configuration Manager.  
 
-        - **Defina un umbral de recuento de instalaciones bajo para las aplicaciones**: El valor predeterminado es `2%`. Las aplicaciones por debajo de este umbral se establecen automáticamente en el recuento de *instalaciones bajas*. El análisis de escritorio no valida estos complementos durante el programa piloto.  
+        - **Defina un umbral de recuento de instalaciones bajo para las aplicaciones**: El valor predeterminado es `2%`. Las aplicaciones por debajo de este umbral se establecen automáticamente en el *recuento de instalaciones bajas*. El análisis de escritorio no valida estos complementos durante el programa piloto.  
 
             Si una aplicación se instala en un porcentaje mayor de equipos que este umbral, el plan de implementación marca la aplicación como *digno*de interés. Después, puede decidir su importancia para probarla durante la fase piloto.  
 
-    - **Fecha**de finalización: Elija la fecha en que Windows debe implementarse completamente en todos los dispositivos de destino.  
+    - **Fecha de finalización**: Elija la fecha en que Windows debe implementarse completamente en todos los dispositivos de destino.  
 
 5. Seleccione **Crear**. El nuevo plan aparece en la lista de planes de implementación mientras se está procesando. Para agilizar el procesamiento, solicite una actualización de datos a petición. Para obtener más información, consulte [p + f de análisis de escritorio](/sccm/desktop-analytics/faq#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).
 
@@ -260,7 +260,7 @@ Use este procedimiento para crear un plan de implementación en análisis de esc
 
 7. En el menú plan de implementación, en el grupo **preparar** , seleccione **identificar importancia**.  
 
-    1. En la pestaña **aplicaciones** , seleccione Mostrar solo los activos **no** revisados.  
+    1. En la pestaña **aplicaciones** , seleccione Mostrar solo los activos **no revisados** .  
 
     2. Seleccione cada aplicación y, a continuación, seleccione **Editar**. Puede seleccionar más de una aplicación para editarla al mismo tiempo.  
 
@@ -326,11 +326,11 @@ A continuación, distribuya el paquete de actualización del sistema operativo a
 
 ### <a name="bkmk_create-ts"></a>Creación de una secuencia de tareas de actualización del sistema operativo para Windows 10
 
-1. En la consola de Configuration Manager, vaya al área de trabajo **biblioteca de software** , expanda **sistemas operativos**y, a continuación, seleccione **secuencias de tareas**.  
+1. En la consola de Configuration Manager, vaya al área de trabajo **Biblioteca de software**, expanda **Sistemas operativos** y haga clic en **Secuencias de tareas**.  
 
-2. En la pestaña **Inicio** de la cinta de opciones, en el grupo **crear** , seleccione **crear secuencia de tareas**.  
+2. En la pestaña **Inicio** de la cinta de opciones, en el grupo **Crear**, haga clic en **Crear secuencia de tareas**.  
 
-3. En la página **crear una nueva secuencia de tareas** del Asistente para crear secuencia de tareas, seleccione **actualizar un sistema operativo desde un paquete de actualización**y, después, seleccione **siguiente**.  
+3. En la página **Crear nueva secuencia de tareas** del Asistente para creación de secuencia de tareas, seleccione **Actualizar un sistema operativo desde un paquete de actualización** y luego elija **Siguiente**.  
 
 4. En la página **información de secuencia de tareas** , especifique un nombre de secuencia de **tareas** que identifique la secuencia de tareas.  
 
