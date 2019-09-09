@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 969bbb28e64c37d8843d634adce99916333540ed
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 2036b3a9981c1a27b24bff1f1f0f543813267dc7
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56130367"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70378107"
 ---
 # <a name="about-the-security-content-automation-protocol-scap-extensions"></a>Extensiones de Security Content Automation Protocol (SCAP)
 
@@ -76,9 +76,9 @@ Esta versión de las extensiones SCEP para Configuration Manager incluye y admit
 
 ## <a name="terms"></a>Términos
 
-- **Identificador de OVAL**: un identificador para una definición de OVAL específica que se ajusta al formato para identificadores de OVAL.  
+- **Identificador de OVAL:** un identificador para una definición de OVAL específica que se ajusta al formato para identificadores de OVAL.  
 
-- **Flujo de datos de resultados de SCAP**: una agrupación de componentes de SCAP, junto con las asignaciones de referencias entre componentes de SCAP, que incluyen contenido de salida (resultados).  
+- **Flujo de datos de resultados de SCAP:** una agrupación de componentes de SCAP, junto con las asignaciones de referencias entre componentes de SCAP, que incluyen contenido de salida (resultados).  
 
 - **Flujo de datos de origen de SCAP:** una agrupación de componentes de SCAP, junto con las asignaciones de referencias entre componentes de SCAP, que incluyen contenido de entrada (origen).
 
@@ -153,11 +153,11 @@ Las extensiones SCAP para Configuration Manager incluyen herramientas de línea 
 
 - Los parámetros de la línea de comandos `-help` y `-?` para cada herramienta imprimen el uso en la pantalla. Estos detalles de uso después están disponibles para los lectores de pantalla y otras tecnologías de asistencia.  
 
-- Para obtener más información, consulte [Windows Update](http://windows.microsoft.com/windows/help/accessibility).
+- Para obtener más información, consulte [Windows Update](https://windows.microsoft.com/windows/help/accessibility).
 
 Las extensiones SCAP también usan las características de accesibilidad de Configuration Manager. Para obtener la información, vea [Características de accesibilidad de Configuration Manager](/sccm/core/understand/accessibility-features).
 
-Para obtener más información sobre los productos y servicios de accesibilidad de Microsoft, vea el sitio web [Accesibilidad de Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=9212).
+Para obtener más información sobre los productos y servicios de accesibilidad de Microsoft, vea el sitio web [Accesibilidad de Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=9212).
 
 
 

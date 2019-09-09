@@ -1,40 +1,40 @@
 ---
-title: Protección contra amenazas avanzada de Windows Defender
+title: Protección contra amenazas avanzada de Microsoft Defender
 titleSuffix: Configuration Manager
-description: Aprenda a administrar y supervisar Protección contra amenazas avanzada de Windows Defender, un nuevo servicio que ayuda a las empresas a responder a los ataques avanzados.
-ms.date: 03/07/2017
+description: Obtenga información sobre cómo administrar y supervisar Protección contra amenazas avanzada de Microsoft Defender, un nuevo servicio que ayuda a las empresas a responder ante ataques sofisticados.
+ms.date: 05/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf48b4602245750071ad60e2f42cb9afa66c40aa
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 72ad06228a7ae0dd0fa375ff1152771790b10bbe
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123566"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70379987"
 ---
-# <a name="windows-defender-advanced-threat-protection"></a>Protección contra amenazas avanzada de Windows Defender
+# <a name="microsoft-defender-advanced-threat-protection"></a>Protección contra amenazas avanzada de Microsoft Defender
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-A partir de la versión 1606 de Configuration Manager (rama actual), Endpoint Protection puede ayudar a administrar y supervisar la [Protección contra amenazas avanzada (ATP) de Windows Defender](http://aka.ms/technet-wdatp). Protección contra amenazas avanzada de Windows Defender ayuda a las empresas a detectar e investigar ataques avanzados en sus redes, y responder ante ellos.  Las directivas de Configuration Manager o Microsoft Intune pueden ayudarle a incorporar y supervisar dispositivos administrados con Windows 10, versión 1607 (compilación 14328) o versiones posteriores.
+A partir de la versión 1606 de Configuration Manager (rama actual), Endpoint Protection puede ayudar a administrar y supervisar la [Protección contra amenazas avanzada (ATP) de Microsoft Defender](https://aka.ms/technet-wdatp) (anteriormente conocida como “ATP de Windows Defender”). ATP de Microsoft Defender ayuda a las empresas a detectar e investigar ataques avanzados en sus redes, y responder ante ellos.  Las directivas de Configuration Manager o Microsoft Intune pueden ayudarle a incorporar y supervisar dispositivos administrados con Windows 10, versión 1607 (compilación 14328) o versiones posteriores.
 
-Protección contra amenazas avanzada de Windows Defender es un servicio del [Centro de seguridad avanzada de Windows Defender](https://securitycenter.windows.com). Al agregar e implementar un archivo de configuración de incorporación de cliente, Configuration Manager puede supervisar el estado de implementación y el mantenimiento del agente de Protección contra amenazas avanzada de Windows Defender. Protección contra amenazas avanzada de Windows Defender se admite en equipos que ejecutan el cliente de Configuration Manager o que están administrados por Microsoft Intune, pero no se admiten equipos con una administración híbrida de MDM e Intune.
+ATP de Microsoft Defender es un servicio del [Centro de seguridad avanzada de Windows Defender](https://securitycenter.windows.com). Al agregar e implementar un archivo de configuración de incorporación de cliente, Configuration Manager puede supervisar el estado de implementación y el mantenimiento del agente de ATP de Microsoft Defender. ATP de Microsoft Defender es compatible con equipos que ejecutan el cliente de Configuration Manager o que están administrados por Microsoft Intune. En cambio, no se admiten equipos con una administración híbrida de MDM e Intune.
 
  **Requisitos previos**  
 
--   Suscripción al servicio en línea Protección de amenazas avanzada de Windows Defender  
+-   Suscripción al servicio en línea Protección contra amenazas avanzada de Microsoft Defender  
 -   Equipos cliente que ejecutan Windows 10, versión 1607 y posteriores  
 -   Equipos cliente que ejecutan Configuration Manager versión 1610 o un agente cliente posterior, o administrados por Microsoft Intune
 
 ## <a name="how-to-create-an-onboarding-configuration-file"></a>Cómo crear un archivo de configuración de incorporación de cliente  
 
- 1.  Inicie sesión en el [servicio en línea Protección contra amenazas avanzada de Windows Defender](https://securitycenter.windows.com/).   
+ 1.  Inicio de sesión en el [servicio en línea de ATP de Microsoft defender](https://securitycenter.windows.com/)   
 
  2.  Haga clic en el elemento de menú **Administración de puntos de conexión**.  
 
@@ -43,15 +43,15 @@ Protección contra amenazas avanzada de Windows Defender es un servicio del [Cen
  4.  Descargue el archivo comprimido (.zip) y extraiga el contenido.
 
 > [!IMPORTANT]
-> El archivo de configuración de Protección contra amenazas avanzada de Windows Defender contiene información confidencial que debe mantenerse segura.
+> El archivo de configuración de ATP de Microsoft Defender contiene información confidencial que debe mantenerse segura.
 
-## <a name="onboard-devices-for-windows-defender-atp"></a>Dispositivos incorporados para Protección contra amenazas avanzada de Windows Defender  
+## <a name="onboard-devices-for-microsoft-defender-atp"></a>Incorporación de dispositivos para ATP de Microsoft defender  
 
-1. En la consola de Configuration Manager, vaya a **Activos y compatibilidad** > **Información general** > **Endpoint Protection** > **Directivas de Windows Defender ATP** y haga clic en **Crear directiva de Windows Defender ATP**. Se abre el Asistente para crear directiva de Protección contra amenazas avanzada de Windows Defender.  
+1. En la consola de Configuration Manager, vaya a **Activos y compatibilidad** > **Información general** > **Endpoint Protection** > **Directivas de Windows Defender ATP** y haga clic en **Crear directiva de Windows Defender ATP**. Se abre el Asistente para directivas de ATP de Microsoft defender.  
 
-2. Escriba el **Nombre** y la **Descripción** de la directiva de Protección contra amenazas avanzada de Windows Defender y seleccione **Incorporación**. Haga clic en **Siguiente**.  
+2. Escriba el **nombre** y la **descripción** de la directiva de ATP de Microsoft Defender y seleccione **Incorporación**. Haga clic en **Siguiente**.  
 
-3. **Vaya** al archivo de configuración proporcionado por el inquilino del servicio en la nube de Protección contra amenazas avanzada de Windows Defender de la organización. Haga clic en **Siguiente**.  
+3. **Vaya** al archivo de configuración proporcionado por el inquilino del servicio en la nube de ATP de Microsoft Defender de la organización. Haga clic en **Siguiente**.  
 
 4. Especifique los ejemplos de archivos de dispositivos administrados que se recopilan y se comparten para su análisis.  
 
@@ -63,17 +63,17 @@ Protección contra amenazas avanzada de Windows Defender es un servicio del [Cen
 
 5. Revise el resumen y finalice el asistente.  
 
-6. Ahora puede hacer clic en **Implementar** para implementar la directiva de Windows Defender ATP en equipos cliente administrados.  
+6. Ahora puede hacer clic en **Implementar** para implementar la directiva de ATP de Microsoft Defender en equipos cliente administrados.  
 
-## <a name="monitor-windows-defender-atp"></a>Supervisión de Protección contra amenazas avanzada de Windows Defender  
+## <a name="monitor-microsoft-defender-atp"></a>Supervisión de ATP de Microsoft defender  
 
 1.  En la consola de Configuration Manager, vaya a **Supervisión** > **Información general** > **Seguridad** y luego haga clic en **Protección contra amenazas avanzada de Windows Defender**.  
 
-2.  Revise el panel de Protección contra amenazas avanzada de Windows Defender.  
+2.  Revise el panel de Protección contra amenazas avanzada de Microsoft Defender.  
 
-    -   **Estado de implementación del agente de Windows Defender**: el número y el porcentaje de equipos cliente administrados aptos con directiva de Windows Defender ATP activa incorporados.  
+    -   **Estado de implementación del agente de Windows Defender**: el número y el porcentaje de equipos cliente administrados aptos con directiva de ATP de Microsoft Defender activa incorporados.  
 
-    -   **Estado del agente de Windows Defender ATP**: porcentaje de equipos cliente que envía informes de estado de su agente de Windows Defender ATP.  
+    -   **Agent Health de ATP de Windows Defender**: porcentaje de equipos cliente que envían informes de estado de su agente de ATP de Microsoft Defender.  
 
         -   **Correcto**: funciona correctamente.  
 
@@ -86,7 +86,7 @@ Protección contra amenazas avanzada de Windows Defender es un servicio del [Cen
 
 ## <a name="how-to-create-and-deploy-an-offboarding-configuration-file"></a>Creación e implementación de un archivo de configuración de retirada  
 
-1.  Inicie sesión en el [servicio en línea Protección contra amenazas avanzada de Windows Defender](https://securitycenter.windows.com/).   
+1.  Inicio de sesión en el [servicio en línea de ATP de Microsoft defender](https://securitycenter.windows.com/)   
 
 2.  Haga clic en el elemento de menú **Administración de puntos de conexión**.  
 
@@ -94,19 +94,19 @@ Protección contra amenazas avanzada de Windows Defender es un servicio del [Cen
 
 4.  Descargue el archivo comprimido (.zip) y extraiga el contenido. Los archivos de retirada son válidos durante 30 días.
 
-5.  En la consola de Configuration Manager, vaya a **Activos y compatibilidad** > **Información general** > **Endpoint Protection** > **Directivas de Windows Defender ATP** y haga clic en **Crear directiva de Windows Defender ATP**. Se abre el Asistente para crear directiva de Protección contra amenazas avanzada de Windows Defender.  
+5.  En la consola de Configuration Manager, vaya a **Activos y compatibilidad** > **Información general** > **Endpoint Protection** > **Directivas de Windows Defender ATP** y haga clic en **Crear directiva de Windows Defender ATP**. Se abre el Asistente para directivas de ATP de Microsoft defender.  
 
-6.  Escriba el **Nombre** y la **Descripción** de la directiva de Protección contra amenazas avanzada de Windows Defender y seleccione **Retirada**. Haga clic en **Siguiente**.  
+6.  Escriba el **nombre** y la **descripción** de la directiva de ATP de Microsoft Defender y seleccione **Retirada**. Haga clic en **Siguiente**.  
 
-7.  **Vaya** al archivo de configuración proporcionado por el inquilino del servicio en la nube de Protección contra amenazas avanzada de Windows Defender de la organización. Haga clic en **Siguiente**.  
+7.  **Vaya** al archivo de configuración proporcionado por el inquilino del servicio en la nube de ATP de Microsoft Defender de la organización. Haga clic en **Siguiente**.  
 
 8.  Revise el resumen y finalice el asistente.  
 
-9.  Ahora puede hacer clic en **Implementar** para implementar la directiva de Windows Defender ATP en equipos cliente administrados.  
+9.  Ahora puede hacer clic en **Implementar** para implementar la directiva de ATP de Microsoft Defender en equipos cliente administrados.  
 
 > [!IMPORTANT]
-> El archivo de configuración de Protección contra amenazas avanzada de Windows Defender contiene información confidencial que debe mantenerse segura.
+> El archivo de configuración de ATP de Microsoft Defender contiene información confidencial que debe mantenerse segura.
 
-[Protección contra amenazas avanzada de Windows Defender](https://technet.microsoft.com/itpro/windows/keep-secure/windows-defender-advanced-threat-protection)
+[Protección contra amenazas avanzada de Microsoft Defender](https://technet.microsoft.com/itpro/windows/keep-secure/windows-defender-advanced-threat-protection)
 
-[Solucionar problemas de incorporación de Protección contra amenazas avanzada de Windows Defender](https://technet.microsoft.com/itpro/windows/keep-secure/troubleshoot-onboarding-windows-defender-advanced-threat-protection)
+[Solución de problemas de incorporación de Protección contra amenazas avanzada de Microsoft Defender](https://technet.microsoft.com/itpro/windows/keep-secure/troubleshoot-onboarding-windows-defender-advanced-threat-protection)

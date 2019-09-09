@@ -11,12 +11,12 @@ ms.assetid: 2e96f847-5b5a-4da9-8e8f-6aa488838508
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6878e36e5bf20774f6eef1ee855dda2f95dabfb4
-ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
+ms.openlocfilehash: 4cc806009f9cb02e50a2b023722a2045d4bde655
+ms.sourcegitcommit: b28a97e22a9a56c5ce3367c750ea2bb4d50449c3
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57558014"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70243711"
 ---
 # <a name="windows-autopilot-for-existing-devices"></a>Windows Autopilot para dispositivos existentes
 <!--3607717, fka 1358333-->
@@ -35,7 +35,7 @@ ms.locfileid: "57558014"
 
 - En Microsoft Intune, cree perfiles de Windows Autopilot. Para obtener más información, consulte [Inscripción de dispositivos Windows en Intune con Windows Autopilot](https://docs.microsoft.com/intune/enrollment-autopilot).
 
-- Un dispositivo no está registrado todavía con el servicio de Windows Autopilot. Si el dispositivo ya está registrado, el perfil asignado tendrá prioridad. El piloto automático para el perfil de dispositivos existente solo se aplica si se agote el perfil en línea.
+- Un dispositivo no está registrado todavía con el servicio de Windows Autopilot. Si el dispositivo ya está registrado, el perfil asignado tendrá prioridad. El perfil AutoPilot para dispositivos existentes solo se aplica si se agota el tiempo de espera del perfil en línea.
 
 
 
@@ -96,7 +96,7 @@ ms.locfileid: "57558014"
 
     - Habilite la opción de **Particionar y formatear el equipo de destino antes de instalar el sistema operativo**.  
 
-    - **Configurar secuencia de tareas para su uso con Bitlocker**: Si habilita esta opción, la secuencia de tareas incluye los pasos necesarios para habilitar Bitlocker  
+    - **Configurar la secuencia de tareas para su uso con BitLocker**: Si habilita esta opción, la secuencia de tareas incluye los pasos necesarios para habilitar BitLocker.  
 
     - **Clave del producto**: si tiene que especificar una clave de producto para la activación de Windows, escríbala aquí.  
 
@@ -142,3 +142,6 @@ Use la administración conjunta para mejorar las características de administrac
 - [Rutas hacia la administración conjunta](/sccm/comanage/quickstart-paths)
 - [Windows Autopilot con administración conjunta](/sccm/comanage/quickstart-autopilot)
 
+## <a name="see-also"></a>Consulte también
+
+- [Inscripción de dispositivos Windows en Intune con Windows Autopilot](https://docs.microsoft.com/intune/enrollment-autopilot)

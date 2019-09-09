@@ -2,7 +2,7 @@
 title: Pasos de la secuencia de tareas
 titleSuffix: Configuration Manager
 description: Obtenga información sobre los pasos que puede agregar a una secuencia de tareas de Configuration Manager.
-ms.date: 07/26/2019
+ms.date: 09/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4ee01c85cf978b595aa9d6a7948503b34927c31
-ms.sourcegitcommit: 2d38de4846ea47a03cc884cbd3df27db48f64a6a
+ms.openlocfilehash: 273e61024032defd10b3176fb70ac6c3a35125e2
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70110242"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70380040"
 ---
 # <a name="task-sequence-steps"></a>Pasos de la secuencia de tareas
 
@@ -1142,7 +1142,7 @@ Muchas de estas actualizaciones tienen dependencias. Por ejemplo, instale la act
 
 En la mayoría de circunstancias, use la configuración predeterminada para usar los resultados del análisis almacenados en caché.
 
-La variable **SMSTSSoftwareUpdateScanTimeout** controla el tiempo de espera del análisis de actualizaciones de software durante este paso. El valor predeterminado es 30 minutos. Para más información, vea [Task sequence variables](/sccm/osd/understand/task-sequence-variables#SMSTSSoftwareUpdateScanTimeout) (Variables de secuencia de tareas).
+La variable **SMSTSSoftwareUpdateScanTimeout** controla el tiempo de espera del análisis de actualizaciones de software durante este paso. El valor predeterminado es 60 minutos. Para más información, vea [Task sequence variables](/sccm/osd/understand/task-sequence-variables#SMSTSSoftwareUpdateScanTimeout) (Variables de secuencia de tareas).
 
 ### <a name="options"></a>Opciones  
 

@@ -1,8 +1,8 @@
 ---
 title: Actualización de dispositivos Windows a una versión diferente
 titleSuffix: Configuration Manager
-description: Actualice dispositivos que ejecuten Windows 10 Escritorio o Windows 10 Mobile a otra edición más reciente de forma automática con Configuration Manager.
-ms.date: 06/07/2019
+description: Use Configuration Manager para actualizar automáticamente los dispositivos de Windows 10 a otra edición de Windows.
+ms.date: 09/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -11,22 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ef2cd91eed668e66032c184944f448681d18564
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 643ba6189743d4e3d465fa369811867ebcd32e83
+ms.sourcegitcommit: b28a97e22a9a56c5ce3367c750ea2bb4d50449c3
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67677958"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70243614"
 ---
-# <a name="upgrade-windows-devices-with-the-edition-upgrade-policy-in-system-center-configuration-manager"></a>Actualizar dispositivos de Windows con la directiva de actualización de edición en System Center Configuration Manager
+# <a name="upgrade-windows-devices-to-a-new-edition-with-configuration-manager"></a>Actualizar dispositivos Windows a una nueva edición con Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-
-La **directiva de actualización de ediciones** le permite actualizar automáticamente los dispositivos que ejecutan una de las siguientes versiones de Windows 10 a otra edición:
-
-- Windows 10 Escritorio
-- Windows 10 Mobile
+La **Directiva de actualización de edición** permite actualizar automáticamente los dispositivos con Windows 10 a una edición diferente.
 
 Las siguientes rutas de acceso de actualización son compatibles:
 
@@ -34,65 +30,76 @@ Las siguientes rutas de acceso de actualización son compatibles:
 - Desde Windows 10 Home a Windows 10 Education
 - Desde Windows 10 Mobile a Windows 10 Mobile Enterprise
 
-Los dispositivos deben estar inscritos en Microsoft Intune o ejecutar el software cliente de Configuration Manager. Esta directiva actualmente no es compatible con equipos administrados por MDM local.
+Los dispositivos deben ejecutar el software cliente de Configuration Manager. No se admiten los dispositivos administrados por [MDM local](/sccm/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure) .
 
-## <a name="before-you-start"></a>Antes de empezar  
- Antes de empezar a actualizar dispositivos a la versión más reciente, consulte los requisitos previos siguientes:  
+## <a name="before-you-start"></a>Antes de empezar
 
--   Para las ediciones de escritorio de Windows 10: una clave de producto válida para instalar la nueva versión de Windows en todos los dispositivos de destino de la directiva. Esta clave de producto puede ser una clave de activación múltiple (CAM) o una clave de licencias por volumen genérica (CLVG). Las CLVG también se conocen como claves de configuración de cliente del servicio de administración de claves (SAC). Para obtener más información, consulte [Plan para la activación por volumen](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). Para obtener una lista de claves de configuración de cliente KMS, consulte el [Apéndice A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) de la Guía de activación de Windows Server. <!--496871-->  
+Antes de empezar a actualizar dispositivos a la versión más reciente, consulte los requisitos previos siguientes:  
 
--   Para Windows 10 Mobile: un archivo de licencia XML del Centro de servicios de licencias por volumen (CSLV) de Microsoft. Este archivo contiene la información de licencia para la nueva versión de Windows en todos los dispositivos de destino de la directiva.
+- Para las ediciones de escritorio de Windows 10: una clave de producto válida para instalar la nueva versión de Windows en todos los dispositivos de destino de la directiva. Esta clave de producto puede ser una clave de activación múltiple (CAM) o una clave de licencias por volumen genérica (CLVG). Las CLVG también se conocen como claves de configuración de cliente del servicio de administración de claves (SAC). Para obtener más información, consulte [Plan para la activación por volumen](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). Para obtener una lista de claves de configuración de cliente KMS, consulte el [Apéndice A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) de la Guía de activación de Windows Server. <!--496871-->  
+
+- Para Windows 10 Mobile: un archivo de licencia XML del Centro de servicios de licencias por volumen (CSLV) de Microsoft. Este archivo contiene la información de licencia para la nueva versión de Windows en todos los dispositivos de destino de la directiva.
 
 - Para administrar este tipo de directiva, debe ocupar el rol de seguridad de **Administrador total** de Configuration Manager.
 
-## <a name="configure-the-edition-upgrade-policy"></a>Configurar la directiva de actualización de edición  
+## <a name="configure-the-policy"></a>Configuración de la directiva  
 
-1.  En la consola de Configuration Manager, haga clic en **Activos y compatibilidad** > **Configuración de cumplimiento** > **Actualización de edición de Windows 10**.  
+1. En la consola de Configuration Manager, vaya al área de trabajo **Activos y compatibilidad**, expanda **Configuración de cumplimiento** y seleccione el nodo **Actualización de edición de Windows 10**.  
 
-3.  En la pestaña **Inicio** , en el grupo **Crear** , haga clic en **Crear directiva de actualización de edición**.  
+2. En la pestaña **Inicio** de la cinta de opciones, en el grupo **crear** , seleccione **crear Directiva de actualización de edición**.  
 
-4.  Haga clic en **Crear directiva**.  
+3. Seleccione **crear Directiva**.  
 
-5.  En la página **General** del **Asistente para la creación de directiva de actualización de la edición**, especifique la información siguiente:  
+4. En la página **General** del **Asistente para la creación de directiva de actualización de la edición**, especifique la información siguiente:  
 
-    -   **Nombre**: escriba un nombre para la directiva de actualización de ediciones.  
+    - **Nombre**: escriba un nombre para la directiva de actualización de ediciones.  
 
-    -   **Descripción** (opcional): si lo desea, escriba una descripción para la directiva que le ayude a identificarla en la consola de Intune.  
+    - **Descripción** (opcional): si quiere, escriba una descripción de la directiva que le ayude a identificarla en la consola de Configuration Manager.  
 
-    -   **SKU a la que actualizará el dispositivo**: en la lista desplegable, seleccione la edición de destino de Windows 10 Escritorio o Windows 10 Mobile.  
+    - **SKU a la que actualizará el dispositivo**: en la lista desplegable, seleccione la edición de destino de Windows 10 Escritorio o Windows 10 Mobile.  
 
-    -   **Información de licencia** : seleccione una de las siguientes opciones.  
+    - **Información de licencia** : Seleccione una de las siguientes opciones:  
 
-        -   **Clave de producto**: escriba una clave de producto válida para la edición de destino de Windows 10 Escritorio.  
+        - **Clave de producto**: escriba una clave de producto válida para la edición de destino de Windows 10 Escritorio.  
 
             > [!NOTE]  
-            >  Después de crear una directiva que contenga una clave de producto, no se puede editar la clave de producto más adelante. Configuration Manager oculta la clave por motivos de seguridad. Para cambiar la clave de producto, debe volver a escribir toda la clave.  
+            > Después de crear una directiva que contenga una clave de producto, esta última no se podrá editar más adelante. Configuration Manager oculta la clave por motivos de seguridad. Para cambiar la clave de producto, vuelva a escribir toda la clave.  
 
-        -   **Archivo de licencia**: haga clic en **Examinar** para seleccionar un archivo de licencia válido en formato XML. Configuration Manager usa este archivo de licencia para actualizar los dispositivos de Windows 10 Mobile.  
+        - **Archivo de licencia** : seleccione **examinar** para elegir un archivo de licencia válido en formato XML. Configuration Manager usa este archivo de licencia para actualizar los dispositivos de Windows 10 Mobile.  
 
-6.  Complete el asistente.  
+5. Complete el asistente.  
 
+## <a name="deploy-the-policy"></a>Implementar la directiva  
 
-## <a name="deploy-the-edition-upgrade-policy"></a>Implementar la directiva de actualización de edición  
+1. En la consola de Configuration Manager, vaya al área de trabajo **Activos y compatibilidad**, expanda **Configuración de cumplimiento** y seleccione el nodo **Actualización de edición de Windows 10**.  
 
-1.  En la consola de Configuration Manager, haga clic en **Activos y compatibilidad** > **Configuración de cumplimiento** > **Actualización de edición de Windows 10**.  
+2. Seleccione la Directiva de actualización de la edición de Windows 10 que desea implementar. En la pestaña **Inicio** de la cinta de opciones, vaya al grupo **Implementación** y seleccione **Implementar**.  
 
-3.  Seleccione la directiva de actualización de la edición de Windows 10 que quiere implementar y después, en la pestaña **Inicio** , en el grupo **Implementación** , haga clic en **Implementar**.  
+3. Seleccione la recopilación de dispositivos en la que desea implementar la Directiva.
 
-4.  En el cuadro de diálogo **Implementar la actualización de la edición de Windows 10**, primero elija la colección a la que desee implementar la directiva. Seleccione la programación mediante el cual el cliente evalúa la directiva y después haga clic en **Aceptar**. En el caso de los equipos que se administran con el cliente de Configuration Manager, debe implementar la directiva en una recopilación de dispositivos. En el caso de los equipos inscritos con Intune, puede implementar la directiva en una recopilación de usuarios o dispositivos. 
+4. Seleccione la programación mediante la cual el cliente evalúa la directiva.
 
-
+5. Complete el asistente.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
 Supervise esta implementación desde el nodo **Implementaciones** del espacio de trabajo **Supervisión**. Si ve errores que indican un error de implementación, por ejemplo:
+
 - **No se aplica a este dispositivo**
 - **Error de conversión de tipo de datos**
 
-Estos errores no significan que hubo un error en la implementación. En el equipo de destino, compruebe que la actualización se realizó correctamente.
+Estos errores no significan que hubo un error en la implementación. En el dispositivo de destino, compruebe que la actualización se realizó correctamente.
 
-Una vez que el cliente haya evaluado la directiva de destino, aplicará la actualización un plazo de dos horas. [Si la ruta de actualización requiere un reinicio](https://docs.microsoft.com/windows/deployment/upgrade/windows-10-edition-upgrades), se reiniciará en ese momento. Asegúrese de informar a los usuarios a los que implemente la directiva, o prográmela para que se ejecute fuera del horario laboral de los usuarios.
+Una vez que el cliente haya evaluado la directiva de destino, aplicará la actualización en un plazo de dos horas. Es posible que [algunas versiones de Windows](https://docs.microsoft.com/windows/deployment/upgrade/windows-10-edition-upgrades) requieran un reinicio en ese momento. Asegúrese de informar a los usuarios a los que implemente la directiva o prográmela para que se ejecute fuera del horario laboral de los usuarios.
 
-Si aparece el siguiente error en **DcmWmiProvider.log** en el cliente, asegúrese de usar la clave correcta para su escenario de activación. Para obtener más información, consulte la sección [Antes de empezar](#before-you-start). Si usa un servicio de administración de claves para la activación, asegúrese de usar una [clave de configuración de cliente KMS](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys).  <!-- 496871 -->   
+Si aparece el siguiente error en **DcmWmiProvider.log** en el cliente, asegúrese de usar la clave correcta para su escenario de activación. Para obtener más información, consulte la sección [Antes de empezar](#before-you-start). Si usa un servicio de administración de claves (KMS) para la activación, asegúrese de usar una [clave de configuración de cliente KMS](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys).  <!-- 496871 -->
 
 `Failed to execute CheckApplicabilityMethod with error = 0x80041001 OsEditionUpgradeProvider`
+
+## <a name="see-also"></a>Consulte también
+
+- [Plan de activación de volumen](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client)
+
+- [Actualización de edición de Windows 10](https://docs.microsoft.com/windows/deployment/upgrade/windows-10-edition-upgrades)
+
+- [Actualice las ediciones de Windows 10 o cambie el modo de S en dispositivos con Microsoft Intune](https://docs.microsoft.com/intune/edition-upgrade-configure-windows-10)
