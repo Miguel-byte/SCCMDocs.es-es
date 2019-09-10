@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 306c6569551e1068c0e682c893e94b8f1a920ade
-ms.sourcegitcommit: 4316bff400ffbde8404f8a2092ec17e3601b8d29
+ms.openlocfilehash: e47827c6ad2b52ebb2b9dfabcdc4c61320385bf3
+ms.sourcegitcommit: cb169396acf0d50fedd9f2ae62f7894615c3cce5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70738275"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70808398"
 ---
 # <a name="desktop-analytics-faq"></a>Preguntas más frecuentes sobre análisis de escritorio
 
@@ -127,7 +127,7 @@ No, en este momento tiene que decidir si migrar durante la [incorporación inici
 
 Sí. Si usa [Update Compliance](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started) en el Azure portal hoy, puede seguir haciendo esto ahora y más allá del 2020 de enero.
 
-<!-- For more information, see [blog post]... -->
+Para obtener más información, consulte la entrada de blog: [Migre los datos de entrada de usuario desde "Windows Analytics: Upgrade Readiness "a análisis](https://techcommunity.microsoft.com/t5/Desktop-Analytics-Blog/Migrate-user-input-data-from-Windows-Analytics-Upgrade-Readiness/ba-p/841744)de escritorio.
 
 ## <a name="other"></a>Otros
 

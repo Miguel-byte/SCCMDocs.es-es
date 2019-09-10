@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44a01fa12a93b041e61e3bfc85890821bdf09c29
-ms.sourcegitcommit: 4316bff400ffbde8404f8a2092ec17e3601b8d29
+ms.openlocfilehash: 5f6461d607401a0d932997d3ef38f02c991a5e2b
+ms.sourcegitcommit: cb169396acf0d50fedd9f2ae62f7894615c3cce5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70738405"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70808343"
 ---
 # <a name="what-is-desktop-analytics"></a>¿Qué es Análisis de escritorio?
 
@@ -72,7 +72,7 @@ Para usar el análisis de escritorio, asegúrese de que el entorno cumple los re
 - Una suscripción de Azure activa, con permisos de [administrador global](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions) . No se admiten [las cuentas de Microsoft](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts) .  
 
     > [!Important]  
-    > El análisis de escritorio se ofrece actualmente como un servicio de Office 365 y requiere una suscripción de Office 365 en el inquilino de Azure AD. Esto puede no ser un requisito en el futuro.
+    > Actualmente, el análisis de escritorio requiere la implementación de un servicio de Office 365 en su inquilino de Azure AD. Esto no será un requisito en el futuro.
 
     - Permisos de propietario o **colaborador** del **área de trabajo** para **configurar el área de trabajo**y los roles siguientes:  
 
