@@ -12,12 +12,12 @@ ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a02fc742ddb975c06bc7e919914ad46ae455bf92
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: a24f33e9cef10df9ba329958e4cf93db838b5969
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56127973"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70378023"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1511 para System Center Configuration Manager
 
@@ -98,7 +98,7 @@ El proceso general de alto nivel necesario para configurar y usar grupos de disp
 
 -   No puede agregar correctamente un nuevo miembro de réplica a un grupo de disponibilidad que ya está en uso como una base de datos del sitio. En su lugar, debe volver a instalar el sitio después de agregar el nuevo miembro de réplica.  
 
--   Para este escenario, puede necesitar instalar el **cliente nativo de SQL Server 2012** ([desde SQL Server 2012 Feature Pack](http://www.microsoft.com/download/details.aspx?id=29065)) en el servidor de punto de administración. Esto evita los errores de conexión de SQL (que se registran en **mp_getauth.log** en el servidor de punto de administración).  
+-   Para este escenario, puede necesitar instalar el **cliente nativo de SQL Server 2012** ([desde SQL Server 2012 Feature Pack](https://www.microsoft.com/download/details.aspx?id=29065)) en el servidor de punto de administración. Esto evita los errores de conexión de SQL (que se registran en **mp_getauth.log** en el servidor de punto de administración).  
 
 ### <a name="try-it-out"></a>Haga la prueba  
 Intente realizar las siguientes tareas y después use la información de comentarios que se encuentra al principio de este tema para hacernos saber cómo han funcionado:  
@@ -132,11 +132,11 @@ Para instalar un sitio que usa un grupo de disponibilidad de SQL Server:
 
 1.  Sustituya lo siguiente cuando se lo solicite el programa de instalación de Configuration Manager:  
 
-    -   **Nombre de SQL Server**: Escriba el nombre virtual para el extremo que configuró al crear el grupo de disponibilidad. El nombre virtual debe ser un nombre DNS completo, como **&lt;servidorPuntodeconexión\>.fabrikam.com**.  
+    -   **Nombre de SQL Server**: escriba el nombre virtual del punto de conexión que configuró al crear el grupo de disponibilidad. El nombre virtual debe ser un nombre DNS completo, como **&lt;servidorPuntodeconexión\>.fabrikam.com**.  
 
-    -   **Instancia**:  Este valor debe permanecer en blanco. No hay ninguna instancia en esta configuración.  
+    -   **Instancia**:  este valor debe permanecer en blanco. No hay ninguna instancia en esta configuración.  
 
-    -   **Base de datos**: Escriba el nombre de la base de datos que creó en la réplica principal del grupo de disponibilidad.  
+    -   **Base de datos**: escriba el nombre de la base de datos que creó en la réplica principal del grupo de disponibilidad.  
 
 2.  A continuación, debe proporcionar una ubicación de red a la que puedan acceder todos los SQL Server del grupo.  
 

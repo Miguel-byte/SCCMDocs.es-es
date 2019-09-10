@@ -3,12 +3,12 @@ title: System Center Configuration Manager
 summary: Documentación de producto oficial para Configuration Manager
 metadata:
   ms.topic: hub-page
-  ms.openlocfilehash: fdea6b136b93cc3afe62a9fd16efa365d9467b16
-  ms.sourcegitcommit: 3a3f40f3d39cbecfb9219a64c0185ea4b2ef9671
+  ms.openlocfilehash: 3c0f4f04b4fc28f96a1749013c393e33e4fea3f8
+  ms.sourcegitcommit: 4316bff400ffbde8404f8a2092ec17e3601b8d29
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 07/04/2019
-  ms.locfileid: "67562058"
+  ms.lasthandoff: 09/06/2019
+  ms.locfileid: "70738105"
 highlightedContent:
   items:
   - title: Novedades
@@ -75,6 +75,9 @@ conceptualContent:
     - text: Configuración del análisis de escritorio
       url: https://docs.microsoft.com/sccm/desktop-analytics/set-up
       itemType: how-to-guide
+    - text: Panel de Office 365
+      url: https://docs.microsoft.com/sccm/sum/deploy-use/office-365-dashboard
+      itemType: learn
     footerLink:
       text: Más información
       url: https://docs.microsoft.com/sccm/desktop-analytics/overview

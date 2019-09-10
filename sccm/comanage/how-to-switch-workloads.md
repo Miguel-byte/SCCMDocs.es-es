@@ -7,16 +7,16 @@ ms.technology: configmgr-client
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 09/05/2019
 ms.topic: conceptual
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 050242e331796c04d05b8b751203b8d6be4f7e2d
-ms.sourcegitcommit: c60fdfb9df107c430389b69b08f9670ce5f526c3
+ms.openlocfilehash: 5c1cdd3358c1d9bf41584658ee25c7210808a8f4
+ms.sourcegitcommit: 1d16ccc20bb00bf2e21f923d7f9dde3c9783dab5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68859840"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70272679"
 ---
 # <a name="how-to-switch-configuration-manager-workloads-to-intune"></a>Cambio de las cargas de trabajo de Configuration Manager a Intune
 
@@ -54,7 +54,8 @@ Puede cambiar las cargas de trabajo cuando habilita la administración conjunta 
 
 1. En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Servicios en la nube** y seleccione el nodo **Administración conjunta**.  
 
-2. Seleccione el objeto de administración conjunta y, después, elija **Propiedades** en la cinta.  
+2. Seleccione el objeto de administración conjunta y, después, elija **Propiedades** en la cinta.
+   - Se le pedirá que inicie sesión en Azure AD. El aviso no le impide actualizar la incorporación. Sin embargo, se le pedirá cada vez que abra la página **Propiedades** hasta que inicie sesión.
 
 3. Cambie a la pestaña **Cargas de trabajo**. De manera predeterminada, todas las cargas de trabajo se establecen en la configuración **Configuration Manager**. Para cambiar una carga de trabajo, mueva el control deslizante de esa carga de trabajo a la configuración deseada.  
 

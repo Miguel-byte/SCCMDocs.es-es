@@ -2,7 +2,7 @@
 title: CMPivot para datos en tiempo real
 titleSuffix: Configuration Manager
 description: Obtenga información sobre cómo usar CMPivot en Configuration Manager para realizar consultas en clientes en tiempo real.
-ms.date: 08/28/2019
+ms.date: 09/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4c4b0ed9150988deee3f8484e5c7b10eb919c086
-ms.sourcegitcommit: 9aa852d54670b5bc568a1ca6e57cd9c1349e5724
+ms.openlocfilehash: 5e0be6129306e37ba1721923efe1b7533875784e
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70053762"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70380023"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>CMPivot para datos en tiempo real en Configuration Manager
 
@@ -167,7 +167,7 @@ La ventana CMPivot contiene los elementos siguientes:
 
      - **Mostrar los dispositivos sin**: consulte los dispositivos sin este valor para esta propiedad. Por ejemplo, de los resultados de la consulta `OS`, seleccione esta opción en una celda en la fila Versión: `OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ == 0) | project Device`  
 
-     - **Buscarlo con Bing**: inicie el explorador web predeterminado en www.bing.com con este valor como la cadena de consulta.  
+     - **Buscarlo con Bing**: inicie el explorador web predeterminado en https://www.bing.com con este valor como la cadena de consulta.  
 
    - Haga clic en cualquier texto con hipervínculo para fijar la vista en esa información específica.  
 
@@ -206,7 +206,7 @@ Conforme aparezcan los resultados, haga clic con el botón derecho en la columna
 
 `Service | summarize dcount( Device ) by Name`
 
-En la fila del servicio **Explorador**, haga clic en el número de un hipervínculo en la columna **dcount_** . 
+En la fila del servicio **Explorador**, haga clic en el número de un hipervínculo en la columna **dcount_**. 
 
 `Service | where (Name == 'Browser') | summarize count() by Device`
 
@@ -262,12 +262,20 @@ A partir de la versión 1810 de Configuration Manager, CMPivot incluye las mejo
   - Si el resultado del script o la consulta es mayor que 80 KB, el cliente envía los datos a través de un mensaje de estado.
   - Si el cliente no se actualiza a la versión de cliente 1810, sigue usando los mensajes de estado.
 
+- Al iniciar CMPivot, puede que vea un error parecido a este:  **No se puede usar CMPivot en este momento debido a una versión de script incompatible. Este problema puede deberse a que la jerarquía está en proceso de actualizar un sitio. Espere a que se complete la actualización y vuelva a intentarlo.**
+
+  - Si ve este mensaje, podría significar que:
+    - El ámbito de seguridad no está configurado correctamente.
+    - Hay problemas con el proceso de actualización.
+    - El script de CMPivot subyacente es incompatible.
+
+
 ### <a name="bkmk_cmpivot-functions"></a> Funciones escalares
 CMPivot admite estas funciones escalares:
-- **ago()** : resta el intervalo de tiempo dado de la hora UTC actual.  
-- **datetime_diff()** : calcula la diferencia de calendario entre dos valores de fecha y hora.  
-- **now()** : devuelve la hora de reloj UTC actual.  
-- **bin()** : redondea valores a la baja a un número entero múltiplo del tamaño de una ubicación determinada.  
+- **ago()**: resta el intervalo de tiempo dado de la hora UTC actual.  
+- **datetime_diff()**: calcula la diferencia de calendario entre dos valores de fecha y hora.  
+- **now()**: devuelve la hora de reloj UTC actual.  
+- **bin()**: redondea valores a la baja a un número entero múltiplo del tamaño de una ubicación determinada.  
 
 > [!Note]  
 > El tipo de datos de fecha y hora representa un instante de tiempo, normalmente expresado como una fecha y hora del día. Los valores de tiempo se miden en unidades de 1 segundo. Siempre es un valor de fecha y hora en la zona horaria UTC. Siempre expresa literales de fecha y hora en formato ISO 8601, como por ejemplo, `yyyy-mm-dd HH:MM:ss`  

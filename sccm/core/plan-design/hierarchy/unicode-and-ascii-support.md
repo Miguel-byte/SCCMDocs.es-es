@@ -1,8 +1,8 @@
 ---
 title: Compatibilidad con Unicode y ASCII
 titleSuffix: Configuration Manager
-description: Obtenga información sobre la compatibilidad con caracteres Unicode y ASCII en objetos de System Center Configuration Manager.
-ms.date: 3/1/2017
+description: Conozca la compatibilidad con caracteres Unicode y ASCII en los objetos de Configuration Manager.
+ms.date: 08/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,132 +11,103 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8700919d372722f16001fcf1405531b0e2b383ff
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 0214abdf1dd7ce735542ebace443c8aed297b2c3
+ms.sourcegitcommit: f679fc1e46c191a1780ae961d155c927fc353dce
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56138388"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176726"
 ---
-# <a name="unicode-and-ascii-support-in-system-center-configuration-manager"></a>Compatibilidad con Unicode y ASCII en System Center Configuration Manager
+# <a name="unicode-and-ascii-support-in-configuration-manager"></a>Compatibilidad con Unicode y ASCII en Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-System Center Configuration Manager crea la mayoría de los objetos mediante caracteres Unicode. Sin embargo, varios objetos admiten solo caracteres ASCII o tienen otras limitaciones.  
+Configuration Manager crea la mayoría de los objetos mediante caracteres Unicode. Sin embargo, varios de ellos admiten solo caracteres ASCII o tienen otras limitaciones.  
 
- En las secciones siguientes se incluyen los objetos que deben utilizar solo caracteres del conjunto de caracteres ASCII, o que tienen otras limitaciones adicionales.  
+## <a name="BKMK_ASCIIchar"></a> Objetos que usan caracteres ASCII
 
--   [Objetos que usan caracteres ASCII](#BKMK_ASCIIchar)  
+Al crear los siguientes objetos, Configuration Manager solo admite el conjunto de caracteres ASCII:  
 
--   [Limitaciones adicionales](#BKMK_OtherCharLimitations)  
+- Código de sitio  
 
--   [Objetos de Configuration Manager que no están localizados](#BKMK_LangNonLocalize)  
+- Todos los nombres de equipo de servidor de sistema de sitio  
 
-##  <a name="BKMK_ASCIIchar"></a> Objetos que usan caracteres ASCII  
- Configuration Manager solo admite el conjunto de caracteres ASCII cuando se crean los siguientes objetos:  
-
--   Código de sitio  
-
--   Todos los nombres de equipo de servidor de sistema de sitio  
-
--   Las cuentas de Configuration Manager siguientes:  
+- Las cuentas de Configuration Manager siguientes:  
 
     > [!NOTE]  
-    >  Estas cuentas admiten caracteres ASCII y caracteres RUS en un sitio que se ejecuta en ruso.  
+    > Estas cuentas admiten caracteres ASCII y caracteres RUS en un sitio que se ejecuta en ruso.  
 
-    -   Cuenta de instalación de inserción de cliente  
+    - Cuenta de instalación de inserción de cliente  
 
-    -   Cuenta de publicación de referencia de estado de mantenimiento  
+    - Cuenta de conexión a la base de datos del punto de administración  
 
-    -   Cuenta de consulta de referencia de estado de mantenimiento  
+    - Cuenta de acceso a la red  
 
-    -   Cuenta de conexión a la base de datos del punto de administración  
+    - Cuenta de acceso de paquetes  
 
-    -   Cuenta de acceso a la red  
+    - Cuenta de remitente estándar  
 
-    -   Cuenta de acceso de paquetes  
+    - Cuenta de instalación del sistema de sitio  
 
-    -   Cuenta de remitente estándar  
+    - Cuenta de conexión de punto de actualización de software  
 
-    -   Cuenta de instalación del sistema de sitio  
-
-    -   Cuenta de conexión de punto de actualización de software  
-
-    -   Cuenta del servidor proxy del punto de actualización de software  
+    - Cuenta del servidor proxy del punto de actualización de software  
 
     > [!NOTE]  
-    >  Las cuentas que especifica para la administración basada en roles admiten Unicode.  
-    >   
-    >  La cuenta de punto de Reporting Services admite Unicode, con la excepción de caracteres RUS.  
+    > Las cuentas que especifica para la administración basada en roles admiten Unicode.  
+    >
+    > La cuenta de punto de servicios de informes admite Unicode, con la excepción de caracteres RUS.  
 
--   Nombre de dominio completo (FQDN) para servidores y sistemas de sitio  
+- Nombre de dominio completo (FQDN) para servidores y sistemas de sitio  
 
--   Ruta de instalación de Configuration Manager  
+- Ruta de instalación de Configuration Manager  
 
--   Nombres de instancia de SQL Server  
+- Nombres de instancia de SQL Server  
 
--   La ruta de acceso para los siguientes roles de sistema de sitio:  
+- La ruta de acceso para los siguientes roles de sistema de sitio:  
 
-    -   Punto de servicio web del catálogo de aplicaciones  
+    - Punto de inscripción  
 
-    -   Punto de sitios web del catálogo de aplicaciones  
+    - Punto de proxy de inscripción  
 
-    -   Punto de inscripción  
+    - Punto de servicios de informes  
 
-    -   Punto de proxy de inscripción  
+    - Punto de migración de estado  
 
-    -   Punto de servicios de informes  
+- La ruta de acceso de las carpetas siguientes:  
 
-    -   Punto de migración de estado  
+    - La carpeta en la que se almacenan datos de migración de estado de cliente  
 
--   La ruta de acceso de las carpetas siguientes:  
+    - La carpeta que contiene los informes de Configuration Manager  
 
-    -   La carpeta en la que se almacenan datos de migración de estado de cliente  
+    - La carpeta en la que se almacena la copia de seguridad de Configuration Manager  
 
-    -   La carpeta que contiene los informes de Configuration Manager  
+    - La carpeta en la que se almacenan los archivos de origen de instalación para la configuración del sitio  
 
-    -   La carpeta en la que se almacena la copia de seguridad de Configuration Manager  
+    - La carpeta en la que se almacenan las descargas previas que el programa de instalación necesita  
 
-    -   La carpeta en la que se almacenan los archivos de origen de instalación para la configuración del sitio  
+- La ruta de acceso de los objetos siguientes:  
 
-    -   La carpeta en la que se almacenan las descargas previas que el programa de instalación necesita  
+    - Sitio web de IIS  
 
--   La ruta de acceso de los objetos siguientes:  
+    - Ruta de instalación de aplicación virtual  
 
-    -   Sitio web de IIS  
+    - Nombre de aplicación virtual  
 
-    -   Ruta de instalación de aplicación virtual  
+- Los nombres de los archivos ISO de los medios de arranque  
 
-    -   Nombre de aplicación virtual  
 
--   Los siguientes objetos para la administración fuera de banda y de AMT:  
+## <a name="BKMK_OtherCharLimitations"></a> Limitaciones adicionales
 
-    -   El FQDN del equipo basado en AMT  
+Limitaciones adicionales de versiones de idioma y conjuntos de caracteres admitidos:  
 
-    -   El nombre de equipo del equipo basado en AMT  
+- Configuration Manager no admite el cambio de la configuración regional del equipo del servidor de sitio.  
 
-    -   El nombre NetBIOS de dominio  
+- La entidad de certificación (CA) empresarial no admite nombres de equipo cliente en los que se usen conjuntos de caracteres de doble byte (DBCS). Los nombres de equipos cliente que se pueden utilizar están restringidos por la limitación de PKI del conjunto de caracteres IA5. Configuration Manager no admite nombres de entidad de certificación o valores de nombre de asunto que usen DBCS.  
 
-    -   El nombre del perfil inalámbrico y el SSID  
 
-    -   El nombre de la entidad de certificación raíz de confianza  
+## <a name="BKMK_LangNonLocalize"></a> Objetos que no están localizados
 
-    -   El nombre de la entidad de certificación (CA) y los nombres de las plantillas  
+La base de datos de Configuration Manager admite Unicode en la mayoría de los objetos que almacena. Cuando es posible, muestra esta información en el idioma del sistema operativo que coincide con la configuración regional de un equipo. Para que la interfaz de cliente o la consola de Configuration Manager muestren la información en el idioma del sistema operativo del equipo, la configuración regional del mismo debe coincidir con el idioma de un servidor o un cliente instalado en el sitio.  
 
-    -   El nombre de archivo y la ruta de acceso del archivo de imagen de redirección de IDE  
-
-    -   El contenido del almacenamiento de datos de AMT  
-
--   Los nombres de los archivos ISO de los medios de arranque  
-
-##  <a name="BKMK_OtherCharLimitations"></a> Limitaciones adicionales  
- Limitaciones adicionales de versiones de idioma y conjuntos de caracteres admitidos:  
-
--   Configuration Manager no admite el cambio de la configuración regional del equipo del servidor de sitio.  
-
--   La entidad de certificación (CA) empresarial no admite nombres de equipos cliente en los que se usan conjuntos de caracteres de doble byte (DBCS). Los nombres de equipos cliente que se pueden utilizar están restringidos por la limitación de PKI del conjunto de caracteres IA5. Además, Configuration Manager no admite nombres de entidad de certificación o valores de nombre de asunto que usen DBCS.  
-
-##  <a name="BKMK_LangNonLocalize"></a> Objetos de Configuration Manager que no están localizados  
- La base de datos de Configuration Manager admite Unicode para la mayoría de objetos que almacena y, si es posible, muestra esta información en el idioma del sistema operativo que coincide con la configuración regional del equipo. Para que la interfaz de cliente o la consola de Configuration Manager muestren la información en el idioma del sistema operativo del equipo, la configuración regional del mismo debe coincidir con el idioma de un servidor o un cliente instalado en el sitio.  
-
- En cambio, varios objetos de Configuration Manager no admiten Unicode y se almacenan en la base de datos mediante ASCII, o tienen limitaciones de idioma adicionales. Esta información siempre se muestra mediante el conjunto de caracteres ASCII o en el idioma que se usó cuando se creó el objeto.  
+Varios objetos de Configuration Manager no admiten Unicode. Se almacenan en la base de datos mediante ASCII o tienen limitaciones de idioma adicionales. Esta información siempre se muestra con el conjunto de caracteres ASCII o en el idioma que se usó cuando se creó el objeto.  

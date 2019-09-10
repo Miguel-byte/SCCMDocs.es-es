@@ -2,7 +2,7 @@
 title: Versiones de Technical Preview
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la rama de Technical Preview para probar nuevas funcionalidades y funcionalidades de Configuration Manager.
-ms.date: 08/06/2019
+ms.date: 08/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3f208a8bf66748601985434366a30297396254e4
-ms.sourcegitcommit: 159c6c9fe1df03fd2c4633125a593e3050a2f2da
+ms.openlocfilehash: d5c80836ced76bdf1109c9279bf2068efbbd97f5
+ms.sourcegitcommit: f679fc1e46c191a1780ae961d155c927fc353dce
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68833080"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176741"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview para Configuration Manager
 
@@ -122,9 +122,24 @@ Las características siguientes están disponibles con la versión de Technical 
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### <a name="technical-preview-version-1908"></a>Versión 1908 de Technical Preview
+### <a name="technical-preview-version-19082"></a>Versión 1908.2 de Technical Preview
 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor) <!--ID-->
+
+- [Mejoras en las conexiones de la consola](/sccm/core/get-started/2019/technical-preview-1908-2#improvements-to-console-connections) <!--4923997-->
+- [Mejoras en los puntos de distribución habilitados para multidifusión](/sccm/core/get-started/2019/technical-preview-1908-2#bkmk_multicast) <!--3785535-->
+- [Optimizaciones del motor de CMPivot](/sccm/core/get-started/2019/technical-preview-1908-2#optimizations-to-the-cmpivot-engine) <!--3197353-->
+- [Establecimiento de la distribución del teclado durante la implementación del sistema operativo](/sccm/core/get-started/2019/technical-preview-1908-2#bkmk_osd) <!--5138936-->
+
+> [!Note]  
+> Las características que estaban disponibles en una versión anterior de Technical Preview siguen estando disponibles en versiones posteriores. Del mismo modo, las características que se agregan a la rama actual de Configuration Manager siguen estando disponibles en la rama de Technical Preview.  
+
+
+## <a name="features-in-recent-technical-previews"></a>Características en versiones recientes de Technical Preview
+
+Las características siguientes se publicaron con versiones anteriores de la rama Technical Preview de Configuration Manager desde la versión 1906 de la rama actual:
+
+### <a name="technical-preview-version-1908"></a>Versión 1908 de Technical Preview
 
 - [Mejoras en el rendimiento de la secuencia de tareas para los planes de energía](/sccm/core/get-started/2019/technical-preview-1908#bkmk_tsperf) <!--3555926-->
 - [Evaluación de una consulta de dispositivo local con CMPivot independiente](/sccm/core/get-started/2019/technical-preview-1908#local-device-query-evaluation-using-cmpivot-standalone) <!--3197353-->
@@ -135,13 +150,6 @@ Las características siguientes están disponibles con la versión de Technical 
 - [Copia y pegado de las condiciones de una secuencia de tareas](/sccm/core/get-started/2019/technical-preview-1908#bkmk_tscondition) <!--4621098-->
 - [Mejoras en la búsqueda de la secuencia de tareas](/sccm/core/get-started/2019/technical-preview-1908#bkmk_tssearch) <!--4621085-->
 - [Mejoras de la implementación del sistema operativo](/sccm/core/get-started/2019/technical-preview-1908#bkmk_osd) <!--4910348, 4931110, 4977616-->
-
-> [!Note]  
-> Las características que estaban disponibles en una versión anterior de Technical Preview siguen estando disponibles en versiones posteriores. Del mismo modo, las características que se agregan a la rama actual de Configuration Manager siguen estando disponibles en la rama de Technical Preview.  
-
-## <a name="features-in-recent-technical-previews"></a>Características en versiones recientes de Technical Preview
-
-Las características siguientes se publicaron con versiones anteriores de la rama Technical Preview de Configuration Manager desde la versión 1906 de la rama actual:
 
 ### <a name="technical-preview-version-1907"></a>Versión 1907 de Technical Preview
 

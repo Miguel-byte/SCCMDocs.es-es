@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9dce5e5277ffc0fbdf7e5432186a237d45933e7c
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 11c9bbbab40ec593ae6455a9018502a754402385
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133425"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70377863"
 ---
 # <a name="operations-and-maintenance-for-reporting-in-system-center-configuration-manager"></a>Operaciones y mantenimiento de informes en System Center Configuration Manager
 
@@ -40,7 +40,7 @@ Cuando la infraestructura de generación de informes esté operativa en System C
 > Debe haber una relación de confianza bidireccional establecida para los usuarios de un dominio distinto al de la cuenta para el punto de servicios de informes para una correcta ejecución de los informes.
 
 > [!NOTE]  
->  El Administrador de informes es una herramienta de acceso y administración de informes basada en web que se usa para administrar una única instancia de servidor de informes en una ubicación remota a través de una conexión HTTP. Puede utilizar el Administrador de informes para las tareas operativas, por ejemplo, para ver los informes, modificar las propiedades de los informes y administrar suscripciones a informes asociados. En este tema se describen los pasos que cabe seguir para ver un informe y modificar sus propiedades en el Administrador de informes; no obstante, si desea obtener más información acerca de las demás opciones disponibles en el Administrador de informes, consulte [Administrador de informes](http://go.microsoft.com/fwlink/p/?LinkId=224916) en los Libros en pantalla de SQL Server 2008.  
+>  El Administrador de informes es una herramienta de acceso y administración de informes basada en web que se usa para administrar una única instancia de servidor de informes en una ubicación remota a través de una conexión HTTP. Puede utilizar el Administrador de informes para las tareas operativas, por ejemplo, para ver los informes, modificar las propiedades de los informes y administrar suscripciones a informes asociados. En este tema se describen los pasos que cabe seguir para ver un informe y modificar sus propiedades en el Administrador de informes; no obstante, si desea obtener más información acerca de las demás opciones disponibles en el Administrador de informes, consulte [Administrador de informes](https://go.microsoft.com/fwlink/p/?LinkId=224916) en los Libros en pantalla de SQL Server 2008.  
 
  Utilice los procedimientos siguientes para ejecutar un informe de Configuration Manager.  
 
@@ -224,26 +224,26 @@ Cuando la infraestructura de generación de informes esté operativa en System C
 
 4. En la página **Entrega de suscripción** , configure las siguientes opciones:  
 
-   - Informe entregado por: seleccione **Recurso compartido de archivos de Windows** para entregar el informe a un recurso compartido de archivos.  
+   - informe entregado por: seleccione **Recurso compartido de archivos de Windows** para entregar el informe a un recurso compartido de archivos.  
 
-   - **Nombre de archivo**: Especifique el nombre de archivo del informe. De forma predeterminada, el archivo de informe no incluye una extensión de nombre de archivo. Seleccione **Agregar extensión de archivo al crearse** para agregar automáticamente una extensión de nombre de archivo a este informe en función del formato de representación.  
+   - **Nombre de archivo**: especifique el nombre de archivo del informe. De forma predeterminada, el archivo de informe no incluye una extensión de nombre de archivo. Seleccione **Agregar extensión de archivo al crearse** para agregar automáticamente una extensión de nombre de archivo a este informe en función del formato de representación.  
 
    - **Ruta de acceso**: especifique una ruta de acceso UNC a una carpeta existente en la que quiere que se entregue el informe \(por ejemplo, \\\\&lt;nombre de servidor\>\\&lt;nombre de recurso compartido de servidor\>\\&lt;carpeta de informes\>\).  
 
      > [!NOTE]  
      >  El nombre de usuario especificado posteriormente en esta página debe tener acceso a este recurso compartido de servidor y tener permisos de escritura en la carpeta de destino.  
 
-   - **Formato de representación**: Seleccione uno de los formatos siguientes para el archivo de informe:  
+   - **Formato de representación**: seleccione uno de los formatos siguientes para el archivo de informe:  
 
-     -   **Archivo XML con datos de informe**: Guarda el informe en formato de lenguaje de marcado extensible.  
+     -   **Archivo XML con datos de informe**: guarda el informe en formato de lenguaje de marcado extensible.  
 
      -   **CSV \(delimitado por comas\)**: guarda el informe en formato de valores separados por comas.  
 
-     -   **Archivo TIFF**: Guarda el informe en formato Tagged Image File.  
+     -   **Archivo TIFF**: guarda el informe en formato Tagged Image File Format.  
 
-     -   **Archivo de Acrobat \(PDF\)**: Guarda el informe en formato Acrobat Portable Document.  
+     -   **Archivo de Acrobat \(PDF\)**: guarda el informe en formato Acrobat Portable Document.  
 
-     -   **HTML 4.0**: Guarda el informe como una página web que se puede visualizar solo en exploradores que admiten HTML 4.0. Internet Explorer 5 y las versiones posteriores admiten HTML 4.0.  
+     -   **HTML 4.0**: guarda el informe como una página web que se puede visualizar solo en exploradores que admiten HTML 4.0. Internet Explorer 5 y las versiones posteriores admiten HTML 4.0.  
 
          > [!NOTE]  
          >  Si tiene imágenes en el informe, el formato HTML 4.0 no las incluye en el archivo.  
@@ -252,31 +252,31 @@ Cuando la infraestructura de generación de informes esté operativa en System C
 
      -   **Representador de RPL**: guarda el informe en formato Report Page Layout \(RPL\).  
 
-     -   **Excel**: Guarda el informe como una hoja de cálculo de Microsoft Excel.  
+     -   **Excel**: guarda el informe como una hoja de cálculo de Microsoft Excel.  
 
-     -   **Word**: Guarda el informe como un documento de Microsoft Word.  
+     -   **Word**: guarda el informe como un documento de Microsoft Word.  
 
-   - **Nombre de usuario**: Especifique una cuenta de usuario de Windows con permisos para tener acceso al recurso compartido y la carpeta del servidor de destino. La cuenta de usuario debe tener acceso a este recurso compartido de servidor y tener permiso de escritura en la carpeta de destino.  
+   - **Nombre de usuario**: especifique una cuenta de usuario de Windows con permisos para acceder al recurso compartido y la carpeta del servidor de destino. La cuenta de usuario debe tener acceso a este recurso compartido de servidor y tener permiso de escritura en la carpeta de destino.  
 
-   - **Contraseña**: Especifique la contraseña de la cuenta de usuario de Windows. En **Confirmar contraseña**, vuelva a escribir la contraseña.  
+   - **Contraseña**: especifique la contraseña de la cuenta de usuario de Windows. En **Confirmar contraseña**, vuelva a escribir la contraseña.  
 
    - Seleccione una de las siguientes opciones para configurar el comportamiento si ya existe un archivo con el mismo nombre en la carpeta de destino:  
 
-     -   **Sobrescribir archivos existentes con nuevas versiones**: Especifica que si el archivo de informe ya existe, la nueva versión lo sobrescribe.  
+     -   **Sobrescribir archivos existentes con nuevas versiones**: especifica que el archivo de informe existente se sobrescribirá con la nueva versión.  
 
-     -   **No sobrescribir archivos existentes**: Especifica que si el archivo de informe ya existe, no se realiza ninguna acción.  
+     -   **No sobrescribir archivos existentes**: especifica que si ya existe el archivo de informe, no se realizará ninguna acción.  
 
-     -   **Incrementar nombres de archivo al agregarse nuevas versiones**: Especifica que si ya existe el archivo de informe, se agrega un número al nuevo informe en el nombre de archivo para distinguirlo de otras versiones.  
+     -   **Incrementar nombres de archivo al agregarse nuevas versiones**: especifica que si ya existe el archivo de informe, se agregará un número al nuevo informe en el nombre de archivo para distinguirlo de otras versiones.  
 
-   - **Descripción**: Especifica la descripción de la suscripción de informe.  
+   - **Descripción**: especifica la descripción de la suscripción de informe.  
 
      Haga clic en **Siguiente**.  
 
 5. En la página **Programación de suscripción** , seleccione una de las siguientes opciones de programación de entrega para la suscripción de informe:  
 
-   -   **Usar programación compartida**: Una programación compartida es una programación definida previamente que puede ser utilizada por otras suscripciones de informes. Active esta casilla y, a continuación, seleccione una programación compartida en la lista si se ha especificado alguna.  
+   -   **Usar programación compartida**: una programación compartida es una programación definida previamente que puede ser utilizada por otras suscripciones de informes. Active esta casilla y, a continuación, seleccione una programación compartida en la lista si se ha especificado alguna.  
 
-   -   **Crear nueva programación**: Configure la programación en la que se ejecuta este informe, incluidos el intervalo, la hora y fecha de inicio y la fecha de finalización de esta suscripción.  
+   -   **Crear nueva programación**: configure la programación de ejecución de este informe, como el intervalo, la hora y fecha de inicio y la fecha de finalización de esta suscripción.  
 
 6. En página **Parámetros de suscripción** , especifique los parámetros de este informe que se utilizan cuando se ejecuta sin supervisión. Si no hay ningún parámetro para el informe, no se muestra esta página.  
 
@@ -292,7 +292,7 @@ Cuando la infraestructura de generación de informes esté operativa en System C
 -   Enviar un informe adjunto o incrustado. El formato de representación y el explorador determinan si el informe se incrusta o adjunta. Si su explorador es compatible con HTML 4.0 y MHTML y se selecciona el formato de representación MHTML \(archivo web\), el informe se incrusta como parte del mensaje. Todos los demás formatos de representación \(CSV, PDF, Word, etc.\) proporcionan informes como datos adjuntos. Reporting Services no comprueba el tamaño de los datos adjuntos o del mensaje antes de enviar el informe. Si los datos adjuntos o el mensaje superan el límite máximo permitido por su servidor de correo electrónico, el informe no se entregará.  
 
 > [!IMPORTANT]  
->  Debe establecer la configuración de correo electrónico en Reporting Services para que la opción de entrega **Correo electrónico** esté disponible. Para obtener más información sobre la configuración de opciones de correo electrónico en Reporting Services, consulte [Configurar un servidor de informes para la entrega por correo electrónico](http://go.microsoft.com/fwlink/p/?LinkId=226668) en Libros en pantalla de SQL Server.  
+>  Debe establecer la configuración de correo electrónico en Reporting Services para que la opción de entrega **Correo electrónico** esté disponible. Para obtener más información sobre la configuración de opciones de correo electrónico en Reporting Services, consulte [Configurar un servidor de informes para la entrega por correo electrónico](https://go.microsoft.com/fwlink/p/?LinkId=226668) en Libros en pantalla de SQL Server.  
 
  Utilice el procedimiento siguiente para crear una suscripción de informe para entregar un informe a través de correo electrónico.  
 
@@ -308,50 +308,50 @@ Cuando la infraestructura de generación de informes esté operativa en System C
 
     -   **Informe entregado por**: Seleccione **Correo electrónico** para entregar el informe como datos adjuntos en un mensaje de correo electrónico.  
 
-    -   **Para**: Especifique una dirección de correo electrónico válida a la que enviar este informe.  
+    -   **Para**: especifique una dirección de correo electrónico válida a la que enviar este informe.  
 
         > [!NOTE]  
         >  Puede especificar varios destinatarios de correo electrónico mediante la separación de cada dirección de correo electrónico con un punto y coma.  
 
-    -   **CC**: Si lo desea, especifique una dirección de correo electrónico a la que desea enviar una copia de este informe.  
+    -   **CC**: si lo desea, especifique una dirección de correo electrónico a la que desea enviar una copia de este informe.  
 
-    -   **CCO**: Opcionalmente, especifique una dirección de correo electrónico a la que desea enviar una copia oculta de este informe.  
+    -   **CCO**: opcionalmente, especifique una dirección de correo electrónico a la que desea enviar una copia oculta de este informe.  
 
-    -   **Responder a**: Especifique la dirección de respuesta que se utilizará si el destinatario responde al mensaje de correo electrónico.  
+    -   **Responder a**: especifique la dirección de respuesta que se utilizará si el destinatario responde al mensaje de correo electrónico.  
 
-    -   **Asunto**: Especifique una línea de tema del mensaje de correo electrónico de suscripción.  
+    -   **Asunto**: especifique una línea de asunto del mensaje de correo electrónico de suscripción.  
 
-    -   **Prioridad**: Seleccione la marca de prioridad del mensaje de correo electrónico. Seleccione **Baja**, **Normal**o **Alta**. Microsoft Exchange usa la configuración de prioridad para establecer una marca que indica la importancia del mensaje de correo electrónico.  
+    -   **Prioridad**: seleccione la marca de prioridad del mensaje de correo electrónico. Seleccione **Baja**, **Normal**o **Alta**. Microsoft Exchange usa la configuración de prioridad para establecer una marca que indica la importancia del mensaje de correo electrónico.  
 
-    -   **Comentario**: Especifique el texto que se agregará al cuerpo del mensaje de correo electrónico de suscripción.  
+    -   **Comentario**: especifique el texto que se agregará al cuerpo del mensaje de correo electrónico de suscripción.  
 
-    -   **Descripción**: Especifica la descripción de la suscripción de informe.  
+    -   **Descripción**: especifica la descripción de la suscripción de informe.  
 
-    -   **Incluir vínculo**: Incluye la dirección URL del informe suscrito en el cuerpo del mensaje de correo electrónico.  
+    -   **Incluir vínculo**: incluye la dirección URL del informe suscrito en el cuerpo del mensaje de correo electrónico.  
 
     -   **Incluir informe**: especifique que el informe se adjunta al mensaje de correo electrónico. El formato en el que se adjuntará el informe se especifica en la lista **Formato de representación** .  
 
-    -   **Formato de representación**: Seleccione uno de los siguientes formatos para el informe adjunto:  
+    -   **Formato de representación**: seleccione uno de los siguientes formatos para el informe adjunto:  
 
-        -   **Archivo XML con datos de informe**: Guarda el informe en formato de lenguaje de marcado extensible.  
+        -   **Archivo XML con datos de informe**: guarda el informe en formato de lenguaje de marcado extensible.  
 
         -   **CSV \(delimitado por comas\)**: guarda el informe en formato de valores separados por comas.  
 
-        -   **Archivo TIFF**: Guarda el informe en formato Tagged Image File.  
+        -   **Archivo TIFF**: guarda el informe en formato Tagged Image File Format.  
 
-        -   **Archivo de Acrobat \(PDF\)**: Guarda el informe en formato Acrobat Portable Document.  
+        -   **Archivo de Acrobat \(PDF\)**: guarda el informe en formato Acrobat Portable Document.  
 
         -   **MHTML \(archivo web\)**: guarda el informe en formato MIME HTML \(mhtml\) que se puede visualizar en muchos exploradores web.  
 
-        -   **Excel**: Guarda el informe como una hoja de cálculo de Microsoft Excel.  
+        -   **Excel**: guarda el informe como una hoja de cálculo de Microsoft Excel.  
 
-        -   **Word**: Guarda el informe como un documento de Microsoft Word.  
+        -   **Word**: guarda el informe como un documento de Microsoft Word.  
 
 -   En la página **Programación de suscripción** , seleccione una de las siguientes opciones de programación de entrega para la suscripción de informe:  
 
-    -   **Usar programación compartida**: Una programación compartida es una programación definida previamente que puede ser utilizada por otras suscripciones de informes. Active esta casilla y, a continuación, seleccione una programación compartida en la lista si se ha especificado alguna.  
+    -   **Usar programación compartida**: una programación compartida es una programación definida previamente que puede ser utilizada por otras suscripciones de informes. Active esta casilla y, a continuación, seleccione una programación compartida en la lista si se ha especificado alguna.  
 
-    -   **Crear nueva programación**: Configure la programación en la que se ejecutará este informe, incluidos el intervalo, la hora y fecha de inicio y la fecha de finalización de esta suscripción.  
+    -   **Crear nueva programación**: configure la programación de ejecución de este informe, como el intervalo, la hora y fecha de inicio y la fecha de finalización de esta suscripción.  
 
 -   En página **Parámetros de suscripción** , especifique los parámetros de este informe que se utilizan cuando se ejecuta sin supervisión. Si no hay ningún parámetro para el informe, no se muestra esta página.  
 

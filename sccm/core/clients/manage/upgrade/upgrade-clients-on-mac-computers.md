@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 63f56c1d158370b72b43c41ec985adc93a735ba0
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: c3d465589c0763e0893bfe863ccfe41f82b40265
+ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56125779"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70378157"
 ---
 # <a name="how-to-upgrade-clients-on-mac-computers-in-system-center-configuration-manager"></a>Cómo actualizar clientes en equipos Mac en System Center Configuration Manager
 
@@ -27,10 +27,10 @@ Siga los pasos generales que se describen a continuación para actualizar el cli
 > [!NOTE]  
 >  Antes de realizar estos pasos, asegúrese de que el equipo Mac cumple los requisitos previos. Consulte [Sistemas operativos compatibles con equipos Mac](../../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).  
 
-## <a name="step-1-download-the-latest-mac-client-installation-file-from-the-microsoft-download-center"></a>Paso 1: Descargar el archivo de instalación de cliente Mac más reciente del Centro de descarga de Microsoft  
+## <a name="step-1-download-the-latest-mac-client-installation-file-from-the-microsoft-download-center"></a>Paso 1: Descarga del archivo de instalación de cliente Mac más reciente del Centro de descarga de Microsoft  
  El cliente Mac para Configuration Manager no se suministra en los medios de instalación de Configuration Manager y debe descargarse del Centro de descarga de Microsoft. El archivo de Windows Installer ConfigmgrMacClient.msi contiene los archivos de instalación de cliente Mac.  
 
- Puede descargar este archivo desde el [Centro de descarga de Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=525184).  
+ Puede descargar este archivo desde el [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=525184).  
 
 ## <a name="step-2-run-the-downloaded-installation-file-to-create-the-mac-client-installation-file"></a>Paso 2: ejecutar el archivo de instalación descargado para crear el archivo de instalación del cliente Mac  
  En un equipo Windows, ejecute el archivo **ConfigmgrMacClient.msi** que descargó para desempaquetar el archivo de instalación de cliente Mac llamado **Macclient.dmg**. De manera predeterminada, este archivo se encuentra en la carpeta **C:\Archivos de programa (x86)\Microsoft\System Center 2012 Configuration Manager Mac Client** en el equipo Windows después de desempaquetar los archivos.  

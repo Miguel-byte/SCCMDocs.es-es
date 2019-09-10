@@ -2,7 +2,7 @@
 title: Uso de Asset Intelligence
 titleSuffix: Configuration Manager
 description: Realice tareas comunes de Asset Intelligence en System Center Configuration Manager.
-ms.date: 2/22/2017
+ms.date: 08/30/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b200594c4769fb4528c3adc7b846b2345ffeda39
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: fde63b3400441815b227fe8fae78c354bc156c2a
+ms.sourcegitcommit: f679fc1e46c191a1780ae961d155c927fc353dce
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499865"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176547"
 ---
 # <a name="how-to-use-asset-intelligence-in-system-center-configuration-manager"></a>Cómo usar Asset Intelligence en System Center Configuration Manager
 
@@ -288,7 +288,7 @@ Este tema contiene información para ayudarle a administrar las tareas típicas 
 3.  Seleccione uno o varios nombres de producto que se enviarán a System Center Online para su categorización. Solo se pueden enviar títulos de software inventariado sin categoría a System Center Online para su investigación y categorización. Si un administrador ha categorizado un título de software inventariado que ha resultado en un estado definido por el usuario, debe hacer clic con el botón derecho en el título de software inventariado y, después, hacer clic en **Revertir** para revertir el título de software al estado **Sin categoría** antes de poderlo enviar a System Center Online para su categorización.  
 
     > [!NOTE]  
-    >  Configuration Manager puede procesar hasta 100 títulos de software para su categorización a la vez. Si selecciona más de 100 títulos de software, solo se procesarán los primeros 100. Debe seleccionar los títulos de software restantes para su categorización en lotes de menos de 100.  
+    >  Configuration Manager puede procesar a la vez hasta 2000 títulos de software con el fin de clasificarlos. Si selecciona un número mayor, solo se procesarán los primeros 2000. El resto de títulos de software para clasificar se debe seleccionar en lotes de menos de 2000.  
 
     > [!TIP]  
     >  Haga clic en la columna **Estado** para ordenar por el estado de validación. Esto le permite ver todos los nombres de producto sin categorizar y seleccionar rápidamente varios elementos a fin de enviarlos para su categorización.  
