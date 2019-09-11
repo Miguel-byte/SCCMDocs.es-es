@@ -2,7 +2,7 @@
 title: Novedades de análisis de escritorio
 titleSuffix: Configuration Manager
 description: Un resumen de las nuevas características de la última versión mensual del servicio en la nube de análisis de escritorio.
-ms.date: 09/03/2019
+ms.date: 09/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.assetid: fa300181-86cb-4afe-8fbf-895a7572378d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5b6afa437dd37603bef668d4bc6ba39ad05aec2d
-ms.sourcegitcommit: b28a97e22a9a56c5ce3367c750ea2bb4d50449c3
+ms.openlocfilehash: 6c25aaba8c93204283723521ac157c62e62343d7
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70243544"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70891707"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Novedades de análisis de escritorio
 
@@ -38,6 +38,12 @@ Para obtener una notificación cuando se actualice esta página, copie y pegue l
 <!-- 4252663 -->
 
 Durante la incorporación, ahora puede migrar las entradas desde un área de trabajo de Windows Analytics existente. Para obtener más información, consulte las preguntas más frecuentes sobre [los clientes existentes de Windows Analytics](/sccm/desktop-analytics/faq#existing-windows-analytics-customers).
+
+### <a name="offboard-from-desktop-analytics"></a>Externalización de análisis de escritorio
+
+<!-- 4972396 -->
+
+Si configura el análisis de escritorio en su entorno, pero quiere dejar de usar el servicio, ahora puede cerrar su cuenta. Si cambia de opinión en 90 días, puede volver a activar la cuenta. Para obtener más información, consulte [cómo cerrar su cuenta](/sccm/desktop-analytics/account-close).
 
 
 ## <a name="august-2019"></a>2019 de agosto

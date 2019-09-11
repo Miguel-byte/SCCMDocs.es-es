@@ -11,16 +11,16 @@ ms.assetid: 349b2a69-af46-481f-afb2-24d98774e852
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e99899ba9b12416e9549f88c7bc3b72fc09c6c28
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 24f8b723a82f2adb4eb160b0e3edab1efbca1e95
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537643"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70891759"
 ---
 # <a name="desktop-analytics-log-collector"></a>Recopilador de registros de análisis de escritorio
 
-A partir de Configuration Manager versión 1906, use la herramienta **DesktopAnalyticsLogsCollector. PS1** desde el directorio de instalación Configuration Manager para ayudar a solucionar problemas de inscripción de dispositivos de análisis de escritorio. Ejecuta algunos pasos básicos de solución de problemas y recopila los registros pertinentes en un único directorio de trabajo. Puede compartir este contenido con el soporte técnico de Microsoft.
+A partir de Configuration Manager versión 1906, use la herramienta **DesktopAnalyticsLogsCollector. PS1** desde el directorio de instalación Configuration Manager para ayudar a solucionar problemas de inscripción de dispositivos de análisis de escritorio. Ejecuta algunos pasos básicos para solucionar problemas y recopila los registros pertinentes en un solo directorio de trabajo. Puede compartir este contenido con el soporte técnico de Microsoft.
 
 
 ## <a name="prerequisites"></a>Requisitos previos
@@ -30,7 +30,7 @@ A partir de Configuration Manager versión 1906, use la herramienta **DesktopAna
 - Ejecute el script en el dispositivo como un usuario administrativo y **ejecute como administrador**.
 
     > [!Tip]
-    > Puede usar la característica **scripts** de Configuration Manager con esta herramienta. Para obtener más información, [vea el ejemplo 5: Implementar script a través ](#bkmk_ex5)de scripts de Configuration Manager.
+    > Puede usar la característica **scripts** de Configuration Manager con esta herramienta. Para obtener más información, [vea el ejemplo 5: Implementar script a través de **scripts**](#bkmk_ex5)de Configuration Manager.
 
 - PowerShell versión 4,0 o posterior
     - .NET Framework versión 4,6 o posterior
@@ -40,7 +40,7 @@ A partir de Configuration Manager versión 1906, use la herramienta **DesktopAna
 
 Obtener el script del contenido de instalación de Configuration Manager:`SMSSETUP\TOOLS\DesktopAnalyticsLogsCollector\DesktopAnalyticsLogsCollector.ps1`
 
-```
+``` Syntax
 DesktopAnalyticsLogsCollector.ps1
     [-LogPath] <String>
     [-LogMode] <Int16>
@@ -60,7 +60,7 @@ Especifica una ruta de acceso local o UNC para colocar el registro y otros archi
 
 - Ruta de acceso UNC (longitud máxima = 130), por ejemplo:`\\myserver\myfolder`
 
-**Tipo**: Cadena
+**Tipo**: string
 
 **Posición**: 1
 
@@ -156,7 +156,7 @@ El script también genera otros *archivos de diagnóstico* en la carpeta de trab
 .\DesktopAnalyticsLogsCollector.ps1 -LogMode 1 -Verbose
 ```
 
-### <a name="bkmk_ex5"></a>Ejemplo 5: Implementar script a través  de scripts de Configuration Manager
+### <a name="bkmk_ex5"></a>Ejemplo 5: Implementar script a través de **scripts** de Configuration Manager
 
 Para obtener más información, consulte [Creación y ejecución de scripts de PowerShell desde la consola de Configuration Manager](/sccm/apps/deploy-use/create-deploy-scripts).
 

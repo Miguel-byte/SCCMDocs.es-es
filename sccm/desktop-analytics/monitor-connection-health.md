@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17a58992c01f59080edd74051329b82a0f760938
-ms.sourcegitcommit: e0d303d87c737811c2d3c40d01cd3d260a5c7bde
+ms.openlocfilehash: 7139175a564ffff50d325daf808e32efb7d3436b
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69974809"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70891773"
 ---
 # <a name="monitor-connection-health"></a>Supervisión del estado de conexión
 
@@ -229,7 +229,8 @@ Para obtener más información, revise M365AHandler. log en el cliente.
 Busque el siguiente archivo: `%windir%\System32\CompatTelRunner.exe`. Si no existe, vuelva a instalar las [actualizaciones de compatibilidad](/sccm/desktop-analytics/enroll-devices#bkmk_appraiser)necesarias. Asegúrese de que ningún otro componente del sistema está quitando este archivo, como la Directiva de grupo o un servicio antimalware.
 
 Si el archivo M365AHandler. log en el cliente incluye uno de los siguientes errores:
-```
+
+``` Log
 RunAppraiser failed. CompatTelRunner.exe exited with last error code: 0x800703F1
 RunAppraiser failed. CompatTelRunner.exe exited with last error code: 0x80070005
 RunAppraiser failed. CompatTelRunner.exe exited with last error code: 0x80080005
@@ -307,7 +308,7 @@ Para obtener más información, revise M365AHandler. log en el cliente.
 <!--1004-->
 Si esta comprobación no se realiza correctamente, el usuario seleccionó un nivel inferior de datos de diagnóstico de Windows en el dispositivo. También puede deberse a un objeto de directiva de grupo en conflicto. Para obtener más información, consulte [configuración de Windows](/sccm/desktop-analytics/enroll-devices#windows-settings).
 
-En función de los requisitos de su empresa, puede deshabilitar la elección del usuario a través de la Directiva de grupo. Use la opción para **configurar la interfaz de usuario de configuración de participación en**la telemetría. Para obtener más información, consulte [Configurar los datos de diagnóstico de Windows en la organización](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management).
+En función de los requisitos de su empresa, puede deshabilitar la elección del usuario a través de la Directiva de grupo. Use la opción para **configurar la interfaz de usuario de configuración de participación en la telemetría**. Para obtener más información, consulte [Configurar los datos de diagnóstico de Windows en la organización](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management).
 
 ### <a name="check-user-proxy"></a>Comprobar el proxy del usuario
 
