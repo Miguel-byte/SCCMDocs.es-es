@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 03ff2de897d274caf85539a3338fc7d45d8393f6
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: 74905b9c681b98716447ac40683f4a09f024826b
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68536438"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888947"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Preparación para usar grupos de disponibilidad AlwaysOn de SQL Server con Configuration Manager
 
@@ -94,7 +94,7 @@ Configure la base de datos de cada réplica con los parámetros siguientes:
 
 - Habilite la **integración con CLR**:
 
-    ```sql
+    ``` SQL
     sp_configure 'show advanced options', 1;  
     GO  
     RECONFIGURE;  
@@ -109,7 +109,7 @@ Configure la base de datos de cada réplica con los parámetros siguientes:
 
 - Establezca el **Tamaño de replicación de texto máximo** en `2147483647`:  
 
-    ```sql
+    ``` SQL
     EXECUTE sp_configure 'max text repl size (B)', 2147483647
     ```
 
@@ -117,7 +117,7 @@ Configure la base de datos de cada réplica con los parámetros siguientes:
 
 - Ponga en **ACTIVADO** el parámetro **DE CONFIANZA**:
 
-    ```sql
+    ``` SQL
     ALTER DATABASE [CM_xxx] SET TRUSTWORTHY ON;
     ```
 
@@ -125,7 +125,7 @@ Configure la base de datos de cada réplica con los parámetros siguientes:
 
 - Habilite **Service Broker**:  
 
-    ```sql
+    ``` SQL
     ALTER DATABASE [CM_xxx] SET ENABLE_BROKER
     ```
 
@@ -134,7 +134,7 @@ Configure la base de datos de cada réplica con los parámetros siguientes:
 
 - Configure la prioridad de Service Broker:
 
-    ```sql
+    ``` SQL
     ALTER DATABASE [CM_xxx] SET HONOR_BROKER_PRIORITY ON;
     ALTER DATABASE [CM_xxx] SET ENABLE_BROKER WITH ROLLBACK IMMEDIATE
 
@@ -146,7 +146,7 @@ Establezca estas configuraciones solo en una réplica principal. Para configurar
 
 Ejecute el script de SQL siguiente para comprobar las configuraciones de base de datos para las réplicas principal y secundaria. Para solucionar un problema en una réplica secundaria, cambie esa réplica secundaria para que sea la réplica principal.
 
-```SQL
+``` SQL
     SET NOCOUNT ON
 
     DECLARE @dbname NVARCHAR(128)
@@ -296,7 +296,7 @@ Por ejemplo, considere el siguiente escenario:
 <!-- SCCMDocs-pr#3734 -->
 A partir de la versión 1906, puede habilitar la [palabra clave de la cadena de conexión MultiSubnetFailover](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) en SQL Server. También debe agregar manualmente el siguiente valor al registro de Windows en el servidor del sitio:
 
-```
+``` Registry
 HKLM:\SOFTWARE\Microsoft\SMS\Identification
 
 MSF Enabled : 1 (DWORD)

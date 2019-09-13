@@ -2,7 +2,7 @@
 title: Comprobador de requisitos previos
 titleSuffix: Configuration Manager
 description: Obtenga información sobre cómo usar el Comprobador de requisitos previos para identificar y corregir problemas que podrían bloquear un sitio o la instalación de un rol de sistema de sitio.
-ms.date: 3/1/2017
+ms.date: 03/1/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 303092686611d08d8b05a5dafd9ee669ea2271a6
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 19167ee3b25d838ad6d2268d2b67230968394ef5
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65497739"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888794"
 ---
 # <a name="prerequisite-checker-for-system-center-configuration-manager"></a>Comprobador de requisitos previos de System Center Configuration Manager
 

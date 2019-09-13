@@ -2,7 +2,7 @@
 title: Preparación de los servidores Windows
 titleSuffix: Configuration Manager
 description: Asegúrese de que un equipo cumpla los requisitos previos para su uso como servidor de sitio o servidor del sistema de sitio de Configuration Manager.
-ms.date: 2/14/2017
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cbe2608058f7364ba2b78a7ed31a01dbec5ef65f
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: ce183f33a022259a5f706a6ec32aab409e0493a0
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499182"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70891258"
 ---
 # <a name="prepare-windows-servers-to-support-configuration-manager"></a>Preparar los servidores de Windows para admitir Configuration Manager
 
@@ -47,20 +47,20 @@ En determinados servidores de sistema de sitio se requieren las siguientes carac
 
     Como .NET Framework 4.0 y versiones posteriores no pueden reemplazar la versión 3.5 y anteriores, si las distintas versiones se indican como necesarias, planee habilitar cada versión en el mismo equipo.  
 
-- **Servicio de transferencia inteligente en segundo plano (BITS)**: Los puntos de administración requieren BITS y las opciones seleccionadas de forma automática para admitir la comunicación con los dispositivos administrados.  
+- **Servicio de transferencia inteligente en segundo plano (BITS)** : Los puntos de administración requieren BITS y las opciones seleccionadas de forma automática para admitir la comunicación con los dispositivos administrados.  
 
 - **BranchCache**: pueden configurarse puntos de distribución con BranchCache para admitir clientes que usen BranchCache.  
 
 - **Desduplicación de datos**: los puntos de distribución pueden configurarse con desduplicación de datos para beneficiarse de ella.  
 
-- **Compresión diferencial remota (RDC)**: cada equipo que hospeda un servidor de sitio o un punto de distribución requiere RDC. RDC se usa para generar firmas de paquete y realizar comparaciones de firma.  
+- **Compresión diferencial remota (RDC)** : cada equipo que hospeda un servidor de sitio o un punto de distribución requiere RDC. RDC se usa para generar firmas de paquete y realizar comparaciones de firma.  
 
 ### <a name="roles"></a>Roles  
 Se requieren los siguientes roles de Windows para admitir determinadas funcionalidades, como las actualizaciones de software y las implementaciones de sistema operativo, mientras que los roles de sistema de sitio más comunes requieren IIS.  
 
 - **Servicio de inscripción de dispositivos de red** (en Servicios de certificados de Active Directory): este rol de Windows es un requisito previo para el uso de perfiles de certificado en Configuration Manager.  
 
-- **Servidor web (IIS)**: que incluye:  
+- **Servidor web (IIS)** : que incluye:  
     - Características HTTP comunes  
           - Redirección HTTP  
     - Desarrollo de aplicaciones  

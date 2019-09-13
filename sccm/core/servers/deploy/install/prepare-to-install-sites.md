@@ -2,7 +2,7 @@
 title: Preparar la instalación de sitios
 titleSuffix: Configuration Manager
 description: Si tiene previsto instalar varios sitios de Configuration Manager, lea esta información para ahorrar tiempo y evitar errores.
-ms.date: 3/1/2017
+ms.date: 03/1/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 29e0f58404df2cadf2a1e28939ebcec2647b3e6d
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: aaac8972d6fbe3c8d99acf0a37fab2a748f2ce20
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68339413"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888939"
 ---
 # <a name="prepare-to-install-system-center-configuration-manager-sites"></a>Preparar la instalación de sitios de System Center Configuration Manager
 

@@ -2,7 +2,7 @@
 title: Recomendaciones de seguridad e información de privacidad
 titleSuffix: Configuration Manager
 description: Busque recursos que proporcionen recomendaciones de seguridad e información de privacidad de System Center Configuration Manager.
-ms.date: 1/3/2017
+ms.date: 01/3/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: daa59087ef30ccbaad1332e33934e728fa793b3d
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: c485fdb3633562e41ca6bdfb23d0033d1c5a7ee7
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56132738"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70889183"
 ---
 # <a name="security-best-practices-and-privacy-information-for-system-center-configuration-manager"></a>Recomendaciones de seguridad e información de privacidad de System Center Configuration Manager
 

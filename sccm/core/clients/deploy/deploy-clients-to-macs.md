@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e686f9cdbece2ceb652ecd2e0f3c6d5eca420caf
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 066a4095fa5714df3243cc729a1dacccd613fd39
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67677819"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70890366"
 ---
 # <a name="how-to-deploy-clients-to-macs"></a>Cómo implementar clientes en equipos Mac
 
@@ -234,7 +234,7 @@ Este procedimiento quita el SMSID. El cliente de Configuration Manager para Mac 
 
 7. En la ventana **Editar script de detección**, escriba el siguiente script de shell:  
 
-    ```  
+    ``` Shell
     defaults read com.microsoft.ccmclient SMSID  
     ```  
 
@@ -244,7 +244,7 @@ Este procedimiento quita el SMSID. El cliente de Configuration Manager para Mac 
 
 10. En la ventana **Crear script de corrección**, escriba el siguiente script de shell:  
 
-    ```  
+    ``` Shell
     defaults delete com.microsoft.ccmclient SMSID  
     ```  
 
@@ -268,7 +268,7 @@ Este procedimiento quita el SMSID. El cliente de Configuration Manager para Mac 
 
 15. Después de instalar un nuevo certificado en los equipos Mac a los que se ha quitado el SMSID, ejecute el siguiente comando para configurar el cliente para usar el nuevo certificado:  
 
-    ```  
+    ``` Shell
     sudo defaults write com.microsoft.ccmclient SubjectName -string <subject_name_of_new_certificate>  
     ```  
 

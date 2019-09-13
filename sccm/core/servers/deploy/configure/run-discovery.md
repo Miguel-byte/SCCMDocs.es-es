@@ -2,7 +2,7 @@
 title: Detección de recursos de usuario y dispositivo
 titleSuffix: Configuration Manager
 description: Lea la información general sobre el proceso de detección y los registros de datos de detección.
-ms.date: 2/8/2017
+ms.date: 02/8/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 51d96ef84832785e8d01bad447883dbe4761c2b0
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 760ea21d2badc6e58acf10c78aec4a3437ed3c1a
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65498400"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70890704"
 ---
 # <a name="run-discovery-for-system-center-configuration-manager"></a>Ejecutar la detección para System Center Configuration Manager
 

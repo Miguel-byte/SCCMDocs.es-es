@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d27baa691c3adca6dd859b79fc92bdd4fe539ab
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: 8499ff11cc7ba53760e541eefb690c69b2f20fcf
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68339913"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70889714"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-system-center-configuration-manager"></a>Funcionalidades de Technical Preview 1806 para System Center Configuration Manager
 
@@ -43,7 +43,8 @@ Steps to workaround, if any.
 ### <a name="ki_contentlib"></a> El sitio no puede actualizarse con la biblioteca de contenido remota
 <!--514642-->
 El sitio no se puede actualizar y muestra los siguientes errores en **cmupdate.log**:  
-```  
+
+``` Log
 Failed to find any valid drives  
 GetContentLibraryParameters failed; 0x80070057  
 ERROR: Failed to process configuration manager update.  
@@ -172,7 +173,7 @@ Esta versión agrega tres configuraciones de [SmartScreen de Windows Defender](/
 
 ## <a name="sync-mdm-policy-from-microsoft-intune-for-a-co-managed-device"></a>Sincronizar directiva MDM desde Microsoft Intune para un dispositivo administrado conjuntamente
 <!--1357377-->
-A partir de esta versión, cuando se [cambia una carga de trabajo de administración compartida](/sccm/core/clients/manage/co-management-switch-workloads), los dispositivos administrados conjuntamente sincronizan automáticamente la directiva MDM de Microsoft Intune. Esta sincronización también se produce al iniciar la acción **Descargar directiva de equipo** desde Notificaciones de cliente en la consola de Configuration Manager. Para obtener más información, vea [Iniciar la recuperación de directivas de cliente mediante la notificación de cliente](/sccm/core/clients/manage/manage-clients#initiate-client-policy-retrieval-using-client-notification).
+A partir de esta versión, cuando se [cambia una carga de trabajo de administración compartida](/sccm/core/clients/manage/co-management-switch-workloads), los dispositivos administrados conjuntamente sincronizan automáticamente la directiva MDM de Microsoft Intune. Esta sincronización también se produce al iniciar la acción **Descargar directiva de equipo** desde Notificaciones de cliente en la consola de Configuration Manager. Para obtener más información, vea [Iniciar la recuperación de directivas de cliente mediante la notificación de cliente](/sccm/core/clients/manage/manage-clients##BKMK_PolicyRetrieval).
 
 
 

@@ -2,7 +2,7 @@
 title: Ventanas de servicio
 titleSuffix: Configuration Manager
 description: Use las ventanas de servicio para controlar cuándo los sitios de System Center Configuration Manager instalan actualizaciones.
-ms.date: 1/11/2017
+ms.date: 01/11/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 495d109d73a32617f58383b78d11a10bf05edf75
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: d4244c92bd312dd67667bb00d19ca6f3cf94ecb6
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56134544"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892047"
 ---
 #  <a name="service-windows-for-site-servers"></a>Ventanas de servicio para servidores de sitio
 

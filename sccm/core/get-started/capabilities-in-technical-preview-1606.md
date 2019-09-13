@@ -12,12 +12,12 @@ manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4527a67b7a08d7f5b9fd38d2edb223a9de823436
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 135589a924e62cf4eed592fe339780cf138c410d
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67677630"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70889698"
 ---
 # <a name="capabilities-in-technical-preview-1606-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1606 para System Center Configuration Manager
 
@@ -28,8 +28,8 @@ En este artículo se presentan las características disponibles en Technical Pre
 **Problemas conocidos de esta Technical Preview:**  
 *  Cuando se actualiza de Technical Preview 1604 a 1605 y luego a la versión 1606, podría producirse un error en la actualización y se registraría un error similar al siguiente en **cmupdate.log**:
 
-    ```
-    ERROR: Failed to execute SQL Server command:  ~ ~-- Create site boundary group ~IF  dbo.fnIsCasOrStandalonePrimary() = 1 ~BEGIN ~   PRINT N'Create site boundary group during upgrade' ~   EXEC dbo.spBuildDefaultBoundaryGroups @UserName = N'SYSTEM' ~END          
+    ``` Log
+    ERROR: Failed to execute SQL Server command:  ~ ~-- Create site boundary group ~IF  dbo.fnIsCasOrStandalonePrimary() = 1 ~BEGIN ~   PRINT N'Create site boundary group during upgrade' ~   EXEC dbo.spBuildDefaultBoundaryGroups @UserName = N'SYSTEM' ~END
     ```
 
     Si ocurre esto, en el nodo **Actualizaciones y mantenimiento**, haga clic en **Buscar actualizaciones** y luego **vuelva a intentar** la instalación de la actualización.

@@ -2,7 +2,7 @@
 title: Dominios de Active Directory admitidos
 titleSuffix: Configuration Manager
 description: Obtenga los requisitos de pertenencia de un sistema de sitio de System Center Configuration Manager en un dominio de Active Directory.
-ms.date: 9/18/2017
+ms.date: 09/18/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02353e516e7af45afe273bc0deff5b227a7c7f2c
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 9d3d9b471b5a9cb69204dfb39f8d7a0d3295ee6f
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499432"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70891399"
 ---
 # <a name="supported-active-directory-domains-for-system-center-configuration-manager"></a>Compatibilidad con los dominios de Active Directory para System Center Configuration Manager
 
@@ -30,7 +30,7 @@ Todos los sistemas de sitio de System Center Configuration Manager deben ser mie
 
 -   No se permite cambiar lo siguiente en un equipo que hospeda un rol de sistema de sitio:  
 
-    -   Pertenencia a dominio *(incluye quitar un sistema de sitio del dominio y volver a unirlo al mismo dominio)*.
+    -   Pertenencia a dominio *(incluye quitar un sistema de sitio del dominio y volver a unirlo al mismo dominio)* .
 
     -   Nombre de dominio  
 

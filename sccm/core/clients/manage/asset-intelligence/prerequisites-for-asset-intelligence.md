@@ -2,7 +2,7 @@
 title: Requisitos previos de Asset Intelligence
 titleSuffix: Configuration Manager
 description: Obtenga los requisitos previos de Asset Intelligence en System Center Configuration Manager.
-ms.date: 2/22/2017
+ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e6da1db1d26a835ae15d49b2f6a6ced57e7578e
-ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.openlocfilehash: 738adae78a4f47ed714462e67c73aa253a3751d5
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70378333"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70890392"
 ---
 # <a name="prerequisites-for-asset-intelligence-in-system-center-configuration-manager"></a>Requisitos previos de Asset Intelligence en System Center Configuration Manager
 

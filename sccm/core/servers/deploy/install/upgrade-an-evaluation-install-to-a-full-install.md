@@ -2,7 +2,7 @@
 title: Actualización de las instalaciones de evaluación
 titleSuffix: Configuration Manager
 description: Obtenga información sobre cómo actualizar una instalación de evaluación a una instalación completa de System Center Configuration Manager.
-ms.date: 2/7/2017
+ms.date: 02/7/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b5e527fbed544447052556041db3de3c5b06ffd
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 29c1aee34669ac65ae3175895bc1061e851182d1
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65497670"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888889"
 ---
 # <a name="upgrade-an-evaluation-installation-of-system-center-configuration-manager-to-a-full-installation"></a>Actualizar una instalación de evaluación de System Center Configuration Manager a una instalación completa
 
@@ -41,7 +41,7 @@ Requisitos previos para actualizar una versión de evaluación a una versión co
 
 ### <a name="to-upgrade-an-evaluation-version-of-configuration-manager-to-a-licensed-version"></a>Para actualizar de una versión de evaluación de Configuration Manager a una versión con licencia  
 
-1.  En el servidor de sitio, busque y ejecute **Setup.exe** (programa de instalación de Configuration Manager) en la carpeta de instalación de Configuration Manager (**%path%\BIN\X64**). Debe ejecutar la copia del programa de instalación que se encuentra en el servidor de sitio, en la carpeta de Configuration Manager, porque las opciones de mantenimiento del sitio no están disponibles si ejecuta el programa de instalación desde medios de instalación.  
+1.  En el servidor de sitio, busque y ejecute **Setup.exe** (programa de instalación de Configuration Manager) en la carpeta de instalación de Configuration Manager ( **%path%\BIN\X64**). Debe ejecutar la copia del programa de instalación que se encuentra en el servidor de sitio, en la carpeta de Configuration Manager, porque las opciones de mantenimiento del sitio no están disponibles si ejecuta el programa de instalación desde medios de instalación.  
 2.  En la página **Antes de empezar**, seleccione **Siguiente**.  
 3.  En la página **Introducción**, seleccione **Realizar mantenimiento de sitio o restablecer este sitio** y, después, haga clic en **Siguiente**.  
 4.  En la página **Mantenimiento del sitio**, seleccione **Actualizar la edición de evaluación a una edición con licencia**, escriba una clave del producto válida y, después, haga clic en **Siguiente**.  

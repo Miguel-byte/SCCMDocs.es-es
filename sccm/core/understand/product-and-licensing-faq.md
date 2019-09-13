@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: acafe2aeefc267446042b12f06763fd0f1737cfb
-ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.openlocfilehash: f4f4d10d7ae21ac209fc7cdc85f54bd8dbf604b8
+ms.sourcegitcommit: 4316bff400ffbde8404f8a2092ec17e3601b8d29
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70377847"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70738331"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Preguntas más frecuentes sobre las licencias y ramas de Configuration Manager
 
@@ -35,7 +35,7 @@ La rama actual es la compilación lista para producción de Configuration Manage
 
 ### <a name="bkmk_ltsb"></a> ¿Qué es la rama de mantenimiento a largo plazo (LTSB)?  
 
-La LTSB es una compilación lista para producción de Configuration Manager. Se ha pensado para aquellos clientes que permiten que Software Assurance o derechos de suscripción equivalentes expiren. Comparada con la rama actual, la LTSB tiene una [funcionalidad reducida](/sccm/core/understand/introduction-to-the-ltsb#features-that-are-not-available-in-the-ltsb-of-configuration-manager). Los clientes que permiten que Software Assurance o derechos de suscripción equivalentes expiren, deben desinstalar la rama actual de Configuration Manager. Los clientes que tengan derechos de licencia perpetuos para Configuration Manager pueden instalar y usar la compilación de LTSB de la versión de Configuration Manager que esté vigente en el momento de la expiración.
+La LTSB es una compilación lista para producción de Configuration Manager. Se ha pensado para aquellos clientes que permiten que Software Assurance o derechos de suscripción equivalentes expiren. Comparada con la rama actual, la LTSB tiene una [funcionalidad reducida](/sccm/core/understand/introduction-to-the-ltsb#features-that-arent-available). Los clientes que permiten que Software Assurance o derechos de suscripción equivalentes expiren, deben desinstalar la rama actual de Configuration Manager. Los clientes que tengan derechos de licencia perpetuos para Configuration Manager pueden instalar y usar la compilación de LTSB de la versión de Configuration Manager que esté vigente en el momento de la expiración.
 
 
 ### <a name="bkmk_licensing-acronyms"></a> He visto que *SA* y *L&SA* se han usado en el contenido sobre licencias. ¿Qué significan estos acrónimos con respecto a Configuration Manager?    

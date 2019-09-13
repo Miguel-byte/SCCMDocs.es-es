@@ -2,7 +2,7 @@
 title: Datos de diagnóstico de 1702
 titleSuffix: Configuration Manager
 description: Obtenga información acerca de los niveles de datos de diagnóstico y uso que se recopilan en la versión 1702 de System Center Configuration Manager.
-ms.date: 3/27/2017
+ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6325c4a474456970b3a981f17e73cce2c01753a1
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 07b71e15e0049a635d36d8e418dad4a25caf1901
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67677016"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70889486"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1702-of-system-center-configuration-manager"></a>Niveles de recopilación de datos de uso para diagnóstico para la versión 1702 de System Center Configuration Manager
 

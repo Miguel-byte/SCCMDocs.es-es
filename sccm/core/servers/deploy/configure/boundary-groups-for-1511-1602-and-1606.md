@@ -2,7 +2,7 @@
 title: Grupos de límites para 1511, 1602 y 1606
 titleSuffix: Configuration Manager
 description: Use grupos de límites con las versiones 1511, 1602 y 1606 de Configuration Manager.
-ms.date: 2/8/2017
+ms.date: 02/8/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55f70ff9b3be4c9f1e1726bbdd887d86760e9808
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: fb769a4a48bdc6627d89cf710605cadd86376e57
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499027"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70889174"
 ---
 # <a name="boundary-groups-for-system-center-configuration-manager-version-1511-1602-and-1606"></a>Grupos de límites para las versiones 1511, 1602 y 1606 de System Center Configuration Manager
 

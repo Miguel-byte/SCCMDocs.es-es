@@ -2,7 +2,7 @@
 title: Búsqueda de recursos del sitio
 titleSuffix: Configuration Manager
 description: Más información sobre cómo y cuándo los clientes de System Center Configuration Manager usan la ubicación del servicio para buscar recursos de sitio.
-ms.date: 2/7/2017
+ms.date: 02/7/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bded5760fb397f0bd2acc676a9f875235d66fae4
-ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.openlocfilehash: e24460cb7acaaa715d21d49bd1e1f37fe270253c
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70380171"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70891190"
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-system-center-configuration-manager"></a>Más información sobre cómo los clientes buscan servicios y recursos de sitio para System Center Configuration Manager
 

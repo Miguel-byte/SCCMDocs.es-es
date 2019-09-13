@@ -2,7 +2,7 @@
 title: Instalación de línea de comandos
 titleSuffix: Configuration Manager
 description: Obtenga información sobre cómo ejecutar el programa de instalación de System Center Configuration Manager en un símbolo del sistema para diversas instalaciones de sitio.
-ms.date: 3/27/2017
+ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 63fb00eb446c8e91f8bc741c0375b314ad0ef9a7
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 3e24fb163d144d69b11e7ae1aae4a5ebc5e0c38f
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65497651"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888715"
 ---
 # <a name="use-a-command-line-to-install-system-center-configuration-manager-sites"></a>Usar una línea de comandos para instalar sitios de System Center Configuration Manager
 
@@ -37,7 +37,7 @@ ms.locfileid: "65497651"
   - Use la opción de la línea de comandos **/MANAGELANGS**.
   - Especifique un archivo de script de idioma que especifique los idiomas que quiere agregar o quitar.  
 
-    Por ejemplo, use la siguiente sintaxis de comando: **setupwpf.exe /MANAGELANGS &lt;archivo de script de idioma\>**.  
+    Por ejemplo, use la siguiente sintaxis de comando: **setupwpf.exe /MANAGELANGS &lt;archivo de script de idioma\>** .  
 
     Para crear el archivo de script de idioma, use la información de [Command line options to manage languages](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_Lang) (Opciones de línea de comandos para administrar idiomas).  
 

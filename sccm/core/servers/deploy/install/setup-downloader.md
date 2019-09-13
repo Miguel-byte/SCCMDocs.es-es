@@ -2,7 +2,7 @@
 title: Descargador del programa de instalación
 titleSuffix: Configuration Manager
 description: Lea sobre esta aplicación independiente diseñada para asegurar que la instalación del sitio usa las versiones actuales de los archivos de instalación principales.
-ms.date: 3/1/2017
+ms.date: 03/1/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 23fbe5ecb6b69f9832ca34659cd35f5ad25b29b9
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: fcf41ada4d8fd2d6e4c185a485d94c64cd55b541
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65501334"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888815"
 ---
 # <a name="setup-downloader-for-system-center-configuration-manager"></a>Descargador del programa de instalación de System Center Configuration Manager
 
@@ -66,7 +66,7 @@ Tiene dos opciones para ejecutar el descargador del programa de instalación:
 
     -   **/NOUI**: utilice esta opción para iniciar el descargador del programa de instalación sin mostrar la interfaz de usuario. Al usar esta opción, debe especificar la **ruta de acceso de la descarga** como parte del comando en el símbolo del sistema.  
 
-    -   **&lt;DownloadPath\>**: puede especificar la ruta de acceso a la carpeta de descarga para iniciar automáticamente el proceso de comprobación o descarga. Debe especificar la ruta de acceso de descarga al usar la opción **/NOUI**. Si no se especifica ninguna ruta de acceso de descarga, debe especificarla cuando se abra el descargador del programa de instalación. El descargador del programa de instalación crea la carpeta en caso de que no exista.  
+    -   **&lt;DownloadPath\>** : puede especificar la ruta de acceso a la carpeta de descarga para iniciar automáticamente el proceso de comprobación o descarga. Debe especificar la ruta de acceso de descarga al usar la opción **/NOUI**. Si no se especifica ninguna ruta de acceso de descarga, debe especificarla cuando se abra el descargador del programa de instalación. El descargador del programa de instalación crea la carpeta en caso de que no exista.  
 
     Comandos de ejemplo:
 

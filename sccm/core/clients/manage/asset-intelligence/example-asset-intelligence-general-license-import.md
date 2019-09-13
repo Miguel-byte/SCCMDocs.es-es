@@ -2,7 +2,7 @@
 title: Ejemplo de archivo de importación de licencia general de Asset Intelligence
 titleSuffix: Configuration Manager
 description: Use un ejemplo de archivo de licencia general de Asset Intelligence para ayudar a importar licencias de software en System Center Configuration Manager.
-ms.date: 2/22/2017
+ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ab8e241f9a1bacba7f8bcfbe0674fbfb513db2e
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 3cd873f7db312b84ef7591bbd82993e3ebc7a891
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500010"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70890311"
 ---
 # <a name="example-asset-intelligence-general-license-import-file-in-system-center-configuration-manager"></a>Ejemplo de archivo de importación de licencia general de Asset Intelligence en System Center Configuration Manager
 

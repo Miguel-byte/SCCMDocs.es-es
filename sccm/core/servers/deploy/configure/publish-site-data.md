@@ -2,7 +2,7 @@
 title: Publicar datos del sitio
 titleSuffix: Configuration Manager
 description: Obtenga información sobre cómo publicar sitios de Configuration Manager en Servicios de dominio de Active Directory.
-ms.date: 2/7/2017
+ms.date: 02/7/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bce6e2d18da1c2cb87a52fdef545d1b23f602f38
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 016e809e752b54d73550f783c5a16296521121e5
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65501420"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70891195"
 ---
 # <a name="publish-site-data-for-system-center-configuration-manager"></a>Publicar datos de sitio para System Center Configuration Manager
 

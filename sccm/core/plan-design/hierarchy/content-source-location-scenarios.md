@@ -2,7 +2,7 @@
 title: Ubicación de origen de contenido
 titleSuffix: Configuration Manager
 description: Conozca la configuración de System Center Configuration Manager que permite a los clientes buscar contenido en una red lenta.
-ms.date: 1/3/2017
+ms.date: 01/3/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 61565ee1d6c98a5ab3a3391d6444aed3f082ae64
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: 3414fb15f3a303b443aa615a45440e1b0636e5b4
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67251733"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70891377"
 ---
 # <a name="content-source-location-scenarios-in-system-center-configuration-manager"></a>Escenarios de ubicación de orígenes de contenido en System Center Configuration Manager
 

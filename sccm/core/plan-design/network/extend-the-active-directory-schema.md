@@ -2,7 +2,7 @@
 title: Publicación y el esquema de Active Directory
 titleSuffix: Configuration Manager
 description: Extienda el esquema de Active Directory para System Center Configuration Manager a fin de simplificar el proceso de implementar y configurar clientes.
-ms.date: 2/6/2017
+ms.date: 02/6/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1fec31437e2f1a587f4262e6dc1984eadbec2d23
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 68be076cd166867ae3a1b181c14e3c888110b029
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499233"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70889450"
 ---
 # <a name="prepare-active-directory-for-site-publishing"></a>Preparar Active Directory para la publicación de sitios
 
@@ -62,7 +62,7 @@ Para extender el esquema para Configuration Manager:
 
 2.  Use la utilidad de línea de comandos LDIFDE para importar el contenido del archivo **ConfigMgr_ad_schema.ldf** en Active Directory Domain Services:  
 
-    -   Por ejemplo, la siguiente línea de comandos importará las extensiones de esquema en Active Directory Domain Services, activará el registro detallado y creará un archivo de registro durante el proceso de importación: **ldifde -i -f ConfigMgr_ad_schema.ldf -v -j &lt;ubicación donde se almacenará el archivo de registro\>**.  
+    -   Por ejemplo, la siguiente línea de comandos importará las extensiones de esquema en Active Directory Domain Services, activará el registro detallado y creará un archivo de registro durante el proceso de importación: **ldifde -i -f ConfigMgr_ad_schema.ldf -v -j &lt;ubicación donde se almacenará el archivo de registro\>** .  
 
 3.  Para comprobar que la extensión de esquema se ha completado correctamente, revise el archivo de registro creado por la línea de comandos del paso anterior.  
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a48dd82b1f4c79953ce88c5e156abe47b891ac14
-ms.sourcegitcommit: d1df13fc95a1f1540177c294555d9be26161b9cb
+ms.openlocfilehash: 0930e2f02d2a99073944c61cfead6767530accbc
+ms.sourcegitcommit: 4316bff400ffbde8404f8a2092ec17e3601b8d29
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65973943"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70738230"
 ---
 # <a name="conditional-access-with-co-management"></a>Acceso condicional con administración conjunta
 
@@ -34,7 +34,7 @@ Con la administración conjunta, Intune evalúa todos los dispositivos de la red
 
     - En el caso de los dispositivos administrados conjuntamente, Configuration Manager también realiza la evaluación basada en la configuración. Por ejemplo, actualizaciones requeridas o cumplimiento de aplicaciones. Intune combina esta evaluación junto con su propia evaluación.  
 
-2. Intune detecta los incidentes de seguridad activos en un dispositivo. Usa la seguridad inteligente de [Protección contra amenazas avanzada de Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/get-started) (anteriormente ATP de Windows Defender) y otros [proveedores de defensa contra amenazas móviles](https://www.lookout.com/about/partners/microsoft). Estos asociados ejecutan los análisis de comportamiento en curso en los dispositivos. Este análisis detecta incidentes activos y, a continuación, pasa esta información a Intune para la evaluación de cumplimiento en tiempo real.  
+2. Intune detecta los incidentes de seguridad activos en un dispositivo. Usa la seguridad inteligente de [Protección contra amenazas avanzada de Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) (anteriormente ATP de Windows Defender) y otros [proveedores de defensa contra amenazas móviles](https://www.lookout.com/about/partners/microsoft). Estos asociados ejecutan los análisis de comportamiento en curso en los dispositivos. Este análisis detecta incidentes activos y, a continuación, pasa esta información a Intune para la evaluación de cumplimiento en tiempo real.  
 
     - Esta evaluación es posterior a la infracción de seguridad y se basa en incidentes.  
 

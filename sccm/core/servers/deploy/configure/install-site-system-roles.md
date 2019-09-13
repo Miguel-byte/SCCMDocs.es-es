@@ -2,7 +2,7 @@
 title: Instalar roles de sistema de sitio
 titleSuffix: Configuration Manager
 description: Los asistentes le ayudan a agregar roles de sistema de sitio en un servidor de sistema de sitio nuevo o existente en el sitio.
-ms.date: 2/7/2017
+ms.date: 02/7/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef901e6bb9c0b28d55d8ffe08accca8f30101583
-ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.openlocfilehash: 0c73a541c11d9681c17198d4bf4eaad9989cd56a
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70377905"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888978"
 ---
 # <a name="install-site-system-roles-for-system-center-configuration-manager"></a>Instalación de roles de sistema de sitio para System Center Configuration Manager
 

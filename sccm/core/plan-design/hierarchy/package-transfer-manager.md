@@ -2,7 +2,7 @@
 title: Administrador de transferencia de paquetes
 titleSuffix: Configuration Manager
 description: Descubra cómo el administrador de transferencia de paquetes de System Center Configuration Manager transfiere el contenido desde un servidor de sitio a los puntos de distribución remotos.
-ms.date: 2/8/2017
+ms.date: 02/8/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a465317334879e048ef9fe628a0efbdd5dbad78
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: e5994ba2689ba276412012b6bd1c18b65d27c3df
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56139575"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70889477"
 ---
 # <a name="package-transfer-manager-in-system-center-configuration-manager"></a>Administrador de transferencia de paquetes en System Center Configuration Manager
 

@@ -2,7 +2,7 @@
 title: Procedimientos recomendados para las colecciones
 titleSuffix: Configuration Manager
 description: Conozca procedimientos recomendados para las colecciones en System Center Configuration Manager.
-ms.date: 2/22/2017
+ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c685cf4efd5eca5f93694edd4a01715120df9a8
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: be96b106424c6340a27b015a06e0c3d06e3257d6
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56140582"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70890186"
 ---
 # <a name="best-practices-for-collections-in-system-center-configuration-manager"></a>Procedimientos recomendados para recopilaciones en System Center Configuration Manager
 

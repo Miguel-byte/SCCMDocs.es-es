@@ -2,7 +2,7 @@
 title: Planeamiento de la migración
 titleSuffix: Configuration Manager
 description: Obtenga información sobre sitios y jerarquías antes de migrar datos a una jerarquía de destino de System Center Configuration Manager.
-ms.date: 1/12/2017
+ms.date: 01/12/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4d3a54b7fabbd36b3c622c75622002d509540581
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 286378fd354375fcf52030b0b27ed41802524bfa
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56141915"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70891507"
 ---
 # <a name="plan-for-migration-to-system-center-configuration-manager"></a>Planear la migración a System Center Configuration Manager
 
