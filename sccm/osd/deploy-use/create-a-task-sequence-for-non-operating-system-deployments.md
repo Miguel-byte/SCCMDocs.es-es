@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17ba0f146a80928b1eaae6334e6418a5e08b1114
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.openlocfilehash: d3cd923348b3ac6dfd6b2da652efc0a56ad9b787
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65083064"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888455"
 ---
 # <a name="create-a-task-sequence-for-non-os-deployments"></a>Crear una secuencia de tareas para implementaciones que no son de sistema operativo
 

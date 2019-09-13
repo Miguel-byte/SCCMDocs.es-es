@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2b063fe21a674fc066531b1bd970a330d02d9f9
-ms.sourcegitcommit: b28a97e22a9a56c5ce3367c750ea2bb4d50449c3
+ms.openlocfilehash: 4702f29f9c321c4361aea2f2f75c7c7e30e284b7
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70243674"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888630"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Creación y ejecución de scripts de PowerShell desde la consola de Configuration Manager
 
@@ -221,7 +221,7 @@ Estos son un par de ejemplos que ilustran los scripts que recomendamos utilizar 
 
 Este script crea una carpeta y un archivo dentro de ella según la entrada de nomenclatura.
 
-``` powershell
+``` PowerShell
 Param(
 [Parameter(Mandatory=$True)]
 [string]$FolderName,
@@ -237,7 +237,7 @@ New-Item $FileName -type file
 
 Este script usa WMI para consultar a la máquina la versión que tiene de SO.
 
-``` powershell
+``` PowerShell
 Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 ```
 
@@ -304,8 +304,7 @@ Puede ver una salida de script detallada sin formato o con formato JSON estructu
 ### <a name="example-script-output-is-valid-json"></a>Ejemplo: La salida de script es un archivo JSON válido
 Comando: `$PSVersionTable.PSVersion`  
 
-Salida:  
-```
+``` Output
 Major  Minor  Build  Revision
 -----  -----  -----  --------
 5      1      16299  551
@@ -314,8 +313,7 @@ Major  Minor  Build  Revision
 ### <a name="example-script-output-isnt-valid-json"></a>Ejemplo: La salida de script no es un archivo JSON válido
 Comando: `Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`  
 
-Salida:  
-```
+``` Output
 Microsoft Windows 10 Enterprise
 ```
 

@@ -2,7 +2,7 @@
 title: Certificados y seguridad
 titleSuffix: Configuration Manager
 description: Administrar certificados y seguridad de System Center Updates Publisher
-ms.date: 4/29/2017
+ms.date: 04/29/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db60b7cf6332e778279b494b2922cd621983c20c
-ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
+ms.openlocfilehash: fc54cfc55821dc7189680f264c10a4a471979b04
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67516298"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892199"
 ---
 # <a name="manage-certificates-and-security-for-updates-publisher"></a>Administrar certificados y seguridad de Updates Publisher
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 273e61024032defd10b3176fb70ac6c3a35125e2
-ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.openlocfilehash: 7132bbbc0746af04e4af952b2fcf7d8de46b3c9b
+ms.sourcegitcommit: cb169396acf0d50fedd9f2ae62f7894615c3cce5
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70380040"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70808382"
 ---
 # <a name="task-sequence-steps"></a>Pasos de la secuencia de tareas
 
@@ -868,6 +868,13 @@ Utilice las siguientes variables de secuencia de tareas con este paso:
 
 Para agregar este paso en el editor de secuencia de tareas, seleccione **Agregar**, **Discos** y **Formatear y crear particiones de disco**.
 
+Administre este paso con los siguientes cmdlets de PowerShell:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepPartitionDisk](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtssteppartitiondisk?view=sccm-ps)
+- [New-CMTSStepPartitionDisk](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtssteppartitiondisk?view=sccm-ps)
+- [Remove-CMTSStepPartitionDisk](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtssteppartitiondisk?view=sccm-ps)
+- [Set-CMTSStepPartitionDisk](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtssteppartitiondisk?view=sccm-ps)
+
 ### <a name="properties"></a>Propiedades  
 
 En la pestaña **Propiedades** de este paso, configure las opciones descritas en esta sección.  
@@ -1049,6 +1056,12 @@ Utilice las siguientes variables de secuencia de tareas con este paso:
 - [OSDDoNotLogCommand](/sccm/osd/understand/task-sequence-variables#OSDDoNotLogCommand) (a partir de la versión 1806)<!--1358493-->  
 
 Para agregar este paso en el editor de secuencia de tareas, seleccione **Agregar**, **Software** e **Instalar paquete**.
+Administre este paso con los siguientes cmdlets de PowerShell:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepInstallSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepinstallsoftware?view=sccm-ps)
+- [New-CMTSStepInstallSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepinstallsoftware?view=sccm-ps)
+- [Remove-CMTSStepInstallSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepinstallsoftware?view=sccm-ps)
+- [Set-CMTSStepInstallSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepinstallsoftware?view=sccm-ps)
 
 ### <a name="properties"></a>Propiedades  
 
@@ -1119,6 +1132,13 @@ Utilice las siguientes variables de secuencia de tareas con este paso:
 > Si el cliente no puede recuperar la lista de puntos de administración de servicios de ubicación, use las variables **SMSTSMPListRequestTimeoutEnabled** y **SMSTSMPListRequestTimeout**. Estas variables especifican la cantidad de milisegundos que espera una secuencia de tareas antes de reintentar la instalación de una aplicación o actualización de software. Para más información, vea [Task sequence variables](/sccm/osd/understand/task-sequence-variables) (Variables de secuencia de tareas).  
 
 Para agregar este paso en el editor de secuencia de tareas, seleccione **Agregar**, **Software** e **Instalar actualizaciones de software**.
+
+Administre este paso con los siguientes cmdlets de PowerShell:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepInstallUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepinstallupdate?view=sccm-ps)
+- [New-CMTSStepInstallUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepinstallupdate?view=sccm-ps)
+- [Remove-CMTSStepInstallUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepinstallupdate?view=sccm-ps)
+- [Set-CMTSStepInstallUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepinstallupdate?view=sccm-ps)
 
 Para obtener más recomendaciones y un diagrama técnico de diagrama de flujo para este paso, consulte [Instalar actualizaciones de software](/sccm/osd/understand/install-software-updates).
 
@@ -1374,6 +1394,13 @@ Utilice las siguientes variables de secuencia de tareas con este paso:
 
 Para agregar este paso en el editor de secuencia de tareas, seleccione **Agregar**, **General** y **Reiniciar equipo**.
 
+Administre este paso con los siguientes cmdlets de PowerShell:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepReboot](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepreboot?view=sccm-ps)
+- [New-CMTSStepReboot](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepreboot?view=sccm-ps)
+- [Remove-CMTSStepReboot](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepreboot?view=sccm-ps)
+- [Set-CMTSStepReboot](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepreboot?view=sccm-ps)
+
 ### <a name="properties"></a>Propiedades  
 
 En la pestaña **Propiedades** de este paso, configure las opciones descritas en esta sección.  
@@ -1473,6 +1500,13 @@ Utilice las siguientes variables de secuencia de tareas con este paso:
 
 Para agregar este paso en el editor de secuencia de tareas,seleccione **Agregar**, **General** y **Ejecutar línea de comandos**.
 
+Administre este paso con los siguientes cmdlets de PowerShell:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepRunCommandLine](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepruncommandline?view=sccm-ps)
+- [New-CMTSStepRunCommandLine](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepruncommandline?view=sccm-ps)
+- [Remove-CMTSStepRunCommandLine](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepruncommandline?view=sccm-ps)
+- [Set-CMTSStepRunCommandLine](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepruncommandline?view=sccm-ps)
+
 ### <a name="properties"></a>Propiedades  
 
 En la pestaña **Propiedades** de este paso, configure las opciones descritas en esta sección.  
@@ -1558,6 +1592,13 @@ Utilice las siguientes variables de secuencia de tareas con este paso:
 - [OSDLogPowerShellParameters](/sccm/osd/understand/task-sequence-variables#OSDLogPowerShellParameters) (a partir de la versión 1902)<!--3556028-->  
 
 Para agregar este paso en el editor de secuencia de tareas, seleccione **Agregar**, **General** y **Ejecutar Script PowerShell**.
+
+Administre este paso con los siguientes cmdlets de PowerShell:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepRunPowerShellScript](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtssteprunpowershellscript?view=sccm-ps)
+- [New-CMTSStepRunPowerShellScript](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtssteprunpowershellscript?view=sccm-ps)
+- [Remove-CMTSStepRunPowerShellScript](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtssteprunpowershellscript?view=sccm-ps)
+- [Set-CMTSStepRunPowerShellScript](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtssteprunpowershellscript?view=sccm-ps)
 
 > [!Note]  
 > Use scripts de PowerShell firmados en formato Unicode. El formato ANSI, que es el predeterminado, no funciona con este paso.
@@ -1678,10 +1719,14 @@ Este paso ejecuta otra secuencia de tareas. Se crea una relación de elementos p
 
 Para agregar este paso en el editor de secuencia de tareas,seleccione **Agregar**, **General** y **Ejecutar secuencia de tareas**.
 
-A partir de la versión 1906, administre este paso con los siguientes cmdlets de PowerShell:<!-- 2839943, SCCMDocs #1118 -->
+A partir de la versión 1906, administre este paso con los siguientes cmdlets de PowerShell:<!-- 2839943, SCCMDocs#1118 -->
 
+- **Get-CMTSStepRunTaskSequence**
 - **New-CMTSStepRunTaskSequence**
+- **Remove-CMTSStepRunTaskSequence**
 - **Set-CMTSStepRunTaskSequence**
+
+Para obtener más información, consulte las notas de la [versión de 1906: nuevos cmdlets](https://docs.microsoft.com/powershell/sccm/1906-release-notes?view=sccm-ps#new-cmdlets).
 
 ### <a name="specifications-and-limitations"></a>Especificaciones y limitaciones
 
@@ -1737,6 +1782,13 @@ Este paso se puede ejecutar en el sistema operativo completo o Windows PE.
 
 Para agregar este paso en el editor de secuencia de tareas, seleccione **Agregar**, **General** y **Establecer variables dinámicas**.
 
+Administre este paso con los siguientes cmdlets de PowerShell:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepSetDynamicVariable](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepsetdynamicvariable?view=sccm-ps)
+- [New-CMTSStepSetDynamicVariable](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepsetdynamicvariable?view=sccm-ps)
+- [Remove-CMTSStepSetDynamicVariable](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepsetdynamicvariable?view=sccm-ps)
+- [Set-CMTSStepSetDynamicVariable](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepsetdynamicvariable?view=sccm-ps)
+
 ### <a name="properties"></a>Propiedades  
 
 En la pestaña **Propiedades** de este paso, configure las opciones descritas en esta sección.  
@@ -1783,6 +1835,13 @@ Las variables de secuencia de tareas son leídas por acciones de secuencia de ta
 
 Para agregar este paso en el editor de secuencia de tareas, seleccione **Agregar**, **General** y **Configurar variable de secuencia de tareas**.
 
+Administre este paso con los siguientes cmdlets de PowerShell:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepSetVariable](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepsetvariable?view=sccm-ps)
+- [New-CMTSStepSetVariable](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepsetvariable?view=sccm-ps)
+- [Remove-CMTSStepSetVariable](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepsetvariable?view=sccm-ps)
+- [Set-CMTSStepSetVariable](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepsetvariable?view=sccm-ps)
+
 ### <a name="properties"></a>Propiedades  
 
 En la pestaña **Propiedades** de este paso, configure las opciones descritas en esta sección.  
@@ -1818,6 +1877,13 @@ Utilice las siguientes variables de secuencia de tareas con este paso:
 Este paso reemplaza las variables de directorio sysprep.inf o unattend.xml, como `%WINDIR%` y `%ProgramFiles%`, por el directorio de instalación de Windows PE, `X:\Windows`. La secuencia de tareas ignora las variables especificadas mediante estas variables de entorno.  
 
 Para agregar este paso en el editor de secuencia de tareas, seleccione **Agregar**, **Imágenes** e **Instalar Windows y Configuration Manager**.
+
+Administre este paso con los siguientes cmdlets de PowerShell:<!-- SCCMDocs #1118 -->
+
+- [Get-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
+- [New-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
+- [Remove-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
+- [Set-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
 
 ### <a name="step-actions"></a>Acciones del paso
 

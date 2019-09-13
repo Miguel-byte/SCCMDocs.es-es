@@ -2,7 +2,7 @@
 title: Usar medios de arranque para implementar Windows a través de la red
 titleSuffix: Configuration Manager
 description: Use implementaciones de medios de arranque en System Center Configuration Manager para implementar el sistema operativo al iniciar el equipo de destino.
-ms.date: 6/16/2017
+ms.date: 06/16/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9ebe239687489ce14cd77c23b59ec5f01c2e6609
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 98aa69cc0a80b12ca5caabb2c5b7167310ea2c83
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128126"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892536"
 ---
 # <a name="use-bootable-media-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>Use medios de arranque para implementar Windows a través de la red con System Center Configuration Manager
 

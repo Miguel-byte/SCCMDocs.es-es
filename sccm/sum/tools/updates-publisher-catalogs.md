@@ -2,7 +2,7 @@
 title: Administrar catálogos de actualizaciones
 titleSuffix: Configuration Manager
 description: Administrar catálogos de actualizaciones de software con System Center Updates Publisher
-ms.date: 4/29/2017
+ms.date: 04/29/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad9387b3864511af6e619d19be2107fab818f86e
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 83e0f9d4f84a93d057701a3aab521d4650d66472
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65493746"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888472"
 ---
 # <a name="manage-software-update-catalogs-in-updates-publisher"></a>Administrar catálogos de actualizaciones de software en Updates Publisher
 

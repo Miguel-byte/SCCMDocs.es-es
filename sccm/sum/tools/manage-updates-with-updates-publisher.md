@@ -2,7 +2,7 @@
 title: Administración de actualizaciones
 titleSuffix: Configuration Manager
 description: Administrar las actualizaciones que se implementan y crean con System Center Updates Publisher
-ms.date: 4/29/2017
+ms.date: 04/29/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1802c4f21939026f6775daecd9fe011d23ae7a38
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: c5b9292359f3451c9c39bef3510b3d5621ec4278
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159515"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888483"
 ---
 # <a name="manage-software-updates-in-updates-publisher"></a>Administrar actualizaciones de software en Updates Publisher
 

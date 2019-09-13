@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d472f10b5ffdaaeb29d56a704436d0833eb989fc
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 8519d0e93116115dcd6ca223b62af67b4d7a89a4
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123236"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892506"
 ---
 # <a name="prestart-commands-for-task-sequence-media-in-system-center-configuration-manager"></a>Comandos de preinicio para medios de secuencia de tareas en System Center Configuration Manager
 
@@ -27,7 +27,7 @@ Puede crear un comando de preinicio en System Center Configuration Manager para 
 ## <a name="create-a-script-file-to-use-for-the-prestart-command"></a>Crear un archivo de script para utilizarlo para el comando de preinicio  
  Las variables de la secuencia de tareas se pueden leer y escribir mediante el objeto COM de Microsoft.SMS.TSEnvironment mientras la secuencia de tareas está en ejecución. En el ejemplo siguiente, un archivo de script de Visual Basic consulta la variable de secuencia de tareas _SMSTSLogPath para obtener la ubicación del registro actual. El script también establece una variable personalizada.  
 
-```  
+``` VBScript
 dim osd: set env = CreateObject("Microsoft.SMS.TSEnvironment")  
 dim logPath  
 ' You can query the environment to get an existing variable.  

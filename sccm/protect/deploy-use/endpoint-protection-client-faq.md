@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a28b901c731d46fb19140526af6e85825ad43795
-ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.openlocfilehash: 642f74319fca149cce15c019a473904641b4ea9e
+ms.sourcegitcommit: cdf2827fb3f44d7522a9b533c115f910aa9c382a
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70380006"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70902942"
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Preguntas más frecuentes sobre el cliente de Endpoint Protection
 
@@ -108,7 +108,7 @@ Para quitar todos los elementos no deseados o potencialmente peligrosos que Wind
 
 3.  Para obtener más información acerca de las amenazas detectadas, haga clic en la pestaña **Historial** y seleccione **Todos los elementos detectados**.  
 
-4.  Si no desea ver todos los elementos detectados, haga clic en **Ver detalles**. Si se le pide una contraseña de administrador o una confirmación, escriba la contraseña o confirme la acción. En sistemas que ejecutan Windows XP, es posible que tenga que iniciar sesión en el equipo como administrador.  
+4.  Si no desea ver todos los elementos detectados, haga clic en **Ver detalles**. Si se le pide una contraseña de administrador o una confirmación, escriba la contraseña o confirme la acción.
 
 > [!NOTE]  
 >  Durante la limpieza del equipo, y siempre que sea posible, Windows Defender solo quita la parte infectada de un archivo, no el archivo completo.  

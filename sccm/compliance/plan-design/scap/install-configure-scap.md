@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dee4e3a83f0cdba38f07ba0e7bd9bf6f425ca440
-ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.openlocfilehash: c36f2380a93d6da27651f1aa3a4894e25b3bce39
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70378140"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70890709"
 ---
 # <a name="install-and-configure-the-scap-extensions-for-configuration-manager"></a>Instalar y configurar extensiones SCAP para Configuration Manager
 
@@ -171,7 +171,7 @@ En el símbolo del sistema, vaya a la carpeta **AdminConsole\Bin** y ejecute el 
 
 #### <a name="sample-output-from-microsoftscesscaptodcmexe"></a>Ejemplo de salida de Microsoft.Sces.ScapToDcm.exe
 
-```
+``` Output
   Compliance Settings compliant cab file created:
 
   Validate the schema of SCAP data stream file C:\24SCAP\BVT_Test_Data_Stream.xml

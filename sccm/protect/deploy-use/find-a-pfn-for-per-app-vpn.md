@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 05278353f12f9d443b3e162f1a362244afd8afc6
-ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.openlocfilehash: 546cf0178993a364a4e1121e8236372162ab8481
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70380218"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892321"
 ---
 # <a name="find-a-package-family-name-pfn-for-per-app-vpn"></a>Buscar un nombre de familia de paquete (PFN) para VPN por aplicación
 
@@ -31,7 +31,7 @@ Si la aplicación con la que trabaja ya está instalada en un equipo Windows 10,
 
 La sintaxis de Get-AppxPackage es la siguiente:
 
-```
+``` Syntax
 Get-AppxPackage [[-Name] <String> ] [[-Publisher] <String> ] [-AllUsers] [-User <String> ] [ <CommonParameters>]
 ```
 
@@ -78,10 +78,11 @@ Esta es la información que se recupera para OneNote:
 
 En Microsoft Edge, se muestra la información que le interesa. En Internet Explorer, debe hacer clic en **Abrir** para verla. El valor PFN se muestra en la primera línea. Este es el aspecto de los resultados de nuestro ejemplo:
 
-```json
+``` JSON
 {
   "packageFamilyName": "Microsoft.Office.OneNote_8wekyb3d8bbwe",
   "packageIdentityName": "Microsoft.Office.OneNote",
   "windowsPhoneLegacyId": "ca05b3ab-f157-450c-8c49-a1f127f5e71d",
   "publisherCertificateName": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
 }
+```

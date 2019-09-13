@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 841d9f6d7878d7784d22c41bb35720a0e87e662b
-ms.sourcegitcommit: e0d303d87c737811c2d3c40d01cd3d260a5c7bde
+ms.openlocfilehash: 334854072e5c724f2c76432e7a7372c02cab3d54
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69974738"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892256"
 ---
 # <a name="prerequisites-for-software-updates-in-system-center-configuration-manager"></a>Requisitos previos para las actualizaciones de software en System Center Configuration Manager
 
@@ -103,14 +103,14 @@ Si sincroniza las actualizaciones sin haber instalado primero [KB 3095113](https
 
 Los errores similares a los siguientes aparecen en la página finalización del Asistente para descargar actualizaciones de software:
 
-```
+``` Output
 Error: Upgrade to Windows 10 Pro, version 1511, 10586
 Failed to download content id {content_id}. Error: Invalid certificate signature
 ```
 
 Además, los errores similares al siguiente se registran en el archivo PatchDownloader. log:
 
-```
+``` Log
 Download http://wsus.ds.b1.download.windowsupdate.com/d/upgr/2015/12/10586.0.151029-1700.th2_release_...esd...
 Authentication of file C:\Users\{username}\AppData\Local\Temp\2\{temporary_filename}.tmp failed, error 0x800b0004
 ERROR: DownloadContentFiles() failed with hr=0x80073633
