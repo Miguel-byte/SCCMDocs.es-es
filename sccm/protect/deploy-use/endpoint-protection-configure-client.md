@@ -1,5 +1,5 @@
 ---
-title: Configurar Endpoint Protection
+title: Configuración del cliente de Endpoint Protection
 titleSuffix: Configuration Manager
 description: Obtenga información sobre cómo configurar opciones de cliente personalizadas para Endpoint Protection.
 ms.date: 07/30/2018
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6299163813edca74c198bba4b778288bab1b77d6
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: fadbdaf8dc836e2f468aa0f8a82408d718606bc1
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500468"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892333"
 ---
 # <a name="configure-custom-client-settings-for-endpoint-protection"></a>Establecer una configuración de cliente personalizada para Endpoint Protection
 

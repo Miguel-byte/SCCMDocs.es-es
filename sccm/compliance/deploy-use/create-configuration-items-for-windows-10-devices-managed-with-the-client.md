@@ -1,7 +1,7 @@
 ---
-title: 'Creación de elementos de configuración para Windows 10 administrado por el cliente '
+title: Crear elementos de configuración para Windows 10
 titleSuffix: Configuration Manager
-description: Use el elemento de configuración de Windows 10 de System Center Configuration Manager para administrar la configuración de los equipos con Windows 10 que administra el cliente de Configuration Manager.
+description: Use el elemento de configuración de Windows 10 para administrar la configuración de equipos Windows 10 que se administran con el cliente de Configuration Manager.
 ms.date: 05/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
@@ -11,15 +11,16 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9cfb8209343581f8d6b9dc7949032d6399669f95
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: 3f49820ed0436fe38ce774bf24268fa2ebb363cc
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68339147"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70890663"
 ---
 # <a name="create-configuration-items-for-windows-10-devices"></a>Crear elementos de configuración para dispositivos Windows 10
-Use el elemento de configuración de **Windows 10** de System Center Configuration Manager para administrar la configuración de los equipos con Windows 10 que administra el cliente de Configuration Manager.  
+
+Use el elemento de configuración de **Windows 10** de Configuration Manager para administrar la configuración de equipos Windows 10 que se administran con el cliente de Configuration Manager.  
   
 > [!IMPORTANT]  
 >  En esta versión, si ha creado una configuración de **contraseña** como parte de un elemento de configuración del tipo **Windows 10** (para un dispositivo administrado con el cliente Configuration Manager), tenga en cuenta el problema siguiente. Si la configuración aún no existe o no se ha configurado en el dispositivo Windows 10, se evaluará incorrectamente como compatible.  

@@ -1,8 +1,7 @@
 ---
-title: Escenario de ejemplo para implementar y supervisar las actualizaciones del software de seguridad
+title: Escenario de ejemplo para implementar y supervisar actualizaciones
 titleSuffix: Configuration Manager
-description: Use este escenario de ejemplo sobre cómo usar las actualizaciones de software en Configuration Manager para implementar y supervisar actualizaciones de software de seguridad para versiones mensuales de Microsoft.
-manager: dougeby
+description: Cómo usar las actualizaciones de software en Configuration Manager para implementar y supervisar las actualizaciones de software mensuales.
 ms.date: 10/06/2016
 ms.topic: conceptual
 ms.prod: configuration-manager
@@ -10,15 +9,16 @@ ms.technology: configmgr-sum
 ms.assetid: c32f757a-02da-43f2-b055-5cfd097d8c43
 author: mestew
 ms.author: mstewart
+manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02c1f1cbc80bacf35306d2e4d5367a41ec5d8c1c
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 42c53f88d727a0024f2d5b99f86b4d39a3ba6f6a
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65496323"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888442"
 ---
-# <a name="example-scenario-for-using-system-center-configuration-manager-to-deploy-and-monitor-the-security-software-updates-released-monthly-by-microsoft"></a>Escenario de ejemplo de uso de System Center Configuration Manager para implementar y supervisar las actualizaciones de software de seguridad que Microsoft publica mensualmente
+# <a name="example-scenario-to-deploy-and-monitor-monthly-software-updates"></a>Escenario de ejemplo para implementar y supervisar las actualizaciones mensuales de software
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 

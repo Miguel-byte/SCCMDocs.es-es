@@ -1,7 +1,7 @@
 ---
-title: Usar medios independientes para implementar Windows sin usar la red
+title: Usar medios independientes para implementar Windows
 titleSuffix: Configuration Manager
-description: Use medios independientes en Configuration Manager para implementar sistemas operativos cuando el ancho de banda sea limitado o como una opción a la actualización o la instalación de equipos.
+description: Use medios independientes en Configuration Manager para implementar Windows en aquellos casos en los que el ancho de banda sea limitado o como una opción para actualizar o instalar equipos.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87d86ba571e998431fe198d4b4c18d8dd91dc06f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 408f8c17150aa6b6ee9330b40d8b8fef09b7eae5
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56124196"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892514"
 ---
-# <a name="use-stand-alone-media-to-deploy-windows-without-using-the-network-in-system-center-configuration-manager"></a>Usar medios independientes para implementar Windows sin usar la red en System Center Configuration Manager
+# <a name="use-stand-alone-media-to-deploy-windows-without-using-the-network"></a>Usar medios independientes para implementar Windows sin usar la red
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Los medios independientes de System Center Configuration Manager contienen todo lo necesario para implementar un sistema operativo en un equipo. Esto incluye la imagen de arranque, la imagen de sistema operativo y la secuencia de tareas para instalar el sistema operativo, incluidas las aplicaciones, los controladores, etcétera. las implementaciones de medios independientes le permiten implementar sistemas operativos en las condiciones siguientes:  
+Los medios independientes de Configuration Manager contienen todo lo necesario para implementar un sistema operativo en un equipo. Esto incluye la imagen de arranque, la imagen de sistema operativo y la secuencia de tareas para instalar el sistema operativo, incluidas las aplicaciones, los controladores, etcétera. las implementaciones de medios independientes le permiten implementar sistemas operativos en las condiciones siguientes:  
 
 -   En entornos donde no resulta práctico copiar una imagen de sistema operativo u otros paquetes grandes a través de la red.  
 

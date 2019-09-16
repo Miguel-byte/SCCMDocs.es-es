@@ -11,12 +11,12 @@ manager: dougeby
 author: mestew
 ms.author: mstewart
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ef815287321bf6c5554ff424da58276af0cc655
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: e89fd9422b6bf6c5abb61e154f38a1f479c7ff7e
+ms.sourcegitcommit: cdf2827fb3f44d7522a9b533c115f910aa9c382a
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65493929"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70902973"
 ---
 #  <a name="BKMK_SUMSync"></a> Sincronizar actualizaciones de software
 
@@ -79,10 +79,10 @@ En el punto de actualización de software de nivel superior se usa WSUS para obt
 
 ### <a name="to-import-an-update-from-the-microsoft-update-catalog"></a>Para importar una actualización desde el catálogo de Microsoft Update
 
-1. Abra la consola de administración de WSUS y conéctela al servidor WSUS de nivel superior en la jerarquía SCCM. 
+1. Abra la consola de administración de WSUS y conéctela al servidor WSUS de nivel superior de la jerarquía.
    - Si Internet Explorer no es el explorador web predeterminado del equipo, establézcalo temporalmente como el predeterminado.
 2. Haga clic en **Actualizaciones** o en el nombre del servidor WSUS. 
-3. En el panel **Acciones**, haga clic en **Importar actualizaciones...**, lo que abrirá una ventana del explorador con el [catálogo de Microsoft Update](https://catalog.update.microsoft.com).
+3. En el panel **Acciones**, haga clic en **Importar actualizaciones...** , lo que abrirá una ventana del explorador con el [catálogo de Microsoft Update](https://catalog.update.microsoft.com).
    ![Selección de Importar actualizaciones en la consola de WSUS](media/wsus-console-import-updates.png)
 4. Si se le solicita, instale el control ActiveX del catálogo de Microsoft Update. El control se debe instalar para importar las actualizaciones en WSUS. 
 5. En la ventana del explorador, busque la actualización que quiera. Haga clic en el botón **Agregar*** para agregarla a la cesta.

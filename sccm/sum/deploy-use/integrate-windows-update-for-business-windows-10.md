@@ -1,7 +1,7 @@
 ---
-title: Integración con Windows Update for Business en Windows 10
+title: Integración de Windows Update para empresas
 titleSuffix: Configuration Manager
-description: Use Windows Update for Business para mantener actualizados los dispositivos basados en Windows 10 de su organización para los dispositivos conectados al servicio de Windows Update.
+description: Use Windows Update para empresas (WUfB) para mantener Windows 10 actualizado para los dispositivos conectados al servicio Windows Update.
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -11,14 +11,14 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 12757bed4c674d12f1e0e2b3dc5c6ef72db59778
-ms.sourcegitcommit: b28a97e22a9a56c5ce3367c750ea2bb4d50449c3
+ms.openlocfilehash: 504ace282988ef8b52863184f0685ea5a6958a27
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70243687"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892283"
 ---
-# <a name="integration-with-windows-update-for-business-in-windows-10"></a>Integración con Windows Update for Business en Windows 10
+# <a name="integrate-with-windows-update-for-business"></a>Integración con Windows Update para empresas
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
@@ -65,7 +65,8 @@ Windows Update para empresas (WUfB) permite mantener los dispositivos basados en
 2.  Existe un atributo nuevo, **UseWUServer**, que se encuentra en el nodo **Windows Update** del Explorador de recursos de Configuration Manager.  
 
 3.  Cree una colección basada en el atributo **UseWUServer** para todos los equipos que estén conectados a través de WUfB para conseguir actualizaciones. Puede crear una colección basada en una consulta similar a la siguiente:  
-    ``` 
+
+    ``` WQL
     Select sr.* from SMS_R_System as sr join SMS_G_System_WINDOWSUPDATE as su on sr.ResourceID=su.ResourceID where su.UseWUServer is null
     ```
 
