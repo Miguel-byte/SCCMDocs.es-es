@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e0be6129306e37ba1721923efe1b7533875784e
-ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.openlocfilehash: 8ed24e1f7089b7b8078c4cfcfed021bc1bac9346
+ms.sourcegitcommit: cdf2827fb3f44d7522a9b533c115f910aa9c382a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70380023"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70902999"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>CMPivot para datos en tiempo real en Configuration Manager
 
@@ -297,33 +297,36 @@ CMPivot ahora incluye compatibilidad básica para el [operador de representació
 #### <a name="example-bar-chart"></a>Ejemplo: gráfico de barras
 En esta consulta se representan las aplicaciones más usadas recientemente como un gráfico de barras:
 
-```
+``` Kusto
 CCMRecentlyUsedApplications
 | summarize dcount( Device ) by ProductName
 | top 10 by dcount_
 | render barchart
 ```
+
 ![Ejemplo de visualización de gráfico de barras de CMPivot](media/1359068-cmpivot-barchart.png)
 
 #### <a name="example-time-chart"></a>Ejemplo: gráfico de tiempo
 Para representar gráficos de tiempo, use el nuevo operador **bin()** para agrupar eventos en el tiempo. En esta consulta se muestra cuándo se han iniciado los dispositivos en los últimos siete días:
 
-``` 
-OperatingSystem 
+``` Kusto
+OperatingSystem
 | where LastBootUpTime <= ago(7d)
 | summarize count() by bin(LastBootUpTime,1d)
 | render timechart
 ```
+
 ![Ejemplo de visualización de gráfico de tiempo de CMPivot](media/1359068-cmpivot-timechart.png)
 
 #### <a name="example-pie-chart"></a>Ejemplo: gráfico circular
 En esta consulta se muestran todas las versiones de sistema operativo en un gráfico circular:
 
-```
-OperatingSystem 
+``` Kusto
+OperatingSystem
 | summarize count() by Caption
 | render piechart
 ```
+
 ![Ejemplo de visualización de gráfico circular de CMPivot](media/1359068-cmpivot-piechart.png)
 
 
@@ -333,12 +336,14 @@ Use CMPivot para consultar cualquier clase de inventario de hardware. Estas clas
 La saturación de color de los datos en la tabla de resultados o el gráfico indica si los datos se han transmitido en directo o se han almacenado en caché. Por ejemplo, el azul oscuro indica que los datos son en tiempo real desde un cliente en línea. El azul claro indica que los datos están almacenados en caché.
 
 #### <a name="example"></a>Ejemplo
-```
+
+``` Kusto
 LogicalDisk
 | summarize sum( FreeSpace ) by Device
 | order by sum_ desc
 | render columnchart
 ```
+
 ![Ejemplo de consulta de inventario de CMPivot con visualización de gráfico de columnas](media/1359068-cmpivot-inventory.png)
 
 #### <a name="limitations"></a>Limitaciones
@@ -400,7 +405,7 @@ A partir de Configuration Manager versión 1902, puede ejecutar CMPivot desde e
 
 Para ejecutar CMPivot en el sitio CAS, se requieren permisos adicionales cuando SQL o el proveedor no están en el mismo equipo o en el caso de la configuración Always On de SQL. Con estas configuraciones remotas, tiene un "escenario de salto doble" para CMPivot.
 
-Para que CMPivot funcione en el CAS con dicho "escenario de salto doble", puede definir una delegación restringida. Lea el artículo [Información general de la delegación restringida de Kerberos](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) para entender las implicaciones de seguridad de esta configuración. Si tiene más de una configuración remota, como el proveedor de SCCM o SQL junto con el CAS, es posible que necesite una combinación de opciones de permisos. A continuación se muestran los pasos que debe realizar:
+Para que CMPivot funcione en el CAS con dicho "escenario de salto doble", puede definir una delegación restringida. Lea el artículo [Información general de la delegación restringida de Kerberos](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) para entender las implicaciones de seguridad de esta configuración. Si tiene más de una configuración remota, como el proveedor de SMS o SQL junto con el CAS o no, es posible que necesite una combinación de opciones de permisos. A continuación se muestran los pasos que debe realizar:
 
 ### <a name="cas-has-a-remote-sql-server"></a>El CAS tiene un servidor SQL remoto
 
@@ -517,7 +522,7 @@ El operador render ya existe en CMPivot. Se ha agregado compatibilidad con varia
 
 - Mostrar el dispositivo, el fabricante, el modelo y la versión del SO:
 
-   ```
+   ``` Kusto
    ComputerSystem
    | project Device, Manufacturer, Model
    | join (OperatingSystem | project Device, OSVersion=Caption)
@@ -525,7 +530,7 @@ El operador render ya existe en CMPivot. Se ha agregado compatibilidad con varia
 
 - Mostrar el gráfico de tiempos de arranque para un dispositivo:
 
-   ```
+   ``` Kusto
    SystemBootData
    | where Device == 'MyDevice'
    | project SystemStartTime, BootDuration, OSStart=EventLogStart, GPDuration, UpdateDuration

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6c8eef0ad8164ce6545264e0a1c229a647383661
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: dbc0800b78023e3813a31d2482a64a913008e306
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56138932"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70889968"
 ---
 # <a name="maintain-mac-clients"></a>Mantenimiento de clientes Mac
 *Se aplica a: System Center Configuration Manager (Rama actual)*
@@ -29,7 +29,7 @@ A continuación se indican procedimientos para desinstalar clientes Mac y para r
 
 2.  Navegue hasta la carpeta Tools, y escriba la siguiente línea de comandos:  
 
-     **./CMUninstall -c**  
+     `./CMUninstall -c`
 
     > [!NOTE]  
     >  La propiedad **-c** indica a la desinstalación de cliente que también quite los registros de bloqueo y los archivos de registro del cliente. Se recomienda para evitar confusiones si más adelante se vuelve a instalar el cliente.  
@@ -55,9 +55,9 @@ A continuación se indican procedimientos para desinstalar clientes Mac y para r
 
    - **RenewalReminderInterval2** - especifica, en segundos, la frecuencia con la que se mostrará el Asistente para renovación de certificados a los usuarios durante el segundo período de renovación. El valor predeterminado es 28.800 segundos (8 horas). Si **RenewalReminderInterval2** es mayor que 300 segundos y menor o igual que **RenewalReminderInterval1** , y menor o igual que **RenewalPeriod2**, se usará el valor configurado. De lo contrario, se usará un valor de 8 horas.  
 
-     **Ejemplo:** Si los valores se dejan como los valores predeterminados, 45 días antes de que expire el certificado, el asistente se abrirá cada 24 horas.  A los 3 días de que expire el certificado, el asistente se abrirá cada 8 horas.  
+     **Ejemplo:** Si los valores se dejan como los valores predeterminados, 45 días antes de que expire el certificado, el asistente se abrirá cada 24 horas.  A los 3 días de que expire el certificado, el asistente se abrirá cada 8 horas.  
 
-     **Ejemplo:** utilice la siguiente línea de comandos, o un script, para establecer el primer período de renovación como 20 días.  
+     **Ejemplo:** use la siguiente línea de comandos, o bien un script, para establecer el primer período de renovación en 20 días.  
 
      `sudo defaults write com.microsoft.ccmclient RenewalPeriod1 1728000`  
 
@@ -101,7 +101,7 @@ A continuación se indican procedimientos para desinstalar clientes Mac y para r
 
 7.  En el cuadro de diálogo **Editar script de detección** , escriba el siguiente script de shell:  
 
-    ```  
+    ``` Shell
     defaults read com.microsoft.ccmclient SMSID  
     ```  
 
@@ -111,7 +111,7 @@ A continuación se indican procedimientos para desinstalar clientes Mac y para r
 
 10. En el cuadro de diálogo **Crear script de corrección** , escriba el siguiente script de shell:  
 
-    ```  
+    ``` Shell
     defaults delete com.microsoft.ccmclient SMSID  
     ```  
 
@@ -135,7 +135,7 @@ A continuación se indican procedimientos para desinstalar clientes Mac y para r
 
 15. En equipos Mac que tienen el SMSID quitado, ejecute el comando siguiente para instalar un certificado nuevo:  
 
-    ```  
+    ``` Shell
     sudo ./CMEnroll -s <enrollment_proxy_server_name> -ignorecertchainvalidation -u <'user name'>  
     ```  
 
@@ -143,7 +143,7 @@ A continuación se indican procedimientos para desinstalar clientes Mac y para r
 
 16. Para limitar el certificado inscrito a Configuration Manager, en el equipo Mac, abra una ventana de terminal y realice los cambios siguientes:  
 
-    a.  Escriba el comando **sudo /Applications/Utilities/Keychain\ Access.app/Contents/MacOS/Keychain\ Access**  
+    a.  Escriba el comando `sudo /Applications/Utilities/Keychain\ Access.app/Contents/MacOS/Keychain\ Access`.
 
     b.  En el cuadro de diálogo **Keychain Access** (Acceso a cadenas de claves), en la sección **Keychains** (Cadenas de claves), seleccione **Sistema** y, después, en la sección **Categoría**, seleccione **Claves**.  
 

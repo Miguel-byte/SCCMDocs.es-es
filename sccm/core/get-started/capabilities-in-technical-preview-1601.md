@@ -12,12 +12,12 @@ ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be84e7bfae54cf3099b588cce35b01a424c45b8f
-ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
+ms.openlocfilehash: 605a95aa96191fab63f7c4a0e0ce2f8b7c6a8778
+ms.sourcegitcommit: cdf2827fb3f44d7522a9b533c115f910aa9c382a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66716007"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70902555"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-system-center-configuration-manager"></a>Capacidades de Technical Preview 1601 para System Center Configuration Manager
 
@@ -35,7 +35,7 @@ En este artículo se presentan las características disponibles en Technical Pre
 
     -   Ejecute el siguiente script de SQL en la base de datos del sitio primario:  
 
-        ```  
+        ``` SQL
         DECLARE @PilotingPkgID NVARCHAR(8)  
 
         SELECT @PilotingPkgID = PilotingPackageID FROM ClientDeploymentSettings  
@@ -89,7 +89,7 @@ En la versión Technical Preview 1601, hemos agregado compatibilidad con las sig
     -   **Requerir antimalware:** se trata de una comprobación para ver si el software antimalware (System Center Endpoint Protection o Windows Defender solamente) está habilitado y en ejecución.  
          Si no está habilitado, se bloquea el acceso a los servicios de correo electrónico y SharePoint.  
 
-    Los usuarios finales que están bloqueados debido a la falta de cumplimiento van a ver información de cumplimiento en el Centro de software de SCCM e iniciarán una nueva evaluación de directivas cuando se corrijan los problemas de cumplimiento.  
+    Los usuarios finales que están bloqueados debido a la falta de cumplimiento verán información de cumplimiento en el Centro de software e iniciarán una nueva evaluación de directivas cuando se corrijan los problemas de cumplimiento.  
 
 -   **Acceso condicional con servicio de atestación de estado** Ahora puede restringir el acceso a los servicios de correo electrónico y 0365 según el estado de los dispositivos notificado por el servicio de atestación de estado.  Además, los dispositivos administrados por Intune se incluyen en los informes de estado de dispositivos.  
 

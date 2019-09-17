@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58c25da6418e2fd3997cd1b5ba40e6c4585c997c
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 41abaa02759a2f49b04f56963e6285b972a61cfc
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123474"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70891659"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1807"></a>Funcionalidades de la versión 1807 Technical Preview de Configuration Manager 
 
@@ -44,7 +44,8 @@ Steps to workaround, if any.
 ## <a name="known-issues"></a>Problemas conocidos 
 
 ### <a name="ki_o365"></a> Problemas con las actualizaciones de software de Office 365
-<!--521365--> Si administra las actualizaciones de Office 365 mediante las versiones de rama 1806 y 1806.2 Technical Preview, es posible que no se instalen en los clientes. 
+<!--521365-->
+Si administra las actualizaciones de Office 365 mediante las versiones de rama 1806 y 1806.2 Technical Preview, es posible que no se instalen en los clientes. 
 
 #### <a name="workaround"></a>Solución alternativa
 - Elimine los paquete de implementación y los grupos de actualizaciones de software existentes para Office 365.  
@@ -224,8 +225,7 @@ Ahora puede ver una salida de script detallada sin formato o con formato JSON es
 #### <a name="example-script-output-is-valid-json"></a>Ejemplo: la salida de script es un archivo JSON válido
 Comando: `$PSVersionTable.PSVersion`  
 
-Salida:  
-```
+``` Output
 Major  Minor  Build  Revision
 -----  -----  -----  --------
 5      1      16299  551
@@ -234,8 +234,7 @@ Major  Minor  Build  Revision
 #### <a name="example-script-output-isnt-valid-json"></a>Ejemplo: la salida de script no es un archivo JSON válido
 Comando: `Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`  
 
-Salida:  
-```
+``` Output
 Microsoft Windows 10 Enterprise
 ```
 

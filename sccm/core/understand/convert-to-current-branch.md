@@ -1,8 +1,8 @@
 ---
-title: 'Actualizar la rama de mantenimiento a largo plazo a la rama actual '
+title: Actualización del canal de mantenimiento a largo plazo a la rama actual
 titleSuffix: Configuration Manager
-description: Aprenda a convertir un sitio de rama de mantenimiento a largo plazo en un sitio de rama actual.
-ms.date: 2/8/2017
+description: Obtenga información sobre cómo convertir un sitio de canal de mantenimiento a largo plazo (LTSB) en un sitio de rama actual.
+ms.date: 02/8/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 20b50fcd54513ccd780a7da173766fb177bf5da7
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 56a85a86b047ffe0769fc175a79207c781e2cf23
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67676129"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70891907"
 ---
 # <a name="upgrade-the-long-term-servicing-branch-to-the-current-branch"></a>Actualizar la rama de mantenimiento a largo plazo a la rama actual
 

@@ -1,8 +1,8 @@
 ---
-title: Ejemplo de transiciones de estado de validación de Asset Intelligence
+title: Transiciones de estado de validación de ejemplo
 titleSuffix: Configuration Manager
-description: Vea ejemplo de transiciones de estado de validación de Asset Intelligence en System Center Configuration Manager.
-ms.date: 2/22/2017
+description: Vea ejemplos de transiciones de estado de validación de Asset Intelligence en Configuration Manager.
+ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,18 +11,18 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9b266848d0a15ac26dc6002a6553583f560cb44e
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: f2fb577fc4799dfb1e9c1d6585df4ed244ebfab5
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499925"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70890294"
 ---
-# <a name="example-validation-state-transitions-for-asset-intelligence-in-system-center-configuration-manager"></a>Ejemplo de transiciones de estado de validación de Asset Intelligence en System Center Configuration Manager
+# <a name="example-validation-state-transitions-for-asset-intelligence"></a>Ejemplo de transiciones de estado de validación de Asset Intelligence
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Los estados de validación de Asset Intelligence en System Center Configuration Manager no son estáticos y pueden cambiar debido a las acciones administrativas que realiza y que afectan a los datos almacenados en el catálogo Asset Intelligence. En este tema se proporcionan ejemplos de posibles transiciones de estado de validación.
+Los estados de validación de Asset Intelligence en Configuration Manager no son estáticos y pueden cambiar debido a las acciones administrativas que realiza y que afectan a los datos almacenados en el catálogo de Asset Intelligence. En este tema se proporcionan ejemplos de posibles transiciones de estado de validación.
 
 ##  <a name="BKMK_UncategorizedIsCategorized"></a> El usuario administrativo categoriza un elemento de catálogo sin categoría  
 

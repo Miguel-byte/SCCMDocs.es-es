@@ -5,22 +5,24 @@ description: Obtenga información sobre las cargas de trabajo que puede cambiar 
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 08/01/2019
+ms.date: 09/06/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef39c354e384f130b5c585e8aeb099d083fe0418
-ms.sourcegitcommit: 16dd488c51b5cf01a7dd4204f7d40ee9ae0abe85
+ms.openlocfilehash: 766d1f0c258dd25fc4aa51ef20b2d3921ac8cc74
+ms.sourcegitcommit: ba68f10d2ca7997057a01af911a2e7cf7e010cf0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68743648"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70863143"
 ---
 # <a name="co-management-workloads"></a>Administración conjunta de cargas de trabajo
 
 No es necesario que cambie las cargas de trabajo o puede cambiarlas individualmente cuando esté preparado. Configuration Manager sigue administrando todas las demás cargas de trabajo, incluidas las que no cambia a Intune, y todas las demás características de Configuration Manager que no admite la administración conjunta.
+
+Si cambia una carga de trabajo a Intune, pero después cambia de opinión, puede volver a cambiarla a Configuration Manager.
 
 La administración conjunta admite estas cargas de trabajo:
 

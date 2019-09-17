@@ -1,23 +1,21 @@
 ---
-title: Tutorial&#58; Habilitación de la administración conjunta para los nuevos dispositivos Windows 10 basados en internet
+title: Tutorial&#58; Habilitación de la administración conjunta para dispositivos de Internet
 titleSuffix: Configuration Manager
-description: Configure la administración conjunta para dispositivos Windows 10 para Configuration Manager e Intune.
-keywords: ''
+description: Obtenga información sobre cómo configurar la administración conjunta para nuevos dispositivos Windows 10 basados en Internet con Configuration Manager y Microsoft Intune.
 author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.date: 07/26/2019
 ms.topic: tutorial
 ms.prod: configuration-manager
-ms.service: ''
-ms.technology: ''
-ms.assetid: ''
-ms.openlocfilehash: 446068324ab8840600fb1d0e8f7789520a6468d1
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.technology: configmgr-client
+ms.assetid: 7fb02a5c-e286-46b1-a972-6335c858429a
+ms.openlocfilehash: 6215842691aece6eb13bc1969640e4d9c19d9fae
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68533968"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70890786"
 ---
 # <a name="tutorial-enable-co-management-for-new-internet-based-devices"></a>Tutorial: Habilitación de la administración conjunta para nuevos dispositivos basados en Internet
 
@@ -400,7 +398,7 @@ Por ejemplo, *C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetup
 
      La estructura de la línea de comandos debe ser similar a este ejemplo, usando solo los parámetros CCMSETUPCMD y SMSSiteCode:  
 
-     ```
+     ``` Command
      CCMSETUPCMD="CCMHOSTNAME=<ServiceName.CLOUDAPP.NET/CCM_Proxy_MutualAuth/<GUID>" SMSSiteCode="<YourSiteCode>"  
      ```
 

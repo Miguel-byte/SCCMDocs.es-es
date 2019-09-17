@@ -2,7 +2,7 @@
 title: Servidor de caché en la red de optimización de distribución
 titleSuffix: Configuration Manager
 description: Uso del punto de distribución de Configuration Manager como servidor de caché local para la Optimización de distribución
-ms.date: 07/30/2019
+ms.date: 09/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,14 +11,16 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cacc27b95328d5abd43e477762ebe4d55562bfef
-ms.sourcegitcommit: ef7800a294e5db5d751921c34f60296c1642fc1f
+ms.openlocfilehash: 070f7ec6f99a9de89c155e756989fb3b5fa4a594
+ms.sourcegitcommit: 05a984cf94ea43c392701a389c4eb20bd692847c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68712545"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70922737"
 ---
 # <a name="delivery-optimization-in-network-cache-in-configuration-manager"></a>Servidor de caché en la red de Optimización de distribución en Configuration Manager
+
+*Se aplica a: System Center Configuration Manager (Rama actual)*
 
 <!--3555764-->
 
@@ -29,7 +31,7 @@ Este servidor de caché actúa como una caché transparente a petición para el 
 Esta caché es independiente del contenido del punto de distribución de Configuration Manager. Si elige la misma unidad que el rol de punto de distribución, el contenido se almacenará por separado.
 
 > [!Note]  
-> El servidor de caché en la red de Optimización de distribución es una característica de Windows Server que todavía está en desarrollo. Está marcado con una etiqueta *beta* en la consola de Configuration Manager.  
+> El servidor de caché en la red de optimización de distribución es una aplicación instalada en Windows Server que todavía está en desarrollo. Está marcado con una etiqueta *beta* en la consola de Configuration Manager.  
 
 
 ## <a name="how-it-works"></a>Cómo funciona
@@ -44,7 +46,7 @@ Cuando configura los clientes para que usen el servidor de caché en la red de O
 
 3. El cliente A solicita el contenido del servidor de caché de Optimización de distribución.
 
-4. Si la memoria caché no incluye el contenido, el cliente A lo obtiene de la red CDN.
+4. Si la caché no incluye el contenido, el servidor de caché de Optimización de distribución lo obtiene de la red CDN.
 
 5. Si el servidor de caché no responde, el cliente descarga el contenido de la red CDN.
 
@@ -78,7 +80,7 @@ Cuando configura los clientes para que usen el servidor de caché en la red de O
 
         Lea y acepte los términos de licencia.
 
-    2. **Unidad local que se usará**: seleccione el disco que se usará para la memoria caché. El valor predeterminado es **Automático**, que usa el disco con más espacio libre.  
+    2. **Unidad local que se usará**: seleccione el disco que se usará para la memoria caché. El valor predeterminado es **Automático**, que usa el disco con más espacio libre.<sup>[Nota 1](#bkmk_note1)</sup>  
 
         > [!Note]  
         > Puede cambiar esta unidad más adelante. Se pierde todo el contenido almacenado en caché, a menos que lo copie en la nueva unidad.
@@ -92,6 +94,17 @@ Cuando configura los clientes para que usen el servidor de caché en la red de O
 
 1. En la configuración de cliente, en el grupo **Optimización de distribución**, configure el valor **Permita que los dispositivos administrados por Configuration Manager usen servidores de caché en la red de optimización de distribución (Beta) para la descarga de contenido**.  
 
+### <a name="bkmk_note1"></a> Nota 1: Acerca de la selección de unidades
+
+Si selecciona **Automático**, cuando Configuration Manager instala el componente DOINC, respeta el archivo **no_sms_on_drive.sms**. Por ejemplo, el punto de distribución tiene el archivo `C:\no_sms_on_drive.sms`. Incluso si la unidad C: es la que tiene más espacio disponible, Configuration Manager configura DOINC para usar otra unidad para su caché.
+
+Si selecciona una unidad específica que ya tenga el archivo **no_sms_on_drive.sms**, Configuration Manager ignora el archivo. La configuración de DOINC para usar esa unidad es una intención explícita. Por ejemplo, el punto de distribución tiene el archivo `F:\no_sms_on_drive.sms`. Cuando se configuran explícitamente las propiedades del punto de distribución para usar la unidad **F:**, Configuration Manager configura DOINC para que use la unidad F: para su memoria caché.
+
+Para cambiar la unidad después de instalar DOINC:
+
+- Configure manualmente las propiedades del punto de distribución para usar una letra de unidad específica.
+
+- Si se establece en Automático, cree primero el archivo **no_sms_on_drive.sms**. Después, realice algún cambio en las propiedades del punto de distribución para desencadenar un cambio de configuración.
 
 ## <a name="verify"></a>Comprobar
 
@@ -110,7 +123,10 @@ En Windows 10 versión 1809 o posteriores, compruebe este comportamiento con e
 
 Si el servidor de caché devuelve algún error HTTP, el cliente de Optimización de distribución recurre al origen inicial en la nube.
 
+Para obtener información detallada, vea [Solución de problemas de la caché en la red de optimización de distribución en Configuration Manager](/sccm/core/servers/deploy/configure/troubleshoot-delivery-optimization-in-network-cache).
 
 ## <a name="see-also"></a>Consulte también
 
 [Optimización de la distribución de actualizaciones de Windows 10 con Configuration Manager](/sccm/sum/deploy-use/optimize-windows-10-update-delivery)
+
+[Solución de problemas de la caché en la red de optimización de distribución en Configuration Manager](/sccm/core/servers/deploy/configure/troubleshoot-delivery-optimization-in-network-cache)

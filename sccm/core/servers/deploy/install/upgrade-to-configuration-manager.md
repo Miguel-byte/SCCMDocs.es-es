@@ -1,5 +1,6 @@
 ---
-title: Actualización a Configuration Manager
+title: Actualización a la rama actual
+titleSuffix: Configuration Manager
 description: Obtenga información sobre qué pasos seguir para ejecutar correctamente una actualización local desde un sitio y jerarquía que ejecutan System Center 2012 Configuration Manager.
 ms.date: 08/16/2019
 ms.prod: configuration-manager
@@ -10,14 +11,14 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fb0d120fd9d9b301cf02af9c6126a0991524e9c6
-ms.sourcegitcommit: 4241c15a277c57b5480dea70fc30f1ed46ffd4f3
+ms.openlocfilehash: e5799d35c8820379d42571b527b870fa7efb4252
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490060"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888909"
 ---
-# <a name="upgrade-to-configuration-manager"></a>Actualización a Configuration Manager
+# <a name="upgrade-to-configuration-manager-current-branch"></a>Actualización a la rama actual de Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 

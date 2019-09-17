@@ -1,5 +1,6 @@
 ---
-title: Cambios desde Configuration Manager 2012
+title: Cambios con respecto a la versión de 2012
+titleSuffix: Configuration Manager
 description: Identifica los cambios y las nuevas funciones de System Center Configuration Manager con respecto a System Center 2012 Configuration Manager.
 ms.date: 03/27/2019
 ms.prod: configuration-manager
@@ -10,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 241b8787548c12dff509078df3b9130d21dbfa10
-ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.openlocfilehash: d40a612fc1b8953662209f591b3ad5b2694abd73
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70377992"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70889522"
 ---
 # <a name="whats-changed-in-system-center-configuration-manager-from-system-center-2012-configuration-manager"></a>Cambios en System Center Configuration Manager respecto a System Center 2012 Configuration Manager
 

@@ -2,7 +2,7 @@
 title: Notificación de cliente
 titleSuffix: Configuration Manager
 description: Administra clientes al tomar medidas inmediatas desde la consola central de Configuration Manager.
-ms.date: 03/22/2019
+ms.date: 04/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db68a55136d708ad9276f8b1319dde33fcde35ac
-ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.openlocfilehash: a2835ac13f9ffc2aa7a36ebc9669fb62cccc1257
+ms.sourcegitcommit: 4316bff400ffbde8404f8a2092ec17e3601b8d29
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477473"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70738171"
 ---
 # <a name="client-notification-in-configuration-manager"></a>Notificación de cliente de Configuration Manager
 
@@ -141,12 +141,14 @@ Desencadena clientes para comprobar su cumplimiento con el acceso condicional. P
 
 ### <a name="wake-up"></a>Reactivar
 
-A partir de la versión 1810, desencadena la reactivación de los dispositivos configurados para admitir Wake-on-LAN mediante otros dispositivos de la misma subred para enviar el paquete Wake-on-LAN.
+A partir de la versión 1810, desencadena la reactivación de los dispositivos configurados para admitir Wake-on-LAN mediante otros dispositivos de la misma subred para enviar el paquete Wake-on-LAN. Para obtener más información, vea [Cómo configurar Wake on LAN](/sccm/core/clients/deploy/configure-wake-on-lan).
 
+### <a name="permissions"></a>Permisos
+Esta acción requiere el permiso **Notificar al recurso** en el objeto **Colección**.
 
 ### <a name="restart"></a>Reiniciar
 
-Desencadena los dispositivos seleccionados para que se reinicien. 
+Desencadena los dispositivos seleccionados para que se reinicien. Para más información, vea [Reinicio de clientes](/sccm/core/clients/manage/manage-clients#restart-clients).
 
 
 

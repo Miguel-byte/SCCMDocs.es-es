@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4cc83e3b7d234b7dfbab24ba54079e4633814d5
-ms.sourcegitcommit: 9c29ee22d3af5ab2bf8d51262c11d5a756dc55c7
+ms.openlocfilehash: f3ec5f9b9bbda3b3bec6fdd1d955b8911f8029b5
+ms.sourcegitcommit: 4316bff400ffbde8404f8a2092ec17e3601b8d29
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68913770"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70738493"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Compatibilidad con Windows 10 en Configuration Manager  
 
@@ -103,7 +103,7 @@ En la tabla siguiente se enumeran las versiones de Windows 10 ADK que puede usar
 
 |Clave|
 |--|
-| ![Compatible](media/green_check.png) = **Compatible** <br/> Microsoft recomienda el uso de la versión de Windows ADK que coincida con la de Windows que va a implementar. Al implementar la versión más reciente de Windows 10, use la versión más reciente de Windows ADK. La versión más reciente de Windows ADK puede admitir la implementación de versiones anteriores del sistema operativo, como Windows 7.<!-- SCCMDocs issue 1229 --> Para obtener más información sobre la compatibilidad del componente Windows ADK, consulte [DISM supported platforms](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms) (Plataformas compatibles con DISM) y [USMT requirements](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1) (Requisitos de USMT). |
+| ![Compatible](media/green_check.png) = **Compatible** <br/> En esta tabla solo se muestra la compatibilidad con Windows ADK en relación con la versión de Configuration Manager. Microsoft recomienda el uso de la versión de Windows ADK que coincida con la de Windows que va a implementar. Al implementar la versión más reciente de Windows 10, use la versión más reciente de Windows ADK. La versión más reciente de Windows ADK puede admitir la implementación de versiones anteriores del sistema operativo, como Windows 7.<!-- SCCMDocs issue 1229 --> Para obtener más información sobre la compatibilidad del componente Windows ADK, consulte [DISM supported platforms](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms) (Plataformas compatibles con DISM) y [USMT requirements](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1) (Requisitos de USMT). |
 | ![Compatible con versiones anteriores](media/blue_compat.png)  = **Compatible con versiones anteriores** <br/> Esta combinación no se ha probado pero debería funcionar. Informaremos de cualquier problema conocido o advertencia. |
 | ![No compatible](media/Red_X.png) = **Not supported** |
 

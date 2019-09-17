@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4754077f1a91cd11ce16e17dd3d2ea2f1704ee08
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: 575a011271026e5b617a334476d3c4e8fa401014
+ms.sourcegitcommit: cdf2827fb3f44d7522a9b533c115f910aa9c382a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68338880"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70902954"
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Caché del mismo nivel para clientes de Configuration Manager
 
@@ -55,7 +55,10 @@ La caché del mismo nivel no reemplaza el uso de otras soluciones como Optimizac
 
 Para habilitar la caché del mismo nivel, implemente la [configuración de cliente](#bkmk_settings) en una colección. Después, los miembros de esa colección actúan como un origen de la caché del mismo nivel para otros clientes en el mismo grupo de límites.  
 
-- El cliente que actúa como origen de contenido del mismo nivel envía una lista de contenido almacenado en caché disponible a su punto de administración.  
+- Un cliente que actúa como origen de contenido del mismo nivel envía una lista de contenido almacenado en caché disponible a su punto de administración mediante mensajes de estado.
+
+   > [!NOTE]
+   > Vea [Mensajes de estado en Configuration Manager](/sccm/core/plan-design/hierarchy/state-messaging-system-center-configuration-manager#7200-state_topictype_super_peer_update_cache_map) para obtener la lista de mensajes de estado de origen de contenido del mismo nivel aplicables, en concreto los que tienen los identificadores de mensaje de estado 7200, 7201, 7202 y 7203.
 
 - Otro cliente en el mismo grupo de límites solicita una ubicación de contenido al punto de administración. El servidor devuelve la lista de posibles orígenes de contenido. En esta lista se incluyen todos los orígenes de caché del mismo nivel que tienen contenido y están en línea. También se incluyen los puntos de distribución y otras ubicaciones de origen de contenido de ese grupo de límites. Para obtener más información, vea [Content source priority](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#content-source-priority) (Prioridad de los orígenes de contenido).  
 

@@ -1,7 +1,7 @@
 ---
-title: 'Administración de clientes de infraestructura de escritorio virtual (VDI) '
+title: Administrar clientes VDI
 titleSuffix: Configuration Manager
-description: Administre clientes de System Center Configuration Manager en una infraestructura de escritorio virtual (VDI).
+description: Administre clientes de Configuration Manager en una infraestructura de escritorio virtual (VDI).
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -11,14 +11,14 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9352d6e5a26afd4cee36f70a19d0566e26643f50
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 07df750daf0af7aa82a13c1eef421678d7df8202
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56130578"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70890324"
 ---
-# <a name="considerations-for-managing-system-center-configuration-manager-clients--in-a-virtual-desktop-infrastructure-vdi"></a>Consideraciones para la administración de clientes de System Center Configuration Manager en una infraestructura de escritorio virtual (VDI)
+# <a name="manage-configuration-manager-clients-in-a-virtual-desktop-infrastructure-vdi"></a>Administración de clientes de Configuration Manager en una infraestructura de escritorio virtual (VDI)
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 

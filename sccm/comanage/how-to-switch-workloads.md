@@ -7,20 +7,22 @@ ms.technology: configmgr-client
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 09/06/2019
 ms.topic: conceptual
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5c1cdd3358c1d9bf41584658ee25c7210808a8f4
-ms.sourcegitcommit: 1d16ccc20bb00bf2e21f923d7f9dde3c9783dab5
+ms.openlocfilehash: 4ff8597442902b70e626d0655cf0afb247366440
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70272679"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70890756"
 ---
 # <a name="how-to-switch-configuration-manager-workloads-to-intune"></a>Cambio de las cargas de trabajo de Configuration Manager a Intune
 
 Una de las ventajas de la administración conjunta es cambiar las cargas de trabajo de Configuration Manager a Microsoft Intune. Cuando un dispositivo Windows 10 tiene el cliente de Configuration Manager y está inscrito en Intune, el usuario recibe las ventajas de ambos servicios. El usuario controla para qué cargas de trabajo, si corresponde, cambia la entidad desde Configuration Manager a Intune. Configuration Manager sigue administrando todas las demás cargas de trabajo, incluidas las que no cambia a Intune, y todas las demás características de Configuration Manager que no admite la administración conjunta.
+
+Si cambia una carga de trabajo a Intune, pero después cambia de opinión, puede volver a cambiarla a Configuration Manager.
 
 Para más información sobre las cargas de trabajo admitidas, consulte [Cargas de trabajo](/sccm/comanage/workloads).
 
@@ -46,7 +48,7 @@ A partir de la versión 1906, puede configurar distintas colecciones piloto para
 
 > [!Important]  
 > - Antes de cambiar las cargas de trabajo, asegúrese de que la carga de trabajo correspondiente en Intune se configuró e implementó correctamente. Asegúrese de que las cargas de trabajo siempre se administren mediante una de las herramientas de administración para los dispositivos.
-> - A partir de la versión 1806 de Configuration Manager, cuando se cambia una carga de trabajo de administración compartida, los dispositivos administrados conjuntamente sincronizan automáticamente la directiva MDM de Microsoft Intune. Esta sincronización también se produce al iniciar la acción **Descargar directiva de equipo** desde Notificaciones de cliente en la consola de Configuration Manager. Para obtener más información, vea [Iniciar la recuperación de directivas de cliente mediante la notificación de cliente](/sccm/core/clients/manage/manage-clients#initiate-client-policy-retrieval-using-client-notification). <!--1357377-->
+> - A partir de la versión 1806 de Configuration Manager, cuando se cambia una carga de trabajo de administración compartida, los dispositivos administrados conjuntamente sincronizan automáticamente la directiva MDM de Microsoft Intune. Esta sincronización también se produce al iniciar la acción **Descargar directiva de equipo** desde Notificaciones de cliente en la consola de Configuration Manager. Para obtener más información, vea [Iniciar la recuperación de directivas de cliente mediante la notificación de cliente](/sccm/core/clients/manage/manage-clients##BKMK_PolicyRetrieval). <!--1357377-->
 
 ## <a name="switch-workloads-in-version-1902-and-earlier"></a>Modificación de las cargas de trabajo en la versión 1902 y versiones anteriores
 
@@ -73,7 +75,7 @@ Puede cambiar las cargas de trabajo cuando habilita la administración conjunta 
 
 > [!Important]  
 > - Antes de cambiar las cargas de trabajo, asegúrese de que la carga de trabajo correspondiente en Intune se configuró e implementó correctamente. Asegúrese de que las cargas de trabajo siempre se administren mediante una de las herramientas de administración para los dispositivos. 
-> - A partir de la versión 1806 de Configuration Manager, cuando se cambia una carga de trabajo de administración compartida, los dispositivos administrados conjuntamente sincronizan automáticamente la directiva MDM de Microsoft Intune. Esta sincronización también se produce al iniciar la acción **Descargar directiva de equipo** desde Notificaciones de cliente en la consola de Configuration Manager. Para obtener más información, vea [Iniciar la recuperación de directivas de cliente mediante la notificación de cliente](/sccm/core/clients/manage/manage-clients#initiate-client-policy-retrieval-using-client-notification). <!--1357377-->
+> - A partir de la versión 1806 de Configuration Manager, cuando se cambia una carga de trabajo de administración compartida, los dispositivos administrados conjuntamente sincronizan automáticamente la directiva MDM de Microsoft Intune. Esta sincronización también se produce al iniciar la acción **Descargar directiva de equipo** desde Notificaciones de cliente en la consola de Configuration Manager. Para obtener más información, vea [Iniciar la recuperación de directivas de cliente mediante la notificación de cliente](/sccm/core/clients/manage/manage-clients##BKMK_PolicyRetrieval). <!--1357377-->
 
 ## <a name="next-steps"></a>Pasos siguientes
 

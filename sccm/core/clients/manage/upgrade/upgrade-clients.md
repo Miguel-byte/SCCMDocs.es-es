@@ -1,7 +1,7 @@
 ---
 title: Actualizar clientes.
 titleSuffix: Configuration Manager
-description: Obtenga información sobre cómo actualizar clientes en System Center Configuration Manager.
+description: Obtenga información sobre cómo actualizar clientes en Configuration Manager.
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -11,14 +11,14 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0531c50792b6617eeb5e294bfad3626a0089c1f2
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 50212a84185396e53c92bff46dd3b369ad811928
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56131496"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70890197"
 ---
-# <a name="upgrade-clients-in-system-center-configuration-manager"></a>Actualizar clientes en System Center Configuration Manager
+# <a name="upgrade-clients-in-configuration-manager"></a>Actualización de clientes en Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 

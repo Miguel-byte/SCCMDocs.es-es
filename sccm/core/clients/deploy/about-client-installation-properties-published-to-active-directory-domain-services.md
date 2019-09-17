@@ -1,7 +1,7 @@
 ---
-title: Propiedades de instalación de cliente en Active Directory Domain Services
+title: Propiedades de instalación de cliente en Active Directory
 titleSuffix: Configuration Manager
-description: Use las propiedades de instalación de cliente publicadas en Active Directory Domain Services en System Center Configuration Manager.
+description: Publique propiedades de instalación de cliente de Configuration Manager en Active Directory Domain Services.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 203de632cea1dbe7c5fa70177f3a111a4e487911
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 39208f0ff2265e2ca9b89647e082224c01cbd731
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123818"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70890342"
 ---
 # <a name="about-client-installation-properties-published-to-active-directory-domain-services"></a>Acerca de las propiedades de instalación de cliente publicadas en Active Directory Domain Services
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Al extender el esquema de Active Directory para System Center Configuration Manager y publicar el sitio en Active Directory Domain Services, muchas propiedades de instalación de cliente se publican en Active Directory Domain Services. Si un equipo puede ubicar estas propiedades de instalación de cliente, puede usarlas durante la implementación de cliente de Configuration Manager.  
+Cuando extiende el esquema de Active Directory para Configuration Manager y el sitio se publica en Active Directory Domain Services, muchas propiedades de instalación de cliente se publican en Active Directory Domain Services. Si un equipo puede ubicar estas propiedades de instalación de cliente, puede usarlas durante la implementación de cliente de Configuration Manager.  
 
  Las ventajas de utilizar Servicios de dominio de Active Directory para publicar propiedades de instalación de cliente incluyen:  
 

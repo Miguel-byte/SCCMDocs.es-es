@@ -2,7 +2,7 @@
 title: Lista de comprobación de 1610
 titleSuffix: Configuration Manager
 description: Obtenga información sobre las acciones que se deben realizar antes de actualizar a la versión 1610 de System Center Configuration Manager.
-ms.date: 6/6/2017
+ms.date: 06/6/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e78796cb3b73b594f25eff258c4929910d6c886c
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: a5fab723f5757e4e1b1d444f8d19f0034f63ffa0
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67252217"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892121"
 ---
 # <a name="checklist-for-installing-update-1610-for-system-center-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 1610 de System Center Configuration Manager
 
@@ -86,7 +86,7 @@ Para obtener más información, vea  [Usar alertas y el sistema de estado de Sy
 Asegúrese de que la replicación de archivos y base de datos entre sitios funciona y está actualizada. Los retrasos o los trabajos pendientes pueden impedir una actualización correcta y sin problemas.
 Para la replicación de base de datos, puede utilizar Replication Link Analyzer para ayudar a resolver problemas antes de iniciar la actualización.
 
-Para obtener más información, vea [Acerca de Replication Link Analyzer](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA)  en el tema  [Supervisar la infraestructura de la jerarquía y replicación de System Center Configuration Manager](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure) .
+Para más información, vea [Replication Link Analyzer](/sccm/core/servers/manage/monitor-replication#BKMK_RLA) en el tema [Supervisión de la replicación de base de datos](/sccm/core/servers/manage/monitor-replication).
 
 **Instale todas las actualizaciones críticas aplicables de los sistemas operativos en los equipos que hospedan el sitio, el servidor de base de datos del sitio y los roles del sistema de sitio remoto:**   Antes de instalar una actualización para Configuration Manager, instale las actualizaciones críticas para cada sistema de sitio aplicable. Si alguna de las actualizaciones que instala requiere un reinicio, reinicie los equipos correspondientes antes de iniciar la actualización de Configuration Manager.
 

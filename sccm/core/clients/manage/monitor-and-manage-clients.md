@@ -1,8 +1,8 @@
 ---
-title: Supervisar clientes
+title: Supervisar y administrar clientes
 titleSuffix: Configuration Manager
-description: Aprenda a supervisar y administrar clientes en System Center Configuration Manager.
-ms.date: 04/23/2017
+description: Obtenga información sobre cómo supervisar y administrar clientes en Configuration Manager.
+ms.date: 09/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,25 +11,25 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 63f1216d19b82ad3e39680150736908b4f9762de
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 4df97c1e0fd3df1ef6a27eb84134cc1213942451
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128779"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70889898"
 ---
-# <a name="monitor-and-manage-clients-in-system-center-configuration-manager"></a>Supervisar y administrar clientes en System Center Configuration Manager
+# <a name="monitor-and-manage-clients-in-configuration-manager"></a>Supervisión y administración de clientes en Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-System Center Configuration Manager (también conocido como ConfigMgr o SCCM) proporciona diversos métodos para supervisar y administrar el software de cliente una vez que se haya implementado en equipos y dispositivos de la organización.  Puede supervisar los clientes para comprobar su estado y, en algunos casos, Configuration Manager puede realizar la corrección automática según el problema detectado. La consola de Configuration Manager también ofrece métodos para administrar clientes de dispositivos individuales o recopilaciones de dispositivos.  
+Después de instalar el cliente en los dispositivos de la organización, Configuration Manager proporciona varias maneras de supervisarlo y administrarlo. Puede supervisar los clientes para comprobar su estado y Configuration Manager puede corregir de forma automática algunos problemas detectados. Use la consola de Configuration Manager para administrar clientes de dispositivos individuales o recopilaciones de dispositivos.  
 
- Con la información de los siguientes temas, aprenda a supervisar y administrar los clientes y obtenga detalles adicionales para la supervisión y la administración de clientes de servidores Linux y UNIX:  
+- [Supervisar clientes](/sccm/core/clients/manage/monitor-clients)  
 
--   [Supervisar clientes en System Center Configuration Manager](../../../core/clients/manage/monitor-clients.md)  
+- [Cómo administrar clientes](/sccm/core/clients/manage/manage-clients)  
 
--   [How to monitor clients for Linux and UNIX servers in System Center Configuration Manager](../../../core/clients/manage/monitor-clients-for-linux-and-unix-servers.md) (Supervisión de clientes para servidores Linux y UNIX en System Center Configuration Manager)  
+- [Administración de clientes en Internet](/sccm/core/clients/manage/manage-clients-internet)
 
--   [How to manage clients in System Center Configuration Manager](../../../core/clients/manage/manage-clients.md) (Administración de clientes en System Center Configuration Manager)  
+- [Uso de recopilaciones](/sccm/core/clients/manage/collections/introduction-to-collections)
 
--   [How to manage clients for Linux and UNIX servers in System Center Configuration Manager](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md) (Supervisión de clientes para servidores de Linux y UNIX en System Center Configuration Manager)  
+La administración conjunta permite administrar simultáneamente dispositivos Windows 10 mediante Configuration Manager y Microsoft Intune. Permite asociar a la nube su inversión existente en Configuration Manager mediante la incorporación de nuevas funcionalidades. Al habilitar la administración conjunta, puede usar Intune para realizar otras acciones de administración de clientes. Para más información, vea [What is co-management?](/sccm/comanage/overview) (¿Qué es la administración conjunta?).

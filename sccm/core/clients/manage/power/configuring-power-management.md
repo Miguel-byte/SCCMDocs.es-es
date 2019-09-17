@@ -1,8 +1,8 @@
 ---
 title: Configuración de la administración de energía
 titleSuffix: Configuration Manager
-description: Configure la administración de energía en System Center Configuration Manager.
-ms.date: 10/06/2016
+description: Configure la administración de energía en Configuration Manager.
+ms.date: 09/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,73 +11,69 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9561528d8f02cf5909c83a88a276e1d263343589
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 0f76cf68cc007a5cefb323828752186ded62ad5f
+ms.sourcegitcommit: cdf2827fb3f44d7522a9b533c115f910aa9c382a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56142245"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70902908"
 ---
-# <a name="configuring-power-management-in-system-center-configuration-manager"></a>Configuración de la administración de energía en System Center Configuration Manager
+# <a name="configure-power-management-in-configuration-manager"></a>Configuración de la administración de energía en Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Para poder usar la administración de energía en System Center Configuration Manager, debe realizar los siguientes pasos de configuración.  
+En este artículo se explica cómo configurar la administración de energía en Configuration Manager.
 
-## <a name="enable-and-configure-power-management-client-settings"></a>Habilitar y configurar opciones de administración de energía  
- Este procedimiento configura las opciones de cliente predeterminadas para la administración de energía y se aplicará a todos los equipos de la jerarquía. Si quiere que esta configuración solo se aplique a algunos equipos, cree una configuración de cliente de dispositivo personalizada y asígnela a una recopilación que contenga los equipos en los que quiere usar la administración de energía. Para más información sobre cómo crear configuraciones de dispositivo personalizadas, vea [Cómo establecer la configuración del cliente en Configuration Manager](../../../../core/clients/deploy/configure-client-settings.md).  
+## <a name="enable-and-configure-client-settings"></a>Habilitación y configuración del cliente
 
-#### <a name="to-enable-power-management-and-configure-client-settings"></a>Para habilitar y configurar opciones de administración de energía  
+En este procedimiento se establece la *configuración del cliente predeterminada* para la administración de energía. Se aplica a todos los equipos de la jerarquía.
 
-1. En la consola de Configuration Manager, haga clic en **Administración**.  
+Si solo quiere aplicar esta configuración a algunos clientes, cree una *configuración de cliente de dispositivo personalizada*. Después, asígnela a una recopilación que contenga los equipos para la administración de energía. Para obtener más información, vea [Cómo configurar el cliente](/sccm/core/clients/deploy/configure-client-settings).  
 
-2. En el área de trabajo **Administración** , haga clic en **Configuración de cliente**.  
+1. En la consola de Configuration Manager, vaya al área de trabajo **Administración**, seleccione el nodo **Configuración de cliente** y después **Configuración de cliente predeterminada**.
 
-3. Haga clic en **Configuración de cliente predeterminada**.  
+1. En la pestaña **Inicio** de la cinta de opciones, en el grupo **Propiedades**, seleccione **Propiedades**.  
 
-4. En la pestaña **Inicio** , en el grupo **Propiedades** , haga clic en **Propiedades**.  
+1. Seleccione el grupo **Administración de energía**.  
 
-5. En el cuadro de diálogo **Configuración de cliente predeterminada** , haga clic en **Administración de energía**.  
+1. Habilite la opción de cliente **Permitir la administración de energía de dispositivos**.
 
-6. Configure el siguiente valor para la configuración de cliente de administración de energía:  
+1. Configure las opciones de cliente adicionales que necesite. Para más información, vea [Acerca de la configuración de cliente: Administración de energía](/sccm/core/clients/deploy/about-client-settings#power-management).  
 
-   -   **Permitir la administración de energía de dispositivos** : en la lista desplegable, seleccione **Verdadero** para habilitar la administración de energía.  
+Los clientes configurarán estas opciones la próxima vez que descarguen la directiva de cliente. Para iniciar la recuperación de directivas para un solo cliente, vea [Cómo administrar clientes](/sccm/core/clients/manage/manage-clients#BKMK_PolicyRetrieval).  
 
-7. Configure las opciones de cliente que necesite. Para obtener una lista de las opciones de cliente de administración de energía que puede configurar, vea la sección [Administración de energía](../../../../core/clients/deploy/about-client-settings.md#power-management) del tema [Acerca de la configuración de cliente en Configuration Manager](../../../../core/clients/deploy/about-client-settings.md).  
+## <a name="exclude-computers"></a>Exclusión de equipos
 
-8. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Configuración de cliente predeterminada** .  
+Puede impedir que las recopilaciones de equipos reciban la configuración de administración de energía. Si un equipo es miembro de *cualquier* recopilación que se excluye de la configuración de administración de energía, ese equipo no aplica la configuración de administración de energía. Este comportamiento se aplica incluso si es miembro de otra recopilación que aplica la configuración de administración de energía.  
 
-   Los equipos cliente se configurarán con estas opciones la próxima vez que descarguen directivas de cliente. Para iniciar la recuperación de directivas para un solo cliente, vea [Cómo administrar clientes en System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md).  
+Es posible que quiera excluir equipos de la administración de energía por los siguientes motivos:  
 
-## <a name="exclude-computers-from-power-management"></a>Excluir equipos de la administración de energía  
- Puede impedir que las recopilaciones de equipos reciban la configuración de administración de energía. Si un equipo es miembro de alguna recopilación que se excluye de la configuración de administración de energía, ese equipo no aplica la configuración de administración de energía, incluso si es miembro de otra recopilación que aplica la configuración de administración de energía.  
+- Existe un requisito empresarial de que los equipos estén encendidos en todo momento.  
 
- Puede que quiera excluir equipos de la administración de energía por cualquiera de los siguientes motivos:  
+- Tiene una recopilación de control de equipos en los que no quiere aplicar la configuración de administración de energía.  
 
--   Existe un requisito empresarial de que los equipos estén encendidos en todo momento.  
+- Algunos de los equipos no tienen la capacidad para aplicar la configuración de administración de energía.  
 
--   Ha creado una recopilación de control de los equipos en los que no quiere aplicar la configuración de administración de energía.  
-
--   Algunos de los equipos no tienen la capacidad para aplicar la configuración de administración de energía.  
-
--   Quiere excluir los equipos que ejecutan Windows Server de la administración de energía.  
+- Quiere excluir los equipos que ejecutan Windows Server de la administración de energía.  
 
 > [!NOTE]  
->  Si se ha configurado la opción **Permitir a los usuarios excluir su dispositivo de la administración de energía** en la configuración de cliente, los usuarios pueden excluir sus propios equipos de la administración de energía mediante el Centro de software.  
+> Si establece la configuración de cliente en **Permitir a los usuarios excluir su dispositivo de la administración de energía**, los usuarios pueden excluir sus propios equipos de la administración de energía mediante el Centro de software.  
 
- Para averiguar qué equipos se han excluido de la administración de energía, ejecute el informe **Equipos excluidos**. Para más información sobre este informe, vea [Equipos excluidos](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md#BKMK_Excluded) en el tema [Cómo supervisar y planear la administración en el Administrador de configuración de energía](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).  
+Para averiguar qué equipos se excluyen de la administración de energía, ejecute el informe **Equipos excluidos**. Para más información sobre este informe, vea [Cómo supervisar y planear la administración de energía](/sccm/core/clients/manage/power/monitor-and-plan-for-power-management#BKMK_Excluded).  
 
 > [!IMPORTANT]  
->  La configuración de energía que se aplica a los equipos que ejecutan Windows XP o Windows Server 2003 no revierte a sus valores originales, aunque se excluya el equipo de la administración de energía. En versiones posteriores de Windows, la exclusión de un equipo de la administración de energía hace que toda la configuración de energía revierta a sus valores originales. No puede revertir una configuración de energía individual a sus valores originales.  
+> La exclusión de un equipo de la administración de energía hace que toda la configuración de energía revierta a sus valores originales. No puede revertir una configuración de energía individual a sus valores originales.  
 
-#### <a name="to-exclude-a-collection-of-computers-from-power-management"></a>Para excluir una recopilación de equipos de la administración de energía  
+### <a name="how-to-exclude-a-collection-of-computers-from-power-management"></a>Procedimientos para excluir una recopilación de equipos de la administración de energía  
 
-1. En la consola de Configuration Manager, haga clic en **Activos y compatibilidad**.  
+1. En la consola de Configuration Manager, vaya al área de trabajo **Activos y compatibilidad** y seleccione el nodo **Recopilaciones de dispositivos**.  
 
-2. En el área de trabajo **Activos y compatibilidad** , haga clic en **Recopilaciones de dispositivos**.  
+1. Seleccione la recopilación que quiera excluir de la administración de energía. En la pestaña **Inicio** de la cinta, en el grupo **Propiedades**, seleccione **Propiedades**.  
 
-3. En la lista **Recopilaciones de dispositivos** , seleccione la recopilación que quiere excluir de la administración de energía y, a continuación, en la pestaña **Inicio** , en el grupo **Propiedades** , haga clic en **Propiedades**.  
+1. Cambie a la pestaña **Administración de energía** y seleccione **No aplicar nunca la configuración de administración de energía en equipos de esta recopilación**.  
 
-4. En la pestaña **Administración de energía** del cuadro de diálogo <em><Nombre de la colección>\></em>**Propiedades**, seleccione **No aplicar nunca la configuración de administración de energía en equipos de esta recopilación**.  
+## <a name="next-steps"></a>Pasos siguientes
 
-5. Haga clic en **Aceptar** para cerrar el cuadro de diálogo <em><Nombre de la colección>\></em>**Propiedades** y guardar la configuración.  
+[Cómo crear y aplicar planes de energía](/sccm/core/clients/manage/power/create-and-apply-power-plans)
+
+[Cómo supervisar y planear la administración de energía](/sccm/core/clients/manage/power/monitor-and-plan-for-power-management)

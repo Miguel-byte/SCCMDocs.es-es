@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fdf140b998b4d6d64ade232503b64b14a11416f
-ms.sourcegitcommit: 79c51028f90b6966d6669588f25e8233cf06eb61
+ms.openlocfilehash: b92f099a3a64cb6b1943d3d4b1306cbbd4131d6c
+ms.sourcegitcommit: cdf2827fb3f44d7522a9b533c115f910aa9c382a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68338672"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70902931"
 ---
 # <a name="whats-new-in-version-1802-of-system-center-configuration-manager"></a>Novedades de la versión 1802 de System Center Configuration Manager
 
@@ -139,7 +139,7 @@ Puede configurar la longitud de las cadenas de modo que tengan más de 255 carac
 
  ### <a name="deprecation-announcement-for-linux-and-unix-client-support"></a>Anuncio de desuso de la compatibilidad con clientes de Linux y UNIX
  <!--510139-->
-Microsoft tiene la intención de dejar en desuso la compatibilidad con clientes de Linux y UNIX en System Center Configuration Manager aproximadamente dentro de un año, de modo que los clientes no se incluirán en la versión SCCM 1902 en el calendario de principios de 2019. La versión Configuration Manager 1810, a finales del calendario de 2018, será la última que incluya los clientes de Linux y UNIX, y se admitirán para el ciclo de vida completo de Configuration Manager 1810. Después de Configuration Manager 1810, los clientes deben considerar la posibilidad de usar Microsoft Azure Management para administrar servidores Linux. Las soluciones de Azure tienen una amplia compatibilidad con Linux que, en la mayoría de los casos, supera la funcionalidad de Configuration Manager, incluida la administración de revisiones de un extremo a otro para Linux.
+Microsoft tiene la intención de dejar en desuso la compatibilidad con clientes de Linux y UNIX en System Center Configuration Manager aproximadamente dentro de un año, de modo que los clientes no se incluirán en la versión 1902 en el calendario de principios de 2019. La versión Configuration Manager 1810, a finales del calendario de 2018, será la última que incluya los clientes de Linux y UNIX, y se admitirán para el ciclo de vida completo de Configuration Manager 1810. Después de Configuration Manager 1810, los clientes deben considerar la posibilidad de usar Microsoft Azure Management para administrar servidores Linux. Las soluciones de Azure tienen una amplia compatibilidad con Linux que, en la mayoría de los casos, supera la funcionalidad de Configuration Manager, incluida la administración de revisiones de un extremo a otro para Linux.
 
 ### <a name="surface-device-dashboard"></a>Panel de dispositivos Surface
 <!--1355788-->

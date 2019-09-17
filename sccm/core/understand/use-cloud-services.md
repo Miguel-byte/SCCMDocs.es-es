@@ -1,7 +1,7 @@
 ---
-title: Uso de servicios en la nube para complementar la infraestructura local
+title: Usar servicios en la nube
 titleSuffix: Configuration Manager
-description: Aprovisione recursos en la nube para System Center Configuration Manager a fin de complementar la infraestructura local.
+description: Aprovisione recursos en la nube para Configuration Manager a fin de complementar la infraestructura local.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72478590144915075ae224552b6d67f7ad8fd87c
-ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.openlocfilehash: 2828443de3833f2b98665fc4d87dcb63eb795b4d
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70377789"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70891836"
 ---
-# <a name="use-cloud-services-with-system-center-configuration-manager"></a>Usar servicios en la nube con System Center Configuration Manager.
+# <a name="use-cloud-services-with-configuration-manager"></a>Usar servicios en la nube con Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-System Center Configuration Manager admite varias opciones basadas en la nube. Pueden complementar la infraestructura local y ayudar a resolver problemas empresariales como:  
+Configuration Manager admite varias opciones basadas en la nube. Pueden complementar la infraestructura local y ayudar a resolver problemas empresariales como:  
 
 -   Cómo administrar BYOD (mediante Intune para la administración de dispositivos móviles).  
 

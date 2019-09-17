@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a1be4f6b9009df85fdb0a8286af08d204a696cd0
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: 7abb5e4405727cdbaeb42f5915ff1b29fe1c0911
+ms.sourcegitcommit: 4316bff400ffbde8404f8a2092ec17e3601b8d29
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67676469"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70738354"
 ---
 # <a name="checklist-for-installing-update-1706-for-system-center-configuration-manager"></a>Lista de comprobación para la instalación de la actualización 1706 de System Center Configuration Manager
 
@@ -96,7 +96,7 @@ Para obtener más información, vea  [Usar alertas y el sistema de estado de Sy
 Asegúrese de que la replicación de archivos y base de datos entre sitios funciona y está actualizada. Los retrasos o los trabajos pendientes pueden impedir una actualización correcta y sin problemas.
 Para la replicación de base de datos, puede utilizar Replication Link Analyzer para ayudar a resolver problemas antes de iniciar la actualización.
 
-Para obtener más información, vea [Acerca de Replication Link Analyzer](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA)  en el tema  [Supervisar la infraestructura de la jerarquía y replicación de System Center Configuration Manager](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure) .
+Para más información, vea [Replication Link Analyzer](/sccm/core/servers/manage/monitor-replication#BKMK_RLA) en el tema [Supervisión de la replicación de base de datos](/sccm/core/servers/manage/monitor-replication).
 
 **Instale todas las actualizaciones críticas aplicables de los sistemas operativos en los equipos que hospedan el sitio, el servidor de base de datos del sitio y los roles del sistema de sitio remoto:**   Antes de instalar una actualización para Configuration Manager, instale las actualizaciones críticas para cada sistema de sitio aplicable. Si alguna de las actualizaciones que instala requiere un reinicio, reinicie los equipos correspondientes antes de iniciar la actualización.
 

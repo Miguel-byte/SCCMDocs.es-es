@@ -1,8 +1,8 @@
 ---
-title: Procedimientos recomendados para la administración de energía
+title: Recomendaciones para la administración de energía
 titleSuffix: Configuration Manager
-description: Conozca procedimientos recomendados para la administración de energía en System Center Configuration Manager.
-ms.date: 10/06/2016
+description: Obtenga información sobre las recomendaciones de Microsoft para la administración de energía en Configuration Manager.
+ms.date: 09/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,70 +11,91 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 073ee14790c608a7f4f87c2dba3af2d445b0f27a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: a68dceb82f630720287b5215fbdad15eb5bebf93
+ms.sourcegitcommit: cdf2827fb3f44d7522a9b533c115f910aa9c382a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56135160"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70902589"
 ---
-# <a name="best-practices-for-power-management-in-system-center-configuration-manager"></a>Procedimientos recomendados para la administración de energía en System Center Configuration Manager
+# <a name="recommendations-for-power-management-in-configuration-manager"></a>Recomendaciones para la administración de energía en Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Use los procedimientos recomendados siguientes para la administración de energía en System Center Configuration Manager.  
+Use las recomendaciones siguientes para la administración de energía en Configuration Manager.  
 
-## <a name="perform-the-monitoring-phase-at-a-representative-time"></a>Realizar la fase de supervisión en un momento representativo  
- La fase de supervisión de la administración de energía le ofrece información sobre el consumo de energía, la actividad, las capacidades de administración de energía y del impacto medioambiental de los equipos de su organización. Asegúrese de elegir una hora representativa para realizar la fase de supervisión. Por ejemplo, si realiza la fase de supervisión en un día festivo, no obtendrá un informe realista sobre el uso de energía del equipo.  
+## <a name="monitor-at-a-representative-time"></a>Supervisión en una hora representativa
 
-## <a name="create-a-control-collection-of-computers-with-no-power-plans-applied"></a>Crear una recopilación de controles de equipos sin planes de energía aplicados  
- Cree dos recopilaciones de equipos para ayudarle a supervisar los efectos de la aplicación de los planes de energía en equipos. La primera recopilación debe contener la mayoría de los equipos en los que quiere aplicar la configuración de energía y la otra recopilación (la recopilación de controles) debe contener el resto de equipos. Aplique el plan de administración de energía necesario para la recopilación que contenga la mayoría de los equipos. Después, puede ejecutar informes para comparar el costo de energía, el uso de energía y el impacto medioambiental de los equipos en los que ha aplicado la configuración de energía, con la recopilación de controles en la que no ha aplicado la configuración de energía.  
+La fase de supervisión de la administración de energía proporciona la información siguiente de los equipos de la organización:
 
-## <a name="run-the-power-settings-report-before-you-apply-a-power-management-plan"></a>Ejecutar el informe de configuración de energía antes de aplicar un plan de administración de energía  
- Antes de aplicar un plan de administración de energía a un conjunto de equipos, ejecute el informe **Configuración de energía** , el cual le ayudará a comprender la configuración de administración de energía que ya está configurada en los equipos de la recopilación. Si aplica la nueva configuración de administración de energía en equipos sin examinar primero la configuración existente, puede provocar un aumento del consumo de energía.  
+- Consumo de energía
+- Actividad
+- Funciones de administración de energía
+- Impacto medioambiental
 
-## <a name="exclude-servers-from-power-management"></a>Excluir los servidores de la administración de energía  
- No se admite la administración de energía en equipos que ejecuten Windows Server (aunque se recopilen datos de uso de energía). Asegúrese de agregar servidores a una recopilación y exclúyala de la administración de energía.  
+Elija una hora representativa para supervisar los dispositivos. Por ejemplo, la supervisión en un día festivo no proporciona un informe realista sobre el uso de energía del equipo.
 
-## <a name="exclude-computers-that-you-do-not-want-to-manage"></a>Excluir equipos que no quiere administrar  
- Si tiene equipos que no quiere administrar con administración de energía, agréguelos a una recopilación y asegúrese de que la recopilación se excluye de la administración de energía.  
+## <a name="create-a-control-collection"></a>Creación de una recopilación de control
 
- Entre los ejemplos de equipos que podría querer excluir de la administración de energía se incluyen:  
+Cree dos recopilaciones de equipos para ayudarle a supervisar los efectos de la aplicación de los planes de energía en equipos. La primera recopilación debe contener la mayoría de los equipos a los que quiera aplicar la configuración de energía. La *recopilación de control* debe contener los equipos restantes. Aplique el plan de administración de energía necesario a la primera recopilación. Después, ejecute informes para comparar el impacto entre las dos recopilaciones.  
+
+## <a name="run-reports-before-you-apply-a-plan"></a>Ejecución de informes antes de aplicar un plan
+
+Antes de aplicar un plan de administración de energía a una recopilación de equipos, ejecute el informe de **configuración de energía**. Use este informe para ayudarle a comprender la configuración de administración de energía que ya está configurada en los equipos de la recopilación. Si aplica una configuración de administración de energía nueva a los equipos sin examinar primero la configuración existente, es posible que aumente su consumo de energía.  
+
+## <a name="exclude-servers"></a>Exclusión de servidores
+
+No se admite la administración de energía para los equipos que ejecutan Windows Server. Agregue los servidores a una recopilación y exclúyala de la administración de energía.  
+
+> [!NOTE]
+> Aunque Configuration Manager no admite la administración de energía de Windows Server, sí que recopila datos de uso de energía para el análisis y los informes.
+
+## <a name="exclude-other-computers"></a>Exclusión de otros equipos
+
+Si tiene equipos que no quiere administrar con la administración de energía, agréguelos a una colección de exclusión.  
+
+Es posible que quiera excluir de la administración de energía los tipos de equipo siguientes:
 
 - Los equipos que deban permanecer encendidos.  
 
-- Los equipos a los que los usuarios deban conectarse mediante Conexión a Escritorio remoto.  
+- Los equipos a los que los usuarios necesitan conectarse de forma remota.  
 
-- Los equipos que no puedan utilizar la administración de energía.  
+- Los equipos que no puedan usar la administración de energía.  
 
 - Los equipos que tengan el rol de sistema de sitio de punto de distribución.  
 
 - Los equipos públicos como los quioscos multimedia, las pantallas de información o las consolas de supervisión, donde el equipo y el monitor siempre deben estar encendidos.  
 
-  Para más información, vea [Configuración de administración de energía en Configuration Manager](../../../../core/clients/manage/power/configuring-power-management.md).  
+Para más información, vea [Configuración de administración de energía](/sccm/core/clients/manage/power/configuring-power-management).  
 
-## <a name="first-apply-power-plans-to-a-test-collection-of-computers"></a>En primer lugar, aplique los planes de energía a un recopilación de equipos de prueba  
- Pruebe siempre el efecto de aplicar un plan de administración de energía en un conjunto de equipos de prueba antes de aplicar el plan de energía a un gran conjunto de equipos.  
+## <a name="apply-power-plans-to-a-test-collection"></a>Aplicación de planes de energía a una recopilación de prueba
 
- La configuración de energía que se aplica a los equipos que ejecutan Windows XP o Windows Server 2003 no se revierte a su valor original, ni aunque excluya el equipo de la administración de energía. En versiones posteriores de Windows, la exclusión de un equipo de la administración de energía hace que toda la configuración de energía revierta a sus valores originales. No puede revertir una configuración de energía individual a sus valores originales.  
+Pruebe siempre el efecto de aplicar un plan de administración de energía en un conjunto de equipos de prueba antes de aplicar el plan de energía a un gran conjunto de equipos.  
 
-## <a name="apply-power-plan-settings-individually"></a>Aplicar la configuración de plan de energía individualmente  
- Supervise el efecto de aplicar cada configuración de energía antes de aplicar la siguiente para asegurarse de que cada valor tenga el efecto necesario. Para más información sobre la configuración del plan de energía, vea [Configuración de Plan de administración de energía disponibles](../../../../core/clients/manage/power/create-and-apply-power-plans.md#BKMK_Plans) en el tema [Cómo crear y aplicar energía planes en Configuration Manager](../../../../core/clients/manage/power/create-and-apply-power-plans.md).  
+Cuando se excluye un equipo de la administración de energía, toda la configuración de energía vuelve a sus valores originales. No puede revertir una configuración de energía individual a sus valores originales.  
 
-## <a name="regularly-monitor-computers-to-see-if-they-have-multiple-power-plans-applied"></a>Supervisar periódicamente los equipos para ver si tienen varios planes de energía aplicados  
- La administración de energía incluye un informe en el que se muestran los equipos que tengan varios planes de energía aplicados.  
+## <a name="apply-power-plan-settings-individually"></a>Aplicar la configuración de plan de energía individualmente
 
- Si un equipo es miembro de varias recopilaciones y cada una de ellas aplica planes de energía diferentes, se realizará las siguientes acciones:  
+Supervise el efecto de aplicar cada configuración de energía antes de aplicar la siguiente. Este proceso garantiza que cada valor tenga el efecto necesario. Para más información sobre las configuraciones de plan de administración, vea [Configuración de Plan de administración de energía disponibles](/sccm/core/clients/manage/power/create-and-apply-power-plans#BKMK_Plans).  
 
--   Plan de energía: si se aplican varios valores para la configuración de energía de un equipo, se usa el valor menos restrictivo.  
+## <a name="regularly-monitor-computers-for-multiple-power-plans"></a>Supervisión periódica de los equipos para varios planes de energía
 
--   Hora de reactivación: si se aplican varias horas de activación a un equipo de escritorio, se usará la hora más cercana a medianoche.  
+La administración de energía incluye un informe en el que se muestran los equipos que tengan varios planes de energía aplicados: **Equipos con varios planes de energía**.
 
-     Para más información, vea [Equipos con varios planes de energía](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md#BKMK_Multiple) en el tema [Cómo supervisar y planear la administración en el Administrador de configuración de energía](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md). Para más información sobre cómo resuelve los conflictos la administración de energía, vea [Cómo crear y aplicar energía planes en Configuration Manager](../../../../core/clients/manage/power/create-and-apply-power-plans.md).  
+Si un equipo es miembro de varias recopilaciones, y en cada una se aplican distintos planes de energía, se aplican los comportamientos siguientes:  
 
-## <a name="save-or-export-power-management-information-during-the-monitoring-and-planning-phase-of-power-management"></a>Guardar o exportar información de la administración de energía durante la fase de supervisión y planificación de la administración de energía  
- La información de administración de energía usada en los informes diarios se conserva en la base de datos de sitio de Configuration Manager durante 31 días.  
+- **Plan de energía**: si se aplican varios valores para la configuración de energía a un equipo, se usa el valor menos restrictivo.  
 
- La información de administración de energía usada en los informes mensuales se conserva en la base de datos de sitio de Configuration Manager durante 13 meses.  
+- **Hora de reactivación**: si se aplican varias horas de activación a un equipo de escritorio, se usa la hora más cercana a la medianoche.  
 
- Cuando ejecute informes durante las fases de supervisión, planeamiento y cumplimiento de la administración de energía, guarde o exporte los resultados de aquellos cuyos datos quiera conservar para una comparación posterior por si Configuration Manager los elimina más adelante.  
+Para más información, vea [Equipos con varios planes de energía](/sccm/core/clients/manage/power/monitor-and-plan-for-power-management#BKMK_Multiple).  
+
+## <a name="save-or-export-power-management-information"></a>Guardado o exportación de información de administración de energía
+
+Cuando ejecute informes durante las fases de supervisión y cumplimiento, guarde o exporte los resultados. Conserve los datos para una comparación posterior en caso de que Configuration Manager quite los datos después.  
+
+Configuration Manager mantiene la siguiente información de administración de energía en la base de datos del sitio:
+
+- Información de administración de energía usada por los informes diarios: 31 días
+
+- Información de administración de energía usada por los informes mensuales: 13 meses

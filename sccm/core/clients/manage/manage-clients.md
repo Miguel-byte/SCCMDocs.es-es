@@ -1,8 +1,8 @@
 ---
 title: Administración de clientes
 titleSuffix: Configuration Manager
-description: Aprenda a administrar clientes en System Center Configuration Manager.
-ms.date: 12/21/2017
+description: Obtenga información sobre cómo administrar clientes en Configuration Manager.
+ms.date: 09/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,181 +11,209 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52259888bdfe343072bfa34e8eb053c0bb082789
-ms.sourcegitcommit: 2d38de4846ea47a03cc884cbd3df27db48f64a6a
+ms.openlocfilehash: e49d91f3d01d598cb60d99debb52557432bcb2cc
+ms.sourcegitcommit: 4316bff400ffbde8404f8a2092ec17e3601b8d29
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70110137"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70738195"
 ---
-# <a name="how-to-manage-clients-in-system-center-configuration-manager"></a>Cómo administrar clientes en System Center Configuration Manager
+# <a name="how-to-manage-clients-in-configuration-manager"></a>Procedimientos para administrar clientes en Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Cuando el cliente de Configuration Manager se instala y se asigna correctamente a un sitio, puede ver el dispositivo en el área de trabajo **Activos y compatibilidad** del nodo **Dispositivos** y en una o varias recopilaciones del nodo **Recopilaciones de dispositivos**. Cuando selecciona el dispositivo o una recopilación, puede realizar operaciones de administración. Pero existen otras formas de administrar el cliente, que es posible que involucren otras áreas de trabajo de la consola o tareas externas a la consola.  
+Cuando el cliente de Configuration Manager se instala y se asigna correctamente a un sitio, puede ver el dispositivo en el área de trabajo **Activos y compatibilidad** del nodo **Dispositivos** y en una o varias recopilaciones del nodo **Recopilaciones de dispositivos**. Seleccione el dispositivo o una recopilación, y después ejecute operaciones de administración. Pero existen otras formas de administrar el cliente, que es posible que involucren otras áreas de trabajo de la consola o tareas externas a la consola.  
 
 > [!NOTE]  
->  Si el cliente de Configuration Manager está instalado pero todavía no se ha asignado correctamente a un sitio, es posible que no aparezca en la consola. Después de que el cliente se asigne a un sitio, actualice la pertenencia a la colección y actualice la vista de consola.  
->   
->  Además, un dispositivo también puede mostrarse en la consola cuando el cliente de Configuration Manager no está instalado. Este comportamiento se produce si se detecta el dispositivo, pero el cliente no está instalado ni asignado. 
+> Si instala el cliente de Configuration Manager pero todavía no se ha asignado correctamente a un sitio, es posible que no aparezca en la consola. Después de que el cliente se asigne a un sitio, actualice la pertenencia a la recopilación y actualice la vista de consola.  
 >
-> Los dispositivos móviles que se administran mediante el conector de Exchange Server y los dispositivos inscritos con Microsoft Intune no instalan el cliente de Configuration Manager.  
->   
->  Use la columna **Cliente** de la consola de Configuration Manager para determinar si el cliente está instalado, para que pueda administrarlo desde la consola.  
+> Un dispositivo también se puede mostrar en la consola cuando el cliente de Configuration Manager no está instalado. Este comportamiento se produce si el sitio detecta un dispositivo, pero el cliente no está instalado ni asignado.
+>
+> Los dispositivos móviles que se administran mediante el [conector de Exchange Server](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync) o [MDM local](/sccm/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure) no instalan el cliente de Configuration Manager.  
+>
+> Para administrar un dispositivo desde la consola, use la columna **Cliente** del nodo **Dispositivos** para determinar si el cliente está instalado.  
 
-##  <a name="BKMK_ManagingClients_DevicesNode"></a> Administrar clientes desde el nodo Dispositivos  
+## <a name="BKMK_ManagingClients_DevicesNode"></a> Administración de clientes desde el nodo **Dispositivos**  
 
 Dependiendo del tipo de dispositivo, es posible que algunas de estas opciones no estén disponibles.  
 
-1. En la consola de Configuration Manager, seleccione **Activos y compatibilidad** >  **Dispositivos**.  
+1. En la consola de Configuration Manager, vaya al área de trabajo **Activos y compatibilidad** y seleccione el nodo **Dispositivos**.  
 
-2. Seleccione uno o más dispositivos y, después, seleccione una de estas tareas de administración de cliente en la cinta de opciones o haga clic con el botón derecho en el dispositivo:  
+2. Seleccione uno o más dispositivos y, después, seleccione una de estas tareas de administración de cliente en la cinta. (También puede hacer clic con el botón derecho en el dispositivo).  
 
-   - **Administrar la información de afinidad de dispositivo de usuario**  
+### <a name="import-user-device-affinity"></a>Importar afinidad de dispositivo de usuario
 
-      Configure las asociaciones entre usuarios y dispositivos, de manera que pueda implementar de manera eficaz el software a los usuarios.  
+Configure las asociaciones entre usuarios y dispositivos, de manera que pueda implementar de manera eficaz el software a los usuarios.  
 
-      Consulte [Link users and devices with user device affinity in System Center Configuration Manager](../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md) (Vinculación de usuarios y dispositivos con afinidad entre usuario y dispositivo en System Center Configuration Manager).  
+Para obtener más información, vea [Vincular usuarios y dispositivos con la afinidad entre usuario y dispositivo](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).
 
-   - **Agregar el dispositivo a una recopilación nueva o existente**  
+### <a name="import-computer-information"></a>Importar información del equipo
 
-      Agregue el dispositivo a una recopilación con una regla directa.  
+Inicie el **Asistente para importar información de equipo** para importar información del equipo nuevo a la base de datos de Configuration Manager. Puede importar varios equipos mediante un archivo, o bien especificar información para un único equipo.
 
-   - **Instalar y volver a instalar el cliente mediante el asistente Inserción del cliente**  
+### <a name="add-selected-items"></a>Agregar elementos seleccionados
 
-      Instale y vuelva a instalar el cliente de Configuration Manager para repararlo o volver a configurarlo. Esta opción incluye valores de configuración de sitios y las propiedades client.msi que se establecen para la instalación de inserción del cliente.  
+Se muestran las opciones siguientes:
 
-     > [!TIP]  
-     >  Hay muchas maneras diferentes de instalar (y volver a instalar) el cliente de Configuration Manager. Aunque el asistente Inserción del cliente ofrezca un método de instalación de cliente conveniente porque puede ejecutarlo desde la consola, este método tiene muchas dependencias y no es adecuado para todos los entornos. Para obtener más información sobre las dependencias, consulte [Prerequisites for deploying clients to Windows computers in System Center Configuration Manager](../../../core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md) (Requisitos previos para la implementación de clientes en equipos Windows con System Center Configuration Manager). Para más información sobre los diferentes métodos de instalación de cliente, consulte [Client installation methods in System Center Configuration Manager](../../../core/clients/deploy/plan/client-installation-methods.md) (Métodos de instalación de cliente en System Center Configuration Manager).  
+- **Agregar elementos seleccionados a la recopilación de dispositivos existente**: Abre el cuadro de diálogo **Seleccionar recopilación** . Seleccione la recopilación a la que quiera agregar este dispositivo. El dispositivo se incluye en esta recopilación mediante una regla de pertenencia **Directa**.  
 
-      Consulte [Instalación de clientes de Configuration Manager mediante la inserción de cliente](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientPush).  
+- **Agregar elementos seleccionados a la nueva recopilación de dispositivos**: abre el **Asistente para crear recopilación de dispositivos**, donde puede crear una recopilación. La recopilación seleccionada se incluye en esta recopilación mediante una regla de pertenencia **Directa**.  
 
-   - **Reasignar el sitio**  
+Para obtener más información, vea [Creación de recopilaciones](/sccm/core/clients/manage/collections/create-collections).
 
-      Reasigne uno o más clientes, incluidos dispositivos móviles administrados, a otro sitio primario en la jerarquía. Los clientes pueden reasignarse individualmente o pueden ser seleccionados en grupo y reasignarse a un sitio nuevo.  
+### <a name="install-client"></a>Instalar cliente
 
-   - **Administrar de forma remota el cliente**  
+Se abre el **Asistente para la instalación de cliente**. Este asistente usa la instalación de inserción de cliente para instalar o reinstalar un cliente de Configuration Manager en el dispositivo seleccionado.
 
-      Ejecute el Explorador de recursos para ver la información de inventario de hardware y software de un cliente de Windows. Administre el dispositivo de forma remota mediante Control remoto, Asistencia remota o Escritorio remoto.  
+> [!TIP]  
+> Hay muchas maneras diferentes de instalar el cliente de Configuration Manager. Aunque el asistente Inserción del cliente ofrece un método de instalación de cliente cómodo desde la consola, este método tiene muchas dependencias y no es adecuado para todos los entornos. Para más información sobre las dependencias, vea [Requisitos previos para la implementación de clientes en equipos Windows](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers#client-push-installation). Para más información sobre los otros tipos de instalación de clientes, vea [Métodos de instalación de cliente](/sccm/core/clients/deploy/plan/client-installation-methods).
 
-      Vea [Cómo usar el Explorador de recursos para ver el inventario de hardware](../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md) y [Cómo usar el Explorador de recursos para ver el inventario de software](../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md).  
+Para más información, vea [Cómo instalar clientes de Configuration Manager mediante la inserción de cliente](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).
 
-      Vea [Cómo administrar de forma remota un equipo cliente de Windows](../../../core/clients/manage/remote-control/remotely-administer-a-windows-client-computer.md).  
+### <a name="run-script"></a>Ejecutar script
 
-   - **Aprobar un cliente**  
+Abre el asistente **Ejecutar el script** para ejecutar un script de PowerShell en el dispositivo seleccionado.
 
-      Cuando el cliente se comunica con los sistemas de sitio mediante HTTP y un certificado autofirmado, debe aprobar estos clientes para identificarlos como equipos de confianza. De forma predeterminada, la configuración del sitio aprueba automáticamente los clientes del mismo bosque de Active Directory y los bosques de confianza, por lo que no es necesario aprobar manualmente cada cliente. Pero debe aprobar manualmente los equipos del grupo de trabajo de confianza y cualquier otro equipo de confianza que no esté aprobado.  
+Para obtener más información, consulte [Creación y ejecución de scripts de PowerShell](/sccm/apps/deploy-use/create-deploy-scripts).
 
-     > [!WARNING]  
-     >  Aunque algunas funciones de administración puedan funcionar para los clientes no aprobados, este es un escenario no compatible para Configuration Manager.  
+### <a name="install-application"></a>Instalación de la aplicación
 
-      No tiene que aprobar clientes que se comunican siempre con sistemas de sitio mediante HTTPS, o clientes que usan un certificado PKI al comunicarse con sistemas de sitio mediante HTTP. Estos clientes establecen confianza mediante el uso de los certificados PKI.  
+Instale una aplicación en un dispositivo en tiempo real. Esta característica puede ayudar a reducir la necesidad de colecciones independientes para cada aplicación.
 
-   - **Bloquear o desbloquear un cliente**  
+Para más información, consulte [Instalación de aplicaciones para un dispositivo](/sccm/apps/deploy-use/install-app-for-device).
 
-      Bloquee un cliente que ya no sea de confianza. El bloqueo impide que el cliente reciba la directiva y evita que los sistemas de sitio se comuniquen con el cliente.  
+### <a name="reassign-site"></a>Reasignar el sitio
 
-     > [!WARNING]  
-     >  El bloqueo de un cliente solo impide la comunicación del cliente con sistemas de sitio de Configuration Manager y no evita la comunicación con otros dispositivos. Asimismo, cuando el cliente se comunica con sistemas de sitio mediante HTTP en lugar de HTTPS, existen algunas limitaciones de seguridad.  
+Reasigne uno o más clientes, incluidos dispositivos móviles administrados, a otro sitio primario en la jerarquía. Puede reasignar los clientes de forma individual o seleccionar más de uno para reasignarlos de forma masiva.  
 
-      También puede desbloquear a un cliente que está bloqueado. 
+### <a name="client-settings---resultant-client-settings"></a>Configuración de cliente: configuración de cliente resultante
 
-      Consulte [Determine whether to block clients in System Center Configuration Manager](../../../core/clients/deploy/plan/determine-whether-to-block-clients.md) (Determinación del bloqueo de clientes en System Center Configuration Manager).  
+Cuando se implementan varias configuraciones de cliente en el mismo dispositivo, el establecimiento de prioridades y la combinación de configuraciones son complejos. Use esta opción para ver el conjunto resultante de la configuración de cliente implementada en este dispositivo.
 
-   - **Desactivar una implementación de PXE necesaria**  
+Para obtener más información, vea [Cómo configurar el cliente](/sccm/core/clients/deploy/configure-client-settings).
 
-      Vuelva a implementar implementaciones de PXE necesarias para el equipo.  
+### <a name="start"></a>Inicio
 
-      Consulte [Use PXE to deploy Windows over the network with System Center Configuration Manager](../../../osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md) (Uso de PXE para implementar Windows a través de la red con System Center Configuration Manager).  
+- Ejecute el **Explorador de recursos** para ver la información de inventario de hardware y software de un cliente de Windows. Vea los siguientes artículos para más información:
 
-   - **Administrar las propiedades del cliente**  
+  - [Cómo usar el Explorador de recursos para ver el inventario de hardware](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory)
 
-      Vea las implementaciones y los datos de detección destinados al cliente. También puede configurar variables que usan las secuencias de tareas para implementar un sistema operativo en el dispositivo.  
+  - [Cómo usar el Explorador de recursos para ver el inventario de software](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory)
 
-   - **Eliminar el cliente**  
+- Administre el dispositivo de forma remota mediante **Control remoto**, **Asistencia remota** o **Cliente de Escritorio remoto**. Para obtener más información, vea [Cómo administrar de forma remota un equipo cliente de Windows](/sccm/core/clients/manage/remote-control/remotely-administer-a-windows-client-computer).
 
-     > [!WARNING]  
-     >  No elimine un cliente si desea desinstalar el cliente de Configuration Manager o quitarlo de una recopilación.  
+### <a name="approve"></a>Aprobar
 
-      La acción **Eliminar** elimina manualmente el registro del cliente de la base de datos de Configuration Manager y, normalmente, no debe usar esta acción excepto en escenarios de solución de problemas. Si elimina el registro del cliente pero el cliente sigue estando instalado y se comunica con el sitio, Heartbeat Discovery vuelve a crear el registro del cliente. El registro del cliente vuelve a aparecer en la consola de Configuration Manager, aunque se pierden el historial del cliente y todas las asociaciones anteriores.  
+Cuando el cliente se comunica con los sistemas de sitio mediante HTTP y un certificado autofirmado, debe aprobar estos clientes para identificarlos como equipos de confianza. De forma predeterminada, la configuración del sitio aprueba automáticamente los clientes del mismo bosque de Active Directory y los bosques de confianza. Este comportamiento predeterminado significa que no es necesario aprobar cada cliente de forma manual. Apruebe manualmente los equipos del grupo de trabajo de confianza y cualquier otro equipo de confianza que no esté aprobado.
 
-     > [!NOTE]  
-     >  Cuando elimina un cliente de dispositivo móvil inscrito por Configuration Manager, esta acción también revoca el certificado PKI emitido para el dispositivo móvil. El punto de administración rechaza este certificado, aunque IIS no compruebe la CRL. Cuando elimina estos clientes, no se revocan los certificados en los clientes heredados de dispositivos móviles.  
+> [!IMPORTANT]  
+> Aunque algunas funciones de administración puedan funcionar para los clientes no aprobados, este es un escenario no compatible para Configuration Manager.  
 
-      Para desinstalar el cliente, consulte [Desinstalar el cliente de Configuration Manager](#BKMK_UninstalClient).  
+No tiene que aprobar clientes que se comunican siempre con sistemas de sitio mediante HTTPS, o bien clientes que usan un certificado PKI al comunicarse con sistemas de sitio mediante HTTP. Estos clientes establecen confianza mediante el uso de los certificados PKI.
 
-      Para asignar el cliente a un nuevo sitio primario, consulte [How to assign clients to a site in System Center Configuration Manager](../../../core/clients/deploy/assign-clients-to-a-site.md) (Asignación de clientes a un sitio en System Center Configuration Manager).  
+### <a name="block-or-unblock"></a>Bloquear o desbloquear
 
-      Para quitar el cliente de una recopilación, vuelva a configurar las propiedades de la recopilación. Consulte [How to manage collections in System Center Configuration Manager](../../../core/clients/manage/collections/manage-collections.md) (Administración de recopilaciones en System Center Configuration Manager).  
+Bloquee un cliente que ya no sea de confianza. El bloqueo impide que el cliente reciba la directiva y evita que los sistemas de sitio se comuniquen con el cliente.  
 
-   - **Borrar un dispositivo móvil**  
+> [!IMPORTANT]  
+> El bloqueo de un cliente solo impide la comunicación del cliente con sistemas de sitio de Configuration Manager. No evita la comunicación con otros dispositivos. Cuando el cliente se comunica con sistemas de sitio mediante HTTP en lugar de HTTPS, existen algunas limitaciones de seguridad.  
 
-      Puede borrar dispositivos móviles compatibles con el comando de borrado.  
+También puede desbloquear a un cliente que está bloqueado.
 
-      Esta acción elimina permanentemente todos los datos en el dispositivo móvil, incluida la configuración personal y los datos personales. Normalmente, esta acción restablece el dispositivo móvil a sus valores predeterminados de fábrica. Borre un dispositivo móvil cuando ya no sea de confianza. Por ejemplo, en caso de pérdida o robo del dispositivo.  
+Para más información, vea [Determinar si bloquear clientes](/sccm/core/clients/deploy/plan/determine-whether-to-block-clients).
 
-     > [!TIP]  
-     >  Compruebe la documentación del fabricante para obtener más información acerca de cómo el dispositivo móvil procesa un comando de borrado remoto.  
+<!-- Change Category is a hybrid action -->
 
-      Suele producirse un retraso hasta que el dispositivo móvil recibe el comando de borrado:  
+### <a name="clear-required-pxe-deployments"></a>Borrar implementaciones de PXE requeridas
 
-     - Si el dispositivo móvil está inscrito por Configuration Manager o Microsoft Intune, el cliente recibe el comando cuando descarga su directiva de cliente.  
+Puede realizar de nuevo una implementación del entorno PXE requerida. Para ello, borre el estado de la última implementación del entorno PXE asignada a un equipo o a una recopilación de Configuration Manager. Esta acción restablece el estado de la implementación, y vuelve a instalar las implementaciones requeridas más recientes.
 
-     - Si el dispositivo móvil está administrado por el conector de Exchange Server, recibe el comando cuando se sincroniza con Exchange.  
+Para obtener más información, vea [Use PXE to deploy Windows over the network](/sccm/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network) (Uso de PXE para implementar Windows a través de la red).
 
-       Puede usar la columna **Estado de borrado** para supervisar la recepción en el dispositivo del comando de borrado. Hasta que el dispositivo no envíe una confirmación de borrado a Configuration Manager, puede cancelar el comando de borrado.  
+### <a name="client-notification"></a>Notificación de cliente
 
-   - **Retirar un dispositivo móvil**  
+Para obtener más información, vea [Notificación de cliente](/sccm/core/clients/manage/client-notification#client-notification).
 
-      La opción **Retirar** solo es compatible con dispositivos móviles que estén inscritos por Microsoft Intune o la administración de dispositivos móviles local.  
+### <a name="endpoint-protection"></a>Endpoint Protection
 
-      Para obtener más información, consulte [Help protect your data with remote wipe, remote lock, or passcode reset using System Center Configuration Manager](../../../mdm/deploy-use/wipe-lock-reset-devices.md) (Ayuda a la protección de datos mediante la eliminación remota, el bloqueo remoto o el restablecimiento de código de acceso con System Center Configuration Manager).  
+Para obtener más información, vea [Notificación de cliente](/sccm/core/clients/manage/client-notification#endpoint-protection).
 
-   - **Cambiar la propiedad de un dispositivo**  
+### <a name="edit-primary-users"></a>Editar usuarios primarios
 
-      Si un dispositivo no se ha unido a un dominio y no tiene el cliente de Configuration Manager instalado, use esta opción para cambiar la propiedad a **Compañía** o **Personal**.  
+Vea los usuarios de este dispositivo en los últimos 90 días, o bien especifique los usuarios primarios de este dispositivo.
 
-      Puede usar este valor en requisitos de aplicaciones para controlar las implementaciones y para controlar la cantidad de inventario que se recopila de los dispositivos de los usuarios.  
+Para obtener más información, vea [Vincular usuarios y dispositivos con la afinidad entre usuario y dispositivo](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).
 
-     Puede que necesite agregar la columna **Propietario del dispositivo** a la vista haciendo clic con el botón derecho en cualquier encabezado de columna y seleccionándola.
+### <a name="wipe-a-mobile-device"></a>Borrar un dispositivo móvil
 
-      Para obtener más información, consulte [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../mdm/understand/hybrid-mobile-device-management.md) (Administración híbrida de dispositivos móviles [MDM] con System Center Configuration Manager y Microsoft Intune)  
+Puede borrar dispositivos móviles compatibles con el comando de borrado. Esta acción elimina permanentemente todos los datos en el dispositivo móvil, incluida la configuración personal y los datos personales. Normalmente, esta acción restablece el dispositivo móvil a sus valores predeterminados de fábrica. Borre un dispositivo móvil cuando ya no sea de confianza. Por ejemplo, en caso de pérdida o robo del dispositivo.  
 
-##  <a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> Administrar clientes desde el nodo Recopilaciones de dispositivos  
+> [!TIP]  
+> Compruebe la documentación del fabricante para obtener más información acerca de cómo el dispositivo móvil procesa un comando de borrado remoto.  
+
+Se suele producir un retraso hasta que el dispositivo móvil recibe el comando de borrado:  
+
+- Si el dispositivo móvil está inscrito por Configuration Manager, el cliente recibe el comando cuando descarga su directiva de cliente.
+
+- Si el dispositivo móvil está administrado por el conector de Exchange Server, recibe el comando cuando se sincroniza con Exchange.  
+
+Para supervisar la recepción en el dispositivo del comando de borrado, use la columna **Estado de borrado**. Hasta que el dispositivo no envíe una confirmación de borrado a Configuration Manager, puede cancelar el comando de borrado.  
+
+### <a name="retire-a-mobile-device"></a>Retirar un dispositivo móvil
+
+La opción **Retirar** solo se admite en dispositivos móviles inscritos mediante MDM local.  
+
+Para más información, vea [Protección de los datos mediante la eliminación remota, el bloqueo remoto o el restablecimiento de código de acceso](/sccm/mdm/deploy-use/wipe-lock-reset-devices).
+
+### <a name="change-ownership"></a>Cambiar la propiedad
+
+Si un dispositivo no está unido a un dominio y no tiene el cliente de Configuration Manager instalado, use esta opción para cambiar la propiedad a **Compañía** o **Personal**.  
+
+Puede usar este valor en requisitos de aplicaciones para controlar las implementaciones y para controlar la cantidad de inventario que se recopila de los dispositivos de los usuarios.  
+
+Puede que necesite agregar la columna **Propietario del dispositivo** a la vista haciendo clic con el botón derecho en cualquier encabezado de columna y seleccionándola.
+
+Para más información, consulte [MDM híbrida con Configuration Manager y Microsoft Intune](/sccm/mdm/understand/hybrid-mobile-device-management).
+
+### <a name="delete"></a>Eliminar
+
+> [!WARNING]  
+> No elimine un cliente si quiere desinstalar el cliente de Configuration Manager o quitarlo de una recopilación.  
+
+La acción **Eliminar** elimina de forma manual el registro de cliente de la base de datos de Configuration Manager. Use esta acción solo para solucionar un problema. Si elimina el objeto, pero el cliente sigue instalado y se comunica con el sitio, Detección de latido vuelve a crear el registro del cliente. Vuelve a aparecer en la consola de Configuration Manager, aunque se pierden el historial del cliente y todas las asociaciones anteriores.  
+> [!NOTE]  
+> Cuando se elimina un cliente de dispositivo móvil inscrito por Configuration Manager, esta acción también revoca el certificado PKI emitido. Después, el punto de administración rechaza este certificado, incluso si IIS no comprueba la lista de revocación de certificados (CRL).
+>
+> Cuando elimina estos clientes, no se revocan los certificados en los clientes heredados de dispositivos móviles.
+
+Para desinstalar el cliente, vea [Desinstalar el cliente de Configuration Manager](#BKMK_UninstalClient).  
+
+Para asignar el cliente a un nuevo sitio primario, vea [Cómo asignar clientes a un sitio en Configuration Manager](/sccm/core/clients/deploy/assign-clients-to-a-site).
+
+Para quitar el cliente de una recopilación, vuelva a configurar las propiedades de la recopilación. Para obtener más información, vea [Cómo administrar colecciones](/sccm/core/clients/manage/collections/manage-collections).
+
+### <a name="refresh"></a>Actualizar
+
+Actualice la vista de la consola con los datos más recientes de la base de datos. Por ejemplo, si un dispositivo aparece en la lista de la detección, pero no se muestra como instalado. Después de instalar el cliente y asegurarse de que está asignado al sitio, seleccione **Actualizar**.
+
+### <a name="properties"></a>Propiedades
+
+Vea las implementaciones y los datos de detección destinados al cliente.
+
+También puede configurar variables que usan las secuencias de tareas para implementar un sistema operativo en el dispositivo. Para más información, vea [Crear variables de secuencia de tareas para equipos y recopilaciones](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_CreateTSVariables).
+
+
+## <a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> Administración de clientes desde el nodo **Recopilaciones de dispositivos**
+
 Muchas de las tareas que están disponibles para los dispositivos en el nodo **Dispositivos** también lo están en las colecciones. La consola aplica automáticamente la operación en todos los dispositivos aptos de la recopilación. Esta acción en una recopilación completa genera paquetes de red adicionales y aumenta el uso de la CPU en el servidor del sitio.  
 
-Tenga en cuenta lo siguiente antes de realizar tareas de nivel de recopilación. Una vez que se haya iniciado, no puede detener la tarea de la consola. 
+Tenga en cuenta las preguntas siguientes antes de ejecutar tareas de nivel de recopilación. Una vez que se haya iniciado, no puede detener la tarea desde la consola.
+
 - ¿Cuántos dispositivos hay en la recopilación?
 - ¿Los dispositivos están conectados mediante conexiones de red de ancho de banda reducido?
 - ¿Cuánto tiempo tarda esta tarea en completarse para todos los dispositivos?
 
-#### <a name="to-manage-clients-from-the-device-collections-node"></a>Para administrar clientes desde el nodo Recopilaciones de dispositivos  
-
-1.  En la consola de Configuration Manager, pulse **Activos y compatibilidad** > **Recopilaciones de dispositivos**.  
-
-3.  Seleccione una recopilación y, después, una de las tareas de administración de cliente disponibles en la cinta o haga clic con el botón derecho en la recopilación. Estas tareas de administración de clientes *solo* pueden realizarse en el nivel de recopilación.  
-
-    -   **Examinar equipos en busca de malware y descargar archivos de definición de antimalware**  
-
-         Vea [Endpoint Protection in System Center Configuration Manager](../../../protect/deploy-use/endpoint-protection.md) (Endpoint Protection en System Center Configuration Manager).  
-
-    -   **Implementar software, líneas de base de configuración y secuencias de tareas**  
-
-         Vea:  
-
-        -   [Deploy software updates in System Center Configuration Manager](../../../sum/deploy-use/deploy-software-updates.md) (Administración de actualizaciones de software en System Center Configuration Manager)  
-
-        -   [Plan for and configure compliance settings in System Center Configuration Manager](../../../compliance/plan-design/plan-for-and-configure-compliance-settings.md) (Planeación y configuración de cumplimiento en System Center Configuration Manager)  
-
-    -   **Configurar opciones de administración de energía**  
-
-         Consulte [How to create and apply power plans in System Center Configuration Manager](../../../core/clients/manage/power/create-and-apply-power-plans.md) (Creación y aplicación de planes de energía en System Center Configuration Manager). Los planes de energía solo se pueden usar con equipos que ejecuten Windows.  
-
-    -   **Notificar a los equipos que descarguen la directiva lo antes posible**  
-
-         Use la notificación de cliente para notificar a los clientes de Windows seleccionados que descarguen la directiva de equipo lo antes posible fuera del intervalo de sondeo de la directiva de cliente.  
-
-         Las tareas de notificación de cliente se muestran en el nodo **Operaciones de cliente** del área de trabajo **Supervisión** .  
+Para obtener más información, vea [Cómo administrar colecciones](/sccm/core/clients/manage/collections/manage-collections).
 
 
 ## <a name="restart-clients"></a>Reinicio de clientes
@@ -195,46 +223,55 @@ Use la consola de Configuration Manager para identificar los clientes que precis
 > [!Tip]
 > Habilite la actualización de cliente automática para mantener a los clientes actualizados con menos esfuerzo. Para obtener más información, vea [Usar una actualización de cliente automática](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#bkmk_autoupdate).
 
-Para identificar los dispositivos pendientes de reinicio, vaya al área de trabajo **Activos y compatibilidad** de la consola de Configuration Manager y seleccione el nodo **Dispositivos**. Después, puede ver el estado de cada dispositivo en el panel de detalles en una nueva columna denominada **Reinicio pendiente**. Cada dispositivo tiene uno o varios de los valores siguientes: 
+Para identificar los dispositivos pendientes de reinicio, vaya al área de trabajo **Activos y compatibilidad** de la consola de Configuration Manager y seleccione el nodo **Dispositivos**. Después, puede ver el estado de cada dispositivo en el panel de detalles en una nueva columna denominada **Reinicio pendiente**. Cada dispositivo tiene uno o varios de los valores siguientes:
+
 - **No**: no hay ningún reinicio pendiente
 - **Configuration Manager**: este valor proviene del componente de coordinador de reinicio de cliente (RebootCoordinator.log)
 - **Cambiar nombre de archivo**: este valor proviene de una operación de cambio de nombre de archivo pendiente notificada por Windows (HKLM\SYSTEM\CurrentControlSet\Control\Session Manager, PendingFileRenameOperations)
 - **Windows Update**: este valor proviene de la notificación de Windows Update Agent de un reinicio pendiente necesario para una o varias actualizaciones (HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired)
 - **Agregar o quitar características**: este valor proviene del servicio basado en componentes de Windows que notifica que la adición o eliminación de una característica de Windows requiere un reinicio (HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Reboot Pending)
 
-**Para crear la notificación de cliente para reiniciar un dispositivo:**
-1. Busque el dispositivo que quiera reiniciar dentro de una recopilación en el nodo **Recopilaciones de dispositivos** de la consola.
-2. Haga clic con el botón derecho en el dispositivo, seleccione **Notificación de cliente** y, después, seleccione **Reiniciar**. Se abre una ventana de información sobre el reinicio. Haga clic en **Aceptar** para confirmar la solicitud de reinicio.
+### <a name="create-the-client-notification-to-restart-a-device"></a>Creación de la notificación de cliente para reiniciar un dispositivo
+
+1. Seleccione el dispositivo que quiera reiniciar dentro de una recopilación en el nodo **Recopilaciones de dispositivos** de la consola.
+2. En la cinta, seleccione **Notificación de cliente** y luego **Reiniciar**. Se abre una ventana de información sobre el reinicio. Seleccione **Aceptar** para confirmar la solicitud de reinicio.
 
 Cuando el cliente recibe la notificación de un **Centro de software**, se abre la ventana de notificación para informar al usuario sobre el reinicio. De forma predeterminada, el reinicio se produce al cabo de 90 minutos. Puede modificar la hora de reinicio en la [configuración de cliente](/sccm/core/clients/deploy/configure-client-settings). La configuración para el comportamiento del reinicio se encuentra en la pestaña [Reinicio de equipo](/sccm/core/clients/deploy/about-client-settings#computer-restart) de la configuración predeterminada.
 
 
-##  <a name="BKMK_ClientCache"></a> Configurar la caché del cliente para clientes de Configuration Manager  
+## <a name="BKMK_ClientCache"></a> Configuración de la caché de cliente
+
 La caché del cliente almacena los archivos temporales para el momento en que los clientes instalen aplicaciones y programas. Las actualizaciones de software también usan la caché de cliente, pero siempre intentan descargar a la caché independientemente de la configuración de tamaño. Configure las opciones de caché, como el tamaño y ubicación, al instalar manualmente el cliente, al usar la instalación de inserción de cliente o después de la instalación.
 
-A partir de la versión 1606 de Configuration Manager, puede especificar el tamaño de la carpeta de caché mediante la configuración del cliente en la consola de Configuration Manager.   
+Puede especificar el tamaño de la carpeta de caché mediante la configuración del cliente en la consola de Configuration Manager. Para obtener más información, vea [Configuración de la memoria caché del cliente](/sccm/core/clients/deploy/about-client-settings#client-cache-settings).
 
- La ubicación predeterminada de la caché de cliente de Configuration Manager es %*windir*%\ccmcache y el espacio en disco predeterminado es 5120 MB.  
+La ubicación predeterminada de la caché de cliente de Configuration Manager es `%windir%\ccmcache` y el espacio en disco predeterminado es 5120 MB.  
 
 > [!IMPORTANT]  
->  No cifre la carpeta utilizada para la caché de cliente. Configuration Manager no puede descargar contenido en una carpeta cifrada.  
+> No cifre la carpeta que se usa para la caché de cliente. Configuration Manager no puede descargar contenido en una carpeta cifrada.  
 
-### <a name="about-client-cache"></a>Acerca de la caché de cliente  
+### <a name="about-the-client-cache"></a>Acerca de la caché de cliente  
 
 El cliente de Configuration Manager descarga el contenido del software necesario en cuanto recibe la implementación, pero espera el tiempo programado para ejecutar la implementación. Cuando llega el momento programado, el cliente de Configuration Manager comprueba si el contenido está disponible en la caché. Si el contenido está en la caché y es la versión correcta, el cliente usa el contenido almacenado en caché. Cuando cambia la versión requerida del contenido, o bien si el cliente elimina el contenido para hacer sitio a otro paquete, el cliente descarga de nuevo el contenido en la caché.  
 
 Si el cliente trata de descargar el contenido de un programa o aplicación cuyo tamaño es mayor que el de la caché, se produce un error de implementación debido a la falta de espacio en la caché. El cliente genera el mensaje de estado 10050 de tamaño de caché insuficiente. Si aumenta el tamaño de caché más adelante, el resultado es el siguiente:  
 
--   Para un programa necesario: el cliente no reintenta descargar el contenido automáticamente. Vuelva a implementar el paquete y el programa en el cliente.  
--   Para una aplicación requerida: el cliente vuelve a intentar descargar el contenido automáticamente cuando descarga su directiva de cliente.  
+- Para un programa necesario: el cliente no reintenta descargar el contenido de forma automática. Vuelva a implementar el paquete y el programa en el cliente.  
+- Para una aplicación requerida: el cliente vuelve a intentar descargar el contenido automáticamente cuando descarga su directiva de cliente.  
 
-Si el cliente trata de descargar un paquete cuyo tamaño es inferior al de la caché, pero la caché está llena, se reintentan todas las implementaciones necesarias hasta que la caché disponga de espacio o se alcance el tiempo de espera de la descarga o el límite de número de reintentos. Si aumenta el tamaño de la caché más adelante, el cliente de Configuration Manager trata de volver a descargar el paquete durante el próximo intervalo de reintento. El cliente trata de descargar el contenido cada cuatro horas hasta un máximo de 18 intentos.  
+Si el cliente intenta descargar un paquete cuyo tamaño es inferior al de la caché, pero la caché está llena, se reintentan todas las implementaciones *requeridas* hasta que:
 
-El contenido de la caché no se elimina automáticamente, sino que permanece en la caché durante al menos un día después de que el cliente utiliza ese contenido. Si configura las propiedades del paquete con la opción para conservar el contenido de la caché del cliente, el cliente no elimina automáticamente el contenido del paquete de la caché. Si los paquetes descargados en las últimas 24 horas ocupan el espacio de la caché y el cliente debe descargar paquetes nuevos, puede aumentar el tamaño de la caché u optar por eliminar el contenido conservado en la caché.  
+- La caché disponga de espacio
+- Se agote el tiempo de espera de la descarga
+- Se alcance el límite de número de reintentos
 
- Utilice los procedimientos siguientes para configurar la caché del cliente durante la instalación manual del cliente, o después de instalar el cliente.  
+Si después aumenta el tamaño de la caché, el cliente intenta volver a descargar el paquete durante el próximo intervalo de reintento. El cliente intenta descargar el contenido cada cuatro horas hasta un máximo de 18 veces.  
 
-### <a name="to-configure-the-client-cache-when-you-install-clients-by-using-manual-client-installation"></a>Para configurar la caché del cliente al instalar los clientes mediante la instalación manual del cliente  
+El contenido en caché no se elimina de forma automática. Permanece en la caché al menos durante un día después de que el cliente use ese contenido. Si configura las propiedades del paquete con la opción para conservar el contenido de la caché del cliente, el cliente no lo elimina automáticamente. Si los paquetes descargados en las últimas 24 horas ocupan el espacio de la caché y el cliente debe descargar paquetes nuevos, puede aumentar el tamaño de la caché u optar por eliminar el contenido conservado en la caché.  
+
+Utilice los procedimientos siguientes para configurar la caché del cliente durante la instalación manual del cliente, o después de instalar el cliente.  
+
+### <a name="configure-the-cache-during-manual-client-installation"></a>Configuración de la caché durante la instalación manual del cliente  
 
 Ejecute el comando CCMSetup.exe desde la ubicación de origen de instalación y especifique las siguientes propiedades necesarias, que han de estar separadas por espacios:  
 
@@ -247,15 +284,15 @@ Ejecute el comando CCMSetup.exe desde la ubicación de origen de instalación y 
   - SMSCACHESIZE  
 
     > [!NOTE]
-    > Para la versión 1606, use la configuración de tamaño de caché disponible en **Configuración de cliente** en la consola de Configuration Manager en lugar de SMSCACHESIZE. Para obtener más información, vea [Configuración de la memoria caché del cliente](../../../core/clients/deploy/about-client-settings.md#client-cache-settings).
+    > Use la configuración de tamaño de caché disponible en **Configuración de cliente** en la consola de Configuration Manager en lugar de SMSCACHESIZE. Para obtener más información, vea [Configuración de la memoria caché del cliente](/sccm/core/clients/deploy/about-client-settings#client-cache-settings).
 
-Para obtener más información sobre estas propiedades de línea de comandos para CCMSetup.exe, vea [Acerca de las propiedades de instalación de clientes](../../../core/clients/deploy/about-client-installation-properties.md).  
+Para obtener más información sobre estas propiedades de línea de comandos para CCMSetup.exe, vea [Acerca de las propiedades de instalación de clientes](/sccm/core/clients/deploy/about-client-installation-properties).
 
-### <a name="to-configure-the-client-cache-folder-when-you-install-clients-by-using-client-push-installation"></a>Para configurar la carpeta de caché de cliente al instalar los clientes mediante la instalación de inserción de cliente  
+### <a name="configure-the-cache-during-client-push-installation"></a>Configuración de la caché durante la instalación de inserción de cliente  
 
-1. En la consola de Configuration Manager, pulse **Administración** > **Configuración del sitio** > **Sitios**.  
+1. En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Configuración del sitio** y seleccione el nodo **Sitios**.  
 
-2. Seleccione el sitio apropiado y en la pestaña **Inicio**, en el grupo **Configuración**, pulse **Configuración de instalación de cliente** > **pestaña Propiedades de instalación**.  
+2. Seleccione el sitio adecuado. En la pestaña **Inicio** de la cinta, en el grupo **Configuración**, seleccione **Configuración de instalación de cliente** y después **Instalación de inserción de cliente**. Cambie a la pestaña **Propiedades de instalación**.  
 
 3. Especifique las siguientes propiedades, separadas por espacios:  
 
@@ -268,167 +305,135 @@ Para obtener más información sobre estas propiedades de línea de comandos par
    - SMSCACHESIZE  
 
      > [!NOTE]
-     > Para la versión 1606, use la configuración de tamaño de caché disponible en **Configuración de cliente** en la consola de Configuration Manager en lugar de SMSCACHESIZE. Para obtener más información, vea [Configuración de la memoria caché del cliente](../../../core/clients/deploy/about-client-settings.md#client-cache-settings).
+     > Use la configuración de tamaño de caché disponible en **Configuración de cliente** en la consola de Configuration Manager en lugar de SMSCACHESIZE. Para obtener más información, vea [Configuración de la memoria caché del cliente](/sccm/core/clients/deploy/about-client-settings#client-cache-settings).
 
-     Para obtener más información sobre estas propiedades de línea de comandos para CCMSetup.exe, vea [Acerca de las propiedades de instalación de clientes](../../../core/clients/deploy/about-client-installation-properties.md).  
+     Para obtener más información sobre estas propiedades de línea de comandos para CCMSetup.exe, vea [Acerca de las propiedades de instalación de clientes](/sccm/core/clients/deploy/about-client-installation-properties).  
 
-### <a name="to-configure-the-client-cache-folder-on-the-client-computer"></a>Para configurar la carpeta de caché de cliente en el equipo del cliente  
+### <a name="configure-the-cache-on-the-client-computer"></a>Configuración de la caché en el equipo cliente  
 
-1.  En el equipo cliente, vaya a **Configuration Manager** en el Panel de control y haga doble clic para abrir las propiedades.  
+1. En el equipo cliente, abra el panel de control de **Configuration Manager**.  
 
-2.  En la pestaña **Caché** establezca las propiedades de espacio y ubicación. La ubicación predeterminada es *%windir%* \ccmcache.  
+2. Cambie a la pestaña **Caché**. Establezca las propiedades de espacio y ubicación. La ubicación predeterminada es `%windir%\ccmcache`.  
 
-3.  Para eliminar los archivos de la carpeta de caché, pulse **Eliminar archivos**.  
+3. Para eliminar los archivos de la carpeta de caché, pulse **Eliminar archivos**.  
 
-### <a name="to-configure-client-cache-size-in-client-settings"></a>Para configurar el tamaño de la caché de cliente en la configuración de cliente
+### <a name="configure-client-cache-size-in-client-settings"></a>Configuración del tamaño de la caché de cliente en la configuración de cliente
 
-Ajuste el tamaño de la caché del cliente sin tener que volver a instalar el cliente mediante la configuración del tamaño de la caché en la consola de Configuration Manager con la configuración de cliente.  
-
-1. En la consola de Configuration Manager, elija **Administración** > **Configuración de cliente**.
-
-2. Haga doble clic en **Configuración de cliente predeterminada**.
-   También puede crear una configuración de cliente personalizada para aplicar el tamaño de caché de forma más selectiva. Para obtener más información acerca de las configuraciones personalizadas y de cliente, consulte [How to configure client settings in System Center Configuration Manager](../../../core/clients/deploy/configure-client-settings.md) (Configuración del cliente en System Center Configuration Manager).
-
-   3. Pulse **Configuración de caché de cliente** y pulse **Sí** para **Configurar el tamaño de caché de cliente**, después use la opción **MB** o **Porcentaje de disco**. La memoria caché se ajusta al tamaño que sea menor.
-
-      El cliente de Configuration Manager configurará el tamaño de caché con estos valores cuando se descargue la próxima directiva de cliente.
+Ajuste el tamaño de la carpeta de caché de cliente sin tener que volver a instalar el cliente. Use la configuración de tamaño de caché disponible en **Configuración de cliente** en la consola de Configuration Manager. Para obtener más información, vea [Configuración de la memoria caché del cliente](/sccm/core/clients/deploy/about-client-settings#client-cache-settings).
 
 
+## <a name="BKMK_UninstalClient"></a> Desinstalación del cliente
 
-##  <a name="BKMK_UninstalClient"></a> Desinstalar el cliente de Configuration Manager  
- Para desinstalar de un equipo con Windows el software cliente de Configuration Manager, use **CCMSetup.exe** con la propiedad **/Uninstall**. Ejecute CCMSetup.exe en un equipo individual desde el símbolo del sistema o implemente un paquete y el programa para desinstalar el cliente de una recopilación de equipos.  
-
-> [!WARNING]  
->  No puede desinstalar al cliente de Configuration Manager desde un dispositivo móvil. Si debe quitar el cliente de Configuration Manager de un dispositivo móvil, debe borrar el dispositivo y, de esta forma, se eliminan todos los datos del dispositivo móvil.  
-
-#### <a name="to-uninstall-the-configuration-manager-client-from-the-command-prompt"></a>Para desinstalar el cliente de Configuration Manager desde el símbolo del sistema  
-
-1.  Abra un símbolo del sistema de Windows y cambie la carpeta a la ubicación en la que se encuentra CCMSetup.exe.  
-
-2.  Escriba **CCMSetup.exe /uninstall** y después presione **Entrar**.  
+Puede desinstalar el software cliente de Configuration Manager de un equipo mediante **CCMSetup.exe** con la propiedad **/Uninstall**. Ejecute CCMSetup.exe en un equipo individual desde el símbolo del sistema, o bien implemente un paquete para desinstalar el cliente de una recopilación de equipos.  
 
 > [!NOTE]  
->  El proceso de desinstalación no muestra ningún resultado en la pantalla. Para comprobar que la desinstalación del cliente se ha realizado correctamente, examine el archivo de registro **CCMSetup.log** de la carpeta *%windir%\ccmsetup\logs* en el equipo cliente.  
+> No puede desinstalar al cliente de Configuration Manager desde un dispositivo móvil. Si debe quitar el cliente de Configuration Manager de un dispositivo móvil, debe borrar el dispositivo y, de esta forma, se eliminan todos los datos del dispositivo móvil.  
 
-> [!TIP]
+1. Abra un símbolo del sistema de Windows como administrador. Cambie la carpeta a la ubicación en la que se encuentra CCMSetup.exe, por ejemplo: `cd %windir%\ccmsetup`.
+
+2. Ejecute el comando siguiente: `CCMSetup.exe /uninstall`.
+
+> [!TIP]  
+> El proceso de desinstalación no muestra ningún resultado en la pantalla. Para comprobar que el cliente se desinstala correctamente, vea el siguiente archivo de registro: `%windir%\ccmsetup\logs\CCMSetup.log`  
+>
 > Si tiene que esperar a que se complete el proceso de desinstalación antes de hacer algo más, ejecute `Wait-Process CCMSetup` en PowerShell. Este comando puede pausar un script hasta que se complete el proceso de CCMSetup.
 
-##  <a name="BKMK_ConflictingRecords"></a> Administrar registros en conflicto para clientes de Configuration Manager  
- Configuration Manager usa el identificador de hardware para tratar de identificar los clientes que puedan estar duplicados y alertarle de los registros en conflicto. Por ejemplo, si reinstala un equipo, el identificador de hardware sería el mismo, pero el GUID que usa Configuration Manager es posible que cambie.  
 
- Configuration Manager resuelve automáticamente los conflictos mediante la autenticación de Windows de la cuenta del equipo o un certificado PKI de un origen de confianza. Pero cuando Configuration Manager no puede resolver el conflicto de identificadores de hardware duplicados, una configuración de jerarquía determina si se deben combinar los registros automáticamente o le permite determinar el comportamiento. Si decide administrar los registros duplicados manualmente, debe resolver manualmente los registros en conflicto de la consola de Configuration Manager.  
+## <a name="BKMK_ConflictingRecords"></a> Administración de registros en conflicto
 
+Configuration Manager usa el identificador de hardware para tratar de identificar los clientes que puedan estar duplicados y alertarle de los registros en conflicto. Por ejemplo, si reinstala un equipo, el identificador de hardware sería el mismo, pero el GUID que usa Configuration Manager es posible que cambie.  
 
-#### <a name="to-change-the-hierarchy-setting-for-managing-conflicting-records"></a>Para cambiar la configuración de la jerarquía a fin de administrar los registros en conflicto  
+Configuration Manager resuelve automáticamente los conflictos mediante la autenticación de Windows de la cuenta del equipo o un certificado PKI de un origen de confianza. Cuando Configuration Manager no puede resolver el conflicto de identificadores de hardware duplicados, una configuración de jerarquía determina el comportamiento.
 
-1.  En la consola de Configuration Manager, pulse **Administración** > **Configuración del sitio** > **Sitios** > **Configuración de jerarquía**.
-2.  En la pestaña **Aprobación de cliente y registros conflictivos**, pulse **Resolver automáticamente los registros conflictivos** o **Resolver manualmente los registros conflictivos**.  
+### <a name="change-the-hierarchy-setting-for-managing-conflicting-records"></a>Cambio de la configuración de la jerarquía para administrar los registros en conflicto  
 
-#### <a name="to-manually-resolve-conflicting-records"></a>Para resolver manualmente los registros en conflicto  
+1. En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Configuración del sitio** y seleccione el nodo **Sitios**.
 
-1.  En la consola de Configuration Manager, pulse **Supervisión** > **Estado del sistema** > **Registros en conflicto**.  
+1. En la cinta, seleccione **Configuración de jerarquía**.
 
-3.  Seleccione uno o más registros en conflicto y, después, pulse **Registros en conflicto**.  
+1. Cambie a la pestaña **Aprobación de cliente y registros conflictivos** y seleccione una de las opciones siguientes:
 
-4.  Seleccione una de las siguientes opciones:  
+    - **Resolver automáticamente los registros conflictivos**
+    - **Resolver manualmente los registros conflictivos**
 
-    -   **Combinar** para combinar el registro recién detectado con el registro de cliente existente.  
+### <a name="manually-resolve-conflicting-records"></a>Resolver manualmente los registros conflictivos  
 
-    -   **Nuevo** para crear un nuevo registro de cliente en conflicto.  
+1. En la consola de Configuration Manager, vaya al área de trabajo **Supervisión**, expanda **Estado del sistema** y seleccione el nodo **Registros en conflicto**.  
 
-    -   **Bloquear** para crear un nuevo registro de cliente en conflicto, pero se marca como bloqueado.  
+1. Seleccione uno o más registros en conflicto y, después, pulse **Registros en conflicto**.  
+
+1. Seleccione una de las siguientes opciones:  
+
+    - **Combinar**: para combinar el registro recién detectado con el registro de cliente existente.  
+
+    - **Nuevo**: para crear un registro de cliente en conflicto.  
+
+    - **Bloquear**: para crear un registro de cliente en conflicto, pero marcarlo como bloqueado.  
+
 
 ## <a name="manage-duplicate-hardware-identifiers"></a>Administrar identificadores de hardware duplicados
-Proporcionar una lista de identificadores de hardware que Configuration Manager ignora para el arranque de PXE y el registro de cliente, ayuda a resolver dos problemas comunes.
 
-1. Muchos dispositivos nuevos, como Surface Pro 3, no incluyen un puerto Ethernet integrado. Los técnicos usan un adaptador de USB a Ethernet para establecer una conexión con cable para la implementación del sistema operativo. Pero suele tratarse de adaptadores compartidos debido a su costo y su facilidad de uso general. Dado que la dirección MAC de este adaptador se usa para identificar el dispositivo, resulta problemático volver a usar el adaptador si no se realizan acciones de administrador adicionales entre cada implementación. Para volver a usar el adaptador en este escenario, excluya su dirección MAC.
+Puede proporcionar una lista de identificadores de hardware que Configuration Manager ignora en el registro de clientes y el arranque PXE. Esta lista ayuda a resolver dos problemas comunes:
+
+1. Muchos dispositivos nuevos no incluyen un puerto Ethernet incorporado. Los técnicos usan un adaptador de USB a Ethernet para establecer una conexión con cable para la implementación del sistema operativo. Estos adaptadores se suelen compartir debido a su costo y su facilidad de uso general. En el sitio se usa la dirección MAC de este adaptador para identificar el dispositivo. Por tanto, la reutilización del adaptador se vuelve problemática sin acciones de administrador adicionales entre cada implementación. Para volver a usar el adaptador en este escenario, excluya su dirección MAC.
+
 2. Aunque el atributo SMBIOS debe ser único, algunos dispositivos de hardware especiales tienen identificadores duplicados. Excluya este identificador duplicado y use la dirección MAC única de cada dispositivo como base.
 
-#### <a name="to-add-hardware-identifiers-for-configuration-manager-to-ignore"></a>Para agregar identificadores de hardware a fin de que Configuration Manager los omita  
-1. En la consola de Configuration Manager, vaya a **Administración** > **Información general** > **Configuración del sitio** > **Sitios**.
-2. En la pestaña **Inicio**, en el grupo **Sitios**, pulse **Configuración de jerarquía**.
-3. En la pestaña **Aprobación de cliente y registros conflictivos**, pulse **Agregar** en la sección **Identificadores de hardware duplicados** para agregar nuevos identificadores de hardware.
+Use el proceso siguiente para agregar identificadores de hardware a fin de que Configuration Manager los omita:
 
-##  <a name="BKMK_PolicyRetrieval"></a> Iniciar la recuperación de directivas para un cliente de Configuration Manager  
- Un cliente de Configuration Manager en Windows descarga su directiva de cliente en una programación que se configura como una configuración de cliente. Pero pueden darse casos en los que quiera iniciar la recuperación de directiva a petición desde el cliente (por ejemplo para solucionar problemas o realizar pruebas).  
+1. En la consola de Configuration Manager, vaya al área de trabajo **Administración**, expanda **Configuración del sitio** y seleccione el nodo **Sitios**.
 
-Puede iniciar la recuperación de directivas con:
+2. En la pestaña **Inicio** de la cinta, en el grupo **Sitios**, seleccione **Configuración de jerarquía**.
+
+3. Cambie a la pestaña **Aprobación de cliente y registros conflictivos**. Para agregar nuevos identificadores de hardware, seleccione **Agregar** en la sección **Identificadores de hardware duplicados**.
 
 
-- [Notificación de cliente](#initiate-client-policy-retrieval-using-client-notification)
-- [La pestaña **Acciones** en el cliente](#manually-initiate-client-policy-retrieval-on-the-actions-tab-of-the-configuration-manager-client)
-- [Un script](#manually-initiate-client-policy-retrieval-by-script)
+## <a name="BKMK_PolicyRetrieval"></a> Inicio de la recuperación de la directiva
 
-> [!NOTE]  
->   
->  Para obtener más información sobre la recuperación de directivas de clientes que ejecutan Linux y UNIX, consulte [Computer policy for Linux and UNIX servers](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_PolicyforLnU) (Directiva de equipo para servidores de Linux y UNIX).  
+Un cliente de Configuration Manager descarga su directiva de cliente en una programación que se configura como una configuración de cliente. También puede iniciar la recuperación de la directiva a petición desde el cliente. Por ejemplo, para situaciones de solución de problemas o de prueba.  
 
-#### <a name="initiate-client-policy-retrieval-using-client-notification"></a>Iniciar la recuperación de directivas de cliente mediante la notificación de cliente  
+- [Notificación de cliente](#bkmk_policy-notify)
+- [Panel de control del cliente](#bkmk_policy-manual)
+- [Centro de soporte técnico](#bkmk_policy-support)
+- [Un script](#bkmk_policy-script)
 
-1.  En la consola de Configuration Manager, pulse **Activos y compatibilidad** > **Recopilaciones de dispositivos**.  
+### <a name="bkmk_policy-notify"></a> Inicio de la recuperación de directivas de cliente mediante la notificación de cliente  
 
-3.  Seleccione la recopilación de dispositivos que contiene los equipos en los que quiere descargar la directiva. En la pestaña **Inicio**, en el grupo **Recopilaciones**, pulse **Notificación de cliente** > **Descargar directiva de equipo**.  
+1. En la consola de Configuration Manager, vaya al área de trabajo **Activos y compatibilidad** y seleccione **Dispositivos**.  
+
+1. Seleccione el dispositivo para el que quiera descargar la directiva. En la pestaña **Inicio** de la cinta, en el grupo **Dispositivo**, seleccione **Notificación de cliente** y después **Descargar directiva de equipo**.  
 
     > [!NOTE]  
-    >  También puede utilizar la notificación de cliente para iniciar la recuperación de directiva de uno o varios dispositivos seleccionados mostrados en un nodo de recopilación temporal en el nodo **Dispositivos** .  
+    > También puede usar la notificación de cliente para iniciar la recuperación de directivas para todos los dispositivos de una colección.  
 
-#### <a name="manually-initiate-client-policy-retrieval-on-the-actions-tab-of-the-configuration-manager-client"></a>Iniciar manualmente la recuperación de directiva de cliente en la pestaña Acciones del cliente de Configuration Manager  
+### <a name="bkmk_policy-manual"></a> Inicio de la recuperación de la directiva de cliente desde el panel de control del cliente de Configuration Manager
 
-1.  Seleccione **Configuration Manager** en el Panel de control del equipo.  
+1. Abra el panel de control de **Configuration Manager** en el equipo.  
 
-2.  En la pestaña **Acciones**, pulse **Ciclo de evaluación y recuperación de directivas de equipo** para iniciar la directiva de equipo y, después, pulse **Ejecutar ahora**.  
+2. Cambie a la pestaña **Acciones**. Seleccione **Ciclo de evaluación y recuperación de directivas de equipo** para iniciar la directiva de equipo y, después, seleccione **Ejecutar ahora**.  
 
-4.  Pulse **Aceptar** para confirmar el aviso.  
+3. Seleccione **Aceptar** para confirmar el mensaje.  
 
-5.  Repita los pasos 3 y 4 para todas las demás acciones que desee aplicar, como **Ciclo de evaluación y recuperación de directivas de usuario** para la configuración de cliente del usuario.  
+4. Repita los pasos anteriores para cualquier otra acción. Por ejemplo, **Ciclo de evaluación y recuperación de directivas de usuario** para la configuración de cliente del usuario.  
 
-#### <a name="manually-initiate-client-policy-retrieval-by-script"></a>Iniciar manualmente la recuperación de directiva de cliente mediante script  
+### <a name="bkmk_policy-support"></a> Inicio de la recuperación de la directiva de cliente con el Centro de soporte técnico
 
-1.  Abra un editor de texto, como el Bloc de notas.  
+Use el Centro de soporte técnico para solicitar y ver la directiva de cliente. Para más información, vea [Referencia del Centro de soporte técnico](/sccm/core/support/support-center-ui-reference#bkmk_support-policy).
 
-2.  Copie e inserte el siguiente código de ejemplo de Visual Basic Scripting Edition en el archivo:  
+### <a name="bkmk_policy-script"></a> Inicio de la recuperación de la directiva de cliente mediante script  
 
-    ```  
-    on error resume next  
+1. Abra un editor de scripts, como el Bloc de notas o Windows PowerShell ISE.  
 
-    dim oCPAppletMgr 'Control Applet manager object.  
-    dim oClientAction 'Individual client action.  
-    dim oClientActions 'A collection of client actions.  
+2. Copie e inserte el siguiente código de PowerShell de ejemplo<!-- SCCMDocs#1591 --> en el archivo:  
 
-    'Get the Control Panel manager object.  
-    set  oCPAppletMgr=CreateObject("CPApplet.CPAppletMgr")  
-    if err.number <> 0 then  
-        Wscript.echo "Couldn't create control panel application manager"  
-        WScript.Quit  
-    end if  
-
-    'Get a collection of actions.  
-    set oClientActions=oCPAppletMgr.GetClientActions  
-    if err.number<>0 then  
-        wscript.echo "Couldn't get the client actions"  
-        set oCPAppletMgr=nothing  
-        WScript.Quit  
-    end if  
-
-    'Display each client action name and perform it.  
-    For Each oClientAction In oClientActions  
-
-        if oClientAction.Name = "Request & Evaluate Machine Policy" then  
-            wscript.echo "Performing action " + oClientAction.Name   
-            oClientAction.PerformAction  
-        end if  
-    next  
-
-    set oClientActions=nothing  
-    set oCPAppletMgr=nothing  
+    ```PowerShell
+    $trigger = "{00000000-0000-0000-0000-000000000021}"
+    Invoke-WmiMethod -Namespace root\ccm -Class sms_client -Name TriggerSchedule $trigger
     ```  
 
-3.  Guarde el archivo con una extensión .vbs.  
+    > [!TIP]
+    > Para más información sobre los identificadores de programación, vea [Identificadores de mensaje](/sccm/core/support/send-schedule-tool#bkmk_sendschedule-guids).
 
-4.  En el equipo cliente, ejecute el archivo con alguno de los métodos siguientes:  
+3. Guarde el archivo con una extensión .ps1.  
 
-    -   Desplácese hasta el archivo en el Explorador de Windows y haga doble clic en el archivo de script.  
-
-    -   Abra un símbolo del sistema y escriba: **cscript &lt;ruta\nombredearchivo.vbs>** .  
-
-5.  Pulse **Aceptar** en el cuadro de diálogo **Windows Script Host**.  
+4. Ejecute el script en el cliente.

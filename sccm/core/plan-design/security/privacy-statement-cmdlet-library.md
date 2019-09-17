@@ -1,7 +1,8 @@
 ---
-title: Declaración de privacidad para cmdletlLibrary de Configuration Manager
-description: Obtenga información sobre cómo Microsoft recopila y usa datos relacionados con la biblioteca de cmdlets de System Center Configuration Manager.
-ms.date: 1/3/2017
+title: Declaración de privacidad para cmdlets
+titleSuffix: Configuration Manager
+description: Obtenga información sobre cómo Microsoft recopila y usa datos relacionados con los cmdlets de Configuration Manager.
+ms.date: 01/3/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,14 +11,14 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58b5a2eec6df6ecd6b96c18178cc116bc2b6965a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: e777c509ae0461120ae195712aaecf7f44813261
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56135677"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70889244"
 ---
-# <a name="system-center-configuration-manager-privacy-statement---configuration-manager-cmdlet-library"></a>Declaración de privacidad de System Center Configuration Manager: biblioteca de cmdlets de Configuration Manager
+# <a name="configuration-manager-cmdlet-library-privacy-statement"></a>Declaración de privacidad de la biblioteca de cmdlets de Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
@@ -25,7 +26,7 @@ Esta declaración de privacidad cubre las características de la biblioteca de c
 
 ## <a name="usage-data"></a>Datos de uso  
 
-#### <a name="what-this-feature-does"></a>Funciones de esta característica   
+#### <a name="what-this-feature-does"></a>Funciones de esta característica
 
 la biblioteca de cmdlets de System Center Configuration Manager le permite administrar una jerarquía de Configuration Manager con scripts y cmdlets de Windows PowerShell. La biblioteca de cmdlets recopila información sobre cómo usar los cmdlets de la biblioteca para identificar tendencias y patrones de uso. La biblioteca de cmdlets también recopila los tipos y números de errores que se reciben al usar los cmdlets.  
 

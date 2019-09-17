@@ -1,7 +1,7 @@
 ---
-title: Configuración de clientes para buscar puntos de administración mediante la publicación en DNS
+title: Configurar los clientes para que usen la publicación en DNS
 titleSuffix: Configuration Manager
-description: Configure los equipos cliente para buscar puntos de administración mediante la publicación en DNS en System Center Configuration Manager.
+description: Configure los equipos cliente de Configuration Manager para buscar puntos de administración mediante la publicación en DNS.
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -11,14 +11,14 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5cebb56324af3993458da5317983697b3304ccf7
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 5305b557eb3db83125e0f259e804a8eba0384290
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128143"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70890249"
 ---
-# <a name="how-to-configure-client-computers-to-find-management-points-by-using-dns-publishing-in-system-center-configuration-manager"></a>Configurar los equipos cliente para buscar los puntos de administración mediante el uso de la publicación en DNS en System Center Configuration Manager
+# <a name="configure-client-computers-to-find-management-points-by-using-dns-publishing"></a>Configuración de equipos cliente para buscar puntos de administración mediante la publicación en DNS
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 

@@ -1,6 +1,8 @@
 ---
 title: Documentación en consola
-ms.date: 08/09/2019
+titleSuffix: Configuration Manager
+description: Este artículo solo se muestra en la consola de Configuration Manager.
+ms.date: 09/09/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -10,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b413dd90a30317c4dec091a7963b637024eab442
-ms.sourcegitcommit: fe8934487158ed3bd15c7a6a456c3cafe58aed64
+ms.openlocfilehash: 1b24f5cc928265cf79eeebe2d9beb4c9f8d9d759
+ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68995425"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70889606"
 ---
 <!-- 
 - Feature 1357546
@@ -26,7 +28,7 @@ ms.locfileid: "68995425"
 
 # <a name="configuration-manager-documentation"></a>Documentación de Configuration Manager
 
-*Última actualización: 09/08/2019*
+*Última actualización: 9 de septiembre de 2019*
 
 Este contenido puede ayudarle a aprender a usar Configuration Manager.
 
@@ -54,22 +56,22 @@ Lista recopilada manualmente de artículos importantes.
 
 ## <a name="trending"></a>Tendencias
 
-Los artículos más populares entre el 1 de julio y el 31 de julio de 2019.
+Los artículos más populares entre el 1 y el 31 de agosto de 2019.
 
 | Vistas de página | Título |
 |------------|-------|
-| 19223 | [Referencia del archivo de registro](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) |
-| 17954 | [Habilitación de TLS 1.2](https://docs.microsoft.com/sccm/core/plan-design/security/enable-tls-1-2) |
-| 13242 | [Puertos usados para las conexiones](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) |
-| 12120 | [Cómo implementar clientes en equipos Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
-| 11772 | [Novedades de la versión 1902](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1902) |
-| 10206 | [Análisis de escritorio](https://docs.microsoft.com/sccm/desktop-analytics/overview) |
-| 9885 | [Administrar las actualizaciones de Office 365 ProPlus](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates) |
-| 8740 | [Novedades de la versión 1906](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1906) |
-| 8464 | [Compatibilidad con Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
-| 8398 | [Actualizaciones y mantenimiento](https://docs.microsoft.com/sccm/core/servers/manage/updates) |
+| 18594 | [Referencia del archivo de registro](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) |
+| 18045 | [Novedades de la versión 1906](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1906) |
+| 16244 | [Habilitación de TLS 1.2](https://docs.microsoft.com/sccm/core/plan-design/security/enable-tls-1-2) |
+| 11902 | [Puertos usados para las conexiones](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) |
+| 11233 | [Cómo implementar clientes en equipos Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
+| 8663 | [Compatibilidad con Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
+| 8399 | [Análisis de escritorio](https://docs.microsoft.com/sccm/desktop-analytics/overview) |
+| 8391 | [Actualizaciones y mantenimiento](https://docs.microsoft.com/sccm/core/servers/manage/updates) |
+| 8229 | [Configuración de cliente](https://docs.microsoft.com/sccm/core/clients/deploy/about-client-settings) |
+| 8069 | [Pasos de la secuencia de tareas](https://docs.microsoft.com/sccm/osd/understand/task-sequence-steps) |
 
-En [la página del centro de Configuration Manager](https://docs.microsoft.com/sccm/) se recibieron 24 008 vistas de página en este período de tiempo.
+En [la página del centro de Configuration Manager](https://docs.microsoft.com/sccm/) se han recibido 22 991 vistas en este período de tiempo.
 
 ## <a name="recently-updated"></a>Actualizado recientemente
 
@@ -77,16 +79,16 @@ Artículos con una actualización reciente y significativa.
 
 | Últimas revisiones | Título |
 |---------------|-------|
-| 2019-07-30 | [Servidor de caché en la red de optimización de distribución](https://docs.microsoft.com/en-us/sccm/core/plan-design/hierarchy/delivery-optimization-in-network-cache) |
-| 2019-07-26 | [Notificaciones de reinicio del dispositivo](https://docs.microsoft.com/en-us/sccm/core/clients/deploy/device-restart-notifications) |
-| 2019-07-26 | [Evaluación de compatibilidad](https://docs.microsoft.com/en-us/sccm/desktop-analytics/compat-assessment) |
-| 2019-07-26 | [Depurar una secuencia de tareas](https://docs.microsoft.com/en-us/sccm/osd/deploy-use/debug-task-sequence) |
-| 2019-07-26 | [SQL Server Always On](https://docs.microsoft.com/en-us/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database) |
-| 2019-07-26 | [Acerca de los archivo de registro](https://docs.microsoft.com/en-us/sccm/core/plan-design/hierarchy/about-log-files) |
-| 2019-07-26 | [Configuración del contenido de la caché previa](https://docs.microsoft.com/en-us/sccm/osd/deploy-use/configure-precache-content) |
-| 2019-07-26 | [Crear grupos de aplicaciones](https://docs.microsoft.com/en-us/sccm/apps/deploy-use/create-app-groups) |
-| 2019-07-19 | [Notas de la versión 1906](https://docs.microsoft.com/en-us/powershell/sccm/1906-release-notes) |
-| 2019-07-11 | [Versión 1907 de Technical Preview](https://docs.microsoft.com/en-us/sccm/core/get-started/2019/technical-preview-1907) |
+| 30/8/2019 | [Technical Preview 1908.2](https://docs.microsoft.com/sccm/core/get-started/2019/technical-preview-1908-2) |
+| 30/8/2019 | [Solución de problemas de integración de MSfB](https://docs.microsoft.com/sccm/apps/deploy-use/troubleshoot-microsoft-store-for-business-integration) |
+| 23/8/2019 | [Preguntas más frecuentes sobre Análisis de escritorio](https://docs.microsoft.com/sccm/desktop-analytics/faq) |
+| 23/8/2019 | [Notificaciones de reinicio del dispositivo](https://docs.microsoft.com/sccm/core/clients/deploy/device-restart-notifications) |
+| 22/8/2019 | [Requisitos previos para las actualizaciones de software](https://docs.microsoft.com/sccm/sum/plan-design/prerequisites-for-software-updates) |
+| 21/8/2019 | [Configuración de opciones de la línea de comandos](https://docs.microsoft.com/sccm/core/servers/deploy/install/command-line-options-for-setup) |
+| 15/8/2019 | [Novedades de Análisis de escritorio](https://docs.microsoft.com/sccm/desktop-analytics/whats-new) |
+| 9/8/2019 | [Solución de problemas de replicación de SQL](https://docs.microsoft.com/sccm/core/servers/manage/replication/overview) |
+| 9/8/2019 | [Database replication](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/database-replication) |
+| 8/8/2019 | [Requisitos de acceso a Internet](https://docs.microsoft.com/sccm/core/plan-design/network/internet-endpoints) |
 
 ## <a name="troubleshooting-articles"></a>Artículos de solución de problemas
 
