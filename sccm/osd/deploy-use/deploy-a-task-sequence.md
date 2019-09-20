@@ -11,12 +11,12 @@ ms.assetid: b2abcdb0-72e0-4c70-a4b8-7827480ba5b2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e21a1eb9f6d97571c47906e04f030294b875ae17
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: c3aca04273c25326c64d696a44089b6c8d1222bf
+ms.sourcegitcommit: 2ef7e69f3db54a90ed4ae2a3f59a75e6329a1584
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537091"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71062123"
 ---
 # <a name="deploy-a-task-sequence"></a>Implementar una secuencia de tareas
 
@@ -146,7 +146,7 @@ Utilice el siguiente procedimiento para implementar una secuencia de tareas en l
 
     - **Tratamiento de filtros de escritura para dispositivos de Windows Embedded**: esta configuración controla el comportamiento de instalación en dispositivos Windows Embedded habilitados con un filtro de escritura. Elija esta opción para que los cambios se confirmen en la fecha límite de instalación o durante una ventana de mantenimiento. Al seleccionar esta opción, se necesita un reinicio y los cambios persisten en el dispositivo. De lo contrario, la aplicación se instala en la superposición temporal y se confirma más tarde. Cuando implemente una secuencia de tareas en un dispositivo de Windows Embedded, asegúrese de que el dispositivo es miembro de una recopilación que tenga una ventana de mantenimiento configurada.  
 
-    - **Permitir que la secuencia de tareas se ejecute para el cliente en Internet**: especifique si se permite que la secuencia de tareas se ejecute en un cliente basado en Internet. Las operaciones que instalan software, como un sistema operativo, no son compatibles con esta configuración. Use esta opción solo para secuencias de tareas basadas en scripts que realizan operaciones en el sistema operativo estándar.  
+    - **Permitir que la secuencia de tareas se ejecute para el cliente en Internet**: especifique si se permite que la secuencia de tareas se ejecute en un cliente basado en Internet. Las operaciones que requieren un medio de arranque, como la instalación de un sistema operativo, no se admiten con esta configuración. Use esta opción solo para instalaciones de software genéricas o secuencias de tareas basadas en scripts que realizan operaciones en el sistema operativo estándar.  
 
         - A partir de la versión 1802, esta configuración se admite para implementaciones de una secuencia de tareas de actualización local de Windows 10 en clientes basados en Internet a través de Cloud Management Gateway. Para obtener más información, vea [Implementar una actualización local de Windows 10 a través de CMG](#deploy-windows-10-in-place-upgrade-via-cmg).  
 

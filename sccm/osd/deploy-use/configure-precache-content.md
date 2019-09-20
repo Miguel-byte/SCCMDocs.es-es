@@ -2,7 +2,7 @@
 title: Configuración del contenido de la caché previa
 titleSuffix: Configuration Manager
 description: Obtenga información sobre cómo los clientes pueden descargar el contenido de la implementación del sistema operativo antes de que un usuario instale la secuencia de tareas.
-ms.date: 07/26/2019
+ms.date: 09/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ba7380d35742f01c620d95bfb9351180d56f7df
-ms.sourcegitcommit: 72faa1266b31849ce1a23d661a1620b01e94f517
+ms.openlocfilehash: fc212104dc69e4ba4cc7d82e0b8c4813094bea2d
+ms.sourcegitcommit: 2dbe49e3ef1133d49e58d82cefdeba69f9ba3ce2
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537723"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127292"
 ---
 # <a name="configure-pre-cache-content-for-task-sequences"></a>Configurar el contenido de la caché previa para las secuencias de tareas
 
@@ -51,7 +51,7 @@ Hay tres pasos para configurar la característica de caché previa:
 3. [Implementar la secuencia de tareas y habilitar el almacenamiento en caché previa](#bkmk_deploy)
 
 
-### <a name="bkmk_createpkg"></a> 1 Crear y configurar los paquetes
+### <a name="bkmk_createpkg"></a> 1. Crear y configurar los paquetes
 
 El cliente evalúa los atributos de los paquetes para determinar qué contenido se descarga durante el almacenamiento en caché previa.  
 
@@ -67,11 +67,11 @@ Cree [imágenes del sistema operativo](/sccm/osd/get-started/manage-operating-sy
 
 Cree [paquetes de controladores](/sccm/osd/get-started/manage-drivers#BKMK_ManagingDriverPackages) para los modelos de hardware específicos. Especifique el **modelo** en la pestaña **General** de sus propiedades.
 
-Para determinar qué paquete de controladores descarga durante el almacenamiento en la caché previa, el cliente evalúa el modelo en comparación con la propiedad de VMI **Win32_ComputerSystemProduct**.  
+Para determinar qué paquete de controladores descarga durante el almacenamiento en la caché previa, el cliente evalúa el modelo en comparación con la propiedad **Nombre** de la clase de WMI **Win32_ComputerSystemProduct**.  
 
 #### <a name="package"></a>Paquete
 
-Cree [paquetes](/sccm/apps/deploy-use/packages-and-programs) para idiomas y arquitecturas específicos. Especifique la **arquitectura** y el **idioma** en la pestaña **General** de sus propiedades.
+Cree [paquetes](/sccm/apps/deploy-use/packages-and-programs) para idiomas y arquitecturas específicos. Especifique la **Arquitectura** y el **Idioma** en la pestaña **General** de sus propiedades.
 
 
 ### <a name="bkmk_createts"></a> 2. Creación de una secuencia de tareas

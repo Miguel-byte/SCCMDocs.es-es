@@ -2,7 +2,7 @@
 title: Configurar grupos de límites
 titleSuffix: Configuration Manager
 description: Ayude a los clientes a encontrar sistemas de sitio mediante grupos de límites para organizar de manera lógica las ubicaciones de red relacionadas denominadas límites.
-ms.date: 06/18/2019
+ms.date: 09/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 716b36060f4fdc768f98e4cc22be1653a967246c
-ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.openlocfilehash: 22645b08e3cb5f8b1200ab5c4e77b418ea74c8d8
+ms.sourcegitcommit: 55f68b5adc9bb84e324ead9f0429e41108d5b515
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194264"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71010846"
 ---
 # <a name="configure-boundary-groups-for-configuration-manager"></a>Configuración de grupos de límites para Configuration Manager
 
@@ -223,8 +223,10 @@ De forma predeterminada, el punto de administración da prioridad a los orígene
 
 Si tiene una sucursal con un vínculo de Internet más rápido, ahora puede dar prioridad al contenido de la nube.  
 
-En la versión 1902, esta configuración ahora se denomina **Prefer cloud based sources over on-premise sources** (Preferir los orígenes basados en la nube sobre los orígenes locales). El comportamiento sigue siendo el mismo.<!-- SCCMDocs#1529 -->
+En la versión 1902, esta configuración ahora se denomina **Prefer cloud based sources over on-premise sources** (Preferir los orígenes basados en la nube sobre los orígenes locales). Entre los orígenes basados en la nube se incluyen los siguientes:<!-- SCCMDocs#1529 -->
 
+- Puntos de distribución en la nube
+- Microsoft Update (agregado en la versión 1902)
 
 ## <a name="software-update-points"></a>Puntos de actualización de software
 
