@@ -5,18 +5,18 @@ description: Haga lo siguiente para configurar los productos y clasificaciones d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 08/22/2019
+ms.date: 09/25/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c0aba3ab65ffe35c4d303f5f957507c43a4523b9
-ms.sourcegitcommit: e0d303d87c737811c2d3c40d01cd3d260a5c7bde
+ms.openlocfilehash: 2edf117f27eda3ee3c9e587edb9f69c8d84bf5dc
+ms.sourcegitcommit: 670cfed1e47a7a4a73aa4ccb873c6312be3c21ff
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69974734"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71311585"
 ---
 # <a name="configure-classifications-and-products-to-synchronize"></a>Configurar las clasificaciones y los productos que va a sincronizar  
 
@@ -41,13 +41,13 @@ Los metadatos de las actualizaciones de software se recuperan durante el proceso
 
      - **Actualizaciones críticas**: especifica una corrección de amplia distribución para un problema específico que permite solucionar un error crítico no relacionado con la seguridad.  
      - **Actualizaciones de definición**: especifica una actualización de software frecuente y de amplia distribución que contiene adiciones a la base de datos de definiciones de un producto.  
-     - **Paquetes de características**: especifica las nuevas funciones del producto que se distribuyen fuera de una versión del producto y que normalmente se incluyen en la siguiente versión del producto completo.  
+     - **Paquetes de características**: especifica la nueva función del producto que se distribuye fuera de una versión del producto y que normalmente se incluye en la siguiente versión del producto completo.  
      - **Actualizaciones de seguridad**: especifica una corrección de amplia distribución de una vulnerabilidad relacionada con la seguridad de un producto específico.  
      - **Service Packs**: especifica un conjunto acumulativo y probado de todas las revisiones, actualizaciones de seguridad, actualizaciones críticas y actualizaciones que se aplican a un producto. Además, los Service Pack pueden contener correcciones adicionales para problemas que se han identificado internamente desde la publicación del producto.  
      - **Herramientas**: especifica una utilidad o característica que ayuda a realizar una o más tareas.  
      - **Actualizaciones acumulativas**: especifica un conjunto acumulativo y probado de revisiones, actualizaciones de seguridad, actualizaciones críticas y actualizaciones que se incluyen en un producto de forma conjunta para facilitar su implementación. Un paquete acumulativo de actualizaciones suele relacionarse, por lo general, con un área específica (por ejemplo, un componente del producto o de la seguridad).  
      - **Actualizaciones**: especifica una corrección de amplia distribución de un problema específico. Una actualización proporciona una solución para un error de código no crítico y no relacionado con la seguridad.  
-     - **Actualizaciones**: especifica una actualización para las características y la funcionalidad de Windows 10. Los sitios y los puntos de actualización de software tienen que ejecutar como mínimo WSUS 6.2 con la [revisión 3095113](https://support.microsoft.com/kb/3095113) para obtener la clasificación **Actualización**. Para obtener más información sobre la instalación de esta actualización y **otras**actualizaciones para [las actualizaciones, consulte requisitos previos para las actualizaciones](/sccm/sum/plan-design/prerequisites-for-software-updates#BKMK_wsus2012)de software.
+     - **Actualizaciones**: especifica una actualización para las características y la funcionalidad de Windows 10. Los sitios y los puntos de actualización de software tienen que ejecutar como mínimo WSUS 6.2 con la [revisión 3095113](https://support.microsoft.com/kb/3095113) para obtener la clasificación **Actualización**. Para obtener más información sobre la instalación de esta actualización y otras actualizaciones para las **actualizaciones, consulte** [requisitos previos para las actualizaciones de software](/sccm/sum/plan-design/prerequisites-for-software-updates#BKMK_wsus2012).
 
     > [!NOTE] 
     > 
@@ -72,6 +72,58 @@ Los metadatos de las actualizaciones de software se recuperan durante el proceso
     > - El producto **Windows 10, versión 1903 y posteriores** se agrega para la sincronización.
     > - Las [reglas de implementación automática](/sccm/sum/deploy-use/automatically-deploy-software-updates#bkmk_adr-process) que contienen el producto **Windows 10** se actualizarán para incluir **Windows 10, versión 1903 y versiones posteriores**.
     > - Los [planes de mantenimiento](/sccm/osd/deploy-use/manage-windows-as-a-service#servicing-plan-workflow) se actualizan para incluir el producto **Windows 10, versión 1903 y posteriores**.
+
+## <a name="bkmk_WIfB"></a>Programa de Windows Insider
+<!--3556023-->
+A partir de septiembre de 2019, puede atender y actualizar los dispositivos que ejecutan compilaciones de Windows Insider Preview con Configuration Manager. Este cambio significa que puede administrar estos dispositivos sin cambiar los procesos normales ni habilitar Windows Update para empresas. Puede descargar actualizaciones de características y actualizaciones acumulativas para las compilaciones de Windows Insider Preview en Configuration Manager igual que cualquier otra actualización de Windows 10 o actualización. Para obtener más información, consulte la entrada de blog [publicar actualizaciones de características de Windows 10 en la versión preliminar de WSUS](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Publishing-pre-release-Windows-10-feature-updates-to-WSUS/ba-p/845054) .
+
+Para obtener más información sobre la compatibilidad de Windows Insider en Configuration Manager, consulte [compatibilidad con Windows 10](/sccm/core/plan-design/configs/support-for-windows-10bkmk_WIfB-support).
+
+### <a name="prerequisites"></a>Requisitos previos
+
+- Configuration Manager versión 1906 o posterior, configurada para la [Administración de actualizaciones de software](/sccm/sum/plan-design/plan-for-software-updates).
+- Dispositivos Windows 10 que ejecutan la [compilación de Windows Insider Preview](https://insider.windows.com/en-us/how-to-pc/).<!--the direct page link doesn't work without a locale :(-->
+- Colección que contiene los dispositivos de Windows Insider.
+
+
+### <a name="enable-windows-insider-upgrades-and-updates"></a>Habilitar actualizaciones y actualizaciones de Windows Insider
+
+Debe habilitar los productos y las clasificaciones para las actualizaciones y actualizaciones de Windows Insider. Las actualizaciones de características para Windows Insider están bajo el producto de **versión preliminar de Windows Insider** . Sin embargo, las actualizaciones acumulativas y otras actualizaciones para Windows Insider estarán en el producto **Windows 10, versión 1903 y versiones posteriores**.
+
+1. En la consola de **Configuration Manager**, vaya a **Administración** > **Configuración del sitio** > **Sitios**.
+2. Seleccione el sitio de administración central o el sitio primario independiente.  
+3. En la pestaña **Inicio** , en el grupo **Configuración** , haga clic en **Configurar componentes de sitio**y, a continuación, haga clic en **Punto de actualización de software**.
+4. En la pestaña **productos** , asegúrese de que se seleccionan los siguientes productos para la sincronización:
+    - Versión preliminar de Windows Insider
+    - Windows 10, version 1903 and later
+5. En la pestaña **clasificaciones** , asegúrese de que están seleccionadas las siguientes clasificaciones para la sincronización:
+    - Actualizaciones
+    - Actualizaciones de seguridad
+    - Actualizaciones (opcional)
+6. Haga clic en **Aceptar** para cerrar **Propiedades de componente de punto de actualización de software**.
+
+### <a name="upgrading-windows-insider-devices"></a>Actualización de dispositivos de Windows Insider
+
+Una vez que se sincronizan las actualizaciones de Windows Insider, puede verlas desde la **biblioteca** > de software**Windows 10 mantenimiento** > de**todas las actualizaciones de Windows 10**.
+
+![Actualizaciones de características de Windows Insider para el mantenimiento de Windows 10](media/3556023-windows-insiders-pre-release-feature-update.png)
+
+Implemente actualizaciones de características para Windows Insider en la recopilación de destino, al igual que cualquier otra actualización. Sin embargo, querrá tener en cuenta los siguientes elementos al implementar estas actualizaciones de características:
+
+- Estas actualizaciones se aplicarán a todos los clientes de Windows 10 1903 o versiones anteriores, con arquitectura, edición e idioma coincidentes.
+- Hay términos de licencia, la implementación debe aceptar los términos para poder instalarlos.
+- Considere la posibilidad [de utilizar la prioridad del subproceso en la configuración de cliente](/sccm/core/clients/deploy/about-client-settings#bkmk_thread-priority).
+- La actualización dinámica instala automáticamente las actualizaciones críticas, incluida la actualización acumulativa más reciente, directamente desde Microsoft Update. Este comportamiento comenzó con las actualizaciones de características para la versión 1903 de Windows 10. 
+  - Puede deshabilitar explícitamente la [actualización dinámica en la configuración de cliente](/sccm/core/clients/deploy/about-client-settings#bkmk_du) o con un [archivo setupconfig. ini](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options). 
+  - Para obtener más información, consulte la entrada de blog de [actualización dinámica de Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847) .
+
+Para obtener más información sobre cómo implementar actualizaciones, consulte [Administración de Windows como servicio](/sccm/osd/deploy-use/manage-windows-as-a-service).
+
+
+### <a name="keeping-insider-devices-up-to-date"></a>Mantenimiento de los dispositivos internos actualizados
+
+Las actualizaciones acumulativas para Windows Insider estarán disponibles para WSUS y por extensión para Configuration Manager. Estas actualizaciones acumulativas se lanzarán con una frecuencia similar a la de las actualizaciones acumulativas de Windows 10, versión 1903. Las actualizaciones acumulativas de Windows Insider se encuentran en la categoría de producto **Windows 10, versión 1903 y versiones posteriores** , y se clasifican como actualizaciones de **seguridad** o **actualizaciones**. Puede implementar las actualizaciones acumulativas para Windows Insider mediante el proceso de actualización de software normal como el uso de [reglas de implementación automática](/sccm/sum/deploy-use/automatically-deploy-software-updates) o [implementaciones por fases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
+
 
 ## <a name="next-steps"></a>Pasos siguientes
 
