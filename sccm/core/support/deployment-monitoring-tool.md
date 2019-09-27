@@ -2,7 +2,7 @@
 title: Deployment Monitoring Tool
 titleSuffix: Configuration Manager
 description: Use Deployment Monitoring Tool para solucionar problemas de implementaciones de software en un cliente de Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 09/24/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 577fb36610924f2659c35d59d4817363f521e6c4
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 11d2b1b5d419a9f38b643d981a055b9ed1ea6ab5
+ms.sourcegitcommit: 670cfed1e47a7a4a73aa4ccb873c6312be3c21ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65496541"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71311631"
 ---
 # <a name="deployment-monitoring-tool"></a>Deployment Monitoring Tool
 

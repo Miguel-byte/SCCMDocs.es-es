@@ -2,7 +2,7 @@
 title: Publicación y el esquema de Active Directory
 titleSuffix: Configuration Manager
 description: Extienda el esquema de Active Directory para System Center Configuration Manager a fin de simplificar el proceso de implementar y configurar clientes.
-ms.date: 02/6/2017
+ms.date: 09/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 68be076cd166867ae3a1b181c14e3c888110b029
-ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
+ms.openlocfilehash: 094cef520a2c5f1f4da06b8eefdafb4d3d58f3ac
+ms.sourcegitcommit: 670cfed1e47a7a4a73aa4ccb873c6312be3c21ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70889450"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71311608"
 ---
 # <a name="prepare-active-directory-for-site-publishing"></a>Preparar Active Directory para la publicación de sitios
 
