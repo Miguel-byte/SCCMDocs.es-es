@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad8111b7d49f89b85c2a4f8b0bd9336a13446a91
-ms.sourcegitcommit: b28a97e22a9a56c5ce3367c750ea2bb4d50449c3
+ms.openlocfilehash: ae1bbbd6a8482ea5008eeb87c30a4e35a26e06d0
+ms.sourcegitcommit: 84a6f31797490eeda73bd4f3656ba27741df3030
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70243654"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71343804"
 ---
 # <a name="how-to-set-up-desktop-analytics"></a>Cómo configurar el análisis de escritorio
 
@@ -31,11 +31,11 @@ Use este procedimiento para iniciar sesión en análisis de escritorio y configu
 
 ## <a name="initial-onboarding"></a>Incorporación inicial
 
-1. Abra el [portal de análisis de escritorio](https://aka.ms/desktopanalytics) en Microsoft 365 administración de dispositivos como usuario con el rol de **administrador global** . Seleccione **Iniciar**. Como alternativa, en la consola de Configuration Manager, vaya al área de trabajo **biblioteca de software** , seleccione el nodo servicio de **análisis de escritorio** y seleccione **planear implementaciones**.
+1. Abra el [portal de análisis de escritorio](https://aka.ms/desktopanalytics) en Microsoft 365 administración de dispositivos como usuario con el rol de **administrador global** . Seleccione **iniciar**. Como alternativa, en la consola de Configuration Manager, vaya al área de trabajo **biblioteca de software** , seleccione el nodo servicio de **análisis de escritorio** y seleccione **planear implementaciones**.
 
 2. En la página **aceptar el contrato de servicio** , revise el contrato de servicio y seleccione **Aceptar**.  
 
-3. En la página **confirmar la suscripción** , revise la lista de licencias aptas necesarias. Cambie la configuración a **sí** junto a **¿tiene una o más suscripciones admitidas**y, a continuación, seleccione **siguiente**.  
+3. En la página **confirmar la suscripción** , revise la lista de licencias aptas necesarias. Cambie la configuración a **sí** junto a **¿tiene una o más**suscripciones admitidas y, a continuación, seleccione **siguiente**.  
 
 4. En la página **conceder acceso a los usuarios** :
 
@@ -62,7 +62,7 @@ Use este procedimiento para iniciar sesión en análisis de escritorio y configu
 
     - Para crear un área de trabajo para el análisis de escritorio, seleccione **Agregar área de trabajo**.  
 
-        1. Escriba un **nombre de área de trabajo**.<!--do we have any guidance for this name?-->  
+        1. Escriba un **nombre de área de trabajo**único global.<!--do we have any guidance for this name?-->  
 
         2. Seleccione la lista desplegable para **seleccionar el nombre de la suscripción de Azure para esta área de trabajo**y elija la suscripción de Azure para esta área de trabajo.  
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f6461d607401a0d932997d3ef38f02c991a5e2b
-ms.sourcegitcommit: cb169396acf0d50fedd9f2ae62f7894615c3cce5
+ms.openlocfilehash: 5ee4075926f5c6f01dddcf41a2c329e88a4ee591
+ms.sourcegitcommit: 160bcdaf783f3946ad5c7869b2566cbfc4da545c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70808343"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71401502"
 ---
 # <a name="what-is-desktop-analytics"></a>¿Qué es Análisis de escritorio?
 
@@ -74,7 +74,7 @@ Para usar el análisis de escritorio, asegúrese de que el entorno cumple los re
     > [!Important]  
     > Actualmente, el análisis de escritorio requiere la implementación de un servicio de Office 365 en su inquilino de Azure AD. Esto no será un requisito en el futuro.
 
-    - Permisos de propietario o **colaborador** del **área de trabajo** para **configurar el área de trabajo**y los roles siguientes:  
+    - Permisos de propietario o colaborador del **área de trabajo** para **configurar el área de trabajo**y los roles siguientes:  
 
       - Rol de [**Administrador de análisis de escritorio**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) .
 
@@ -100,7 +100,7 @@ Para usar el análisis de escritorio, asegúrese de que el entorno cumple los re
     >
     > El análisis de escritorio está diseñado para admitir mejor el escenario de actualización local. Si necesita realizar cambios importantes, como, por ejemplo, de la arquitectura de 32 bits a 64 bits, utilice un escenario de creación de imágenes. Desktop Analytics Insights sigue siendo valioso en estos escenarios de implementación de sistema operativo clásico, pero puede pasar por alto la guía específica de la actualización en contexto. Para obtener más información, consulte [escenarios para implementar sistemas operativos de empresa con Configuration Manager](/sccm/osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems).
 
-- Datos de diagnósticos de Windows. Para más información, consulte los siguientes artículos.  
+- Datos de diagnósticos de Windows. Vea los siguientes artículos para más información:  
 
     - [Niveles de datos de diagnóstico](/sccm/desktop-analytics/enable-data-sharing#diagnostic-data-levels)  
 
@@ -108,6 +108,11 @@ Para usar el análisis de escritorio, asegúrese de que el entorno cumple los re
 
 - Conectividad de red desde dispositivos a la nube pública de Microsoft. Para obtener más información, consulte [Habilitar el uso compartido de datos](/sccm/desktop-analytics/enable-data-sharing) .  
 
+> [!Important]   
+> Microsoft tiene un fuerte compromiso de proporcionar las herramientas y los recursos que le ponen en el control de su privacidad. Como resultado, Microsoft no recopila los datos siguientes de los dispositivos ubicados en países europeos (EEE y Suiza):
+>
+> - Datos de diagnóstico de Windows desde dispositivos Windows 8.1
+> - Datos de uso de aplicaciones para Windows 7
 
 ### <a name="licensing-and-costs"></a>Licencias y costos
 
