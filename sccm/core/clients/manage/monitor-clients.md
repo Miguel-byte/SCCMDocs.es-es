@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9b3c3f52f15ba4d61a589833e43144ce5ecb6de0
-ms.sourcegitcommit: b62de6c9cb1bc3e4c9ea5ab5ed3355d83e3a59bc
+ms.openlocfilehash: c5dadb6400ad76947ce7ace3228b6f7d95cedc17
+ms.sourcegitcommit: 670cfed1e47a7a4a73aa4ccb873c6312be3c21ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894212"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71311554"
 ---
 # <a name="how-to-monitor-clients-in-configuration-manager"></a>Supervisión de clientes en Configuration Manager
 
@@ -31,7 +31,7 @@ Configuration Manager proporciona los siguientes tipos de información como esta
 
 - **Estado de conexión de clientes**: El sitio considera que un dispositivo está **en línea** si está conectado a su punto de administración asignado. Para indicar que el cliente está en línea, envía mensajes de estilo ping al punto de administración. Si el punto de administración no recibe un mensaje después de cinco minutos, el sitio considera al cliente **sin conexión**.  
 
-- **Actividad de cliente**: El sitio considera que el cliente está **activo** si se ha comunicado con Configuration Manager en los últimos siete días. El sitio considera que el cliente está **inactivo** si no se ha solicitado ni realizado las siguientes acciones en siete días:  
+- **Actividad de cliente**: El sitio considera que el cliente está **activo** si se ha comunicado con Configuration Manager en los últimos siete días. El sitio considera que el cliente está **inactivo** si no ha realizado las siguientes acciones en siete días:  
 
     - Solicitud de actualización de directiva  
     - Envío de mensaje de latido  

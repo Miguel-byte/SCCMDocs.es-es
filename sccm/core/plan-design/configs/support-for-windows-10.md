@@ -2,7 +2,7 @@
 title: Compatibilidad con Windows 10
 titleSuffix: Configuration Manager
 description: Obtención de información sobre las versiones de Windows 10 que se admiten como clientes o para OSD con Configuration Manager
-ms.date: 08/09/2019
+ms.date: 09/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f3ec5f9b9bbda3b3bec6fdd1d955b8911f8029b5
-ms.sourcegitcommit: 4316bff400ffbde8404f8a2092ec17e3601b8d29
+ms.openlocfilehash: cf8c57a6322c36e0bfe28f76fafb6f3e58640397
+ms.sourcegitcommit: 670cfed1e47a7a4a73aa4ccb873c6312be3c21ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70738493"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71311637"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Compatibilidad con Windows 10 en Configuration Manager  
 
@@ -47,6 +47,7 @@ Una versión de Configuration Manager se quitará de la matriz después de que f
 - Esta información complementa a [Sistemas operativos compatibles con dispositivos y clientes](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices).  
 
 - Si usa la rama de mantenimiento a largo plazo de Configuration Manager, vea [Configuraciones admitidas para la rama de mantenimiento a largo plazo](/sccm/core/understand/supported-configurations-for-ltsb).  
+
 
 <br/>
 En la tabla siguiente se enumeran las versiones de Windows 10 que puede usar como cliente con diferentes versiones de Configuration Manager.
@@ -79,6 +80,11 @@ Para más información sobre el ciclo de vida de Windows, vea [Hoja de datos del
 > [!NOTE]  
 > Configuration Manager es compatible con el cliente en dispositivos ARM64 de Windows 10. Las características de administración de cliente existentes deben funcionar con estos nuevos dispositivos. Por ejemplo, el inventario de hardware y software, las actualizaciones de software y la administración de aplicaciones. La implementación de SO no se admite actualmente. <!-- 1353704 -->
 
+### <a name="bkmk_WIfB-support"></a> Compatibilidad con Windows Insider 
+
+A partir de la versión 1906 de Configuration Manager, puede [actualizar y mantener las compilaciones de Windows Insider](/sccm/sum/get-started/configure-classifications-and-products#bkmk_WIfB). Esta capacidad se proporciona para comodidad de los clientes. Aunque esta funcionalidad debería funcionar, la compatibilidad con ella es la mejor opción. Es posible que Configuration Manager no emita una revisión para esta funcionalidad si deja de funcionar.  
+- Para más información sobre la compatibilidad con las compilaciones de la versión preliminar de Windows Insider, consulte [Cómo obtener asistencia](https://insider.windows.com/en-us/how-to-overview/#how-to-get-support). <!--the direct page/anchor doesn't work without a locale :(-->
+- Para proporcionar comentarios sobre Windows Insider, use el [concentrador de comentarios](https://insider.windows.com/en-us/how-to-feedback/). <!--the direct page link doesn't work without a locale :(-->
 
 ## <a name="windows-10-adk"></a>Windows 10 ADK
 

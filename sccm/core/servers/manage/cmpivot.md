@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ed24e1f7089b7b8078c4cfcfed021bc1bac9346
-ms.sourcegitcommit: cdf2827fb3f44d7522a9b533c115f910aa9c382a
+ms.openlocfilehash: 450b8a930fa04e88db5d6bf9ff2516cb31dff92a
+ms.sourcegitcommit: 013596de802ac0eb416118169ad049733b5a63e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70902999"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198251"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>CMPivot para datos en tiempo real en Configuration Manager
 
@@ -206,7 +206,7 @@ Conforme aparezcan los resultados, haga clic con el botón derecho en la columna
 
 `Service | summarize dcount( Device ) by Name`
 
-En la fila del servicio **Explorador**, haga clic en el número de un hipervínculo en la columna **dcount_**. 
+En la fila del servicio **Explorador**, haga clic en el número de un hipervínculo en la columna **dcount_** . 
 
 `Service | where (Name == 'Browser') | summarize count() by Device`
 
@@ -272,10 +272,10 @@ A partir de la versión 1810 de Configuration Manager, CMPivot incluye las mejo
 
 ### <a name="bkmk_cmpivot-functions"></a> Funciones escalares
 CMPivot admite estas funciones escalares:
-- **ago()**: resta el intervalo de tiempo dado de la hora UTC actual.  
-- **datetime_diff()**: calcula la diferencia de calendario entre dos valores de fecha y hora.  
-- **now()**: devuelve la hora de reloj UTC actual.  
-- **bin()**: redondea valores a la baja a un número entero múltiplo del tamaño de una ubicación determinada.  
+- **ago()** : resta el intervalo de tiempo dado de la hora UTC actual.  
+- **datetime_diff()** : calcula la diferencia de calendario entre dos valores de fecha y hora.  
+- **now()** : devuelve la hora de reloj UTC actual.  
+- **bin()** : redondea valores a la baja a un número entero múltiplo del tamaño de una ubicación determinada.  
 
 > [!Note]  
 > El tipo de datos de fecha y hora representa un instante de tiempo, normalmente expresado como una fecha y hora del día. Los valores de tiempo se miden en unidades de 1 segundo. Siempre es un valor de fecha y hora en la zona horaria UTC. Siempre expresa literales de fecha y hora en formato ISO 8601, como por ejemplo, `yyyy-mm-dd HH:MM:ss`  

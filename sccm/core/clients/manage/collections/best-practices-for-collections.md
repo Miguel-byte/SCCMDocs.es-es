@@ -1,8 +1,8 @@
 ---
 title: Procedimientos recomendados para las colecciones
 titleSuffix: Configuration Manager
-description: Conozca procedimientos recomendados para las colecciones en System Center Configuration Manager.
-ms.date: 02/22/2017
+description: Obtenga los procedimientos recomendados para las recopilaciones de Configuration Manager.
+ms.date: 09/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,29 +11,38 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be96b106424c6340a27b015a06e0c3d06e3257d6
-ms.sourcegitcommit: 13ac4f5e600dc1edf69e8566e00968f40e1d1761
+ms.openlocfilehash: ee91fe8b8b5b1c8d737e5818f42fa08e689a7e5a
+ms.sourcegitcommit: 670cfed1e47a7a4a73aa4ccb873c6312be3c21ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70890186"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71311535"
 ---
-# <a name="best-practices-for-collections-in-system-center-configuration-manager"></a>Procedimientos recomendados para recopilaciones en System Center Configuration Manager
+# <a name="best-practices-for-collections-in-configuration-manager"></a>Procedimientos recomendados para recopilaciones en Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-Use los procedimientos recomendados siguientes para las colecciones en System Center Configuration Manager.  
+Use los procedimientos recomendados siguientes para las recopilaciones de Configuration Manager.  
 
-## <a name="do-not-use-incremental-updates-for-a-large-number-of-collections"></a>No realice actualizaciones incrementales en un gran número de recopilaciones.  
- Cuando se habilita la opción **Usar actualizaciones incrementales para esta recopilación** , esta configuración puede provocar retrasos de evaluación cuando se habilita para muchas recopilaciones. El umbral es de aproximadamente 200 recopilaciones en la jerarquía. El número exacto depende de los siguientes factores:  
+## <a name="dont-use-incremental-updates-with-many-collections"></a>No use actualizaciones incrementales con muchas recopilaciones.
 
--   El número total de recopilaciones  
+Cuando se habilita la opción **Usar actualizaciones incrementales para esta recopilación** , esta configuración puede provocar retrasos de evaluación cuando se habilita para muchas recopilaciones. El umbral es de aproximadamente 200 recopilaciones en la jerarquía. El número exacto depende de los siguientes factores:  
 
--   La frecuencia con la que se agregan y cambian recursos nuevos en la jerarquía  
+- El número total de recopilaciones  
 
--   El número de clientes en la jerarquía  
+- La frecuencia con la que se agregan y cambian recursos nuevos en la jerarquía  
 
--   La complejidad de las reglas de pertenencia a la recopilación en la jerarquía  
+- El número de clientes en la jerarquía  
 
-## <a name="make-sure-that-maintenance-windows-are-large-enough-to-deploy-critical-software-updates"></a>Asegúrese de que las ventanas de mantenimiento son lo suficientemente grandes como para implementar las actualizaciones de software imprescindibles  
- Puede configurar ventanas de mantenimiento para que las colecciones de dispositivos restrinjan las horas a las que Configuration Manager puede instalar software en estos dispositivos. Si configura una ventana de mantenimiento demasiado pequeña, es posible que el cliente no pueda instalar las actualizaciones de software imprescindibles, lo que hace que el cliente sea vulnerable a los ataques que la actualización de software mitiga.  
+- La complejidad de las reglas de pertenencia a la recopilación en la jerarquía  
+
+## <a name="maintenance-window-size-for-software-updates"></a>Tamaño de la ventana de mantenimiento de las actualizaciones de software
+
+Puede configurar ventanas de mantenimiento para que las colecciones de dispositivos restrinjan las horas a las que Configuration Manager puede instalar software en estos dispositivos. Si configura una ventana de mantenimiento demasiado pequeña, es posible que el cliente no pueda instalar las actualizaciones de software imprescindibles, lo que hace que el cliente sea vulnerable a los ataques que la actualización de software mitiga. 
+ 
+ > [!Tip] 
+ > Consideraciones importantes que se deben tener en cuenta al planear las ventanas de mantenimiento:
+ > - El tiempo de ejecución máximo de actualización de software predeterminado es de 60 minutos.
+ > - Cuando Configuration Manager calcula si una actualización puede instalarse, se agregan cinco minutos al tiempo de ejecución máximo para tener en cuenta el reinicio.
+ > - La duración restante de una ventana de mantenimiento debe ser mayor que el tiempo de ejecución máximo de la actualización de software más cinco minutos.
+ 

@@ -2,7 +2,7 @@
 title: Configurar el laboratorio
 titleSuffix: Configuration Manager
 description: Configure un laboratorio para evaluar Configuration Manager con actividades simuladas de la vida real.
-ms.date: 09/21/2017
+ms.date: 09/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,18 +11,21 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 107eb6bfa7f373a0ad13dc687fd373dfcae22d2d
-ms.sourcegitcommit: 9648ce8a8b5c82518e7c8b6a7668e0e9b076cae6
+ms.openlocfilehash: cb1a527a96bcf068253f7832d67a4ee650330e49
+ms.sourcegitcommit: 670cfed1e47a7a4a73aa4ccb873c6312be3c21ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70379369"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71311568"
 ---
-# <a name="set-up-your-system-center-configuration-manager-lab"></a>Configurar el laboratorio de System Center Configuration Manager
+# <a name="set-up-a-configuration-manager-lab"></a>Configuración de un laboratorio de Configuration Manager
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
 Las instrucciones de este tema le permitirán configurar un laboratorio para evaluar Configuration Manager con actividades simuladas de la vida real.  
+
+> [!NOTE]
+> Microsoft ofrece una versión preconfigurada de este laboratorio con una versión de evaluación de Configuration Manager. Para más información, consulte el [kit de laboratorio de administración e implementación de Windows y Office](https://docs.microsoft.com/microsoft-365/enterprise/modern-desktop-deployment-and-management-lab). 
 
 ##  <a name="BKMK_LabCore"></a> Componentes principales  
  Para configurar el entorno para System Center Configuration Manager, necesita que algunos componentes principales admitan la instalación de Configuration Manager.    
