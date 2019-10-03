@@ -22,7 +22,7 @@ ms.locfileid: "70243555"
 
 *Se aplica a: System Center Configuration Manager (Rama actual)*
 
-En Configuration Manager, los componentes de cliente y servidor de sitio registran información de proceso en archivos de registro individuales. Se puede usar la información de estos archivos de registro para facilitar la solución de los problemas que puedan producirse. De forma predeterminada, Configuration Manager habilita el registro para los componentes de cliente y servidor.
+En Configuration Manager, los componentes de cliente y servidor de sitio utilizan el registro de  información de proceso en archivos de registro individuales. Se puede usar la información de estos archivos de registro para facilitar la solución de los problemas que puedan producirse a futuro. De forma predeterminada, Configuration Manager habilita el registro para los componentes de cliente y servidor.
 
 Para más información general sobre los archivos de registro de Configuration Manager, vea [Acerca de los archivos de registro](/sccm/core/plan-design/hierarchy/about-log-files). Dicho artículo incluye información sobre las herramientas que se deben usar, cómo configurar los registros y dónde encontrarlos.
 
