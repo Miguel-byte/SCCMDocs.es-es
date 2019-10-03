@@ -51,7 +51,7 @@ Configuration Manager le permite configurar los puertos para los siguientes tipo
   > [!NOTE]  
   > Los puertos que se usan para el rol de sistema de sitio de punto de servicios de informes se configuran en SQL Server Reporting Services. Configuration Manager usa estos puertos durante las comunicaciones con el punto de servicios de informes. Asegúrese de revisar estos puertos que definen la información de filtro IP para directivas IPsec o para configurar firewalls.  
 
-De forma predeterminada, el puerto HTTP que se usa para la comunicación entre cliente y sistema de sitio es el puerto 80, y el puerto HTTPS predeterminado es el 443. Los puertos para la comunicación entre cliente y sistema de sitio a través de HTTP o HTTPS se pueden cambiar durante la instalación o en las propiedades del sitio en su sitio de Configuration Manager.  
+De forma predeterminada, el puerto HTTP que se usa para la comunicación entre cliente y sistema de sitio por defecto es el puerto 80, y el puerto HTTPS predeterminado es el 443. Los puertos para la comunicación entre cliente y sistema de sitio a través de HTTP o HTTPS se pueden cambiar durante la instalación o en las propiedades del sitio en su sitio de Configuration Manager.  
 
 Los puertos que se usan para el rol de sistema de sitio de punto de servicios de informes se configuran en SQL Server Reporting Services. Configuration Manager usa estos puertos durante las comunicaciones con el punto de servicios de informes. Asegúrese de revisar estos puertos al definir la información de filtro IP para directivas IPsec o para configurar firewalls.  
 
